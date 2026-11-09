@@ -8,7 +8,8 @@
  * Sanity) before any public release.
  *
  * Arnaldo Zanella and Loredano Rosin are real makers represented on the
- * current muraniq.nl site. Their biographies have NOT been migrated yet and no
+ * current muraniq.nl site. Their biographies are migrated verbatim from that
+ * site and marked "migrated_unreviewed" until checked against sources. No
  * fixture object is attributed to them.
  *
  * Technique texts are general editorial drafts and are marked as unsourced
@@ -16,6 +17,8 @@
  */
 import type { DatasetInput, MediaAsset } from "@/content/schemas";
 import { PLACEHOLDER_SPECS, placeholderSrc } from "./placeholder-specs";
+// Verbatim text from muraniq.nl/arnaldo-zanella/ and /loredano-rosin/ (retrieved 9 Nov 2026), not yet source-reviewed.
+import migrated from "./migrated-biographies.json";
 
 const VIEW_ALT: Record<string, string> = {
   front: "front view",
@@ -97,10 +100,11 @@ export const fixtureDataset: DatasetInput = {
       kind: "person",
       name: "Arnaldo Zanella",
       roles: ["maker"],
+      lifeLabel: "b. 1949",
       summary:
-        "Murano glass maker whose work is presented on the current MURANIQ website. The existing biography is being migrated and reviewed against sources.",
-      biography: [],
-      biographyStatus: "pending_migration",
+        "Italian glass master renowned for his expressive sculptural forms and exceptional craftsmanship, with horses and birds among his best-known subjects.",
+      biography: migrated.zanella,
+      biographyStatus: "migrated_unreviewed",
       legacyPath: "/arnaldo-zanella/",
       status: "published",
     },
@@ -110,10 +114,11 @@ export const fixtureDataset: DatasetInput = {
       kind: "person",
       name: "Loredano Rosin",
       roles: ["maker"],
+      lifeLabel: "1936–1992",
       summary:
-        "Murano glass sculptor whose work is presented on the current MURANIQ website, including calcedonia and figurative sculpture. The existing biography is being migrated and reviewed against sources.",
-      biography: [],
-      biographyStatus: "pending_migration",
+        "Italian master glassmaker celebrated for his expressive figurative sculptures and mastery of solid glass, including calcedonia.",
+      biography: migrated.rosin,
+      biographyStatus: "migrated_unreviewed",
       legacyPath: "/loredano-rosin/",
       status: "published",
     },
@@ -486,14 +491,23 @@ export const fixtureDataset: DatasetInput = {
     {
       from: "/arnaldo-zanella/",
       to: "/glass-guide/makers/arnaldo-zanella/",
-      reason: "Maker biography moves into the Glass Guide",
-      active: false,
+      reason: "Maker biography moves into the Glass Guide (text migrated 2026-11-09)",
+      checkedOn: "2026-11-09",
+      active: true,
     },
     {
       from: "/loredano-rosin/",
       to: "/glass-guide/makers/loredano-rosin/",
-      reason: "Maker biography moves into the Glass Guide",
-      active: false,
+      reason: "Maker biography moves into the Glass Guide (text migrated 2026-11-09)",
+      checkedOn: "2026-11-09",
+      active: true,
+    },
+    {
+      from: "/glass-guide/makers-and-artists/",
+      to: "/glass-guide/makers/",
+      reason: "Existing (empty) Glass Guide index page; new maker index",
+      checkedOn: "2026-11-09",
+      active: true,
     },
   ],
 };

@@ -4,7 +4,8 @@ export function EditorialStatus({ status, tone = "paper" }: { status: string; to
     draft_unsourced: "Editorial draft. Sources are still being added; treat this as a general introduction.",
     pending_migration:
       "The biography from the current MURANIQ website is being migrated and checked against sources before it is republished here.",
-    migrated_unreviewed: "Migrated text, not yet reviewed against sources.",
+    migrated_unreviewed:
+      "This biography is carried over from the previous MURANIQ website and is being checked against published sources.",
   };
   const t = text[status];
   if (!t) return null;

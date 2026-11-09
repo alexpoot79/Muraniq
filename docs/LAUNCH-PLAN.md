@@ -12,7 +12,9 @@ Nothing below is executed without that approval.
 3. Settings → Git → once the PR is merged, set the **Production Branch** to `main`.
 4. For automated testing against the protected preview, create a *Protection Bypass for Automation* secret
    and run `E2E_BASE_URL=<preview-url> npm run test:e2e` with the bypass header configured. Never commit the secret.
-5. Plan: Vercel Hobby is for non-commercial use only. Because works may be offered for acquisition, choose
+5. Before launch, set `SITE_INDEXABLE=true` **only** in the Production environment. Until then robots.txt
+   disallows everything and every response carries `X-Robots-Tag: noindex`.
+6. Plan: Vercel Hobby is for non-commercial use only. Because works may be offered for acquisition, choose
    **Pro** before going live (owner decision; costs apply).
 
 ## 2. Connections (each needs Alex)
@@ -25,7 +27,7 @@ Nothing below is executed without that approval.
 
 ## 3. DNS switch (only after approval)
 
-**Before:** export the complete current DNS zone from the registrar (screenshot or zone file) and store it
+**Before:** the current site is hosted at IONOS. Export the complete current DNS zone from the registrar (screenshot or zone file) and store it
 with the date. This is the rollback record. Lower the TTL of the web records (apex `A`/`AAAA` and `www`) to
 300 s at least 24 hours before the switch.
 
@@ -47,8 +49,8 @@ verification records. Only the two web records above change.
 - `https://muraniq.nl/` serves the new site with a valid certificate; `http://` redirects to `https://`.
 - `https://www.muraniq.nl/anything/` → 308 → `https://muraniq.nl/anything/` (path preserved).
 - Existing URLs: `/`, `/collection/`, the four `/collection/<area>/` pages, `/glass-guide/`, `/about/` → 200.
-- `/arnaldo-zanella/` and `/loredano-rosin/` → one-step 308 to `/glass-guide/makers/<slug>/` (activate the
-  redirect records in Sanity only once the migrated biographies are published).
+- `/arnaldo-zanella/`, `/loredano-rosin/` and `/glass-guide/makers-and-artists/` → one-step 308 to the new
+  maker pages (already active in the new site; see `docs/MIGRATION-INVENTORY.md` for all 13 current URLs).
 - `muraniq.com` → permanent redirect to `https://muraniq.nl` with path, only after ownership is checked.
 - Send a test enquiry; confirm it arrives. Check `sitemap.xml`, `robots.txt`, canonical tags.
 - Mail still works (send and receive at `info@`).

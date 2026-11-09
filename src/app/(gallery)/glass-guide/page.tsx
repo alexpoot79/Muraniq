@@ -53,7 +53,8 @@ export default async function GuidePage() {
           ))}
         </ul>
         <p className="mt-6 border-t border-line-dark pt-6 text-sm text-muted-dark">
-          Signatures &amp; labels and glasshouse profiles will be added as the collection is catalogued.
+          <Link href="/glass-guide/signatures-and-labels/" className="link-quiet">Signatures &amp; labels</Link> and glasshouse
+          profiles will be added as the collection is catalogued.
         </p>
       </div>
     </>
