@@ -92,8 +92,8 @@ export async function Catalog({
                 placeholder="Title, maker, technique…"
                 className="min-h-12 w-full min-w-0 border border-line-dark bg-raised px-4 text-on-dark placeholder:text-muted-dark/70"
               />
-              <button type="submit" className="btn btn-primary min-h-12 px-4" aria-label="Search">
-                Go
+              <button type="submit" className="btn btn-primary min-h-12 px-4">
+                Search
               </button>
             </div>
           </div>

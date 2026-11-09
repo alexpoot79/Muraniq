@@ -3,7 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 const port = Number(process.env.E2E_PORT ?? 3100);
 const executablePath = process.env.PW_CHROMIUM_PATH; // e.g. /opt/pw-browsers/chromium in CI images
 // Remote runs (E2E_BASE_URL) from a proxied environment: route browser and API requests through it.
-const proxyServer = process.env.E2E_BASE_URL ? process.env.HTTPS_PROXY : undefined;
+const remote = process.env.E2E_BASE_URL && !/^https?:\/\/(localhost|127\.0\.0\.1)(:|\/|$)/.test(process.env.E2E_BASE_URL);
+const proxyServer = remote ? process.env.HTTPS_PROXY : undefined;
 // Vercel Deployment Protection bypass for automation (never commit the value).
 const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
 
