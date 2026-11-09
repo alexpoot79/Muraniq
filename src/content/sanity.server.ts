@@ -5,7 +5,8 @@
  * the fixtures so it goes through identical validation and projection.
  *
  * Contract:
- *  - perspective=published (drafts never reach the public site),
+ *  - perspective=published for the public site (drafts never reach it);
+ *    perspective=drafts only for the authenticated, uncached draft preview,
  *  - an explicit GROQ projection (field allowlist) per document type,
  *  - token only from server environment variables,
  *  - an empty private dataset is treated as a misconfiguration signal (an
@@ -21,6 +22,13 @@ export function sanityConfigured(): boolean {
 }
 
 const IMAGE = `"src": asset->url, "width": asset->metadata.dimensions.width, "height": asset->metadata.dimensions.height`;
+
+/**
+ * Visibility comes from Sanity itself: published documents vs. drafts. In the
+ * drafts perspective a document with unpublished edits keeps its draft id in
+ * `_originalId`, so it is reported as a draft and the preview can say so.
+ */
+const STATUS = `"status": select(_originalId in path("drafts.**") => "draft", "published")`;
 
 /** Explicit projection — keep in sync with studio/schemas. */
 export const DATASET_QUERY = /* groq */ `{
@@ -38,21 +46,21 @@ export const DATASET_QUERY = /* groq */ `{
     condition,
     "sourceIds": sources[]->sourceId,
     "relatedIds": related[]->collectionId,
-    availability, "status": "published", featured, curatedOrder,
+    availability, ${STATUS}, featured, curatedOrder,
     "isFixture": false,
     seo, "updatedAt": string::split(_updatedAt, "T")[0]
   },
   "creators": *[_type == "creator"]{
     "id": creatorId, "slug": slug.current, kind, name, aliases, lifeLabel, roles, summary,
-    biography, biographyStatus, "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, "status": "published"
+    biography, biographyStatus, "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, ${STATUS}
   },
   "glasshouses": *[_type == "glasshouse"]{
     "id": glasshouseId, "slug": slug.current, name, location, activeLabel, summary,
-    "creatorIds": creators[]->creatorId, "status": "published"
+    "creatorIds": creators[]->creatorId, ${STATUS}
   },
   "techniques": *[_type == "technique"]{
     "id": techniqueId, "slug": slug.current, term, synonyms, summary, body, recognition,
-    "sourceIds": sources[]->sourceId, editorialStatus, "status": "published"
+    "sourceIds": sources[]->sourceId, editorialStatus, ${STATUS}
   },
   "sources": *[_type == "source"]{
     "id": sourceId, type, title, author, publisher, year, url, rightsNote, reliabilityNote, "isFixture": false
@@ -64,7 +72,9 @@ export const DATASET_QUERY = /* groq */ `{
   "redirects": *[_type == "redirect"]{ from, to, reason, checkedOn, active }
 }`;
 
-export async function fetchSanityDataset(): Promise<DatasetInput> {
+export type SanityPerspective = "published" | "drafts";
+
+export async function fetchSanityDataset(perspective: SanityPerspective = "published"): Promise<DatasetInput> {
   const projectId = process.env.SANITY_PROJECT_ID;
   const dataset = process.env.SANITY_DATASET;
   const token = process.env.SANITY_READ_TOKEN;
@@ -73,7 +83,7 @@ export async function fetchSanityDataset(): Promise<DatasetInput> {
   // useCdn=false equivalent: the api host (not apicdn) returns fresh content on revalidation.
   const url = new URL(`https://${projectId}.api.sanity.io/v${API_VERSION}/data/query/${dataset}`);
   url.searchParams.set("query", DATASET_QUERY);
-  url.searchParams.set("perspective", "published");
+  url.searchParams.set("perspective", perspective);
 
   const res = await fetch(url, {
     headers: { Authorization: `Bearer ${token}` },

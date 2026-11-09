@@ -17,3 +17,9 @@ Rules for editors
   private dataset. Originals and confidential records stay in the separate private archive.
 - Every claim gets a certainty level. "Verified" needs named evidence and a review date.
 - Use **Publish** to publish. "In editorial review" is only a workflow label.
+
+Previewing a draft
+
+Open `https://<site>/api/draft/?secret=<SANITY_PREVIEW_SECRET>&slug=<object slug>` (ask the site owner for the
+link; never share it publicly). The site then shows drafts for this browser session only, marked with a
+"Preview" banner, and lists what still blocks publication. Use **Leave preview** when done.

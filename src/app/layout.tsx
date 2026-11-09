@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { PreviewBanner } from "@/features/preview/PreviewBanner";
 import { SITE } from "@/lib/site";
 
 const cormorant = localFont({
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <PreviewBanner />
         <Header />
         <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}

@@ -7,8 +7,9 @@ Nothing below is executed without that approval.
 
 1. Vercel → Add New → Project → import `alexpoot79/Muraniq`. Preset **Next.js**, Root Directory `./`,
    default build settings, no environment variables required.
-2. Settings → Deployment Protection → **Vercel Authentication** on (Standard Protection covers previews and
-   the `*.vercel.app` production URL).
+2. Settings → Deployment Protection → **Vercel Authentication** on. On Hobby, Standard Protection covers
+   preview deployments only: the production URL `muraniq.vercel.app` stays publicly reachable (it sends
+   `noindex`). Protecting the production URL too needs a paid option (owner decision).
 3. Settings → Git → once the PR is merged, set the **Production Branch** to `main`.
 4. For automated testing against the protected preview, create a *Protection Bypass for Automation* secret
    and run `E2E_BASE_URL=<preview-url> npm run test:e2e` with the bypass header configured. Never commit the secret.
@@ -21,7 +22,7 @@ Nothing below is executed without that approval.
 
 | Service | What Alex does | Then |
 | --- | --- | --- |
-| Sanity | Create project + **private** dataset (Growth plan), invite editors | Fill `SANITY_*` in Vercel, deploy Studio with `cd studio && npm run deploy`, add webhook to `/api/revalidate/` with `SANITY_WEBHOOK_SECRET` |
+| Sanity | Create project + **private** dataset (Growth plan), invite editors | Fill `SANITY_*` in Vercel (incl. a random 32+ character `SANITY_PREVIEW_SECRET` for draft preview), deploy Studio with `cd studio && npm run deploy`, add webhook to `/api/revalidate/` with `SANITY_WEBHOOK_SECRET` |
 | Mail (Resend) | Create account, verify sending domain (adds DNS **TXT/MX for a subdomain**, e.g. `send.muraniq.nl`) | Fill `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`; test delivery to the real inbox |
 | Private archive | Choose a private store for originals and confidential records (e.g. a restricted cloud drive) | Never connected to the website |
 

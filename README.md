@@ -13,8 +13,11 @@ npm install
 npm run dev              # http://localhost:3000
 npm run check            # typecheck + lint + unit tests + content validation
 npm run build            # production build
-npm run test:e2e         # Playwright: collection → dossier → viewer → enquiry
+npm run test:e2e         # Playwright: visitor journey, WCAG (axe) checks, draft preview
 ```
+
+Remote run: `E2E_BASE_URL=https://muraniq.vercel.app npm run test:e2e` (the preview tests are skipped unless
+`E2E_PREVIEW_SECRET` matches the deployment's `SANITY_PREVIEW_SECRET`). Measurements: `docs/QA-REPORT.md`.
 
 ## Where things live
 
@@ -29,6 +32,7 @@ npm run test:e2e         # Playwright: collection → dossier → viewer → enq
 | `src/features/catalog/` | Server-side search, facets, pagination |
 | `src/features/artworks/` | Attribution wording, object viewer |
 | `src/features/enquiries/` | Contact validation and mail provider adapter |
+| `src/features/preview/`, `src/app/api/draft/` | Draft preview (secret link → Draft Mode, banner, no caching or indexing) |
 | `studio/` | Sanity Studio schemas (separate bundle, not shipped to the site) |
 | `fixtures/` | Demonstration data and placeholder specs — never production content |
 | `docs/architecture/` | The architecture package this build follows |
@@ -37,3 +41,5 @@ npm run test:e2e         # Playwright: collection → dossier → viewer → enq
 
 `CONTENT_SOURCE=fixtures` (default) uses the demonstration dataset. `CONTENT_SOURCE=sanity` plus the
 `SANITY_*` variables switches to the CMS; the same validation and projection apply. See `.env.example`.
+Draft preview: set `SANITY_PREVIEW_SECRET` (32+ random characters) and open
+`/api/draft/?secret=…&slug=<object slug>`; without the variable the preview route returns 404.

@@ -30,3 +30,18 @@ Short records of choices made during the build. Architecture decisions themselve
 9. **No animation library.** CSS transitions only; reduced motion collapses them.
 10. **Studio as separate package** (`studio/`), excluded from the site's TypeScript and lint, so nothing from
     Studio can end up in the public bundle.
+11. **Draft preview through Next.js Draft Mode.** `/api/draft/?secret=…&slug=…` checks
+    `SANITY_PREVIEW_SECRET` (constant-time, at least 32 characters; without it the route returns 404), turns on
+    Draft Mode for that browser session and redirects to a path rebuilt from the validated slug (no open
+    redirect). In Draft Mode every cached read re-runs per request and is never stored, responses are
+    `no-store`, and every page carries `noindex` plus a visible "Preview" banner with a *Leave preview* button.
+    The repository then reads Sanity's `drafts` perspective; draft and in-review works are shown with their
+    status and the same publication blockers the server enforces. Withdrawn works and uncleared images stay
+    hidden even in preview. If the drafts fail validation, the preview shows published content and lists the
+    problems instead of failing. Tested end to end with the fixture draft (`tests/e2e/preview.spec.ts`).
+    Interim choice: a shared secret in the preview link. Once the Sanity project exists, switch the Studio
+    side to the Presentation tool with short-lived preview secrets (`@sanity/preview-url-secret`), so no
+    long-lived secret sits in a bookmark or the Studio bundle.
+12. **Share image and icons.** `/og-default.png` (1200×630) is used whenever a page has no raster image;
+    SVG placeholders are never offered as social previews. Favicon (ICO + SVG) and Apple touch icon are
+    generated from one monogram.

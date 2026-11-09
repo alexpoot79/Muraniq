@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArtworkBySlug, getArtworks } from "@/content/repository.server";
+import { getArtworkBySlug, getArtworks, getPreviewNote } from "@/content/repository.server";
 import { categoryBySlug } from "@/content/categories";
 import { Viewer } from "@/features/artworks/Viewer";
 import { ArtworkCard } from "@/components/editorial/ArtworkCard";
@@ -66,7 +66,7 @@ function enquiryCta(availability: string) {
 
 export default async function ArtworkPage({ params }: Props) {
   const { slug } = await params;
-  const a = await getArtworkBySlug(slug);
+  const [a, previewNote] = await Promise.all([getArtworkBySlug(slug), getPreviewNote(slug)]);
   if (!a) notFound();
 
   const category = categoryBySlug(a.category)!;
@@ -150,6 +150,26 @@ export default async function ArtworkPage({ params }: Props) {
 
         <div className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-x-12 gap-y-8 [grid-template-areas:'head'_'media'_'facts'] lg:grid-cols-[minmax(0,1.62fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
           <header className="flex flex-col gap-4 [grid-area:head]">
+            {previewNote && (
+              <div className="border-l-2 border-accent pl-4 text-sm" role="note">
+                <p>
+                  <strong className="font-medium text-on-dark">
+                    {previewNote.status === "in_review" ? "In review" : "Draft"} · not published.
+                  </strong>{" "}
+                  <span className="text-muted-dark">Only visible in preview.</span>
+                </p>
+                {previewNote.blockers.length > 0 && (
+                  <>
+                    <p className="mt-2 text-muted-dark">Before this work can be published:</p>
+                    <ul className="mt-1 list-disc pl-5 text-muted-dark">
+                      {previewNote.blockers.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            )}
             {a.isFixture && <FixtureNotice />}
             <p className="label text-accent">{a.attributionLine}</p>
             <h1 className="display-lg">{a.title}</h1>

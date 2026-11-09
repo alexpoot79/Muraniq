@@ -4,9 +4,15 @@
  * Caching (Cache Components): the whole publication snapshot is a cached read
  * tagged `catalog`; per-record reads add their own tags. The revalidation
  * webhook maps CMS events to these tags (see src/app/api/revalidate).
+ *
+ * Draft preview: when Draft Mode is on (enabled only by the secret-protected
+ * /api/draft route), Next re-executes every cached function per request and
+ * never stores the result, so the preview reads drafts without polluting the
+ * public cache. The public path never reads drafts.
  */
 import "server-only";
 import { cacheLife, cacheTag } from "next/cache";
+import { draftMode } from "next/headers";
 import { fixtureDataset } from "@fixtures/dataset";
 import { validateDataset } from "./validate";
 import { buildPublication, type Publication } from "./publication";
@@ -26,12 +32,15 @@ export function contentSource(): ContentSource {
   return process.env.CONTENT_SOURCE === "sanity" && sanityConfigured() ? "sanity" : "fixtures";
 }
 
-async function loadPublication(): Promise<Publication> {
-  "use cache";
-  cacheTag(TAGS.catalog);
-  cacheLife("hours");
+export type PreviewState = {
+  /** Validation problems in the draft dataset; when present the preview falls back to published content. */
+  issues: string[];
+};
 
-  const raw = contentSource() === "sanity" ? await fetchSanityDataset() : fixtureDataset;
+type Snapshot = { publication: Publication; preview: PreviewState | null };
+
+async function loadPublished(): Promise<Publication> {
+  const raw = contentSource() === "sanity" ? await fetchSanityDataset("published") : fixtureDataset;
   const result = validateDataset(raw);
   if (!result.ok) {
     // Fail loudly: never publish a dataset that breaks the publication rules.
@@ -39,6 +48,43 @@ async function loadPublication(): Promise<Publication> {
     throw new Error(`Content validation failed:\n${detail}`);
   }
   return buildPublication(result.data);
+}
+
+async function loadPreview(): Promise<Snapshot> {
+  const raw = contentSource() === "sanity" ? await fetchSanityDataset("drafts") : fixtureDataset;
+  const result = validateDataset(raw);
+  if (result.ok) return { publication: buildPublication(result.data, { preview: true }), preview: { issues: [] } };
+  // Incomplete drafts must not break the editor's preview: show published content and list the problems.
+  return {
+    publication: await loadPublished(),
+    preview: { issues: result.issues.map((i) => `${i.path}: ${i.message}`) },
+  };
+}
+
+async function loadSnapshot(): Promise<Snapshot> {
+  "use cache";
+  cacheTag(TAGS.catalog);
+  cacheLife("hours");
+  // Readable inside a cache scope; in Draft Mode this function re-runs per request and is never stored.
+  const { isEnabled } = await draftMode();
+  if (isEnabled) return loadPreview();
+  return { publication: await loadPublished(), preview: null };
+}
+
+async function loadPublication(): Promise<Publication> {
+  return (await loadSnapshot()).publication;
+}
+
+/** Draft preview state, or null on the public site. */
+export async function getPreviewState(): Promise<PreviewState | null> {
+  return (await loadSnapshot()).preview;
+}
+
+/** Why an unpublished record is not public yet (preview only). */
+export async function getPreviewNote(slug: string) {
+  "use cache";
+  cacheTag(TAGS.catalog, TAGS.artwork(slug));
+  return (await loadPublication()).previewNotes[slug] ?? null;
 }
 
 export async function getArtworks() {

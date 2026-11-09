@@ -16,6 +16,7 @@ import {
   type PublicTechnique,
 } from "./public-projection";
 import { attributionPhrase } from "@/features/artworks/attribution";
+import { publicationBlockers } from "./validate";
 
 export type CreatorLink = {
   id: string;
@@ -61,7 +62,16 @@ export type ArtworkDossier = PublicArtworkRecord & {
   attributionCertainty: Certainty;
 };
 
+export type PreviewNote = {
+  /** Workflow status of the unpublished record shown in preview. */
+  status: "draft" | "in_review";
+  /** Reasons this record could not be published yet (same rules as the server). */
+  blockers: string[];
+};
+
 export type Publication = {
+  /** Only filled in draft preview: unpublished records keyed by slug. */
+  previewNotes: Record<string, PreviewNote>;
   artworks: ArtworkSummary[];
   dossiers: Record<string, ArtworkDossier>;
   creators: Array<PublicCreator & { artworkIds: string[] }>;
@@ -85,7 +95,36 @@ const CERTAINTY_RANK: Record<Certainty, number> = {
   unknown: 4,
 };
 
-export function buildPublication(data: Dataset): Publication {
+/**
+ * In draft preview, records that are `draft` or `in_review` are shown as if
+ * published so editors can review them; `withdrawn` records stay hidden and
+ * the media rules are unchanged (only rights-cleared images are ever used).
+ */
+function asPreview<T extends { status: string }>(record: T): T {
+  return record.status === "draft" || record.status === "in_review" ? { ...record, status: "published" } : record;
+}
+
+export function buildPublication(input: Dataset, opts: { preview?: boolean } = {}): Publication {
+  const preview = opts.preview === true;
+  const data: Dataset = preview
+    ? {
+        ...input,
+        artworks: input.artworks.map(asPreview),
+        creators: input.creators.map(asPreview),
+        glasshouses: input.glasshouses.map(asPreview),
+        techniques: input.techniques.map(asPreview),
+      }
+    : input;
+  const previewNotes: Record<string, PreviewNote> = {};
+  if (preview) {
+    const mediaIndex = new Map(input.media.map((m) => [m.id, m] as const));
+    for (const a of input.artworks) {
+      if (a.status === "draft" || a.status === "in_review") {
+        previewNotes[a.slug] = { status: a.status, blockers: publicationBlockers(a, { media: mediaIndex }) };
+      }
+    }
+  }
+
   const creators = new Map(
     data.creators.map((c) => [c.id, projectCreator(c)] as const).filter((e): e is [string, PublicCreator] => !!e[1]),
   );
@@ -190,6 +229,7 @@ export function buildPublication(data: Dataset): Publication {
   }
 
   return {
+    previewNotes,
     artworks,
     dossiers,
     creators: [...creators.values()]
