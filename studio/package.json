@@ -1,0 +1,22 @@
+{
+  "name": "muraniq-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MURANIQ Sanity Studio \u2014 separate bundle, never shipped with the public site.",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sanity/vision": "6.22.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sanity": "6.22.0",
+    "styled-components": "6.6.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
