@@ -68,7 +68,8 @@ describe("draft preview publication", () => {
       blockers: ["state the attribution explicitly (an 'unknown' creator assertion is acceptable)"],
     });
     // Published works carry no preview note.
-    expect(pub.previewNotes["sommerso-vase-amber-and-blue"]).toBeUndefined();
+    expect(pub.dossiers["chalcedony-ewer-venice"]).toBeDefined();
+    expect(pub.previewNotes["chalcedony-ewer-venice"]).toBeUndefined();
   });
 
   it("preview keeps withdrawn records and uncleared images hidden", () => {

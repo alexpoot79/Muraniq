@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { LogoImage } from "./Logo";
 
 type Item = { label: string; href: string; children?: Array<{ label: string; href: string }> };
 
@@ -18,56 +19,59 @@ export function MobileMenu({ sections }: { sections: Item[] }) {
     ref.current?.close();
   }, [pathname]);
 
+  const close = () => ref.current?.close();
+
   return (
     <>
       <button
         type="button"
-        className="label inline-flex h-11 items-center gap-2 px-2 text-on-dark"
+        className="label -ml-2 inline-flex h-11 items-center gap-3 px-2 text-on-dark"
         aria-haspopup="dialog"
         onClick={() => ref.current?.showModal()}
       >
-        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M2 6h16M2 14h16" />
+        <svg aria-hidden="true" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" strokeWidth="1.2">
+          <path d="M0 1h22M0 11h14" />
         </svg>
         <span className="sr-only xs:not-sr-only">Menu</span>
       </button>
       <dialog
         ref={ref}
         aria-label="Site menu"
-        className="m-0 h-dvh max-h-none w-full max-w-none bg-stage p-0 text-on-dark backdrop:bg-stage/80"
+        className="m-0 h-dvh max-h-none w-full max-w-none overflow-y-auto bg-stage p-0 text-on-dark backdrop:bg-stage/80"
         onClick={(e) => {
-          if (e.target === e.currentTarget) ref.current?.close();
+          if (e.target === e.currentTarget) close();
         }}
       >
-        <div className="container-gallery flex h-16 items-center justify-end">
+        <div className="container-gallery grid h-[4.5rem] grid-cols-[1fr_auto_1fr] items-center border-b border-line-dark">
+          <span />
+          <LogoImage variant="lockup" height={44} className="h-11 w-auto" />
           <button
             type="button"
-            className="label inline-flex h-11 items-center gap-2 px-2"
-            onClick={() => ref.current?.close()}
+            className="label -mr-2 inline-flex h-11 items-center gap-2 justify-self-end px-2"
+            onClick={close}
             autoFocus
           >
             Close
-            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" stroke="currentColor" strokeWidth="1.5">
-              <path d="M3 3l12 12M15 3 3 15" />
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.2">
+              <path d="M2 2l12 12M14 2 2 14" />
             </svg>
           </button>
         </div>
-        <nav aria-label="Site" className="container-gallery pb-16">
-          <ul className="flex flex-col gap-6">
-            {sections.map((s) => (
-              <li key={s.href}>
-                <Link href={s.href} className="font-display text-4xl" onClick={() => ref.current?.close()}>
-                  {s.label}
+        <nav aria-label="Site" className="container-gallery py-10">
+          <ol className="flex flex-col">
+            {sections.map((s, i) => (
+              <li key={s.href} className="border-b border-line-dark py-5">
+                <Link href={s.href} className="group flex items-baseline gap-5" onClick={close}>
+                  <span aria-hidden="true" className="numeral w-7 text-base text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="font-display text-[2.375rem] leading-none font-light">{s.label}</span>
                 </Link>
                 {s.children && (
-                  <ul className="mt-3 flex flex-col gap-1 border-l border-line-dark pl-4">
+                  <ul className="mt-3 flex flex-col pl-12">
                     {s.children.map((c) => (
                       <li key={c.href}>
-                        <Link
-                          href={c.href}
-                          className="inline-block py-2 text-muted-dark hover:text-on-dark"
-                          onClick={() => ref.current?.close()}
-                        >
+                        <Link href={c.href} className="inline-flex min-h-11 items-center text-muted-dark hover:text-on-dark" onClick={close}>
                           {c.label}
                         </Link>
                       </li>
@@ -76,7 +80,7 @@ export function MobileMenu({ sections }: { sections: Item[] }) {
                 )}
               </li>
             ))}
-          </ul>
+          </ol>
         </nav>
       </dialog>
     </>

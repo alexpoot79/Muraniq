@@ -45,6 +45,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: false,
+  // Do not let `next dev` write an AGENTS.md into the repository.
+  agentRules: false,
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [480, 768, 1200, 1800],

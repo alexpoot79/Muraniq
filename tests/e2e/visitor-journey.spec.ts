@@ -1,23 +1,34 @@
 import { expect, test } from "@playwright/test";
 
-test("collection → filter → dossier → viewer → enquiry", async ({ page }, info) => {
+test("collection → filter → dossier → viewer → museum record", async ({ page }, info) => {
   await page.goto("/collection/");
-  await expect(page.getByRole("heading", { level: 1, name: "The collection" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Works, seen closely." })).toBeVisible();
 
   // Shareable filter URL works without client interaction.
-  await page.goto("/collection/?technique=sommerso");
+  await page.goto("/collection/?technique=avventurina");
   await expect(page.getByRole("status")).toContainText("1 work");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
-  await page.getByRole("link", { name: "Sommerso vase in amber and blue" }).click();
-  await expect(page).toHaveURL(/\/collection\/objects\/sommerso-vase-amber-and-blue\/$/);
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Sommerso vase in amber and blue");
-  await expect(page.getByText("Probably by Atelier Esempio").first()).toBeVisible();
-  await expect(page.getByText("Demonstration record.").first()).toBeVisible();
+  await page.goto("/collection/?technique=calcedonia");
+  await expect(page.getByRole("status")).toContainText("3 works");
+  await page.getByRole("link", { name: "Bottle in chalcedony glass" }).click();
+  await expect(page).toHaveURL(/\/collection\/objects\/chalcedony-bottle-miotti\/$/);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Bottle in chalcedony glass");
+  // Certainty wording follows the record: the glasshouse is a probable attribution, never stated as fact.
+  await expect(page.getByText("Probably by Miotti Glasshouse").first()).toBeVisible();
+
+  // Reference works say plainly who holds them and are never offered for enquiry or sale.
+  await page.goto("/collection/objects/chalcedony-ewer-venice/");
+  await expect(page.getByText(/^Reference work\. Held by The Cleveland Museum of Art/).first()).toBeVisible();
+  await expect(page.getByText("Maker not recorded").first()).toBeVisible();
+  const record = page.getByRole("link", { name: /View the museum record/ }).first();
+  await expect(record).toHaveAttribute("href", /^https:\/\/clevelandart\.org\/art\/1985\.141$/);
+  await expect(page.getByRole("link", { name: /question about this work|Enquire/ })).toHaveCount(0);
 
   // Thumbnails switch views without gestures.
-  await page.getByRole("button", { name: /^Base/ }).click();
-  await expect(page.getByRole("button", { name: /^Base/ })).toHaveAttribute("aria-pressed", "true");
+  const side = page.getByRole("button", { name: /^Side/ });
+  await side.click();
+  await expect(side).toHaveAttribute("aria-pressed", "true");
 
   // Fullscreen: keyboard operable, Escape closes, focus returns to the trigger.
   const trigger = page.getByRole("button", { name: "View full screen" });
@@ -33,11 +44,10 @@ test("collection → filter → dossier → viewer → enquiry", async ({ page }
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
 
-  // Enquiry carries the object reference.
-  await page.getByRole("link", { name: /question about this work|Enquire/ }).click();
-  await expect(page).toHaveURL(/\/contact\/\?object=MUR-D001/);
-  await expect(page.getByRole("heading", { level: 1, name: "Contact" })).toBeVisible();
-  await expect(page.getByText("(MUR-D001)")).toBeVisible();
+  // The contact page ignores a museum object reference instead of implying it can be enquired about.
+  await page.goto("/contact/?object=MUR-R001");
+  await expect(page.getByRole("heading", { level: 1, name: /Contact/ })).toBeVisible();
+  await expect(page.getByText("(MUR-R001)")).toHaveCount(0);
   // Without a configured mail provider the page offers the real address, not a fake form.
   await expect(page.getByRole("link", { name: /Email info@muraniq\.com/ })).toBeVisible();
 
@@ -48,8 +58,8 @@ test("empty results, empty areas and 404 behave honestly", async ({ page }) => {
   await page.goto("/collection/?q=zzzzqq");
   await expect(page.getByRole("heading", { name: "No works match these choices." })).toBeVisible();
 
-  await page.goto("/collection/fine-art/");
-  await expect(page.getByRole("heading", { name: "This area of the collection is being documented." })).toBeVisible();
+  await page.goto("/collection/studio-glass/");
+  await expect(page.getByRole("heading", { name: "This area is being documented." })).toBeVisible();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
   const res = await page.goto("/not-a-page/");
@@ -84,4 +94,17 @@ test("contact API validates input server-side", async ({ request }) => {
   const body = await res.json();
   expect(body.status).toBe("invalid");
   expect(body.errors.email).toBeTruthy();
+
+  // A valid enquiry about a museum reference work is refused: MURANIQ does not hold it.
+  const ref = await request.post("/api/contact/", {
+    headers: { Accept: "application/json" },
+    data: {
+      name: "Ada Lovelace",
+      email: "ada@example.org",
+      message: "Is this ewer available?",
+      consent: "yes",
+      objectId: "MUR-R001",
+    },
+  });
+  expect(ref.status()).toBe(422);
 });

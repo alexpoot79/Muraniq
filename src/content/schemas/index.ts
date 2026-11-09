@@ -59,7 +59,7 @@ export const VIEW_TYPES = ["front", "reverse", "side", "base", "signature", "lab
 export const ViewType = z.enum(VIEW_TYPES);
 export type ViewType = z.infer<typeof ViewType>;
 
-export const RIGHTS_STATUS = ["owned", "licensed", "permission", "unknown", "placeholder"] as const;
+export const RIGHTS_STATUS = ["owned", "licensed", "permission", "public_domain", "unknown", "placeholder"] as const;
 export const RightsStatus = z.enum(RIGHTS_STATUS);
 export type RightsStatus = z.infer<typeof RightsStatus>;
 
@@ -185,6 +185,20 @@ export const ProvenanceEvent = z.object({
 });
 export type ProvenanceEvent = z.infer<typeof ProvenanceEvent>;
 
+/**
+ * A reference work held by another institution, shown with that institution's
+ * open-access photograph (e.g. CC0) while the collection's own photography is
+ * prepared. Never part of the MURANIQ collection and never offered for enquiry.
+ */
+export const ReferenceHolding = z.object({
+  institution: z.string().min(2).max(120),
+  accessionNumber: z.string().min(1).max(60),
+  url: z.url(),
+  licence: z.enum(["CC0"]),
+  creditLine: z.string().max(240).optional(),
+});
+export type ReferenceHolding = z.infer<typeof ReferenceHolding>;
+
 export const Artwork = z.object({
   id: id("MUR"),
   slug,
@@ -215,6 +229,8 @@ export const Artwork = z.object({
   curatedOrder: z.number().int().default(1000),
   /** Visible "demonstration record" marking for local fixtures. */
   isFixture: z.boolean().default(false),
+  /** Set only for reference works held by another institution. */
+  reference: ReferenceHolding.optional(),
   seo: z.object({ title: z.string().max(70).optional(), description: z.string().max(170).optional() }).default({}),
   updatedAt: isoDate,
 });
@@ -230,7 +246,7 @@ export const Creator = z.object({
   roles: z.array(CreatorRole).min(1),
   summary: z.string().max(300),
   biography: z.array(z.string()).default([]),
-  biographyStatus: z.enum(["reviewed", "migrated_unreviewed", "pending_migration"]),
+  biographyStatus: z.enum(["reviewed", "migrated_unreviewed", "pending_migration", "reference_only"]),
   sourceIds: z.array(id("SRC")).default([]),
   legacyPath: z.string().startsWith("/").optional(),
   isFixture: z.boolean().default(false),

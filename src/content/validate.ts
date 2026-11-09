@@ -89,6 +89,11 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
         if (!backed) push(p, `creator ${c.creatorId} marked verified without a verified creator assertion`);
       }
     }
+    // A reference work belongs to another institution: it is never offered, and it must stay marked.
+    if (a.reference) {
+      if (a.availability !== "private_collection") push(p, "a reference work cannot be offered, reserved or sold");
+      if (!a.isFixture) push(p, "a reference work must be marked as a demonstration record (isFixture)");
+    }
     if (a.status === "published") for (const issue of publicationBlockers(a, ids)) push(p, issue);
   }
 

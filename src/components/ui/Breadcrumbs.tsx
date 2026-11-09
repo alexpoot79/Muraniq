@@ -7,22 +7,22 @@ export function Breadcrumbs({ items, tone = "dark" }: { items: Crumb[]; tone?: "
   const muted = tone === "dark" ? "text-muted-dark" : "text-ink-muted";
   return (
     <>
-      <nav aria-label="Breadcrumb" className={`label ${muted}`}>
-        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+      <nav aria-label="Breadcrumb" className={`label text-[0.6875rem] ${muted}`}>
+        <ol className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {items.map((c, i) => {
             const last = i === items.length - 1;
             return (
-              <li key={c.href} className="flex items-center gap-2">
+              <li key={c.href} className="flex items-center gap-3">
                 {last ? (
                   <span aria-current="page" className={tone === "dark" ? "text-on-dark" : "text-ink"}>
                     {c.label}
                   </span>
                 ) : (
                   <>
-                    <Link href={c.href} className="link-quiet">
+                    <Link href={c.href} className="inline-flex min-h-6 items-center transition-colors hover:text-on-dark">
                       {c.label}
                     </Link>
-                    <span aria-hidden="true">/</span>
+                    <span aria-hidden="true" className="inline-block h-px w-4 bg-current opacity-50" />
                   </>
                 )}
               </li>

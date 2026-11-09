@@ -1,14 +1,54 @@
 import Link from "next/link";
 
-/** Typographic wordmark with monogram. Accessible name: "MURANIQ — Home". */
-export function Logo() {
+/**
+ * The approved MURANIQ logo (traced 1:1 from the supplied artwork, see
+ * public/brand/). Never redrawn or recoloured beyond the two approved tones.
+ */
+const ASSETS = {
+  lockup: { dark: "/brand/muraniq-lockup-on-dark.svg", light: "/brand/muraniq-lockup-on-light.svg", ratio: 870 / 385 },
+  wordmark: { dark: "/brand/muraniq-wordmark-ivory.svg", light: "/brand/muraniq-wordmark-ink.svg", ratio: 870 / 119 },
+  monogram: { dark: "/brand/muraniq-monogram-gold.svg", light: "/brand/muraniq-monogram-antique.svg", ratio: 249 / 187 },
+} as const;
+
+export function LogoImage({
+  variant = "lockup",
+  tone = "dark",
+  height,
+  className = "",
+}: {
+  variant?: keyof typeof ASSETS;
+  /** "dark" = for dark backgrounds (gold + ivory), "light" = for beige/ivory backgrounds. */
+  tone?: "dark" | "light";
+  height: number;
+  className?: string;
+}) {
+  const a = ASSETS[variant];
   return (
-    <Link href="/" aria-label="MURANIQ — Home" className="group inline-flex items-center gap-2.5 py-2">
-      <svg aria-hidden="true" width="30" height="30" viewBox="0 0 34 34" className="shrink-0">
-        <rect x="0.5" y="0.5" width="33" height="33" fill="none" stroke="var(--color-accent)" />
-        <path d="M8 25V9.5l9 10 9-10V25" fill="none" stroke="var(--color-accent)" strokeWidth="1.4" />
-      </svg>
-      <span className="font-display text-[1.125rem] font-semibold tracking-[0.2em] text-on-dark xs:text-[1.375rem] xs:tracking-[0.28em]">MURANIQ</span>
+    // eslint-disable-next-line @next/next/no-img-element -- vector logo, no optimisation needed
+    <img
+      src={a[tone]}
+      alt=""
+      width={Math.round(height * a.ratio)}
+      height={height}
+      className={`block select-none ${className || "h-auto max-w-full"}`}
+      draggable={false}
+    />
+  );
+}
+
+/** Home link with the logo lockup. Accessible name: "MURANIQ — Home". */
+export function Logo({
+  height = 52,
+  className = "",
+  imgClassName = "",
+}: {
+  height?: number;
+  className?: string;
+  imgClassName?: string;
+}) {
+  return (
+    <Link href="/" aria-label="MURANIQ — Home" className={`inline-flex items-center py-2 ${className}`}>
+      <LogoImage variant="lockup" height={height} className={imgClassName} />
     </Link>
   );
 }

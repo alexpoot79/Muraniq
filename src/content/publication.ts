@@ -39,6 +39,8 @@ export type ArtworkSummary = {
   hero: PublicMedia;
   availability: PublicArtworkRecord["availability"];
   isFixture: boolean;
+  /** Set when the object is a reference work held by another institution. */
+  heldBy: { institution: string; accessionNumber: string } | null;
   featured: boolean;
   curatedOrder: number;
   makerSlugs: string[];
@@ -175,6 +177,7 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean } = {
       hero: media.get(a.heroImageId)!,
       availability: a.availability,
       isFixture: a.isFixture,
+      heldBy: a.reference ? { institution: a.reference.institution, accessionNumber: a.reference.accessionNumber } : null,
       featured: a.featured,
       curatedOrder: a.curatedOrder,
       makerSlugs: links.map((l) => l.slug),

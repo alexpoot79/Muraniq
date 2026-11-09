@@ -44,7 +44,7 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
       </PageIntro>
 
       <article className="surface-paper" aria-labelledby="t-body">
-        <div className="container-gallery grid gap-10 py-16 md:grid-cols-12 lg:py-24">
+        <div className="container-gallery section-y grid gap-14 md:grid-cols-12">
           <div className="measure flex flex-col gap-5 md:col-span-7">
             <h2 id="t-body" className="sr-only">
               About {t.term}
@@ -61,20 +61,28 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
               <h2 id="recognise" className="label text-ink-muted">
                 How to recognise it
               </h2>
-              <ul className="mt-4 flex flex-col gap-3 border-t border-line-paper pt-4">
+              <ol className="mt-5 flex flex-col border-t border-line-paper">
                 {t.recognition.map((r, i) => (
-                  <li key={i} className="border-b border-line-paper pb-3">
-                    {r}
+                  <li key={i} className="flex gap-4 border-b border-line-paper py-4">
+                    <span className="numeral text-lg text-accent-ink">{i + 1}</span>
+                    <span>{r}</span>
                   </li>
                 ))}
-              </ul>
+              </ol>
               {sources.length > 0 && (
                 <>
                   <h2 className="label mt-8 text-ink-muted">Sources</h2>
                   <ul className="mt-2 list-disc pl-5">
                     {sources.map((s) => (
                       <li key={s.id}>
-                        <cite>{s.title}</cite>
+                        {s.url ? (
+                          <a href={s.url} className="link-quiet" rel="noopener">
+                            <cite>{s.title}</cite>
+                          </a>
+                        ) : (
+                          <cite>{s.title}</cite>
+                        )}
+                        {s.publisher ? `, ${s.publisher}` : ""}
                       </li>
                     ))}
                   </ul>
@@ -85,14 +93,15 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
         </div>
       </article>
 
-      <section aria-labelledby="examples" className="container-gallery py-16 lg:py-24">
-        <h2 id="examples" className="display-md">
-          Examples in the collection
+      <section aria-labelledby="examples" className="container-gallery section-y">
+        <p className="label eyebrow text-muted-dark">Study</p>
+        <h2 id="examples" className="display-lg mt-5">
+          Examples <span className="serif-italic">to look at closely</span>
         </h2>
         {artworks.length === 0 ? (
           <p className="mt-6 text-muted-dark">No published examples yet.</p>
         ) : (
-          <ul className="mt-10 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {artworks.map((a) => (
               <li key={a.id}>
                 <ArtworkCard artwork={a} />

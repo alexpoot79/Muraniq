@@ -72,3 +72,52 @@ forced colours / Windows high contrast, reduced motion, and a review of real ima
 visitor journey (collection → filter → dossier → viewer → enquiry), empty states, drafts absent, homepage reference
 and contact API validation, on desktop and mobile: 10/10 passed. The accessibility suite has not yet run remotely
 because the search-button fix is not deployed yet.
+
+## Luxury redesign with reference photography — 9 November 2026 (local, not yet deployed)
+
+Measured on a local production build (`next build` + `next start`), not on Vercel. Content: 13 museum reference works
+with real CC0 photographs (JPEG via `next/image`), so image weight is now realistic.
+
+**Automated checks, all passing:** `tsc --noEmit`, `eslint .`, Vitest 41/41, content validation, `next build`,
+Playwright 65 passed / 1 skipped (desktop 1440 px and mobile 390 px): visitor journey, honest empty states and 404,
+draft boundary, draft preview, contact API, and axe WCAG 2.2 A/AA on 22 pages plus the full-screen viewer and the
+mobile menu.
+
+**Found and fixed by these checks:**
+
+- Gold numerals on paper (#A88A54 on #E8DDCB, 2.4:1) failed contrast. New token `accent-ink` #735A2E (4.8:1) for
+  gold-toned text on light surfaces.
+- Viewer thumbnails: the whole button was dimmed to 70%, which pushed the label below 4.5:1. Only the picture dims now.
+- Viewer thumbnails announced the image description twice ("<alt> Side : <alt>"). Thumbnail images are now
+  decorative; the button reads "Side: <description>".
+- Collection page footer jumped when the streamed results arrived (CLS 0.12 on desktop). The loading placeholder
+  now reserves the space (CLS 0).
+- Hero / first viewer image is now preloaded from `<head>` (Next 16 `preload`).
+
+**How the accessibility audit treats motion:** load-time text animations are allowed to finish and scroll-driven
+reveals are removed before axe measures contrast, so it judges the colours text settles to. In a real browser, text
+at the very bottom edge of the screen is briefly faded until it scrolls further in; with *reduce motion* there is no
+fade at all.
+
+**Lighthouse 12.6.1, local, simulated throttling:**
+
+| Page | Form factor | Perf | A11y | Best pr. | SEO | LCP | TBT | CLS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `/` | mobile | 91–95 | 100 | 100 | 69 | 2.7–3.4 s | 80 ms | 0 |
+| `/collection/` | mobile | 89 | 100 | 100 | 66 | 3.8 s | 60 ms | 0 |
+| `/collection/objects/chalcedony-ewer-venice/` | mobile | 90–95 | 100 | 100 | 69 | 2.9–3.5 s | 110 ms | 0 |
+| `/exhibition/` | mobile | 91 | 100 | 100 | 69 | 3.5 s | 60 ms | 0 |
+| `/` | desktop | 100 | 100 | 100 | 69 | 0.8 s | 0 ms | 0 |
+| `/collection/` | desktop | 99 | 100 | 100 | 66 | 0.9 s | 10 ms | 0 |
+| `/collection/objects/chalcedony-ewer-venice/` | desktop | 100 | 100 | 100 | 69 | 0.8 s | 20 ms | 0 |
+| `/exhibition/` | desktop | 100 | 100 | 100 | 69 | 0.7 s | 10 ms | 0 |
+
+(Collection mobile was measured before the CLS and preload fixes; ranges are repeated runs.)
+
+Deviations, explained:
+
+- **SEO 66–69: intentional**, as before: `noindex` until launch.
+- **Mobile LCP 2.7–3.8 s in the lab misses the 2.5 s target.** The hero photograph itself arrives early (≈ 18 KB);
+  most of the time is *render delay* that Lighthouse attributes to JavaScript under 4× CPU slowdown. Next steps:
+  measure on Vercel (CDN, HTTP/2) and with field data; if still over, trim client JavaScript on the home page.
+- Not done: manual screen-reader pass, real-device testing, field Core Web Vitals.

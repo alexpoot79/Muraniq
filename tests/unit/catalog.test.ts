@@ -43,28 +43,33 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(6);
-    expect(r.items[0]!.id).toBe("MUR-D001");
+    expect(r.total).toBe(13);
+    expect(r.items[0]!.id).toBe("MUR-R001");
   });
 
   it("ORs within a facet and ANDs between facets", () => {
-    const or = searchCatalog(all, parseCatalogQuery({ technique: "sommerso,pulegoso" }));
-    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-D001", "MUR-D006"]);
-    const and = searchCatalog(all, parseCatalogQuery({ technique: "sommerso,pulegoso", attribution: "probable" }));
-    expect(and.items.map((a) => a.id)).toEqual(["MUR-D001"]);
+    const or = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina" }));
+    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013"]);
+    const and = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina", attribution: "probable" }));
+    expect(and.items.map((a) => a.id)).toEqual(["MUR-R008"]);
   });
 
   it("matches accent-insensitive text and ranks title matches first", () => {
-    const r = searchCatalog(all, parseCatalogQuery({ q: "VÁSE" }));
-    expect(r.total).toBeGreaterThan(0);
-    expect(r.items.every((a) => a.search.title.includes("vase") || a.search.text.includes("vase"))).toBe(true);
-    expect(searchCatalog(all, parseCatalogQuery({ q: "submerged" })).items[0]!.id).toBe("MUR-D001"); // synonym
+    const r = searchCatalog(all, parseCatalogQuery({ q: "CHÁLCEDONY" }));
+    expect(r.items.map((a) => a.id)).toEqual(["MUR-R001", "MUR-R008", "MUR-R013"]);
+    expect(r.items.every((a) => a.search.title.includes("chalcedony"))).toBe(true);
+    // synonyms of technique terms
+    expect(searchCatalog(all, parseCatalogQuery({ q: "milk glass" })).items.map((a) => a.id)).toEqual(["MUR-R007"]);
+    expect(searchCatalog(all, parseCatalogQuery({ q: "murrine" })).items.map((a) => a.id).sort()).toEqual([
+      "MUR-R009",
+      "MUR-R012",
+    ]);
   });
 
   it("matches periods by overlap and reports undated works separately", () => {
-    const r = searchCatalog(all, parseCatalogQuery({ from: "1960", to: "1970" }));
-    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-D001", "MUR-D003"]);
-    expect(r.undatedExcluded).toBe(2);
+    const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
+    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R010", "MUR-R013"]);
+    expect(r.undatedExcluded).toBe(1); // the Roman bowl has no year range
   });
 
   it("returns a correct empty result", () => {
@@ -75,9 +80,10 @@ describe("search and facets", () => {
   });
 
   it("computes disjunctive facet counts", () => {
-    const r = searchCatalog(all, parseCatalogQuery({ technique: "sommerso" }));
-    expect(r.facets.technique.pulegoso).toBe(1); // still selectable alongside sommerso
-    expect(r.facets.category["murano-glass"]).toBe(1);
+    const r = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia" }));
+    expect(r.facets.technique.avventurina).toBe(1); // still selectable alongside calcedonia
+    expect(r.facets.category["murano-glass"]).toBe(3);
+    expect(r.facets.category["fine-art"]).toBeUndefined();
   });
 
   it("never returns draft records", () => {

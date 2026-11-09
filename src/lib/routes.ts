@@ -9,6 +9,7 @@ export const routes = {
   collection: () => "/collection/",
   category: (slug: CategorySlug) => `/collection/${slug}/`,
   artwork: (slug: string) => `/collection/objects/${slug}/`,
+  exhibition: () => "/exhibition/",
   guide: () => "/glass-guide/",
   makers: () => "/glass-guide/makers/",
   maker: (slug: string) => `/glass-guide/makers/${slug}/`,

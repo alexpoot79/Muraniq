@@ -8,6 +8,7 @@ import { ArtworkCard } from "@/components/editorial/ArtworkCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CertaintyBadge } from "@/components/ui/CertaintyBadge";
 import { FixtureNotice } from "@/components/ui/FixtureNotice";
+import { ArrowLink } from "@/components/ui/ArrowLink";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { ROLE_LABEL, attributionPhrase, mayAssertCreatorInStructuredData } from "@/features/artworks/attribution";
 import { AVAILABILITY_LABEL, VIEW_LABEL, formatDimensions } from "@/lib/format";
@@ -42,14 +43,19 @@ const MARK_KIND: Record<string, string> = {
   other: "Mark",
 };
 
-function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+function Section({ id, n, title, children }: { id: string; n: number; title: string; children: React.ReactNode }) {
   return (
-    <section aria-labelledby={`${id}-title`} id={id} className="scroll-mt-28 border-t border-line-paper py-12 first:border-t-0 first:pt-0">
-      <div className="grid gap-6 md:grid-cols-12">
-        <h2 id={`${id}-title`} className="display-md md:col-span-4">
-          {title}
-        </h2>
-        <div className="md:col-span-8">{children}</div>
+    <section aria-labelledby={`${id}-title`} id={id} className="scroll-mt-28 border-t border-line-paper py-14 first:border-t-0 first:pt-0 lg:py-20">
+      <div className="grid gap-8 md:grid-cols-12">
+        <div className="md:col-span-4">
+          <p aria-hidden="true" className="numeral text-xl text-accent-ink">
+            {String(n).padStart(2, "0")}
+          </p>
+          <h2 id={`${id}-title`} className="display-md mt-3">
+            {title}
+          </h2>
+        </div>
+        <div className="md:col-span-8 lg:col-span-7 lg:col-start-6">{children}</div>
       </div>
     </section>
   );
@@ -114,7 +120,15 @@ export default async function ArtworkPage({ params }: Props) {
       ),
     },
     ...(dims.length ? dims : [{ label: "Dimensions", value: "Not documented" }]),
-    { label: "Collection ID", value: <span className="font-mono text-sm">{a.id}</span> },
+    ...(a.reference
+      ? [
+          { label: "Held by", value: a.reference.institution },
+          { label: "Accession no.", value: a.reference.accessionNumber },
+          ...(a.reference.creditLine ? [{ label: "Credit line", value: a.reference.creditLine }] : []),
+          { label: "Photograph", value: `${a.reference.institution}, open access (${a.reference.licence})` },
+        ]
+      : []),
+    { label: a.reference ? "Record ID" : "Collection ID", value: <span className="font-mono text-sm">{a.id}</span> },
   ];
 
   const jsonLd: Record<string, unknown> = {
@@ -137,9 +151,21 @@ export default async function ArtworkPage({ params }: Props) {
       : {}),
   };
 
+  const sectionIds = [
+    "description",
+    "specifications",
+    ...(a.marks.length ? ["marks"] : []),
+    "attribution",
+    ...(a.provenance.length ? ["provenance"] : []),
+    ...(a.condition ? ["condition"] : []),
+  ];
+  const num = (id: string) => sectionIds.indexOf(id) + 1;
+  const origin = a.assertions.find((x) => x.field === "origin")?.statement.replace(/^Made (in|on) (the )?/, "");
+  const ref = a.reference;
+
   return (
     <article>
-      <div className="container-gallery pt-6 pb-16 lg:pt-10 lg:pb-24">
+      <div className="container-gallery pt-8 pb-20 lg:pt-12 lg:pb-28">
         <Breadcrumbs
           items={[
             { label: "Collection", href: routes.collection() },
@@ -148,8 +174,8 @@ export default async function ArtworkPage({ params }: Props) {
           ]}
         />
 
-        <div className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-x-12 gap-y-8 [grid-template-areas:'head'_'media'_'facts'] lg:grid-cols-[minmax(0,1.62fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
-          <header className="flex flex-col gap-4 [grid-area:head]">
+        <div className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-10 [grid-template-areas:'head'_'media'_'facts'] lg:mt-14 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
+          <header className="flex flex-col gap-5 [grid-area:head]">
             {previewNote && (
               <div className="border-l-2 border-accent pl-4 text-sm" role="note">
                 <p>
@@ -170,57 +196,74 @@ export default async function ArtworkPage({ params }: Props) {
                 )}
               </div>
             )}
-            {a.isFixture && <FixtureNotice />}
-            <p className="label text-accent">{a.attributionLine}</p>
-            <h1 className="display-lg">{a.title}</h1>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              <CertaintyBadge certainty={a.attributionCertainty} />
-              {a.dating && <span className="text-muted-dark">{a.dating.displayLabel}</span>}
+            <p className="settle label eyebrow text-muted-dark">
+              {category.title} · {a.objectType}
+            </p>
+            <h1 className="settle settle-1 display-lg">{a.title}</h1>
+            <div className="settle settle-2 flex flex-col gap-3">
+              <p className="font-display text-xl text-on-dark">
+                {[origin ?? a.country, a.dating?.displayLabel].filter(Boolean).join(", ")}
+              </p>
+              {a.attributionCertainty === "unknown" ? (
+                <p className="text-sm text-muted-dark">Maker not recorded</p>
+              ) : (
+                <div className="flex flex-col gap-2">
+                  <p className="text-on-dark">{a.attributionLine}</p>
+                  <CertaintyBadge certainty={a.attributionCertainty} />
+                </div>
+              )}
             </div>
           </header>
 
-          <div className="[grid-area:media] lg:sticky lg:top-28 lg:self-start">
+          <div className="[grid-area:media] lg:sticky lg:top-32 lg:self-start">
             <Viewer media={a.media} title={a.title} />
           </div>
 
-          <div className="flex flex-col gap-8 [grid-area:facts]">
+          <div className="flex flex-col gap-10 [grid-area:facts]">
             <p className="lede text-muted-dark">{a.summary}</p>
-            <dl className="grid grid-cols-[minmax(7rem,auto)_1fr] gap-x-6 gap-y-3 border-t border-line-dark pt-6 text-sm">
-              <dt className="label text-muted-dark">Status</dt>
-              <dd>{AVAILABILITY_LABEL[a.availability]}</dd>
-              <dt className="label text-muted-dark">Object</dt>
-              <dd>{a.objectType}</dd>
-              {a.techniques.length > 0 && (
-                <>
-                  <dt className="label text-muted-dark">Technique</dt>
-                  <dd>{a.techniques.map((t) => t.term).join(", ")}</dd>
-                </>
-              )}
-              {dims[0] && (
-                <>
-                  <dt className="label text-muted-dark">{dims[0].label}</dt>
-                  <dd>{dims[0].value}</dd>
-                </>
-              )}
-              <dt className="label text-muted-dark">ID</dt>
-              <dd className="font-mono">{a.id}</dd>
+            <dl className="grid grid-cols-[minmax(7.5rem,auto)_1fr] border-t border-line-dark text-sm">
+              {[
+                ...(ref
+                  ? [{ k: "Held by", v: `${ref.institution}, ${ref.accessionNumber}` }]
+                  : [{ k: "Status", v: AVAILABILITY_LABEL[a.availability] }]),
+                ...(a.country ? [{ k: "Country", v: a.country }] : []),
+                ...(a.materials.length ? [{ k: "Materials", v: a.materials.join(", ") }] : []),
+                ...(a.techniques.length ? [{ k: "Technique", v: a.techniques.map((t) => t.term).join(", ") }] : []),
+                ...(dims[0] ? [{ k: dims[0].label, v: dims[0].value }] : []),
+                { k: "Record", v: a.id },
+              ].map((row) => (
+                <div key={row.k} className="contents">
+                  <dt className="label border-b border-line-dark py-3.5 text-[0.6875rem] text-muted-dark">{row.k}</dt>
+                  <dd className="border-b border-line-dark py-3.5 text-on-dark">{row.v}</dd>
+                </div>
+              ))}
             </dl>
-            <div className="flex flex-col gap-3">
-              <Link href={routes.contact(a.id)} className={`btn ${cta.primary ? "btn-primary" : "btn-ghost"}`}>
-                {cta.label}
-              </Link>
-              <a href="#study" className="label link-quiet self-start py-2 text-muted-dark">
+
+            {a.isFixture && <FixtureNotice heldBy={ref ? { ...ref } : null} />}
+
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+              {ref ? (
+                <a href={ref.url} className="btn btn-ghost" rel="noopener">
+                  View the museum record
+                  <span className="sr-only"> (opens the {ref.institution} website)</span>
+                </a>
+              ) : (
+                <Link href={routes.contact(a.id)} className={`btn ${cta.primary ? "btn-primary" : "btn-ghost"}`}>
+                  {cta.label}
+                </Link>
+              )}
+              <ArrowLink href="#study" className="text-on-dark">
                 Read the full dossier
-              </a>
+              </ArrowLink>
             </div>
           </div>
         </div>
       </div>
 
       {/* Study room */}
-      <div id="study" className="surface-paper scroll-mt-20">
-        <div className="container-gallery py-16 lg:py-24">
-          <Section id="description" title="Description">
+      <div id="study" className="surface-paper scroll-mt-24">
+        <div className="container-gallery py-20 lg:py-32">
+          <Section id="description" n={num("description")} title="Description">
             <div className="measure flex flex-col gap-4">
               {a.description.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -228,7 +271,7 @@ export default async function ArtworkPage({ params }: Props) {
             </div>
           </Section>
 
-          <Section id="specifications" title="Specifications">
+          <Section id="specifications" n={num("specifications")} title="Specifications">
             <dl className="grid gap-x-8 gap-y-4 sm:grid-cols-[minmax(8rem,auto)_1fr]">
               {specs.map((s) => (
                 <div key={s.label} className="contents">
@@ -240,7 +283,7 @@ export default async function ArtworkPage({ params }: Props) {
           </Section>
 
           {a.marks.length > 0 && (
-            <Section id="marks" title="Marks & Labels">
+            <Section id="marks" n={num("marks")} title="Marks & Labels">
               <ul className="flex flex-col gap-8">
                 {a.marks.map((m, i) => (
                   <li key={i} className="flex flex-col gap-2">
@@ -272,11 +315,11 @@ export default async function ArtworkPage({ params }: Props) {
             </Section>
           )}
 
-          <Section id="attribution" title="Attribution & Sources">
+          <Section id="attribution" n={num("attribution")} title="Attribution & Sources">
             <div className="flex flex-col gap-8">
               {a.assertions.length === 0 && <p>Not documented.</p>}
               {a.assertions.map((as, i) => (
-                <div key={i} className="flex flex-col gap-3 border border-line-paper bg-paper-2/60 p-5 sm:p-6">
+                <div key={i} className="flex flex-col gap-3 border border-line-paper bg-paper-2/70 p-6 sm:p-8">
                   <p className="label text-ink-muted">{as.field === "other" ? "Claim" : as.field}</p>
                   <p className="font-display text-2xl">{as.statement}</p>
                   <CertaintyBadge certainty={as.certainty} tone="paper" explain />
@@ -312,10 +355,11 @@ export default async function ArtworkPage({ params }: Props) {
                           <>
                             {" "}
                             <a href={s.url} className="link-quiet" rel="noopener">
-                              Link
+                              View record<span className="sr-only">: {s.title}</span>
                             </a>
                           </>
                         )}
+                        {s.rightsNote && <span className="block text-sm text-ink-muted">{s.rightsNote}</span>}
                         {s.reliabilityNote && <span className="block text-sm text-ink-muted">{s.reliabilityNote}</span>}
                       </li>
                     ))}
@@ -331,7 +375,7 @@ export default async function ArtworkPage({ params }: Props) {
           </Section>
 
           {a.provenance.length > 0 && (
-            <Section id="provenance" title="Public Provenance">
+            <Section id="provenance" n={num("provenance")} title="Public Provenance">
               <ol className="flex flex-col gap-4">
                 {a.provenance.map((p, i) => (
                   <li key={i} className="grid gap-1 sm:grid-cols-[8rem_1fr] sm:gap-6">
@@ -350,7 +394,7 @@ export default async function ArtworkPage({ params }: Props) {
           )}
 
           {a.condition && (
-            <Section id="condition" title="Condition">
+            <Section id="condition" n={num("condition")} title="Condition">
               <p className="measure">{a.condition}</p>
             </Section>
           )}
@@ -358,17 +402,25 @@ export default async function ArtworkPage({ params }: Props) {
       </div>
 
       {a.related.length > 0 && (
-        <section aria-labelledby="related-title" className="border-t border-line-dark">
-          <div className="container-gallery py-16 lg:py-24">
-            <h2 id="related-title" className="display-md">
-              Related works
-            </h2>
-            <ul className="mt-10 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+        <section aria-labelledby="related-title" className="section-y border-t border-line-dark">
+          <div className="container-gallery">
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="label eyebrow text-muted-dark">Continue looking</p>
+                <h2 id="related-title" className="display-lg mt-5">
+                  Related <span className="serif-italic">works</span>
+                </h2>
+              </div>
+              <ArrowLink href={routes.category(category.slug)} className="text-on-dark">
+                {category.title}
+              </ArrowLink>
+            </div>
+            <ul className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
               {a.related.map((r) => (
                 <li key={r.id}>
                   <ArtworkCard artwork={r} />
                   {r.techniqueSlugs.some((t) => a.techniques.some((x) => x.slug === t)) && (
-                    <p className="mt-2 text-sm text-muted-dark">Shares a documented technique.</p>
+                    <p className="mt-3 text-xs tracking-wide text-muted-dark">Shares a documented technique.</p>
                   )}
                 </li>
               ))}

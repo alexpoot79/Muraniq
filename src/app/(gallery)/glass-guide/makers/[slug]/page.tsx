@@ -39,7 +39,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
           { label: "Makers", href: routes.makers() },
           { label: c.name, href: routes.maker(c.slug) },
         ]}
-        kicker={c.kind === "person" ? "Maker" : "Workshop"}
+        kicker={c.roles.includes("artist") ? "Artist" : c.kind === "person" ? "Maker" : "Glasshouse"}
         title={c.name}
       >
         <p>{c.summary}</p>
@@ -47,8 +47,8 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
       </PageIntro>
 
       <section className="surface-paper" aria-labelledby="bio-title">
-        <div className="container-gallery grid gap-8 py-16 md:grid-cols-12 lg:py-24">
-          <h2 id="bio-title" className="display-md md:col-span-4">
+        <div className="container-gallery section-y grid gap-10 md:grid-cols-12">
+          <h2 id="bio-title" className="display-lg md:col-span-4">
             Biography
           </h2>
           <div className="measure flex flex-col gap-5 md:col-span-8">
@@ -72,7 +72,14 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
                 <ul className="mt-2 list-disc pl-5">
                   {sources.map((s) => (
                     <li key={s.id}>
-                      <cite>{s.title}</cite>
+                      {s.url ? (
+                        <a href={s.url} className="link-quiet" rel="noopener">
+                          <cite>{s.title}</cite>
+                        </a>
+                      ) : (
+                        <cite>{s.title}</cite>
+                      )}
+                      {s.publisher ? `, ${s.publisher}` : ""}
                       {s.year ? ` (${s.year})` : ""}
                     </li>
                   ))}
@@ -83,9 +90,10 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
         </div>
       </section>
 
-      <section aria-labelledby="works-title" className="container-gallery py-16 lg:py-24">
-        <h2 id="works-title" className="display-md">
-          Works in the collection
+      <section aria-labelledby="works-title" className="container-gallery section-y">
+        <p className="label eyebrow text-muted-dark">Works</p>
+        <h2 id="works-title" className="display-lg mt-5">
+          {artworks.some((a) => a.heldBy) ? "Works shown on MURANIQ" : "Works in the collection"}
         </h2>
         {artworks.length === 0 ? (
           <p className="mt-6 max-w-prose text-muted-dark">
@@ -93,7 +101,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
             identification and photography have been reviewed.
           </p>
         ) : (
-          <ul className="mt-10 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {artworks.map((a) => (
               <li key={a.id}>
                 <ArtworkCard artwork={a} />

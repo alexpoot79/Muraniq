@@ -61,7 +61,8 @@ export async function POST(req: Request) {
   let objectTitle: string | undefined;
   if (v.data.objectId) {
     const art = await getArtworkById(v.data.objectId);
-    if (!art) {
+    // Reference works belong to other institutions and are never the subject of an enquiry.
+    if (!art || art.heldBy) {
       return respond(req, 422, { status: "invalid", errors: { objectId: "Unknown object reference." }, requestId });
     }
     objectTitle = art.title;

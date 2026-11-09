@@ -45,3 +45,13 @@ Short records of choices made during the build. Architecture decisions themselve
 12. **Share image and icons.** `/og-default.png` (1200×630) is used whenever a page has no raster image;
     SVG placeholders are never offered as social previews. Favicon (ICO + SVG) and Apple touch icon are
     generated from one monogram.
+13. **Museum reference works instead of placeholders.** Until MURANIQ's own photographs and records exist, the
+    site shows real objects from museum open-access collections (CC0 photographs only) so the design can be
+    judged with real glass. They carry a `reference` block (holder, accession number, record URL, licence, credit
+    line); validation only allows it on fixture records in `private_collection`. Every surface states who holds the
+    object, links the museum record and offers no enquiry; the contact page and API refuse them. Attribution
+    wording follows the museum record exactly ("Attributed to" only where the museum says so). AIC descriptive text
+    (CC BY) is not reused. The Sanity Studio schema does not yet have the `reference` field: it is only needed
+    for these fixtures and should not be added to real collection records.
+14. **Luxury art direction.** See `docs/ART-DIRECTION.md`. Gold-toned text on light surfaces uses `accent-ink`
+    (#735A2E) for contrast; the two brighter golds are for dark surfaces and ornaments.

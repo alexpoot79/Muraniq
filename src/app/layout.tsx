@@ -7,13 +7,23 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { PreviewBanner } from "@/features/preview/PreviewBanner";
 import { SITE } from "@/lib/site";
 
+// Display serif: Light for monumental headings, Medium for small headings. Preloaded.
 const cormorant = localFont({
   src: [
+    { path: "./fonts/cormorant-garamond-latin-300-normal.woff2", weight: "300", style: "normal" },
     { path: "./fonts/cormorant-garamond-latin-500-normal.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/cormorant-garamond-latin-600-normal.woff2", weight: "600", style: "normal" },
   ],
   variable: "--font-cormorant",
   display: "swap",
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
+
+// Italic accent face: used for a few words per page, so it is not preloaded.
+const cormorantItalic = localFont({
+  src: [{ path: "./fonts/cormorant-garamond-latin-400-italic.woff2", weight: "400", style: "italic" }],
+  variable: "--font-cormorant-italic",
+  display: "swap",
+  preload: false,
   fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
@@ -39,11 +49,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${cormorantItalic.variable} ${inter.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="label sr-only z-50 bg-accent px-4 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+          className="label sr-only z-50 bg-ivory px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
         >
           Skip to content
         </a>

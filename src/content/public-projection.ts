@@ -59,6 +59,7 @@ export type PublicArtworkRecord = Pick<
   | "featured"
   | "curatedOrder"
   | "isFixture"
+  | "reference"
   | "seo"
   | "updatedAt"
 >;
@@ -127,6 +128,15 @@ export function projectArtwork(a: Artwork): PublicArtworkRecord | null {
     featured: a.featured,
     curatedOrder: a.curatedOrder,
     isFixture: a.isFixture,
+    reference: a.reference
+      ? {
+          institution: a.reference.institution,
+          accessionNumber: a.reference.accessionNumber,
+          url: a.reference.url,
+          licence: a.reference.licence,
+          creditLine: a.reference.creditLine,
+        }
+      : undefined,
     seo: { title: a.seo.title, description: a.seo.description },
     updatedAt: a.updatedAt,
   };

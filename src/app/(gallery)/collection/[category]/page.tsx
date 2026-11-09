@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Catalog } from "@/features/catalog/Catalog";
-import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PageIntro } from "@/components/editorial/PageIntro";
 import { CATEGORIES, categoryBySlug } from "@/content/categories";
 import { getArtworksByCategory } from "@/content/repository.server";
 import { routes } from "@/lib/routes";
 import { SITE, absoluteUrl } from "@/lib/site";
+import { CategoryTabs } from "@/features/catalog/CategoryTabs";
 
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ category: c.slug }));
@@ -34,32 +35,31 @@ export default async function CategoryPage({ params, searchParams }: PageProps<"
   const works = await getArtworksByCategory(info.slug);
 
   return (
-    <div className="container-gallery pt-6 pb-24 lg:pt-10">
-      <Breadcrumbs
-        items={[
+    <>
+      <PageIntro
+        crumbs={[
           { label: "Collection", href: routes.collection() },
           { label: info.title, href: routes.category(info.slug) },
         ]}
-      />
-      <header className="mt-8 grid gap-6 border-b border-line-dark pb-10 lg:grid-cols-12">
-        <div className="lg:col-span-7">
-          <p className="label text-accent">{info.kicker}</p>
-          <h1 className="display-xl mt-4">{info.title}</h1>
-        </div>
-        <p className="text-muted-dark lg:col-span-4 lg:col-start-9 lg:self-end">{info.intro}</p>
-      </header>
+        kicker={info.kicker}
+        title={info.title}
+      >
+        <p>{info.intro}</p>
+      </PageIntro>
+      <CategoryTabs current={info.slug} />
 
       {works.length === 0 ? (
-        <section className="mt-12 grid gap-8 lg:grid-cols-12" aria-labelledby="prep-title">
-          <div className="lg:col-span-7">
-            <h2 id="prep-title" className="display-md">
-              This area of the collection is being documented.
+        <section className="container-gallery section-y" aria-labelledby="prep-title">
+          <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+            <p className="label eyebrow text-muted-dark">In preparation</p>
+            <h2 id="prep-title" className="display-lg mt-6">
+              This area is being <span className="serif-italic">documented.</span>
             </h2>
-            <p className="mt-5 max-w-prose text-muted-dark">
-              Works in {info.title.toLowerCase()} will appear here once their photography, attribution and sources
-              have been reviewed. Until then, the rest of the collection is open to browse.
+            <p className="mt-6 max-w-prose text-muted-dark">
+              Works in {info.title.toLowerCase()} will appear here once their photography, attribution and sources have
+              been reviewed. Until then, the rest of the collection is open to browse.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href={routes.collection()} className="btn btn-primary">
                 Browse the collection
               </Link>
@@ -70,12 +70,12 @@ export default async function CategoryPage({ params, searchParams }: PageProps<"
           </div>
         </section>
       ) : (
-        <div className="mt-10">
-          <Suspense fallback={<p className="text-muted-dark">Loading works…</p>}>
+        <div className="container-gallery pt-12 pb-28 lg:pt-16">
+          <Suspense fallback={<p className="min-h-svh text-muted-dark">Loading works…</p>}>
             <Catalog base={routes.category(info.slug)} searchParams={searchParams} fixedCategory={info.slug} />
           </Suspense>
         </div>
       )}
-    </div>
+    </>
   );
 }

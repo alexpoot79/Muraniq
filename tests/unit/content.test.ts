@@ -22,8 +22,8 @@ describe("dataset validation", () => {
   });
 
   it("rejects an unknown certainty label", () => {
-    const d = clone() as unknown as { artworks: Array<{ creators: Array<{ certainty: string }> }> };
-    d.artworks[0]!.creators[0]!.certainty = "documented"; // legacy label must be mapped explicitly
+    const d = clone() as unknown as { artworks: Array<{ id: string; creators: Array<{ certainty: string }> }> };
+    d.artworks.find((a) => a.id === "MUR-R008")!.creators[0]!.certainty = "documented"; // legacy label must be mapped explicitly
     expect(validateDataset(d).ok).toBe(false);
   });
 
@@ -35,10 +35,10 @@ describe("dataset validation", () => {
     expect(r.issues.some((i) => i.message.includes("verified"))).toBe(true);
   });
 
-  it("does not let a creator credit be 'verified' on a signature alone", () => {
+  it("does not let a creator credit be 'verified' without a verified creator assertion", () => {
     const d = clone();
-    d.artworks[0]!.creators = [{ creatorId: "CRE-D-ESEMPIO", role: "maker", certainty: "verified" }];
-    // the artwork has a signature-like mark but no verified creator assertion
+    // the bottle's glasshouse claim is only 'probable'; upgrading the credit alone must fail
+    d.artworks.find((a) => a.id === "MUR-R008")!.creators = [{ creatorId: "CRE-MIOTTI", role: "glasshouse", certainty: "verified" }];
     const r = validateDataset(d);
     expect(r.ok).toBe(false);
     expect(r.issues.some((i) => i.message.includes("without a verified creator assertion"))).toBe(true);
@@ -46,7 +46,7 @@ describe("dataset validation", () => {
 
   it("blocks publication with an image whose rights are not cleared", () => {
     const d = clone();
-    d.media.find((m) => m.id === "IMG-D001-FRONT")!.rightsCleared = false;
+    d.media.find((m) => m.id === "IMG-R001-FRONT")!.rightsCleared = false;
     const r = validateDataset(d);
     expect(r.ok).toBe(false);
     expect(r.issues.some((i) => i.message.includes("rights are not cleared"))).toBe(true);
@@ -97,33 +97,37 @@ describe("publication boundary", () => {
 
   it("withdrawing an artwork removes it from listings, dossiers, related works and maker pages", () => {
     const d = clone();
-    d.artworks.find((a) => a.id === "MUR-D006")!.status = "withdrawn";
+    d.artworks.find((a) => a.id === "MUR-R008")!.status = "withdrawn";
     const r = validateDataset(d);
     const pub = buildPublication(r.data!);
-    expect(pub.artworks.some((a) => a.id === "MUR-D006")).toBe(false);
-    expect(pub.dossiers["pulegoso-vase"]).toBeUndefined();
-    expect(pub.dossiers["sommerso-vase-amber-and-blue"]!.related.some((x) => x.id === "MUR-D006")).toBe(false);
-    expect(pub.creators.find((c) => c.slug === "atelier-esempio")!.artworkIds).not.toContain("MUR-D006");
+    expect(pub.artworks.some((a) => a.id === "MUR-R008")).toBe(false);
+    expect(pub.dossiers["chalcedony-bottle-miotti"]).toBeUndefined();
+    expect(pub.dossiers["chalcedony-ewer-venice"]!.related.some((x) => x.id === "MUR-R008")).toBe(false);
+    expect(pub.creators.find((c) => c.slug === "miotti-glasshouse")!.artworkIds).not.toContain("MUR-R008");
   });
 
   it("does not expose media that is not cleared, even if referenced", () => {
     const d = clone();
-    const m = d.media.find((x) => x.id === "IMG-D001-DETAIL")!;
+    const m = d.media.find((x) => x.id === "IMG-R001-HANDLE")!;
     m.rightsCleared = false;
-    d.artworks.find((a) => a.id === "MUR-D001")!.status = "in_review"; // unpublished, so validation passes
+    d.artworks.find((a) => a.id === "MUR-R001")!.status = "in_review"; // unpublished, so validation passes
     const r = validateDataset(d);
+    expect(r.ok).toBe(true);
     const pub = buildPublication(r.data!);
-    expect(JSON.stringify(pub)).not.toContain("img-d001-detail");
+    expect(JSON.stringify(pub)).not.toContain("r001-chalcedony-ewer-handle");
   });
 
   it("uses consistent attribution wording on cards and dossiers", () => {
     const r = validateDataset(fixtureDataset);
     const pub = buildPublication(r.data!);
-    const card = pub.artworks.find((a) => a.id === "MUR-D001")!;
-    expect(card.attributionLine).toBe("Probably by Atelier Esempio");
+    const line = (id: string) => pub.artworks.find((a) => a.id === id)!.attributionLine;
+    const card = pub.artworks.find((a) => a.id === "MUR-R008")!;
+    expect(card.attributionLine).toBe("Probably by Miotti Glasshouse");
     expect(pub.dossiers[card.slug]!.attributionLine).toBe(card.attributionLine);
-    expect(pub.artworks.find((a) => a.id === "MUR-D002")!.attributionLine).toBe("Maker not documented");
-    expect(pub.artworks.find((a) => a.id === "MUR-D003")!.attributionLine).toBe("Possibly by Atelier Esempio");
-    expect(pub.artworks.find((a) => a.id === "MUR-D006")!.attributionLine).toBe("Attributed to Atelier Esempio");
+    expect(line("MUR-R001")).toBe("Maker not documented");
+    expect(line("MUR-R010")).toBe("Attributed to Bernardo Bellotto");
+    // firm museum attributions, reviewed against the museum record, read as plain names
+    expect(line("MUR-R011")).toBe("Francesco Guardi");
+    expect(line("MUR-R009")).toBe("Pietro Bigaglia");
   });
 });

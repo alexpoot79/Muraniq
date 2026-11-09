@@ -5,6 +5,15 @@ import { expect, test, type Page } from "@playwright/test";
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22a", "wcag22aa"];
 
 async function audit(page: Page, include?: string) {
+  // Measure contrast on the settled page, not mid-animation:
+  // - load-time text animations (opacity 0 → 1) are allowed to finish;
+  // - scroll-driven reveals are always mid-way for whatever sits at the viewport edge,
+  //   so they are removed and the colours they settle to are measured instead.
+  await page.evaluate(async () => {
+    const all = document.getAnimations();
+    for (const a of all) if (a.timeline !== document.timeline) a.cancel();
+    await Promise.all(all.filter((a) => a.timeline === document.timeline).map((a) => a.finished.catch(() => undefined)));
+  });
   let builder = new AxeBuilder({ page }).withTags(WCAG_TAGS);
   if (include) builder = builder.include(include);
   const { violations } = await builder.analyze();
@@ -20,21 +29,24 @@ async function audit(page: Page, include?: string) {
 const PAGES = [
   "/",
   "/collection/",
-  "/collection/?technique=sommerso&sort=date-asc",
+  "/collection/?technique=calcedonia&sort=date-asc",
   "/collection/?q=nothing-matches-this",
   "/collection/murano-glass/",
   "/collection/fine-art/",
-  "/collection/objects/sommerso-vase-amber-and-blue/",
+  "/collection/studio-glass/",
+  "/collection/objects/chalcedony-ewer-venice/",
+  "/collection/objects/piazza-san-marco-bellotto/",
+  "/exhibition/",
   "/glass-guide/",
   "/glass-guide/makers/",
-  "/glass-guide/makers/arnaldo-zanella/",
+  "/glass-guide/makers/miotti-glasshouse/",
   "/glass-guide/techniques/",
-  "/glass-guide/techniques/sommerso/",
+  "/glass-guide/techniques/calcedonia/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",
   "/about/",
   "/contact/",
-  "/contact/?object=MUR-D001",
+  "/contact/?object=MUR-R001",
   "/privacy/",
   "/this-page-does-not-exist/",
 ];
@@ -48,7 +60,7 @@ for (const path of PAGES) {
 }
 
 test("no automated WCAG violations: viewer in full screen", async ({ page }) => {
-  await page.goto("/collection/objects/sommerso-vase-amber-and-blue/");
+  await page.goto("/collection/objects/chalcedony-ewer-venice/");
   await page.getByRole("button", { name: "View full screen" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.keyboard.press("+");

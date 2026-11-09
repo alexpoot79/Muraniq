@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const statics = [
     routes.home(),
     routes.collection(),
+    routes.exhibition(),
     routes.guide(),
     routes.makers(),
     routes.techniques(),
