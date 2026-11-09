@@ -148,7 +148,7 @@ export default async function ArtworkPage({ params }: Props) {
           ]}
         />
 
-        <div className="mt-8 grid gap-x-12 gap-y-8 [grid-template-areas:'head'_'media'_'facts'] lg:grid-cols-[minmax(0,1.62fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
+        <div className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-x-12 gap-y-8 [grid-template-areas:'head'_'media'_'facts'] lg:grid-cols-[minmax(0,1.62fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
           <header className="flex flex-col gap-4 [grid-area:head]">
             {a.isFixture && <FixtureNotice />}
             <p className="label text-accent">{a.attributionLine}</p>

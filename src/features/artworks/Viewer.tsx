@@ -59,14 +59,14 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
   const hotspots = current.hotspots;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex min-w-0 flex-col gap-4">
       <figure className="relative bg-raised">
-        <div className="relative mx-auto w-fit">
+        <div className="relative mx-auto w-fit max-w-full">
           <ArtworkImage
             media={current}
             sizes="(min-width: 64rem) 58vw, 100vw"
             priority={index === 0}
-            className="max-h-[82vh] w-auto"
+            className="max-h-[82vh] w-auto max-w-full"
           />
           {showHotspots &&
             hotspots.map((h, i) => (
@@ -111,7 +111,7 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
       </div>
 
       {count > 1 && (
-        <ul className="flex gap-3 overflow-x-auto pb-1" aria-label="Views of this object">
+        <ul className="relative flex min-w-0 gap-3 overflow-x-auto pb-1" aria-label="Views of this object">
           {media.map((m, i) => (
             <li key={m.id} className="shrink-0">
               <button

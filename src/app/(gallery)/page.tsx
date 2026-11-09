@@ -30,7 +30,7 @@ export default async function HomePage() {
     <>
       {/* 1 — Viewing room hero */}
       <section aria-labelledby="hero-title" className="relative overflow-hidden">
-        <div className="container-gallery grid gap-y-8 pt-10 pb-16 lg:grid-cols-12 lg:gap-x-12 lg:pt-16 lg:pb-24">
+        <div className="container-gallery grid grid-cols-[minmax(0,1fr)] gap-y-8 pt-10 pb-16 lg:grid-cols-12 lg:gap-x-12 lg:pt-16 lg:pb-24">
           <div className="flex flex-col lg:col-span-5 lg:justify-center">
             <p className="label text-accent">Private collection · Independent research</p>
             <h1 id="hero-title" className="display-xl mt-5 text-on-dark">
@@ -45,7 +45,7 @@ export default async function HomePage() {
                   media={hero.hero}
                   sizes="(min-width: 64rem) 55vw, 100vw"
                   priority
-                  className="mx-auto max-h-[78vh] w-auto"
+                  className="mx-auto max-h-[78vh] w-auto max-w-full"
                 />
               </Link>
               <figcaption className="mt-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 text-sm text-muted-dark">

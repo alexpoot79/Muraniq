@@ -29,7 +29,7 @@ export function MobileMenu({ sections }: { sections: Item[] }) {
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M2 6h16M2 14h16" />
         </svg>
-        Menu
+        <span className="sr-only xs:not-sr-only">Menu</span>
       </button>
       <dialog
         ref={ref}

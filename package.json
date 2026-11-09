@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test --trace off",
-    "validate:content": "node --experimental-strip-types scripts/validate-content.ts",
+    "validate:content": "tsx --tsconfig tsconfig.json scripts/validate-content.ts",
+    "placeholders": "tsx scripts/generate-placeholders.ts",
     "check": "npm run typecheck && npm run lint && npm run test && npm run validate:content"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "eslint": "10.14.0",
     "eslint-config-next": "16.4.5",
     "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
     "typescript": "5.9.3",
     "vitest": "5.1.0"
   }
