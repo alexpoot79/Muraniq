@@ -76,7 +76,7 @@ test("homepage reference: one H1, real HTML intro, no horizontal scroll", async 
 });
 
 test("contact API validates input server-side", async ({ request }) => {
-  const res = await request.post("/api/contact", {
+  const res = await request.post("/api/contact/", {
     headers: { Accept: "application/json" },
     data: { name: "A", email: "bad", message: "x" },
   });

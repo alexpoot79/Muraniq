@@ -3,6 +3,7 @@ import { fixtureDataset } from "./fixtures/dataset";
 
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = process.env.VERCEL_ENV === "preview";
+const indexable = process.env.SITE_INDEXABLE === "true" && !isPreview;
 
 /*
  * CSP decision: a STATIC policy (no per-request nonces), so pages can stay
@@ -34,6 +35,8 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+  // Not indexable until the authorised launch on muraniq.nl (see src/lib/indexing.ts).
+  ...(indexable ? [] : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]),
 ];
 
 const nextConfig: NextConfig = {

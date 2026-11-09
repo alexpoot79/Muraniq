@@ -65,7 +65,7 @@ export function ContactForm({
     }
     setState({ kind: "sending" });
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(raw),
@@ -114,7 +114,7 @@ export function ContactForm({
   }
 
   return (
-    <form action="/api/contact" method="post" noValidate onSubmit={onSubmit} className="flex flex-col gap-6">
+    <form action="/api/contact/" method="post" noValidate onSubmit={onSubmit} className="flex flex-col gap-6">
       <div ref={statusRef} tabIndex={-1} aria-live="polite" className="focus:outline-none">
         {state.kind === "error" && (
           <p role="alert" className="border-l-4 border-[#8a1c1c] bg-paper-2 p-4">
