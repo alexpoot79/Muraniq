@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+<stop offset="0" stop-color="#1d1a16"/><stop offset="0.6" stop-color="#0d0c0a"/><stop offset="1" stop-color="#070707"/>
+</radialGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#16130f"/><stop offset="1" stop-color="#080808"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="1500" fill="url(#bg)"/>
+<defs>
+<filter id="tex-f"><feTurbulence type="fractalNoise" baseFrequency="0.006 0.03" numOctaves="4" seed="22"/><feColorMatrix type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.22  0 0 0 0 0.15  0 0 0 -2.2 1.6"/></filter>
+<pattern id="tex" width="1200" height="1500" patternUnits="userSpaceOnUse"><rect width="1200" height="1500" fill="#a4612f"/><rect width="1200" height="1500" filter="url(#tex-f)"/><rect width="1200" height="1500" fill="#d9b48a" opacity="0.12"/></pattern>
+<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0.27999999999999997" stop-color="#fff" stop-opacity="0"/><stop offset="0.36" stop-color="#fff" stop-opacity="0.32"/><stop offset="0.41" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#000" stop-opacity="0.8"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="600" cy="873" rx="912" ry="405" fill="#d9b48a" opacity="0.06"/>
+<rect y="1170" width="1200" height="330" fill="url(#floor)"/>
+<ellipse cx="600" cy="1176" rx="432" ry="22" fill="url(#shadow)"/>
+<path d="M1070.4,630.0 C1068.0,643.5 1072.0,670.5 1056.0,711.0 C1040.0,751.5 1012.0,819.0 974.4,873.0 C936.8,927.0 868.8,992.7 830.4,1035.0 C792.0,1077.3 758.4,1104.3 744.0,1126.8 C729.6,1149.3 744.0,1162.8 744.0,1170.0 L456.0,1170.0 C456.0,1162.8 470.4,1149.3 456.0,1126.8 C441.6,1104.3 408.0,1077.3 369.6,1035.0 C331.2,992.7 263.2,927.0 225.6,873.0 C188.0,819.0 160.0,751.5 144.0,711.0 C128.0,670.5 132.0,643.5 129.6,630.0 Z" fill="url(#tex)"/>
+<path d="M1070.4,630.0 C1068.0,643.5 1072.0,670.5 1056.0,711.0 C1040.0,751.5 1012.0,819.0 974.4,873.0 C936.8,927.0 868.8,992.7 830.4,1035.0 C792.0,1077.3 758.4,1104.3 744.0,1126.8 C729.6,1149.3 744.0,1162.8 744.0,1170.0 L456.0,1170.0 C456.0,1162.8 470.4,1149.3 456.0,1126.8 C441.6,1104.3 408.0,1077.3 369.6,1035.0 C331.2,992.7 263.2,927.0 225.6,873.0 C188.0,819.0 160.0,751.5 144.0,711.0 C128.0,670.5 132.0,643.5 129.6,630.0 Z" fill="url(#hl)"/>
+<path d="M1070.4,630.0 C1068.0,643.5 1072.0,670.5 1056.0,711.0 C1040.0,751.5 1012.0,819.0 974.4,873.0 C936.8,927.0 868.8,992.7 830.4,1035.0 C792.0,1077.3 758.4,1104.3 744.0,1126.8 C729.6,1149.3 744.0,1162.8 744.0,1170.0 L456.0,1170.0 C456.0,1162.8 470.4,1149.3 456.0,1126.8 C441.6,1104.3 408.0,1077.3 369.6,1035.0 C331.2,992.7 263.2,927.0 225.6,873.0 C188.0,819.0 160.0,751.5 144.0,711.0 C128.0,670.5 132.0,643.5 129.6,630.0 Z" fill="none" stroke="#d9b48a" stroke-opacity="0.35" stroke-width="2"/>
+<path d="M1070.4,630.0 C1068.0,643.5 1072.0,670.5 1056.0,711.0 C1040.0,751.5 1012.0,819.0 974.4,873.0 C936.8,927.0 868.8,992.7 830.4,1035.0 C792.0,1077.3 758.4,1104.3 744.0,1126.8 C729.6,1149.3 744.0,1162.8 744.0,1170.0 L456.0,1170.0 C456.0,1162.8 470.4,1149.3 456.0,1126.8 C441.6,1104.3 408.0,1077.3 369.6,1035.0 C331.2,992.7 263.2,927.0 225.6,873.0 C188.0,819.0 160.0,751.5 144.0,711.0 C128.0,670.5 132.0,643.5 129.6,630.0 Z" transform="translate(0 2340) scale(1 -1)" fill="#5b3a29" opacity="0.06"/>
+<text x="600" y="1456" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#8d857a">PLACEHOLDER · NOT COLLECTION PHOTOGRAPHY</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+<stop offset="0" stop-color="#1d1a16"/><stop offset="0.6" stop-color="#0d0c0a"/><stop offset="1" stop-color="#070707"/>
+</radialGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#16130f"/><stop offset="1" stop-color="#080808"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<defs><radialGradient id="g" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#f3dcc0" stop-opacity="0.45"/><stop offset="1" stop-color="#8e1f2c" stop-opacity="0.25"/></radialGradient></defs>
+<rect width="1200" height="900" fill="url(#g)"/>
+<rect x="360" y="270" width="480" height="288" rx="10" fill="#e8ddcb" transform="rotate(-4 600 450)"/>
+<rect x="432" y="351" width="336.00000000000006" height="14" fill="#8d857a" transform="rotate(-4 600 450)"/>
+<rect x="432" y="414" width="240" height="10" fill="#a59d91" transform="rotate(-4 600 450)"/>
+<text x="600" y="856" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#8d857a">PLACEHOLDER · NOT COLLECTION PHOTOGRAPHY</text>
+</svg>

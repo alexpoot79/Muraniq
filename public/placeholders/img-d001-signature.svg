@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+<stop offset="0" stop-color="#1d1a16"/><stop offset="0.6" stop-color="#0d0c0a"/><stop offset="1" stop-color="#070707"/>
+</radialGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#16130f"/><stop offset="1" stop-color="#080808"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<defs><radialGradient id="g" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#f2d39a" stop-opacity="0.45"/><stop offset="1" stop-color="#c98a2c" stop-opacity="0.25"/></radialGradient></defs>
+<rect width="1200" height="900" fill="url(#g)"/>
+<path d="M300,450 Q325,465 343,442 Q368,444 386,449 Q411,474 429,447 Q453,520 471,466 Q496,460 514,451 Q539,519 557,442 Q582,432 600,461 Q625,430 643,448 Q668,414 686,450 Q711,386 729,464 Q753,459 771,464 Q796,440 814,448 Q839,499 857,446 Q882,457 900,435" fill="none" stroke="#efe6d6" stroke-opacity="0.75" stroke-width="5" stroke-linecap="round"/>
+<text x="600" y="856" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#8d857a">PLACEHOLDER · NOT COLLECTION PHOTOGRAPHY</text>
+</svg>

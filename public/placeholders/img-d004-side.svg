@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+<stop offset="0" stop-color="#1d1a16"/><stop offset="0.6" stop-color="#0d0c0a"/><stop offset="1" stop-color="#070707"/>
+</radialGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#16130f"/><stop offset="1" stop-color="#080808"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="1500" fill="url(#bg)"/>
+<defs>
+<linearGradient id="tex" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6d6a66" stop-opacity="0.95"/><stop offset="0.45" stop-color="#c9c2b8" stop-opacity="0.85"/><stop offset="1" stop-color="#6d6a66" stop-opacity="0.9"/></linearGradient>
+<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0.27999999999999997" stop-color="#fff" stop-opacity="0"/><stop offset="0.36" stop-color="#fff" stop-opacity="0.32"/><stop offset="0.41" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#000" stop-opacity="0.8"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="600" cy="637.5" rx="820.8" ry="787.5" fill="#c9c2b8" opacity="0.06"/>
+<rect y="1215" width="1200" height="285" fill="url(#floor)"/>
+<ellipse cx="600" cy="1221" rx="388.8" ry="22" fill="url(#shadow)"/>
+<path d="M755.5,165.0 C762.1,182.5 776.4,208.8 795.3,270.0 C814.1,331.3 858.6,445.0 868.7,532.5 C878.8,620.0 864.4,707.5 855.7,795.0 C847.1,882.5 829.2,987.5 816.9,1057.5 C804.5,1127.5 787.3,1188.8 781.4,1215.0 L522.2,1215.0 C513.7,1188.8 490.6,1127.5 471.3,1057.5 C452.0,987.5 423.7,882.5 406.5,795.0 C389.2,707.5 366.1,620.0 367.6,532.5 C369.0,445.0 402.3,331.3 415.1,270.0 C427.9,208.8 439.6,182.5 444.5,165.0 Z" fill="url(#tex)"/>
+<path d="M755.5,165.0 C762.1,182.5 776.4,208.8 795.3,270.0 C814.1,331.3 858.6,445.0 868.7,532.5 C878.8,620.0 864.4,707.5 855.7,795.0 C847.1,882.5 829.2,987.5 816.9,1057.5 C804.5,1127.5 787.3,1188.8 781.4,1215.0 L522.2,1215.0 C513.7,1188.8 490.6,1127.5 471.3,1057.5 C452.0,987.5 423.7,882.5 406.5,795.0 C389.2,707.5 366.1,620.0 367.6,532.5 C369.0,445.0 402.3,331.3 415.1,270.0 C427.9,208.8 439.6,182.5 444.5,165.0 Z" fill="url(#hl)"/>
+<path d="M755.5,165.0 C762.1,182.5 776.4,208.8 795.3,270.0 C814.1,331.3 858.6,445.0 868.7,532.5 C878.8,620.0 864.4,707.5 855.7,795.0 C847.1,882.5 829.2,987.5 816.9,1057.5 C804.5,1127.5 787.3,1188.8 781.4,1215.0 L522.2,1215.0 C513.7,1188.8 490.6,1127.5 471.3,1057.5 C452.0,987.5 423.7,882.5 406.5,795.0 C389.2,707.5 366.1,620.0 367.6,532.5 C369.0,445.0 402.3,331.3 415.1,270.0 C427.9,208.8 439.6,182.5 444.5,165.0 Z" fill="none" stroke="#c9c2b8" stroke-opacity="0.35" stroke-width="2"/>
+<path d="M755.5,165.0 C762.1,182.5 776.4,208.8 795.3,270.0 C814.1,331.3 858.6,445.0 868.7,532.5 C878.8,620.0 864.4,707.5 855.7,795.0 C847.1,882.5 829.2,987.5 816.9,1057.5 C804.5,1127.5 787.3,1188.8 781.4,1215.0 L522.2,1215.0 C513.7,1188.8 490.6,1127.5 471.3,1057.5 C452.0,987.5 423.7,882.5 406.5,795.0 C389.2,707.5 366.1,620.0 367.6,532.5 C369.0,445.0 402.3,331.3 415.1,270.0 C427.9,208.8 439.6,182.5 444.5,165.0 Z" transform="translate(0 2430) scale(1 -1)" fill="#6d6a66" opacity="0.06"/>
+<text x="600" y="1456" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#8d857a">PLACEHOLDER · NOT COLLECTION PHOTOGRAPHY</text>
+</svg>

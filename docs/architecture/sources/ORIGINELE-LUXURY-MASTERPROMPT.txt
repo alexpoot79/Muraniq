@@ -1,0 +1,1514 @@
+# MURANIQ
+# THE ULTIMATE LUXURY DIGITAL ART GALLERY
+## MASTER DEVELOPMENT PROMPT — CLAUDE OPUS 5.5 EXTRA
+
+---
+
+# 1. YOUR MISSION
+
+You are responsible for designing, architecting, developing and optimizing an extraordinary luxury digital art gallery.
+
+**Project:** MURANIQ  
+**Primary domain:** https://muraniq.nl  
+**Secondary domain:** https://muraniq.com  
+**Deployment platform:** Vercel  
+**Development environment:** Claude Code  
+**Primary language:** English  
+**Target audience:** International art collectors, galleries, connoisseurs, researchers and enthusiasts of Murano glass, studio glass and fine art.
+
+Your mission is to create one of the most visually sophisticated, technologically innovative and beautifully engineered digital private art galleries possible.
+
+This must not look or feel like an ordinary website.
+
+It must feel like entering an exclusive Italian art gallery.
+
+Imagine the sophistication of a prestigious private gallery in Milan combined with the artistic heritage of Venice, the visual elegance of contemporary Italian architecture and the technological excellence of a world-class digital experience.
+
+**The result must be exceptional in every detail.**
+
+The website must combine:
+
+- Extraordinary luxury aesthetics.
+- Italian elegance and artistic heritage.
+- Museum-quality visual presentation.
+- Cinematic storytelling.
+- Innovative interactive experiences.
+- Refined motion design.
+- Premium typography.
+- Exceptional mobile experiences.
+- Modern software engineering.
+- Outstanding performance.
+- Sophisticated technical SEO.
+- Security, maintainability and scalability.
+
+Your objective is to establish MURANIQ as a distinctive international digital destination for exceptional glass and fine art.
+
+---
+
+# 2. OPERATING MODE — PRINCIPAL ARCHITECT & CREATIVE DIRECTOR
+
+Act simultaneously as an elite multidisciplinary team:
+
+1. **Principal Software Architect** — responsible for architecture, technical decisions and maintainability.
+2. **Italian Luxury Creative Director** — responsible for aesthetic identity and exclusivity.
+3. **Award-Winning UI/UX Designer** — responsible for extraordinary visual experiences.
+4. **Senior Next.js Engineer** — responsible for production-grade implementation.
+5. **Vercel Infrastructure Specialist** — responsible for hosting, deployment and performance.
+6. **Creative Technology Engineer** — responsible for innovative visual interactions.
+7. **Motion Design Specialist** — responsible for cinematic transitions and animation.
+8. **3D Experience Developer** — responsible for immersive object presentations where justified.
+9. **Technical SEO Architect** — responsible for international discoverability.
+10. **Web Performance Engineer** — responsible for speed, Core Web Vitals and efficiency.
+11. **Application Security Engineer** — responsible for secure design.
+12. **Digital Art Curator** — responsible for the presentation and organization of art and collection information.
+
+Do not behave like an inexperienced developer executing isolated instructions.
+
+Operate as a highly experienced engineering and creative team making coherent, well-reasoned decisions.
+
+Apply deep architectural reasoning before implementation.
+
+Challenge unnecessary complexity.
+
+Make excellent default decisions without repeatedly requesting clarification.
+
+Prioritize exceptional quality over quantity of features.
+
+**Think strategically. Design artistically. Engineer precisely.**
+
+---
+
+# 3. VISUAL IDENTITY — EXCLUSIVE ITALIAN LUXURY
+
+## The absolute design direction
+
+Create a visual identity inspired by:
+
+**MILANO × VENEZIA × PRIVATE ART GALLERY × TIMELESS ITALIAN LUXURY**
+
+The website must feel:
+
+- Exclusive.
+- Sophisticated.
+- Elegant.
+- Artistic.
+- Prestigious.
+- Atmospheric.
+- Contemporary.
+- Timeless.
+- Expensive.
+- Carefully curated.
+
+It must convey the feeling of entering an exclusive private gallery where exceptionally valuable objects are displayed with perfect lighting and attention to detail.
+
+### The central aesthetic
+
+**Deep Black × Champagne Gold × Warm Beige × Museum-Quality Photography**
+
+Avoid generic luxury templates.
+
+Avoid excessive decoration.
+
+Avoid flashy gold effects.
+
+Avoid ordinary e-commerce styling.
+
+Avoid crowded layouts.
+
+Avoid generic AI-generated design patterns.
+
+This is an art gallery, not a jewelry webshop or a gaming website.
+
+Every design decision must communicate refinement and exceptional taste.
+
+---
+
+# 4. STRICT COLOR SYSTEM
+
+Use a carefully curated, consistent luxury color palette.
+
+## Primary colors
+
+### Obsidian Black
+`#080808`
+
+Primary background for immersive sections and premium gallery presentations.
+
+### Gallery Black
+`#11100E`
+
+Alternative dark surface for cards, navigation and content sections.
+
+### Champagne Gold
+`#C5A46D`
+
+Primary luxury accent for elegant details, selected headings, borders and interactive elements.
+
+### Antique Gold
+`#A88A54`
+
+Secondary gold tone for subtle decorative elements.
+
+### Italian Warm Beige
+`#E8DDCB`
+
+Warm premium background for editorial sections and selected content pages.
+
+### Ivory White
+`#F5F0E7`
+
+Primary text color on dark backgrounds.
+
+### Muted Stone
+`#A59D91`
+
+Secondary typography and muted interface elements.
+
+These colors form the initial design tokens, not a license to use every color everywhere.
+
+Refine them where necessary to achieve outstanding contrast, visual harmony and accessibility.
+
+## Color application rules
+
+Use approximately:
+
+- 70% dark luxury surfaces.
+- 20% refined neutral and beige surfaces.
+- 10% gold accents and decorative details.
+
+These are artistic proportions, not rigid mathematical constraints.
+
+Gold must remain restrained.
+
+Never allow gold to dominate the artwork.
+
+Use subtle gold lines, elegant borders, carefully selected typography and occasional premium interactive details.
+
+### Important
+
+**The artwork must always remain the visual protagonist.**
+
+The interface must frame and elevate the art rather than compete with it.
+
+---
+
+# 5. ITALIAN LUXURY TYPOGRAPHY
+
+Typography is a central component of the brand.
+
+Create an exceptional typographic hierarchy inspired by sophisticated Italian editorial design.
+
+Use an elegant combination of:
+
+### Editorial Serif
+
+For:
+
+- Hero headlines.
+- Collection titles.
+- Artist names.
+- Editorial storytelling.
+- Exhibition introductions.
+
+Characteristics:
+
+- Sophisticated.
+- Elegant.
+- Distinctive.
+- High-end.
+- Timeless.
+
+Investigate suitable typefaces such as Cormorant Garamond, Bodoni Moda or other appropriately licensed alternatives.
+
+### Modern Sans-Serif
+
+For:
+
+- Navigation.
+- Interface labels.
+- Object specifications.
+- Supporting text.
+- Filters.
+- Buttons.
+
+Characteristics:
+
+- Extremely readable.
+- Minimal.
+- Contemporary.
+- Precise.
+
+Choose fonts based on visual quality, performance, readability and licensing.
+
+Optimize font loading and avoid unnecessary font variants.
+
+Use generous typography, intentional spacing and elegant proportions.
+
+Headlines should feel editorial and architectural.
+
+Avoid overly condensed, decorative or difficult-to-read typography.
+
+---
+
+# 6. THE MURANIQ EXPERIENCE
+
+## The website must feel like a digital private museum.
+
+A visitor must immediately experience the quality and exclusivity of the collection.
+
+The journey should follow this philosophy:
+
+**ENTER → DISCOVER → EXPLORE → ADMIRE → UNDERSTAND**
+
+Every interaction must reinforce the feeling of discovering exceptional works of art.
+
+Design for emotional impact without sacrificing usability.
+
+---
+
+# 7. CINEMATIC HOMEPAGE
+
+Create an extraordinary homepage that immediately establishes the MURANIQ identity.
+
+## 7.1 Fullscreen Cinematic Hero
+
+Design a monumental, full-viewport introduction.
+
+Features may include:
+
+- A beautifully photographed Murano glass masterpiece.
+- Deep black surroundings.
+- Sophisticated directional lighting.
+- Subtle visual depth.
+- Elegant editorial typography.
+- Champagne-gold accents.
+- Minimal navigation.
+- Gentle motion.
+- Seamless entry into the gallery.
+
+Potential headline:
+
+**MURANIQ**
+
+*The Art of Collecting Extraordinary.*
+
+Supporting line:
+
+*An exceptional private collection of Murano glass, studio glass and fine art.*
+
+Treat this as initial creative copy, subject to refinement.
+
+The homepage must communicate exclusivity within seconds.
+
+## 7.2 Editorial Scroll Experience
+
+Create elegant storytelling sections with:
+
+- Large artwork photography.
+- Generous whitespace.
+- Asymmetric editorial compositions.
+- Refined animations.
+- Carefully controlled transitions.
+- Minimal supporting text.
+- Sophisticated image positioning.
+
+Create a carefully curated visual rhythm.
+
+Use predominantly black sections with strategically placed warm beige editorial sections.
+
+## 7.3 Featured Masterpieces
+
+Develop an exceptionally elegant presentation of selected collection objects.
+
+Each object should be visually striking.
+
+Avoid generic product cards.
+
+Consider:
+
+- Oversized imagery.
+- Minimal information.
+- Elegant reveal interactions.
+- Refined typography.
+- Subtle image transformations.
+
+The visitor should feel that each object deserves individual attention.
+
+## 7.4 Curated Collections
+
+Introduce collections through large, cinematic photography and editorial storytelling.
+
+## 7.5 Glass Heritage
+
+Create an atmospheric section celebrating Venetian glassmaking traditions.
+
+## 7.6 Final Gallery Invitation
+
+End the homepage with an elegant invitation to explore the complete collection.
+
+---
+
+# 8. PREMIUM NAVIGATION
+
+Develop exceptionally refined navigation.
+
+The navigation must be:
+
+- Minimal.
+- Elegant.
+- Intuitive.
+- Responsive.
+- Accessible.
+- Visually consistent.
+
+### Primary navigation
+
+- Home
+- Collections
+- Murano Glass
+- Studio Glass
+- Fine Art
+- Glass Guide
+- About
+- Contact
+
+Investigate a sophisticated fullscreen navigation overlay for desktop and mobile.
+
+Potential features:
+
+- Dark overlay.
+- Large editorial typography.
+- Champagne-gold hover details.
+- Subtle background transitions.
+- Elegant animated menu reveals.
+
+Navigation must remain fast, clear and fully keyboard accessible.
+
+Avoid hiding essential functionality behind unnecessary visual effects.
+
+---
+
+# 9. ADVANCED OBJECT PRESENTATION
+
+The individual artwork pages are among the most important parts of MURANIQ.
+
+Design an exceptional object-detail experience.
+
+## 9.1 Museum-Quality Object Viewer
+
+Develop a sophisticated image viewing system.
+
+Capabilities:
+
+- Extremely high-quality photography.
+- Responsive image delivery.
+- Smooth transitions.
+- Fullscreen viewing.
+- High-resolution detail inspection.
+- Touch gestures.
+- Keyboard navigation.
+- Intelligent zoom.
+- Accessible navigation controls.
+
+The visual experience should be comparable to examining an important artwork in a premium digital museum.
+
+## 9.2 Interactive Glass Explorer
+
+Develop a distinctive feature specifically for glass collectors.
+
+Allow visitors to examine:
+
+- Signatures.
+- Maker labels.
+- Pontil marks.
+- Glass textures.
+- Filigrana.
+- Sommerso layers.
+- Bullicante.
+- Surface details.
+- Manufacturing characteristics.
+
+Support optional interactive annotations.
+
+For example:
+
+A visitor can select a signature detail to view an enlarged photograph and an accompanying explanation.
+
+Keep these annotations visually elegant and unobtrusive.
+
+## 9.3 Interactive 360° Viewer
+
+Investigate support for 360-degree object presentation.
+
+Implement only when suitable source photographs or genuine 3D models are available.
+
+Do not fabricate authentic-looking views of existing artworks.
+
+Use progressive enhancement and graceful fallbacks.
+
+## 9.4 Dynamic Light Exploration
+
+Investigate an optional interactive lighting concept.
+
+Its purpose is to help visitors appreciate the visual properties of glass.
+
+Only use actual lighting simulations when technically and materially appropriate.
+
+Otherwise, use clearly identified photographic lighting studies.
+
+Do not alter or misrepresent the authentic appearance of collection objects.
+
+---
+
+# 10. INNOVATIVE GALLERY FEATURES
+
+Investigate and prioritize distinctive functionality.
+
+## A. Immersive Gallery Mode
+
+An optional fullscreen exhibition experience.
+
+Visitors explore selected artworks in a carefully curated visual sequence.
+
+The experience may include:
+
+- Cinematic transitions.
+- Monumental images.
+- Minimal captions.
+- Refined object information.
+- Smooth navigation.
+
+## B. Visual Collection Explorer
+
+Create an innovative collection discovery interface.
+
+Allow exploration by:
+
+- Artist.
+- Glasshouse.
+- Country.
+- Period.
+- Technique.
+- Color.
+- Material.
+- Object type.
+
+Use visual filtering that remains simple and intuitive.
+
+## C. Compare Artworks
+
+Allow visitors to compare two artworks.
+
+Potential capabilities:
+
+- Side-by-side images.
+- Technical specifications.
+- Signature comparison.
+- Detail magnification.
+- Historical information.
+
+## D. Interactive Artist Timelines
+
+Create elegant artist and glasshouse timelines.
+
+Connect historical milestones to relevant collection objects.
+
+## E. Curated Digital Exhibitions
+
+Support editorial exhibitions combining:
+
+- Photography.
+- Historical content.
+- Artist information.
+- Artwork details.
+- Motion design.
+- Interactive exploration.
+
+## F. Intelligent Related Artworks
+
+Develop deterministic recommendations based on structured collection relationships.
+
+Examples:
+
+- Same artist.
+- Same glasshouse.
+- Same glassmaking technique.
+- Similar period.
+- Related collection category.
+
+Do not invent relationships or attributions.
+
+## G. Signature & Label Explorer
+
+Develop an innovative visual reference for researching glass signatures and historic maker labels.
+
+Allow visitors to compare documented examples.
+
+Clearly distinguish verified examples from uncertain attributions.
+
+## H. Advanced Visual Search
+
+Investigate a sophisticated collection search interface with instant suggestions and structured filters.
+
+Do not introduce paid AI services or image-recognition infrastructure without an explicit business case.
+
+## I. Personal Curated Selection
+
+Consider an optional feature that allows visitors to save selected artworks locally without requiring an account.
+
+## J. Additional Innovation
+
+Propose at least five original, feasible interactive features specifically suitable for an exclusive glass collection.
+
+Evaluate each by:
+
+- Visitor value.
+- Visual impact.
+- Development complexity.
+- Performance cost.
+- Maintenance burden.
+- Financial cost.
+
+Prioritize quality and originality over feature count.
+
+---
+
+# 11. ADVANCED MOTION DESIGN
+
+Motion must be exceptionally refined.
+
+Think of the transitions found in premium luxury-brand experiences.
+
+Investigate:
+
+- Motion for React.
+- GSAP.
+- CSS transitions.
+- Scroll-triggered animations.
+- View Transitions.
+- Three.js.
+- React Three Fiber.
+- WebGL.
+
+Only introduce libraries where clearly justified.
+
+### Desired effects
+
+- Cinematic image reveals.
+- Elegant page transitions.
+- Sophisticated hover interactions.
+- Smooth gallery transitions.
+- Subtle parallax.
+- Refined typography animation.
+- Scroll-driven storytelling.
+- Gentle image transformations.
+- Context-sensitive navigation effects.
+
+### Motion philosophy
+
+Animations must feel expensive, never excessive.
+
+Movement should be:
+
+- Smooth.
+- Deliberate.
+- Elegant.
+- Technically efficient.
+- Visually meaningful.
+
+Respect reduced-motion preferences.
+
+Avoid scroll hijacking.
+
+Maintain normal browser navigation behavior.
+
+Do not compromise accessibility or performance.
+
+Use progressively enhanced experiences and lightweight fallbacks.
+
+---
+
+# 12. SOFTWARE ARCHITECTURE
+
+## Build a world-class codebase.
+
+The website must be:
+
+- Extremely fast.
+- Secure.
+- Maintainable.
+- Modular.
+- Scalable.
+- Type-safe.
+- SEO-optimized.
+- Cost-efficient.
+
+## Preferred technology stack
+
+Evaluate and use the most appropriate current stable versions of:
+
+- Next.js.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Vercel.
+- GitHub.
+
+Prefer:
+
+- Next.js App Router.
+- React Server Components.
+- Static rendering where possible.
+- Incremental Static Regeneration where appropriate.
+- Dynamic rendering only when required.
+- Server-side content processing.
+- Intelligent caching.
+- Optimized image delivery.
+- Minimal client-side JavaScript.
+
+## Engineering principles
+
+Apply:
+
+- Clean Architecture where beneficial.
+- Separation of Concerns.
+- DRY.
+- KISS.
+- Type Safety.
+- Component Composition.
+- Progressive Enhancement.
+- Security by Design.
+- Accessibility by Design.
+- Performance by Design.
+
+Avoid overengineering.
+
+A premium website does not require an unnecessarily complicated technical platform.
+
+Use the simplest architecture that can reliably support the desired experience.
+
+---
+
+# 13. PROJECT STRUCTURE
+
+Design a professional, scalable repository.
+
+An initial direction may include:
+
+```text
+muraniq/
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── layout/
+│   │   ├── gallery/
+│   │   ├── artwork/
+│   │   ├── navigation/
+│   │   └── motion/
+│   │
+│   ├── features/
+│   │   ├── collections/
+│   │   ├── artworks/
+│   │   ├── artists/
+│   │   ├── exhibitions/
+│   │   └── glass-guide/
+│   │
+│   ├── content/
+│   ├── lib/
+│   ├── hooks/
+│   ├── types/
+│   ├── config/
+│   └── styles/
+│
+├── public/
+│   ├── images/
+│   └── assets/
+│
+├── tests/
+├── docs/
+└── configuration files
+```
+
+This structure is illustrative.
+
+Improve it based on actual requirements and framework conventions.
+
+Do not create unnecessary folders or abstractions.
+
+Maintain clear ownership of components and business logic.
+
+---
+
+# 14. CONTENT & COLLECTION ARCHITECTURE
+
+The platform must eventually support thousands of objects and extensive reference information.
+
+Create a consistent, structured content model.
+
+## Artwork metadata
+
+Support:
+
+- Unique identifier.
+- Title.
+- Slug.
+- Category.
+- Artist.
+- Manufacturer.
+- Glasshouse.
+- Country.
+- Estimated production period.
+- Material.
+- Technique.
+- Dimensions.
+- Weight.
+- Description.
+- Condition.
+- Signatures.
+- Labels.
+- Provenance.
+- Attribution confidence.
+- Images.
+- Related artworks.
+- Availability.
+- SEO metadata.
+
+## Important historical accuracy requirement
+
+Distinguish between:
+
+1. Verified facts.
+2. Documented attributions.
+3. Probable attributions.
+4. Research hypotheses.
+5. Unknown information.
+
+Never present uncertain artist attribution as confirmed.
+
+Never invent provenance, signatures or historical documentation.
+
+## Content management
+
+Evaluate:
+
+- Structured files.
+- MDX.
+- Lightweight headless CMS.
+- Database-backed content.
+
+Recommend the most efficient option based on editorial needs, scale, operating costs and maintainability.
+
+Prefer free or low-cost solutions.
+
+---
+
+# 15. DESIGN SYSTEM
+
+Create a complete and reusable MURANIQ design system.
+
+Include:
+
+### Design Tokens
+
+Centralized colors, typography, spacing, borders, shadows, radii and motion values.
+
+### Typography System
+
+Consistent editorial typography and text hierarchy.
+
+### Layout System
+
+Elegant responsive grids and carefully controlled maximum widths.
+
+### Premium Components
+
+Examples:
+
+- Navigation.
+- Editorial sections.
+- Gallery presentations.
+- Artwork cards.
+- Artist profiles.
+- Image viewers.
+- Filters.
+- Buttons.
+- Breadcrumbs.
+- Contact forms.
+- Exhibition modules.
+
+### Motion System
+
+Consistent animation durations, easing and transitions.
+
+### Image System
+
+Consistent artwork presentation, image cropping and responsive delivery.
+
+Every new page should inherit the same premium quality.
+
+Avoid design inconsistencies and duplicated styling.
+
+---
+
+# 16. PERFORMANCE ENGINEERING
+
+The visual experience must remain extremely fast.
+
+Target excellent Core Web Vitals.
+
+Recommended performance objectives:
+
+- LCP: ≤ 2.5 seconds.
+- INP: ≤ 200 milliseconds.
+- CLS: ≤ 0.1.
+
+Aim for Lighthouse scores of at least 95 across:
+
+- Performance.
+- Accessibility.
+- Best Practices.
+- SEO.
+
+Treat these as measurable targets, not guaranteed outcomes.
+
+Test representative mobile and desktop pages.
+
+## Optimize
+
+- Responsive images.
+- AVIF/WebP delivery.
+- Image dimensions.
+- Strategic preload.
+- Lazy loading.
+- Font loading.
+- JavaScript bundle sizes.
+- Caching.
+- CDN delivery.
+- Server rendering.
+- CSS.
+- Third-party dependencies.
+
+Define realistic performance budgets.
+
+Do not load heavy animations or 3D libraries unnecessarily.
+
+Use dynamic loading for optional premium experiences.
+
+Implement graceful fallbacks on less powerful devices.
+
+The core experience must remain excellent without advanced effects.
+
+---
+
+# 17. INTERNATIONAL SEO ARCHITECTURE
+
+MURANIQ should become an authoritative international resource for Murano glass and related collecting subjects.
+
+Develop a sophisticated technical SEO strategy.
+
+Implement:
+
+- Semantic HTML.
+- Unique metadata.
+- Canonical URLs.
+- XML sitemaps.
+- Robots.txt.
+- Open Graph.
+- Structured data.
+- Breadcrumbs.
+- Internal linking.
+- Optimized artwork pages.
+- Artist pages.
+- Glasshouse pages.
+- Technique pages.
+- Editorial guides.
+
+Use appropriate Schema.org types where supported by actual content.
+
+Create logical relationships between artists, manufacturers, techniques and objects.
+
+Maintain clear URL structures.
+
+Investigate the existing website's indexed and public URLs.
+
+Preserve valuable URLs where practical.
+
+Create permanent redirects for changed URLs.
+
+Avoid duplicate content.
+
+Optimize for search engines without compromising editorial elegance.
+
+---
+
+# 18. RESPONSIVE EXPERIENCE
+
+Create a genuine mobile-first luxury experience.
+
+The mobile website must not feel like a simplified afterthought.
+
+It must retain:
+
+- Premium typography.
+- Elegant navigation.
+- High-quality imagery.
+- Smooth galleries.
+- Refined motion.
+- Comfortable touch interactions.
+- Excellent loading performance.
+
+Support:
+
+- Smartphones.
+- Tablets.
+- Laptops.
+- Desktop displays.
+- Large screens.
+
+Use fluid typography and responsive layouts.
+
+Ensure interactive features remain usable without hovering.
+
+Meet WCAG 2.2 AA requirements where applicable.
+
+Preserve keyboard navigation, visible focus indicators and sufficient color contrast.
+
+---
+
+# 19. VERCEL PRODUCTION ARCHITECTURE
+
+Design the platform specifically for Vercel.
+
+Use efficient and reliable infrastructure.
+
+Include:
+
+- GitHub integration.
+- Development workflow.
+- Preview deployments.
+- Production deployment.
+- Environment variables.
+- Secure secret management.
+- CDN caching.
+- Appropriate cache invalidation.
+- Image optimization.
+- Build validation.
+
+## Domain requirements
+
+Primary domain:
+
+`muraniq.nl`
+
+Secondary domain:
+
+`muraniq.com`
+
+Configure the secondary domain to redirect permanently to the primary domain.
+
+Use correct HTTPS and canonical configurations.
+
+Avoid unnecessary infrastructure.
+
+Prioritize minimal ongoing hosting and maintenance costs.
+
+Assess whether the intended usage is permitted under the applicable Vercel plan.
+
+Do not introduce expensive third-party services without explicit approval.
+
+---
+
+# 20. SECURITY & QUALITY ASSURANCE
+
+Use professional engineering practices.
+
+Implement:
+
+- TypeScript strict mode.
+- ESLint.
+- Automated formatting.
+- Dependency checks.
+- Input validation.
+- Secure form handling.
+- Security headers.
+- Appropriate Content Security Policy.
+- Protected secrets.
+- Error boundaries.
+- Robust loading states.
+- Meaningful error handling.
+
+Implement appropriate tests:
+
+- Unit tests.
+- Component tests.
+- Integration tests.
+- End-to-end tests.
+- Accessibility checks.
+- Build verification.
+
+Validate:
+
+- Navigation.
+- Filtering.
+- Artwork detail pages.
+- Image galleries.
+- Responsive behavior.
+- Metadata.
+- Internal links.
+- Contact forms.
+- Performance.
+
+Avoid fake success states and incomplete production features.
+
+Never claim a test succeeded unless it actually ran successfully.
+
+---
+
+# 21. THE EXISTING MURANIQ WEBSITE
+
+Before making architectural or creative decisions, analyze:
+
+https://muraniq.nl/
+
+Investigate:
+
+- Information architecture.
+- Existing pages.
+- Current navigation.
+- Visual identity.
+- Content organization.
+- Existing image assets.
+- Search engine metadata.
+- Current URL structure.
+- Functional behavior.
+- Potential SEO value.
+- Opportunities for improvement.
+
+Inspect the existing codebase if available.
+
+Use the findings to improve the new platform.
+
+Preserve valuable content and historical information.
+
+Do not automatically replicate an existing weakness.
+
+If the site cannot be inspected, explicitly report the limitation and continue using available requirements and repository assets.
+
+Never invent audit findings.
+
+---
+
+# 22. IMPLEMENTATION STRATEGY
+
+Work in a structured sequence.
+
+## PHASE 1 — DISCOVERY
+
+Inspect:
+
+- Repository.
+- Existing dependencies.
+- Available assets.
+- Project configuration.
+- Current website.
+- Functional requirements.
+
+Identify risks and architectural opportunities.
+
+## PHASE 2 — CREATIVE DIRECTION
+
+Define the MURANIQ luxury identity.
+
+Deliver:
+
+- Artistic vision.
+- Color system.
+- Typography.
+- Layout philosophy.
+- Image presentation.
+- Navigation concept.
+- Interaction concept.
+- Motion language.
+
+Describe the intended visual experience clearly.
+
+## PHASE 3 — TECHNICAL ARCHITECTURE
+
+Select and document:
+
+- Technology stack.
+- Repository structure.
+- Content model.
+- Rendering strategy.
+- SEO architecture.
+- Image strategy.
+- Animation architecture.
+- Vercel configuration.
+- Testing strategy.
+
+Explain important trade-offs.
+
+## PHASE 4 — FOUNDATION
+
+Implement:
+
+- Project configuration.
+- Global styles.
+- Design tokens.
+- Fonts.
+- Responsive layouts.
+- Navigation.
+- Shared components.
+- Metadata infrastructure.
+- Content architecture.
+
+## PHASE 5 — SIGNATURE EXPERIENCE
+
+Develop two production-quality reference pages.
+
+### Page 1: Homepage
+
+The homepage must demonstrate the full luxury MURANIQ identity.
+
+Include:
+
+- Cinematic hero.
+- Premium navigation.
+- Featured artworks.
+- Editorial storytelling.
+- Collection discovery.
+- Refined motion.
+- Elegant footer.
+
+### Page 2: Artwork Detail
+
+Demonstrate:
+
+- Exceptional artwork imagery.
+- Premium typography.
+- Interactive gallery viewer.
+- Artwork information.
+- Attribution information.
+- Related artworks.
+- Responsive design.
+
+These two pages establish the design standard for the entire platform.
+
+## PHASE 6 — CORE PLATFORM
+
+Implement:
+
+- Collections.
+- Murano Glass.
+- Studio Glass.
+- Fine Art.
+- Artists.
+- Glass Guide.
+- About.
+- Contact.
+
+Build reusable templates instead of duplicating pages.
+
+## PHASE 7 — ADVANCED INNOVATION
+
+Implement carefully selected immersive features.
+
+Choose features based on measurable value.
+
+## PHASE 8 — OPTIMIZATION
+
+Audit and improve:
+
+- Performance.
+- Accessibility.
+- SEO.
+- Security.
+- Responsive behavior.
+- Bundle size.
+- Visual consistency.
+- Maintainability.
+
+## PHASE 9 — PRODUCTION READINESS
+
+Prepare the complete project for Vercel.
+
+Validate builds, configuration, redirects, metadata and deployment requirements.
+
+---
+
+# 23. SPECIAL INSTRUCTIONS FOR CLAUDE
+
+You are operating in an advanced coding environment.
+
+Use your available reasoning and development capabilities to make excellent engineering decisions.
+
+## Mandatory working principles
+
+**1. Analyze before coding.**
+
+Understand the existing project before changing it.
+
+**2. Design before implementing.**
+
+Establish a coherent visual identity and component strategy.
+
+**3. Choose architecture deliberately.**
+
+Do not add complexity without justification.
+
+**4. Implement real functionality.**
+
+Avoid decorative mockups that appear functional but do nothing.
+
+**5. Protect the codebase.**
+
+Do not unnecessarily rewrite working components or delete existing content.
+
+**6. Verify your work.**
+
+Run available linting, type checks, tests and builds.
+
+**7. Evaluate visual quality.**
+
+Where browser and screenshot capabilities are available, inspect rendered pages rather than relying solely on source code.
+
+**8. Prioritize consistency.**
+
+Maintain unified design tokens, components and interaction patterns.
+
+**9. Be proactive.**
+
+Identify weaknesses and resolve them where possible.
+
+**10. Be transparent.**
+
+Clearly report technical limitations, unverified assumptions and incomplete functionality.
+
+**11. Minimize dependencies.**
+
+Favor stable, well-supported technologies.
+
+**12. Think long-term.**
+
+The codebase should remain understandable and maintainable for years.
+
+---
+
+# 24. VISUAL QUALITY GATE
+
+Before accepting a page as complete, evaluate it against the following criteria.
+
+### Luxury Identity
+
+Does the page genuinely feel like an exclusive Italian private art gallery?
+
+### Visual Impact
+
+Does the artwork receive an exceptional presentation?
+
+### Typography
+
+Is the typography sophisticated, elegant and consistent?
+
+### Color Harmony
+
+Are black, champagne gold and warm beige used with restraint and precision?
+
+### Composition
+
+Does the layout feel intentional and professionally art-directed?
+
+### Interaction
+
+Are transitions elegant and meaningful?
+
+### Originality
+
+Does the design avoid generic templates and predictable AI-generated patterns?
+
+### Performance
+
+Is the page fast and efficient?
+
+### Mobile Quality
+
+Does the same premium experience translate to smaller screens?
+
+### Accessibility
+
+Can visitors use all essential functions comfortably?
+
+If a page does not meet these standards, improve it before considering it complete.
+
+Do not optimize solely for the easiest implementation.
+
+---
+
+# 25. WHAT YOU MUST DELIVER
+
+Provide the following outputs.
+
+### 1. Website Audit
+
+An evidence-based assessment of the existing site.
+
+### 2. Luxury Creative Direction
+
+A complete visual strategy inspired by exclusive Italian art galleries.
+
+### 3. Technical Architecture
+
+A justified production architecture designed for Vercel.
+
+### 4. Repository Structure
+
+A scalable and maintainable project structure.
+
+### 5. Design System
+
+A complete black, champagne-gold and beige luxury design system.
+
+### 6. Innovation Proposal
+
+A prioritized selection of unique interactive gallery features.
+
+### 7. Implementation Roadmap
+
+A practical development plan.
+
+### 8. Production-Quality Foundation
+
+A working application foundation with real components.
+
+### 9. Signature Prototype
+
+A visually exceptional homepage and artwork-detail page.
+
+### 10. Quality Report
+
+Actual results of available tests, build checks and performance measurements.
+
+Clearly distinguish completed work from planned or unverified work.
+
+---
+
+# 26. NON-NEGOTIABLE DESIGN RULES
+
+Never create:
+
+- A generic corporate website.
+- A standard art webshop.
+- A typical portfolio template.
+- A visually cluttered homepage.
+- A cheap-looking gold-and-black theme.
+- Excessive glowing effects.
+- Unnecessary animated backgrounds.
+- Generic cards with predictable layouts.
+- Artificial-looking artwork.
+- A visually impressive but slow website.
+- A technically complex platform without tangible benefits.
+
+Always pursue:
+
+- Editorial sophistication.
+- Architectural clarity.
+- Museum-quality photography.
+- Exceptional typography.
+- Restrained luxury.
+- Beautiful visual hierarchy.
+- Fluid interactions.
+- Intelligent innovation.
+- Outstanding performance.
+- Long-term maintainability.
+
+---
+
+# 27. FINAL CREATIVE MANDATE
+
+MURANIQ must communicate the following qualities:
+
+**ART. HERITAGE. EXCLUSIVITY. ELEGANCE. INNOVATION.**
+
+The website should evoke the atmosphere of a prestigious Italian private gallery after hours.
+
+A quiet architectural space.
+
+Deep black surroundings.
+
+Warm champagne-gold details.
+
+Soft museum lighting.
+
+Extraordinary Venetian glass sculptures.
+
+Monumental artwork photography.
+
+Beautiful editorial typography.
+
+Effortless navigation.
+
+Seamless interactions.
+
+Nothing unnecessary.
+
+Nothing ordinary.
+
+Every detail intentional.
+
+### THE DEFINING EXPERIENCE
+
+The visitor should not feel that they are browsing a conventional website.
+
+**They should feel that they have entered an exceptional private art collection.**
+
+---
+
+# 28. EXECUTION DIRECTIVE
+
+You have permission to make well-reasoned creative and technical decisions within the defined requirements.
+
+Do not repeatedly ask for approval on minor implementation details.
+
+Use professional judgment and explain significant trade-offs.
+
+Start by inspecting the available repository, assets and existing website.
+
+Then establish the luxury design direction and technical architecture.
+
+Proceed to implementing the reusable foundation and the first two reference pages.
+
+Do not perform destructive operations, publish to production or incur paid-service costs without explicit authorization.
+
+Do not claim external integrations or deployments have been completed unless they actually have been verified.
+
+Use real collection assets wherever available.
+
+If original artwork photography is missing, use clearly identified temporary placeholders without inventing provenance or misrepresenting the artworks.
+
+Do not dilute the visual direction to simplify implementation.
+
+At the same time, do not sacrifice speed, reliability or maintainability for superficial visual effects.
+
+Continuously balance:
+
+**EXCEPTIONAL DESIGN × ENGINEERING EXCELLENCE × INNOVATION × PERFORMANCE**
+
+Your objective is not merely to write code.
+
+Your objective is to create a digital gallery of extraordinary quality.
+
+# FINAL OBJECTIVE
+
+**Build MURANIQ into a technologically advanced, exceptionally elegant, internationally distinctive private art gallery that embodies the sophistication of Italian luxury and the artistic heritage of Venetian glassmaking.**
+
+**Think like a world-class architect.**
+
+**Create like an Italian luxury art director.**
+
+**Engineer like a principal software developer.**
+
+**Deliver like an elite digital agency.**
+
+**Make MURANIQ extraordinary.**
