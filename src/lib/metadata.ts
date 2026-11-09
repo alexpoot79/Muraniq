@@ -10,7 +10,11 @@ export function pageMetadata(opts: {
   canonical?: string;
 }): Metadata {
   const canonical = absoluteUrl(opts.canonical ?? opts.path);
-  const image = opts.image ?? { src: "/og-default.png", alt: SITE.name, width: 1200, height: 630 };
+  // Social platforms do not render SVG previews, so placeholder (SVG) images fall back to the default card.
+  const image =
+    opts.image && !/\.svg(\?|$)/i.test(opts.image.src)
+      ? opts.image
+      : { src: "/og-default.png", alt: SITE.name, width: 1200, height: 630 };
   return {
     title: opts.title,
     description: opts.description,
