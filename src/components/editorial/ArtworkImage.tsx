@@ -24,7 +24,9 @@ export function ArtworkImage({
       width={media.width}
       height={media.height}
       sizes={sizes}
-      priority={priority}
+      // Next 16 deprecates `priority`; the LCP image is loaded eagerly at high fetch priority instead.
+      loading={priority ? "eager" : "lazy"}
+      fetchPriority={priority ? "high" : "auto"}
       unoptimized={media.src.endsWith(".svg")}
       className={`h-auto w-full object-contain ${className}`}
     />
