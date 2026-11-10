@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Makers",
+  "description": "Persons and families. Dates are free text exactly as supported by sources; 'Not verified' when unknown.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "alternative_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "periods": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "main_association": {
+        "type": "string"
+      },
+      "ia_category": {
+        "type": "string"
+      },
+      "verification_status": {
+        "enum": [
+          "VERIFIED",
+          "PARTIALLY_VERIFIED",
+          "ATTRIBUTED",
+          "DISPUTED",
+          "UNVERIFIED"
+        ]
+      },
+      "research_priority": {
+        "enum": [
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^(SRC)-[A-Z0-9-]+$"
+        }
+      },
+      "notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "checked": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "origin": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "type": "string",
+        "pattern": "^(PER|FAM)-[A-Z0-9-]+$"
+      },
+      "entity_type": {
+        "enum": [
+          "Person",
+          "Family"
+        ]
+      },
+      "born": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "died": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "entity_type",
+      "verification_status",
+      "research_priority",
+      "source_ids"
+    ],
+    "additionalProperties": false
+  }
+}

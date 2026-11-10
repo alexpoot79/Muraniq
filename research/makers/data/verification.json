@@ -1,0 +1,1813 @@
+{
+  "claims": [
+    {
+      "id": "CLM-0001",
+      "entity_id": "PER-VENINI-PAOLO-1895",
+      "field": "born",
+      "value": "12 January 1895, Cusano Milanino",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": "https://www.treccani.it/enciclopedia/paolo-venini_(Dizionario-Biografico)/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0002",
+      "entity_id": "PER-VENINI-PAOLO-1895",
+      "field": "died",
+      "value": "22 July 1959, Venice",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": "https://www.treccani.it/enciclopedia/paolo-venini_(Dizionario-Biografico)/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0003",
+      "entity_id": "PER-VENINI-PAOLO-1895",
+      "field": "born",
+      "value": "1895",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/paolo-venini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0004",
+      "entity_id": "ORG-VSM-CAPPELLIN-VENINI",
+      "field": "founded",
+      "value": "end of 1921, with Cappellin, Luigi Ceresa, Emilio Ochs",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0005",
+      "entity_id": "ORG-VSM-CAPPELLIN-VENINI",
+      "field": "ended",
+      "value": "spring 1925 (dissolved)",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0006",
+      "entity_id": "ORG-VSM-VENINI",
+      "field": "founded",
+      "value": "1 June 1925 (Venini, Martinuzzi, F. Zecchin, R. Maroni, A. Francini)",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0007",
+      "entity_id": "ORG-VSM-VENINI",
+      "field": "ended",
+      "value": "28 January 1932 (liquidation; new company Venini)",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0008",
+      "entity_id": "ORG-VSM-VENINI",
+      "field": "ended",
+      "value": "1932 (name changed to Venini & C.)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/v-s-m-venini-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0009",
+      "entity_id": "ORG-VENINI",
+      "field": "current_owner",
+      "value": "Italian Luxury Industries (since 2001)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/venini-s-p-a/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": "Not checked against the company site (403)."
+    },
+    {
+      "id": "CLM-0010",
+      "entity_id": "ORG-VENINI",
+      "field": "founding_year_as_credited",
+      "value": "'Venini & Co., Murano, Italy, established 1921' (Met maker string)",
+      "source_id": "SRC-MET-API",
+      "locator": "https://www.metmuseum.org/art/collection/search/499930",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": "Museum dates the firm from the 1921 Cappellin Venini partnership."
+    },
+    {
+      "id": "CLM-0011",
+      "entity_id": "PER-CAPPELLIN-GIACOMO-1887",
+      "field": "born",
+      "value": "29 May 1887, Venice",
+      "source_id": "SRC-DBI-CAPPELLIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0012",
+      "entity_id": "PER-CAPPELLIN-GIACOMO-1887",
+      "field": "died",
+      "value": "14 November 1968, Venice",
+      "source_id": "SRC-DBI-CAPPELLIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0013",
+      "entity_id": "ORG-MVM-CAPPELLIN",
+      "field": "ended",
+      "value": "1931",
+      "source_id": "SRC-LSV-CAPPELLIN-SCARPA",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/the-m-v-m-cappellin-glassworks-and-the-young-carlo-scarpa-1925-1931/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MVM-CLOSURE",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0014",
+      "entity_id": "ORG-MVM-CAPPELLIN",
+      "field": "ended",
+      "value": "January 1932",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/maestri-vetrai-muranesi-cappellin-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MVM-CLOSURE",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0015",
+      "entity_id": "ORG-MVM-CAPPELLIN",
+      "field": "maestri_left",
+      "value": "maestri sold their share in 1929",
+      "source_id": "SRC-DBI-CAPPELLIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0016",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:MVM_start",
+      "value": "1925–26 (consultant; Palazzo Da Mula restoration)",
+      "source_id": "SRC-DBI-SCARPA",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-CAPPELLIN-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0017",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:MVM_start",
+      "value": "from 1926",
+      "source_id": "SRC-LSV-CAPPELLIN-SCARPA",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/the-m-v-m-cappellin-glassworks-and-the-young-carlo-scarpa-1925-1931/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-CAPPELLIN-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0018",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:MVM_start",
+      "value": "end of 1926, as artistic director after Zecchin",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/maestri-vetrai-muranesi-cappellin-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-CAPPELLIN-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0019",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:MVM_start",
+      "value": "1927–28, replacing Zecchin",
+      "source_id": "SRC-DBI-CAPPELLIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-CAPPELLIN-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0020",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:Venini",
+      "value": "1932–1947",
+      "source_id": "SRC-LSV-SCARPA-VENINI",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/carlo-scarpa-venini-1932-1947/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0021",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:Venini",
+      "value": "1932–1947",
+      "source_id": "SRC-DBI-SCARPA",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0022",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:Venini_artistic_director",
+      "value": "artistic director from 1934",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/venini-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-VENINI-AD",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0023",
+      "entity_id": "PER-SCARPA-CARLO-1906",
+      "field": "relation:Venini_artistic_director",
+      "value": "collaboration begins 1932 (no AD date given)",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SCARPA-VENINI-AD",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0024",
+      "entity_id": "PER-SCARPA-TOBIA-1935",
+      "field": "born",
+      "value": "1 January 1935",
+      "source_id": "SRC-DBI-SCARPA",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0025",
+      "entity_id": "PER-ZECCHIN-VITTORIO-1878",
+      "field": "died",
+      "value": "15 April 1947, Murano",
+      "source_id": "SRC-DBI-ZECCHIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0026",
+      "entity_id": "PER-ZECCHIN-VITTORIO-1878",
+      "field": "relation:VSM_Cappellin_Venini",
+      "value": "artistic director from December 1921",
+      "source_id": "SRC-DBI-ZECCHIN",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0027",
+      "entity_id": "PER-ZECCHIN-VITTORIO-1878",
+      "field": "relation:MVM_Cappellin",
+      "value": "designed for M.V.M. until 1926",
+      "source_id": "SRC-LSV-CAPPELLIN-SCARPA",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0028",
+      "entity_id": "PER-ZECCHIN-VITTORIO-1878",
+      "field": "relation:VSM_Venini",
+      "value": "collections for V.S.M. Venini & C.; 'Zecchin' left in 1932",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/v-s-m-venini-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZECCHIN-HOMONYM",
+      "checked": "2026-11-10",
+      "notes": "OS does not give a first name in this sentence; OS Zecchin-Martinuzzi page and DBI Venini name the partner Francesco Zecchin."
+    },
+    {
+      "id": "CLM-0029",
+      "entity_id": "PER-ZECCHIN-FRANCESCO",
+      "field": "relation:VSM_Venini",
+      "value": "partner 1925; left 1932 with Martinuzzi",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/zecchin-martinuzzi-vetri-artistici-e-mosaici/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZECCHIN-HOMONYM",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0030",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "born",
+      "value": "31 May 1892, Murano",
+      "source_id": "SRC-DBI-MARTINUZZI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0031",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "died",
+      "value": "15 May 1977, Venice",
+      "source_id": "SRC-DBI-MARTINUZZI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0032",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "museum_director",
+      "value": "1922–1931",
+      "source_id": "SRC-DBI-MARTINUZZI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTINUZZI-MUSEUM",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0033",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "museum_director",
+      "value": "1921–1931",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/napoleone-martinuzzi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTINUZZI-MUSEUM",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0034",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "relation:VSM_Venini_end",
+      "value": "1931",
+      "source_id": "SRC-LSV-MARTINUZZI",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/napoleone-martinuzzi-venini-1925-1931/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTINUZZI-VENINI-END",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0035",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "relation:VSM_Venini_end",
+      "value": "1932",
+      "source_id": "SRC-DBI-MARTINUZZI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTINUZZI-VENINI-END",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0036",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "relation:VSM_Venini_end",
+      "value": "1932",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/v-s-m-venini-c/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTINUZZI-VENINI-END",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0037",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "relation:Arte_Vetro_Seguso",
+      "value": "five years from 1947",
+      "source_id": "SRC-DBI-MARTINUZZI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0038",
+      "entity_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+      "field": "relation:Arte_Vetro_Seguso",
+      "value": "artistic director of Alberto Seguso's Arte Vetro (no dates)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/napoleone-martinuzzi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0039",
+      "entity_id": "PER-BUZZI-TOMASO-1900",
+      "field": "relation:Venini",
+      "value": "arrived 1932; glass of 1932–33",
+      "source_id": "SRC-LSV-BUZZI",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/tomaso-buzzi-at-venini-curated-by-marino-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0040",
+      "entity_id": "PER-BUZZI-TOMASO-1900",
+      "field": "relation:Venini",
+      "value": "artistic director 1932–1934",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/tommaso-buzzi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0041",
+      "entity_id": "PER-BIANCONI-FULVIO-1915",
+      "field": "born",
+      "value": "1915, Padua",
+      "source_id": "SRC-LSV-BIANCONI",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/fulvio-bianconi-at-venini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0042",
+      "entity_id": "PER-BIANCONI-FULVIO-1915",
+      "field": "died",
+      "value": "1996, Milan",
+      "source_id": "SRC-LSV-BIANCONI",
+      "locator": "https://lestanzedelvetro.org/en/exhibition/fulvio-bianconi-at-venini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0043",
+      "entity_id": "PER-BIANCONI-FULVIO-1915",
+      "field": "relation:Venini_start",
+      "value": "1946",
+      "source_id": "SRC-LSV-BIANCONI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BIANCONI-VENINI-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0044",
+      "entity_id": "PER-BIANCONI-FULVIO-1915",
+      "field": "relation:Venini_start",
+      "value": "1947",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/fulvio-bianconi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BIANCONI-VENINI-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0045",
+      "entity_id": "PER-BIANCONI-FULVIO-1915",
+      "field": "relation:Venini_start",
+      "value": "1948 (commedia dell'arte figures)",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BIANCONI-VENINI-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0046",
+      "entity_id": "PER-SCARPA-TOBIA-1935",
+      "field": "relation:Venini_start",
+      "value": "1957 ('Occhi')",
+      "source_id": "SRC-DBI-VENINI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-TOBIA-VENINI-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0047",
+      "entity_id": "PER-SCARPA-TOBIA-1935",
+      "field": "relation:Venini_start",
+      "value": "1958 (invited)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/tobia-scarpa/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-TOBIA-VENINI-START",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0048",
+      "entity_id": "PER-BAROVIER-ANGELO-C1400",
+      "field": "died",
+      "value": "February 1461, Murano",
+      "source_id": "SRC-DBI-BAROVIER-ANGELO",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0049",
+      "entity_id": "PER-BAROVIER-ANGELO-C1400",
+      "field": "attributed_invention",
+      "value": "cristallo – 'può essere a lui attribuita'",
+      "source_id": "SRC-DBI-BAROVIER-ANGELO",
+      "locator": null,
+      "claim_type": "SOURCE_ATTRIBUTES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0050",
+      "entity_id": "FAM-BAROVIER",
+      "field": "earliest_record",
+      "value": "Antonio 'phiolarius', second half 13th c.",
+      "source_id": "SRC-DBI-BAROVIER-FAMILY",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0051",
+      "entity_id": "ORG-BAROVIER-TOSO",
+      "field": "heritage_claim",
+      "value": "'since 1295'; privilege 1455",
+      "source_id": "SRC-BAROVIER-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0052",
+      "entity_id": "PER-BAROVIER-ERCOLE-1889",
+      "field": "born",
+      "value": "16 June 1889, Murano",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0053",
+      "entity_id": "PER-BAROVIER-ERCOLE-1889",
+      "field": "died",
+      "value": "19 May 1974, Venice",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0054",
+      "entity_id": "PER-BAROVIER-ERCOLE-1889",
+      "field": "born",
+      "value": "1889",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/ercole-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0055",
+      "entity_id": "ORG-ARTISTI-BAROVIER",
+      "field": "takeover",
+      "value": "1883: Salviati ceded the furnace to Giuseppe and Benvenuto Barovier",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BAROVIER-TAKEOVER",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0056",
+      "entity_id": "ORG-ARTISTI-BAROVIER",
+      "field": "takeover",
+      "value": "1883",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BAROVIER-TAKEOVER",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0057",
+      "entity_id": "ORG-ARTISTI-BAROVIER",
+      "field": "takeover",
+      "value": "1884",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/artisti-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BAROVIER-TAKEOVER",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0058",
+      "entity_id": "ORG-ARTISTI-BAROVIER",
+      "field": "name_adopted",
+      "value": "1896",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ARTISTI-BAROVIER-NAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0059",
+      "entity_id": "ORG-ARTISTI-BAROVIER",
+      "field": "name_adopted",
+      "value": "1890",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ARTISTI-BAROVIER-NAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0060",
+      "entity_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+      "field": "name",
+      "value": "'Salviati dott. Antonio' (new workshop 1877)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SALVIATI-1877-NAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0061",
+      "entity_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+      "field": "name",
+      "value": "'Salviati & C.' founded in Murano 1877",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/salviati/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SALVIATI-1877-NAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0062",
+      "entity_id": "PER-BAROVIER-NICOLO-1886",
+      "field": "born",
+      "value": "10 May 1886, Murano",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-NICOLO-BAROVIER-DATES",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0063",
+      "entity_id": "PER-BAROVIER-NICOLO-1886",
+      "field": "died",
+      "value": "13 May 1953, Florence",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-NICOLO-BAROVIER-DATES",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0064",
+      "entity_id": "PER-BAROVIER-NICOLO-1886",
+      "field": "life_dates",
+      "value": "1895–1947",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/nicolo-barovier/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-NICOLO-BAROVIER-DATES",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0065",
+      "entity_id": "ORG-BAROVIER-TOSO",
+      "field": "name_history",
+      "value": "1936 Ferro Toso e Barovier; 1939 Barovier Toso & C.; 1942 Barovier & Toso",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/barovier-toso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0066",
+      "entity_id": "ORG-BAROVIER-TOSO",
+      "field": "founded",
+      "value": "1936 merger with S.A.I.A.R. Ferro Toso",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0067",
+      "entity_id": "ORG-BAROVIER-SEGUSO-FERRO",
+      "field": "founded",
+      "value": "1932 (Napoleone Barovier with Antonio Seguso and others)",
+      "source_id": "SRC-DBI-BAROVIER-ERCOLE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BSF-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0068",
+      "entity_id": "ORG-BAROVIER-SEGUSO-FERRO",
+      "field": "founded",
+      "value": "1933 (maestri from Vetreria Artistica Barovier with Archimede, Ernesto, Alberto Seguso)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/seguso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BSF-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0069",
+      "entity_id": "ORG-SEGUSO-VETRI-DARTE",
+      "field": "name_adopted",
+      "value": "1937 (reorganisation)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/seguso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BSF-RENAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0070",
+      "entity_id": "ORG-SEGUSO-VETRI-DARTE",
+      "field": "name_adopted",
+      "value": "1933 (timeline entry 'Seguso Vetri d'Arte')",
+      "source_id": "SRC-SEGUSO-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": "CF-BSF-RENAME",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0071",
+      "entity_id": "FAM-SEGUSO",
+      "field": "heritage_claim",
+      "value": "family glassmakers since 1397; 23 generations",
+      "source_id": "SRC-SEGUSO-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0072",
+      "entity_id": "ORG-SEGUSO-VETRI-DARTE",
+      "field": "award",
+      "value": "1954 Compasso d'Oro for Poli's 'Vaso Blu Rubino'",
+      "source_id": "SRC-SEGUSO-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": "To be checked against ADI Compasso d'Oro records."
+    },
+    {
+      "id": "CLM-0073",
+      "entity_id": "PER-SEGUSO-ARCHIMEDE-1909",
+      "field": "life_dates",
+      "value": "1909–1999",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/archimede-seguso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0074",
+      "entity_id": "ORG-VETRERIA-ARCHIMEDE-SEGUSO",
+      "field": "founded",
+      "value": "1946",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/vetreria-archimede-seguso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0075",
+      "entity_id": "ORG-VETRERIA-ARCHIMEDE-SEGUSO",
+      "field": "milestones",
+      "value": "merletti 1952; piume 1956; 1991 Palazzo Ducale exhibition; museum at Fondamenta Serenella 18",
+      "source_id": "SRC-ARCHIMEDE-SEGUSO-IT",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0076",
+      "entity_id": "ORG-SEGUSO-VIRO",
+      "field": "founded",
+      "value": "1993 by Giampaolo Seguso with his sons",
+      "source_id": "SRC-SEGUSO-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0077",
+      "entity_id": "PER-POLI-FLAVIO-1900",
+      "field": "life_dates",
+      "value": "1900 (Chioggia)–1984",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/flavio-poli/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-POLI-DEATH",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0078",
+      "entity_id": "PER-POLI-FLAVIO-1900",
+      "field": "died",
+      "value": "1980",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-POLI-DEATH",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0079",
+      "entity_id": "PER-POLI-FLAVIO-1900",
+      "field": "relation:Seguso",
+      "value": "artistic director 1934–1963; partner from 1937",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/seguso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0080",
+      "entity_id": "PER-MARTENS-DINO-1894",
+      "field": "life_dates",
+      "value": "1894–1970",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/dino-martens/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0081",
+      "entity_id": "PER-MARTENS-DINO-1894",
+      "field": "relation:Aureliano_Toso_end",
+      "value": "1963",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/dino-martens/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTENS-TOSO-END",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0082",
+      "entity_id": "PER-MARTENS-DINO-1894",
+      "field": "relation:Aureliano_Toso_end",
+      "value": "1965",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MARTENS-TOSO-END",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0083",
+      "entity_id": "ORG-AURELIANO-TOSO",
+      "field": "founded",
+      "value": "1938 (text)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-AURELIANO-TOSO-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0084",
+      "entity_id": "ORG-AURELIANO-TOSO",
+      "field": "founded",
+      "value": "1932 (page header '1932–')",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-AURELIANO-TOSO-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0085",
+      "entity_id": "PER-BARBINI-ALFREDO-1912",
+      "field": "life_dates",
+      "value": "1912–2006",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/alfredo-barbini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BARBINI-DEATH",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0086",
+      "entity_id": "PER-BARBINI-ALFREDO-1912",
+      "field": "died",
+      "value": "2007",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BARBINI-DEATH",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0087",
+      "entity_id": "ORG-VETRERIA-ALFREDO-BARBINI",
+      "field": "founded",
+      "value": "1950 (text)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/alfredo-barbini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BARBINI-FIRM-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0088",
+      "entity_id": "ORG-VETRERIA-ALFREDO-BARBINI",
+      "field": "founded",
+      "value": "1932 (page header '1932–')",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/vetreria-alfredo-barbini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-BARBINI-FIRM-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0089",
+      "entity_id": "ORG-GINO-CENEDESE",
+      "field": "founded",
+      "value": "1946",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/alfredo-barbini/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-FURLAN-CENEDESE",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0090",
+      "entity_id": "PER-DAROS-ANTONIO",
+      "field": "relation:Cenedese_start",
+      "value": "1958",
+      "source_id": "SRC-WEB-INCOLLECT",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-DAROS-START",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0091",
+      "entity_id": "PER-DAROS-ANTONIO",
+      "field": "relation:Cenedese_start",
+      "value": "1959",
+      "source_id": "SRC-WEB-BOGLEWOOD",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-DAROS-START",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0092",
+      "entity_id": "PER-FURLAN-WALTER",
+      "field": "relation:Cenedese",
+      "value": "worked at Gino Cenedese 1940–45",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-FURLAN-CENEDESE",
+      "checked": "2026-11-10",
+      "notes": "Dealer text; firm founded 1946 per OS."
+    },
+    {
+      "id": "CLM-0093",
+      "entity_id": "ORG-AVEM",
+      "field": "founded",
+      "value": "1932 by Antonio Luigi Ferro, his son Egidio, Emilio Nason, Galliano Ferro, Giulio Radi",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/avem/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0094",
+      "entity_id": "ORG-AVEM",
+      "field": "operating_status",
+      "value": "'still active in Murano today'",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/avem/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": "Current status not independently verified."
+    },
+    {
+      "id": "CLM-0095",
+      "entity_id": "PER-RADI-GIULIO-1895",
+      "field": "life_dates",
+      "value": "1895–1952",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/giulio-radi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0096",
+      "entity_id": "PER-FERRO-GIORGIO-1931",
+      "field": "born",
+      "value": "1931, Murano; son of Galliano Ferro",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/giorgio-ferro/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0097",
+      "entity_id": "ORG-FRATELLI-TOSO",
+      "field": "founded",
+      "value": "1854, by six Toso brothers",
+      "source_id": "SRC-MV-FRATELLI-TOSO",
+      "locator": "https://museovetro.visitmuve.it/en/exhibition/fratelli-toso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0098",
+      "entity_id": "ORG-FRATELLI-TOSO",
+      "field": "ended",
+      "value": "furnace closed 1982",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/fratelli-toso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-FRATELLI-TOSO-STATUS",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0099",
+      "entity_id": "ORG-FRATELLI-TOSO",
+      "field": "anniversary",
+      "value": "170 years marked by a Museo del Vetro exhibition (2024/25)",
+      "source_id": "SRC-MV-FRATELLI-TOSO",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-FRATELLI-TOSO-STATUS",
+      "checked": "2026-11-10",
+      "notes": "The exhibition is historical; it does not by itself show current production."
+    },
+    {
+      "id": "CLM-0100",
+      "entity_id": "PER-TOSO-ERMANNO-1903",
+      "field": "relation:Fratelli_Toso_AD",
+      "value": "1936",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/ermanno-toso/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ERMANNO-TOSO-AD",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0101",
+      "entity_id": "PER-TOSO-ERMANNO-1903",
+      "field": "relation:Fratelli_Toso_AD",
+      "value": "late 1940s to the 1960s",
+      "source_id": "SRC-MV-FRATELLI-TOSO",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ERMANNO-TOSO-AD",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0102",
+      "entity_id": "ORG-TOSO-VETRI-DARTE",
+      "field": "founded",
+      "value": "1980 (text)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/toso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-TOSO-VETRI-DARTE-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0103",
+      "entity_id": "ORG-TOSO-VETRI-DARTE",
+      "field": "founded",
+      "value": "1981 (page header)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/toso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-TOSO-VETRI-DARTE-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0104",
+      "entity_id": "ORG-TOSO-VETRI-DARTE",
+      "field": "ended",
+      "value": "1990 – bought by Andrea Boscaro, renamed Compagnia Vetreria Muranese",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/toso-vetri-darte/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0105",
+      "entity_id": "ORG-SALVIATI-DOTT-ANTONIO-1859",
+      "field": "founded",
+      "value": "1859, 'Salviati Dott. Antonio fu Bartolomeo', Dorsoduro 731",
+      "source_id": "SRC-SALVIATI-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0106",
+      "entity_id": "ORG-SALVIATI-C",
+      "field": "founded",
+      "value": "21 December 1866, London (Società Anonima per Azioni Salviati & C.; Layard, Drake)",
+      "source_id": "SRC-SALVIATI-COM",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": "CF-SALVIATI-C-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0107",
+      "entity_id": "ORG-SALVIATI-C",
+      "field": "founded",
+      "value": "1877, Murano",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/salviati/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SALVIATI-C-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0108",
+      "entity_id": "PER-SALVIATI-ANTONIO-1816",
+      "field": "died",
+      "value": "1890",
+      "source_id": "SRC-SALVIATI-COM",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0109",
+      "entity_id": "PER-SALVIATI-ANTONIO-1816",
+      "field": "died",
+      "value": "1890",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/salviati/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0110",
+      "entity_id": "ORG-PAULY-C",
+      "field": "founded",
+      "value": "1902, by Emilio Pauly and partners",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/pauly-c-compagnia-venezia-murano/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-PAULY-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0111",
+      "entity_id": "ORG-PAULY-C",
+      "field": "founded",
+      "value": "1903",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-PAULY-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0112",
+      "entity_id": "ORG-PAULY-C",
+      "field": "attributed_object_date",
+      "value": "Met jug 'possibly made at Pauly and Company', ca. 1860–70",
+      "source_id": "SRC-MET-API",
+      "locator": "https://www.metmuseum.org/art/collection/search/186123",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-PAULY-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0113",
+      "entity_id": "ORG-VISTOSI",
+      "field": "founded",
+      "value": "1945, Guglielmo Vistosi",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/vetreria-vistosi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0114",
+      "entity_id": "ORG-VISTOSI",
+      "field": "ended",
+      "value": "closed early 1990s after change of ownership (page header 1945–1990)",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/workshop/vetreria-vistosi/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-VISTOSI-CONTINUITY",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0115",
+      "entity_id": "ORG-VISTOSI",
+      "field": "operating_status",
+      "value": "brand active today (company profile)",
+      "source_id": "SRC-VISTOSI-PROFILE",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": "CF-VISTOSI-CONTINUITY",
+      "checked": "2026-11-10",
+      "notes": "Seen via search index only."
+    },
+    {
+      "id": "CLM-0116",
+      "entity_id": "ORG-SALIR",
+      "field": "founded",
+      "value": "1923",
+      "source_id": "SRC-WEB-DAS-SALIR",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SALIR-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": "Title of the reviewed book: '...Murano 1923–1993' (search index)."
+    },
+    {
+      "id": "CLM-0117",
+      "entity_id": "ORG-SALIR",
+      "field": "founded",
+      "value": "1924",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-SALIR-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0118",
+      "entity_id": "ORG-NASON-MORETTI",
+      "field": "founded",
+      "value": "1923",
+      "source_id": "SRC-WEB-MARSILIO-NASONMORETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-NASON-MORETTI-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": "Centenary publication (search index)."
+    },
+    {
+      "id": "CLM-0119",
+      "entity_id": "ORG-NASON-MORETTI",
+      "field": "founded",
+      "value": "1925",
+      "source_id": "SRC-WEB-1STDIBS",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-NASON-MORETTI-FOUNDING",
+      "checked": "2026-11-10",
+      "notes": "Search snippet; Tier C."
+    },
+    {
+      "id": "CLM-0120",
+      "entity_id": "ORG-CARLO-MORETTI",
+      "field": "founded",
+      "value": "30 October 1958, by Carlo and Giovanni Moretti",
+      "source_id": "SRC-MV-MORETTI",
+      "locator": "https://museovetro.visitmuve.it/en/exhibition/donazione-moretti/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0121",
+      "entity_id": "ORG-OGGETTI",
+      "field": "founded",
+      "value": "1975; sources pieces from artists and artisans worldwide",
+      "source_id": "SRC-OGGETTI-COM",
+      "locator": "https://www.oggetti.com/pages/about",
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0122",
+      "entity_id": "PER-TAGLIAPIETRA-LINO-1934",
+      "field": "born",
+      "value": "1934, Murano",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/lino-tagliapietra/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0123",
+      "entity_id": "PER-TAGLIAPIETRA-LINO-1934",
+      "field": "career",
+      "value": "maestro 1956 (Galliano Ferro); Effetre International 1976; Pilchuck from 1979",
+      "source_id": "SRC-OS",
+      "locator": "https://olnickspanu.com/artist/lino-tagliapietra/",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0124",
+      "entity_id": "ORG-VENINI",
+      "field": "museum_name_variant",
+      "value": "'Venini S.p.a.' used for a ca. 1948 object",
+      "source_id": "SRC-MET-API",
+      "locator": "https://www.metmuseum.org/art/collection/search/484566",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MET-VENINI-NAMES",
+      "checked": "2026-11-10",
+      "notes": null
+    },
+    {
+      "id": "CLM-0125",
+      "entity_id": "ORG-VENINI",
+      "field": "museum_name_variant",
+      "value": "'Vetri Soffiati Muranesi e C.' used for objects of ca. 1949 and 1955–56",
+      "source_id": "SRC-MET-API",
+      "locator": "https://www.metmuseum.org/art/collection/search/484662",
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-MET-VENINI-NAMES",
+      "checked": "2026-11-10",
+      "notes": null
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CF-SCARPA-CAPPELLIN-START",
+      "description": "When Carlo Scarpa started at M.V.M. Cappellin and when he became its artistic director (1925–26 / 1926 / end 1926 / 1927–28).",
+      "claim_ids": [
+        "CLM-0016",
+        "CLM-0017",
+        "CLM-0018",
+        "CLM-0019"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-SCARPA-VENINI-AD",
+      "description": "Scarpa's collaboration with Venini starts 1932 (LSV, DBI); OS dates the title 'artistic director' from 1934.",
+      "claim_ids": [
+        "CLM-0022",
+        "CLM-0023"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-MVM-CLOSURE",
+      "description": "Closure of M.V.M. Cappellin & C.: 1931 vs January 1932.",
+      "claim_ids": [
+        "CLM-0013",
+        "CLM-0014"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-MARTINUZZI-VENINI-END",
+      "description": "End of Martinuzzi's role at V.S.M. Venini & C.: 1931 vs 1932.",
+      "claim_ids": [
+        "CLM-0034",
+        "CLM-0035",
+        "CLM-0036"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-MARTINUZZI-MUSEUM",
+      "description": "Martinuzzi's directorship of the Museo del Vetro: 1922–1931 (DBI) vs 1921–1931 (OS).",
+      "claim_ids": [
+        "CLM-0032",
+        "CLM-0033"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-ZECCHIN-HOMONYM",
+      "description": "Which Zecchin left V.S.M. Venini & C. in 1932 – Francesco (partner) per DBI/OS Zecchin-Martinuzzi page; OS V.S.M. page is ambiguous and could be read as Vittorio.",
+      "claim_ids": [
+        "CLM-0028",
+        "CLM-0029"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BIANCONI-VENINI-START",
+      "description": "Start of Bianconi at Venini: 1946 / 1947 / 1948.",
+      "claim_ids": [
+        "CLM-0043",
+        "CLM-0044",
+        "CLM-0045"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-TOBIA-VENINI-START",
+      "description": "Start of Tobia Scarpa at Venini: 1957 vs 1958.",
+      "claim_ids": [
+        "CLM-0046",
+        "CLM-0047"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BAROVIER-TAKEOVER",
+      "description": "Year the Barovier brothers took over Salviati's 1877 furnace: 1883 vs 1884 (OS inconsistent with itself).",
+      "claim_ids": [
+        "CLM-0055",
+        "CLM-0056",
+        "CLM-0057"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-ARTISTI-BAROVIER-NAME",
+      "description": "Year the name 'Artisti Barovier' was adopted: 1890 (OS) vs 1896 (DBI).",
+      "claim_ids": [
+        "CLM-0058",
+        "CLM-0059"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-SALVIATI-1877-NAME",
+      "description": "Name of Salviati's 1877 Murano firm: 'Salviati dott. Antonio' vs 'Salviati & C.' (both on OS).",
+      "claim_ids": [
+        "CLM-0060",
+        "CLM-0061"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-NICOLO-BAROVIER-DATES",
+      "description": "Nicolò Barovier: 1886–1953 (DBI) vs 1895–1947 (OS).",
+      "claim_ids": [
+        "CLM-0062",
+        "CLM-0063",
+        "CLM-0064"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BSF-FOUNDING",
+      "description": "Founding year and founders of Barovier Seguso & Ferro: 1932 (DBI) vs 1933 (OS).",
+      "claim_ids": [
+        "CLM-0067",
+        "CLM-0068"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BSF-RENAME",
+      "description": "Year 'Seguso Vetri d'Arte' was adopted: 1937 (OS) vs 1933 (company timeline).",
+      "claim_ids": [
+        "CLM-0069",
+        "CLM-0070"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-POLI-DEATH",
+      "description": "Flavio Poli's death: 1984 (OS) vs 1980 (Tier C).",
+      "claim_ids": [
+        "CLM-0077",
+        "CLM-0078"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-MARTENS-TOSO-END",
+      "description": "End of Martens at Aureliano Toso: 1963 vs 1965 (both OS).",
+      "claim_ids": [
+        "CLM-0081",
+        "CLM-0082"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-AURELIANO-TOSO-FOUNDING",
+      "description": "Founding of Aureliano Toso: 1938 (text) vs 1932 (header), both OS.",
+      "claim_ids": [
+        "CLM-0083",
+        "CLM-0084"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BARBINI-DEATH",
+      "description": "Alfredo Barbini's death: 2006 (OS) vs 2007 (Tier C).",
+      "claim_ids": [
+        "CLM-0085",
+        "CLM-0086"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-BARBINI-FIRM-FOUNDING",
+      "description": "Vetreria Alfredo Barbini: 1950 (text) vs 1932 (header), both OS.",
+      "claim_ids": [
+        "CLM-0087",
+        "CLM-0088"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-DAROS-START",
+      "description": "Da Ros at Cenedese: 1958 vs 1959 (Tier C only).",
+      "claim_ids": [
+        "CLM-0090",
+        "CLM-0091"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-FURLAN-CENEDESE",
+      "description": "Dealer claim that Walter Furlan worked at Cenedese 1940–45, before the firm existed (1946).",
+      "claim_ids": [
+        "CLM-0089",
+        "CLM-0092"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-FRATELLI-TOSO-STATUS",
+      "description": "Fratelli Toso closed 1982 (OS) – current status of the name not established.",
+      "claim_ids": [
+        "CLM-0098",
+        "CLM-0099"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-ERMANNO-TOSO-AD",
+      "description": "Ermanno Toso artistic director from 1936 (OS) vs from the late 1940s (Museo del Vetro).",
+      "claim_ids": [
+        "CLM-0100",
+        "CLM-0101"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-TOSO-VETRI-DARTE-FOUNDING",
+      "description": "Toso Vetri d'Arte: 1980 vs 1981 (OS).",
+      "claim_ids": [
+        "CLM-0102",
+        "CLM-0103"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-SALVIATI-C-FOUNDING",
+      "description": "Salviati & C.: London company 1866 (company history) vs Murano firm 1877 (OS) – probably two different entities with one name.",
+      "claim_ids": [
+        "CLM-0106",
+        "CLM-0107"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-PAULY-FOUNDING",
+      "description": "Pauly & C. founded 1902 (OS) vs 1903 (Tier C); Met object 'possibly Pauly' dated ca. 1860–70.",
+      "claim_ids": [
+        "CLM-0110",
+        "CLM-0111",
+        "CLM-0112"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-VISTOSI-CONTINUITY",
+      "description": "Historic Vetreria Vistosi closed early 1990s (OS) vs brand active today (company).",
+      "claim_ids": [
+        "CLM-0114",
+        "CLM-0115"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-SALIR-FOUNDING",
+      "description": "S.A.L.I.R. founded 1923 vs 1924.",
+      "claim_ids": [
+        "CLM-0116",
+        "CLM-0117"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-NASON-MORETTI-FOUNDING",
+      "description": "Nason & Moretti founded 1923 vs 1925.",
+      "claim_ids": [
+        "CLM-0118",
+        "CLM-0119"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-MET-VENINI-NAMES",
+      "description": "The Met uses anachronistic firm names for Venini objects (Venini S.p.a. for 1948; V.S.M. for 1949–56).",
+      "claim_ids": [
+        "CLM-0124",
+        "CLM-0125"
+      ],
+      "resolution": null,
+      "resolution_status": "OPEN"
+    }
+  ]
+}

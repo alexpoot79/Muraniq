@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verification",
+  "description": "Claim-level evidence and conflict groups.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claims",
+    "conflicts"
+  ],
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "entity_id",
+          "field",
+          "value",
+          "source_id",
+          "claim_type",
+          "checked"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(CLM)-[A-Z0-9-]+$"
+          },
+          "entity_id": {
+            "type": "string",
+            "pattern": "^(PER|FAM|ORG)-[A-Z0-9-]+$"
+          },
+          "field": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string",
+            "pattern": "^(SRC)-[A-Z0-9-]+$"
+          },
+          "locator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "claim_type": {
+            "enum": [
+              "SOURCE_STATES",
+              "SOURCE_ATTRIBUTES",
+              "COMPANY_CLAIM"
+            ]
+          },
+          "conflict_group": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^CF-[A-Z0-9-]+$"
+          },
+          "checked": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "description",
+          "claim_ids",
+          "resolution_status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^CF-[A-Z0-9-]+$"
+          },
+          "description": {
+            "type": "string"
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(CLM)-[A-Z0-9-]+$"
+            }
+          },
+          "resolution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resolution_status": {
+            "enum": [
+              "OPEN",
+              "RESOLVED",
+              "ACCEPTED_AS_UNCERTAIN"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

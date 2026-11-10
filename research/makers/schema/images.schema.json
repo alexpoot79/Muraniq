@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Images",
+  "description": "Image candidates and their rights status. Nothing is downloaded or published by this dataset.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(IMG)-[A-Z0-9-]+$"
+      },
+      "work_id": {
+        "type": "string",
+        "pattern": "^(WRK)-[A-Z0-9-]+$"
+      },
+      "image_url": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "link_url": {
+        "type": "string"
+      },
+      "rights_label": {
+        "enum": [
+          "LICENSED FOR USE",
+          "PUBLIC DOMAIN",
+          "PERMISSION REQUIRED",
+          "REFERENCE LINK ONLY",
+          "RIGHTS UNKNOWN"
+        ]
+      },
+      "rights_basis": {
+        "type": "string"
+      },
+      "credit": {
+        "type": "string"
+      },
+      "downloaded": {
+        "type": "boolean"
+      },
+      "published": {
+        "type": "boolean"
+      },
+      "checked": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "work_id",
+      "rights_label",
+      "rights_basis",
+      "downloaded",
+      "published"
+    ],
+    "additionalProperties": false
+  }
+}

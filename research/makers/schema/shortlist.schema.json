@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Priority shortlist",
+  "description": "Deliverable B: 30 dossiers for Phase 2.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(DOS)-[A-Z0-9-]+$"
+      },
+      "rank": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "string"
+      },
+      "entity_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^(PER|FAM|ORG)-[A-Z0-9-]+$"
+        },
+        "minItems": 1
+      },
+      "scores": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "museum_relevance",
+          "historical_influence",
+          "collecting_relevance",
+          "documentation_availability"
+        ],
+        "properties": {
+          "museum_relevance": {
+            "enum": [
+              "H",
+              "M",
+              "L"
+            ]
+          },
+          "historical_influence": {
+            "enum": [
+              "H",
+              "M",
+              "L"
+            ]
+          },
+          "collecting_relevance": {
+            "enum": [
+              "H",
+              "M",
+              "L"
+            ]
+          },
+          "documentation_availability": {
+            "enum": [
+              "H",
+              "M",
+              "L"
+            ]
+          }
+        }
+      },
+      "motivation": {
+        "type": "string"
+      },
+      "key_source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^(SRC)-[A-Z0-9-]+$"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "rank",
+      "title",
+      "entity_ids",
+      "scores",
+      "motivation",
+      "key_source_ids"
+    ],
+    "additionalProperties": false
+  }
+}

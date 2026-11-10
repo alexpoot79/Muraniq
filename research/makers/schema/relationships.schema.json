@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Relationships",
+  "description": "Deliverable D. Family ties (relation_kind=family) never imply business relations.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(REL)-[A-Z0-9-]+$"
+      },
+      "subject_id": {
+        "type": "string",
+        "pattern": "^(PER|FAM|ORG)-[A-Z0-9-]+$"
+      },
+      "predicate": {
+        "enum": [
+          "CHILD_OF",
+          "SIBLING_OF",
+          "SON_IN_LAW_OF",
+          "MEMBER_OF_FAMILY",
+          "FOUNDED",
+          "CO_FOUNDED",
+          "PARTNER_IN",
+          "OWNER_OF",
+          "MANAGED",
+          "ARTISTIC_DIRECTOR_OF",
+          "DESIGNED_FOR",
+          "MAESTRO_AT",
+          "WORKED_AT",
+          "SUCCEEDED_BY",
+          "MERGED_INTO",
+          "RENAMED_TO",
+          "NOT_SAME_AS",
+          "IDENTITY_UNRESOLVED"
+        ]
+      },
+      "object_id": {
+        "type": "string",
+        "pattern": "^(PER|FAM|ORG)-[A-Z0-9-]+$"
+      },
+      "relation_kind": {
+        "enum": [
+          "family",
+          "business",
+          "professional",
+          "organisational",
+          "identity"
+        ]
+      },
+      "start": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "end": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "verification_status": {
+        "enum": [
+          "VERIFIED",
+          "PARTIALLY_VERIFIED",
+          "ATTRIBUTED",
+          "DISPUTED",
+          "UNVERIFIED"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^(SRC)-[A-Z0-9-]+$"
+        }
+      },
+      "locators": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "checked": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    },
+    "required": [
+      "id",
+      "subject_id",
+      "predicate",
+      "object_id",
+      "relation_kind",
+      "verification_status",
+      "source_ids"
+    ],
+    "additionalProperties": false
+  }
+}

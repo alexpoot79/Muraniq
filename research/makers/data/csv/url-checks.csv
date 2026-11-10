@@ -1,0 +1,135 @@
+url,http_status,final_url,checked,method,note
+https://museovetro.visitmuve.it/en/catalogue/,200,https://museovetro.visitmuve.it/en/catalogue/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/layout-and-collections/,200,https://museovetro.visitmuve.it/en/layout-and-collections/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/exhibition/,200,https://museovetro.visitmuve.it/en/exhibition/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/in-depth/,200,https://museovetro.visitmuve.it/en/in-depth/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/building-and-history/,200,https://museovetro.visitmuve.it/en/building-and-history/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/exhibition/fratelli-toso/,200,https://museovetro.visitmuve.it/en/exhibition/fratelli-toso/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/exhibition/donazione-moretti/,200,https://museovetro.visitmuve.it/en/exhibition/donazione-moretti/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/evento/sezione-ottocento/,200,https://museovetro.visitmuve.it/evento/sezione-ottocento/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/mostra/murrine-dialogo/,200,https://museovetro.visitmuve.it/mostra/murrine-dialogo/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/carlo-scarpa_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/carlo-scarpa_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/paolo-venini_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/paolo-venini_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/napoleone-martinuzzi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/napoleone-martinuzzi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/vittorio-zecchin_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/vittorio-zecchin_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/ercole-barovier_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/ercole-barovier_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/archimede-seguso_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/archimede-seguso_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/flavio-poli_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/flavio-poli_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/dino-martens_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/dino-martens_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/fulvio-bianconi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/fulvio-bianconi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/tomaso-buzzi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/tomaso-buzzi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/antonio-salviati_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/antonio-salviati_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/giacomo-cappellin_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/giacomo-cappellin_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/angelo-barovier_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/angelo-barovier_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/giuseppe-briati_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/giuseppe-briati_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/vincenzo-moretti_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/vincenzo-moretti_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/umberto-bellotto_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/umberto-bellotto_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/guido-balsamo-stella_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/guido-balsamo-stella_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/alfredo-barbini_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/alfredo-barbini_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/anzolo-fuga_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/anzolo-fuga_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/lorenzo-radi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/lorenzo-radi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/pietro-bigaglia_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/pietro-bigaglia_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/domenico-bussolin_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/domenico-bussolin_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/barovier_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/barovier_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/seguso_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/seguso_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/toso_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/toso_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/salviati_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/salviati_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/ferro_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/ferro_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/nason_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/nason_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/moretti_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/moretti_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/zanetti_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/zanetti_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/fuga_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/fuga_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/radi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/radi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/darduin_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/darduin_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/vinicio-vianello_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/vinicio-vianello_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),
+https://www.treccani.it/enciclopedia/antonio-salviati_res_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/antonio-salviati_res_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/flavio-poli_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/flavio-poli_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/dino-martens_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/dino-martens_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/fulvio-bianconi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/fulvio-bianconi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/tomaso-buzzi_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/tomaso-buzzi_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/archimede-seguso_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/archimede-seguso_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://www.treccani.it/enciclopedia/alfredo-barbini_(Dizionario-Biografico)/,200,https://www.treccani.it/enciclopedia/alfredo-barbini_(Dizionario-Biografico)/,2026-11-10,direct fetch (text extracted),soft 404: HTTP 200 but empty page shell – no DBI entry under this slug
+https://seguso.com/seguso/history/,200,https://seguso.com/seguso/history/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/seguso/family/,200,https://seguso.com/seguso/family/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/heritage/,200,https://seguso.com/heritage/,2026-11-10,direct fetch (text extracted),
+https://www.archimedeseguso.it/storia/,200,https://www.archimedeseguso.it/storia/,2026-11-10,direct fetch (text extracted),
+https://www.barovier.com/it/about,200,https://www.barovier.com/it/about,2026-11-10,direct fetch (text extracted),
+https://www.barovier.com/en/about,200,https://www.barovier.com/en/about,2026-11-10,direct fetch (text extracted),
+https://www.salviati.com/storia/,200,https://www.salviati.com/storia/,2026-11-10,direct fetch (text extracted),
+https://www.salviati.com/chi-siamo/,200,https://www.salviati.com/chi-siamo/,2026-11-10,direct fetch (text extracted),
+https://www.schiavonglass.com/,200,https://www.schiavonglass.com/,2026-11-10,direct fetch (text extracted),
+https://www.oggetti.com/pages/about,200,https://www.oggetti.com/pages/about,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/seguso-vetri-darte/,200,https://seguso.com/portfolio/seguso-vetri-darte/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/seguso-viro-origin/,200,https://seguso.com/portfolio/seguso-viro-origin/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/the-maestro-angelo-seguso/,200,https://seguso.com/portfolio/the-maestro-angelo-seguso/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/segusos-family-masters/,200,https://seguso.com/portfolio/segusos-family-masters/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/seguso-won-a-prestigious-award/,200,https://seguso.com/portfolio/seguso-won-a-prestigious-award/,2026-11-10,direct fetch (text extracted),
+https://seguso.com/portfolio/23rd-seguso-generation/,200,https://seguso.com/portfolio/23rd-seguso-generation/,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/mostre-en/archivio-mostre-en/exhibition-livio-seguso/2018/04/17949/the-exhibition/,000,https://archivio-museovetro.visitmuve.it/en/mostre-en/archivio-mostre-en/exhibition-livio-seguso/2018/04/17949/the-exhibition/,2026-11-10,direct fetch (text extracted),"curl: (56) CONNECT tunnel failed, response 403"
+https://museovetro.visitmuve.it/?p=4435,404,https://museovetro.visitmuve.it/?p=4435,2026-11-10,direct fetch (text extracted),
+https://museovetro.visitmuve.it/en/mostre-en/archivio-mostre-en/farevetro-artistic-creation-and-craft-techniques-in-one-hundred-different-works/2011/10/4433/formia-fornace-mian-1/,000,https://archivio-museovetro.visitmuve.it/en/mostre-en/archivio-mostre-en/farevetro-artistic-creation-and-craft-techniques-in-one-hundred-different-works/2011/10/4433/formia-fornace-mian-1/,2026-11-10,direct fetch (text extracted),"curl: (56) CONNECT tunnel failed, response 403"
+https://olnickspanu.com/workshop/artisti-barovier/,200,https://olnickspanu.com/workshop/artisti-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/,200,https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/avem/,200,https://olnickspanu.com/workshop/avem/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/barovier-toso/,200,https://olnickspanu.com/workshop/barovier-toso/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/ferro-toso-barovier/,200,https://olnickspanu.com/workshop/ferro-toso-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/fratelli-toso/,200,https://olnickspanu.com/workshop/fratelli-toso/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/maestri-vetrai-muranesi-cappellin-c/,200,https://olnickspanu.com/workshop/maestri-vetrai-muranesi-cappellin-c/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/pauly-c-compagnia-venezia-murano/,200,https://olnickspanu.com/workshop/pauly-c-compagnia-venezia-murano/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/salviati/,200,https://olnickspanu.com/workshop/salviati/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/seguso-vetri-darte/,200,https://olnickspanu.com/workshop/seguso-vetri-darte/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/toso-vetri-darte/,200,https://olnickspanu.com/workshop/toso-vetri-darte/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/v-s-m-venini-c/,200,https://olnickspanu.com/workshop/v-s-m-venini-c/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/venini-c/,200,https://olnickspanu.com/workshop/venini-c/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/venini-s-p-a/,200,https://olnickspanu.com/workshop/venini-s-p-a/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/vetreria-alfredo-barbini/,200,https://olnickspanu.com/workshop/vetreria-alfredo-barbini/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/vetreria-archimede-seguso/,200,https://olnickspanu.com/workshop/vetreria-archimede-seguso/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/vetreria-artistica-barovier/,200,https://olnickspanu.com/workshop/vetreria-artistica-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/vetreria-vistosi/,200,https://olnickspanu.com/workshop/vetreria-vistosi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/vetri-soffiati-muranesi-cappellin-venini-c/,200,https://olnickspanu.com/workshop/vetri-soffiati-muranesi-cappellin-venini-c/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/workshop/zecchin-martinuzzi-vetri-artistici-e-mosaici/,200,https://olnickspanu.com/workshop/zecchin-martinuzzi-vetri-artistici-e-mosaici/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/alessandro-diaz-de-santillana/,200,https://olnickspanu.com/artist/alessandro-diaz-de-santillana/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/alessandro-pianon/,200,https://olnickspanu.com/artist/alessandro-pianon/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/alfredo-barbini/,200,https://olnickspanu.com/artist/alfredo-barbini/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/anzolo-fuga/,200,https://olnickspanu.com/artist/anzolo-fuga/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/archimede-seguso/,200,https://olnickspanu.com/artist/archimede-seguso/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/benjamin-moore/,200,https://olnickspanu.com/artist/benjamin-moore/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/benvenuto-barovier/,200,https://olnickspanu.com/artist/benvenuto-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/carlo-scarpa/,200,https://olnickspanu.com/artist/carlo-scarpa/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/cristiano-bianchin/,200,https://olnickspanu.com/artist/cristiano-bianchin/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/dino-martens/,200,https://olnickspanu.com/artist/dino-martens/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/ercole-barovier/,200,https://olnickspanu.com/artist/ercole-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/ermanno-toso/,200,https://olnickspanu.com/artist/ermanno-toso/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/ettore-sottsass/,200,https://olnickspanu.com/artist/ettore-sottsass/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/flavio-poli/,200,https://olnickspanu.com/artist/flavio-poli/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/franca-helg/,200,https://olnickspanu.com/artist/franca-helg/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/franco-albini/,200,https://olnickspanu.com/artist/franco-albini/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/fulvio-bianconi/,200,https://olnickspanu.com/artist/fulvio-bianconi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/gae-aulenti/,200,https://olnickspanu.com/artist/gae-aulenti/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/gio-ponti/,200,https://olnickspanu.com/artist/gio-ponti/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/giorgio-ferro/,200,https://olnickspanu.com/artist/giorgio-ferro/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/giorgio-vigna/,200,https://olnickspanu.com/artist/giorgio-vigna/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/giulio-radi/,200,https://olnickspanu.com/artist/giulio-radi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/giuseppe-barovier/,200,https://olnickspanu.com/artist/giuseppe-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/james-carpenter/,200,https://olnickspanu.com/artist/james-carpenter/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/laura-diaz-de-santillana/,200,https://olnickspanu.com/artist/laura-diaz-de-santillana/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/lino-tagliapietra/,200,https://olnickspanu.com/artist/lino-tagliapietra/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/ludovico-diaz-de-santillana/,200,https://olnickspanu.com/artist/ludovico-diaz-de-santillana/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/marco-zanini/,200,https://olnickspanu.com/artist/marco-zanini/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/mary-ann-zynsky/,200,https://olnickspanu.com/artist/mary-ann-zynsky/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/massimo-vignelli/,200,https://olnickspanu.com/artist/massimo-vignelli/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/napoleone-martinuzzi/,200,https://olnickspanu.com/artist/napoleone-martinuzzi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/nicolo-barovier/,200,https://olnickspanu.com/artist/nicolo-barovier/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/paolo-venini/,200,https://olnickspanu.com/artist/paolo-venini/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/patrizia-molinari/,200,https://olnickspanu.com/artist/patrizia-molinari/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/tapio-wirkkala/,200,https://olnickspanu.com/artist/tapio-wirkkala/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/thomas-stearns/,200,https://olnickspanu.com/artist/thomas-stearns/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/tobia-scarpa/,200,https://olnickspanu.com/artist/tobia-scarpa/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/tommaso-buzzi/,200,https://olnickspanu.com/artist/tommaso-buzzi/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/vittorio-zecchin/,200,https://olnickspanu.com/artist/vittorio-zecchin/,2026-11-10,direct fetch (WordPress page/API),
+https://olnickspanu.com/artist/yoichi-ohira/,200,https://olnickspanu.com/artist/yoichi-ohira/,2026-11-10,direct fetch (WordPress page/API),
+https://www.cmog.org/,see note,,2026-11-10,direct fetch attempted,HTTP 403 to automated access from this environment (www.cmog.org and glasscollection.cmog.org). Not circumvented. Manual consultation recommended.
+https://www.cini.it/en/,see note,,2026-11-10,direct fetch attempted,"HTTP 403 to automated access. The Centro Studi del Vetro holds the archives cited in the DBI (Venini, Vianello). Manual consultation recommended."
+https://www.venini.com/,see note,,2026-11-10,direct fetch attempted,HTTP 403 to automated access; not circumvented.
+https://en.wikipedia.org/,see note,,2026-11-10,direct fetch attempted,Rate-limited (HTTP 429) from this environment during this pass; only search-index snippets used. Tier C; never decisive.
+https://www.wikidata.org/,see note,,2026-11-10,direct fetch attempted,Rate-limited (HTTP 429) during this pass; identifier enrichment postponed.

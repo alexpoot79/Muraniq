@@ -1,0 +1,2492 @@
+[
+  {
+    "id": "REL-0001",
+    "subject_id": "PER-CAPPELLIN-GIACOMO-1887",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-VSM-CAPPELLIN-VENINI",
+    "relation_kind": "business",
+    "start": "December 1921",
+    "end": "1925",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-DBI-VENINI"
+    ],
+    "locators": [],
+    "notes": "Other partners named by DBI Venini: Luigi Ceresa, Emilio Ochs. Founded in the furnace of Andrea Rioda (d. August 1921) per DBI Cappellin.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0002",
+    "subject_id": "PER-VENINI-PAOLO-1895",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-VSM-CAPPELLIN-VENINI",
+    "relation_kind": "business",
+    "start": "end 1921",
+    "end": "1925",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-DBI-CAPPELLIN",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetri-soffiati-muranesi-cappellin-venini-c/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0003",
+    "subject_id": "PER-ZECCHIN-VITTORIO-1878",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-VSM-CAPPELLIN-VENINI",
+    "relation_kind": "professional",
+    "start": "December 1921",
+    "end": "1925",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN",
+      "SRC-DBI-VENINI",
+      "SRC-LSV-ZECCHIN"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0004",
+    "subject_id": "ORG-VSM-CAPPELLIN-VENINI",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-MVM-CAPPELLIN",
+    "relation_kind": "organisational",
+    "start": "1925",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-DBI-ZECCHIN",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/maestri-vetrai-muranesi-cappellin-c/"
+    ],
+    "notes": "Partnership dissolved (spring 1925 per DBI Venini); Cappellin continued with the maestri. One of two successor firms.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0005",
+    "subject_id": "ORG-VSM-CAPPELLIN-VENINI",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-VSM-VENINI",
+    "relation_kind": "organisational",
+    "start": "1 June 1925",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/v-s-m-venini-c/"
+    ],
+    "notes": "Venini founded a new company; the second successor firm.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0006",
+    "subject_id": "PER-CAPPELLIN-GIACOMO-1887",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-MVM-CAPPELLIN",
+    "relation_kind": "business",
+    "start": "1925",
+    "end": "1931/January 1932",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-DBI-ZECCHIN",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0007",
+    "subject_id": "PER-ZECCHIN-VITTORIO-1878",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-MVM-CAPPELLIN",
+    "relation_kind": "professional",
+    "start": "1925",
+    "end": "1926",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "End date: 'until 1926' (LSV), 'end of 1926' (OS); DBI Cappellin places Scarpa's succession in 1927–28.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0008",
+    "subject_id": "PER-SCARPA-CARLO-1906",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-MVM-CAPPELLIN",
+    "relation_kind": "professional",
+    "start": "1925/26 – 1927/28 (disputed)",
+    "end": "1931",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-SCARPA",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-DBI-CAPPELLIN",
+      "SRC-OS",
+      "SRC-AIC-API"
+    ],
+    "locators": [],
+    "notes": "Relation verified; start date and the moment he became artistic director are disputed (see CLM conflicts CF-SCARPA-CAPPELLIN-START).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0009",
+    "subject_id": "PER-VENINI-PAOLO-1895",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-VSM-VENINI",
+    "relation_kind": "business",
+    "start": "1 June 1925",
+    "end": "28 January 1932",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Partners per DBI Venini: Napoleone Martinuzzi, Francesco Zecchin, Ruggero Maroni, Alberto Francini.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0010",
+    "subject_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-VSM-VENINI",
+    "relation_kind": "business",
+    "start": "1925",
+    "end": "1931/1932",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI",
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0011",
+    "subject_id": "PER-ZECCHIN-FRANCESCO",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-VSM-VENINI",
+    "relation_kind": "business",
+    "start": "1925",
+    "end": "1932",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/zecchin-martinuzzi-vetri-artistici-e-mosaici/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0012",
+    "subject_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-VSM-VENINI",
+    "relation_kind": "professional",
+    "start": "1925",
+    "end": "1931 (DBI Venini, LSV) / 1932 (DBI Martinuzzi, OS)",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI",
+      "SRC-LSV-MARTINUZZI",
+      "SRC-OS",
+      "SRC-DBI-VENINI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0013",
+    "subject_id": "ORG-VSM-VENINI",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "organisational",
+    "start": "1932",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/v-s-m-venini-c/",
+      "https://olnickspanu.com/workshop/venini-c/"
+    ],
+    "notes": "DBI: V.S.M. Venini & C. liquidated 28 January 1932; new company formed. OS: name changed to Venini & C.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0014",
+    "subject_id": "PER-BUZZI-TOMASO-1900",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1932",
+    "end": "1934 (OS) / works 1932–33 (LSV)",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-BUZZI",
+      "SRC-OS",
+      "SRC-DBI-VENINI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0015",
+    "subject_id": "PER-SCARPA-CARLO-1906",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1932",
+    "end": "1947",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-SCARPA",
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-DBI-VENINI",
+      "SRC-MET-API"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0016",
+    "subject_id": "PER-SCARPA-CARLO-1906",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1934 (OS)",
+    "end": "1947",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/venini-c/"
+    ],
+    "notes": "The title 'artistic director' and the 1934 start are stated by OS only; LSV and DBI describe the 1932–1947 collaboration without this date.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0017",
+    "subject_id": "PER-BIANCONI-FULVIO-1915",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1946 (LSV) / 1947 (OS) / 1948 (DBI)",
+    "end": "mid-1950s; episodically 1960s and late 1980s–early 1990s",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-BIANCONI",
+      "SRC-OS",
+      "SRC-DBI-VENINI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0018",
+    "subject_id": "PER-SCARPA-TOBIA-1935",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-SCARPA-CARLO-1906",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-SCARPA",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0019",
+    "subject_id": "PER-SCARPA-TOBIA-1935",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1957 (DBI Venini) / 1958 (OS)",
+    "end": "1960s",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0020",
+    "subject_id": "PER-WIRKKALA-TAPIO-1915",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1966",
+    "end": "1972; again 1985",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-WIRKKALA-ZUCCHERI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0021",
+    "subject_id": "PER-ZUCCHERI-TONI",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1960s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-WIRKKALA-ZUCCHERI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0022",
+    "subject_id": "PER-STEARNS-THOMAS-1936",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1959/60",
+    "end": "1962",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-STEARNS",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0023",
+    "subject_id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "predicate": "SON_IN_LAW_OF",
+    "object_id": "PER-VENINI-PAOLO-1895",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SANTILLANA",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/laura-diaz-de-santillana/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0024",
+    "subject_id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "predicate": "MANAGED",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "business",
+    "start": "1959",
+    "end": "1986",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SANTILLANA",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "End year 1986 not verified in a directly read source.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0025",
+    "subject_id": "PER-DE-SANTILLANA-LAURA-1955",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SANTILLANA",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/laura-diaz-de-santillana/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0026",
+    "subject_id": "PER-DIAZ-DE-SANTILLANA-ALESSANDRO-1959",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SANTILLANA"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0027",
+    "subject_id": "PER-VIGNELLI-MASSIMO-1931",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1950s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "DBI: Venini contacted Vignelli in 1953.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0028",
+    "subject_id": "PER-PONTI-GIO-1891",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0029",
+    "subject_id": "PER-LICATA-RICCARDO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": "1955–56",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://www.metmuseum.org/art/collection/search/484674"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0030",
+    "subject_id": "PER-BAROVIER-ANGELO-C1400",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-BAROVIER",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ANGELO",
+      "SRC-DBI-BAROVIER-FAMILY"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0031",
+    "subject_id": "PER-BAROVIER-ANGELO-C1400",
+    "predicate": "NOT_SAME_AS",
+    "object_id": "PER-BAROVIER-ANGELO-1927",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ANGELO",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [],
+    "notes": "Homonyms 500 years apart. A continuous genealogical line from the 15th-century Baroviers to the 19th–20th-century firm is a company claim (Barovier&Toso) not reconstructed in the sources read.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0032",
+    "subject_id": "PER-BAROVIER-GIUSEPPE-1853",
+    "predicate": "SIBLING_OF",
+    "object_id": "PER-BAROVIER-BENVENUTO-1855",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giuseppe-barovier/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0033",
+    "subject_id": "PER-BAROVIER-ERCOLE-1889",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-BAROVIER-BENVENUTO-1855",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0034",
+    "subject_id": "PER-BAROVIER-NICOLO-1886",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-BAROVIER-BENVENUTO-1855",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Nicolò's own life dates are disputed (DBI vs OS).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0035",
+    "subject_id": "PER-BAROVIER-ANGELO-1927",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-BAROVIER-ERCOLE-1889",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0036",
+    "subject_id": "PER-BAROVIER-ERCOLE-1889",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-BAROVIER",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/ercole-barovier/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0037",
+    "subject_id": "PER-BAROVIER-NAPOLEONE",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-BAROVIER",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [],
+    "notes": "Exact kinship with Ercole not extracted.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0038",
+    "subject_id": "PER-SALVIATI-ANTONIO-1816",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "relation_kind": "business",
+    "start": "1877",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "https://olnickspanu.com/workshop/artisti-barovier/"
+    ],
+    "notes": "OS Salviati page calls the 1877 firm 'Salviati & C.'; OS Barovier pages call it 'Salviati dott. Antonio'.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0039",
+    "subject_id": "PER-BAROVIER-GIUSEPPE-1853",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-CVM",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "1877",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "https://www.metmuseum.org/art/collection/search/186074"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0040",
+    "subject_id": "PER-BAROVIER-GIUSEPPE-1853",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "relation_kind": "professional",
+    "start": "1877",
+    "end": "1883/84",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "https://olnickspanu.com/workshop/salviati/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0041",
+    "subject_id": "PER-BAROVIER-BENVENUTO-1855",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "relation_kind": "professional",
+    "start": "1877",
+    "end": "1883/84",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/benvenuto-barovier/",
+      "https://olnickspanu.com/workshop/salviati/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0042",
+    "subject_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-ARTISTI-BAROVIER",
+    "relation_kind": "organisational",
+    "start": "1883 (DBI; OS Giuseppe Barovier page) / 1884 (OS Artisti Barovier page)",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Barovier brothers took over the furnace; the name 'Artisti Barovier' dates from 1890 (OS) or 1896 (DBI).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0043",
+    "subject_id": "PER-BAROVIER-GIUSEPPE-1853",
+    "predicate": "OWNER_OF",
+    "object_id": "ORG-ARTISTI-BAROVIER",
+    "relation_kind": "business",
+    "start": "1883/84",
+    "end": "1919",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0044",
+    "subject_id": "PER-BAROVIER-BENVENUTO-1855",
+    "predicate": "OWNER_OF",
+    "object_id": "ORG-ARTISTI-BAROVIER",
+    "relation_kind": "business",
+    "start": "1883/84",
+    "end": "1919",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0045",
+    "subject_id": "ORG-ARTISTI-BAROVIER",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "relation_kind": "organisational",
+    "start": "1919",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giuseppe-barovier/",
+      "https://olnickspanu.com/workshop/vetreria-artistica-barovier/"
+    ],
+    "notes": "Artisti Barovier liquidated 1919; Giuseppe, Benvenuto and their sons founded Vetreria Artistica Barovier & C.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0046",
+    "subject_id": "PER-BAROVIER-ERCOLE-1889",
+    "predicate": "MANAGED",
+    "object_id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "relation_kind": "business",
+    "start": "1926",
+    "end": "1936",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "DBI: 'gerente' and artistic director from 1926.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0047",
+    "subject_id": "PER-BAROVIER-NICOLO-1886",
+    "predicate": "MANAGED",
+    "object_id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "relation_kind": "business",
+    "start": "1919",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0048",
+    "subject_id": "PER-SEGUSO-ANTONIO",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "relation_kind": "business",
+    "start": null,
+    "end": "1932",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/archimede-seguso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0049",
+    "subject_id": "PER-BAROVIER-NAPOLEONE",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0050",
+    "subject_id": "PER-SEGUSO-ANTONIO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0051",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "relation_kind": "business",
+    "start": "1933 (OS) / 1932 (DBI date of the firm)",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/archimede-seguso/",
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0052",
+    "subject_id": "PER-SEGUSO-ALBERTO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "relation_kind": "business",
+    "start": "1933",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0053",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-SEGUSO-ANTONIO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/archimede-seguso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0054",
+    "subject_id": "PER-SEGUSO-ANGELO",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-SEGUSO-ANTONIO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0055",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "SIBLING_OF",
+    "object_id": "PER-SEGUSO-ANGELO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0056",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-SEGUSO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0057",
+    "subject_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "predicate": "RENAMED_TO",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "organisational",
+    "start": "1937 (OS) / 1933 (company timeline)",
+    "end": null,
+    "verification_status": "DISPUTED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "Relation itself undisputed; the year differs. OS: reorganised in 1937. Seguso.com timeline places 'Seguso Vetri d'Arte' in 1933.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0058",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "professional",
+    "start": "1933",
+    "end": "before 1946",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/archimede-seguso/"
+    ],
+    "notes": "Primo maestro executing Poli's designs; sold his share before founding his own firm.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0059",
+    "subject_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-VETRERIA-ARCHIMEDE-SEGUSO",
+    "relation_kind": "business",
+    "start": "1946",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-ARCHIMEDE-SEGUSO-IT"
+    ],
+    "locators": [],
+    "notes": "A collector site mentions a 1945 collaboration with Alfredo Barbini (Tier C, not verified).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0060",
+    "subject_id": "PER-SEGUSO-GINO",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-archimede-seguso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0061",
+    "subject_id": "PER-SEGUSO-GINO",
+    "predicate": "MANAGED",
+    "object_id": "ORG-VETRERIA-ARCHIMEDE-SEGUSO",
+    "relation_kind": "business",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-archimede-seguso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0062",
+    "subject_id": "PER-SEGUSO-GIAMPAOLO",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0063",
+    "subject_id": "PER-SEGUSO-GIAMPAOLO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-SEGUSO-VIRO",
+    "relation_kind": "business",
+    "start": "1993",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "With his sons Gianluca, Pierpaolo and Gianandrea (company source).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0064",
+    "subject_id": "PER-SEGUSO-ANGELO",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "1973",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0065",
+    "subject_id": "PER-SEGUSO-ALBERTO",
+    "predicate": "OWNER_OF",
+    "object_id": "ORG-ARTE-VETRO-ALBERTO-SEGUSO",
+    "relation_kind": "business",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0066",
+    "subject_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-ARTE-VETRO-ALBERTO-SEGUSO",
+    "relation_kind": "professional",
+    "start": "1947",
+    "end": "c. 1952 (five years)",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0067",
+    "subject_id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "predicate": "MERGED_INTO",
+    "object_id": "ORG-BAROVIER-TOSO",
+    "relation_kind": "organisational",
+    "start": "1936",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/ferro-toso-barovier/",
+      "https://olnickspanu.com/workshop/barovier-toso/"
+    ],
+    "notes": "Merger with S.A.I.A.R. Ferro Toso → Ferro Toso Barovier (1936), Barovier Toso & C. (1939), Barovier & Toso (1942) per OS.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0068",
+    "subject_id": "ORG-SAIAR-FERRO-TOSO",
+    "predicate": "MERGED_INTO",
+    "object_id": "ORG-BAROVIER-TOSO",
+    "relation_kind": "organisational",
+    "start": "1936",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0069",
+    "subject_id": "PER-BAROVIER-ERCOLE-1889",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-BAROVIER-TOSO",
+    "relation_kind": "professional",
+    "start": "1936",
+    "end": "1972",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-CMA-API"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0070",
+    "subject_id": "PER-BAROVIER-ANGELO-1927",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-BAROVIER-TOSO",
+    "relation_kind": "professional",
+    "start": "1972",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0071",
+    "subject_id": "PER-ZECCHIN-VITTORIO-1878",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-ARTISTI-BAROVIER",
+    "relation_kind": "professional",
+    "start": "1913",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN"
+    ],
+    "locators": [],
+    "notes": "Artisti Barovier executed his 'vetro mosaico' panels shown in Munich (1913).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0072",
+    "subject_id": "PER-ZECCHIN-VITTORIO-1878",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "relation_kind": "professional",
+    "start": "early 1930s",
+    "end": "1934",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN",
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0073",
+    "subject_id": "PER-BELLOTTO-UMBERTO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-ARTISTI-BAROVIER",
+    "relation_kind": "professional",
+    "start": "1910s–1920s",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-FCFC"
+    ],
+    "locators": [],
+    "notes": "Seen in a museum collection listing only (not read).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0074",
+    "subject_id": "PER-POLI-FLAVIO-1900",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "professional",
+    "start": "1934",
+    "end": "1963",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-SEGUSO-COM",
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/",
+      "https://olnickspanu.com/artist/flavio-poli/"
+    ],
+    "notes": "From 1934 to 1937 the firm was still Barovier Seguso & Ferro.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0075",
+    "subject_id": "PER-POLI-FLAVIO-1900",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "business",
+    "start": "1937",
+    "end": "1963",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0076",
+    "subject_id": "PER-POLI-FLAVIO-1900",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-CVM",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "before 1934",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/flavio-poli/"
+    ],
+    "notes": "OS also names I.V.A.M., Nason and Francesconi before 1934 (not yet entities).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0077",
+    "subject_id": "PER-PINZONI-MARIO",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "professional",
+    "start": "1963",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/seguso-vetri-darte/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0078",
+    "subject_id": "PER-MARTENS-DINO-1894",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-SALIR",
+    "relation_kind": "business",
+    "start": "mid-1920s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/dino-martens/"
+    ],
+    "notes": "'For a short time a partner and decorator'.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0079",
+    "subject_id": "PER-MARTENS-DINO-1894",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-SALVIATI-C",
+    "relation_kind": "professional",
+    "start": "1930s",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0080",
+    "subject_id": "PER-MARTENS-DINO-1894",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-SUCCESSORI-RIODA",
+    "relation_kind": "professional",
+    "start": "1930s",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0081",
+    "subject_id": "PER-MARTENS-DINO-1894",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-AURELIANO-TOSO",
+    "relation_kind": "professional",
+    "start": "1939",
+    "end": "1963 (OS artist page) / 1965 (OS workshop page)",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/dino-martens/",
+      "https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0082",
+    "subject_id": "PER-TOSO-AURELIANO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-AURELIANO-TOSO",
+    "relation_kind": "business",
+    "start": "1938 (OS text) / 1932 (OS header)",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/aureliano-toso-vetri-decorativi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0083",
+    "subject_id": "ORG-SALVIATI-C",
+    "predicate": "SUCCEEDED_BY",
+    "object_id": "ORG-SUCCESSORI-RIODA",
+    "relation_kind": "organisational",
+    "start": null,
+    "end": null,
+    "verification_status": "DISPUTED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/dino-martens/"
+    ],
+    "notes": "OS calls 'Andrea Rioda' the successor of Salviati & C.; not reconcilable with the other sources read (Successori Andrea Rioda founded 1921; Salviati continues to the present).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0084",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-SAIAR-FERRO-TOSO",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "1932",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "Before that briefly at Cristalleria Franchetti (not yet an entity).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0085",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-ZECCHIN-MARTINUZZI",
+    "relation_kind": "professional",
+    "start": "1932",
+    "end": "1936",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0086",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-VAMSA",
+    "relation_kind": "business",
+    "start": "1937",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "Also primo maestro, executing designs by Ermenegildo Ripa and Luigi Scarpa Croce.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0087",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "business",
+    "start": "1946",
+    "end": "1950",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0088",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "professional",
+    "start": "1946",
+    "end": "1950",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0089",
+    "subject_id": "PER-BARBINI-ALFREDO-1912",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-VETRERIA-ALFREDO-BARBINI",
+    "relation_kind": "business",
+    "start": "1950",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/",
+      "https://olnickspanu.com/workshop/vetreria-alfredo-barbini/"
+    ],
+    "notes": "OS workshop header shows '1932–' (career start?) against '1950' in the text.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0090",
+    "subject_id": "PER-BARBINI-FLAVIO",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-BARBINI-ALFREDO-1912",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "Assisted his father from 1968 (OS artist page).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0091",
+    "subject_id": "PER-MARTINUZZI-NAPOLEONE-1892",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-ZECCHIN-MARTINUZZI",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": "1936",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0092",
+    "subject_id": "PER-ZECCHIN-FRANCESCO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-ZECCHIN-MARTINUZZI",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": "1938",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/zecchin-martinuzzi-vetri-artistici-e-mosaici/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0093",
+    "subject_id": "PER-ZECCHIN-FRANCESCO",
+    "predicate": "NOT_SAME_AS",
+    "object_id": "PER-ZECCHIN-VITTORIO-1878",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-DBI-ZECCHIN",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Francesco (engineer, Venini partner) vs Vittorio (painter, artistic director).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0094",
+    "subject_id": "PER-CENEDESE-GINO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "business",
+    "start": "1946",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alfredo-barbini/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0095",
+    "subject_id": "PER-DAROS-ANTONIO",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "professional",
+    "start": "1958 / 1959",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-INCOLLECT",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "locators": [],
+    "notes": "Tier C only (search index). Start year differs between sources.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0096",
+    "subject_id": "PER-DAROS-ANTONIO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "professional",
+    "start": "1950s",
+    "end": null,
+    "verification_status": "ATTRIBUTED",
+    "source_ids": [
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://www.metmuseum.org/art/collection/search/484658"
+    ],
+    "notes": "Met: 'Artist: Attributed to Nini DaRos; Manufacturer: Gino Cenedese'.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0097",
+    "subject_id": "PER-FURLAN-WALTER",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-GINO-CENEDESE",
+    "relation_kind": "professional",
+    "start": "1940",
+    "end": "1945",
+    "verification_status": "DISPUTED",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "locators": [],
+    "notes": "Dealer claim; incompatible with the 1946 founding of Gino Cenedese & C.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0098",
+    "subject_id": "FAM-TOSO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "business",
+    "start": "1854",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Founded by six Toso brothers (Museo del Vetro).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0099",
+    "subject_id": "PER-TOSO-ERMANNO-1903",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "professional",
+    "start": "1936 (OS) / late 1940s (Museo del Vetro)",
+    "end": "1960s",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MV-FRATELLI-TOSO"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/ermanno-toso/",
+      "https://olnickspanu.com/workshop/fratelli-toso/"
+    ],
+    "notes": "OS: worked there from 1924, later partner; 'artistic and marketing director' 1936.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0100",
+    "subject_id": "PER-TOSO-ERMANNO-1903",
+    "predicate": "PARTNER_IN",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "business",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/ermanno-toso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0101",
+    "subject_id": "PER-PERELDA-POLLIO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "professional",
+    "start": "1948",
+    "end": "1964",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0102",
+    "subject_id": "PER-TOSO-ROSANNA",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "professional",
+    "start": "1960s",
+    "end": "1970s",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0103",
+    "subject_id": "PER-TOSO-GIUSTO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-FRATELLI-TOSO",
+    "relation_kind": "professional",
+    "start": "1960s",
+    "end": "1970s",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/fratelli-toso/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0104",
+    "subject_id": "PER-SOTTSASS-ETTORE-1917",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-TOSO-VETRI-DARTE",
+    "relation_kind": "professional",
+    "start": "1981",
+    "end": "1990",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/toso-vetri-darte/",
+      "https://www.metmuseum.org/art/collection/search/489881"
+    ],
+    "notes": "Glass for Memphis Milano (retailer).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0105",
+    "subject_id": "PER-FERRO-ANTONIO-LUIGI",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0106",
+    "subject_id": "PER-FERRO-GALLIANO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": "1955",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/",
+      "https://olnickspanu.com/artist/giorgio-ferro/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0107",
+    "subject_id": "PER-NASON-EMILIO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0108",
+    "subject_id": "PER-RADI-GIULIO-1895",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "business",
+    "start": "1932",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0109",
+    "subject_id": "PER-RADI-GIULIO-1895",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "professional",
+    "start": "1939",
+    "end": "1952",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/",
+      "https://olnickspanu.com/artist/giulio-radi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0110",
+    "subject_id": "PER-RADI-GIULIO-1895",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-SUCCESSORI-RIODA",
+    "relation_kind": "professional",
+    "start": "1921",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giulio-radi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0111",
+    "subject_id": "PER-ZECCHIN-VITTORIO-1878",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "professional",
+    "start": "1930s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0112",
+    "subject_id": "PER-FERRO-GIORGIO-1931",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-FERRO-GALLIANO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giorgio-ferro/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0113",
+    "subject_id": "PER-FERRO-GIORGIO-1931",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "professional",
+    "start": "1952",
+    "end": "1955",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/avem/",
+      "https://olnickspanu.com/artist/giorgio-ferro/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0114",
+    "subject_id": "PER-FERRO-GALLIANO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-GALLIANO-FERRO",
+    "relation_kind": "business",
+    "start": "1955",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giorgio-ferro/",
+      "https://olnickspanu.com/workshop/avem/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0115",
+    "subject_id": "PER-FERRO-GIORGIO-1931",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-GALLIANO-FERRO",
+    "relation_kind": "professional",
+    "start": "1955",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giorgio-ferro/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0116",
+    "subject_id": "PER-FERRO-GIORGIO-1931",
+    "predicate": "OWNER_OF",
+    "object_id": "ORG-GALLIANO-FERRO",
+    "relation_kind": "business",
+    "start": "1972",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/giorgio-ferro/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0117",
+    "subject_id": "PER-FUGA-ANZOLO-1915",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-AVEM",
+    "relation_kind": "professional",
+    "start": "late 1950s",
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0118",
+    "subject_id": "PER-TAGLIAPIETRA-LINO-1934",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-GALLIANO-FERRO",
+    "relation_kind": "professional",
+    "start": "1956",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/lino-tagliapietra/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0119",
+    "subject_id": "PER-TAGLIAPIETRA-LINO-1934",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-EFFETRE",
+    "relation_kind": "professional",
+    "start": "1976",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/lino-tagliapietra/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0120",
+    "subject_id": "PER-SALVIATI-ANTONIO-1816",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-SALVIATI-DOTT-ANTONIO-1859",
+    "relation_kind": "business",
+    "start": "1859",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SALVIATI-COM"
+    ],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0121",
+    "subject_id": "PER-SALVIATI-ANTONIO-1816",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-SALVIATI-C",
+    "relation_kind": "business",
+    "start": "21 December 1866",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SALVIATI-COM"
+    ],
+    "locators": [],
+    "notes": "London company with Austen Henry Layard and William Drake (company history).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0122",
+    "subject_id": "ORG-SALVIATI-DOTT-ANTONIO-1859",
+    "predicate": "NOT_SAME_AS",
+    "object_id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "Near-identical firm names, different foundations (1859 Venice mosaic firm vs 1877 Murano furnace). Keep separate.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0123",
+    "subject_id": "ORG-SALVIATI-C",
+    "predicate": "RENAMED_TO",
+    "object_id": "ORG-CVM",
+    "relation_kind": "organisational",
+    "start": "1870s (year not verified)",
+    "end": null,
+    "verification_status": "DISPUTED",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://www.metmuseum.org/art/collection/search/186074"
+    ],
+    "notes": "Met credit line: 'The Venice and Murano Glass and Mosaic Company Ltd. (Salviati & Co.)'. Company history of today's Salviati omits the split.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0124",
+    "subject_id": "PER-MORETTI-VINCENZO-GLASS",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-CVM",
+    "relation_kind": "professional",
+    "start": "c. 1880",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-MET-API"
+    ],
+    "locators": [
+      "https://www.metmuseum.org/art/collection/search/186155"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0125",
+    "subject_id": "ORG-CVM",
+    "predicate": "MERGED_INTO",
+    "object_id": "ORG-PAULY-C",
+    "relation_kind": "organisational",
+    "start": "1919/1920",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/pauly-c-compagnia-venezia-murano/"
+    ],
+    "notes": "1919 both sold to a Milanese company; 1920 Gaetano Ceschina acquired both; later operated as Pauly & C. – Compagnia Venezia Murano.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0126",
+    "subject_id": "PER-ASTI-SERGIO",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-SALVIATI-C",
+    "relation_kind": "professional",
+    "start": "1962",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "'Marco' vase, Compasso d'Oro 1962 (company source).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0127",
+    "subject_id": "PER-GASPARI-LUCIANO",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-SALVIATI-C",
+    "relation_kind": "professional",
+    "start": "1950s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/salviati/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0128",
+    "subject_id": "PER-BALSAMO-STELLA-GUIDO-1882",
+    "predicate": "ARTISTIC_DIRECTOR_OF",
+    "object_id": "ORG-SALIR",
+    "relation_kind": "professional",
+    "start": "1920s",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-DAS-SALIR"
+    ],
+    "locators": [],
+    "notes": "Not in DBI; secondary source seen via search index only.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0129",
+    "subject_id": "PER-VISTOSI-GUGLIELMO",
+    "predicate": "FOUNDED",
+    "object_id": "ORG-VISTOSI",
+    "relation_kind": "business",
+    "start": "1945",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-vistosi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0130",
+    "subject_id": "PER-PIANON-ALESSANDRO-1931",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VISTOSI",
+    "relation_kind": "professional",
+    "start": "1956",
+    "end": "1962",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/alessandro-pianon/",
+      "https://olnickspanu.com/workshop/vetreria-vistosi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0131",
+    "subject_id": "PER-BIANCONI-FULVIO-1915",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VISTOSI",
+    "relation_kind": "professional",
+    "start": "1960s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-vistosi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0132",
+    "subject_id": "PER-AULENTI-GAE-1927",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VISTOSI",
+    "relation_kind": "professional",
+    "start": "1970s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-vistosi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0133",
+    "subject_id": "PER-SOTTSASS-ETTORE-1917",
+    "predicate": "DESIGNED_FOR",
+    "object_id": "ORG-VISTOSI",
+    "relation_kind": "professional",
+    "start": "1970s",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/workshop/vetreria-vistosi/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0134",
+    "subject_id": "PER-OHIRA-YOICHI-1946",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-FUCINA-DEGLI-ANGELI",
+    "relation_kind": "professional",
+    "start": "1973",
+    "end": null,
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "locators": [
+      "https://olnickspanu.com/artist/yoichi-ohira/"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0135",
+    "subject_id": "PER-ROSIN-DINO",
+    "predicate": "SIBLING_OF",
+    "object_id": "PER-ROSIN-LOREDANO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "locators": [],
+    "notes": "Dealer text only.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0136",
+    "subject_id": "PER-SEGUSO-GIANNI",
+    "predicate": "IDENTITY_UNRESOLVED",
+    "object_id": "ORG-SEGUSO-GIANNI",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "locators": [],
+    "notes": "Person vs firm name not separated in any source read.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0137",
+    "subject_id": "ORG-SEGUSO-ARTE-VETRO",
+    "predicate": "IDENTITY_UNRESOLVED",
+    "object_id": "ORG-ARTE-VETRO-ALBERTO-SEGUSO",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [],
+    "locators": [],
+    "notes": "Market label 'Seguso Arte Vetro' could refer to Alberto Seguso's 'Arte vetro', to a later firm, or be a dealer conflation.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0138",
+    "subject_id": "ORG-SEGUSO-ARTE-VETRO",
+    "predicate": "IDENTITY_UNRESOLVED",
+    "object_id": "ORG-SEGUSO-VETRI-DARTE",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [],
+    "locators": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0139",
+    "subject_id": "ORG-AAV-BARBINI",
+    "predicate": "IDENTITY_UNRESOLVED",
+    "object_id": "ORG-VETRERIA-ALFREDO-BARBINI",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [],
+    "locators": [],
+    "notes": "No source read that explains the 'AAV Barbini' label.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0140",
+    "subject_id": "PER-DE-SANTILLANA-LAURA-1955",
+    "predicate": "NOT_SAME_AS",
+    "object_id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SANTILLANA",
+      "SRC-OS"
+    ],
+    "locators": [],
+    "notes": "OS page for Ludovico carries Laura's biography (copy error) – do not import that text for Ludovico.",
+    "checked": "2026-11-10"
+  }
+]
