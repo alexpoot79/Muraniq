@@ -95,12 +95,12 @@ is not retouched, recomposed or generated.
 
 | File | Object | Rights |
 | --- | --- | --- |
-| `public/images/collection/r025-sommerso-bowl-top-v4.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
-| `public/images/collection/r026-sommerso-vase-green-v4.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
-| `public/images/collection/r027-sommerso-vase-amber-v4.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
-| `public/images/collection/r029-facet-bowl-blue-v4.jpg` | Facet-cut sommerso bowl in blue and amber (MUR-M004) | Owned |
-| `public/images/collection/r030-facet-bowl-green-v4.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
-| `public/images/collection/r031-facet-bowl-red-v4.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
+| `public/images/collection/r025-sommerso-bowl-top-v3.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
+| `public/images/collection/r026-sommerso-vase-green-v2.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
+| `public/images/collection/r027-sommerso-vase-amber-v2.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
+| `public/images/collection/r029-facet-bowl-blue.jpg` | Facet-cut sommerso bowl in blue and amber (MUR-M004) | Owned |
+| `public/images/collection/r030-facet-bowl-green.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
+| `public/images/collection/r031-facet-bowl-red.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
 
 ## Editorial images (heritage and city)
 

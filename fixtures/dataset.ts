@@ -551,12 +551,12 @@ export const fixtureDataset: DatasetInput = {
   media: [
     ...referenceMedia,
     ...[
-      { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top-v4", w: 1524, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
-      { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green-v4", w: 1800, h: 2400, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
-      { id: "IMG-M003-FRONT", artworkId: "MUR-M003", file: "r027-sommerso-vase-amber-v4", w: 1800, h: 2400, view: "front" as const, alt: "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base" },
-      { id: "IMG-M004-FRONT", artworkId: "MUR-M004", file: "r029-facet-bowl-blue-v4", w: 2400, h: 2079, view: "front" as const, alt: "Thick faceted glass bowl, a blue core cased in amber and clear glass, its outside cut into broad flat planes" },
-      { id: "IMG-M005-FRONT", artworkId: "MUR-M005", file: "r030-facet-bowl-green-v4", w: 2400, h: 1800, view: "front" as const, alt: "Low faceted bowl of thick green glass in a clear casing, its cut planes reflecting the green core" },
-      { id: "IMG-M006-FRONT", artworkId: "MUR-M006", file: "r031-facet-bowl-red-v4", w: 2400, h: 1907, view: "front" as const, alt: "Thick bowl with a red core cased in amber and clear glass, its outside cut into many small facets" },
+      { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top-v3", w: 1512, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
+      { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
+      { id: "IMG-M003-FRONT", artworkId: "MUR-M003", file: "r027-sommerso-vase-amber-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base" },
+      { id: "IMG-M004-FRONT", artworkId: "MUR-M004", file: "r029-facet-bowl-blue", w: 2200, h: 1905, view: "front" as const, alt: "Thick faceted glass bowl, a blue core cased in amber and clear glass, its outside cut into broad flat planes" },
+      { id: "IMG-M005-FRONT", artworkId: "MUR-M005", file: "r030-facet-bowl-green", w: 2200, h: 1649, view: "front" as const, alt: "Low faceted bowl of thick green glass in a clear casing, its cut planes reflecting the green core" },
+      { id: "IMG-M006-FRONT", artworkId: "MUR-M006", file: "r031-facet-bowl-red", w: 2200, h: 1748, view: "front" as const, alt: "Thick bowl with a red core cased in amber and clear glass, its outside cut into many small facets" },
     ].map((m) => ({
       id: m.id,
       artworkId: m.artworkId,
