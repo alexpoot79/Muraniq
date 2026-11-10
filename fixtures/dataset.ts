@@ -137,6 +137,29 @@ export const fixtureDataset: DatasetInput = {
     metSource(186194, "81.8.246", "Large murrine bowl"),
     metSource(461228, "1975.1.1155", "Dessert glass(?)"),
     metSource(460887, "1975.1.1152", "Liqueur glass"),
+    {
+      id: "SRC-BAROVIER-EFESO",
+      type: "manufacturer",
+      title: "Efeso — designed in 1964 by Ercole Barovier",
+      publisher: "Barovier & Toso",
+      url: "https://barovier.com/en/node/324",
+      isFixture: false,
+    },
+    {
+      id: "SRC-CMOG-74-3-67",
+      type: "museum",
+      title: "Efeso vase, about 1974 — collection record 74.3.67",
+      publisher: "The Corning Museum of Glass",
+      isFixture: false,
+    },
+    {
+      id: "SRC-CMOG-SCAVO",
+      type: "museum",
+      title: "Scavo — All About Glass, glass dictionary",
+      publisher: "The Corning Museum of Glass",
+      url: "https://allaboutglass.cmog.org/definition/scavo",
+      isFixture: false,
+    },
   ],
   creators: [
     {
@@ -402,13 +425,55 @@ export const fixtureDataset: DatasetInput = {
       id: "TEC-EFESO",
       slug: "efeso",
       term: "Efeso",
-      synonyms: ["vetro Efeso"],
-      summary: "A Murano surface effect named after the ancient city of Ephesus, evoking the weathered look of excavated antique glass.",
+      synonyms: ["colorazione a caldo senza fusione", "hot colouring without fusion"],
+      summary: "A Barovier & Toso series designed by Ercole Barovier in 1964, made with ‘colorazione a caldo senza fusione’: colour and bubbles trapped between layers of glass.",
       body: [
-        "Efeso is the Italian name of Ephesus, the ancient city in Asia Minor. On Murano the name is used for glass whose surface and colouring recall antique glass that has weathered in the ground.",
-        "This entry is a short editorial draft. Which glasshouse introduced the effect, when, and how it is made are still to be checked against documented sources before they are published here.",
+        "Efeso — Italian for Ephesus — is the name Ercole Barovier gave to a series he designed in 1964 for Barovier & Toso. Efeso is the name of the series; the technique behind it is called colorazione a caldo senza fusione, ‘colouring at high temperature without fusion’.",
+        "In this process oxides, salts or other additions are placed between two layers of very hot, transparent glass. In the heat they react and produce local colour effects. Characteristic of Efeso is a multitude of irregular air bubbles inside the wall of the glass, which gives it a foamy, almost rippling look; many pieces are an intense blue.",
+        "The series was produced over several years, so the design date (1964) and the date of an individual piece are recorded separately. The Corning Museum of Glass, for example, dates its Efeso vase to about 1974.",
+        "Efeso is often confused with scavo. In Efeso the colour inclusions and bubbles sit between the layers of glass; in scavo the effect is applied to the surface.",
       ],
-      recognition: ["A surface that suggests age and weathering rather than a polished finish."],
+      recognition: [
+        "Many irregular bubbles enclosed within the wall, not on the surface.",
+        "Patches of colour that seem suspended between clear layers.",
+        "A smooth outer surface, unlike the dry, crusted skin of scavo.",
+      ],
+      sourceIds: ["SRC-BAROVIER-EFESO", "SRC-CMOG-74-3-67"],
+      editorialStatus: "draft_unsourced",
+      status: "published",
+    },
+    {
+      id: "TEC-SCAVO",
+      slug: "scavo",
+      term: "Scavo",
+      synonyms: ["excavated glass"],
+      summary: "A surface treatment that imitates the weathered skin of glass excavated from the ground.",
+      body: [
+        "Scavo is Italian for ‘excavation’. Substances are applied to the surface of the hot glass and fired, leaving a dry, matt and crusted skin that recalls ancient glass after centuries in the ground.",
+        "Because the effect lies on the surface, scavo differs from techniques such as Efeso, where colour and bubbles are enclosed within the glass.",
+      ],
+      recognition: [
+        "Matt, chalky or crusted surface, often uneven in colour.",
+        "Transparent or coloured glass visible beneath the surface layer.",
+      ],
+      sourceIds: ["SRC-CMOG-SCAVO"],
+      editorialStatus: "draft_unsourced",
+      status: "published",
+    },
+    {
+      id: "TEC-MOLATO",
+      slug: "facet-cut-glass",
+      term: "Facet-cut glass",
+      synonyms: ["molato", "sfaccettato", "faceted glass"],
+      summary: "Glass whose outer surface is ground into flat facets on a wheel after it has cooled.",
+      body: [
+        "In facet-cut glass (Italian molato or sfaccettato) the finished, cooled object is ground on rotating wheels so that its outer surface becomes a series of flat planes, which are then polished.",
+        "On Murano facet cutting is often combined with sommerso: the facets of the thick clear outer layer reflect and multiply the coloured core as the piece is turned.",
+      ],
+      recognition: [
+        "Flat, sharply bounded planes on the outside of the piece.",
+        "Polished faces that break the inner colour into repeated reflections.",
+      ],
       editorialStatus: "draft_unsourced",
       status: "published",
     },
@@ -1324,7 +1389,7 @@ export const fixtureDataset: DatasetInput = {
         "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
       ],
       creators: [],
-      techniqueIds: ["TEC-SOMMERSO"],
+      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
       assertions: [
         {
           field: "creator",
@@ -1356,7 +1421,7 @@ export const fixtureDataset: DatasetInput = {
         "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
       ],
       creators: [],
-      techniqueIds: ["TEC-SOMMERSO"],
+      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
       assertions: [
         {
           field: "creator",
