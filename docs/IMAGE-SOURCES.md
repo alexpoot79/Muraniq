@@ -1,6 +1,6 @@
 # Image sources and licences
 
-Every image on the site, where it comes from, and on what terms. Checked 9 November 2026.
+Every image on the site, where it comes from, and on what terms. Checked 9 November 2026; reference works R014–R024 added 10 November 2026.
 
 ## Rules
 
@@ -13,7 +13,12 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
   endorses them. The site names the museum only as the holder of the object.
 - **Text.** Cleveland's catalogue data is also CC0. The Art Institute of Chicago releases its descriptive text
   under CC BY 4.0, not CC0, so none of its text is reused: only facts (title, date, place, accession number)
-  and the CC0 photograph.
+  and the CC0 photograph. The Metropolitan Museum of Art releases its Open Access images and object data as
+  CC0; its catalogue essays are not reused. Descriptions of Met and AIC objects describe only what the
+  photograph shows and the facts in the record.
+- **No necklaces yet.** No complete Venetian glass necklace with a public-domain (CC0) photograph was found in
+  the Met, Cleveland or Chicago open-access collections on 10 November 2026; beads and bead-making scenes are
+  shown instead.
 - **No AI images.** Nothing here is generated, retouched or recomposed. The blurred backdrop behind some
   photographs is a decorative, `aria-hidden` copy of the same photograph, shown with the original whole on top.
 - **Processing.** Downloaded from the museum's open-access image server, resized to at most 2200 px on the long
@@ -61,6 +66,23 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 | `public/images/reference/r012-millefiori-bowl-interior.jpg` | Roman millefiori bowl | detail | [The Cleveland Museum of Art, 1919.10](https://clevelandart.org/art/1919.10) | CC0 | The Cleveland Museum of Art, 1919.10 · CC0 |
 | `public/images/reference/r012-millefiori-bowl-base.jpg` | Roman millefiori bowl | base | [The Cleveland Museum of Art, 1919.10](https://clevelandart.org/art/1919.10) | CC0 | The Cleveland Museum of Art, 1919.10 · CC0 |
 | `public/images/reference/r013-chalcedony-aventurine-beaker-front.jpg` | Beaker in chalcedony and aventurine glass | front | [The Art Institute of Chicago, 2024.68](https://www.artic.edu/artworks/273304) | CC0 | The Art Institute of Chicago, 2024.68 · CC0 |
+| `public/images/reference/r014-chevron-bead-front.jpg` | Glass chevron bead | front | [The Metropolitan Museum of Art, 17.194.1070](https://www.metmuseum.org/art/collection/search/250127) | CC0 | The Metropolitan Museum of Art, 17.194.1070 · CC0 |
+| `public/images/reference/r015-filigree-goblet-front.jpg` | Goblet in vetro a retorti | front | [The Metropolitan Museum of Art, 1975.1.1147](https://www.metmuseum.org/art/collection/search/460726) | CC0 | The Metropolitan Museum of Art, 1975.1.1147 · CC0 |
+| `public/images/reference/r015-filigree-goblet-side.jpg` | Goblet in vetro a retorti | side | [The Metropolitan Museum of Art, 1975.1.1147](https://www.metmuseum.org/art/collection/search/460726) | CC0 | The Metropolitan Museum of Art, 1975.1.1147 · CC0 |
+| `public/images/reference/r016-reticello-vase-front.jpg` | Vase in retorti and reticello glass | front | [The Metropolitan Museum of Art, 1975.1.1199](https://www.metmuseum.org/art/collection/search/460897) | CC0 | The Metropolitan Museum of Art, 1975.1.1199 · CC0 |
+| `public/images/reference/r016-reticello-vase-handle.jpg` | Vase in retorti and reticello glass | detail | [The Metropolitan Museum of Art, 1975.1.1199](https://www.metmuseum.org/art/collection/search/460897) | CC0 | The Metropolitan Museum of Art, 1975.1.1199 · CC0 |
+| `public/images/reference/r017-enamelled-pilgrim-flask-front.jpg` | Enamelled pilgrim flask | front | [The Metropolitan Museum of Art, 1975.1.1167](https://www.metmuseum.org/art/collection/search/460738) | CC0 | The Metropolitan Museum of Art, 1975.1.1167 · CC0 |
+| `public/images/reference/r017-enamelled-pilgrim-flask-neck.jpg` | Enamelled pilgrim flask | detail | [The Metropolitan Museum of Art, 1975.1.1167](https://www.metmuseum.org/art/collection/search/460738) | CC0 | The Metropolitan Museum of Art, 1975.1.1167 · CC0 |
+| `public/images/reference/r018-murrine-bowl-front.jpg` | Large murrine bowl | front | [The Metropolitan Museum of Art, 81.8.246](https://www.metmuseum.org/art/collection/search/186194) | CC0 | The Metropolitan Museum of Art, 81.8.246 · CC0 |
+| `public/images/reference/r018-murrine-bowl-detail.jpg` | Large murrine bowl | detail | [The Metropolitan Museum of Art, 81.8.246](https://www.metmuseum.org/art/collection/search/186194) | CC0 | The Metropolitan Museum of Art, 81.8.246 · CC0 |
+| `public/images/reference/r019-opalescent-dessert-glass-front.jpg` | Opalescent dessert glass | front | [The Metropolitan Museum of Art, 1975.1.1155](https://www.metmuseum.org/art/collection/search/461228) | CC0 | The Metropolitan Museum of Art, 1975.1.1155 · CC0 |
+| `public/images/reference/r020-filigree-liqueur-glass-front.jpg` | Liqueur glass in filigree and aventurine | front | [The Metropolitan Museum of Art, 1975.1.1152](https://www.metmuseum.org/art/collection/search/460887) | CC0 | The Metropolitan Museum of Art, 1975.1.1152 · CC0 |
+| `public/images/reference/r021-enamelled-standing-cup-front.jpg` | Enamelled standing cup | front | [The Cleveland Museum of Art, 1949.176](https://clevelandart.org/art/1949.176) | CC0 | The Cleveland Museum of Art, 1949.176 · CC0 |
+| `public/images/reference/r021-enamelled-standing-cup-side.jpg` | Enamelled standing cup | side | [The Cleveland Museum of Art, 1949.176](https://clevelandart.org/art/1949.176) | CC0 | The Cleveland Museum of Art, 1949.176 · CC0 |
+| `public/images/reference/r022-devotional-badge-front.jpg` | Devotional badge with Saint James | front | [The Cleveland Museum of Art, 1985.146](https://clevelandart.org/art/1985.146) | CC0 | The Cleveland Museum of Art, 1985.146 · CC0 |
+| `public/images/reference/r022-devotional-badge-reverse.jpg` | Devotional badge with Saint James | reverse | [The Cleveland Museum of Art, 1985.146](https://clevelandart.org/art/1985.146) | CC0 | The Cleveland Museum of Art, 1985.146 · CC0 |
+| `public/images/reference/r023-sargent-venetian-glass-workers.jpg` | Venetian Glass Workers (John Singer Sargent) | front | [The Art Institute of Chicago, 1933.1217](https://www.artic.edu/artworks/110761) | CC0 | The Art Institute of Chicago, 1933.1217 · CC0 |
+| `public/images/reference/r024-blum-bead-stringers.jpg` | Bead Stringers, Venice (Robert Frederick Blum) | front | [The Art Institute of Chicago, 1906.104](https://www.artic.edu/artworks/87492) | CC0 | The Art Institute of Chicago, 1906.104 · CC0 |
 | `public/images/reference/d001-beaker-draft.jpg` | Draft vase (must never be public) | front | The Cleveland Museum of Art, 1950.573.a · CC0 (draft fixture, never published) | CC0 | The Cleveland Museum of Art, 1950.573.a · CC0 |
 
 ## Editorial images (heritage and city)

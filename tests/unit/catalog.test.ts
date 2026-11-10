@@ -43,13 +43,13 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(13);
+    expect(r.total).toBe(24);
     expect(r.items[0]!.id).toBe("MUR-R001");
   });
 
   it("ORs within a facet and ANDs between facets", () => {
     const or = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina" }));
-    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013"]);
+    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013", "MUR-R020"]);
     const and = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina", attribution: "probable" }));
     expect(and.items.map((a) => a.id)).toEqual(["MUR-R008"]);
   });
@@ -63,12 +63,14 @@ describe("search and facets", () => {
     expect(searchCatalog(all, parseCatalogQuery({ q: "murrine" })).items.map((a) => a.id).sort()).toEqual([
       "MUR-R009",
       "MUR-R012",
+      "MUR-R014",
+      "MUR-R018",
     ]);
   });
 
   it("matches periods by overlap and reports undated works separately", () => {
     const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
-    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R010", "MUR-R013"]);
+    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R010", "MUR-R013", "MUR-R014", "MUR-R019"]);
     expect(r.undatedExcluded).toBe(1); // the Roman bowl has no year range
   });
 
@@ -81,7 +83,7 @@ describe("search and facets", () => {
 
   it("computes disjunctive facet counts", () => {
     const r = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia" }));
-    expect(r.facets.technique.avventurina).toBe(1); // still selectable alongside calcedonia
+    expect(r.facets.technique.avventurina).toBe(2); // still selectable alongside calcedonia
     expect(r.facets.category["murano-glass"]).toBe(3);
     expect(r.facets.category["fine-art"]).toBeUndefined();
   });
