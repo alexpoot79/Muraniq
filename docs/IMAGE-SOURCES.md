@@ -70,3 +70,45 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 | `public/images/heritage/de-barbari-view-of-venice-1500.jpg` | Jacopo de’ Barbari, View of Venice, 1500. Woodcut from six blocks. | editorial | [The Cleveland Museum of Art, 1949.565](https://clevelandart.org/art/1949.565) | CC0 | The Cleveland Museum of Art, 1949.565 · CC0 |
 | `public/images/heritage/ponti-view-of-venice-1860.jpg` | Carlo Ponti, View of Venice, c. 1860. Albumen print. | editorial | [The Cleveland Museum of Art, 1988.214](https://clevelandart.org/art/1988.214) | CC0 | The Cleveland Museum of Art, 1988.214 · CC0 |
 | `public/images/heritage/fays-santa-maria-della-salute-1854.jpg` | Baron A. Faÿs, Santa Maria della Salute, View of the Grand Canal, Venice, 1854 or earlier. Salted paper print. | editorial | [The Cleveland Museum of Art, 1997.40](https://clevelandart.org/art/1997.40) | CC0 | The Cleveland Museum of Art, 1997.40 · CC0 |
+
+## Makers & Workshops (Glass Guide)
+
+Photographs of works linked to makers in the research directory. Only images that the museum marks as open access
+(public domain, CC0) are shown, downloaded from the Met's image server on 10 November 2026, resized to at most
+1800 px, converted to sRGB and stripped of metadata. Works whose photographs are not open access (all
+twentieth-century works in the research) are linked to the museum record and not shown.
+
+| File | Work | Holder and record | Licence | Credit shown |
+| --- | --- | --- | --- | --- |
+| `public/images/makers/img-met-186155.jpg` | Murrine bowl with faces, ca. 1880 | [The Metropolitan Museum of Art, 81.8.207](https://www.metmuseum.org/art/collection/search/186155) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186194.jpg` | Large murrine bowl, ca. 1880 | [The Metropolitan Museum of Art, 81.8.246](https://www.metmuseum.org/art/collection/search/186194) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186188.jpg` | Goblet, ca. 1868 | [The Metropolitan Museum of Art, 81.8.240](https://www.metmuseum.org/art/collection/search/186188) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186001.jpg` | Cup with seahorse stem, 1860–75 | [The Metropolitan Museum of Art, 81.8.50](https://www.metmuseum.org/art/collection/search/186001) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186074.jpg` | Vase, 1870s | [The Metropolitan Museum of Art, 81.8.125](https://www.metmuseum.org/art/collection/search/186074) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186161.jpg` | Mosaic glass urn with silver leaf design, ca. 1880 | [The Metropolitan Museum of Art, 81.8.213a, b](https://www.metmuseum.org/art/collection/search/186161) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-210183.jpg` | Covered Goblet, 1866–1880 | [The Metropolitan Museum of Art, 81.8.185a, b](https://www.metmuseum.org/art/collection/search/210183) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186123.jpg` | Jug, ca. 1860–70 | [The Metropolitan Museum of Art, 81.8.174](https://www.metmuseum.org/art/collection/search/186123) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-344736.jpg` | Specimens of White and Colored Glassware, 1866–1880 | [The Metropolitan Museum of Art, 67.788.13](https://www.metmuseum.org/art/collection/search/344736) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, The Elisha Whittelsey Collection, The Elisha Whittelsey Fund, 1967 |
+
+### Further maker photographs (added 10 November 2026)
+
+At most three photographs per maker. Found by searching the open-access APIs of the Met, the Cleveland Museum of
+Art and the Art Institute of Chicago for every published maker. A photograph was kept only if:
+
+- the museum marks it public domain or CC0;
+- the museum record itself names that maker or firm;
+- the date fits the maker.
+
+Homonyms were rejected by hand, for example drawings by the painter Francesco Salviati and a "Antonio Seguso" who
+cannot be matched to the right person. The museum's own attribution wording is shown in the caption. The search
+found no free photographs for twentieth-century makers (Venini, Scarpa, Barovier & Toso and others), because their
+works are still in copyright. Those makers are linked to museum records only.
+
+| File | Work | Holder and record | Licence | Credit shown |
+| --- | --- | --- | --- | --- |
+| `public/images/makers/img-met-185990.jpg` | Renaissance-style dish with Christ and Four Evangelists, 1870s (museum record: Probably Società Anonima per Azioni Salviati & C. (Manufactory); Probably Leopoldo Bearzotti (Decorator)) | [The Metropolitan Museum of Art, 81.8.39](https://www.metmuseum.org/art/collection/search/185990) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186169.jpg` | Goblet with lace design, 1870s (museum record: Probably Società Anonima per Azioni Salviati & C. (Manufactory); Probably Leopoldo Bearzotti (Decorator)) | [The Metropolitan Museum of Art, 81.8.221](https://www.metmuseum.org/art/collection/search/186169) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186229.jpg` | Vase, ca. 1860 (museum record: Dr. Antonio Salviati Company (Maker)) | [The Metropolitan Museum of Art, 81.8.281](https://www.metmuseum.org/art/collection/search/186229) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-185965.jpg` | Port glass, 1866–1867 (museum record: Antonio Salviati (Artist); Antonio Seguso (Artist)) | [The Metropolitan Museum of Art, 81.8.14](https://www.metmuseum.org/art/collection/search/185965) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-185982.jpg` | Footed millefiori bowl, ca. 1880 (museum record: Vincenzo Moretti (Artist); Venezia-Murano Company (Maker)) | [The Metropolitan Museum of Art, 81.8.31](https://www.metmuseum.org/art/collection/search/185982) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |
+| `public/images/makers/img-met-186160.jpg` | Millefiori bowl, ca. 1880 (museum record: Vincenzo Moretti (Artist); Venezia-Murano Company (Maker)) | [The Metropolitan Museum of Art, 81.8.212](https://www.metmuseum.org/art/collection/search/186160) | Public domain (Met Open Access, CC0) | The Metropolitan Museum of Art, Gift of James Jackson Jarves, 1881 |

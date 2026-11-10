@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SIG-MVM-CAPPELLIN-ACID",
+    "entity_id": "ORG-MVM-CAPPELLIN",
+    "kind": "acid-etched stamp",
+    "mark_text": "MVM Cappellin & C. Murano (as quoted by DBI; exact layout not verified)",
+    "period": "1925–1931",
+    "frequency": "on some pieces only",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN"
+    ],
+    "locators": [],
+    "image_id": null,
+    "notes": "Absence of a mark does not exclude M.V.M. Cappellin production.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "SIG-BAROVIER-ERCOLE-SCRIPT",
+    "entity_id": "PER-BAROVIER-ERCOLE-1889",
+    "kind": "diamond-point handwritten signature",
+    "mark_text": "Autograph cursive signature, sometimes with date, exceptionally with a dedication",
+    "period": "career (1919–1972)",
+    "frequency": "rarely – most works unsigned",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "locators": [],
+    "image_id": null,
+    "notes": "A signature on Barovier & Toso production does not by itself prove Ercole's personal design.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "SIG-CARLO-MORETTI-WHEEL",
+    "entity_id": "ORG-CARLO-MORETTI",
+    "kind": "hand signature with diamond wheel",
+    "mark_text": "Carlo Moretti (hand-signed)",
+    "period": "2000s production",
+    "frequency": "described for the 2000s output",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-MV-MORETTI"
+    ],
+    "locators": [],
+    "image_id": null,
+    "notes": "Earlier marking practice not documented in the source read.",
+    "checked": "2026-11-10"
+  }
+]
