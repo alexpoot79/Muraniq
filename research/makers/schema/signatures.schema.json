@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Signatures and marks",
+  "description": "Only marks documented in a cited source.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(SIG)-[A-Z0-9-]+$"
+      },
+      "entity_id": {
+        "type": "string",
+        "pattern": "^(PER|FAM|ORG)-[A-Z0-9-]+$"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "mark_text": {
+        "type": "string"
+      },
+      "period": {
+        "type": "string"
+      },
+      "frequency": {
+        "type": "string"
+      },
+      "verification_status": {
+        "enum": [
+          "VERIFIED",
+          "PARTIALLY_VERIFIED",
+          "ATTRIBUTED",
+          "DISPUTED",
+          "UNVERIFIED"
+        ]
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^(SRC)-[A-Z0-9-]+$"
+        },
+        "minItems": 1
+      },
+      "locators": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "image_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "checked": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    },
+    "required": [
+      "id",
+      "entity_id",
+      "kind",
+      "mark_text",
+      "verification_status",
+      "source_ids"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,31 @@
+id,description,claim_ids,resolution,resolution_status
+CF-SCARPA-CAPPELLIN-START,When Carlo Scarpa started at M.V.M. Cappellin and when he became its artistic director (1925–26 / 1926 / end 1926 / 1927–28).,CLM-0016 | CLM-0017 | CLM-0018 | CLM-0019,,OPEN
+CF-SCARPA-VENINI-AD,"Scarpa's collaboration with Venini starts 1932 (LSV, DBI); OS dates the title 'artistic director' from 1934.",CLM-0022 | CLM-0023,,OPEN
+CF-MVM-CLOSURE,Closure of M.V.M. Cappellin & C.: 1931 vs January 1932.,CLM-0013 | CLM-0014,,OPEN
+CF-MARTINUZZI-VENINI-END,End of Martinuzzi's role at V.S.M. Venini & C.: 1931 vs 1932.,CLM-0034 | CLM-0035 | CLM-0036,,OPEN
+CF-MARTINUZZI-MUSEUM,Martinuzzi's directorship of the Museo del Vetro: 1922–1931 (DBI) vs 1921–1931 (OS).,CLM-0032 | CLM-0033,,OPEN
+CF-ZECCHIN-HOMONYM,Which Zecchin left V.S.M. Venini & C. in 1932 – Francesco (partner) per DBI/OS Zecchin-Martinuzzi page; OS V.S.M. page is ambiguous and could be read as Vittorio.,CLM-0028 | CLM-0029,,OPEN
+CF-BIANCONI-VENINI-START,Start of Bianconi at Venini: 1946 / 1947 / 1948.,CLM-0043 | CLM-0044 | CLM-0045,,OPEN
+CF-TOBIA-VENINI-START,Start of Tobia Scarpa at Venini: 1957 vs 1958.,CLM-0046 | CLM-0047,,OPEN
+CF-BAROVIER-TAKEOVER,Year the Barovier brothers took over Salviati's 1877 furnace: 1883 vs 1884 (OS inconsistent with itself).,CLM-0055 | CLM-0056 | CLM-0057,,OPEN
+CF-ARTISTI-BAROVIER-NAME,Year the name 'Artisti Barovier' was adopted: 1890 (OS) vs 1896 (DBI).,CLM-0058 | CLM-0059,,OPEN
+CF-SALVIATI-1877-NAME,Name of Salviati's 1877 Murano firm: 'Salviati dott. Antonio' vs 'Salviati & C.' (both on OS).,CLM-0060 | CLM-0061,,OPEN
+CF-NICOLO-BAROVIER-DATES,Nicolò Barovier: 1886–1953 (DBI) vs 1895–1947 (OS).,CLM-0062 | CLM-0063 | CLM-0064,,OPEN
+CF-BSF-FOUNDING,Founding year and founders of Barovier Seguso & Ferro: 1932 (DBI) vs 1933 (OS).,CLM-0067 | CLM-0068,,OPEN
+CF-BSF-RENAME,Year 'Seguso Vetri d'Arte' was adopted: 1937 (OS) vs 1933 (company timeline).,CLM-0069 | CLM-0070,,OPEN
+CF-POLI-DEATH,Flavio Poli's death: 1984 (OS) vs 1980 (Tier C).,CLM-0077 | CLM-0078,,OPEN
+CF-MARTENS-TOSO-END,End of Martens at Aureliano Toso: 1963 vs 1965 (both OS).,CLM-0081 | CLM-0082,,OPEN
+CF-AURELIANO-TOSO-FOUNDING,"Founding of Aureliano Toso: 1938 (text) vs 1932 (header), both OS.",CLM-0083 | CLM-0084,,OPEN
+CF-BARBINI-DEATH,Alfredo Barbini's death: 2006 (OS) vs 2007 (Tier C).,CLM-0085 | CLM-0086,,OPEN
+CF-BARBINI-FIRM-FOUNDING,"Vetreria Alfredo Barbini: 1950 (text) vs 1932 (header), both OS.",CLM-0087 | CLM-0088,,OPEN
+CF-DAROS-START,Da Ros at Cenedese: 1958 vs 1959 (Tier C only).,CLM-0090 | CLM-0091,,OPEN
+CF-FURLAN-CENEDESE,"Dealer claim that Walter Furlan worked at Cenedese 1940–45, before the firm existed (1946).",CLM-0089 | CLM-0092,,OPEN
+CF-FRATELLI-TOSO-STATUS,Fratelli Toso closed 1982 (OS) – current status of the name not established.,CLM-0098 | CLM-0099,,OPEN
+CF-ERMANNO-TOSO-AD,Ermanno Toso artistic director from 1936 (OS) vs from the late 1940s (Museo del Vetro).,CLM-0100 | CLM-0101,,OPEN
+CF-TOSO-VETRI-DARTE-FOUNDING,Toso Vetri d'Arte: 1980 vs 1981 (OS).,CLM-0102 | CLM-0103,,OPEN
+CF-SALVIATI-C-FOUNDING,Salviati & C.: London company 1866 (company history) vs Murano firm 1877 (OS) – probably two different entities with one name.,CLM-0106 | CLM-0107,,OPEN
+CF-PAULY-FOUNDING,Pauly & C. founded 1902 (OS) vs 1903 (Tier C); Met object 'possibly Pauly' dated ca. 1860–70.,CLM-0110 | CLM-0111 | CLM-0112,,OPEN
+CF-VISTOSI-CONTINUITY,Historic Vetreria Vistosi closed early 1990s (OS) vs brand active today (company).,CLM-0114 | CLM-0115,,OPEN
+CF-SALIR-FOUNDING,S.A.L.I.R. founded 1923 vs 1924.,CLM-0116 | CLM-0117,,OPEN
+CF-NASON-MORETTI-FOUNDING,Nason & Moretti founded 1923 vs 1925.,CLM-0118 | CLM-0119,,OPEN
+CF-MET-VENINI-NAMES,The Met uses anachronistic firm names for Venini objects (Venini S.p.a. for 1948; V.S.M. for 1949–56).,CLM-0124 | CLM-0125,,OPEN

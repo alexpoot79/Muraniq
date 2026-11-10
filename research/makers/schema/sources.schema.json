@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source register",
+  "description": "Deliverable C. One record per source; access states whether it was actually read.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^(SRC)-[A-Z0-9-]+$"
+      },
+      "tier": {
+        "enum": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "type": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "url": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "author": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "publisher": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "date": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "language": {
+        "type": "string"
+      },
+      "access": {
+        "enum": [
+          "OK",
+          "SEARCH_INDEX",
+          "UNAVAILABLE",
+          "NOT_CONSULTED"
+        ]
+      },
+      "access_note": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "checked": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    },
+    "required": [
+      "id",
+      "tier",
+      "type",
+      "title",
+      "access"
+    ],
+    "additionalProperties": false
+  }
+}
