@@ -88,14 +88,14 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 ## Collection photographs (MURANIQ's own objects)
 
 Supplied by the owner on 10 November 2026. Edited at the owner's request: background blurred and slightly
-darkened, white balance neutralised from the background, mild contrast and saturation lift. The object itself
+darkened, white balance neutralised from the background, mild contrast and saturation lift; grey haze removed from the glass (levels and local contrast on the object only, 10 Nov 2026). The object itself
 is not retouched, recomposed or generated.
 
 | File | Object | Rights |
 | --- | --- | --- |
-| `public/images/collection/r025-sommerso-bowl-top.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
-| `public/images/collection/r026-sommerso-vase-green.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
-| `public/images/collection/r027-sommerso-vase-amber.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
+| `public/images/collection/r025-sommerso-bowl-top-v2.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
+| `public/images/collection/r026-sommerso-vase-green-v2.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
+| `public/images/collection/r027-sommerso-vase-amber-v2.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
 
 ## Editorial images (heritage and city)
 
