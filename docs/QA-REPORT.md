@@ -121,3 +121,20 @@ Deviations, explained:
   most of the time is *render delay* that Lighthouse attributes to JavaScript under 4× CPU slowdown. Next steps:
   measure on Vercel (CDN, HTTP/2) and with field data; if still over, trim client JavaScript on the home page.
 - Not done: manual screen-reader pass, real-device testing, field Core Web Vitals.
+
+### Re-measured on muraniq.vercel.app after deploy (10 November 2026, commit 66c4b25)
+
+Playwright against the live deployment: 61 passed, 5 skipped (draft-preview tests skip without a preview secret).
+
+| Page | Form factor | Perf | A11y | Best pr. | SEO | LCP | TBT | CLS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `/` | mobile | 96 | 100 | 100 | 69 | 2.6 s | 130 ms | 0 |
+| `/collection/` | mobile | 93 | 100 | 100 | 66 | 3.0 s | 140 ms | 0 |
+| `/collection/objects/chalcedony-ewer-venice/` | mobile | 83* | 100 | 100 | 69 | 2.6 s | 110 ms | 0* |
+| `/` | desktop | 100 | 100 | 100 | 69 | 0.6 s | 0 ms | 0 |
+| `/collection/` | desktop | 100 | 100 | 100 | 66 | 0.6 s | 0 ms | 0 |
+| `/collection/objects/chalcedony-ewer-venice/` | desktop | 100 | 100 | 100 | 69 | 0.6 s | 0 ms | 0 |
+
+\* The first mobile run of the object page recorded CLS 0.256; two repeat runs recorded 0 and named no shifting
+element, so it did not reproduce. Watch it in field data after launch. Mobile LCP is 2.6–3.0 s in the lab, still
+just over the 2.5 s target; runs go through the build environment's proxy, which adds latency.
