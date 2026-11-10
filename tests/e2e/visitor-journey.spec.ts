@@ -6,7 +6,7 @@ test("collection → filter → dossier → viewer → museum record", async ({ 
 
   // Shareable filter URL works without client interaction.
   await page.goto("/collection/?technique=avventurina");
-  await expect(page.getByRole("status")).toContainText("1 work");
+  await expect(page.getByRole("status")).toContainText("2 works");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
   await page.goto("/collection/?technique=calcedonia");

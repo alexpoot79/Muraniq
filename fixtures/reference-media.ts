@@ -23,6 +23,7 @@ type Spec = {
 
 const CMA = (acc: string) => `The Cleveland Museum of Art, ${acc} · CC0`;
 const AIC = (acc: string) => `The Art Institute of Chicago, ${acc} · CC0`;
+const MET = (acc: string) => `The Metropolitan Museum of Art, ${acc} · CC0`;
 
 const SPECS: Spec[] = [
   // R001 — Ewer, chalcedony glass, Venice, c. 1500 (CMA 1985.141)
@@ -100,6 +101,45 @@ const SPECS: Spec[] = [
 
   // R013 — Beaker, chalcedony and aventurine glass, c. 1730 (AIC 2024.68)
   { id: "IMG-R013-FRONT", artworkId: "MUR-R013", file: "r013-chalcedony-aventurine-beaker-front", w: 1650, h: 2200, view: "front", alt: "Small flared beaker of chalcedony glass with swirling brown, green and gold veins on a low foot", credit: AIC("2024.68") },
+
+  // R014 — Glass chevron bead, Venetian, 18th century (Met 17.194.1070)
+  { id: "IMG-R014-FRONT", artworkId: "MUR-R014", file: "r014-chevron-bead-front", w: 1996, h: 2088, view: "front", alt: "Faceted oval glass bead in black and dark red, with a yellow zigzag band running around its middle", credit: MET("17.194.1070") },
+
+  // R015 — Goblet, vetro a retorti, Venice, late 16th century (Met 1975.1.1147)
+  { id: "IMG-R015-FRONT", artworkId: "MUR-R015", file: "r015-filigree-goblet-front", w: 1291, h: 2000, view: "front", alt: "Tall goblet with a trumpet-shaped bowl, a small knop and a wide foot, made entirely of clear glass with fine spiralling white threads", credit: MET("1975.1.1147") },
+  { id: "IMG-R015-SIDE", artworkId: "MUR-R015", file: "r015-filigree-goblet-side", w: 1736, h: 2200, view: "side", alt: "The filigree goblet photographed against a grey background, showing the white threads crossing the bowl in diagonal lines", credit: MET("1975.1.1147") },
+
+  // R016 — Vase, vetro a retorti and reticello, Venice, early 17th century (Met 1975.1.1199)
+  { id: "IMG-R016-FRONT", artworkId: "MUR-R016", file: "r016-reticello-vase-front", w: 1475, h: 2000, view: "front", alt: "Black-and-white photograph of a vase with a flattened, ribbed body of white filigree glass, a narrow neck and two scrolled handles", credit: MET("1975.1.1199") },
+  { id: "IMG-R016-HANDLE", artworkId: "MUR-R016", file: "r016-reticello-vase-handle", w: 1485, h: 2000, view: "detail", alt: "Close view of a scrolled handle striped with white threads, against the diagonal threads of the vase body", caption: "Scrolled handle", credit: MET("1975.1.1199") },
+
+  // R017 — Pilgrim flask, enamelled and gilt, Venice, c. 1500–1525 (Met 1975.1.1167)
+  { id: "IMG-R017-FRONT", artworkId: "MUR-R017", file: "r017-enamelled-pilgrim-flask-front", w: 1743, h: 2200, view: "front", alt: "Flat round flask of clear glass with a narrow neck, decorated with a large enamelled rosette in blue, white and gold", credit: MET("1975.1.1167") },
+  { id: "IMG-R017-NECK", artworkId: "MUR-R017", file: "r017-enamelled-pilgrim-flask-neck", w: 1201, h: 2000, view: "detail", alt: "Black-and-white detail of the flask's neck with a band of enamelled dots and pendant drops", caption: "Neck", credit: MET("1975.1.1167") },
+
+  // R018 — Large murrine bowl, Venezia-Murano Company, c. 1880 (Met 81.8.246)
+  { id: "IMG-R018-FRONT", artworkId: "MUR-R018", file: "r018-murrine-bowl-front", w: 1961, h: 1691, view: "front", alt: "Wide shallow bowl of mosaic glass in blue, amber and white swirls, with a dark brown rim", credit: MET("81.8.246") },
+  { id: "IMG-R018-DETAIL", artworkId: "MUR-R018", file: "r018-murrine-bowl-detail", w: 1949, h: 1826, view: "detail", alt: "Close view of the bowl's surface: fused slices of glass in blue and white spirals, with one translucent ring", caption: "Fused murrine slices", credit: MET("81.8.246") },
+
+  // R019 — Dessert glass(?), opalescent, Venice, probably late 17th century (Met 1975.1.1155)
+  { id: "IMG-R019-FRONT", artworkId: "MUR-R019", file: "r019-opalescent-dessert-glass-front", w: 1335, h: 2000, view: "front", alt: "Black-and-white photograph of a stemmed glass with a ribbed, flaring bowl, a crimped collar and a knopped stem", credit: MET("1975.1.1155") },
+
+  // R020 — Liqueur glass, vetro a retorti with aventurine, Venice, late 19th century (Met 1975.1.1152)
+  { id: "IMG-R020-FRONT", artworkId: "MUR-R020", file: "r020-filigree-liqueur-glass-front", w: 1491, h: 2000, view: "front", alt: "Black-and-white photograph of a small stemmed glass with a rounded bowl striped by spiralling white threads, on a twisted stem", credit: MET("1975.1.1152") },
+
+  // R021 — Standing cup, enamelled and gilded, Venice, late 1400s (CMA 1949.176)
+  { id: "IMG-R021-FRONT", artworkId: "MUR-R021", file: "r021-enamelled-standing-cup-front", w: 1662, h: 2200, view: "front", alt: "Standing cup of clear glass with a deep bowl banded in gilding and coloured enamel dots, on a ribbed knop and a wide foot", credit: CMA("1949.176") },
+  { id: "IMG-R021-SIDE", artworkId: "MUR-R021", file: "r021-enamelled-standing-cup-side", w: 1666, h: 2200, view: "side", alt: "The standing cup turned slightly, showing the gilt decoration on the lower bowl", credit: CMA("1949.176") },
+
+  // R022 — Devotional badge with Saint James, Venice, c. 1200–1250 (CMA 1985.146)
+  { id: "IMG-R022-FRONT", artworkId: "MUR-R022", file: "r022-devotional-badge-front", w: 2181, h: 2200, view: "front", alt: "Small oval badge of moulded green glass showing a standing saint between two smaller kneeling figures", credit: CMA("1985.146") },
+  { id: "IMG-R022-REVERSE", artworkId: "MUR-R022", file: "r022-devotional-badge-reverse", w: 2124, h: 2136, view: "reverse", alt: "Back of the green glass badge, with the museum's accession number painted in red", credit: CMA("1985.146") },
+
+  // R023 — John Singer Sargent, Venetian Glass Workers, 1880–82 (AIC 1933.1217)
+  { id: "IMG-R023-FRONT", artworkId: "MUR-R023", file: "r023-sargent-venetian-glass-workers", w: 1686, h: 1083, view: "front", alt: "Painting of a dim workshop where several women sit working with bundles of long, pale glass rods, light falling from a window at the upper left", credit: AIC("1933.1217") },
+
+  // R024 — Robert Frederick Blum, Bead Stringers, Venice, 1886 (AIC 1906.104)
+  { id: "IMG-R024-FRONT", artworkId: "MUR-R024", file: "r024-blum-bead-stringers", w: 1686, h: 2458, view: "front", alt: "Etching of two young women seated side by side at work, one raising her arms above her head, a bottle on a shelf behind them", credit: AIC("1906.104") },
 
   // Draft fixture (must never be public)
   { id: "IMG-D007-FRONT", artworkId: "MUR-D007", file: "d001-beaker-draft", w: 1113, h: 1400, view: "front", alt: "Conical beaker of colourless glass with enamelled dots and a gilt foot", credit: CMA("1950.573.a") },
