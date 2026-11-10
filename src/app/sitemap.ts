@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getArtworks, getCreators, getTechniques } from "@/content/repository.server";
 import { CATEGORIES } from "@/content/categories";
+import { directoryEntries } from "@/content/makers-directory";
 import { routes } from "@/lib/routes";
 import { absoluteUrl } from "@/lib/site";
 
@@ -14,6 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     routes.exhibition(),
     routes.guide(),
     routes.makers(),
+    routes.directory(),
     routes.techniques(),
     routes.attribution(),
     routes.about(),
@@ -28,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       images: [absoluteUrl(a.hero.src)],
     })),
     ...creators.map((c) => ({ url: absoluteUrl(routes.maker(c.slug)) })),
+    ...directoryEntries().map((e) => ({ url: absoluteUrl(routes.directoryEntry(e.slug)) })),
     ...techniques.map((t) => ({ url: absoluteUrl(routes.technique(t.slug)) })),
   ];
 }

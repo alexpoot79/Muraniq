@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "ORG-SALVIATI-DOTT-ANTONIO-1859",
+    "name": "Salviati Dott. Antonio fu Bartolomeo",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1859",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Venice (Dorsoduro 731)",
+    "periods": [
+      "1859–1866"
+    ],
+    "main_association": "Antonio Salviati's first firm (mosaics, glass)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SALVIATI-C",
+    "name": "Salviati & C.",
+    "alternative_names": [
+      "Società Anonima per Azioni Salviati & C.",
+      "Salviati & C. s.p.a.",
+      "Salviati S.r.l."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "21 December 1866 (London; company history) / 1877 (Olnick Spanu)",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [
+      "1866/1877–present"
+    ],
+    "main_association": "Camerino family from early 20th c.; Luciano Gaspari, Sergio Asti (Compasso d'Oro 1962)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "DISPUTED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "Lineage disputed: the 1866 London company became the Venice and Murano company (C.V.M.), while Salviati set up a new furnace in 1877. Which entity the present 'Salviati' continues needs archival resolution.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SALVIATI-DOTT-ANTONIO-1877",
+    "name": "Salviati dott. Antonio (furnace, 1877)",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1877",
+    "ended": "1883/1884 (sold to the Barovier brothers); name kept until 1890",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1877–1890"
+    ],
+    "main_association": "Barovier brothers as maestri; became Artisti Barovier",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-CVM",
+    "name": "Compagnia di Venezia e Murano",
+    "alternative_names": [
+      "Venice and Murano Glass and Mosaic Company Ltd",
+      "C.V.M.",
+      "Venezia-Murano Company"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1866 (as Salviati & C.)",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1866–1919"
+    ],
+    "main_association": "Layard, Drake; murrine of Vincenzo Moretti; merged with Pauly & C. after 1919",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "Renaming year (1870/1872) not verified from a read source.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-PAULY-C",
+    "name": "Pauly & C. – Compagnia Venezia Murano",
+    "alternative_names": [
+      "Pauly & C."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1902 (OS) / 1903 (other source)",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Venice",
+    "periods": [
+      "1902–present?"
+    ],
+    "main_association": "Ceschina (1920); Barbon family (1963)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "DISPUTED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "Founding year and recent ownership (bankruptcy 2016 / acquisition 2018 per search snippets) unverified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ARTISTI-BAROVIER",
+    "name": "Artisti Barovier",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1890 (OS) / 1896 (DBI)",
+    "ended": "1919",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1890/1896–1919"
+    ],
+    "main_association": "Giuseppe and Benvenuto Barovier; murrine; Zecchin collaboration (1913)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-DBI-ZECCHIN"
+    ],
+    "notes": "Name-change year disputed (1890 vs 1896).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VETRERIA-ARTISTICA-BAROVIER",
+    "name": "Vetreria Artistica Barovier & C.",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1919",
+    "ended": "1936 (merged into Ferro Toso Barovier)",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1919–1936"
+    ],
+    "main_association": "Ercole and Nicolò Barovier",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SAIAR-FERRO-TOSO",
+    "name": "S.A.I.A.R. Ferro Toso",
+    "alternative_names": [
+      "Ferro Toso"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1920s–1936"
+    ],
+    "main_association": "Merged with Ercole Barovier's firm (1936)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-BAROVIER-TOSO",
+    "name": "Barovier & Toso",
+    "alternative_names": [
+      "Ferro Toso Barovier (1936)",
+      "Barovier Toso & C. (1939)",
+      "Barovier&Toso"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1936 (merger) / name 1942",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [
+      "1936–present"
+    ],
+    "main_association": "Ercole Barovier (artistic director to 1972), Angelo Barovier",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-BAROVIER-COM",
+      "SRC-CMA-API",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "Company claim 'since 1295' refers to the family, not this firm.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-BAROVIER-SEGUSO-FERRO",
+    "name": "Artistica Vetreria e Soffieria Barovier Seguso & Ferro",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1932 (DBI) / 1933 (OS, Seguso)",
+    "ended": "1937 (reorganised as Seguso Vetri d'Arte)",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1932/33–1937"
+    ],
+    "main_association": "Napoleone Barovier, Seguso brothers, Ferro; Flavio Poli from 1934",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "DISPUTED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS",
+      "SRC-SEGUSO-COM",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "notes": "Founding year and founders differ between sources.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SEGUSO-VETRI-DARTE",
+    "name": "Seguso Vetri d'Arte",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1937 (reorganisation of Barovier Seguso & Ferro)",
+    "ended": "Not verified",
+    "operating_status": "active (brand)",
+    "location": "Murano",
+    "periods": [
+      "1937–present"
+    ],
+    "main_association": "Flavio Poli (1934–1963), Archimede and Angelo Seguso as maestri; Compasso d'Oro 1954",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SEGUSO-COM",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "notes": "Ownership history 1960s–1990s (Albarelli; 'back in family hands') needs dating.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SEGUSO-VIRO",
+    "name": "Seguso Viro",
+    "alternative_names": [],
+    "entity_type": "Brand",
+    "founded": "1993",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1993–"
+    ],
+    "main_association": "Giampaolo Seguso and sons",
+    "ia_category": "contemporary_studio",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VETRERIA-ARCHIMEDE-SEGUSO",
+    "name": "Vetreria Artistica Archimede Seguso",
+    "alternative_names": [
+      "Vetreria Archimede Seguso"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1946",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano (Fondamenta Serenella 18)",
+    "periods": [
+      "1946–present"
+    ],
+    "main_association": "Archimede Seguso; later Gino and Antonio Seguso",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-ARCHIMEDE-SEGUSO-IT",
+      "SRC-MET-API"
+    ],
+    "notes": "A 1945 start with Alfredo Barbini is reported by a collector site only.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ARTE-VETRO-ALBERTO-SEGUSO",
+    "name": "Arte Vetro (Alberto Seguso)",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "c.1947–1952"
+    ],
+    "main_association": "Napoleone Martinuzzi collaborated for five years from 1947",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI"
+    ],
+    "notes": "Not shown to be identical to 'Seguso Arte Vetro' (see ORG-SEGUSO-ARTE-VETRO).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SEGUSO-ARTE-VETRO",
+    "name": "Seguso Arte Vetro",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Name in the initial research list; no source found",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Identity unresolved; may be a trade name, a modern firm, or a conflation with Alberto Seguso's 'Arte Vetro'.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SEGUSO-GIANNI",
+    "name": "Seguso Gianni",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Lighting and furnishing objects (auction-house description)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VSM-CAPPELLIN-VENINI",
+    "name": "V.S.M. Cappellin Venini & C.",
+    "alternative_names": [
+      "Vetri Soffiati Muranesi Cappellin Venini & C.",
+      "Cappellin Venini & C."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "December 1921",
+    "ended": "spring / May 1925",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1921–1925"
+    ],
+    "main_association": "Cappellin, Venini, Ceresa, Ochs; Zecchin artistic director; ex-Rioda furnace",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-DBI-VENINI",
+      "SRC-DBI-ZECCHIN",
+      "SRC-OS",
+      "SRC-LSV-ZECCHIN"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-MVM-CAPPELLIN",
+    "name": "M.V.M. Cappellin & C.",
+    "alternative_names": [
+      "Maestri Vetrai Muranesi Cappellin & C."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1925",
+    "ended": "1931/January 1932 (closure date disputed)",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1925–1931/32"
+    ],
+    "main_association": "Giacomo Cappellin; Zecchin (to 1926); Carlo Scarpa",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-OS",
+      "SRC-AIC-API",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VSM-VENINI",
+    "name": "V.S.M. Venini & C.",
+    "alternative_names": [
+      "Vetri Soffiati Muranesi Venini & C."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1 June 1925",
+    "ended": "28 January 1932 (liquidation)",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1925–1932"
+    ],
+    "main_association": "Venini, Martinuzzi, Francesco Zecchin, Maroni, Francini",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-VENINI-FURNACE",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VENINI",
+    "name": "Venini",
+    "alternative_names": [
+      "Venini & C.",
+      "Venini s.a.",
+      "Venini S.p.A."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1932 (new company after liquidation of V.S.M. Venini & C.)",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [
+      "1932–present"
+    ],
+    "main_association": "Buzzi, Scarpa (1932–1947), Bianconi, Wirkkala, Zuccheri, Stearns, Diaz de Santillana",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-OS",
+      "SRC-MET-API",
+      "SRC-VENINI-COM"
+    ],
+    "notes": "Official site unavailable to automated access.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ZECCHIN-MARTINUZZI",
+    "name": "Zecchin-Martinuzzi Vetri Artistici e Mosaici",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1932",
+    "ended": "1938",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1932–1938"
+    ],
+    "main_association": "Francesco Zecchin, Napoleone Martinuzzi (to 1936); Alfredo Barbini maestro",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-MARTINUZZI"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SUCCESSORI-RIODA",
+    "name": "Successori Andrea Rioda",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1921",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1921–1931"
+    ],
+    "main_association": "Giulio Radi (founder); predecessor context of A.VE.M.; Dino Martens",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-AVEM",
+    "name": "A.VE.M. – Arte Vetraria Muranese",
+    "alternative_names": [
+      "AVEM",
+      "A.V.E.M."
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1932",
+    "ended": "Not verified",
+    "operating_status": "unknown (active per OS; suspended after 1976 per collector site)",
+    "location": "Murano",
+    "periods": [
+      "1932–"
+    ],
+    "main_association": "Ferro family, Emilio Nason, Galliano Ferro, Giulio Radi; later Giorgio Ferro, Anzolo Fuga, Luciano Ferro",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-WEB-DAS-AVEM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-FRATELLI-TOSO",
+    "name": "Fratelli Toso",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1854",
+    "ended": "1982 (closure per OS) – disputed",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1854–1982 / present?"
+    ],
+    "main_association": "Six Toso brothers; Ermanno Toso, Pollio Perelda; murrine",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "OS: closed 1982. Museo del Vetro (2025): celebrated 170th anniversary in 2024 and 'always remaining a family business'. Continuity to be clarified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-AURELIANO-TOSO",
+    "name": "Vetri Decorativi Rag. Aureliano Toso",
+    "alternative_names": [
+      "Aureliano Toso Vetri Decorativi",
+      "Aureliano Toso"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1938 (OS text) / 1932 (OS header)",
+    "ended": "Not verified",
+    "operating_status": "active (lighting components, per OS)",
+    "location": "Murano",
+    "periods": [
+      "1930s–present"
+    ],
+    "main_association": "Dino Martens (artistic director from 1939), Enrico Potz, Gino Poli",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-GINO-CENEDESE",
+    "name": "Gino Cenedese & C.",
+    "alternative_names": [
+      "Vetreria Gino Cenedese"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1946",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1946–"
+    ],
+    "main_association": "Alfredo Barbini (partner/artistic director 1946–1950); Antonio Da Ros (from 1958/59)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VAMSA",
+    "name": "V.A.M.S.A.",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1930s"
+    ],
+    "main_association": "Alfredo Barbini partner (1937)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VETRERIA-ALFREDO-BARBINI",
+    "name": "Vetreria Alfredo Barbini",
+    "alternative_names": [
+      "Alfredo Barbini Srl"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1950",
+    "ended": "Not verified",
+    "operating_status": "active (per OS)",
+    "location": "Murano",
+    "periods": [
+      "1950–present"
+    ],
+    "main_association": "Alfredo and Flavio Barbini",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "'AAV Barbini' in the initial list is not yet identified; not merged here.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-AAV-BARBINI",
+    "name": "AAV Barbini",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Name in the initial research list",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Identity unresolved; do not merge with Vetreria Alfredo Barbini without evidence.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SALIR",
+    "name": "S.A.L.I.R. – Studio Ars et Labor Industrie Riunite",
+    "alternative_names": [],
+    "entity_type": "Workshop",
+    "founded": "1923 (most sources) / 1924",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1923–1993"
+    ],
+    "main_association": "Glass decoration and engraving; Guido Balsamo Stella, Franz Pelzel; Dino Martens (partner, mid-1920s)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-OS",
+      "SRC-WEB-DAS-SALIR",
+      "SRC-BK-HEIREMANS-SALIR"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-VISTOSI",
+    "name": "Vetreria Vistosi",
+    "alternative_names": [
+      "Vistosi"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1945",
+    "ended": "Not verified",
+    "operating_status": "active (brand under later ownership)",
+    "location": "Murano",
+    "periods": [
+      "1945–present"
+    ],
+    "main_association": "Guglielmo Vistosi; Gino and Luciano Vistosi; Pianon, Bianconi, Sottsass, Aulenti",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-VISTOSI-PROFILE"
+    ],
+    "notes": "OS: closed early 1990s after change of ownership; brand continued by a new Vetreria Vistosi (1989 takeover per company profile snippet).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-GALLIANO-FERRO",
+    "name": "Galliano Ferro",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1955",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1955–"
+    ],
+    "main_association": "Galliano and Giorgio Ferro; Lino Tagliapietra maestro (1956)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-FERRO-LAZZARINI",
+    "name": "Ferro & Lazzarini",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-FERRO-MURANO",
+    "name": "Ferro Murano",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Possibly a trade name; relation to other Ferro firms not established.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-TOSO-VETRI-DARTE",
+    "name": "Toso Vetri d'Arte",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1980 (OS text) / 1981 (OS header)",
+    "ended": "1990 (renamed Compagnia Vetreria Muranese)",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [
+      "1980–1990"
+    ],
+    "main_association": "Luigi Toso; produced glass for Memphis (Sottsass, Zanini)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-FORMIA",
+    "name": "Formia",
+    "alternative_names": [
+      "Fornace Mian",
+      "Formia International"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1962 (search sources)",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Mian family (search sources)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-INCOLLECT"
+    ],
+    "notes": "Museo del Vetro page (FareVetro 2011) found via search but unavailable.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-YALOS",
+    "name": "Yalos Murano",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-GAMBARO-POGGI",
+    "name": "Gambaro & Poggi",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-CARLO-MORETTI",
+    "name": "Carlo Moretti",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "30 October 1958",
+    "ended": "Not verified",
+    "operating_status": "active (per 2024 exhibition)",
+    "location": "Murano",
+    "periods": [
+      "1958–present"
+    ],
+    "main_association": "Carlo and Giovanni Moretti; 453-piece donation to Museo del Vetro (2020)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-MV-MORETTI"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-AV-MAZZEGA",
+    "name": "A.V. Mazzega",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1946 (search sources)",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Mazzega family (founder name disputed)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-INCOLLECT"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ZANETTI-MURANO",
+    "name": "Zanetti Murano",
+    "alternative_names": [
+      "Zanetti Arte Vetro"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-NASON-MORETTI",
+    "name": "Nason & Moretti",
+    "alternative_names": [
+      "Cristalleria Nason & Moretti",
+      "NasonMoretti"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "1923 (most sources) / 1925",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [
+      "1923–present"
+    ],
+    "main_association": "Nason and Moretti families (founders disputed)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-MARSILIO-NASONMORETTI",
+      "SRC-WEB-HOMOFABER"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-V-NASON",
+    "name": "V. Nason & C.",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Carlo Nason as designer (dealer sources)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-MANDRUZZATO",
+    "name": "Mandruzzato",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1934 (secondary sources)",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Benjamin and Luigi Mandruzzato (secondary sources)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ERCOLE-MORETTI",
+    "name": "Ercole Moretti",
+    "alternative_names": [
+      "Fratelli Moretti"
+    ],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "active (per search)",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Murrine production",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Firm name, not to be confused with any person named Ercole Moretti.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ARS-MURANO",
+    "name": "Ars Murano",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Identity unresolved (possible confusion with 'Ars Cenedese' or a retail label).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-OBALL",
+    "name": "Oball",
+    "alternative_names": [],
+    "entity_type": "Brand",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ARTE-80",
+    "name": "Arte 80",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Identity unresolved.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-LA-MURRINA",
+    "name": "La Murrina",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1968 (furnace) / 1974 (company, per search)",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-LEUCOS",
+    "name": "Leucos",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "1962 (search)",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Scorzè / outskirts of Venice (search)",
+    "periods": [],
+    "main_association": "Lighting; founder Eugenio Pamio (search)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Not located on Murano; Murano relationship to be documented before inclusion.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-BERENGO-STUDIO",
+    "name": "Berengo Studio",
+    "alternative_names": [],
+    "entity_type": "Workshop",
+    "founded": "1989",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Adriano Berengo; Glasstress",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-HOMOFABER"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-FUCINA-DEGLI-ANGELI",
+    "name": "Fucina degli Angeli",
+    "alternative_names": [],
+    "entity_type": "Workshop",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Egidio Costantini; Yoichi Ohira (1973)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-EFFETRE",
+    "name": "Effetre International",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Lino Tagliapietra artistic director (1976)",
+    "ia_category": "contemporary_studio",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SVCC",
+    "name": "Società Veneziana Conterie e Cristallerie",
+    "alternative_names": [],
+    "entity_type": "Manufacturer",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Flavio Poli led its art-glass division 1964–1966 (secondary sources)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-OGGETTI",
+    "name": "Oggetti",
+    "alternative_names": [],
+    "entity_type": "Distributor",
+    "founded": "1975",
+    "ended": "Not verified",
+    "operating_status": "active",
+    "location": "Miami, USA",
+    "periods": [],
+    "main_association": "Design retailer/importer sourcing pieces from artisans worldwide (incl. Murano)",
+    "ia_category": "distributor",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OGGETTI-COM"
+    ],
+    "notes": "Not a glass furnace. An 'Oggetti' label identifies the seller/brand, not the producing workshop.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-SCHIAVON",
+    "name": "Schiavon (glassworks)",
+    "alternative_names": [],
+    "entity_type": "Workshop",
+    "founded": "Not verified",
+    "ended": "Not verified",
+    "operating_status": "unknown",
+    "location": "Murano",
+    "periods": [],
+    "main_association": "Massimiliano Schiavon",
+    "ia_category": "contemporary_studio",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-SCHIAVON-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  }
+]

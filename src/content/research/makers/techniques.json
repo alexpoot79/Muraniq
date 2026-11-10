@@ -1,0 +1,505 @@
+[
+  {
+    "id": "TEC-CRISTALLO",
+    "name": "Cristallo",
+    "alternative_names": [
+      "Venetian cristallo"
+    ],
+    "category": "material",
+    "associated_entity_ids": [
+      "PER-BAROVIER-ANGELO-C1400"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Invention attributed ('può essere a lui attribuita') to Angelo Barovier, mid-15th c. (DBI)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ANGELO"
+    ],
+    "notes": "Attribution, not proof of sole invention.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-MURRINE",
+    "name": "Murrine",
+    "alternative_names": [
+      "murrina",
+      "mosaic glass"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-MORETTI-VINCENZO-GLASS",
+      "ORG-CVM",
+      "PER-BAROVIER-GIUSEPPE-1853",
+      "PER-SCARPA-CARLO-1906"
+    ],
+    "example_work_ids": [
+      "WRK-MET-186155",
+      "WRK-MET-186194",
+      "WRK-MET-186161",
+      "WRK-MET-499869"
+    ],
+    "documented_uses": [
+      "19th-c. murrine revival at the Venice and Murano company (Met records)",
+      "'Murrine romane' by Scarpa at Venini, 1936 (DBI Venini)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-MET-API",
+      "SRC-DBI-VENINI",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-FILIGRANA",
+    "name": "Filigrana",
+    "alternative_names": [
+      "filigree",
+      "mezza filigrana",
+      "zanfirico",
+      "merletti"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906",
+      "PER-SEGUSO-ARCHIMEDE-1909"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499882"
+    ],
+    "documented_uses": [
+      "Mezza filigrana by Scarpa at Venini (LSV)",
+      "Archimede Seguso 'Merletti' (1952, company) and filigrana variations in the 1950s (OS)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-ARCHIMEDE-SEGUSO-IT",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-SOMMERSO",
+    "name": "Sommerso",
+    "alternative_names": [
+      "sommersi"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906",
+      "PER-POLI-FLAVIO-1900",
+      "PER-MARTENS-DINO-1894"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499930"
+    ],
+    "documented_uses": [
+      "Scarpa 'sommersi' at Venini, 1934 (LSV)",
+      "Sommersi at Seguso Vetri d'Arte under Poli (OS)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-PULEGOSO",
+    "name": "Pulegoso",
+    "alternative_names": [
+      "pulegosi",
+      "vetro pulegoso"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-MARTINUZZI-NAPOLEONE-1892",
+      "PER-VENINI-PAOLO-1895",
+      "ORG-VSM-VENINI"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Pulegosi shown at the 1928 Venice Biennale by V.S.M. Venini & C. (DBI Venini, DBI Martinuzzi)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-DBI-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-CORROSO",
+    "name": "Corroso",
+    "alternative_names": [
+      "corrosi",
+      "vetro corroso"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906",
+      "PER-BARBINI-ALFREDO-1912",
+      "PER-POLI-FLAVIO-1900"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499868",
+      "WRK-MET-484663"
+    ],
+    "documented_uses": [
+      "Scarpa 'corrosi' at Venini, 1936 (LSV)",
+      "Barbini corroso sculptures at the 1948 Biennale with Gino Cenedese (OS)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-BATTUTO",
+    "name": "Battuto",
+    "alternative_names": [
+      "battuti"
+    ],
+    "category": "surface treatment",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906",
+      "PER-SCARPA-TOBIA-1935"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499856"
+    ],
+    "documented_uses": [
+      "Scarpa 'battuti' at Venini (LSV)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-INCAMICIATO",
+    "name": "Incamiciato",
+    "alternative_names": [
+      "incamiciati"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-BUZZI-TOMASO-1900",
+      "PER-SCARPA-CARLO-1906"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499858"
+    ],
+    "documented_uses": [
+      "Buzzi 'incamiciati' with gold leaf at Venini, 1932–33 (DBI Venini, LSV)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-BUZZI",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-BOLLICINE",
+    "name": "A bollicine",
+    "alternative_names": [
+      "bollicine"
+    ],
+    "category": "decoration",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499921"
+    ],
+    "documented_uses": [
+      "Scarpa 'a bollicine' at Venini (LSV)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-LATTIMO",
+    "name": "Lattimo",
+    "alternative_names": [
+      "lattimi",
+      "milk glass"
+    ],
+    "category": "material",
+    "associated_entity_ids": [
+      "PER-SCARPA-CARLO-1906",
+      "PER-SEGUSO-ARCHIMEDE-1909"
+    ],
+    "example_work_ids": [
+      "WRK-MET-499933"
+    ],
+    "documented_uses": [
+      "Scarpa 'lattimi' at Venini (LSV)",
+      "Archimede Seguso 'Composizione lattimo' (OS)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "VERIFIED",
+    "source_ids": [
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-PEZZATO",
+    "name": "Pezzato",
+    "alternative_names": [
+      "pezzati"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-BIANCONI-FULVIO-1915",
+      "ORG-VENINI"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Bianconi 'pezzati', Milan Triennale 1951 (DBI Venini)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-FAZZOLETTO",
+    "name": "Fazzoletto (handkerchief vase)",
+    "alternative_names": [],
+    "category": "form/model",
+    "associated_entity_ids": [
+      "PER-BIANCONI-FULVIO-1915",
+      "PER-VENINI-PAOLO-1895",
+      "ORG-VENINI"
+    ],
+    "example_work_ids": [
+      "WRK-MET-484566",
+      "WRK-MET-484662"
+    ],
+    "documented_uses": [
+      "Fazzoletto 1949–50 by Bianconi with Venini (DBI Venini); Met dates one example ca. 1948"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-MET-API"
+    ],
+    "notes": "A form, not a technique; kept here so works can be grouped.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-AVVENTURINA",
+    "name": "Avventurina",
+    "alternative_names": [
+      "aventurine glass"
+    ],
+    "category": "material",
+    "associated_entity_ids": [
+      "PER-SALVIATI-ANTONIO-1816",
+      "PER-BIGAGLIA-PIETRO"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "OS credits Salviati with the 'rediscovery' of avventurina"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "Bigaglia link not yet sourced.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-VETRO-MOSAICO",
+    "name": "Vetro mosaico (Zecchin)",
+    "alternative_names": [],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-ZECCHIN-VITTORIO-1878",
+      "ORG-ARTISTI-BAROVIER"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Zecchin's 'vetro mosaico' executed by Artisti Barovier, shown in Munich 1913 (DBI Zecchin)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-COLORAZIONE-A-CALDO",
+    "name": "Colorazione a caldo senza fusione",
+    "alternative_names": [],
+    "category": "colouring process",
+    "associated_entity_ids": [
+      "PER-BAROVIER-ERCOLE-1889"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Ercole Barovier's hot colouring without fusion (DBI Ercole Barovier)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-MASSICCIO",
+    "name": "Massiccio (solid glass)",
+    "alternative_names": [
+      "vetro massiccio",
+      "sommerso massiccio"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-MARTINUZZI-NAPOLEONE-1892",
+      "PER-BARBINI-ALFREDO-1912",
+      "PER-SEGUSO-ARCHIMEDE-1909"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Martinuzzi female nudes in massiccio glass at Zecchin-Martinuzzi (OS)",
+      "Barbini solid-glass sculpture (OS)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-INCISIONE",
+    "name": "Incisione (engraving)",
+    "alternative_names": [
+      "engraving",
+      "glass decorating"
+    ],
+    "category": "decoration",
+    "associated_entity_ids": [
+      "ORG-SALIR",
+      "PER-BALSAMO-STELLA-GUIDO-1882"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "S.A.L.I.R. as decorating/engraving workshop (LSV Biennale pages; Heiremans)"
+    ],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-DBI-BALSAMO-STELLA",
+      "SRC-BK-HEIREMANS-SALIR"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-LUME",
+    "name": "Lume (lampworking)",
+    "alternative_names": [
+      "lampwork",
+      "a lume"
+    ],
+    "category": "technique",
+    "associated_entity_ids": [
+      "PER-TOFFOLO-CESARE-1961",
+      "PER-BUBACCO-LUCIO-1957"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [],
+    "working_definition": null,
+    "definition_status": "to be written from a cited glossary source (Phase 2)",
+    "editorial_status": "draft",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-CMOG-PEOPLE-TOFFOLO"
+    ],
+    "notes": "Only search-index evidence so far.",
+    "checked": "2026-11-10"
+  }
+]

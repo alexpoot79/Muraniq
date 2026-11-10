@@ -9,7 +9,7 @@ import { routes } from "@/lib/routes";
 import { ROLE_LABEL } from "@/features/artworks/attribution";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Makers",
+  title: "Makers in the collection",
   description: "Makers, glasshouses and artists represented on MURANIQ.",
   path: routes.makers(),
 });
@@ -32,9 +32,12 @@ export default async function MakersPage() {
         ]}
         kicker="Glass Guide"
         title="Makers"
-        accent="and workshops."
+        accent="in the collection."
       >
-        <p>Each profile states what is documented, and what is not.</p>
+        <p>
+          The makers behind the works shown on MURANIQ. Each profile states what is documented, and what is not. For the
+          wider history, see <Link href={routes.directory()} className="link-quiet text-on-dark">Makers &amp; Workshops</Link>.
+        </p>
       </PageIntro>
       <div className="container-gallery pb-28">
         <ul>

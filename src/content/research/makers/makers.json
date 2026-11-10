@@ -1,0 +1,2444 @@
+[
+  {
+    "id": "FAM-BAROVIER",
+    "name": "Barovier family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "13th c.–present"
+    ],
+    "main_association": "Glassmaking family documented on Murano from the second half of the 13th century; Artisti Barovier, Vetreria Artistica Barovier, Barovier & Toso",
+    "ia_category": "family",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-FAMILY",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS",
+      "SRC-BAROVIER-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-SEGUSO",
+    "name": "Seguso family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "1397 (family claim)–present"
+    ],
+    "main_association": "Several separate firms: Barovier Seguso & Ferro / Seguso Vetri d'Arte, Vetreria Archimede Seguso, Seguso Viro, Gianni Seguso and others",
+    "ia_category": "family",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-SEGUSO-COM",
+      "SRC-OS",
+      "SRC-ARCHIMEDE-SEGUSO-IT"
+    ],
+    "notes": "'23 generations since 1397' is a family/company claim; no archival source read yet.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-TOSO",
+    "name": "Toso family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "1854–present (Fratelli Toso)"
+    ],
+    "main_association": "Fratelli Toso (1854); separate firms Aureliano Toso, Ferro Toso / Barovier & Toso partners, Toso Vetri d'Arte",
+    "ia_category": "family",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-OS"
+    ],
+    "notes": "Shared surname does not imply one business lineage; see relationships.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-FERRO",
+    "name": "Ferro family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "20th c."
+    ],
+    "main_association": "S.A.I.A.R. Ferro Toso, Barovier Seguso & Ferro, A.VE.M., Galliano Ferro",
+    "ia_category": "family",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "Kinship between the various Ferro partners not yet established.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-BARBINI",
+    "name": "Barbini family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "20th c.–present"
+    ],
+    "main_association": "Vetreria Alfredo Barbini; other Barbini firms not yet identified",
+    "ia_category": "family",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-NASON",
+    "name": "Nason family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "20th c.–present"
+    ],
+    "main_association": "Nason & Moretti (1923), V. Nason & C., A.VE.M. founder Emilio Nason",
+    "ia_category": "family",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-MARSILIO-NASONMORETTI",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-ZANETTI",
+    "name": "Zanetti family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "Not verified"
+    ],
+    "main_association": "Zanetti Murano / Zanetti Arte Vetro; Licio and Oscar Zanetti (relationship not verified)",
+    "ia_category": "family",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Do not confuse with Abate Vincenzo Zanetti (1824–1883), founder of the Museo del Vetro.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-MORETTI",
+    "name": "Moretti family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "19th c.–present"
+    ],
+    "main_association": "Vincenzo Moretti (19th-c. murrine), Ercole Moretti (murrine firm), Carlo Moretti (1958) – kinship not established",
+    "ia_category": "family",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-MV-MORETTI",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "FAM-DARDUIN",
+    "name": "Darduin family",
+    "alternative_names": [],
+    "entity_type": "Family",
+    "origin": "Murano",
+    "periods": [
+      "16th c.–"
+    ],
+    "main_association": "Early-modern Murano glassmaking family (DBI)",
+    "ia_category": "family",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-DBI-DARDUIN"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-ANGELO-C1400",
+    "name": "Angelo Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "late 14th c. (probably)",
+    "died": "February 1461, Murano",
+    "origin": "Murano",
+    "roles": [
+      "glassmaker"
+    ],
+    "periods": [
+      "15th c."
+    ],
+    "main_association": "Invention of colourless 'cristallo' attributed to him c. mid-15th c.",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ANGELO",
+      "SRC-DBI-BAROVIER-FAMILY",
+      "SRC-BAROVIER-COM"
+    ],
+    "notes": "Do not confuse with Angelo Barovier (b. 1927), son of Ercole.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BRIATI-GIUSEPPE-1686",
+    "name": "Giuseppe Briati",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "8 January 1686, Murano",
+    "died": "18 January 1772, Venice",
+    "origin": "Murano",
+    "roles": [
+      "glassmaker",
+      "entrepreneur"
+    ],
+    "periods": [
+      "18th c."
+    ],
+    "main_association": "Crystal glass privilege (1736); Briati furnace at the Carmini active until 1808",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BRIATI"
+    ],
+    "notes": "Bohemia story is 'una tradizione non documentata' per DBI.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SALVIATI-ANTONIO-1816",
+    "name": "Antonio Salviati",
+    "alternative_names": [
+      "Dott. Antonio Salviati"
+    ],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "1890",
+    "origin": "Vicenza (lawyer)",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1859–1890"
+    ],
+    "main_association": "Founder of Salviati firms (1859; Salviati & C. 1866); revival of Murano glass and mosaics",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-MET-API"
+    ],
+    "notes": "Birth year in ID is provisional (commonly given as 1816; not verified in this pass).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-MORETTI-VINCENZO-GLASS",
+    "name": "Vincenzo Moretti (glassmaker)",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Murano",
+    "roles": [
+      "glassmaker"
+    ],
+    "periods": [
+      "c. 1870s–1880s"
+    ],
+    "main_association": "Murrine revival; object at the Met credited to Vincenzo Moretti / Venezia-Murano Company (c. 1880)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-MET-API"
+    ],
+    "notes": "Not the cardinal Vincenzo Moretti (1815–1881) of DBI vol. 76.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-RADI-LORENZO",
+    "name": "Lorenzo Radi",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glass chemist",
+      "glassmaker"
+    ],
+    "periods": [
+      "19th c."
+    ],
+    "main_association": "Worked with Antonio Salviati on mosaic glass (per Olnick Spanu)",
+    "ia_category": "master_artist",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BIGAGLIA-PIETRO",
+    "name": "Pietro Bigaglia",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glassmaker"
+    ],
+    "periods": [
+      "19th c."
+    ],
+    "main_association": "Aventurine and millefiori (to be researched)",
+    "ia_category": "master_artist",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BUSSOLIN-DOMENICO",
+    "name": "Domenico Bussolin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glassmaker"
+    ],
+    "periods": [
+      "19th c."
+    ],
+    "main_association": "Filigree revival (to be researched)",
+    "ia_category": "master_artist",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FRANCHINI-GIOVANNI-BATTISTA",
+    "name": "Giovanni Battista Franchini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glassmaker"
+    ],
+    "periods": [
+      "19th c."
+    ],
+    "main_association": "Lampworked murrine/portrait canes (to be researched)",
+    "ia_category": "master_artist",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-GIUSEPPE-1853",
+    "name": "Giuseppe Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1853",
+    "died": "1942",
+    "origin": "Murano",
+    "roles": [
+      "maestro",
+      "designer"
+    ],
+    "periods": [
+      "1877–late 1920s"
+    ],
+    "main_association": "Salviati dott. Antonio; Artisti Barovier; Vetreria Artistica Barovier & C.",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-BENVENUTO-1855",
+    "name": "Benvenuto Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1855",
+    "died": "1932",
+    "origin": "Murano",
+    "roles": [
+      "maestro",
+      "designer"
+    ],
+    "periods": [
+      "1877–1920s"
+    ],
+    "main_association": "Salviati dott. Antonio; Artisti Barovier; father of Ercole and Nicolò",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-VENINI-PAOLO-1895",
+    "name": "Paolo Venini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "12 January 1895, Cusano Milanino (Milan)",
+    "died": "22 July 1959, Venice",
+    "origin": "Milan",
+    "roles": [
+      "entrepreneur",
+      "designer"
+    ],
+    "periods": [
+      "1921–1959"
+    ],
+    "main_association": "Co-founder V.S.M. Cappellin Venini & C. (1921); founder V.S.M. Venini & C. (1925) / Venini & C.",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-VENINI-FURNACE",
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-CAPPELLIN-GIACOMO-1887",
+    "name": "Giacomo Cappellin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "29 May 1887, Venice",
+    "died": "14 November 1968, Venice",
+    "origin": "Venice",
+    "roles": [
+      "entrepreneur",
+      "antiques dealer"
+    ],
+    "periods": [
+      "1921–c.1932"
+    ],
+    "main_association": "Co-founder V.S.M. Cappellin Venini & C. (1921); founder M.V.M. Cappellin & C. (1925)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-CAPPELLIN",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-OS",
+      "SRC-CMA-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZECCHIN-VITTORIO-1878",
+    "name": "Vittorio Zecchin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1878, Murano",
+    "died": "15 April 1947, Murano",
+    "origin": "Murano",
+    "roles": [
+      "painter",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1913–early 1940s"
+    ],
+    "main_association": "Artistic director V.S.M. Cappellin Venini & C. (Dec. 1921–1925), then M.V.M. Cappellin & C.",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-ZECCHIN",
+      "SRC-LSV-ZECCHIN",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZECCHIN-FRANCESCO",
+    "name": "Francesco Zecchin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "engineer",
+      "partner"
+    ],
+    "periods": [
+      "1925–1938"
+    ],
+    "main_association": "Partner in V.S.M. Venini & C. (1925); co-founder of Zecchin-Martinuzzi Vetri Artistici e Mosaici (1932), closed it 1938",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "notes": "HOMONYM ALERT: not Vittorio Zecchin (painter, b. 1878). One OS page (V.S.M. Venini & C.) says 'Zecchin' left Venini in 1932 without a first name; the partner meant is Francesco.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-MARTINUZZI-NAPOLEONE-1892",
+    "name": "Napoleone Martinuzzi",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "31 May 1892, Murano",
+    "died": "15 May 1977, Venice",
+    "origin": "Murano",
+    "roles": [
+      "sculptor",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1922–1954"
+    ],
+    "main_association": "Partner and artistic director V.S.M. Venini & C. (1925–1931/32); Zecchin-Martinuzzi (1932)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-MARTINUZZI",
+      "SRC-LSV-MARTINUZZI",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SCARPA-CARLO-1906",
+    "name": "Carlo Scarpa",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1906, Venice",
+    "died": "1978",
+    "origin": "Venice",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1925/26–1947"
+    ],
+    "main_association": "M.V.M. Cappellin & C. (to 1931); Venini (1932–1947)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-SCARPA",
+      "SRC-LSV-SCARPA-VENINI",
+      "SRC-LSV-CAPPELLIN-SCARPA",
+      "SRC-OS",
+      "SRC-MET-API",
+      "SRC-AIC-API"
+    ],
+    "notes": "Exact birth/death dates not yet extracted from DBI; years per OS and AIC.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SCARPA-TOBIA-1935",
+    "name": "Tobia Scarpa",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1 January 1935",
+    "died": null,
+    "origin": "Venice",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1957/58–1960s"
+    ],
+    "main_association": "Designer for Venini (Occhi, Battuti, Murrine); son of Carlo Scarpa",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-SCARPA",
+      "SRC-DBI-VENINI",
+      "SRC-OS",
+      "SRC-LSV-STEARNS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BUZZI-TOMASO-1900",
+    "name": "Tomaso Buzzi",
+    "alternative_names": [
+      "Tommaso Buzzi"
+    ],
+    "entity_type": "Person",
+    "born": "1900, Sondrio",
+    "died": "1981",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1932–1934"
+    ],
+    "main_association": "Artistic director at Venini & C.; 'incamiciati' with gold leaf",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-LSV-BUZZI",
+      "SRC-OS",
+      "SRC-DBI-VENINI"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BIANCONI-FULVIO-1915",
+    "name": "Fulvio Bianconi",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1915, Padua",
+    "died": "1996, Milan",
+    "origin": "Not verified",
+    "roles": [
+      "graphic artist",
+      "designer"
+    ],
+    "periods": [
+      "1946/47–1990s"
+    ],
+    "main_association": "Venini (from 1946/47; Fazzoletto with Paolo Venini; Pezzati)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-LSV-BIANCONI",
+      "SRC-OS",
+      "SRC-DBI-VENINI",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-ERCOLE-1889",
+    "name": "Ercole Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "16 June 1889, Murano",
+    "died": "19 May 1974, Venice",
+    "origin": "Murano",
+    "roles": [
+      "entrepreneur",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1919–1972"
+    ],
+    "main_association": "Vetreria Artistica Barovier & C.; Barovier & Toso (artistic director to 1972)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-CMA-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-NICOLO-1886",
+    "name": "Nicolò Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "10 May 1886, Murano (DBI) / 1895 (OS)",
+    "died": "13 May 1953, Florence (DBI) / 1947 (OS)",
+    "origin": "Murano",
+    "roles": [
+      "entrepreneur",
+      "designer"
+    ],
+    "periods": [
+      "1919–1936"
+    ],
+    "main_association": "Co-manager Vetreria Artistica Barovier & C.",
+    "ia_category": "master_artist",
+    "verification_status": "DISPUTED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "notes": "Life dates conflict between DBI and Olnick Spanu.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-ANGELO-1927",
+    "name": "Angelo Barovier (b. 1927)",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1927",
+    "died": "Not verified",
+    "origin": "Murano",
+    "roles": [
+      "designer",
+      "entrepreneur"
+    ],
+    "periods": [
+      "1950s–"
+    ],
+    "main_association": "Son of Ercole; succeeded him at Barovier & Toso (1972)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS"
+    ],
+    "notes": "Homonym of the 15th-c. Angelo Barovier.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BAROVIER-NAPOLEONE",
+    "name": "Napoleone Barovier",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "partner"
+    ],
+    "periods": [
+      "1919–1932"
+    ],
+    "main_association": "Partner in Vetreria Artistica Barovier & C.; left in 1932 to co-found Barovier Seguso & Ferro (DBI Ercole Barovier)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE"
+    ],
+    "notes": "Life dates not verified. Do not confuse with Napoleone Martinuzzi.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-ANTONIO",
+    "name": "Antonio Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "partner"
+    ],
+    "periods": [
+      "1920s–1930s"
+    ],
+    "main_association": "Partner in Vetreria Artistica Barovier; co-founder Barovier Seguso & Ferro; father of Archimede and Angelo Seguso",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BAROVIER-ERCOLE",
+      "SRC-OS",
+      "SRC-SEGUSO-COM"
+    ],
+    "notes": "Life dates not verified. Identity of the Antonio Seguso in DBI (co-founder) and in the company history (father) assumed to be the same person on the basis of OS (Archimede Seguso page); confirm in archival literature. Not the same person as Antonio Seguso, grandson of Archimede (OS).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-ALBERTO",
+    "name": "Alberto Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "entrepreneur"
+    ],
+    "periods": [
+      "1933–1950s"
+    ],
+    "main_association": "Named among the Seguso founders of Barovier Seguso & Ferro (OS); 'Arte vetro' of Alberto Seguso employed Napoleone Martinuzzi from 1947 (DBI Martinuzzi)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-MARTINUZZI"
+    ],
+    "notes": "That both sources refer to the same Alberto Seguso is probable but not established.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-GINO",
+    "name": "Gino Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur",
+      "maestro"
+    ],
+    "periods": [
+      "Not verified"
+    ],
+    "main_association": "Son of Archimede; runs Vetreria Archimede Seguso, assisted by his son Antonio (OS)",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-ARCHIMEDE-1909",
+    "name": "Archimede Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1909, Murano",
+    "died": "1999",
+    "origin": "Murano",
+    "roles": [
+      "maestro",
+      "designer",
+      "entrepreneur"
+    ],
+    "periods": [
+      "1933–1990s"
+    ],
+    "main_association": "Co-founder Barovier Seguso & Ferro (1933); own firm Vetreria Archimede Seguso (1946)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-ARCHIMEDE-SEGUSO-IT",
+      "SRC-SEGUSO-COM",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-ANGELO",
+    "name": "Angelo Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro"
+    ],
+    "periods": [
+      "to 1973"
+    ],
+    "main_association": "Principal maestro of Seguso Vetri d'Arte until 1973 (company claim); son of Antonio",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "notes": "Single (company) source. Several Angelo Seguso may exist; disambiguate.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-GIAMPAOLO",
+    "name": "Giampaolo Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur",
+      "designer"
+    ],
+    "periods": [
+      "1993–"
+    ],
+    "main_association": "Son of Archimede; founded Seguso Viro (1993) with sons Gianluca, Pierpaolo, Gianandrea",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-SEGUSO-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-LIVIO-1930",
+    "name": "Livio Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1930, Murano",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glass artist",
+      "sculptor"
+    ],
+    "periods": [
+      "1950s–"
+    ],
+    "main_association": "Independent glass sculptor; Museo del Vetro exhibition 2019–2021",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-MV-LIVIO-SEGUSO",
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "Museum page found via search index only (unavailable).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SEGUSO-GIANNI",
+    "name": "Gianni Seguso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Name of a Murano firm 'Seguso Gianni' (chandeliers, lighting); person/firm distinction not established",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-POLI-FLAVIO-1900",
+    "name": "Flavio Poli",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1900, Chioggia",
+    "died": "1984 (OS) / 1980 (one secondary source)",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director",
+      "partner"
+    ],
+    "periods": [
+      "1929–1966"
+    ],
+    "main_association": "Artistic director Barovier Seguso & Ferro / Seguso Vetri d'Arte (1934–1963); partner from 1937",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-SEGUSO-COM",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-PINZONI-MARIO",
+    "name": "Mario Pinzoni",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1963–"
+    ],
+    "main_association": "Artistic director Seguso Vetri d'Arte after Poli",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-MARTENS-DINO-1894",
+    "name": "Dino Martens",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1894, Venice",
+    "died": "1970",
+    "origin": "Not verified",
+    "roles": [
+      "painter",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "mid-1920s–1963/65"
+    ],
+    "main_association": "S.A.L.I.R.; Salviati & C. / Successori Rioda; artistic director Aureliano Toso (from 1939)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1932",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BARBINI-ALFREDO-1912",
+    "name": "Alfredo Barbini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1912, Murano",
+    "died": "2006 (OS) / 2007 (other sources)",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "designer",
+      "entrepreneur"
+    ],
+    "periods": [
+      "c.1929–2000s"
+    ],
+    "main_association": "Zecchin-Martinuzzi; V.A.M.S.A.; Gino Cenedese & C. (1946); Vetreria Alfredo Barbini (1950)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BARBINI-FLAVIO",
+    "name": "Flavio Barbini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "administrator"
+    ],
+    "periods": [
+      "1960s–"
+    ],
+    "main_association": "Son of Alfredo; joined Vetreria Alfredo Barbini after the 1960s",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-CENEDESE-GINO",
+    "name": "Gino Cenedese",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1946–"
+    ],
+    "main_association": "Founder Gino Cenedese & C. (1946)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "notes": "Person vs firm to be kept separate.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-DAROS-ANTONIO",
+    "name": "Antonio Da Ros",
+    "alternative_names": [
+      "Nini Da Ros",
+      "Nini DaRos"
+    ],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1958/59–"
+    ],
+    "main_association": "Artistic director Gino Cenedese & C. from 1958 or 1959",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-MET-API",
+      "SRC-WEB-INCOLLECT",
+      "SRC-WEB-BOGLEWOOD"
+    ],
+    "notes": "Met object attributed ('Attributed to Nini DaRos'). Start year disputed (1958/1959). Birth/death not verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-RADI-GIULIO-1895",
+    "name": "Giulio Radi",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1895, Murano",
+    "died": "1952",
+    "origin": "Not verified",
+    "roles": [
+      "glass technician",
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1921–1952"
+    ],
+    "main_association": "Successori Andrea Rioda (1921); co-founder A.VE.M. (1932), artistic director from 1939",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FUGA-ANZOLO-1915",
+    "name": "Anzolo Fuga",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1915, Murano",
+    "died": "1998",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "stained-glass artist"
+    ],
+    "periods": [
+      "1949–1970s"
+    ],
+    "main_association": "A.VE.M. (late 1950s); director Scuola Abate Zanetti 1949–1972",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FERRO-GIORGIO-1931",
+    "name": "Giorgio Ferro",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1931, Murano",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director",
+      "owner"
+    ],
+    "periods": [
+      "1950s–"
+    ],
+    "main_association": "A.VE.M. (Anse Volanti); artistic director and (from 1972) owner of Galliano Ferro",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FERRO-GALLIANO",
+    "name": "Galliano Ferro",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "entrepreneur"
+    ],
+    "periods": [
+      "1932–"
+    ],
+    "main_association": "Co-founder A.VE.M. (1932); founded own furnace 1955",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "Person; the firm 'Galliano Ferro' is ORG-GALLIANO-FERRO.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TOSO-AURELIANO",
+    "name": "Aureliano Toso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1930s–"
+    ],
+    "main_association": "Founder of Vetri Decorativi Rag. Aureliano Toso (OS)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "Kinship with the founders of Fratelli Toso not established.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FERRO-ANTONIO-LUIGI",
+    "name": "Antonio Luigi Ferro",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1932–"
+    ],
+    "main_association": "Co-founder A.VE.M. (1932) with his son Egidio (OS)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "Kinship with Galliano Ferro not stated in the sources read.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-NASON-EMILIO",
+    "name": "Emilio Nason",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "sculptor"
+    ],
+    "periods": [
+      "1932–"
+    ],
+    "main_association": "Co-founder A.VE.M. (1932); Novecento-style sculptures (OS)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-VISTOSI-GUGLIELMO",
+    "name": "Guglielmo Vistosi",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "1952",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1945–1952"
+    ],
+    "main_association": "Founded the Vistosi furnace 1945; succeeded by brother Oreste and nephews Gino and Luciano (OS)",
+    "ia_category": "historical_glasshouse",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TOSO-ERMANNO-1903",
+    "name": "Ermanno Toso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1903, Murano",
+    "died": "1973",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1924–1960s"
+    ],
+    "main_association": "Artistic director Fratelli Toso (1936 per OS; 'late 1940s to the 1960s' per Museo del Vetro)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-PERELDA-POLLIO",
+    "name": "Pollio Perelda",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "painter",
+      "designer"
+    ],
+    "periods": [
+      "1948–1964"
+    ],
+    "main_association": "Designer for Fratelli Toso 1948–1964",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TOSO-ROSANNA",
+    "name": "Rosanna Toso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "manager"
+    ],
+    "periods": [
+      "1960s–1970s"
+    ],
+    "main_association": "Fratelli Toso",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-MV-FRATELLI-TOSO",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TOSO-GIUSTO",
+    "name": "Giusto Toso",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer"
+    ],
+    "periods": [
+      "1960s–"
+    ],
+    "main_association": "Fratelli Toso; later Barovier & Toso designer",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BALSAMO-STELLA-GUIDO-1882",
+    "name": "Guido Balsamo Stella",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "11 May 1882, Turin",
+    "died": "12 August 1941, Asolo",
+    "origin": "Not verified",
+    "roles": [
+      "painter",
+      "engraver",
+      "designer"
+    ],
+    "periods": [
+      "1920s–1930s"
+    ],
+    "main_association": "Glass engraving in Italy; S.A.L.I.R. (artistic director per secondary sources)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-BALSAMO-STELLA",
+      "SRC-WEB-DAS-SALIR"
+    ],
+    "notes": "Link to S.A.L.I.R. not in DBI; seen in secondary sources only.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BELLOTTO-UMBERTO",
+    "name": "Umberto Bellotto",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "wrought-iron artist",
+      "designer"
+    ],
+    "periods": [
+      "1910s–1920s"
+    ],
+    "main_association": "Iron-and-glass works with Artisti Barovier (Fondazione CFC listing)",
+    "ia_category": "master_artist",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-FCFC"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-PIANON-ALESSANDRO-1931",
+    "name": "Alessandro Pianon",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1931, Venice",
+    "died": "1984",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1956–1962"
+    ],
+    "main_association": "Vetreria Vistosi (from 1956)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZUCCHERI-TONI",
+    "name": "Toni Zuccheri",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer"
+    ],
+    "periods": [
+      "1960s–"
+    ],
+    "main_association": "Venini (1960s; animals/fowl); later Barovier & Toso",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-LSV-WIRKKALA-ZUCCHERI",
+      "SRC-OS"
+    ],
+    "notes": "Life dates not yet verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-WIRKKALA-TAPIO-1915",
+    "name": "Tapio Wirkkala",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1915, Finland",
+    "died": "1985",
+    "origin": "Not verified",
+    "roles": [
+      "designer"
+    ],
+    "periods": [
+      "1966–1972; 1985"
+    ],
+    "main_association": "Venini",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-LSV-WIRKKALA-ZUCCHERI",
+      "SRC-OS",
+      "SRC-CMA-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-PONTI-GIO-1891",
+    "name": "Gio Ponti",
+    "alternative_names": [
+      "Giò Ponti"
+    ],
+    "entity_type": "Person",
+    "born": "1891, Milan",
+    "died": "1979",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1927–1950s"
+    ],
+    "main_association": "Venini (glass designs 1946; Il Labirinto)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-VENINI",
+      "SRC-LSV-VENINI-FURNACE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-VIGNELLI-MASSIMO-1931",
+    "name": "Massimo Vignelli",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1931",
+    "died": "2014",
+    "origin": "Not verified",
+    "roles": [
+      "designer"
+    ],
+    "periods": [
+      "1953–1957"
+    ],
+    "main_association": "Venini (lighting)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-DBI-VENINI",
+      "SRC-LSV-VENINI-FURNACE"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SOTTSASS-ETTORE-1917",
+    "name": "Ettore Sottsass",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1917, Innsbruck",
+    "died": "2007",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1980s"
+    ],
+    "main_association": "Glass for Memphis made by Toso Vetri d'Arte; Vistosi",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-STEARNS-THOMAS-1936",
+    "name": "Thomas Stearns",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "4 September 1936, Oklahoma City",
+    "died": "2006",
+    "origin": "Not verified",
+    "roles": [
+      "artist"
+    ],
+    "periods": [
+      "1959/60–1962"
+    ],
+    "main_association": "Venini",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-LSV-STEARNS",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-DIAZ-DE-SANTILLANA-LUDOVICO-1931",
+    "name": "Ludovico Diaz de Santillana",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1931 (OS header)",
+    "died": "1989 (OS header)",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer",
+      "manager"
+    ],
+    "periods": [
+      "1959–1986"
+    ],
+    "main_association": "Managed Venini after Paolo Venini's death (son-in-law)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-SANTILLANA"
+    ],
+    "notes": "OS biography page for Ludovico contains Laura's text (copy error).",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-DE-SANTILLANA-LAURA-1955",
+    "name": "Laura de Santillana",
+    "alternative_names": [
+      "Laura Diaz de Santillana"
+    ],
+    "entity_type": "Person",
+    "born": "1955, Venice",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "artist",
+      "designer"
+    ],
+    "periods": [
+      "1976–"
+    ],
+    "main_association": "Venini; Eos (1985–1993); independent artist",
+    "ia_category": "contemporary",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-SANTILLANA"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-DIAZ-DE-SANTILLANA-ALESSANDRO-1959",
+    "name": "Alessandro Diaz de Santillana",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1959, Paris",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "artist",
+      "designer"
+    ],
+    "periods": [
+      "1980s–"
+    ],
+    "main_association": "Venini (to 1985); independent artist",
+    "ia_category": "contemporary",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-LSV-SANTILLANA"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-VIANELLO-VINICIO",
+    "name": "Vinicio Vianello",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "artist",
+      "designer",
+      "entrepreneur"
+    ],
+    "periods": [
+      "1948–1980s"
+    ],
+    "main_association": "'Murano asimmetrico' (1950); Vinicio Vianello & C. (founded 1957)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-DBI-VIANELLO",
+      "SRC-LSV-BIENNALE-1948"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-GASPARI-LUCIANO",
+    "name": "Luciano Gaspari",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "designer",
+      "artistic director"
+    ],
+    "periods": [
+      "1950s–"
+    ],
+    "main_association": "Artistic director Salviati & C. (1950s)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-SALVIATI-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ASTI-SERGIO",
+    "name": "Sergio Asti",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1960s"
+    ],
+    "main_association": "'Marco' vase for Salviati, Compasso d'Oro 1962",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-SALVIATI-COM",
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-LICATA-RICCARDO",
+    "name": "Riccardo Licata",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "painter",
+      "designer"
+    ],
+    "periods": [
+      "1950s"
+    ],
+    "main_association": "Venini (Met vase 1955–56)",
+    "ia_category": "master_artist",
+    "verification_status": "VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-DBI-VENINI",
+      "SRC-LSV-VENINI-FURNACE",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-AULENTI-GAE-1927",
+    "name": "Gae Aulenti",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1927",
+    "died": "2012",
+    "origin": "Not verified",
+    "roles": [
+      "architect",
+      "designer"
+    ],
+    "periods": [
+      "1970s"
+    ],
+    "main_association": "Vistosi; Venini (lamps)",
+    "ia_category": "master_artist",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-COSTANTINI-EGIDIO",
+    "name": "Egidio Costantini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1950s–"
+    ],
+    "main_association": "Fucina degli Angeli",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TAGLIAPIETRA-LINO-1934",
+    "name": "Lino Tagliapietra",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1934, Murano",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "artist"
+    ],
+    "periods": [
+      "1956–"
+    ],
+    "main_association": "Galliano Ferro (maestro 1956); Venini, La Murrina; Effetre International (1976); Pilchuck (from 1979)",
+    "ia_category": "contemporary",
+    "verification_status": "VERIFIED",
+    "research_priority": "P1",
+    "source_ids": [
+      "SRC-OS",
+      "SRC-MET-API"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TAGLIAPIETRA-ANDREA",
+    "name": "Andrea Tagliapietra",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Relationship to Lino Tagliapietra not verified; do not assume kinship.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SIGNORETTO-PINO-1944",
+    "name": "Pino Signoretto",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1944",
+    "died": "30 December 2017",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "sculptor"
+    ],
+    "periods": [
+      "1950s–2017"
+    ],
+    "main_association": "Hot-sculpted glass; own furnace on Murano (1978, per dealer source)",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-URBANGLASS-SIGNORETTO",
+      "SRC-WEB-MAESTRO-SIGNORETTO"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SIGNORETTO-SILVANO",
+    "name": "Silvano Signoretto",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1948 (dealer source)",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro"
+    ],
+    "periods": [],
+    "main_association": "Brother of Pino Signoretto (dealer source)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZANELLA-ARNALDO",
+    "name": "Arnaldo Zanella",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1949, Sant'Erasmo (dealer source)",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro"
+    ],
+    "periods": [],
+    "main_association": "Zanetti Arte Vetro since 1991 (dealer source); existing MURANIQ legacy biography",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "MURANIQ already has a legacy biography page; it must be re-verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ROSIN-LOREDANO",
+    "name": "Loredano Rosin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "sculptor"
+    ],
+    "periods": [],
+    "main_association": "Glass sculpture; trained his brother Dino",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "Commonly cited dates (1936–1992) not verified. Existing MURANIQ legacy biography to be re-verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ROSIN-DINO",
+    "name": "Dino Rosin",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "sculptor"
+    ],
+    "periods": [],
+    "main_association": "Glass sculpture (calcedonio, transparent)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-COSTANTINI-SERGIO",
+    "name": "Sergio Costantini",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Kinship with Egidio Costantini not verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-NASON-ERMANNO",
+    "name": "Ermanno Nason",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-TOFFOLO-CESARE-1961",
+    "name": "Cesare Toffolo",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1961, Venice",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "lampworker"
+    ],
+    "periods": [],
+    "main_association": "Studio on Fondamenta dei Vetrai; family of Murano glassmakers",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-CMOG-PEOPLE-TOFFOLO"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BUBACCO-LUCIO-1957",
+    "name": "Lucio Bubacco",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1957, Murano",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "lampworker",
+      "sculptor"
+    ],
+    "periods": [],
+    "main_association": "Lampworked figurative sculpture; Scuola Bubacco",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-WEB-HOMOFABER"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SCHIAVON-MASSIMILIANO",
+    "name": "Massimiliano Schiavon",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "glass artist"
+    ],
+    "periods": [],
+    "main_association": "Schiavon glassworks (official site unavailable)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-SCHIAVON-COM"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-SCHIAVON-FRANCO",
+    "name": "Franco Schiavon",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Relationship to Massimiliano Schiavon not verified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-CELOTTO-AFRO",
+    "name": "Afro Celotto",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-RAFFAELI-ELIO",
+    "name": "Elio Raffaeli",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "Spelling (Raffaeli/Raffaelli) to be checked.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-FURLAN-WALTER",
+    "name": "Walter Furlan",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro"
+    ],
+    "periods": [],
+    "main_association": "Picasso-themed sculptures (dealer claims)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "Dealer claim 'worked at Gino Cenedese 1940–45' conflicts with the 1946 founding of that firm; dealer claim of a Picasso licence is unverified.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BADIOLI-MARIO",
+    "name": "Mario Badioli",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Works 'after Picasso' (dealer listings)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-1STDIBS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-CENEDESE-SIMONE",
+    "name": "Simone Cenedese",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "maestro",
+      "entrepreneur"
+    ],
+    "periods": [],
+    "main_association": "Runs the glassworks his father opened in the 1970s (trade-fair profile)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "No kinship with Gino Cenedese established; do not link.",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZANETTI-LICIO",
+    "name": "Licio Zanetti",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZANETTI-OSCAR",
+    "name": "Oscar Zanetti",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "Not verified"
+    ],
+    "periods": [],
+    "main_association": "Not verified",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-OHIRA-YOICHI-1946",
+    "name": "Yoichi Ohira",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "1946, Japan",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "artist"
+    ],
+    "periods": [
+      "1973–"
+    ],
+    "main_association": "Fucina degli Angeli; Vetreria de Majo (1987); independent with maestro Livio Serena",
+    "ia_category": "contemporary",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-OS"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-BERENGO-ADRIANO",
+    "name": "Adriano Berengo",
+    "alternative_names": [],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Not verified",
+    "roles": [
+      "entrepreneur"
+    ],
+    "periods": [
+      "1989–"
+    ],
+    "main_association": "Founder Berengo Studio (1989)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-HOMOFABER"
+    ],
+    "notes": "",
+    "checked": "2026-11-10"
+  }
+]

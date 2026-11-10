@@ -20,7 +20,8 @@ export const MENU_SECTIONS = [
     label: "Glass Guide",
     href: routes.guide(),
     children: [
-      { label: "Makers", href: routes.makers() },
+      { label: "Makers & Workshops", href: routes.directory() },
+      { label: "Makers in the collection", href: routes.makers() },
       { label: "Techniques", href: routes.techniques() },
       { label: "Attribution & method", href: routes.attribution() },
     ],

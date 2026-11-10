@@ -4,6 +4,7 @@ import { getArtworks, getCreators, getTechniques } from "@/content/repository.se
 import { PageIntro } from "@/components/editorial/PageIntro";
 import { ArtworkImage, ImageBackdrop } from "@/components/editorial/ArtworkImage";
 import { ArrowLink } from "@/components/ui/ArrowLink";
+import { directoryStats } from "@/content/makers-directory";
 import { pageMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 
@@ -25,11 +26,18 @@ export default async function GuidePage() {
       image: art("chalcedony-and-aventurine-beaker"),
     },
     {
-      title: "Makers",
-      href: routes.makers(),
-      text: "The makers, glasshouses and artists behind the works, with what is documented about each and what is not.",
-      meta: `${creators.length} ${creators.length === 1 ? "profile" : "profiles"}`,
+      title: "Makers & Workshops",
+      href: routes.directory(),
+      text: "Glasshouses, masters, designers and families of Murano and Venice: who worked where, and for whom, with every source and its status.",
+      meta: `${directoryStats().published} names`,
       image: art("millefiori-paperweight-bigaglia"),
+    },
+    {
+      title: "Makers in the collection",
+      href: routes.makers(),
+      text: "The makers, glasshouses and artists behind the works shown on MURANIQ, with what is documented about each and what is not.",
+      meta: `${creators.length} ${creators.length === 1 ? "profile" : "profiles"}`,
+      image: art("enamelled-ewer-venice"),
     },
     {
       title: "Attribution & method",
