@@ -10,7 +10,7 @@ test("collection → filter → dossier → viewer → museum record", async ({ 
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
   await page.goto("/collection/?technique=calcedonia");
-  await expect(page.getByRole("status")).toContainText("3 works");
+  await expect(page.getByRole("status")).toContainText("4 works");
   await page.getByRole("link", { name: "Bottle in chalcedony glass" }).click();
   await expect(page).toHaveURL(/\/collection\/objects\/chalcedony-bottle-miotti\/$/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Bottle in chalcedony glass");

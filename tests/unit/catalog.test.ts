@@ -43,20 +43,20 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(27);
+    expect(r.total).toBe(28);
     expect(r.items[0]!.id).toBe("MUR-R001");
   });
 
   it("ORs within a facet and ANDs between facets", () => {
     const or = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina" }));
-    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013", "MUR-R020"]);
+    expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013", "MUR-R020", "MUR-R025"]);
     const and = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina", attribution: "probable" }));
     expect(and.items.map((a) => a.id)).toEqual(["MUR-R008"]);
   });
 
   it("matches accent-insensitive text and ranks title matches first", () => {
     const r = searchCatalog(all, parseCatalogQuery({ q: "CHÁLCEDONY" }));
-    expect(r.items.map((a) => a.id)).toEqual(["MUR-R001", "MUR-R008", "MUR-R013"]);
+    expect(r.items.map((a) => a.id)).toEqual(["MUR-R001", "MUR-R025", "MUR-R008", "MUR-R013"]);
     expect(r.items.every((a) => a.search.title.includes("chalcedony"))).toBe(true);
     // synonyms of technique terms
     expect(searchCatalog(all, parseCatalogQuery({ q: "milk glass" })).items.map((a) => a.id)).toEqual(["MUR-R007"]);
@@ -84,7 +84,7 @@ describe("search and facets", () => {
   it("computes disjunctive facet counts", () => {
     const r = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia" }));
     expect(r.facets.technique.avventurina).toBe(2); // still selectable alongside calcedonia
-    expect(r.facets.category["murano-glass"]).toBe(3);
+    expect(r.facets.category["murano-glass"]).toBe(4);
     expect(r.facets.category["fine-art"]).toBeUndefined();
   });
 

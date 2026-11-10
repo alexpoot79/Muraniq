@@ -141,6 +141,9 @@ const SPECS: Spec[] = [
   // R024 — Robert Frederick Blum, Bead Stringers, Venice, 1886 (AIC 1906.104)
   { id: "IMG-R024-FRONT", artworkId: "MUR-R024", file: "r024-blum-bead-stringers", w: 1686, h: 2458, view: "front", alt: "Etching of two young women seated side by side at work, one raising her arms above her head, a bottle on a shelf behind them", credit: AIC("1906.104") },
 
+  // R025 — Footed bowl, chalcedony glass, Venice, c. 1500 (Met 1975.1.1196)
+  { id: "IMG-R025-FRONT", artworkId: "MUR-R025", file: "r028-chalcedony-footed-bowl-front", w: 2200, h: 1722, view: "front", alt: "Wide footed bowl of deep red glass swirled with blue, purple and white marbling on a short stem", credit: MET("1975.1.1196") },
+
   // Draft fixture (must never be public)
   { id: "IMG-D007-FRONT", artworkId: "MUR-D007", file: "d001-beaker-draft", w: 1113, h: 1400, view: "front", alt: "Conical beaker of colourless glass with enamelled dots and a gilt foot", credit: CMA("1950.573.a") },
 ];
