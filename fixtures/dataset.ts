@@ -528,9 +528,9 @@ export const fixtureDataset: DatasetInput = {
   media: [
     ...referenceMedia,
     ...[
-      { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top", w: 1512, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
-      { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
-      { id: "IMG-M003-FRONT", artworkId: "MUR-M003", file: "r027-sommerso-vase-amber", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base" },
+      { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top-v2", w: 1512, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
+      { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
+      { id: "IMG-M003-FRONT", artworkId: "MUR-M003", file: "r027-sommerso-vase-amber-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base" },
     ].map((m) => ({
       id: m.id,
       artworkId: m.artworkId,
