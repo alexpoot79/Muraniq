@@ -19,6 +19,7 @@ import imagesJson from "./research/makers/images.json";
 import worksJson from "./research/makers/works.json";
 import techniquesJson from "./research/makers/techniques.json";
 import signaturesJson from "./research/makers/signatures.json";
+import museumImagesJson from "./research/makers/museum-images.json";
 import verificationJson from "./research/makers/verification.json";
 
 export type ResearchStatus = "VERIFIED" | "PARTIALLY_VERIFIED" | "ATTRIBUTED" | "DISPUTED" | "UNVERIFIED";
@@ -169,6 +170,32 @@ const slugify = (s: string) =>
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+
+/** At most this many photographs per maker; further works stay as links. */
+export const MAX_IMAGES_PER_ENTRY = 3;
+
+/**
+ * Extra public-domain works found in museum open-access APIs on 2026-11-10, each
+ * named by the museum itself as made by (or probably by) this entity. Homonyms
+ * (e.g. the painter Francesco Salviati) and works outside the entity's dates were
+ * rejected by hand. See museum-images.json and docs/IMAGE-SOURCES.md.
+ */
+type MuseumImage = {
+  id: string;
+  entity_id: string;
+  title: string;
+  date: string;
+  medium: string;
+  institution: string;
+  accession_number: string;
+  object_url: string;
+  museum_attribution: string;
+  credit: string;
+  rights_label: string;
+  file: string;
+  width: number;
+  height: number;
+};
 
 /** Local copies of the public-domain photographs (see docs/IMAGE-SOURCES.md). */
 const LOCAL_IMAGE: Record<string, { width: number; height: number }> = {
@@ -421,7 +448,33 @@ function build() {
               : null,
         };
       })
-      .sort((a, b) => Number(!!b.image) - Number(!!a.image));
+      .concat(
+        (museumImagesJson as MuseumImage[])
+          .filter((m) => m.entity_id === e.id && m.rights_label === "PUBLIC DOMAIN")
+          .map((m) => ({
+            id: m.id,
+            title: m.title,
+            date: m.date,
+            medium: m.medium,
+            institution: m.institution,
+            accessionNumber: m.accession_number,
+            url: m.object_url,
+            creditLineMaker: m.museum_attribution,
+            // One museum record: firm wording counts as partly verified, "probably/possibly" as attributed.
+            status: (/\b(probably|possibly|attributed)\b/i.test(m.museum_attribution) ? "ATTRIBUTED" : "PARTIALLY_VERIFIED") as ResearchStatus,
+            candidate: false,
+            image: {
+              src: `/images/makers/${m.file}`,
+              width: m.width,
+              height: m.height,
+              alt: [m.title, m.medium.toLowerCase(), m.date].filter(Boolean).join(", "),
+              credit: `${m.credit} · Public domain`,
+            },
+          })),
+      )
+      // Named works with a photograph first, candidates after; photographs capped per maker.
+      .sort((a, b) => Number(!!b.image) - Number(!!a.image) || Number(a.candidate) - Number(b.candidate))
+      .map((w, i) => (i < MAX_IMAGES_PER_ENTRY ? w : { ...w, image: null }));
 
     const techniqueNames = [
       ...new Set(
@@ -429,7 +482,9 @@ function build() {
           .filter((t) => t.associated_entity_ids.includes(e.id))
           .map((t) => t.name),
       ),
-      ...new Set(ownWorks.flatMap((w) => (worksJson as RawWork[]).find((x) => x.id === w.id)!.technique_ids.map((t) => techniques.get(t)!))),
+      ...new Set(
+        ownWorks.flatMap((w) => (worksJson as RawWork[]).find((x) => x.id === w.id)?.technique_ids.map((t) => techniques.get(t)!) ?? []),
+      ),
     ].filter((v, i, all) => v && all.indexOf(v) === i);
 
     const openQuestions = verification.conflicts

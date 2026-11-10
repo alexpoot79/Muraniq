@@ -117,6 +117,9 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
                       {[w.date, w.medium].filter(Boolean).join(" · ")}
                       {w.candidate ? " · maker not confirmed" : w.status !== "VERIFIED" ? ` · ${STATUS_LABEL[w.status].toLowerCase()}` : ""}
                     </span>
+                    {w.creditLineMaker && (
+                      <span className="text-muted-dark">Museum record: {w.creditLineMaker}</span>
+                    )}
                     <span className="text-muted-dark">
                       <a href={w.url} rel="noopener" className="link-quiet">
                         {w.image!.credit}

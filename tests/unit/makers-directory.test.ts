@@ -4,6 +4,7 @@ import { join } from "node:path";
 import makers from "@/content/research/makers/makers.json";
 import workshops from "@/content/research/makers/workshops.json";
 import images from "@/content/research/makers/images.json";
+import museumImages from "@/content/research/makers/museum-images.json";
 import { PUBLIC_STATUSES, directoryDossier, directoryEntries, directoryStats } from "@/content/makers-directory";
 
 const raw = [...makers, ...workshops] as { id: string; name: string; verification_status: string }[];
@@ -46,7 +47,9 @@ describe("makers & workshops directory", () => {
   });
 
   it("shows only public-domain photographs, from local copies", () => {
-    const pd = new Set(images.filter((i) => i.rights_label === "PUBLIC DOMAIN").map((i) => i.id.toLowerCase()));
+    const pd = new Set(
+      [...images, ...museumImages].filter((i) => i.rights_label === "PUBLIC DOMAIN").map((i) => i.id.toLowerCase()),
+    );
     const shown = entries.flatMap((e) => directoryDossier(e.slug)!.works.flatMap((w) => (w.image ? [w.image] : [])));
     expect(shown.length).toBeGreaterThan(0);
     for (const img of shown) {
@@ -55,6 +58,10 @@ describe("makers & workshops directory", () => {
       expect(existsSync(join(process.cwd(), "public", img.src))).toBe(true);
       expect(img.credit).toMatch(/Public domain$/);
     }
+  });
+
+  it("shows at most three photographs per maker", () => {
+    for (const e of entries) expect(directoryDossier(e.slug)!.works.filter((w) => w.image).length).toBeLessThanOrEqual(3);
   });
 
   it("does not publish internal research notes", () => {
