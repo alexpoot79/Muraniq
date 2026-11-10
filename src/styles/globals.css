@@ -1,0 +1,595 @@
+@import "tailwindcss";
+
+/*
+ * MURANIQ design tokens — "Palazzo".
+ * Black viewing rooms, a warm beige study room, ivory type, champagne gold used
+ * sparingly (hairlines, numerals, one accent per view). See docs/ART-DIRECTION.md.
+ * Gold is never body text; on beige it is decorative only.
+ */
+@theme {
+  --color-stage: #080808; /* primary black */
+  --color-raised: #11100e; /* secondary black */
+  --color-raised-2: #181613;
+  --color-paper: #e8ddcb; /* beige */
+  --color-paper-2: #efe6d7;
+  --color-ivory: #f5f0e7;
+  --color-ink: #14110d;
+  --color-ink-muted: #4a443b;
+  --color-on-dark: #f5f0e7;
+  --color-muted-dark: #a59d91;
+  --color-accent: #c5a46d; /* champagne gold */
+  --color-accent-deco: #a88a54; /* antique gold: rules and ornaments only */
+  --color-accent-ink: #735a2e; /* bronze: gold-toned text on paper and ivory (4.8:1 or better) */
+  --color-line-dark: #27241f;
+  --color-line-paper: #c9bca6;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-display-italic: var(--font-cormorant-italic), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --ease-gallery: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-silk: cubic-bezier(0.16, 1, 0.3, 1);
+  --breakpoint-xs: 26rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    background: var(--color-stage);
+    color: var(--color-on-dark);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+    font-weight: 380;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip; /* transforms from reveals must never cause sideways scrolling */
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+  .surface-paper :focus-visible,
+  .surface-paper:focus-visible,
+  .surface-ivory :focus-visible {
+    outline-color: var(--color-ink);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+}
+
+@layer components {
+  /* ---------------------------------------------------------------- */
+  /* Containers                                                        */
+  /* ---------------------------------------------------------------- */
+  .container-gallery {
+    width: 100%;
+    max-width: 96rem; /* 1536px */
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .container-gallery {
+      padding-inline: 2.5rem;
+    }
+  }
+  @media (min-width: 80rem) {
+    .container-gallery {
+      padding-inline: 5rem;
+    }
+  }
+  .measure {
+    max-width: 62ch;
+  }
+  .section-y {
+    padding-block: 5.5rem;
+  }
+  @media (min-width: 64rem) {
+    .section-y {
+      padding-block: 9rem;
+    }
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Type                                                              */
+  /* ---------------------------------------------------------------- */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  /* Label preceded by a short champagne hairline. */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--color-accent);
+    flex-shrink: 0;
+  }
+  .surface-paper .eyebrow::before,
+  .surface-ivory .eyebrow::before {
+    background: var(--color-accent-deco);
+  }
+  .numeral {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-variant-numeric: lining-nums;
+    letter-spacing: 0.02em;
+  }
+  .display-hero {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.25rem, 1.4rem + 6vw, 8.75rem);
+    line-height: 0.92;
+    letter-spacing: -0.025em;
+  }
+  .display-xl {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.75rem, 1.5rem + 4.4vw, 6.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+  }
+  .display-lg {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.25rem, 1.55rem + 2.7vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+  }
+  .display-md {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.625rem, 1.35rem + 1.05vw, 2.375rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .display-sm {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.375rem, 1.25rem + 0.45vw, 1.625rem);
+    line-height: 1.15;
+  }
+  .serif-italic {
+    font-family: var(--font-display-italic);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .statement {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.75rem, 1.2rem + 2.1vw, 3.5rem);
+    line-height: 1.18;
+    letter-spacing: -0.012em;
+  }
+  .lede {
+    font-size: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3125rem);
+    line-height: 1.6;
+    font-weight: 330;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Surfaces                                                          */
+  /* ---------------------------------------------------------------- */
+  .surface-paper {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  .surface-ivory {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+  }
+  .surface-paper a,
+  .surface-ivory a {
+    color: var(--color-ink);
+  }
+  .hairline-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-accent) 55%, transparent), transparent);
+  }
+
+  /* A photograph presented on a dark mat, like a print in a vitrine. */
+  .plate {
+    position: relative;
+    background: radial-gradient(120% 90% at 50% 0%, #1b1915 0%, var(--color-raised) 60%);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 12%, transparent);
+  }
+  .surface-paper .plate,
+  .surface-ivory .plate {
+    background: var(--color-paper-2);
+    box-shadow: inset 0 0 0 1px var(--color-line-paper);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Links                                                             */
+  /* ---------------------------------------------------------------- */
+  .link-quiet {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    transition: text-decoration-color 200ms var(--ease-gallery), color 200ms var(--ease-gallery);
+  }
+  .link-quiet:hover {
+    text-decoration-color: currentColor;
+  }
+  /* Uppercase link with a drawn arrow that extends on hover. */
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 2.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 240ms var(--ease-gallery);
+  }
+  .link-arrow .arrow {
+    position: relative;
+    display: inline-block;
+    width: 2.25rem;
+    height: 1px;
+    background: currentColor;
+    transition: width 420ms var(--ease-silk);
+  }
+  .link-arrow .arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(45deg);
+  }
+  .link-arrow:hover .arrow,
+  .group:hover .link-arrow .arrow {
+    width: 3.5rem;
+  }
+  .link-arrow:hover {
+    color: var(--color-accent);
+  }
+  .surface-paper .link-arrow:hover,
+  .surface-ivory .link-arrow:hover {
+    color: var(--color-ink-muted);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Buttons                                                           */
+  /* ---------------------------------------------------------------- */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    min-height: 3.25rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition:
+      background-color 280ms var(--ease-gallery),
+      color 280ms var(--ease-gallery),
+      border-color 280ms var(--ease-gallery);
+  }
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+  }
+  .btn-primary:hover {
+    background: var(--color-accent);
+  }
+  .btn-ghost {
+    border-color: color-mix(in srgb, var(--color-on-dark) 32%, transparent);
+    color: var(--color-on-dark);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .surface-paper .btn-ghost,
+  .surface-ivory .btn-ghost,
+  .btn-outline-ink {
+    border-color: color-mix(in srgb, var(--color-ink) 55%, transparent);
+    color: var(--color-ink);
+  }
+  .surface-paper .btn-ghost:hover,
+  .surface-ivory .btn-ghost:hover,
+  .btn-outline-ink:hover {
+    border-color: var(--color-ink);
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+  .btn-ink {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+  .surface-paper a.btn-ink,
+  .surface-ivory a.btn-ink {
+    color: var(--color-ivory);
+  }
+  .btn-ink:hover {
+    background: #2b251d;
+  }
+  .btn-sm {
+    min-height: 2.75rem;
+    padding: 0.5rem 1.125rem;
+    font-size: 0.6875rem;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Form fields                                                       */
+  /* ---------------------------------------------------------------- */
+  .field {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.875rem 1rem;
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    border: 1px solid color-mix(in srgb, var(--color-ink) 45%, transparent);
+    border-radius: 0;
+    transition: border-color 200ms var(--ease-gallery);
+  }
+  .field:hover {
+    border-color: var(--color-ink);
+  }
+  .field:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 1px;
+  }
+  .field[aria-invalid="true"] {
+    border-color: #8a1c1c;
+    border-width: 2px;
+  }
+  .field-dark {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    color: var(--color-on-dark);
+    border: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-on-dark) 35%, transparent);
+    border-radius: 0;
+  }
+  .field-dark::placeholder {
+    color: color-mix(in srgb, var(--color-muted-dark) 85%, transparent);
+  }
+  .field-dark:hover {
+    border-bottom-color: var(--color-on-dark);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Motion                                                            */
+  /* ---------------------------------------------------------------- */
+  /* Hero text settles in once on load (transform + opacity on text only, never on the LCP image). */
+  .settle {
+    animation: settle 1100ms var(--ease-silk) both;
+  }
+  .settle-1 {
+    animation-delay: 120ms;
+  }
+  .settle-2 {
+    animation-delay: 260ms;
+  }
+  .settle-3 {
+    animation-delay: 420ms;
+  }
+  /* Slow push-in on the hero photograph: transform only. */
+  .slow-zoom {
+    animation: slow-zoom 2600ms var(--ease-silk) both;
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.045);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(2.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes unveil {
+  from {
+    clip-path: inset(14% 0 0 0);
+    transform: scale(1.06);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+  }
+}
+@keyframes drift {
+  from {
+    transform: translateY(3.5rem);
+  }
+  to {
+    transform: translateY(-3.5rem);
+  }
+}
+@keyframes grow-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/*
+ * Scroll-driven reveals: pure CSS, no JavaScript, only where supported and only
+ * without a reduced-motion preference. Without support everything is simply visible.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .reveal-img {
+      animation: unveil linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+    .reveal-line {
+      transform-origin: left;
+      animation: grow-line linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 30%;
+    }
+    @media (min-width: 64rem) {
+      .drift {
+        animation: drift linear both;
+        animation-timeline: view();
+        animation-range: cover;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Heritage timeline (home): hovering or focusing a moment shows its object. Pure CSS. */
+.heritage-img {
+  opacity: 0;
+  transform: scale(0.985);
+  transition:
+    opacity 600ms var(--ease-silk),
+    transform 900ms var(--ease-silk);
+}
+.heritage-img[data-i="1"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item:hover, .heritage-item:focus-within) .heritage-img[data-i="1"] {
+  opacity: 0;
+}
+.heritage:has(.heritage-item[data-i="1"]:hover, .heritage-item[data-i="1"]:focus-within) .heritage-img[data-i="1"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="2"]:hover, .heritage-item[data-i="2"]:focus-within) .heritage-img[data-i="2"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="3"]:hover, .heritage-item[data-i="3"]:focus-within) .heritage-img[data-i="3"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="4"]:hover, .heritage-item[data-i="4"]:focus-within) .heritage-img[data-i="4"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="5"]:hover, .heritage-item[data-i="5"]:focus-within) .heritage-img[data-i="5"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="6"]:hover, .heritage-item[data-i="6"]:focus-within) .heritage-img[data-i="6"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="7"]:hover, .heritage-item[data-i="7"]:focus-within) .heritage-img[data-i="7"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage:has(.heritage-item[data-i="8"]:hover, .heritage-item[data-i="8"]:focus-within) .heritage-img[data-i="8"] {
+  opacity: 1;
+  transform: none;
+}
+.heritage-item > * {
+  transition: padding-left 500ms var(--ease-silk);
+}
+@media (min-width: 64rem) {
+  .heritage-item:hover > *,
+  .heritage-item:focus-within > * {
+    padding-left: 1.25rem;
+  }
+}
+
+/* Horizontal gallery (exhibition mode): native scroll snapping, no script. */
+.gallery-track {
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-dark) transparent;
+}
+.gallery-track > * {
+  scroll-snap-align: start;
+}
