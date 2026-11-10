@@ -43,7 +43,7 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(28);
+    expect(r.total).toBe(32);
     expect(r.items[0]!.id).toBe("MUR-R001");
   });
 
@@ -71,7 +71,7 @@ describe("search and facets", () => {
   it("matches periods by overlap and reports undated works separately", () => {
     const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
     expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R010", "MUR-R013", "MUR-R014", "MUR-R019"]);
-    expect(r.undatedExcluded).toBe(4); // the Roman bowl and the three undated sommerso pieces
+    expect(r.undatedExcluded).toBe(8); // the two Roman pieces and the six undated sommerso pieces
   });
 
   it("returns a correct empty result", () => {

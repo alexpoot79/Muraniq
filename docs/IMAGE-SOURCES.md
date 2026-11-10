@@ -84,6 +84,7 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 | `public/images/reference/r023-sargent-venetian-glass-workers.jpg` | Venetian Glass Workers (John Singer Sargent) | front | [The Art Institute of Chicago, 1933.1217](https://www.artic.edu/artworks/110761) | CC0 | The Art Institute of Chicago, 1933.1217 · CC0 |
 | `public/images/reference/r024-blum-bead-stringers.jpg` | Bead Stringers, Venice (Robert Frederick Blum) | front | [The Art Institute of Chicago, 1906.104](https://www.artic.edu/artworks/87492) | CC0 | The Art Institute of Chicago, 1906.104 · CC0 |
 | `public/images/reference/r028-chalcedony-footed-bowl-front.jpg` | Footed bowl in chalcedony glass | front | [The Metropolitan Museum of Art, 1975.1.1196](https://www.metmuseum.org/art/collection/search/460754) | CC0 | The Metropolitan Museum of Art, 1975.1.1196 · CC0 |
+| `public/images/reference/r032-weathered-roman-bottle-front.jpg` | Naturally weathered Roman glass bottle | front | [The Metropolitan Museum of Art, 14.40.807](https://www.metmuseum.org/art/collection/search/248858) | CC0 | The Metropolitan Museum of Art, 14.40.807 · CC0 |
 | `public/images/reference/d001-beaker-draft.jpg` | Draft vase (must never be public) | front | The Cleveland Museum of Art, 1950.573.a · CC0 (draft fixture, never published) | CC0 | The Cleveland Museum of Art, 1950.573.a · CC0 |
 
 ## Collection photographs (MURANIQ's own objects)
@@ -97,6 +98,9 @@ is not retouched, recomposed or generated.
 | `public/images/collection/r025-sommerso-bowl-top-v3.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
 | `public/images/collection/r026-sommerso-vase-green-v2.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
 | `public/images/collection/r027-sommerso-vase-amber-v2.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
+| `public/images/collection/r029-facet-bowl-blue.jpg` | Facet-cut sommerso bowl in blue and amber (MUR-M004) | Owned |
+| `public/images/collection/r030-facet-bowl-green.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
+| `public/images/collection/r031-facet-bowl-red.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
 
 ## Editorial images (heritage and city)
 
