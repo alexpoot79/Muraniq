@@ -49,6 +49,7 @@ const PAGES = [
   "/glass-guide/techniques/",
   "/glass-guide/techniques/calcedonia/",
   "/glass-guide/techniques/filigrana/",
+  "/glass-guide/techniques/efeso/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",
   "/about/",
