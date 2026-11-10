@@ -85,6 +85,18 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 | `public/images/reference/r024-blum-bead-stringers.jpg` | Bead Stringers, Venice (Robert Frederick Blum) | front | [The Art Institute of Chicago, 1906.104](https://www.artic.edu/artworks/87492) | CC0 | The Art Institute of Chicago, 1906.104 · CC0 |
 | `public/images/reference/d001-beaker-draft.jpg` | Draft vase (must never be public) | front | The Cleveland Museum of Art, 1950.573.a · CC0 (draft fixture, never published) | CC0 | The Cleveland Museum of Art, 1950.573.a · CC0 |
 
+## Collection photographs (MURANIQ's own objects)
+
+Supplied by the owner on 10 November 2026. Edited at the owner's request: background blurred and slightly
+darkened, white balance neutralised from the background, mild contrast and saturation lift. The object itself
+is not retouched, recomposed or generated.
+
+| File | Object | Rights |
+| --- | --- | --- |
+| `public/images/collection/r025-sommerso-bowl-top.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
+| `public/images/collection/r026-sommerso-vase-green.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
+| `public/images/collection/r027-sommerso-vase-amber.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
+
 ## Editorial images (heritage and city)
 
 | File | Caption | Use | Holder and record | Licence | Credit shown |

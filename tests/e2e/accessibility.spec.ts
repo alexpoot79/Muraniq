@@ -50,6 +50,8 @@ const PAGES = [
   "/glass-guide/techniques/calcedonia/",
   "/glass-guide/techniques/filigrana/",
   "/glass-guide/techniques/efeso/",
+  "/glass-guide/techniques/sommerso/",
+  "/collection/objects/sommerso-faceted-vase-green/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",
   "/about/",
