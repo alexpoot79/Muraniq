@@ -144,6 +144,9 @@ const SPECS: Spec[] = [
   // R025 — Footed bowl, chalcedony glass, Venice, c. 1500 (Met 1975.1.1196)
   { id: "IMG-R025-FRONT", artworkId: "MUR-R025", file: "r028-chalcedony-footed-bowl-front", w: 2200, h: 1722, view: "front", alt: "Wide footed bowl of deep red glass swirled with blue, purple and white marbling on a short stem", credit: MET("1975.1.1196") },
 
+  // R026 — Glass bottle, Roman, 4th–5th century CE, naturally weathered (Met 14.40.807)
+  { id: "IMG-R026-FRONT", artworkId: "MUR-R026", file: "r032-weathered-roman-bottle-front", w: 1467, h: 2200, view: "front", alt: "Green glass bottle with a round body and long flared neck, its surface patchy with iridescent, flaking weathering", credit: MET("14.40.807") },
+
   // Draft fixture (must never be public)
   { id: "IMG-D007-FRONT", artworkId: "MUR-D007", file: "d001-beaker-draft", w: 1113, h: 1400, view: "front", alt: "Conical beaker of colourless glass with enamelled dots and a gilt foot", credit: CMA("1950.573.a") },
 ];
