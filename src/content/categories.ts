@@ -22,10 +22,10 @@ export const CATEGORIES: CategoryInfo[] = [
       "Blown and sculpted glass from the workshops of Murano, presented with the techniques, marks and sources that place each piece.",
   },
   {
-    slug: "studio-glass",
-    title: "Studio Glass",
-    kicker: "Independent makers and studios",
-    intro: "Work by individual glass artists and small studios, where the hand of the maker is the subject.",
+    slug: "other-glass",
+    title: "Other Glass",
+    kicker: "Glass beyond Murano",
+    intro: "Glass from other makers, studios and places, documented with the same attention to evidence.",
   },
   {
     slug: "fine-art",

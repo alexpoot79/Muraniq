@@ -130,7 +130,7 @@ export default async function HomePage() {
               Glass and art, <span className="serif-italic text-accent">seen closely.</span>
             </h1>
             <p className="settle settle-2 lede measure mt-8 text-muted-dark lg:mt-10">
-              A private collection of Murano glass, studio glass, fine art and collectible objects. Each work is shown in
+              A private collection of Murano glass, other glass, fine art and collectible objects. Each work is shown in
               full, with what is known about its making, and an honest account of what is not.
             </p>
             <div className="settle settle-3 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">

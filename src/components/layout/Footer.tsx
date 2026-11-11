@@ -27,7 +27,7 @@ export function Footer() {
             <LogoImage variant="lockup" height={96} className="h-20 w-auto lg:h-24" />
           </Link>
           <p className="mt-8 max-w-md text-sm text-muted-dark">
-            A private collection of Murano glass, studio glass, fine art and collectible objects, with independent
+            A private collection of Murano glass, other glass, fine art and collectible objects, with independent
             research into how each piece was made and by whom.
           </p>
           <div className="hairline-gold mt-14 w-full max-w-3xl" />

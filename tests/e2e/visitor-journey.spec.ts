@@ -58,7 +58,7 @@ test("empty results, empty areas and 404 behave honestly", async ({ page }) => {
   await page.goto("/collection/?q=zzzzqq");
   await expect(page.getByRole("heading", { name: "No works match these choices." })).toBeVisible();
 
-  await page.goto("/collection/studio-glass/");
+  await page.goto("/collection/other-glass/");
   await expect(page.getByRole("heading", { name: "This area is being documented." })).toBeVisible();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
