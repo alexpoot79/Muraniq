@@ -15,7 +15,7 @@ export default function HistoryPage() {
   const sections = HISTORY_SECTIONS.filter((s) => s.body.length > 0);
   return (
     <>
-      <PageIntro crumbs={[{ label: "History", href: routes.history() }]} kicker="History" title="Venetian and Murano glass," accent="through the centuries.">
+      <PageIntro crumbs={[{ label: "Glass Guide", href: routes.guide() }, { label: "History of Murano glass", href: routes.history() }]} kicker="History of Murano glass" title="Venetian and Murano glass," accent="through the centuries.">
         <p>{HISTORY_INTRO}</p>
       </PageIntro>
       {sections.map((s) => (

@@ -19,6 +19,13 @@ export default async function GuidePage() {
   const art = (slug: string) => artworks.find((a) => a.slug === slug);
   const entries = [
     {
+      title: "History of Murano glass",
+      href: routes.history(),
+      text: "How glassmaking grew in Venice and on the island of Murano, period by period, from its origins to today.",
+      meta: "History",
+      image: art("venetian-glass-workers-sargent"),
+    },
+    {
       title: "Techniques",
       href: routes.techniques(),
       text: "How the glass was made, from calcedonia and lattimo to millefiori and aventurine, and how to recognise each in a real object.",
