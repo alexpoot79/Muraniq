@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
 import { MENU_SECTIONS, NAV_LEFT, NAV_RIGHT } from "./nav";
-import { routes } from "@/lib/routes";
 
 const navLink =
   "label relative inline-flex min-h-11 items-center text-on-dark/90 transition-colors duration-300 hover:text-on-dark after:absolute after:inset-x-0 after:bottom-2 after:h-px after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 after:ease-[var(--ease-silk)] hover:after:scale-x-100";
@@ -41,11 +40,6 @@ export function Header() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href={routes.history()} className={navLink}>
-                  History
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
