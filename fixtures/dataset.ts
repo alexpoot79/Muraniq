@@ -1837,6 +1837,13 @@ export const fixtureDataset: DatasetInput = {
   signatureReferences,
   redirects: [
     {
+      from: "/history/",
+      to: "/glass-guide/history/",
+      reason: "History moves into the Glass Guide as History of Murano glass (2026-11-11)",
+      checkedOn: "2026-11-11",
+      active: true,
+    },
+    {
       from: "/collection/studio-glass/",
       to: "/collection/other-glass/",
       reason: "Category renamed from Studio Glass to Other Glass (2026-11-11)",
