@@ -21,20 +21,22 @@ export default function HistoryPage() {
       {sections.map((s) => (
         <section key={s.id} id={s.id} aria-labelledby={`h-${s.id}`} className="section-y">
           <div className="container-gallery grid gap-10 lg:grid-cols-12">
-            <p className="label text-muted-dark lg:col-span-3">{s.period}</p>
+            <div className="flex flex-col gap-6 lg:col-span-3">
+              <p className="label text-muted-dark">{s.period}</p>
+              {s.image && (
+                <figure className="flex max-w-[14rem] flex-col gap-2">
+                  <Image src={s.image.src} width={s.image.w} height={s.image.h} alt={s.image.alt} sizes="14rem" className="h-auto max-h-56 w-auto max-w-full object-contain" />
+                  <figcaption className="text-xs leading-snug text-muted-dark">
+                    {s.image.caption}. {s.image.credit}. Reference image, not in the MURANIQ collection.
+                  </figcaption>
+                </figure>
+              )}
+            </div>
             <div className="flex flex-col gap-6 lg:col-span-8">
               <h2 id={`h-${s.id}`} className="font-display text-3xl">{s.title}</h2>
               {s.body.map((p, i) => (
                 <p key={i} className="text-muted-dark">{p}</p>
               ))}
-              {s.image && (
-                <figure className="mt-2 flex flex-col gap-3">
-                  <Image src={s.image.src} width={s.image.w} height={s.image.h} alt={s.image.alt} sizes="(min-width: 1024px) 40rem, 100vw" className="h-auto max-h-[36rem] w-auto max-w-full" />
-                  <figcaption className="text-sm text-muted-dark">
-                    {s.image.caption}. {s.image.credit}. Reference image, not part of the MURANIQ collection.
-                  </figcaption>
-                </figure>
-              )}
               {s.sources.length > 0 && (
                 <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-dark">
                   {s.sources.map((src) => (
