@@ -16,7 +16,9 @@ import {
   type PublicTechnique,
 } from "./public-projection";
 import { attributionPhrase } from "@/features/artworks/attribution";
+import { routes } from "@/lib/routes";
 import { publicationBlockers } from "./validate";
+import { buildSignatures, type MakerSignatures, type SignatureView } from "./signatures";
 
 export type CreatorLink = {
   id: string;
@@ -80,6 +82,12 @@ export type Publication = {
   techniques: Array<PublicTechnique & { artworkIds: string[] }>;
   sources: PublicSource[];
   redirects: Dataset["redirects"];
+  /** Signatures & Marks per maker id (ordered by the editor; primary resolved). */
+  makerSignatures: Record<string, MakerSignatures>;
+  /** References reading a collection object's mark, keyed "artworkId/markId". */
+  markSignatures: Record<string, SignatureView[]>;
+  /** Every public signature reference (for the combined index and exports). */
+  signatures: SignatureView[];
 };
 
 export function fold(s: string): string {
@@ -106,8 +114,9 @@ function asPreview<T extends { status: string }>(record: T): T {
   return record.status === "draft" || record.status === "in_review" ? { ...record, status: "published" } : record;
 }
 
-export function buildPublication(input: Dataset, opts: { preview?: boolean } = {}): Publication {
+export function buildPublication(input: Dataset, opts: { preview?: boolean; today?: string } = {}): Publication {
   const preview = opts.preview === true;
+  const today = opts.today ?? new Date().toISOString().slice(0, 10);
   const data: Dataset = preview
     ? {
         ...input,
@@ -115,6 +124,7 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean } = {
         creators: input.creators.map(asPreview),
         glasshouses: input.glasshouses.map(asPreview),
         techniques: input.techniques.map(asPreview),
+        signatureReferences: input.signatureReferences.map(asPreview),
       }
     : input;
   const previewNotes: Record<string, PreviewNote> = {};
@@ -231,10 +241,22 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean } = {
     };
   }
 
+  const sig = buildSignatures({
+    data,
+    creators,
+    media,
+    sources,
+    artworks: new Map(records.map((a) => [a.id, { record: a, href: routes.artwork(a.slug) }] as const)),
+    today,
+  });
+
   return {
     previewNotes,
     artworks,
     dossiers,
+    makerSignatures: Object.fromEntries(sig.byMaker),
+    markSignatures: Object.fromEntries(sig.byMark),
+    signatures: [...sig.views.values()].sort((x, y) => x.sortOrder - y.sortOrder || x.id.localeCompare(y.id)),
     creators: [...creators.values()]
       .map((c) => ({ ...c, artworkIds: artworks.filter((a) => a.makerSlugs.includes(c.slug)).map((a) => a.id) }))
       .sort((x, y) => x.name.localeCompare(y.name)),

@@ -1,5 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 import { certaintyField, idField, sourceRefs } from "./shared";
+import { MARK_APPLICATIONS } from "./signatures";
 
 const FIELD_GROUPS = [
   { name: "identity", title: "Identity", default: true },
@@ -81,10 +82,20 @@ export const artwork = defineType({
         {
           type: "object",
           fields: [
-            { name: "kind", type: "string", options: { list: ["signature", "label", "pontil", "engraving", "stamp", "other"] }, validation: (r) => r.required() },
+            {
+              name: "markId",
+              title: "Mark ID (MRK-…)",
+              type: "string",
+              description: "Needed when a signature reference points at this mark. Never reused.",
+              validation: (r) => r.regex(/^MRK-[A-Z0-9-]+$/, { name: "MRK-XXXX" }),
+            },
+            { name: "kind", type: "string", options: { list: ["signature", "label", "pontil", "engraving", "stamp", "inscription", "other"] }, validation: (r) => r.required() },
+            { name: "application", title: "How it was applied", type: "string", options: { list: MARK_APPLICATIONS } },
             { name: "location", type: "string" },
             { name: "observation", type: "text", rows: 2 },
-            { name: "transcription", title: "Literal transcription (as written)", type: "string" },
+            { name: "transcription", title: "Literal transcription (as written)", type: "string", description: "“/” for a line break, […] for an illegible part." },
+            { name: "transcriptionNote", title: "What could not be read, and how it was read", type: "text", rows: 2 },
+            { ...certaintyField("transcriptionCertainty", "Certainty of the reading"), validation: undefined },
             { name: "interpretation", type: "text", rows: 2, description: "Kept separate from the observation." },
             certaintyField("interpretationCertainty", "Certainty of interpretation"),
             { name: "image", type: "reference", to: [{ type: "mediaAsset" }] },

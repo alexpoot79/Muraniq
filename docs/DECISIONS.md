@@ -55,3 +55,11 @@ Short records of choices made during the build. Architecture decisions themselve
     for these fixtures and should not be added to real collection records.
 14. **Luxury art direction.** See `docs/ART-DIRECTION.md`. Gold-toned text on light surfaces uses `accent-ink`
     (#735A2E) for contrast; the two brighter golds are for dark surfaces and ornaments.
+15. **Signatures & Marks.** See `docs/SIGNATURES.md`. A separate `SignatureReference` record (one documented
+    example) links to the observation on a collection object's `Mark` instead of copying it; marks on objects held
+    elsewhere carry their observation on the reference and stay external objects. Kind of mark and how it was
+    applied are separate fields. A personal signature belongs to a person and a factory mark to a firm; a firm's
+    mark appears on a person's profile only as context of a firmly documented work and never in the compact block.
+    Photographs need established rights, web clearance, credit, a source and a review date; recognition use is
+    recorded separately and only affects the internal export. The full-screen viewer is shared
+    (`ViewerDialog`, rendered in a portal on `<body>`), so object views and signature references behave the same.

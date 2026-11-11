@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ResearchStatusBadge } from "@/components/ui/ResearchStatusBadge";
 import { STATUS_LABEL, directoryDossier, directoryEntries } from "@/content/makers-directory";
 import { pageMetadata } from "@/lib/metadata";
+import { APPLICATION_LABEL, KIND_LABEL } from "@/features/signatures/labels";
 import { routes } from "@/lib/routes";
 
 export function generateStaticParams() {
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/glass-guide/maker
 
 function Section({ id, n, title, children }: { id: string; n: number; title: string; children: React.ReactNode }) {
   return (
-    <section aria-labelledby={`${id}-title`} className="grid gap-8 border-t border-line-paper py-14 first:border-t-0 first:pt-0 md:grid-cols-12 lg:py-20">
+    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-28 grid gap-8 border-t border-line-paper py-14 first:border-t-0 first:pt-0 md:grid-cols-12 lg:py-20">
       <div className="md:col-span-4">
         <p aria-hidden="true" className="numeral text-xl text-accent-ink">
           {String(n).padStart(2, "0")}
@@ -50,7 +51,8 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
   const sections = [
     d.connections.length > 0 && "connections",
     d.works.length > 0 && "works",
-    (d.marks.length > 0 || d.techniques.length > 0) && "marks",
+    d.marks.length > 0 && "signatures",
+    d.techniques.length > 0 && "techniques",
     d.openQuestions.length > 0 && "questions",
     "sources",
   ].filter(Boolean) as string[];
@@ -192,27 +194,45 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
             </Section>
           )}
 
-          {(d.marks.length > 0 || d.techniques.length > 0) && (
-            <Section id="marks" n={num("marks")} title="Marks and techniques">
-              {d.marks.length > 0 && (
-                <ul className="flex flex-col gap-5">
-                  {d.marks.map((m, i) => (
-                    <li key={i} className="flex flex-col gap-1">
-                      <span className="label text-[0.6875rem] text-ink-muted">{m.kind}</span>
-                      <span className="font-display text-xl">{m.text}</span>
+          {d.marks.length > 0 && (
+            <Section id="signatures" n={num("signatures")} title="Signatures & Marks">
+              <ul className="flex flex-col border-t border-line-paper">
+                {d.marks.map((m, i) => (
+                  <li key={i} className="flex flex-col gap-2 border-b border-line-paper py-5">
+                    <span className="label text-[0.6875rem] text-ink-muted">
+                      {KIND_LABEL[m.markKind]} <span aria-hidden="true">·</span> {APPLICATION_LABEL[m.application]}
+                    </span>
+                    <span className="font-display text-xl">{m.text}</span>
+                    <span className="text-sm text-ink-muted">
+                      {[m.period, m.frequency, STATUS_LABEL[m.status]].filter(Boolean).join(" · ")}
+                    </span>
+                    {m.sources.length > 0 && (
                       <span className="text-sm text-ink-muted">
-                        {[m.period, m.frequency, STATUS_LABEL[m.status]].filter(Boolean).join(" · ")}
+                        Source:{" "}
+                        {m.sources.map((s, j) => (
+                          <span key={s.id}>
+                            {j > 0 && "; "}
+                            {s.url ? (
+                              <a href={s.url} rel="noopener" className="link-quiet">
+                                {s.title}
+                              </a>
+                            ) : (
+                              s.title
+                            )}
+                          </span>
+                        ))}
                       </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {d.techniques.length > 0 && (
-                <p className={d.marks.length ? "mt-8" : ""}>
-                  <span className="label mr-3 text-[0.6875rem] text-ink-muted">Techniques</span>
-                  {d.techniques.join(", ")}
-                </p>
-              )}
+                    )}
+                    <span className="text-sm text-ink-muted">Described in the source; no photograph of this mark can be shown yet.</span>
+                  </li>
+                ))}
+              </ul>
+            </Section>
+          )}
+
+          {d.techniques.length > 0 && (
+            <Section id="techniques" n={num("techniques")} title="Techniques">
+              <p>{d.techniques.join(", ")}</p>
             </Section>
           )}
 

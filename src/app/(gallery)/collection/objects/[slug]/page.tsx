@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArtworkBySlug, getArtworks, getPreviewNote } from "@/content/repository.server";
+import { getArtworkBySlug, getArtworks, getPreviewNote, getSignaturesForArtwork } from "@/content/repository.server";
+import { APPLICATION_LABEL, certaintyWord } from "@/features/signatures/labels";
 import { categoryBySlug } from "@/content/categories";
 import { Viewer } from "@/features/artworks/Viewer";
 import { ArtworkCard } from "@/components/editorial/ArtworkCard";
@@ -40,6 +41,7 @@ const MARK_KIND: Record<string, string> = {
   pontil: "Pontil mark",
   engraving: "Engraving",
   stamp: "Stamp",
+  inscription: "Inscription",
   other: "Mark",
 };
 
@@ -74,6 +76,7 @@ export default async function ArtworkPage({ params }: Props) {
   const { slug } = await params;
   const [a, previewNote] = await Promise.all([getArtworkBySlug(slug), getPreviewNote(slug)]);
   if (!a) notFound();
+  const markRefs = await getSignaturesForArtwork(a.id);
 
   const category = categoryBySlug(a.category)!;
   const dims = formatDimensions(a.dimensions);
@@ -290,13 +293,18 @@ export default async function ArtworkPage({ params }: Props) {
                     <h3 className="font-display text-2xl">
                       {MARK_KIND[m.kind]} <span className="text-ink-muted">· {m.location}</span>
                     </h3>
+                    {m.application && <p className="label text-[0.6875rem] text-ink-muted">{APPLICATION_LABEL[m.application]}</p>}
                     <p>{m.observation}</p>
                     {m.transcription && (
                       <p>
                         <span className="label text-ink-muted">As written:</span>{" "}
                         <q className="font-mono text-[0.95em]">{m.transcription}</q>
+                        {m.transcriptionCertainty && (
+                          <span className="text-sm text-ink-muted"> · reading: {certaintyWord[m.transcriptionCertainty].toLowerCase()}</span>
+                        )}
                       </p>
                     )}
+                    {m.transcriptionNote && <p className="text-sm text-ink-muted">{m.transcriptionNote}</p>}
                     {m.interpretation && (
                       <div className="mt-1 flex flex-col gap-2 border-l-2 border-line-paper pl-4">
                         <p className="label text-ink-muted">Interpretation</p>
@@ -309,6 +317,16 @@ export default async function ArtworkPage({ params }: Props) {
                         Shown in the {VIEW_LABEL[a.media.find((x) => x.id === m.imageId)?.viewType ?? ""]?.toLowerCase() ?? "detail"} view above.
                       </p>
                     )}
+                    {m.id &&
+                      (markRefs[m.id] ?? []).flatMap((r) =>
+                        r.makers.map((mk) => (
+                          <p key={`${r.id}-${mk.slug}`} className="text-sm">
+                            <Link href={`${routes.maker(mk.slug)}#sig-${r.id}`} className="link-quiet">
+                              Signature reference on the {mk.name} profile
+                            </Link>
+                          </p>
+                        )),
+                      )}
                   </li>
                 ))}
               </ul>

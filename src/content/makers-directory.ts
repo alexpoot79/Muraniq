@@ -297,7 +297,21 @@ export type DirectoryDossier = DirectoryEntry & {
   connections: { label: string; links: DirectoryLink[] }[];
   works: DirectoryWork[];
   techniques: string[];
-  marks: { kind: string; text: string; period: string | null; frequency: string | null; status: ResearchStatus }[];
+  /**
+   * Marks known from research sources (text only: no photograph is published
+   * from the research set). `markKind` and `application` use the same plain
+   * vocabulary as the Signatures & Marks section on collection maker profiles.
+   */
+  marks: {
+    kind: string;
+    markKind: "personal_signature" | "factory_mark" | "label";
+    application: "diamond_point" | "wheel_engraved" | "acid_etched" | "printed_label" | "unknown";
+    text: string;
+    period: string | null;
+    frequency: string | null;
+    status: ResearchStatus;
+    sources: DirectorySource[];
+  }[];
   openQuestions: { description: string; positions: { value: string; source: string }[] }[];
   sources: DirectorySource[];
 };
@@ -513,10 +527,22 @@ function build() {
         .filter((s) => s.entity_id === e.id)
         .map((s) => ({
           kind: s.kind,
+          // A person's mark is a personal signature; a firm's is a factory mark. Labels are named as such.
+          markKind: /label/i.test(s.kind) ? ("label" as const) : e.entity_type === "Person" ? ("personal_signature" as const) : ("factory_mark" as const),
+          application: /acid/i.test(s.kind)
+            ? ("acid_etched" as const)
+            : /wheel/i.test(s.kind)
+              ? ("wheel_engraved" as const)
+              : /diamond/i.test(s.kind)
+                ? ("diamond_point" as const)
+                : /label/i.test(s.kind)
+                  ? ("printed_label" as const)
+                  : ("unknown" as const),
           text: s.mark_text,
           period: clean(s.period),
           frequency: clean(s.frequency),
           status: s.verification_status as ResearchStatus,
+          sources: s.source_ids.map(toSource).filter((x): x is DirectorySource => !!x),
         })),
       openQuestions,
       sources: [...sourceIds].map(toSource).filter((s): s is DirectorySource => !!s),
