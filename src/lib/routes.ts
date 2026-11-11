@@ -21,6 +21,7 @@ export const routes = {
   about: () => "/about/",
   contact: (objectId?: string) => (objectId ? `/contact/?object=${encodeURIComponent(objectId)}` : "/contact/"),
   privacy: () => "/privacy/",
+  history: () => "/history/",
 } as const;
 
 export type Crumb = { label: string; href: string };
