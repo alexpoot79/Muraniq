@@ -29,8 +29,8 @@ async function audit(page: Page, include?: string) {
 const PAGES = [
   "/",
   "/collection/",
-  "/collection/?technique=calcedonia&sort=date-asc",
-  "/collection/?q=nothing-matches-this",
+  "/collection/murano-glass/?technique=calcedonia&sort=date-asc",
+  "/collection/murano-glass/?q=nothing-matches-this",
   "/collection/murano-glass/",
   "/collection/fine-art/",
   "/collection/other-glass/",

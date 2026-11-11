@@ -5,11 +5,11 @@ test("collection → filter → dossier → viewer → museum record", async ({ 
   await expect(page.getByRole("heading", { level: 1, name: "Works, seen closely." })).toBeVisible();
 
   // Shareable filter URL works without client interaction.
-  await page.goto("/collection/?technique=avventurina");
+  await page.goto("/collection/murano-glass/?technique=avventurina");
   await expect(page.getByRole("status")).toContainText("2 works");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
 
-  await page.goto("/collection/?technique=calcedonia");
+  await page.goto("/collection/murano-glass/?technique=calcedonia");
   await expect(page.getByRole("status")).toContainText("4 works");
   await page.getByRole("link", { name: "Bottle in chalcedony glass" }).click();
   await expect(page).toHaveURL(/\/collection\/objects\/chalcedony-bottle-miotti\/$/);
@@ -55,7 +55,7 @@ test("collection → filter → dossier → viewer → museum record", async ({ 
 });
 
 test("empty results, empty areas and 404 behave honestly", async ({ page }) => {
-  await page.goto("/collection/?q=zzzzqq");
+  await page.goto("/collection/murano-glass/?q=zzzzqq");
   await expect(page.getByRole("heading", { name: "No works match these choices." })).toBeVisible();
 
   await page.goto("/collection/other-glass/");
@@ -69,7 +69,7 @@ test("empty results, empty areas and 404 behave honestly", async ({ page }) => {
 test("drafts never reach public output", async ({ page, request }) => {
   const res = await page.goto("/collection/objects/draft-vase-not-public/");
   expect(res?.status()).toBe(404);
-  for (const path of ["/", "/collection/", "/sitemap.xml", "/collection/?q=draft"]) {
+  for (const path of ["/", "/collection/", "/sitemap.xml", "/collection/murano-glass/?q=draft"]) {
     const body = await (await request.get(path)).text();
     expect(body).not.toContain("DRAFT-SENTINEL");
     expect(body).not.toContain("draft-vase-not-public");
