@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
 import { MENU_SECTIONS, NAV_LEFT, NAV_RIGHT } from "./nav";
-import { SearchIcon } from "./SearchIcon";
 import { routes } from "@/lib/routes";
 
 const navLink =
@@ -43,20 +42,12 @@ export function Header() {
                 </li>
               ))}
               <li>
-                <Link href={`${routes.collection()}#search`} className={`${navLink} gap-2`}>
-                  <SearchIcon />
-                  Search
+                <Link href={routes.history()} className={navLink}>
+                  History
                 </Link>
               </li>
             </ul>
           </nav>
-          <Link
-            href={`${routes.collection()}#search`}
-            className="inline-flex h-11 w-11 items-center justify-center text-on-dark lg:hidden"
-            aria-label="Search the collection"
-          >
-            <SearchIcon />
-          </Link>
         </div>
       </div>
     </header>

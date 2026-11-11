@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageIntro } from "@/components/editorial/PageIntro";
 import { HISTORY_INTRO, HISTORY_SECTIONS } from "@/content/history";
 import { pageMetadata } from "@/lib/metadata";
@@ -26,6 +27,14 @@ export default function HistoryPage() {
               {s.body.map((p, i) => (
                 <p key={i} className="text-muted-dark">{p}</p>
               ))}
+              {s.image && (
+                <figure className="mt-2 flex flex-col gap-3">
+                  <Image src={s.image.src} width={s.image.w} height={s.image.h} alt={s.image.alt} sizes="(min-width: 1024px) 40rem, 100vw" className="h-auto max-h-[36rem] w-auto max-w-full" />
+                  <figcaption className="text-sm text-muted-dark">
+                    {s.image.caption}. {s.image.credit}. Reference image, not part of the MURANIQ collection.
+                  </figcaption>
+                </figure>
+              )}
               {s.sources.length > 0 && (
                 <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-dark">
                   {s.sources.map((src) => (
