@@ -7,11 +7,23 @@
  * dataset) can never reach HTML, the RSC payload, metadata, the sitemap or the
  * search index. Only `published` records are projected.
  */
-import type { Artwork, Creator, Glasshouse, MediaAsset, Source, Technique } from "./schemas";
+import type { Artwork, Creator, Glasshouse, MediaAsset, SignatureReference, Source, Technique } from "./schemas";
 
 export type PublicMedia = Pick<
   MediaAsset,
-  "id" | "viewType" | "src" | "width" | "height" | "alt" | "caption" | "credit" | "focalPoint" | "hotspots"
+  | "id"
+  | "viewType"
+  | "src"
+  | "width"
+  | "height"
+  | "alt"
+  | "caption"
+  | "credit"
+  | "focalPoint"
+  | "hotspots"
+  | "licence"
+  | "sourceUrl"
+  | "cropOf"
 > & { isPlaceholder: boolean };
 
 export function projectMedia(m: MediaAsset): PublicMedia {
@@ -26,6 +38,11 @@ export function projectMedia(m: MediaAsset): PublicMedia {
     credit: m.credit,
     focalPoint: m.focalPoint ? { x: m.focalPoint.x, y: m.focalPoint.y } : undefined,
     hotspots: m.hotspots.map((h) => ({ x: h.x, y: h.y, label: h.label, description: h.description })),
+    licence: m.licence,
+    sourceUrl: m.sourceUrl,
+    cropOf: m.cropOf
+      ? { imageId: m.cropOf.imageId, region: { x: m.cropOf.region.x, y: m.cropOf.region.y, w: m.cropOf.region.w, h: m.cropOf.region.h } }
+      : undefined,
     isPlaceholder: m.rights === "placeholder",
   };
 }
@@ -98,10 +115,14 @@ export function projectArtwork(a: Artwork): PublicArtworkRecord | null {
     heroImageId: a.heroImageId,
     imageIds: [...a.imageIds],
     marks: a.marks.map((m) => ({
+      id: m.id,
       kind: m.kind,
+      application: m.application,
       location: m.location,
       observation: m.observation,
       transcription: m.transcription,
+      transcriptionNote: m.transcriptionNote,
+      transcriptionCertainty: m.transcriptionCertainty,
       interpretation: m.interpretation,
       interpretationCertainty: m.interpretationCertainty,
       imageId: m.imageId,
@@ -159,6 +180,8 @@ export function projectCreator(c: Creator): PublicCreator | null {
     sourceIds: [...c.sourceIds],
     legacyPath: c.legacyPath,
     isFixture: c.isFixture,
+    signatureRefIds: [...c.signatureRefIds],
+    primarySignatureId: c.primarySignatureId,
   };
 }
 
@@ -205,5 +228,75 @@ export function projectSource(s: Source): PublicSource {
     rightsNote: s.rightsNote,
     reliabilityNote: s.reliabilityNote,
     isFixture: s.isFixture,
+  };
+}
+
+/** Public fields of a signature reference. The internal note never leaves the server. */
+export type PublicSignatureReference = Omit<SignatureReference, "internalNote" | "status">;
+export function projectSignatureReference(r: SignatureReference): PublicSignatureReference | null {
+  if (r.status !== "published") return null;
+  const refs = (list: SignatureReference["evidence"]) =>
+    list.map((e) => ({ sourceId: e.sourceId, locator: e.locator, consultedOn: e.consultedOn, note: e.note }));
+  return {
+    id: r.id,
+    title: r.title,
+    sortOrder: r.sortOrder,
+    variantGroup: r.variantGroup,
+    kind: r.kind,
+    application: r.application,
+    markRef: r.markRef ? { artworkId: r.markRef.artworkId, markId: r.markRef.markId } : undefined,
+    observation: r.observation
+      ? {
+          transcription: r.observation.transcription,
+          transcriptionNote: r.observation.transcriptionNote,
+          location: r.observation.location,
+          transcribedFrom: r.observation.transcribedFrom,
+          transcriptionCertainty: r.observation.transcriptionCertainty,
+        }
+      : undefined,
+    interpretation: r.interpretation ? { reading: r.interpretation.reading, certainty: r.interpretation.certainty } : undefined,
+    markOf: r.markOf ? { creatorId: r.markOf.creatorId, role: r.markOf.role, certainty: r.markOf.certainty } : undefined,
+    dating: r.dating
+      ? {
+          fromYear: r.dating.fromYear,
+          toYear: r.dating.toYear,
+          displayLabel: r.dating.displayLabel,
+          certainty: r.dating.certainty,
+          sourceId: r.dating.sourceId,
+        }
+      : undefined,
+    variantPeriod: r.variantPeriod
+      ? {
+          displayLabel: r.variantPeriod.displayLabel,
+          fromYear: r.variantPeriod.fromYear,
+          toYear: r.variantPeriod.toYear,
+          certainty: r.variantPeriod.certainty,
+          evidence: refs(r.variantPeriod.evidence),
+        }
+      : undefined,
+    object: {
+      artworkId: r.object.artworkId,
+      external: r.object.external
+        ? {
+            kind: r.object.external.kind,
+            title: r.object.external.title,
+            institution: r.object.external.institution,
+            identifier: r.object.external.identifier,
+            url: r.object.external.url,
+            dateLabel: r.object.external.dateLabel,
+            creators: r.object.external.creators.map((c) => ({
+              name: c.name,
+              creatorId: c.creatorId,
+              role: c.role,
+              certainty: c.certainty,
+            })),
+          }
+        : undefined,
+    },
+    detailImageId: r.detailImageId,
+    contextImageIds: [...r.contextImageIds],
+    evidence: refs(r.evidence),
+    reviewedOn: r.reviewedOn,
+    updatedAt: r.updatedAt,
   };
 }

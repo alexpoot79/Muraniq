@@ -102,6 +102,10 @@ export type Dimensions = z.infer<typeof Dimensions>;
 export const SourceRef = z.object({
   sourceId: id("SRC"),
   locator: z.string().max(120).optional(), // page, plate, lot number, URL fragment
+  /** When the source was consulted for this claim (exact URL in the Source record). */
+  consultedOn: isoDate.optional(),
+  /** Short public explanation of what the source shows for this claim. */
+  note: z.string().max(300).optional(),
 });
 
 export const Assertion = z
@@ -137,6 +141,19 @@ export type CreatorCredit = z.infer<typeof CreatorCredit>;
 /* Entities                                                            */
 /* ------------------------------------------------------------------ */
 
+/** Normalised 0–1 rectangle on the original photograph. */
+export const Region = z
+  .object({
+    x: z.number().min(0).max(1),
+    y: z.number().min(0).max(1),
+    w: z.number().gt(0).max(1),
+    h: z.number().gt(0).max(1),
+  })
+  .refine((r) => r.x + r.w <= 1.0001 && r.y + r.h <= 1.0001, { message: "region must lie inside the photograph" });
+
+/** Whether a photograph may later be used in a recognition (matching) database. Recorded separately from web use. */
+export const RECOGNITION_USE = ["allowed", "not_allowed", "unknown"] as const;
+
 export const MediaAsset = z.object({
   id: id("IMG"),
   artworkId: id("MUR").optional(),
@@ -161,15 +178,56 @@ export const MediaAsset = z.object({
       }),
     )
     .default([]),
+  /** Public licence wording, e.g. "CC0 1.0". */
+  licence: z.string().max(80).optional(),
+  /** Where the published file was obtained (the institution's image or record URL). */
+  sourceUrl: z.url().optional(),
+  /** A detail cut from another photograph: the link to the original is kept, nothing else is altered. */
+  cropOf: z.object({ imageId: id("IMG"), region: Region }).optional(),
+  /** Licence or permission end date; after it the image is no longer published. */
+  licenceExpiresOn: isoDate.optional(),
+  /** INTERNAL: where the rights evidence is kept (contract, e-mail, licence page). Never published. */
+  rightsEvidence: z.string().max(300).optional(),
+  /** INTERNAL: permission for a future recognition database, separate from web publication. */
+  recognitionUse: z.enum(RECOGNITION_USE).default("unknown"),
 });
 export type MediaAsset = z.infer<typeof MediaAsset>;
 
+/**
+ * How a mark was applied — kept apart from what kind of mark it is
+ * (a factory mark can be acid-etched or engraved; a signature can be a cane).
+ */
+export const MARK_APPLICATIONS = [
+  "diamond_point",
+  "wheel_engraved",
+  "engraved_other",
+  "acid_etched",
+  "enamel_painted",
+  "cane",
+  "impressed",
+  "printed_label",
+  "handwritten_label",
+  "unknown",
+] as const;
+export const MarkApplication = z.enum(MARK_APPLICATIONS);
+export type MarkApplication = z.infer<typeof MarkApplication>;
+
+/**
+ * A mark observed on a collection object: the observation and its
+ * interpretation live here, once. A SignatureReference may point to it.
+ */
 export const Mark = z.object({
-  kind: z.enum(["signature", "label", "pontil", "engraving", "stamp", "other"]),
+  /** Stable id, needed when a signature reference points to this mark. */
+  id: id("MRK").optional(),
+  kind: z.enum(["signature", "label", "pontil", "engraving", "stamp", "inscription", "other"]),
+  application: MarkApplication.optional(),
   location: z.string().max(120),
   observation: z.string().max(400),
-  /** Literal transcription as observed, kept separate from interpretation. */
+  /** Literal transcription as observed, kept separate from interpretation. "/" marks a line break, […] an illegible part. */
   transcription: z.string().max(200).optional(),
+  /** How the transcription was made and what could not be read. */
+  transcriptionNote: z.string().max(300).optional(),
+  transcriptionCertainty: Certainty.optional(),
   interpretation: z.string().max(400).optional(),
   interpretationCertainty: Certainty.optional(),
   imageId: id("IMG").optional(),
@@ -250,6 +308,10 @@ export const Creator = z.object({
   sourceIds: z.array(id("SRC")).default([]),
   legacyPath: z.string().startsWith("/").optional(),
   isFixture: z.boolean().default(false),
+  /** Signatures & Marks on the profile, in the editor's order. */
+  signatureRefIds: z.array(id("SIG")).default([]),
+  /** The editor's choice for the compact block by the introduction; must be one of signatureRefIds. */
+  primarySignatureId: id("SIG").optional(),
   status: PublicationStatus,
 });
 export type Creator = z.infer<typeof Creator>;
@@ -304,6 +366,113 @@ export const Redirect = z.object({
 });
 export type Redirect = z.infer<typeof Redirect>;
 
+/* ------------------------------------------------------------------ */
+/* Signature references                                                */
+/* ------------------------------------------------------------------ */
+
+/** What a mark is, in plain words on the site. Never inferred from how it was applied. */
+export const MARK_KINDS = ["personal_signature", "factory_mark", "label", "inscription"] as const;
+export const MarkKind = z.enum(MARK_KINDS);
+export type MarkKind = z.infer<typeof MarkKind>;
+
+/** A creator named on the documented object, in a separate role (designer ≠ executing master ≠ glasshouse). */
+export const DocumentedCreator = z.object({
+  name: z.string().min(2).max(120),
+  creatorId: id("CRE").optional(),
+  role: CreatorRole,
+  certainty: Certainty,
+});
+export type DocumentedCreator = z.infer<typeof DocumentedCreator>;
+
+/** An object held elsewhere (museum, archive, auction). Never a MURANIQ collection record. */
+export const ExternalObject = z.object({
+  kind: z.enum(["museum", "archive", "auction", "other"]),
+  title: z.string().min(2).max(160),
+  institution: z.string().min(2).max(160),
+  /** Accession, inventory or lot number. */
+  identifier: z.string().min(1).max(80),
+  url: z.url(),
+  dateLabel: z.string().max(80).optional(),
+  creators: z.array(DocumentedCreator).default([]),
+});
+export type ExternalObject = z.infer<typeof ExternalObject>;
+
+export const SignatureReference = z
+  .object({
+    id: id("SIG"),
+    /** Short title, e.g. "Inscription cane, 1847". */
+    title: z.string().min(3).max(120),
+    sortOrder: z.number().int().default(100),
+    /** Groups photographs of the same variant (same wording, technique and period). */
+    variantGroup: z.string().max(60).optional(),
+    kind: MarkKind,
+    application: MarkApplication,
+    /**
+     * Observation recorded on a collection object's mark. When set, the
+     * transcription and interpretation are read from that mark and must not
+     * be repeated here.
+     */
+    markRef: z.object({ artworkId: id("MUR"), markId: id("MRK") }).optional(),
+    /** Observation for marks on objects held elsewhere. */
+    observation: z
+      .object({
+        transcription: z.string().min(1).max(200),
+        transcriptionNote: z.string().max(300).optional(),
+        location: z.string().max(120),
+        /** Read from a photograph by MURANIQ, or quoted from the cited source. */
+        transcribedFrom: z.enum(["photograph", "source"]),
+        transcriptionCertainty: Certainty,
+      })
+      .optional(),
+    interpretation: z.object({ reading: z.string().min(3).max(400), certainty: Certainty }).optional(),
+    /** Whose mark it is: the person who signed, or the firm whose mark or label it is. */
+    markOf: z.object({ creatorId: id("CRE"), role: CreatorRole, certainty: Certainty }).optional(),
+    /** Date of this example (usually the source object's date) and where that date comes from. */
+    dating: Dating.and(z.object({ sourceId: id("SRC").optional() })).optional(),
+    /** Documented period of use of this variant. Never derived from a single dated object. */
+    variantPeriod: z
+      .object({
+        displayLabel: z.string().min(1).max(80),
+        fromYear: year.optional(),
+        toYear: year.optional(),
+        certainty: Certainty,
+        evidence: z.array(SourceRef).min(1, "a period of use needs its own source"),
+      })
+      .optional(),
+    /** The documented object: a collection record, an object held elsewhere, or both (a reference work). */
+    object: z
+      .object({ artworkId: id("MUR").optional(), external: ExternalObject.optional() })
+      .refine((o) => o.artworkId || o.external, { message: "link the documented object" }),
+    /** Close-up of the mark (signature/label/detail view). */
+    detailImageId: id("IMG").optional(),
+    /** Further views: the whole base, the whole object. */
+    contextImageIds: z.array(id("IMG")).max(4).default([]),
+    evidence: z.array(SourceRef).min(1, "a reference needs at least one source"),
+    reviewedOn: isoDate.optional(),
+    /** INTERNAL editorial note. Never published. */
+    internalNote: z.string().max(800).optional(),
+    status: PublicationStatus,
+    updatedAt: isoDate,
+  })
+  .superRefine((r, ctx) => {
+    if (r.markRef && (r.observation || r.interpretation))
+      ctx.addIssue({
+        code: "custom",
+        message: "the observation lives on the linked mark; do not repeat it on the reference",
+      });
+    if (!r.markRef && !r.observation)
+      ctx.addIssue({ code: "custom", message: "record the observation, or link the mark on a collection object" });
+    if (r.markRef && r.object.artworkId && r.markRef.artworkId !== r.object.artworkId)
+      ctx.addIssue({ code: "custom", message: "the linked mark must be on the documented object" });
+    if (r.kind !== "inscription" && !r.markOf)
+      ctx.addIssue({ code: "custom", message: "say whose signature, mark or label this is (markOf)" });
+    if (r.variantPeriod?.fromYear && r.variantPeriod.toYear && r.variantPeriod.fromYear > r.variantPeriod.toYear)
+      ctx.addIssue({ code: "custom", message: "variant period: fromYear must not be after toYear" });
+    if (r.status === "published" && !r.reviewedOn)
+      ctx.addIssue({ code: "custom", message: "a published reference needs an editorial review date" });
+  });
+export type SignatureReference = z.infer<typeof SignatureReference>;
+
 export const Dataset = z.object({
   artworks: z.array(Artwork),
   creators: z.array(Creator),
@@ -311,6 +480,7 @@ export const Dataset = z.object({
   techniques: z.array(Technique),
   sources: z.array(Source),
   media: z.array(MediaAsset),
+  signatureReferences: z.array(SignatureReference).default([]),
   redirects: z.array(Redirect).default([]),
 });
 export type Dataset = z.infer<typeof Dataset>;

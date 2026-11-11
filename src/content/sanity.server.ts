@@ -30,7 +30,15 @@ const IMAGE = `"src": asset->url, "width": asset->metadata.dimensions.width, "he
  */
 const STATUS = `"status": select(_originalId in path("drafts.**") => "draft", "published")`;
 
-/** Explicit projection — keep in sync with studio/schemas. */
+const EVIDENCE = `{ "sourceId": source->sourceId, locator, consultedOn, note }`;
+
+/**
+ * Explicit projection — keep in sync with studio/schemas. Internal fields
+ * (internalNote, rightsEvidence) are never requested, so they cannot reach the
+ * site even by mistake. A photograph whose clearance is withdrawn simply
+ * drops out of every signature reference (and its crop link) instead of
+ * breaking the build; the text reference stays.
+ */
 export const DATASET_QUERY = /* groq */ `{
   "artworks": *[_type == "artwork"]{
     "id": collectionId, "slug": slug.current, title, category, objectType, summary, description,
@@ -40,9 +48,12 @@ export const DATASET_QUERY = /* groq */ `{
     materials, colours, country, dating, dimensions,
     "heroImageId": heroImage->mediaId,
     "imageIds": images[]->mediaId,
-    marks[]{ kind, location, observation, transcription, interpretation, interpretationCertainty, "imageId": image->mediaId },
-    assertions[]{ field, statement, certainty, "evidence": evidence[]{ "sourceId": source->sourceId, locator }, publicNote, reviewedOn },
-    provenance[]{ label, fromYear, toYear, certainty, "evidence": evidence[]{ "sourceId": source->sourceId, locator } },
+    marks[]{
+      "id": markId, kind, application, location, observation, transcription, transcriptionNote, transcriptionCertainty,
+      interpretation, interpretationCertainty, "imageId": image->mediaId
+    },
+    assertions[]{ field, statement, certainty, "evidence": evidence[]${EVIDENCE}, publicNote, reviewedOn },
+    provenance[]{ label, fromYear, toYear, certainty, "evidence": evidence[]${EVIDENCE} },
     condition,
     "sourceIds": sources[]->sourceId,
     "relatedIds": related[]->collectionId,
@@ -52,7 +63,9 @@ export const DATASET_QUERY = /* groq */ `{
   },
   "creators": *[_type == "creator"]{
     "id": creatorId, "slug": slug.current, kind, name, aliases, lifeLabel, roles, summary,
-    biography, biographyStatus, "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, ${STATUS}
+    biography, biographyStatus, "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, ${STATUS},
+    "signatureRefIds": signatureReferences[defined(@->signatureId)]->signatureId,
+    "primarySignatureId": primarySignature->signatureId
   },
   "glasshouses": *[_type == "glasshouse"]{
     "id": glasshouseId, "slug": slug.current, name, location, activeLabel, summary,
@@ -67,7 +80,35 @@ export const DATASET_QUERY = /* groq */ `{
   },
   "media": *[_type == "mediaAsset" && rightsCleared == true]{
     "id": mediaId, "artworkId": artwork->collectionId, viewType, ${IMAGE},
-    alt, caption, credit, rights, rightsCleared, focalPoint, hotspots
+    alt, caption, credit, rights, rightsCleared, focalPoint, hotspots,
+    licence, sourceUrl, licenceExpiresOn, recognitionUse,
+    "cropOf": select(cropOf.image->rightsCleared == true => { "imageId": cropOf.image->mediaId, "region": cropOf.region })
+  },
+  "signatureReferences": *[_type == "signatureReference"]{
+    "id": signatureId, title, sortOrder, variantGroup, kind, application,
+    "markRef": select(defined(markRef.artwork) => { "artworkId": markRef.artwork->collectionId, "markId": markRef.markId }),
+    observation, interpretation,
+    "markOf": select(defined(markOf.creator) => { "creatorId": markOf.creator->creatorId, "role": markOf.role, "certainty": markOf.certainty }),
+    "dating": select(defined(dating.displayLabel) => {
+      "fromYear": dating.fromYear, "toYear": dating.toYear, "displayLabel": dating.displayLabel,
+      "certainty": dating.certainty, "sourceId": dating.source->sourceId
+    }),
+    "variantPeriod": select(defined(variantPeriod.displayLabel) => {
+      "displayLabel": variantPeriod.displayLabel, "fromYear": variantPeriod.fromYear, "toYear": variantPeriod.toYear,
+      "certainty": variantPeriod.certainty, "evidence": variantPeriod.evidence[]${EVIDENCE}
+    }),
+    "object": {
+      "artworkId": object.artwork->collectionId,
+      "external": select(defined(object.external.url) => {
+        "kind": object.external.kind, "title": object.external.title, "institution": object.external.institution,
+        "identifier": object.external.identifier, "url": object.external.url, "dateLabel": object.external.dateLabel,
+        "creators": coalesce(object.external.creators[]{ name, "creatorId": creator->creatorId, role, certainty }, [])
+      })
+    },
+    "detailImageId": select(detailImage->rightsCleared == true => detailImage->mediaId),
+    "contextImageIds": coalesce(contextImages[@->rightsCleared == true]->mediaId, []),
+    "evidence": evidence[]${EVIDENCE},
+    reviewedOn, ${STATUS}, "updatedAt": string::split(_updatedAt, "T")[0]
   },
   "redirects": *[_type == "redirect"]{ from, to, reason, checkedOn, active }
 }`;

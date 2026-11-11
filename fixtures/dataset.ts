@@ -25,6 +25,7 @@
  */
 import type { Assertion, DatasetInput, ReferenceHolding, Source } from "@/content/schemas";
 import { referenceMedia } from "./reference-media";
+import { signatureMedia, signatureReferences } from "./signatures";
 // Verbatim text from muraniq.nl/arnaldo-zanella/ and /loredano-rosin/ (retrieved 9 Nov 2026), not yet source-reviewed.
 import migrated from "./migrated-biographies.json";
 
@@ -126,6 +127,7 @@ export const fixtureDataset: DatasetInput = {
     aicSource(273302, "2024.67", "Bottle"),
     aicSource(273304, "2024.68", "Beaker"),
     aicSource(58835, "1979.904", "Paperweight"),
+    aicSource(188003, "1988.541.285", "Paperweight"),
     cmaSource("1949.176", "Standing Cup"),
     cmaSource("1985.146", "Devotional Badge with Saint James Flanked by Two Kneeling Pilgrims"),
     aicSource(110761, "1933.1217", "Venetian Glass Workers"),
@@ -364,6 +366,8 @@ export const fixtureDataset: DatasetInput = {
       biography: [],
       biographyStatus: "reference_only",
       sourceIds: [aicId("1979.904")],
+      signatureRefIds: ["SIG-BIGAGLIA-R009-INSCRIPTION", "SIG-BIGAGLIA-AIC-1988-541-285"],
+      primarySignatureId: "SIG-BIGAGLIA-R009-INSCRIPTION",
       status: "published",
     },
     {
@@ -722,6 +726,7 @@ export const fixtureDataset: DatasetInput = {
   ],
   media: [
     ...referenceMedia,
+    ...signatureMedia,
     ...[
       { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top-v3", w: 1512, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
       { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
@@ -1066,7 +1071,24 @@ export const fixtureDataset: DatasetInput = {
       dating: { fromYear: 1847, toYear: 1847, displayLabel: "1847", certainty: "documented_attribution" },
       dimensions: { heightMm: 54 },
       heroImageId: "IMG-R009-TOP",
-      imageIds: ["IMG-R009-TOP"],
+      imageIds: ["IMG-R009-TOP", "IMG-R009-INSCRIPTION"],
+      marks: [
+        {
+          id: "MRK-R009-INSCRIPTION",
+          kind: "inscription",
+          application: "cane",
+          location: "Among the millefiori canes, visible through the dome from above",
+          observation:
+            "A white cane with a scalloped pink border carries five lines of blue lettering. Next to it, a second cane carries a year.",
+          transcription: "IX CONGRESSO / DEGLI / SCIENZIATI / IN / VENEZIA 184[…]",
+          transcriptionNote:
+            "Read by MURANIQ from the museum’s photograph. The third line is distorted by the dome and the last digit is hidden at the edge of the cane. The second cane reads “1847” (upside down in this view).",
+          transcriptionCertainty: "probable",
+          interpretation: "A commemorative inscription: “Ninth Congress of Scientists, Venice”, with the year 1847 on the second cane.",
+          interpretationCertainty: "probable",
+          imageId: "IMG-R009-INSCRIPTION",
+        },
+      ],
       assertions: [
         {
           field: "creator",
@@ -1812,6 +1834,7 @@ export const fixtureDataset: DatasetInput = {
       updatedAt: "2026-11-09",
     },
   ],
+  signatureReferences,
   redirects: [
     {
       from: "/collection/studio-glass/",

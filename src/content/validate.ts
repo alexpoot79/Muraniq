@@ -3,7 +3,7 @@
  * Used by the repository at load time, by `scripts/validate-content.ts`, and
  * (later) by importers — the same rules everywhere.
  */
-import { Dataset, type Artwork, type DatasetInput } from "./schemas";
+import { Dataset, type Artwork, type DatasetInput, type MediaAsset, type SignatureReference } from "./schemas";
 
 export type ValidationIssue = { path: string; message: string };
 export type ValidationResult =
@@ -43,6 +43,7 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
   for (const d of duplicates(data.sources.map((s) => s.id))) push("sources", `duplicate id ${d}`);
   for (const d of duplicates(data.media.map((m) => m.id))) push("media", `duplicate id ${d}`);
   for (const d of duplicates(data.redirects.map((r) => r.from))) push("redirects", `duplicate redirect from ${d}`);
+  for (const d of duplicates(data.signatureReferences.map((r) => r.id))) push("signatureReferences", `duplicate id ${d}`);
 
   const ids = {
     artwork: new Map(data.artworks.map((a) => [a.id, a])),
@@ -76,6 +77,7 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
     for (const mark of a.marks) {
       if (mark.imageId && !a.imageIds.includes(mark.imageId)) push(p, `mark image ${mark.imageId} not in imageIds`);
     }
+    for (const d of duplicates(a.marks.flatMap((m) => (m.id ? [m.id] : [])))) push(p, `duplicate mark id ${d}`);
     for (const as of a.assertions) for (const e of as.evidence) checkSource(`${p}.assertions`, e.sourceId);
     for (const ev of a.provenance) {
       for (const e of ev.evidence) checkSource(`${p}.provenance`, e.sourceId);
@@ -98,7 +100,50 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
   }
 
   for (const [i, c] of data.creators.entries()) {
-    for (const s of c.sourceIds) checkSource(`creators[${i}](${c.id})`, s);
+    const p = `creators[${i}](${c.id})`;
+    for (const s of c.sourceIds) checkSource(p, s);
+    for (const d of duplicates(c.signatureRefIds)) push(p, `signature reference ${d} listed twice`);
+    if (c.primarySignatureId && !c.signatureRefIds.includes(c.primarySignatureId))
+      push(p, `primary signature ${c.primarySignatureId} must be one of this maker's signature references`);
+    for (const sid of c.signatureRefIds) {
+      const ref = data.signatureReferences.find((r) => r.id === sid);
+      if (!ref) push(p, `unknown signature reference ${sid}`);
+      else if (!referenceInvolves(ref, c.id, ids.artwork))
+        push(p, `signature reference ${sid} neither is this maker's mark nor documents a work by this maker`);
+    }
+  }
+
+  for (const [i, r] of data.signatureReferences.entries()) {
+    const p = `signatureReferences[${i}](${r.id})`;
+    for (const e of [...r.evidence, ...(r.variantPeriod?.evidence ?? [])]) checkSource(p, e.sourceId);
+    if (r.dating?.sourceId) checkSource(p, r.dating.sourceId);
+    if (r.markOf) {
+      const owner = ids.creator.get(r.markOf.creatorId);
+      if (!owner) push(p, `unknown creator ${r.markOf.creatorId}`);
+      // A factory mark belongs to the glasshouse; a personal signature to a person. Never the other way round.
+      else if (r.kind === "personal_signature" && owner.kind !== "person")
+        push(p, "a personal signature must belong to a person, not to a firm");
+      else if (r.kind === "factory_mark" && owner.kind !== "organisation")
+        push(p, "a factory mark belongs to the glasshouse or firm, not to a person");
+    }
+    for (const dc of r.object.external?.creators ?? [])
+      if (dc.creatorId && !ids.creator.has(dc.creatorId)) push(p, `unknown creator ${dc.creatorId}`);
+    if (r.object.artworkId && !ids.artwork.has(r.object.artworkId)) push(p, `unknown artwork ${r.object.artworkId}`);
+    if (r.markRef) {
+      const art = ids.artwork.get(r.markRef.artworkId);
+      if (!art) push(p, `unknown artwork ${r.markRef.artworkId}`);
+      else if (!art.marks.some((m) => m.id === r.markRef!.markId)) push(p, `unknown mark ${r.markRef.markId} on ${art.id}`);
+    }
+    for (const imgId of [r.detailImageId, ...r.contextImageIds].filter((x): x is string => !!x)) {
+      const img = ids.media.get(imgId);
+      if (!img) push(p, `unknown image ${imgId}`);
+      else if (img.cropOf && !ids.media.has(img.cropOf.imageId)) push(p, `image ${imgId} is cut from unknown image ${img.cropOf.imageId}`);
+    }
+    if (r.detailImageId) {
+      const img = ids.media.get(r.detailImageId);
+      if (img && !["signature", "label", "detail", "base"].includes(img.viewType))
+        push(p, `detail image ${r.detailImageId} must be a signature, label, detail or base view`);
+    }
   }
   for (const [i, g] of data.glasshouses.entries()) {
     for (const cr of g.creatorIds)
@@ -109,6 +154,39 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
   }
 
   return issues.length ? { ok: false, issues } : { ok: true, data, issues: [] };
+}
+
+/** Whether a reference is this maker's own mark, or documents a work that names this maker. */
+export function referenceInvolves(
+  r: SignatureReference,
+  creatorId: string,
+  artworks: Map<string, Pick<Artwork, "creators">>,
+): boolean {
+  if (r.markOf?.creatorId === creatorId) return true;
+  if (r.object.external?.creators.some((c) => c.creatorId === creatorId)) return true;
+  const art = r.object.artworkId ? artworks.get(r.object.artworkId) : undefined;
+  return !!art?.creators.some((c) => c.creatorId === creatorId);
+}
+
+/**
+ * Why a reference photograph may not be shown. Without a photograph the
+ * reference stays a text reference with its source; the record itself is
+ * unaffected. `today` is the build or request date (YYYY-MM-DD).
+ */
+export function signaturePhotoBlockers(
+  r: Pick<SignatureReference, "evidence" | "reviewedOn">,
+  img: MediaAsset | undefined,
+  today: string,
+): string[] {
+  const out: string[] = [];
+  if (!img) return ["no photograph linked"];
+  if (img.rights === "placeholder" || img.rights === "unknown") out.push("rights for the photograph are not established");
+  if (!img.rightsCleared) out.push("the photograph is not cleared for web publication");
+  if (!img.credit) out.push("the photograph needs a public credit");
+  if (img.licenceExpiresOn && img.licenceExpiresOn < today) out.push(`the licence ended on ${img.licenceExpiresOn}`);
+  if (r.evidence.length === 0) out.push("the reference needs a source");
+  if (!r.reviewedOn) out.push("the reference has not been reviewed");
+  return out;
 }
 
 /**

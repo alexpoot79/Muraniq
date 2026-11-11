@@ -49,6 +49,8 @@ export const sourceRefs = defineField({
       fields: [
         { name: "source", type: "reference", to: [{ type: "source" }], validation: (r) => r.required() },
         { name: "locator", title: "Page / plate / lot", type: "string" },
+        { name: "consultedOn", title: "Consulted on", type: "date" },
+        { name: "note", title: "Note on what the source says", type: "string", validation: (r) => r.max(300) },
       ],
       preview: { select: { title: "source.title", subtitle: "locator" } },
     },

@@ -1,19 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import type { PublicMedia } from "@/content/public-projection";
 import { ArtworkImage, ImageBackdrop } from "@/components/editorial/ArtworkImage";
 import { VIEW_LABEL } from "@/lib/format";
-
-const ZOOMS = [1, 1.75, 2.5, 3.5] as const;
-
-function Icon({ d, size = 16 }: { d: string; size?: number }) {
-  return (
-    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2">
-      <path d={d} />
-    </svg>
-  );
-}
+import { Icon, ViewerDialog, viewerControl } from "./ViewerDialog";
 
 /**
  * Object explorer.
@@ -26,47 +17,15 @@ function Icon({ d, size = 16 }: { d: string; size?: number }) {
  */
 export function Viewer({ media, title }: { media: PublicMedia[]; title: string }) {
   const [index, setIndex] = useState(0);
-  const [zoom, setZoom] = useState(0);
-  const [pan, setPan] = useState({ x: 0, y: 0 });
   const [showHotspots, setShowHotspots] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const drag = useRef<{ x: number; y: number; px: number; py: number } | null>(null);
-  const titleId = useId();
   const current = media[index]!;
   const count = media.length;
 
-  const select = useCallback((i: number) => {
-    setIndex(i);
-    setZoom(0);
-    setPan({ x: 0, y: 0 });
-  }, []);
-  const go = useCallback((delta: number) => select((index + delta + count) % count), [count, index, select]);
-  const setZoomLevel = (z: number) => {
-    const next = Math.max(0, Math.min(ZOOMS.length - 1, z));
-    setZoom(next);
-    if (next === 0) setPan({ x: 0, y: 0 });
-  };
-
-  useEffect(() => {
-    const d = dialogRef.current;
-    if (!d) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") go(1);
-      else if (e.key === "ArrowLeft") go(-1);
-      else if (e.key === "+" || e.key === "=") setZoomLevel(zoom + 1);
-      else if (e.key === "-") setZoomLevel(zoom - 1);
-      else if (e.key === "0") setZoomLevel(0);
-      else return;
-      e.preventDefault();
-    };
-    d.addEventListener("keydown", onKey);
-    return () => d.removeEventListener("keydown", onKey);
-  });
+  const select = useCallback((i: number) => setIndex(i), []);
 
   const hotspots = current.hotspots;
-  const ctrl =
-    "inline-flex min-h-11 items-center gap-2.5 border border-line-dark px-4 text-[0.6875rem] font-medium tracking-[0.18em] uppercase text-on-dark transition-colors duration-300 hover:border-accent hover:text-accent disabled:opacity-40 disabled:hover:border-line-dark disabled:hover:text-on-dark";
+  const ctrl = viewerControl;
 
   return (
     <div className="flex min-w-0 flex-col gap-5">
@@ -110,10 +69,7 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
           <button
             type="button"
             className={ctrl}
-            onClick={() => {
-              setFullscreen(true);
-              dialogRef.current?.showModal();
-            }}
+            onClick={() => setFullscreen(true)}
           >
             <Icon d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" />
             View full screen
@@ -168,90 +124,15 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
         </details>
       )}
 
-      <dialog
-        ref={dialogRef}
-        aria-labelledby={titleId}
-        className="m-0 h-dvh max-h-none w-full max-w-none bg-stage p-0 text-on-dark backdrop:bg-black"
-        onClose={() => {
-          setFullscreen(false);
-          setZoom(0);
-          setPan({ x: 0, y: 0 });
-        }}
-      >
-        <div className="flex h-full flex-col">
-          <div className="flex items-center justify-between gap-4 border-b border-line-dark px-4 py-2 sm:px-8">
-            <p id={titleId} className="truncate text-sm">
-              <span className="font-display text-lg text-on-dark">{title}</span>
-              <span className="text-muted-dark">
-                {" "}
-                · {VIEW_LABEL[current.viewType]} ({index + 1}/{count})
-              </span>
-            </p>
-            <button
-              type="button"
-              autoFocus
-              className="label inline-flex h-11 items-center gap-2 px-2 text-[0.6875rem]"
-              onClick={() => dialogRef.current?.close()}
-            >
-              Close
-              <Icon d="M3 3l10 10M13 3 3 13" />
-            </button>
-          </div>
-
-          <div
-            className={`relative flex flex-1 items-center justify-center overflow-hidden ${zoom > 0 ? "cursor-grab active:cursor-grabbing" : ""}`}
-            onPointerDown={(e) => {
-              if (zoom === 0) return;
-              (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
-              drag.current = { x: e.clientX, y: e.clientY, px: pan.x, py: pan.y };
-            }}
-            onPointerMove={(e) => {
-              if (!drag.current) return;
-              setPan({ x: drag.current.px + (e.clientX - drag.current.x), y: drag.current.py + (e.clientY - drag.current.y) });
-            }}
-            onPointerUp={() => (drag.current = null)}
-            onPointerCancel={() => (drag.current = null)}
-            onDoubleClick={() => setZoomLevel(zoom === 0 ? 2 : 0)}
-          >
-            {fullscreen && (
-              // eslint-disable-next-line @next/next/no-img-element -- full-resolution view requested by the visitor
-              <img
-                src={current.src}
-                alt={current.alt}
-                width={current.width}
-                height={current.height}
-                draggable={false}
-                className="max-h-full max-w-full select-none object-contain transition-transform duration-300 ease-[var(--ease-gallery)]"
-                style={{ transform: `translate(${pan.x}px, ${pan.y}px) scale(${ZOOMS[zoom]})` }}
-              />
-            )}
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-2 border-t border-line-dark px-4 py-3">
-            <button type="button" className={ctrl} onClick={() => go(-1)} disabled={count < 2}>
-              <Icon d="M10 3 5 8l5 5" />
-              Previous
-            </button>
-            <button type="button" className={ctrl} onClick={() => setZoomLevel(zoom - 1)} disabled={zoom === 0} aria-label="Zoom out">
-              <Icon d="M3 8h10" />
-            </button>
-            <span className="numeral min-w-16 text-center text-lg text-muted-dark" aria-live="polite">
-              {Math.round(ZOOMS[zoom]! * 100)}%
-            </span>
-            <button type="button" className={ctrl} onClick={() => setZoomLevel(zoom + 1)} disabled={zoom === ZOOMS.length - 1} aria-label="Zoom in">
-              <Icon d="M3 8h10M8 3v10" />
-            </button>
-            <button type="button" className={ctrl} onClick={() => setZoomLevel(0)} disabled={zoom === 0}>
-              Reset
-            </button>
-            <button type="button" className={ctrl} onClick={() => go(1)} disabled={count < 2}>
-              Next
-              <Icon d="m6 3 5 5-5 5" />
-            </button>
-          </div>
-          <p className="sr-only">Use the arrow keys to change view, plus and minus to zoom, 0 to reset, Escape to close.</p>
-        </div>
-      </dialog>
+      <ViewerDialog
+        open={fullscreen}
+        onClose={() => setFullscreen(false)}
+        media={media}
+        index={index}
+        onSelect={select}
+        title={title}
+        labelFor={(m) => VIEW_LABEL[m.viewType] ?? m.viewType}
+      />
     </div>
   );
 }

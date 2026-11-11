@@ -8,6 +8,7 @@ export function PageIntro({
   title,
   accent,
   children,
+  aside,
 }: {
   crumbs: Crumb[];
   kicker?: string;
@@ -15,6 +16,8 @@ export function PageIntro({
   /** Optional words set in italic after the title, e.g. title "Makers," accent "and workshops". */
   accent?: string;
   children?: React.ReactNode;
+  /** Optional block under the introduction (e.g. a signature reference), outside the lede styling. */
+  aside?: React.ReactNode;
 }) {
   return (
     <div className="container-gallery pt-8 lg:pt-12">
@@ -32,8 +35,14 @@ export function PageIntro({
             )}
           </h1>
         </div>
-        {children && (
+        {children && !aside && (
           <div className="settle settle-2 lede flex flex-col gap-4 text-muted-dark lg:col-span-4 lg:self-end">{children}</div>
+        )}
+        {aside && (
+          <div className="flex flex-col gap-10 lg:col-span-4 lg:self-end">
+            {children && <div className="settle settle-2 lede flex flex-col gap-4 text-muted-dark">{children}</div>}
+            {aside}
+          </div>
         )}
       </header>
     </div>

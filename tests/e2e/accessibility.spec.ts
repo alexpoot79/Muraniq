@@ -43,6 +43,9 @@ const PAGES = [
   "/glass-guide/",
   "/glass-guide/makers/",
   "/glass-guide/makers/miotti-glasshouse/",
+  "/glass-guide/makers/pietro-bigaglia/",
+  "/glass-guide/makers/loredano-rosin/",
+  "/glass-guide/makers-and-workshops/m-v-m-cappellin-and-c/",
   "/glass-guide/makers-and-workshops/",
   "/glass-guide/makers-and-workshops/compagnia-di-venezia-e-murano/",
   "/glass-guide/makers-and-workshops/salviati-and-c/",
@@ -75,6 +78,13 @@ test("no automated WCAG violations: viewer in full screen", async ({ page }) => 
   await page.getByRole("button", { name: "View full screen" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.keyboard.press("+");
+  await audit(page, "dialog[open]");
+});
+
+test("no automated WCAG violations: signature reference enlarged", async ({ page }) => {
+  await page.goto("/glass-guide/makers/pietro-bigaglia/");
+  await page.locator("#sig-SIG-BIGAGLIA-R009-INSCRIPTION").getByRole("button", { name: /^Enlarge/ }).click();
+  await expect(page.getByRole("dialog")).toBeVisible();
   await audit(page, "dialog[open]");
 });
 

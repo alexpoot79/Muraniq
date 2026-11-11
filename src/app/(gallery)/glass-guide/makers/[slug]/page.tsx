@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 import { absoluteUrl } from "@/lib/site";
+import { SignatureCompact, SignatureSection } from "@/features/signatures/SignatureBlocks";
 
 export async function generateStaticParams() {
   return (await getCreators()).map((c) => ({ slug: c.slug }));
@@ -30,7 +31,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
   const { slug } = await params;
   const data = await getCreatorBySlug(slug);
   if (!data) notFound();
-  const { creator: c, artworks, sources } = data;
+  const { creator: c, artworks, sources, signatures } = data;
   return (
     <>
       <PageIntro
@@ -41,6 +42,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
         ]}
         kicker={c.roles.includes("artist") ? "Artist" : c.kind === "person" ? "Maker" : "Glasshouse"}
         title={c.name}
+        aside={signatures.primary ? <SignatureCompact item={signatures.primary} makerName={c.name} /> : undefined}
       >
         <p>{c.summary}</p>
         {c.lifeLabel && <p className="mt-3">{c.lifeLabel}</p>}
@@ -89,6 +91,12 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
           </div>
         </div>
       </section>
+
+      <div className="surface-paper">
+        <div className="container-gallery pb-20 lg:pb-28">
+          <SignatureSection signatures={signatures} makerName={c.name} />
+        </div>
+      </div>
 
       <section aria-labelledby="works-title" className="container-gallery section-y">
         <p className="label eyebrow text-muted-dark">Works</p>

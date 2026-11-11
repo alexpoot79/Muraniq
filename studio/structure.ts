@@ -11,6 +11,7 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("glasshouse").title("Glasshouses"),
       S.documentTypeListItem("technique").title("Techniques"),
       S.documentTypeListItem("source").title("Sources"),
+      S.documentTypeListItem("signatureReference").title("Signatures & Marks"),
       S.divider(),
       S.documentTypeListItem("redirect").title("Redirects (migration)"),
     ]);
