@@ -593,3 +593,8 @@
 .gallery-track > * {
   scroll-snap-align: start;
 }
+
+/* Makers overview: "With signature references" filter (see MakerListFilter). */
+[data-maker-filter="signatures"] [data-has-signatures="false"] {
+  display: none;
+}

@@ -86,7 +86,11 @@ const SPECS: Spec[] = [
   { id: "IMG-R008-FRONT", artworkId: "MUR-R008", file: "r008-chalcedony-bottle-front", w: 1650, h: 2200, view: "front", alt: "Bottle with a round body and long neck in dark chalcedony glass streaked with blue, green and red", credit: AIC("2024.67") },
 
   // R009 — Paperweight, Pietro Bigaglia, 1847 (AIC 1979.904)
-  { id: "IMG-R009-TOP", artworkId: "MUR-R009", file: "r009-millefiori-paperweight-top", w: 1686, h: 1686, view: "front", alt: "Glass paperweight seen from above, filled with tightly packed millefiori canes and twisted ribbons in many colours", credit: AIC("1979.904") },
+  { id: "IMG-R009-TOP", artworkId: "MUR-R009", file: "r009-millefiori-paperweight-top", w: 1686, h: 1686, view: "front", alt: "Glass paperweight seen from above, filled with tightly packed millefiori canes and twisted ribbons in many colours", credit: AIC("1979.904"),
+    hotspots: [
+      { x: 0.43, y: 0.48, label: "Inscription cane", description: "Blue lettering on a white cane: “IX CONGRESSO DEGLI SCIENZIATI IN VENEZIA”. See Marks & Labels below." },
+      { x: 0.49, y: 0.64, label: "Date cane", description: "A cane with the year 1847, upside down in this view." },
+    ] },
 
   // R010 — Bernardo Bellotto, Piazza San Marco, Venice, c. 1740 (CMA 1962.169)
   { id: "IMG-R010-FRONT", artworkId: "MUR-R010", file: "r010-bellotto-piazza-san-marco", w: 2600, h: 1484, view: "front", alt: "Painting of the Piazza San Marco in Venice under a pale sky, with the basilica on the left, the campanile in the centre and small figures across the square", credit: CMA("1962.169") },
@@ -164,4 +168,7 @@ export const referenceMedia: MediaAsset[] = SPECS.map((s) => ({
   rights: "public_domain",
   rightsCleared: true,
   hotspots: s.hotspots ?? [],
+  licence: "CC0 1.0",
+  // CC0 places no restriction on reuse, including a future recognition database.
+  recognitionUse: "allowed",
 }));

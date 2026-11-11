@@ -124,7 +124,39 @@ export async function getCreatorBySlug(slug: string) {
     creator,
     artworks: pub.artworks.filter((a) => creator.artworkIds.includes(a.id)),
     sources: pub.sources.filter((s) => creator.sourceIds.includes(s.id)),
+    signatures: pub.makerSignatures[creator.id] ?? { items: [], primary: null },
   };
+}
+
+/** Per maker id: the reference shown on the maker card (or null) and how many references the profile lists. */
+export async function getMakerSignatureSummaries() {
+  const pub = await loadPublication();
+  return Object.fromEntries(
+    Object.entries(pub.makerSignatures).map(([id, s]) => [id, { primary: s.primary, count: s.items.length }]),
+  );
+}
+
+/** Signature references that read the marks on one object, keyed by mark id. */
+export async function getSignaturesForArtwork(artworkId: string) {
+  const pub = await loadPublication();
+  const out: Record<string, Array<{ id: string; title: string; makers: Array<{ slug: string; name: string }> }>> = {};
+  for (const [key, views] of Object.entries(pub.markSignatures)) {
+    const [art, markId] = key.split("/");
+    if (art !== artworkId || !markId) continue;
+    out[markId] = views.map((v) => ({
+      id: v.id,
+      title: v.title,
+      // Profiles that list this reference (own mark or documented work).
+      makers: pub.creators
+        .filter((c) => pub.makerSignatures[c.id]?.items.some((i) => i.id === v.id))
+        .map((c) => ({ slug: c.slug, name: c.name })),
+    }));
+  }
+  return out;
+}
+
+export async function getSignatureReferences() {
+  return (await loadPublication()).signatures;
 }
 
 export async function getTechniques() {

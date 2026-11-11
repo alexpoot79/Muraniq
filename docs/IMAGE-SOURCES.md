@@ -87,6 +87,16 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 | `public/images/reference/r032-weathered-roman-bottle-front.jpg` | Naturally weathered Roman glass bottle | front | [The Metropolitan Museum of Art, 14.40.807](https://www.metmuseum.org/art/collection/search/248858) | CC0 | The Metropolitan Museum of Art, 14.40.807 · CC0 |
 | `public/images/reference/d001-beaker-draft.jpg` | Draft vase (must never be public) | front | The Cleveland Museum of Art, 1950.573.a · CC0 (draft fixture, never published) | CC0 | The Cleveland Museum of Art, 1950.573.a · CC0 |
 
+## Signature references (details)
+
+Plain crops of an image listed above: no colour, contrast, sharpening or other change. The record keeps the
+original image id and the region it was cut from (`cropOf`), and the viewer links to the original. See
+`docs/SIGNATURES.md`.
+
+| File | Detail | Cut from | Holder and record | Licence | Credit shown |
+| --- | --- | --- | --- | --- | --- |
+| `public/images/signatures/r009-inscription-canes-detail.jpg` | Inscription and date canes (450 × 575) | `r009-millefiori-paperweight-top.jpg`, pixels 545,650–995,1225 of the 1686 px museum image | [The Art Institute of Chicago, 1979.904](https://www.artic.edu/artworks/58835) | CC0 | The Art Institute of Chicago, 1979.904 · CC0 (detail) |
+
 ## Collection photographs (MURANIQ's own objects)
 
 Supplied by the owner on 10 November 2026. Edited at the owner's request: background blurred and slightly
