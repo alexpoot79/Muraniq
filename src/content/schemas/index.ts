@@ -20,7 +20,7 @@ import { z } from "zod";
 
 export const CATEGORY_SLUGS = [
   "murano-glass",
-  "studio-glass",
+  "other-glass",
   "fine-art",
   "collectible-objects",
 ] as const;

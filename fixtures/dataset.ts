@@ -1814,6 +1814,13 @@ export const fixtureDataset: DatasetInput = {
   ],
   redirects: [
     {
+      from: "/collection/studio-glass/",
+      to: "/collection/other-glass/",
+      reason: "Category renamed from Studio Glass to Other Glass (2026-11-11)",
+      checkedOn: "2026-11-11",
+      active: true,
+    },
+    {
       from: "/arnaldo-zanella/",
       to: "/glass-guide/makers/arnaldo-zanella/",
       reason: "Maker biography moves into the Glass Guide (text migrated 2026-11-09)",

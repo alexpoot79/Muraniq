@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro crumbs={[{ label: "About", href: routes.about() }]} kicker="About" title="A private collection," accent="studied closely.">
-        <p>Murano glass, studio glass, fine art and collectible objects, presented as a research archive.</p>
+        <p>Murano glass, other glass, fine art and collectible objects, presented as a research archive.</p>
       </PageIntro>
 
       <section aria-labelledby="about-statement" className="section-y">
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-8 lg:col-span-8">
             <h2 id="about-statement" className="reveal statement">
-              MURANIQ is a private collection of Murano glass, studio glass, fine art and collectible objects, shown with
+              MURANIQ is a private collection of Murano glass, other glass, fine art and collectible objects, shown with
               the same care a museum gives <span className="serif-italic text-accent">to its records.</span>
             </h2>
             <div className="reveal grid gap-6 text-muted-dark md:grid-cols-2">

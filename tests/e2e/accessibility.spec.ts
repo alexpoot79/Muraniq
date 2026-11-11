@@ -33,7 +33,7 @@ const PAGES = [
   "/collection/?q=nothing-matches-this",
   "/collection/murano-glass/",
   "/collection/fine-art/",
-  "/collection/studio-glass/",
+  "/collection/other-glass/",
   "/collection/objects/chalcedony-ewer-venice/",
   "/collection/objects/piazza-san-marco-bellotto/",
   "/collection/objects/venetian-chevron-bead/",

@@ -9,7 +9,7 @@ import { SITE, absoluteUrl } from "@/lib/site";
 // Canonical is rendered by <Catalog> (filtered → /collection/, paginated → self).
 export const metadata: Metadata = {
   title: "Collection",
-  description: "Browse and search the MURANIQ collection of Murano glass, studio glass, fine art and collectible objects.",
+  description: "Browse and search the MURANIQ collection of Murano glass, other glass, fine art and collectible objects.",
   openGraph: { title: `Collection | ${SITE.name}`, url: absoluteUrl(routes.collection()) },
 };
 
