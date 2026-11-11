@@ -9,11 +9,11 @@ export function CategoryTabs({ current }: { current?: string }) {
       <ul className="flex gap-x-8 gap-y-2 overflow-x-auto border-b border-line-dark">
         <li className="shrink-0">
           <Link
-            href={routes.collection()}
-            aria-current={current ? undefined : "page"}
-            className={`label inline-flex min-h-14 items-center border-b text-[0.6875rem] transition-colors ${current ? "border-transparent text-muted-dark hover:text-on-dark" : "border-accent text-on-dark"}`}
+            href={routes.history()}
+            aria-current={current === "history" ? "page" : undefined}
+            className={`label inline-flex min-h-14 items-center border-b text-[0.6875rem] transition-colors ${current === "history" ? "border-accent text-on-dark" : "border-transparent text-muted-dark hover:text-on-dark"}`}
           >
-            All works
+            History
           </Link>
         </li>
         {CATEGORIES.map((c) => (
