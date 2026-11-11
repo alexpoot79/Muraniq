@@ -9,6 +9,8 @@ export type HistorySection = {
   title: string;
   body: string[];
   sources: Array<{ label: string; url: string }>;
+  /** Open-access museum image (CC0), shown with its credit. Not a MURANIQ object. */
+  image?: { src: string; w: number; h: number; alt: string; caption: string; credit: string };
 };
 
 export const HISTORY_INTRO = "How glassmaking grew in Venice and on the island of Murano, period by period.";
@@ -16,6 +18,7 @@ export const HISTORY_INTRO = "How glassmaking grew in Venice and on the island o
 export const HISTORY_SECTIONS: HistorySection[] = [
   {
     id: "origins",
+    image: { src: "/images/reference/r022-devotional-badge-front.jpg", w: 2181, h: 2200, alt: "Small oval badge of moulded green glass showing a standing saint between two smaller kneeling figures", caption: "Devotional badge, Venice, c. 1200–1250", credit: "The Cleveland Museum of Art, 1985.146 · CC0" },
     period: "Before 1291",
     title: "Origins in Venice",
     body: [
@@ -44,6 +47,7 @@ export const HISTORY_SECTIONS: HistorySection[] = [
   },
   {
     id: "renaissance",
+    image: { src: "/images/reference/r002-enamelled-ewer-front.jpg", w: 1600, h: 2200, alt: "Blue glass ewer decorated with enamelled and gilded painting", caption: "Enamelled ewer, Venice, c. 1480", credit: "The Cleveland Museum of Art, 1944.257 · CC0" },
     period: "c. 1450 – 1700",
     title: "Cristallo and the Renaissance",
     body: [
@@ -58,6 +62,7 @@ export const HISTORY_SECTIONS: HistorySection[] = [
   },
   {
     id: "eighteenth",
+    image: { src: "/images/reference/r010-bellotto-piazza-san-marco.jpg", w: 2600, h: 1484, alt: "Painting of the Piazza San Marco in Venice, with the basilica on the left and the campanile in the centre", caption: "Bernardo Bellotto, Piazza San Marco, Venice", credit: "The Cleveland Museum of Art, 1962.169 · CC0" },
     period: "1700 – 1797",
     title: "The eighteenth century",
     body: [
@@ -71,6 +76,7 @@ export const HISTORY_SECTIONS: HistorySection[] = [
   },
   {
     id: "revival",
+    image: { src: "/images/reference/r023-sargent-venetian-glass-workers.jpg", w: 1686, h: 1083, alt: "Painting of a dim workshop where women sit working with bundles of long, pale glass rods", caption: "John Singer Sargent, Venetian Glass Workers, 1880–82", credit: "The Art Institute of Chicago, 1933.1217 · CC0" },
     period: "1797 – 1900",
     title: "The nineteenth-century revival",
     body: [

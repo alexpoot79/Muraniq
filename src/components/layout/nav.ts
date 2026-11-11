@@ -8,6 +8,7 @@ export const NAV_LEFT = [
 ];
 
 export const NAV_RIGHT = [
+  { label: "History", href: routes.history() },
   { label: "About", href: routes.about() },
   { label: "Contact", href: routes.contact() },
 ];

@@ -18,7 +18,7 @@ export default function CollectionPage({ searchParams }: PageProps<"/collection"
     <>
       <PageIntro crumbs={[{ label: "Collection", href: routes.collection() }]} kicker="The collection" title="Works," accent="seen closely.">
         <p>
-          Every work with its documented technique, maker and level of certainty. Search, or narrow by area, technique,
+          Every work with its documented technique, maker and level of certainty. Narrow by area, technique,
           maker or period.
         </p>
         <p className="text-sm">

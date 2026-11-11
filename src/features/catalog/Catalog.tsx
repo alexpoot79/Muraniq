@@ -78,27 +78,7 @@ export async function Catalog({
 
       <div className="grid gap-12 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-16 xl:gap-20">
         <FilterForm action={base} className="lg:sticky lg:top-32 lg:self-start">
-          <div className="flex flex-col gap-3">
-            <label htmlFor="search" className="label text-[0.6875rem] text-muted-dark">
-              Search the collection
-            </label>
-            <div className="flex items-end gap-3">
-              <input
-                id="search"
-                name="q"
-                type="search"
-                defaultValue={parsed.q}
-                maxLength={80}
-                placeholder="Title, maker, technique…"
-                className="field-dark min-w-0 flex-1 font-display text-xl"
-              />
-              <button type="submit" className="btn btn-ghost btn-sm">
-                Search
-              </button>
-            </div>
-          </div>
-
-          <details className="group mt-6 lg:open:block" open={filtered || undefined}>
+          <details className="group lg:open:block" open={filtered || undefined}>
             <summary className="label flex min-h-12 cursor-pointer items-center justify-between border border-line-dark px-4 text-[0.6875rem] lg:hidden">
               Filters
               <span className="text-muted-dark">{result.total} results</span>
@@ -187,7 +167,7 @@ export async function Catalog({
             <div className="mt-12 border border-line-dark p-8 sm:p-12">
               <h2 className="display-md">No works match these choices.</h2>
               <p className="mt-4 max-w-prose text-muted-dark">
-                Try fewer filters or a different spelling. Search covers titles, makers, techniques and descriptions.
+                Try fewer filters.
               </p>
               <p className="mt-6">
                 <Link href={base} className="btn btn-ghost">
