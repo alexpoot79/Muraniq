@@ -43,7 +43,7 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(32);
+    expect(r.total).toBe(28);
     expect(r.items[0]!.id).toBe("MUR-R001");
   });
 
@@ -70,7 +70,7 @@ describe("search and facets", () => {
 
   it("matches periods by overlap and reports undated works separately", () => {
     const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
-    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R010", "MUR-R013", "MUR-R014", "MUR-R019"]);
+    expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R013", "MUR-R014", "MUR-R019"]);
     expect(r.undatedExcluded).toBe(8); // the two Roman pieces and the six undated sommerso pieces
   });
 
@@ -85,7 +85,7 @@ describe("search and facets", () => {
     const r = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia" }));
     expect(r.facets.technique.avventurina).toBe(2); // still selectable alongside calcedonia
     expect(r.facets.category["murano-glass"]).toBe(4);
-    expect(r.facets.category["fine-art"]).toBeUndefined();
+    expect(r.facets.category["collectible-objects"]).toBeUndefined();
   });
 
   it("never returns draft records", () => {

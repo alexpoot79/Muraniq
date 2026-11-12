@@ -66,7 +66,6 @@ const HERITAGE: Array<{ year: string; title: string; text: string; slug?: string
 
 const AREA_PREVIEW: Record<string, string | undefined> = {
   "murano-glass": "enamelled-ewer-venice",
-  "fine-art": "pontifical-ceremony-guardi",
   "collectible-objects": "millefiori-paperweight-bigaglia",
 };
 
@@ -79,7 +78,8 @@ export default async function HomePage() {
   const study = studySummary ? await getArtworkBySlug(studySummary.slug) : null;
   const studyTechnique = study?.techniques[0] ? techniques.find((t) => t.slug === study.techniques[0]!.slug) : undefined;
   const selected = featured.filter((a) => a.id !== heroSummary?.id && a.id !== studySummary?.id).slice(0, 4);
-  const paintings = all.filter((a) => a.category === "fine-art");
+  const PAINTINGS = ["piazza-san-marco-bellotto", "pontifical-ceremony-guardi", "venetian-glass-workers-sargent", "bead-stringers-venice-blum"];
+  const paintings = all.filter((a) => PAINTINGS.includes(a.slug));
   const vista = paintings[0] ? await getArtworkBySlug(paintings[0].slug) : null;
   const invitation = paintings[1] ?? null;
   const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, all.filter((a) => a.category === c.slug).length]));
@@ -130,7 +130,7 @@ export default async function HomePage() {
               Glass and art, <span className="serif-italic text-accent">seen closely.</span>
             </h1>
             <p className="settle settle-2 lede measure mt-8 text-muted-dark lg:mt-10">
-              A private collection of Murano glass, other glass, fine art and collectible objects. Each work is shown in
+              A private collection of Murano glass, other glass and collectible objects. Each work is shown in
               full, with what is known about its making, and an honest account of what is not.
             </p>
             <div className="settle settle-3 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">

@@ -2,7 +2,7 @@
 export const SITE = {
   name: "MURANIQ",
   origin: "https://muraniq.nl",
-  tagline: "Murano Glass, Fine Art & Collectible Objects",
+  tagline: "Murano Glass, Other Glass & Collectible Objects",
   description:
     "A private collection of Murano glass, other glass, fine art and collectible objects — documented through independent research, marks, techniques and sources.",
   /** Contact address shown on the current muraniq.nl footer (source audit, 9 Nov 2026). */

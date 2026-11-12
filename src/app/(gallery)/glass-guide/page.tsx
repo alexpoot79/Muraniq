@@ -23,7 +23,7 @@ export default async function GuidePage() {
       href: routes.history(),
       text: "How glassmaking grew in Venice and on the island of Murano, period by period, from its origins to today.",
       meta: "History",
-      image: art("venetian-glass-workers-sargent"),
+      image: art("enamelled-ewer-venice"),
     },
     {
       title: "Techniques",
