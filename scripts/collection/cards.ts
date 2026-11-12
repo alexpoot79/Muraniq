@@ -2,7 +2,7 @@
  * Printable ID cards (A4, 8 per page): a large object id and a QR code that
  * the importer reads, so photographs never need renaming.
  *
- *   npm run collection:cards -- --from 7 --to 306 [--out tmp/MURANIQ-ID-kaartjes.pdf]
+ *   npm run collection:cards -- --from 1 --to 306 [--out tmp/MURANIQ-ID-kaartjes.pdf]
  */
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -17,7 +17,7 @@ function args() {
   };
   const num = (v: string | undefined, d: number) => Number(String(v ?? d).replace(/^(mur-)?m/i, ""));
   return {
-    from: num(get("--from"), 7),
+    from: num(get("--from"), 1),
     to: num(get("--to"), 306),
     out: path.resolve(get("--out") ?? "tmp/MURANIQ-ID-kaartjes.pdf"),
   };

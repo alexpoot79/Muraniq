@@ -41,7 +41,7 @@ If not every photo has a capture time, the order falls back to file name (natura
 ## Commands
 
 ```bash
-npm run collection:cards -- --from 7 --to 306        # printable ID cards (PDF, 8 per A4) -> tmp/
+npm run collection:cards -- --from 1 --to 306        # printable ID cards (PDF, 8 per A4) -> tmp/
 npm run collection:template -- --to 306              # data sheet with dropdowns, pre-filled -> tmp/
 npm run collection:import -- <photo folder> --sheet <sheet.xlsx|.csv> [--only M007-M030] [--dry-run] [--report-dir <dir>]
 ```
