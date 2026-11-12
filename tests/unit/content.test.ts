@@ -125,9 +125,6 @@ describe("publication boundary", () => {
     expect(card.attributionLine).toBe("Probably by Miotti Glasshouse");
     expect(pub.dossiers[card.slug]!.attributionLine).toBe(card.attributionLine);
     expect(line("MUR-R001")).toBe("Maker not documented");
-    expect(line("MUR-R010")).toBe("Attributed to Bernardo Bellotto");
-    // firm museum attributions, reviewed against the museum record, read as plain names
-    expect(line("MUR-R011")).toBe("Francesco Guardi");
     expect(line("MUR-R009")).toBe("Pietro Bigaglia");
   });
 });

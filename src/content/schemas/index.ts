@@ -21,7 +21,6 @@ import { z } from "zod";
 export const CATEGORY_SLUGS = [
   "murano-glass",
   "other-glass",
-  "fine-art",
   "collectible-objects",
 ] as const;
 export const CategorySlug = z.enum(CATEGORY_SLUGS);

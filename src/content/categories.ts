@@ -28,12 +28,6 @@ export const CATEGORIES: CategoryInfo[] = [
     intro: "Glass from other makers, studios and places, documented with the same attention to evidence.",
   },
   {
-    slug: "fine-art",
-    title: "Fine Art",
-    kicker: "Painting, works on paper and sculpture",
-    intro: "Fine art in the collection, documented with the same attention to evidence as the glass.",
-  },
-  {
     slug: "collectible-objects",
     title: "Collectible Objects",
     kicker: "Design and decorative objects",

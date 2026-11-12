@@ -8,7 +8,7 @@ import { SITE, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Collection",
-  description: "The MURANIQ collection areas: Murano glass, other glass, fine art and collectible objects.",
+  description: "The MURANIQ collection areas: Murano glass, other glass and collectible objects.",
   alternates: { canonical: absoluteUrl(routes.collection()) },
   openGraph: { title: `Collection | ${SITE.name}`, url: absoluteUrl(routes.collection()) },
 };
