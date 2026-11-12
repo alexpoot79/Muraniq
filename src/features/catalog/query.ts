@@ -10,7 +10,7 @@
 import { CATEGORY_SLUGS, CERTAINTY, type CategorySlug, type Certainty } from "@/content/schemas";
 import { fold, type ArtworkSummary } from "@/content/publication";
 
-export const PAGE_SIZE = 24;
+export const PAGE_SIZE = 12;
 const MAX_Q = 80;
 const MAX_VALUES_PER_FACET = 8;
 const MAX_PAGE = 500;
