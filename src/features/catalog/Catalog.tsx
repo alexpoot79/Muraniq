@@ -217,7 +217,15 @@ export async function Catalog({
         </div>
       </FilterForm>
 
-      {result.items.length === 0 ? (
+      {result.items.length === 0 && !filtered ? (
+        <div className="mt-12 border border-line-dark p-8 sm:p-12">
+          <p className="label eyebrow text-muted-dark">In preparation</p>
+          <h2 className="display-md mt-4">This area is being documented.</h2>
+          <p className="mt-4 max-w-prose text-muted-dark">
+            Works will appear here once their photography, attribution and sources have been reviewed.
+          </p>
+        </div>
+      ) : result.items.length === 0 ? (
         <div className="mt-12 border border-line-dark p-8 sm:p-12">
           <h2 className="display-md">No works match these choices.</h2>
           <p className="mt-4 max-w-prose text-muted-dark">
