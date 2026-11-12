@@ -1,5 +1,7 @@
 /**
- * LOCAL DEVELOPMENT FIXTURES — NOT COLLECTION CONTENT.
+ * LOCAL DATASET: reference works and editorial content in this file, plus
+ * MURANIQ's own objects from `fixtures/collection.json` (written by the
+ * collection importer, see docs/COLLECTION-PHOTOS.md).
  *
  * Until the collection's own records and photography are released (via
  * Sanity), the templates are developed with REFERENCE WORKS: real objects held
@@ -28,6 +30,8 @@ import { referenceMedia } from "./reference-media";
 import { signatureMedia, signatureReferences } from "./signatures";
 // Verbatim text from muraniq.nl/arnaldo-zanella/ and /loredano-rosin/ (retrieved 9 Nov 2026), not yet source-reviewed.
 import migrated from "./migrated-biographies.json";
+// MURANIQ's own collection, written by `npm run collection:import` (docs/COLLECTION-PHOTOS.md).
+import collection from "./collection.json";
 
 const CMA_PUBLISHER = "The Cleveland Museum of Art";
 const AIC_PUBLISHER = "The Art Institute of Chicago";
@@ -112,7 +116,7 @@ const anonymous = (sourceId: string, place: string): Assertion[] => [
 
 const CMA_TEXT = "Adapted from the museum's catalogue entry (CC0).";
 
-export const fixtureDataset: DatasetInput = {
+const referenceDataset: DatasetInput = {
   sources: [
     cmaSource("1985.141", "Ewer"),
     cmaSource("1944.257", "Ewer"),
@@ -727,26 +731,6 @@ export const fixtureDataset: DatasetInput = {
   media: [
     ...referenceMedia,
     ...signatureMedia,
-    ...[
-      { id: "IMG-M001-TOP", artworkId: "MUR-M001", file: "r025-sommerso-bowl-top-v3", w: 1512, h: 2048, view: "front" as const, alt: "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass" },
-      { id: "IMG-M002-FRONT", artworkId: "MUR-M002", file: "r026-sommerso-vase-green-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a green core cased in yellow and clear glass" },
-      { id: "IMG-M003-FRONT", artworkId: "MUR-M003", file: "r027-sommerso-vase-amber-v2", w: 1649, h: 2200, view: "front" as const, alt: "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base" },
-      { id: "IMG-M004-FRONT", artworkId: "MUR-M004", file: "r029-facet-bowl-blue", w: 2200, h: 1905, view: "front" as const, alt: "Thick faceted glass bowl, a blue core cased in amber and clear glass, its outside cut into broad flat planes" },
-      { id: "IMG-M005-FRONT", artworkId: "MUR-M005", file: "r030-facet-bowl-green", w: 2200, h: 1649, view: "front" as const, alt: "Low faceted bowl of thick green glass in a clear casing, its cut planes reflecting the green core" },
-      { id: "IMG-M006-FRONT", artworkId: "MUR-M006", file: "r031-facet-bowl-red", w: 2200, h: 1748, view: "front" as const, alt: "Thick bowl with a red core cased in amber and clear glass, its outside cut into many small facets" },
-    ].map((m) => ({
-      id: m.id,
-      artworkId: m.artworkId,
-      viewType: m.view,
-      src: `/images/collection/${m.file}.jpg`,
-      width: m.w,
-      height: m.h,
-      alt: m.alt,
-      credit: "Photograph © MURANIQ",
-      rights: "owned" as const,
-      rightsCleared: true,
-      hotspots: [],
-    })),
   ],
   artworks: [
     {
@@ -1566,102 +1550,6 @@ export const fixtureDataset: DatasetInput = {
       updatedAt: "2026-11-10",
     },
     {
-      id: "MUR-M001",
-      slug: "sommerso-bowl-blue-and-amber",
-      title: "Sommerso bowl in blue and amber",
-      category: "murano-glass",
-      objectType: "Bowl",
-      summary: "A heavy rectangular bowl in sommerso glass from the MURANIQ collection, with a blue layer cased in amber and clear glass.",
-      description: [
-        "Seen from above, a band of blue glass runs around the well of this thick, rectangular bowl, cased within amber and clear glass. The layers follow the curve of the form, as is typical of sommerso.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["blue", "amber", "colourless"],
-      country: "Italy",
-      heroImageId: "IMG-M001-TOP",
-      imageIds: ["IMG-M001-TOP"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 70,
-      updatedAt: "2026-11-10",
-    },
-    {
-      id: "MUR-M002",
-      slug: "sommerso-faceted-vase-green",
-      title: "Faceted sommerso vase in green",
-      category: "murano-glass",
-      objectType: "Vase",
-      summary: "A tall, faceted sommerso vase from the MURANIQ collection, with a green core cased in yellow and clear glass.",
-      description: [
-        "A green core is cased in a thin yellow layer and a thick outer layer of clear glass. The outside is cut into flat facets, which multiply the coloured core as the vase is turned.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["green", "yellow", "colourless"],
-      country: "Italy",
-      heroImageId: "IMG-M002-FRONT",
-      imageIds: ["IMG-M002-FRONT"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 71,
-      updatedAt: "2026-11-10",
-    },
-    {
-      id: "MUR-M003",
-      slug: "sommerso-faceted-vase-amber",
-      title: "Faceted sommerso vase in amber",
-      category: "murano-glass",
-      objectType: "Vase",
-      summary: "A tall, faceted sommerso vase from the MURANIQ collection, with a brown core cased in amber and a violet tint at the base.",
-      description: [
-        "A brown core is cased in amber glass, with a faint violet tint towards the base. Flat cut facets on the outside break the inner colour into overlapping reflections.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["brown", "amber", "violet"],
-      country: "Italy",
-      heroImageId: "IMG-M003-FRONT",
-      imageIds: ["IMG-M003-FRONT"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 72,
-      updatedAt: "2026-11-10",
-    },
-    {
       id: "MUR-R025",
       slug: "chalcedony-footed-bowl-venice",
       title: "Footed bowl in chalcedony glass",
@@ -1689,102 +1577,6 @@ export const fixtureDataset: DatasetInput = {
       curatedOrder: 15,
       isFixture: true,
       reference: metRef(460754, "1975.1.1196", "Robert Lehman Collection, 1975"),
-      updatedAt: "2026-11-10",
-    },
-    {
-      id: "MUR-M004",
-      slug: "facet-cut-sommerso-bowl-blue",
-      title: "Facet-cut sommerso bowl in blue and amber",
-      category: "murano-glass",
-      objectType: "Bowl",
-      summary: "A heavy bowl from the MURANIQ collection, a blue core cased in amber and clear glass, its outside cut into broad facets.",
-      description: [
-        "A blue core is cased in a band of amber and a thick outer layer of clear glass. The outside is ground into a few broad, flat facets that give the bowl an angular, gem-like outline.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["blue", "amber", "colourless"],
-      country: "Italy",
-      heroImageId: "IMG-M004-FRONT",
-      imageIds: ["IMG-M004-FRONT"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 73,
-      updatedAt: "2026-11-10",
-    },
-    {
-      id: "MUR-M005",
-      slug: "facet-cut-sommerso-bowl-green",
-      title: "Facet-cut sommerso bowl in green",
-      category: "murano-glass",
-      objectType: "Bowl",
-      summary: "A low bowl from the MURANIQ collection, green glass cased in clear glass, cut into large crossing facets.",
-      description: [
-        "Green glass is cased in clear glass and the outside is cut into large flat facets. Seen from the side, the facets break the green core into repeated, overlapping reflections.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["green", "colourless"],
-      country: "Italy",
-      heroImageId: "IMG-M005-FRONT",
-      imageIds: ["IMG-M005-FRONT"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 74,
-      updatedAt: "2026-11-10",
-    },
-    {
-      id: "MUR-M006",
-      slug: "facet-cut-sommerso-bowl-red",
-      title: "Facet-cut sommerso bowl in red and amber",
-      category: "murano-glass",
-      objectType: "Bowl",
-      summary: "A thick bowl from the MURANIQ collection, a red core cased in amber and clear glass, covered all over in small cut facets.",
-      description: [
-        "A red core is cased in amber and clear glass. The outside is cut into many small facets, which scatter the amber and red into a honeycomb of reflections.",
-        "Maker, glasshouse and date have not yet been documented, so no attribution is given.",
-      ],
-      creators: [],
-      techniqueIds: ["TEC-SOMMERSO", "TEC-MOLATO"],
-      assertions: [
-        {
-          field: "creator",
-          statement: "Maker not documented",
-          certainty: "unknown",
-          evidence: [],
-          publicNote: "No maker, glasshouse or date has been documented for this piece yet.",
-        },
-      ],
-      materials: ["Glass"],
-      colours: ["red", "amber", "colourless"],
-      country: "Italy",
-      heroImageId: "IMG-M006-FRONT",
-      imageIds: ["IMG-M006-FRONT"],
-      availability: "private_collection",
-      status: "published",
-      curatedOrder: 75,
       updatedAt: "2026-11-10",
     },
     {
@@ -1908,3 +1700,22 @@ export const fixtureDataset: DatasetInput = {
     },
   ],
 };
+
+/** The own collection as stored in `fixtures/collection.json`. */
+export type OwnCollection = {
+  artworks: NonNullable<DatasetInput["artworks"]>;
+  media: NonNullable<DatasetInput["media"]>;
+  sources: NonNullable<DatasetInput["sources"]>;
+};
+
+/** Reference works and editorial content plus the own collection. The importer uses this to validate before writing. */
+export function withCollection(own: OwnCollection): DatasetInput {
+  return {
+    ...referenceDataset,
+    sources: [...referenceDataset.sources, ...own.sources],
+    media: [...referenceDataset.media, ...own.media],
+    artworks: [...referenceDataset.artworks, ...own.artworks],
+  };
+}
+
+export const fixtureDataset: DatasetInput = withCollection(collection as unknown as OwnCollection);

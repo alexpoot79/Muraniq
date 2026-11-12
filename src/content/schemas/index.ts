@@ -54,7 +54,7 @@ export const PUBLICATION_STATUS = ["draft", "in_review", "published", "withdrawn
 export const PublicationStatus = z.enum(PUBLICATION_STATUS);
 export type PublicationStatus = z.infer<typeof PublicationStatus>;
 
-export const VIEW_TYPES = ["front", "reverse", "side", "base", "signature", "label", "detail", "context"] as const;
+export const VIEW_TYPES = ["front", "reverse", "top", "side", "base", "signature", "label", "detail", "context"] as const;
 export const ViewType = z.enum(VIEW_TYPES);
 export type ViewType = z.infer<typeof ViewType>;
 

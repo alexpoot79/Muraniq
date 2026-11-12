@@ -1,0 +1,342 @@
+{
+  "note": "MURANIQ's own collection: objects and their photographs. Written by `npm run collection:import` (see docs/COLLECTION-PHOTOS.md); hand edits are kept on re-import. Public data only: no prices, values, addresses or storage locations.",
+  "artworks": [
+    {
+      "id": "MUR-M001",
+      "slug": "sommerso-bowl-blue-and-amber",
+      "title": "Sommerso bowl in blue and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A heavy rectangular bowl in sommerso glass from the MURANIQ collection, with a blue layer cased in amber and clear glass.",
+      "description": [
+        "Seen from above, a band of blue glass runs around the well of this thick, rectangular bowl, cased within amber and clear glass. The layers follow the curve of the form, as is typical of sommerso.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "blue",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M001-TOP",
+      "imageIds": [
+        "IMG-M001-TOP"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 70,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M002",
+      "slug": "sommerso-faceted-vase-green",
+      "title": "Faceted sommerso vase in green",
+      "category": "murano-glass",
+      "objectType": "Vase",
+      "summary": "A tall, faceted sommerso vase from the MURANIQ collection, with a green core cased in yellow and clear glass.",
+      "description": [
+        "A green core is cased in a thin yellow layer and a thick outer layer of clear glass. The outside is cut into flat facets, which multiply the coloured core as the vase is turned.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "green",
+        "yellow",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M002-FRONT",
+      "imageIds": [
+        "IMG-M002-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 71,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M003",
+      "slug": "sommerso-faceted-vase-amber",
+      "title": "Faceted sommerso vase in amber",
+      "category": "murano-glass",
+      "objectType": "Vase",
+      "summary": "A tall, faceted sommerso vase from the MURANIQ collection, with a brown core cased in amber and a violet tint at the base.",
+      "description": [
+        "A brown core is cased in amber glass, with a faint violet tint towards the base. Flat cut facets on the outside break the inner colour into overlapping reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "brown",
+        "amber",
+        "violet"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M003-FRONT",
+      "imageIds": [
+        "IMG-M003-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 72,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M004",
+      "slug": "facet-cut-sommerso-bowl-blue",
+      "title": "Facet-cut sommerso bowl in blue and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A heavy bowl from the MURANIQ collection, a blue core cased in amber and clear glass, its outside cut into broad facets.",
+      "description": [
+        "A blue core is cased in a band of amber and a thick outer layer of clear glass. The outside is ground into a few broad, flat facets that give the bowl an angular, gem-like outline.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "blue",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M004-FRONT",
+      "imageIds": [
+        "IMG-M004-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 73,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M005",
+      "slug": "facet-cut-sommerso-bowl-green",
+      "title": "Facet-cut sommerso bowl in green",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A low bowl from the MURANIQ collection, green glass cased in clear glass, cut into large crossing facets.",
+      "description": [
+        "Green glass is cased in clear glass and the outside is cut into large flat facets. Seen from the side, the facets break the green core into repeated, overlapping reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "green",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M005-FRONT",
+      "imageIds": [
+        "IMG-M005-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 74,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M006",
+      "slug": "facet-cut-sommerso-bowl-red",
+      "title": "Facet-cut sommerso bowl in red and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A thick bowl from the MURANIQ collection, a red core cased in amber and clear glass, covered all over in small cut facets.",
+      "description": [
+        "A red core is cased in amber and clear glass. The outside is cut into many small facets, which scatter the amber and red into a honeycomb of reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "red",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M006-FRONT",
+      "imageIds": [
+        "IMG-M006-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 75,
+      "updatedAt": "2026-11-10"
+    }
+  ],
+  "media": [
+    {
+      "id": "IMG-M001-TOP",
+      "artworkId": "MUR-M001",
+      "viewType": "top",
+      "src": "/images/collection/r025-sommerso-bowl-top-v3.jpg",
+      "width": 1512,
+      "height": 2048,
+      "alt": "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M002-FRONT",
+      "artworkId": "MUR-M002",
+      "viewType": "front",
+      "src": "/images/collection/r026-sommerso-vase-green-v2.jpg",
+      "width": 1649,
+      "height": 2200,
+      "alt": "Tall faceted vase of thick glass, a green core cased in yellow and clear glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M003-FRONT",
+      "artworkId": "MUR-M003",
+      "viewType": "front",
+      "src": "/images/collection/r027-sommerso-vase-amber-v2.jpg",
+      "width": 1649,
+      "height": 2200,
+      "alt": "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M004-FRONT",
+      "artworkId": "MUR-M004",
+      "viewType": "front",
+      "src": "/images/collection/r029-facet-bowl-blue.jpg",
+      "width": 2200,
+      "height": 1905,
+      "alt": "Thick faceted glass bowl, a blue core cased in amber and clear glass, its outside cut into broad flat planes",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M005-FRONT",
+      "artworkId": "MUR-M005",
+      "viewType": "front",
+      "src": "/images/collection/r030-facet-bowl-green.jpg",
+      "width": 2200,
+      "height": 1649,
+      "alt": "Low faceted bowl of thick green glass in a clear casing, its cut planes reflecting the green core",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M006-FRONT",
+      "artworkId": "MUR-M006",
+      "viewType": "front",
+      "src": "/images/collection/r031-facet-bowl-red.jpg",
+      "width": 2200,
+      "height": 1748,
+      "alt": "Thick bowl with a red core cased in amber and clear glass, its outside cut into many small facets",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    }
+  ],
+  "sources": []
+}
