@@ -169,9 +169,20 @@ export async function getTechniqueBySlug(slug: string) {
   const pub = await loadPublication();
   const technique = pub.techniques.find((t) => t.slug === slug);
   if (!technique) return null;
+  const all = pub.artworks.filter((a) => technique.artworkIds.includes(a.id));
+  const makers = pub.creators
+    .map((c) => ({ slug: c.slug, name: c.name, works: all.filter((a) => a.makerSlugs.includes(c.slug)).length }))
+    .filter((m) => m.works > 0);
+  const areas = [...new Set(all.map((a) => a.category))].map((category) => ({
+    category,
+    works: all.filter((a) => a.category === category).length,
+  }));
   return {
     technique,
-    artworks: pub.artworks.filter((a) => technique.artworkIds.includes(a.id)).slice(0, 6),
+    artworks: all.slice(0, 6),
+    total: all.length,
+    makers,
+    areas,
     sources: pub.sources.filter((s) => technique.sourceIds.includes(s.id)),
   };
 }

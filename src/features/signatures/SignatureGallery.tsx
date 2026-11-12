@@ -62,7 +62,7 @@ function Facts({ s, tone }: { s: MakerSignature; tone: "paper" | "dark" }) {
     <dl className="grid grid-cols-[minmax(6.5rem,auto)_1fr] gap-x-4 gap-y-1.5 text-sm">
       {rows.map((r) => (
         <div key={r.k} className="contents">
-          <dt className={`label pt-0.5 text-[0.625rem] ${muted}`}>{r.k}</dt>
+          <dt className={`label pt-0.5 text-label ${muted}`}>{r.k}</dt>
           <dd>{r.v}</dd>
         </div>
       ))}
@@ -103,7 +103,7 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
   };
 
   const filterButton = (active: boolean) =>
-    `min-h-11 border px-4 text-[0.6875rem] font-medium tracking-[0.16em] uppercase transition-colors duration-300 ${
+    `min-h-11 border px-4 text-label font-medium tracking-[0.16em] uppercase transition-colors duration-300 ${
       active ? "border-ink bg-ink text-paper" : "border-line-paper text-ink hover:border-ink"
     }`;
 
@@ -113,7 +113,7 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
         <div className="flex flex-col gap-4" role="group" aria-label="Filter signature references">
           {kinds.length > 1 && (
             <div className="flex flex-wrap items-center gap-2">
-              <span className="label mr-2 text-[0.6875rem] text-ink-muted">Kind</span>
+              <span className="label mr-2 text-label text-ink-muted">Kind</span>
               <button type="button" className={filterButton(kind === null)} aria-pressed={kind === null} onClick={() => setKind(null)}>
                 All
               </button>
@@ -126,7 +126,7 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
           )}
           {periods.length > 1 && (
             <div className="flex flex-wrap items-center gap-2">
-              <span className="label mr-2 text-[0.6875rem] text-ink-muted">Period of use</span>
+              <span className="label mr-2 text-label text-ink-muted">Period of use</span>
               <button type="button" className={filterButton(period === null)} aria-pressed={period === null} onClick={() => setPeriod(null)}>
                 All
               </button>
@@ -171,13 +171,13 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
                   </div>
                 </div>
                 <div className={`flex flex-col gap-3 ${withPhoto.length === 1 ? "md:col-span-6" : ""}`}>
-                  <p className="label text-[0.6875rem] text-ink-muted">
+                  <p className="label text-label text-ink-muted">
                     {KIND_LABEL[s.kind]} <span aria-hidden="true">·</span> {APPLICATION_LABEL[s.application]}
                   </p>
                   <h3 className="font-display text-2xl leading-tight">{s.title}</h3>
                   {s.transcription && (
                     <div>
-                      <p className="label text-[0.625rem] text-ink-muted">As written</p>
+                      <p className="label text-label text-ink-muted">As written</p>
                       <Transcription text={s.transcription} className="mt-1" />
                     </div>
                   )}
@@ -213,7 +213,7 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
 
       {textOnly.length > 0 && (
         <div>
-          <h3 className="label text-[0.6875rem] text-ink-muted">Recorded in sources</h3>
+          <h3 className="label text-label text-ink-muted">Recorded in sources</h3>
           <ul className="mt-3 flex flex-col border-t border-line-paper">
             {textOnly.map((s) => {
               const obj = objectLink(s);
@@ -221,7 +221,7 @@ export function SignatureGallery({ items, makerName }: { items: MakerSignature[]
               return (
                 <li key={s.id} id={`sig-${s.id}`} className="grid scroll-mt-28 gap-3 border-b border-line-paper py-6 md:grid-cols-12">
                   <div className="md:col-span-5">
-                    <p className="label text-[0.6875rem] text-ink-muted">
+                    <p className="label text-label text-ink-muted">
                       {KIND_LABEL[s.kind]} <span aria-hidden="true">·</span> {APPLICATION_LABEL[s.application]}
                     </p>
                     {s.transcription ? (
@@ -288,12 +288,12 @@ function SlideInfo({ slide, makerName }: { slide: Slide; makerName: string }) {
   const src = s.sources[0];
   return (
     <div className="flex flex-col gap-4">
-      <p className="label text-[0.6875rem] text-muted-dark">
+      <p className="label text-label text-muted-dark">
         {KIND_LABEL[s.kind]} · {APPLICATION_LABEL[s.application]}
       </p>
       {s.transcription && (
         <div>
-          <p className="label text-[0.625rem] text-muted-dark">As written</p>
+          <p className="label text-label text-muted-dark">As written</p>
           <Transcription text={s.transcription} className="mt-1 text-on-dark" />
           {s.transcriptionNote && <p className="mt-2 text-muted-dark">{s.transcriptionNote}</p>}
           <p className="mt-1 text-muted-dark">{TRANSCRIBED_FROM[s.transcribedFrom]}.</p>

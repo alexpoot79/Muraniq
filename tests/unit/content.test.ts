@@ -124,7 +124,7 @@ describe("publication boundary", () => {
     const card = pub.artworks.find((a) => a.id === "MUR-R008")!;
     expect(card.attributionLine).toBe("Probably by Miotti Glasshouse");
     expect(pub.dossiers[card.slug]!.attributionLine).toBe(card.attributionLine);
-    expect(line("MUR-R001")).toBe("Maker not documented");
-    expect(line("MUR-R009")).toBe("Pietro Bigaglia");
+    expect(line("MUR-R001")).toBe("Maker unidentified");
+    expect(line("MUR-R009")).toBe("By Pietro Bigaglia");
   });
 });

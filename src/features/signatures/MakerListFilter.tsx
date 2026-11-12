@@ -10,7 +10,7 @@ import { useState } from "react";
 export function MakerListFilter({ total, withSignatures, children }: { total: number; withSignatures: number; children: React.ReactNode }) {
   const [only, setOnly] = useState(false);
   const button = (active: boolean) =>
-    `min-h-11 border px-4 text-[0.6875rem] font-medium tracking-[0.16em] uppercase transition-colors duration-300 ${
+    `min-h-11 border px-4 text-label font-medium tracking-[0.16em] uppercase transition-colors duration-300 ${
       active ? "border-accent text-accent" : "border-line-dark text-on-dark hover:border-accent"
     }`;
   return (

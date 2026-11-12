@@ -63,3 +63,20 @@ Short records of choices made during the build. Architecture decisions themselve
     Photographs need established rights, web clearance, credit, a source and a review date; recognition use is
     recorded separately and only affects the internal export. The full-screen viewer is shared
     (`ViewerDialog`, rendered in a portal on `<body>`), so object views and signature references behave the same.
+16. **The Private Viewing Room (redesign, 12 Nov 2026).** Three rooms as token scopes (see `docs/ART-DIRECTION.md`).
+    - **Record status** is one of three plain statements, from `recordStatus()` in `src/lib/format.ts`:
+      *Available for acquisition*, *MURANIQ collection* (not currently offered) or *Research reference* (held by a
+      named institution). Reserved and sold are stated as such. No prices, no cart, no purchase pressure.
+    - **Attribution wording**: *By* (verified), *Attributed to*, *Probably by*, *Possibly by*, *Maker unidentified*.
+    - **Dimensions** in centimetres first, inches in brackets, both computed from the recorded millimetres only.
+    - **Related works** say why they are related (curated, same maker, same technique), own works with own works.
+    - **Private Selection**: up to 24 saved works in this browser's `localStorage` (no account). `/selection/`
+      reads public fields through `/api/selection/` (no-store, noindex) and compares up to three side by side; the
+      comparison URL (`?compare=`) holds public ids only. The scale view draws outline boxes from recorded height
+      and width and says it compares size only.
+    - **Back to the listing**: the last collection listing (filters, page, scroll position) is kept in
+      `sessionStorage` for this tab; object pages offer "Back to …" and the listing restores its position.
+    - **Glass Guide as a network**: technique pages link the history periods whose reviewed text names the
+      technique (plain text match, `periodsMentioning()`), the areas with examples (filtered links), the makers of
+      those examples and the sources. The Glass Guide index shows one worked thread built from published data.
+    - Photo recognition remains shelved (10 Nov 2026). No Product or Offer structured data.

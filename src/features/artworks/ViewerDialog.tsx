@@ -15,7 +15,7 @@ export function Icon({ d, size = 16 }: { d: string; size?: number }) {
 }
 
 export const viewerControl =
-  "inline-flex min-h-11 items-center gap-2.5 border border-line-dark px-4 text-[0.6875rem] font-medium tracking-[0.18em] uppercase text-on-dark transition-colors duration-300 hover:border-accent hover:text-accent disabled:opacity-40 disabled:hover:border-line-dark disabled:hover:text-on-dark";
+  "inline-flex min-h-11 items-center gap-2.5 border border-line-dark px-4 text-label font-medium tracking-[0.18em] uppercase text-on-dark transition-colors duration-300 hover:border-accent hover:text-accent disabled:opacity-40 disabled:hover:border-line-dark disabled:hover:text-on-dark";
 
 /**
  * Full-screen image dialog shared by the object viewer and the signature
@@ -115,7 +115,7 @@ export function ViewerDialog({
           <button
             type="button"
             autoFocus
-            className="label inline-flex h-11 items-center gap-2 px-2 text-[0.6875rem]"
+            className="label inline-flex h-11 items-center gap-2 px-2 text-label"
             onClick={() => dialogRef.current?.close()}
           >
             Close

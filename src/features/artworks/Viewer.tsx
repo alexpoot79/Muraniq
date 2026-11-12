@@ -29,21 +29,22 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
 
   return (
     <div className="flex min-w-0 flex-col gap-5">
-      <figure className="plate relative flex items-center justify-center overflow-hidden px-4 py-6 sm:px-10 sm:py-10">
+      <figure className="plate relative flex items-center justify-center overflow-hidden px-3 py-3 sm:px-8 sm:py-6">
         <ImageBackdrop media={current} sizes="(min-width: 64rem) 52vw, 100vw" />
-        <div className="relative mx-auto w-fit max-w-full shadow-[0_30px_80px_-30px_rgb(0_0_0_/_0.6)]">
+        <div className="relative mx-auto w-fit max-w-full">
           <ArtworkImage
             media={current}
             sizes="(min-width: 64rem) 52vw, 100vw"
             priority={index === 0}
-            className="max-h-[72svh] w-auto max-w-full"
+            className="max-h-[74svh] w-auto max-w-full [--feather:6%]"
+            feather
           />
           {showHotspots &&
             hotspots.map((h, i) => (
               <span
                 key={i}
                 aria-hidden="true"
-                className="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-stage/60 font-display text-lg text-ivory shadow-[0_0_0_6px_rgb(197_164_109_/_0.18)] backdrop-blur-sm"
+                className="absolute flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-stage/75 font-display text-lg text-ivory ring-1 ring-ivory/40"
                 style={{ left: `${h.x * 100}%`, top: `${h.y * 100}%` }}
               >
                 {i + 1}
@@ -55,7 +56,7 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
 
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <p className="text-sm text-muted-dark" aria-live="polite">
-          <span className="label text-[0.6875rem] text-on-dark">{VIEW_LABEL[current.viewType] ?? current.viewType}</span>
+          <span className="label text-label text-on-dark">{VIEW_LABEL[current.viewType] ?? current.viewType}</span>
           {count > 1 && <span className="numeral ml-3 text-base">{`${index + 1} / ${count}`}</span>}
           {current.caption && <span className="block sm:ml-3 sm:inline">{current.caption}</span>}
         </p>
@@ -97,7 +98,7 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
                     <ArtworkImage media={m} sizes="96px" fill decorative />
                   </span>
                 </span>
-                <span className={`text-[0.6875rem] tracking-wide ${i === index ? "text-on-dark" : "text-muted-dark"}`}>
+                <span className={`text-label tracking-wide ${i === index ? "text-on-dark" : "text-muted-dark"}`}>
                   {VIEW_LABEL[m.viewType] ?? m.viewType}
                 </span>
                 <span className="sr-only">: {m.alt}</span>
@@ -109,7 +110,7 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
 
       {hotspots.length > 0 && (
         <details className="border-t border-line-dark pt-3" open={showHotspots}>
-          <summary className="label cursor-pointer py-2 text-[0.6875rem] text-muted-dark">Detail points on this view (text)</summary>
+          <summary className="label cursor-pointer py-2 text-label text-muted-dark">Detail points on this view (text)</summary>
           <ol className="mt-3 flex flex-col gap-4 text-sm">
             {hotspots.map((h, i) => (
               <li key={i} className="flex gap-4">

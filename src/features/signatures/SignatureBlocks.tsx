@@ -21,7 +21,7 @@ export function SignatureCompact({ item, makerName }: { item: MakerSignature; ma
   const line = item.relation === "own" ? ownerLine(item.kind, item.markOf) : contextLine(item, makerName);
   return (
     <section aria-labelledby="signature-reference-title" className="settle settle-2 border-t border-line-dark pt-6">
-      <h2 id="signature-reference-title" className="label text-[0.6875rem] text-muted-dark">
+      <h2 id="signature-reference-title" className="label text-label text-muted-dark">
         {KIND_REFERENCE_HEADING[item.kind]}
       </h2>
       <div className="mt-4 flex gap-5">

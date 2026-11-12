@@ -22,6 +22,8 @@ const TRACK = "exhibition-track";
 export default async function ExhibitionPage() {
   const works = await getArtworks();
   const total = works.length;
+  const own = works.filter((w) => !w.heldBy && !w.isFixture).length;
+  const references = works.filter((w) => w.heldBy).length;
   return (
     <section aria-labelledby="exhibition-title" className="relative bg-stage">
       <div
@@ -46,8 +48,12 @@ export default async function ExhibitionPage() {
                 keys.
               </p>
               <p className="text-sm">
-                {total} works. The objects shown are reference pieces from public museum collections, credited on every
-                wall.
+                {total} works
+                {own > 0 && references > 0
+                  ? `: ${own} from the MURANIQ collection and ${references} reference ${references === 1 ? "piece" : "pieces"} from public museum collections, credited on every wall.`
+                  : references > 0
+                    ? ". The objects shown are reference pieces from public museum collections, credited on every wall."
+                    : "."}
               </p>
             </div>
           </div>
@@ -64,9 +70,9 @@ export default async function ExhibitionPage() {
             className="grid w-screen shrink-0 grid-rows-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_24rem] lg:grid-rows-1"
           >
             <div className="plate relative overflow-hidden">
-              <ImageBackdrop media={w.hero} sizes="70vw" />
-              <div className="absolute inset-6 sm:inset-12 lg:inset-16">
-                <ArtworkImage media={w.hero} sizes="(min-width: 64rem) 65vw, 100vw" fill className="drop-shadow-[0_40px_60px_rgb(0_0_0_/_0.45)]" />
+              <ImageBackdrop media={w.hero} />
+              <div className="absolute inset-6 flex items-center justify-center sm:inset-12 lg:inset-16">
+                <ArtworkImage media={w.hero} sizes="(min-width: 64rem) 65vw, 100vw" intrinsic feather />
               </div>
             </div>
             <figcaption className="flex flex-col justify-end gap-4 border-line-dark bg-stage px-6 py-6 lg:border-l lg:px-10 lg:py-12">
@@ -78,7 +84,11 @@ export default async function ExhibitionPage() {
               <p className="text-sm text-muted-dark">
                 {[w.datingLabel, w.objectType].filter(Boolean).join(" · ")}
                 {w.attributionCertainty !== "unknown" && <span className="block">{w.attributionLine}</span>}
-                {w.heldBy && <span className="block">Museum reference · {w.heldBy.institution} · CC0</span>}
+                {w.heldBy ? (
+                  <span className="block">Research reference · {w.heldBy.institution} · CC0</span>
+                ) : (
+                  !w.isFixture && <span className="block">MURANIQ collection · {w.id}</span>
+                )}
               </p>
               <ArrowLink href={routes.artwork(w.slug)} className="text-on-dark">
                 Study this work

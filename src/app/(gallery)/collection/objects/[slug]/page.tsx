@@ -12,7 +12,9 @@ import { FixtureNotice } from "@/components/ui/FixtureNotice";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { ROLE_LABEL, attributionPhrase, mayAssertCreatorInStructuredData } from "@/features/artworks/attribution";
-import { AVAILABILITY_LABEL, VIEW_LABEL, formatDimensions } from "@/lib/format";
+import { VIEW_LABEL, formatDimensions, recordStatus } from "@/lib/format";
+import { SaveToSelection } from "@/features/selection/SaveToSelection";
+import { BackToListing } from "@/features/catalog/ListingMemory";
 import { pageMetadata } from "@/lib/metadata";
 import { routes } from "@/lib/routes";
 import { absoluteUrl } from "@/lib/site";
@@ -82,6 +84,7 @@ export default async function ArtworkPage({ params }: Props) {
   const dims = formatDimensions(a.dimensions);
   const sourceIndex = new Map(a.sources.map((s, i) => [s.id, i + 1]));
   const cta = enquiryCta(a.availability);
+  const status = recordStatus({ availability: a.availability, heldBy: a.reference ?? null });
   const lead = a.creatorLinks[0];
 
   const specs: Array<{ label: string; value: React.ReactNode }> = [
@@ -169,15 +172,18 @@ export default async function ArtworkPage({ params }: Props) {
   return (
     <article>
       <div className="container-gallery pt-8 pb-20 lg:pt-12 lg:pb-28">
-        <Breadcrumbs
-          items={[
-            { label: "Collection", href: routes.collection() },
-            { label: category.title, href: routes.category(category.slug) },
-            { label: a.title, href: routes.artwork(a.slug) },
-          ]}
-        />
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
+          <Breadcrumbs
+            items={[
+              { label: "Collection", href: routes.collection() },
+              { label: category.title, href: routes.category(category.slug) },
+              { label: a.title, href: routes.artwork(a.slug) },
+            ]}
+          />
+          <BackToListing />
+        </div>
 
-        <div className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-10 [grid-template-areas:'head'_'media'_'facts'] lg:mt-14 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
+        <div className="mt-8 grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-8 [grid-template-areas:'head'_'media'_'facts'] lg:mt-14 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:[grid-template-areas:'media_head'_'media_facts'] lg:[grid-template-rows:auto_1fr]">
           <header className="flex flex-col gap-5 [grid-area:head]">
             {previewNote && (
               <div className="border-l-2 border-accent pl-4 text-sm" role="note">
@@ -203,12 +209,16 @@ export default async function ArtworkPage({ params }: Props) {
               {category.title} · {a.objectType}
             </p>
             <h1 className="settle settle-1 display-lg">{a.title}</h1>
+            <p className="settle settle-1 -mt-2 font-mono text-sm text-muted-dark">
+              <span className="sr-only">{ref ? "Record" : "Collection reference"}: </span>
+              {a.id}
+            </p>
             <div className="settle settle-2 flex flex-col gap-3">
               <p className="font-display text-xl text-on-dark">
                 {[origin ?? a.country, a.dating?.displayLabel].filter(Boolean).join(", ")}
               </p>
               {a.attributionCertainty === "unknown" ? (
-                <p className="text-sm text-muted-dark">Maker not recorded</p>
+                <p className="text-sm text-muted-dark">{a.attributionLine}</p>
               ) : (
                 <div className="flex flex-col gap-2">
                   <p className="text-on-dark">{a.attributionLine}</p>
@@ -226,23 +236,27 @@ export default async function ArtworkPage({ params }: Props) {
             <p className="lede text-muted-dark">{a.summary}</p>
             <dl className="grid grid-cols-[minmax(7.5rem,auto)_1fr] border-t border-line-dark text-sm">
               {[
-                ...(ref
-                  ? [{ k: "Held by", v: `${ref.institution}, ${ref.accessionNumber}` }]
-                  : [{ k: "Status", v: AVAILABILITY_LABEL[a.availability] }]),
+                ...(ref ? [{ k: "Held by", v: `${ref.institution}, ${ref.accessionNumber}` }] : []),
+                ...(a.dating?.displayLabel ? [{ k: "Date", v: a.dating.displayLabel }] : []),
                 ...(a.country ? [{ k: "Country", v: a.country }] : []),
                 ...(a.materials.length ? [{ k: "Materials", v: a.materials.join(", ") }] : []),
                 ...(a.techniques.length ? [{ k: "Technique", v: a.techniques.map((t) => t.term).join(", ") }] : []),
-                ...(dims[0] ? [{ k: dims[0].label, v: dims[0].value }] : []),
-                { k: "Record", v: a.id },
+                ...dims.slice(0, 2).map((d) => ({ k: d.label, v: d.value })),
               ].map((row) => (
                 <div key={row.k} className="contents">
-                  <dt className="label border-b border-line-dark py-3.5 text-[0.6875rem] text-muted-dark">{row.k}</dt>
+                  <dt className="label border-b border-line-dark py-3.5 pr-4 text-muted-dark">{row.k}</dt>
                   <dd className="border-b border-line-dark py-3.5 text-on-dark">{row.v}</dd>
                 </div>
               ))}
             </dl>
 
-            {a.isFixture && <FixtureNotice heldBy={ref ? { ...ref } : null} />}
+            {a.isFixture ? (
+              <FixtureNotice heldBy={ref ? { ...ref } : null} />
+            ) : (
+              <p className={`border-l pl-5 text-sm ${status.kind === "available" ? "border-accent" : "border-line-dark"}`} role="note">
+                <strong className="font-medium text-on-dark">{status.label}.</strong> <span className="text-muted-dark">{status.note}</span>
+              </p>
+            )}
 
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
               {ref ? (
@@ -259,6 +273,7 @@ export default async function ArtworkPage({ params }: Props) {
                 Read the full dossier
               </ArrowLink>
             </div>
+            <SaveToSelection id={a.id} title={a.title} className="-mt-4" />
           </div>
         </div>
       </div>
@@ -293,7 +308,7 @@ export default async function ArtworkPage({ params }: Props) {
                     <h3 className="font-display text-2xl">
                       {MARK_KIND[m.kind]} <span className="text-ink-muted">· {m.location}</span>
                     </h3>
-                    {m.application && <p className="label text-[0.6875rem] text-ink-muted">{APPLICATION_LABEL[m.application]}</p>}
+                    {m.application && <p className="label text-label text-ink-muted">{APPLICATION_LABEL[m.application]}</p>}
                     <p>{m.observation}</p>
                     {m.transcription && (
                       <p>
@@ -436,10 +451,8 @@ export default async function ArtworkPage({ params }: Props) {
             <ul className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
               {a.related.map((r) => (
                 <li key={r.id}>
+                  <p className="label mb-4 text-muted-dark">{r.relation}</p>
                   <ArtworkCard artwork={r} />
-                  {r.techniqueSlugs.some((t) => a.techniques.some((x) => x.slug === t)) && (
-                    <p className="mt-3 text-xs tracking-wide text-muted-dark">Shares a documented technique.</p>
-                  )}
                 </li>
               ))}
             </ul>

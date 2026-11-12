@@ -40,7 +40,7 @@ export default async function MakersPage() {
             className="group reveal relative grid gap-6 border-b border-line-dark py-12 md:grid-cols-12 md:items-center lg:py-14"
           >
             <div className="md:col-span-6">
-              <p className="label text-[0.6875rem] text-muted-dark">
+              <p className="label text-label text-muted-dark">
                 {c.roles.map((r) => ROLE_LABEL[r]).join(" · ")}
                 {c.lifeLabel && <span className="numeral ml-4 text-base tracking-normal normal-case">{c.lifeLabel}</span>}
               </p>
@@ -67,7 +67,7 @@ export default async function MakersPage() {
                   </span>
                 </div>
               )}
-              <p className="label text-[0.6875rem] text-on-dark">
+              <p className="label text-label text-on-dark">
                 {c.artworkIds.length > 0
                   ? `${c.artworkIds.length} ${c.artworkIds.length === 1 ? "work" : "works"}`
                   : "Works being catalogued"}

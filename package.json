@@ -16,6 +16,7 @@
     "test:e2e": "playwright test --trace off",
     "validate:content": "tsx --tsconfig tsconfig.json scripts/validate-content.ts",
     "export:signatures": "tsx --tsconfig tsconfig.json scripts/export-signatures.ts",
+    "tones": "tsx --tsconfig tsconfig.json scripts/image-tones.ts",
     "check": "npm run typecheck && npm run lint && npm run test && npm run validate:content"
   },
   "dependencies": {

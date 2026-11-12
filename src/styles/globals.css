@@ -27,6 +27,12 @@
   --font-display-italic: var(--font-cormorant-italic), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
+  /* Small type: labels and captions never go below 13px (legible for older collectors). */
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.45;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+
   --ease-gallery: cubic-bezier(0.22, 0.61, 0.36, 1);
   --ease-silk: cubic-bezier(0.16, 1, 0.3, 1);
   --breakpoint-xs: 26rem;
@@ -61,7 +67,8 @@
   }
   .surface-paper :focus-visible,
   .surface-paper:focus-visible,
-  .surface-ivory :focus-visible {
+  .surface-ivory :focus-visible,
+  .room-study :focus-visible {
     outline-color: var(--color-ink);
   }
   h1,
@@ -112,6 +119,15 @@
   .measure {
     max-width: 62ch;
   }
+  /* Long reading (history, biographies, technique essays): 18px, about 65 characters per line. */
+  .prose-study {
+    max-width: 38rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  .prose-study > * + * {
+    margin-top: 1.1em;
+  }
   .section-y {
     padding-block: 5.5rem;
   }
@@ -126,9 +142,9 @@
   /* ---------------------------------------------------------------- */
   .label {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    line-height: 1.5;
-    letter-spacing: 0.2em;
+    font-size: var(--text-label);
+    line-height: 1.45;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 500;
   }
@@ -225,17 +241,65 @@
   }
   .hairline-gold {
     height: 1px;
-    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-accent) 55%, transparent), transparent);
+    background: color-mix(in srgb, var(--color-accent) 40%, transparent);
   }
 
-  /* A photograph presented on a dark mat, like a print in a vitrine. */
+  /*
+   * The three rooms. One identity, three atmospheres, switched by remapping the
+   * same tokens, so every component works in every room without its own variant:
+   *  - viewing room (default): obsidian, for the first encounter with a work;
+   *  - collection room: the same obsidian, ordered and compact (no override needed);
+   *  - study room: warm beige with dark ink, for history, makers, techniques and sources.
+   */
+  .room-study {
+    --color-stage: #e8ddcb;
+    --color-raised: #efe6d7;
+    --color-raised-2: #e1d4bf;
+    --color-on-dark: #14110d;
+    --color-muted-dark: #4a443b;
+    --color-line-dark: #c9bca6;
+    --color-accent: #735a2e; /* bronze: gold-toned text that keeps contrast on beige */
+    --color-accent-deco: #a88a54;
+    color-scheme: light;
+    background: var(--color-stage);
+    color: var(--color-on-dark);
+  }
+  .room-study .btn-primary {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+  .room-study .btn-primary:hover {
+    background: #2b251d;
+  }
+  .room-study .eyebrow::before {
+    background: var(--color-accent-deco);
+  }
+
+  /*
+   * Photograph on its own extended backdrop: the outer 3% of the studio
+   * backdrop fades into the measured edge tones behind it, so no hard
+   * rectangle shows. Objects are never inside that margin; full-screen views
+   * never use this.
+   */
+  .feather {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent, #000 var(--feather, 4%), #000 calc(100% - var(--feather, 4%)), transparent),
+      linear-gradient(to bottom, transparent, #000 var(--feather, 4%), #000 calc(100% - var(--feather, 4%)), transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent, #000 var(--feather, 4%), #000 calc(100% - var(--feather, 4%)), transparent),
+      linear-gradient(to bottom, transparent, #000 var(--feather, 4%), #000 calc(100% - var(--feather, 4%)), transparent);
+    mask-composite: intersect;
+  }
+
+  /* A photograph presented on a mat, like a print in a vitrine. */
   .plate {
     position: relative;
-    background: radial-gradient(120% 90% at 50% 0%, #1b1915 0%, var(--color-raised) 60%);
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 12%, transparent);
+    background: var(--color-raised);
   }
   .surface-paper .plate,
-  .surface-ivory .plate {
+  .surface-ivory .plate,
+  .room-study .plate {
     background: var(--color-paper-2);
     box-shadow: inset 0 0 0 1px var(--color-line-paper);
   }
@@ -257,9 +321,9 @@
     align-items: center;
     gap: 1rem;
     min-height: 2.75rem;
-    font-size: 0.75rem;
+    font-size: var(--text-label);
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     transition: color 240ms var(--ease-gallery);
   }
@@ -305,9 +369,9 @@
     gap: 0.875rem;
     min-height: 3.25rem;
     padding: 0.875rem 2rem;
-    font-size: 0.75rem;
+    font-size: var(--text-label);
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     border: 1px solid transparent;
     border-radius: 0;
@@ -362,7 +426,7 @@
   .btn-sm {
     min-height: 2.75rem;
     padding: 0.5rem 1.125rem;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
   }
 
   /* ---------------------------------------------------------------- */

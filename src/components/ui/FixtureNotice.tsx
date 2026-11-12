@@ -18,7 +18,7 @@ export function FixtureNotice({
   const text = tone === "dark" ? "text-muted-dark" : "text-ink-muted";
   if (compact)
     return (
-      <span className={`label inline-block border px-2.5 py-1 text-[0.625rem] tracking-[0.18em] ${border} ${text}`}>
+      <span className={`label inline-block border px-2.5 py-1 text-label tracking-[0.18em] ${border} ${text}`}>
         {heldBy ? "Museum reference" : "Demonstration record"}
       </span>
     );

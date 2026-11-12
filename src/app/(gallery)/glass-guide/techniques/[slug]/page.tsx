@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { getTechniqueBySlug, getTechniques } from "@/content/repository.server";
+import { categoryBySlug } from "@/content/categories";
+import { periodsMentioning } from "@/content/history";
 import { PageIntro } from "@/components/editorial/PageIntro";
 import { ArtworkCard } from "@/components/editorial/ArtworkCard";
 import { EditorialStatus } from "@/components/ui/EditorialStatus";
@@ -28,7 +31,8 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
   const { slug } = await params;
   const data = await getTechniqueBySlug(slug);
   if (!data) notFound();
-  const { technique: t, artworks, sources } = data;
+  const { technique: t, artworks, sources, makers, areas, total } = data;
+  const periods = periodsMentioning(t.slug, t.term);
   return (
     <>
       <PageIntro
@@ -56,22 +60,28 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
               </p>
             ))}
           </div>
-          {t.recognition.length > 0 && (
-            <aside className="md:col-span-4 md:col-start-9" aria-labelledby="recognise">
-              <h2 id="recognise" className="label text-ink-muted">
-                How to recognise it
-              </h2>
-              <ol className="mt-5 flex flex-col border-t border-line-paper">
-                {t.recognition.map((r, i) => (
-                  <li key={i} className="flex gap-4 border-b border-line-paper py-4">
-                    <span className="numeral text-lg text-accent-ink">{i + 1}</span>
-                    <span>{r}</span>
-                  </li>
-                ))}
-              </ol>
+          {(t.recognition.length > 0 || sources.length > 0) && (
+            <aside className="md:col-span-4 md:col-start-9" aria-label={`Recognising ${t.term}, and sources`}>
+              {t.recognition.length > 0 && (
+                <>
+                  <h2 id="recognise" className="label text-ink-muted">
+                    How to recognise it
+                  </h2>
+                  <ol className="mt-5 flex flex-col border-t border-line-paper">
+                    {t.recognition.map((r, i) => (
+                      <li key={i} className="flex gap-4 border-b border-line-paper py-4">
+                        <span className="numeral text-lg text-accent-ink">{i + 1}</span>
+                        <span>{r}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              )}
               {sources.length > 0 && (
                 <>
-                  <h2 className="label mt-8 text-ink-muted">Sources</h2>
+                  <h2 id="sources" className="label mt-8 scroll-mt-28 text-ink-muted first:mt-0">
+                    Sources
+                  </h2>
                   <ul className="mt-2 list-disc pl-5">
                     {sources.map((s) => (
                       <li key={s.id}>
@@ -92,6 +102,83 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
           )}
         </div>
       </article>
+
+      <nav aria-labelledby="connections" className="container-gallery pt-16 lg:pt-20">
+        <h2 id="connections" className="label eyebrow text-muted-dark">
+          {t.term} across the archive
+        </h2>
+        <div className="mt-6 grid border-t border-line-dark sm:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col gap-3 border-b border-line-dark py-6 sm:pr-8 lg:border-r">
+            <h3 className="label text-muted-dark">In the history</h3>
+            {periods.length > 0 ? (
+              <ul className="flex flex-col gap-1.5">
+                {periods.map((p) => (
+                  <li key={p.id}>
+                    <Link href={`${routes.history()}#${p.id}`} className="link-quiet">
+                      {p.title}
+                    </Link>{" "}
+                    <span className="text-caption text-muted-dark">{p.period}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-muted-dark">Not yet discussed in the history texts.</p>
+            )}
+          </div>
+          <div className="flex flex-col gap-3 border-b border-line-dark py-6 sm:pl-8 lg:border-r lg:px-8">
+            <h3 className="label text-muted-dark">Examples</h3>
+            {areas.length > 0 ? (
+              <ul className="flex flex-col gap-1.5">
+                {areas.map((a) => (
+                  <li key={a.category}>
+                    <Link href={`${routes.category(a.category)}?technique=${t.slug}`} className="link-quiet">
+                      {categoryBySlug(a.category)?.title ?? a.category}
+                    </Link>{" "}
+                    <span className="text-caption text-muted-dark">
+                      {a.works} {a.works === 1 ? "work" : "works"}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-muted-dark">No published examples yet.</p>
+            )}
+          </div>
+          <div className="flex flex-col gap-3 border-b border-line-dark py-6 sm:pr-8 lg:border-r lg:px-8">
+            <h3 className="label text-muted-dark">Makers</h3>
+            {makers.length > 0 ? (
+              <ul className="flex flex-col gap-1.5">
+                {makers.map((m) => (
+                  <li key={m.slug}>
+                    <Link href={routes.maker(m.slug)} className="link-quiet">
+                      {m.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-muted-dark">
+                {total > 0 ? "The makers of the published examples are not recorded." : "No makers recorded yet."}
+              </p>
+            )}
+          </div>
+          <div className="flex flex-col gap-3 border-b border-line-dark py-6 sm:pl-8 lg:pl-8">
+            <h3 className="label text-muted-dark">Sources</h3>
+            <p className="text-sm">
+              {sources.length > 0 ? (
+                <a href="#sources" className="link-quiet">
+                  {sources.length} {sources.length === 1 ? "source" : "sources"} for this text
+                </a>
+              ) : (
+                <span className="text-muted-dark">No sources listed yet.</span>
+              )}
+            </p>
+            <Link href={routes.directory()} className="link-quiet text-sm">
+              Makers &amp; Workshops directory
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       <section aria-labelledby="examples" className="container-gallery section-y">
         <p className="label eyebrow text-muted-dark">Study</p>

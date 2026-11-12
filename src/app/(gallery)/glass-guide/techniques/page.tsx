@@ -37,13 +37,14 @@ export default async function TechniquesPage() {
               <li key={t.id} className="group reveal relative flex flex-col">
                 {example ? (
                   <div className="plate relative aspect-[4/5] overflow-hidden">
-                    <ImageBackdrop media={example.hero} sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 100vw" />
-                    <div className="absolute inset-6">
+                    <ImageBackdrop media={example.hero} />
+                    <div className="absolute inset-6 flex items-center justify-center">
                       <ArtworkImage
                         media={example.hero}
                         sizes="(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 100vw"
-                        fill
-                        className="transition-transform duration-[1400ms] ease-[var(--ease-silk)] motion-safe:group-hover:scale-[1.04]"
+                        intrinsic
+                        feather
+                        className="transition-transform duration-[1400ms] ease-[var(--ease-silk)] motion-safe:group-hover:scale-[1.02]"
                       />
                     </div>
                   </div>
@@ -54,7 +55,7 @@ export default async function TechniquesPage() {
                     </span>
                   </div>
                 )}
-                <p className="label mt-6 text-[0.6875rem] text-muted-dark">
+                <p className="label mt-6 text-label text-muted-dark">
                   {t.artworkIds.length > 0 ? `${t.artworkIds.length} ${t.artworkIds.length === 1 ? "example" : "examples"}` : "No examples published yet"}
                 </p>
                 <h2 className="display-md mt-2 transition-colors duration-300 group-hover:text-accent">

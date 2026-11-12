@@ -13,6 +13,23 @@ export type HistorySection = {
   image?: { src: string; w: number; h: number; alt: string; caption: string; credit: string };
 };
 
+/**
+ * Periods whose reviewed text names a technique (by its term or an English
+ * form of it), so technique pages can point to where the history discusses
+ * it. A plain text match: nothing is linked that the text does not say.
+ */
+const TERM_FORMS: Record<string, string[]> = {
+  calcedonia: ["calcedonia", "chalcedony"],
+  "enamel-and-gilding": ["enamel"],
+  avventurina: ["avventurina", "aventurine"],
+  "facet-cut-glass": ["facet-cut", "faceted"],
+};
+
+export function periodsMentioning(slug: string, term: string) {
+  const forms = TERM_FORMS[slug] ?? [term.toLowerCase()];
+  return HISTORY_SECTIONS.filter((s) => s.body.length > 0 && forms.some((f) => s.body.join(" ").toLowerCase().includes(f)));
+}
+
 export const HISTORY_INTRO = "How glassmaking grew in Venice and on the island of Murano, period by period.";
 
 export const HISTORY_SECTIONS: HistorySection[] = [

@@ -28,7 +28,7 @@ export function ResearchStatusBadge({
             <span key={i} className={`h-1.5 w-1.5 rounded-full ${i < DOTS[status] ? on : off}`} />
           ))}
         </span>
-        <span className="label text-[0.6875rem]">{STATUS_LABEL[status]}</span>
+        <span className="label text-label">{STATUS_LABEL[status]}</span>
       </span>
       {explain && (
         <span className={`text-sm ${tone === "dark" ? "text-muted-dark" : "text-ink-muted"}`}>{STATUS_EXPLANATION[status]}</span>

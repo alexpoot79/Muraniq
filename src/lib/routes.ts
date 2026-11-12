@@ -22,6 +22,7 @@ export const routes = {
   contact: (objectId?: string) => (objectId ? `/contact/?object=${encodeURIComponent(objectId)}` : "/contact/"),
   privacy: () => "/privacy/",
   history: () => "/glass-guide/history/",
+  selection: (compare?: string[]) => (compare?.length ? `/selection/?compare=${compare.map(encodeURIComponent).join(",")}` : "/selection/"),
 } as const;
 
 export type Crumb = { label: string; href: string };

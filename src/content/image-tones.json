@@ -1,0 +1,527 @@
+{
+ "/images/collection/r025-sommerso-bowl-top-v3.jpg": [
+  "#b5b6b6",
+  "#b3b3b3",
+  "#b3b2b2",
+  "#b4b4b3",
+  "#9e9fa0"
+ ],
+ "/images/collection/r026-sommerso-vase-green-v2.jpg": [
+  "#969592",
+  "#999794",
+  "#9b9999",
+  "#a8aab7",
+  "#a0a5b1"
+ ],
+ "/images/collection/r027-sommerso-vase-amber-v2.jpg": [
+  "#a8a8a6",
+  "#a9a9a7",
+  "#aaa8a8",
+  "#afb2bf",
+  "#b0b4c6"
+ ],
+ "/images/collection/r029-facet-bowl-blue.jpg": [
+  "#adacab",
+  "#b3b3b3",
+  "#bebebf",
+  "#adadae",
+  "#a7a7a6"
+ ],
+ "/images/collection/r030-facet-bowl-green.jpg": [
+  "#aaaaa9",
+  "#b2b1b2",
+  "#bdbbbf",
+  "#b4b3b6",
+  "#acafac"
+ ],
+ "/images/collection/r031-facet-bowl-red.jpg": [
+  "#adadad",
+  "#b3b4b2",
+  "#b5b7b5",
+  "#adadab",
+  "#93908e"
+ ],
+ "/images/heritage/de-barbari-view-of-venice-1500.jpg": [
+  "#c0b3a0",
+  "#b0a595",
+  "#ab9f8d",
+  "#b6a997",
+  "#afa291"
+ ],
+ "/images/heritage/fays-santa-maria-della-salute-1854.jpg": [
+  "#d6cfbc",
+  "#dfd8c9",
+  "#ded6c5",
+  "#b4ab9a",
+  "#847c6e"
+ ],
+ "/images/heritage/ponti-view-of-venice-1860.jpg": [
+  "#a69982",
+  "#51493f",
+  "#5b5247",
+  "#403932",
+  "#38312b"
+ ],
+ "/images/makers/img-met-185965.jpg": [
+  "#575049",
+  "#67605a",
+  "#756e69",
+  "#7a726f",
+  "#817b78"
+ ],
+ "/images/makers/img-met-185982.jpg": [
+  "#b2b2b0",
+  "#cfcecc",
+  "#e9e8e6",
+  "#f0efed",
+  "#f7f6f4"
+ ],
+ "/images/makers/img-met-185990.jpg": [
+  "#c8c8c6",
+  "#b9b8b6",
+  "#b2b1af",
+  "#d7d7d5",
+  "#e9e9e9"
+ ],
+ "/images/makers/img-met-186001.jpg": [
+  "#aa998b",
+  "#af9d8f",
+  "#b19f91",
+  "#b3a091",
+  "#cebbae"
+ ],
+ "/images/makers/img-met-186074.jpg": [
+  "#383735",
+  "#4e4e4e",
+  "#777777",
+  "#909090",
+  "#d6d6d6"
+ ],
+ "/images/makers/img-met-186123.jpg": [
+  "#88837e",
+  "#8e8985",
+  "#938e89",
+  "#95908c",
+  "#9b9997"
+ ],
+ "/images/makers/img-met-186155.jpg": [
+  "#b9b8b5",
+  "#dadad8",
+  "#e5e5e3",
+  "#d2d2d2",
+  "#d0d0d0"
+ ],
+ "/images/makers/img-met-186160.jpg": [
+  "#989693",
+  "#c6c5c3",
+  "#f3f2f0",
+  "#f2f2f2",
+  "#f2f2f2"
+ ],
+ "/images/makers/img-met-186161.jpg": [
+  "#4d4c4a",
+  "#737370",
+  "#908f8c",
+  "#a6a5a2",
+  "#d3d1cd"
+ ],
+ "/images/makers/img-met-186169.jpg": [
+  "#424242",
+  "#686868",
+  "#868686",
+  "#8a8d8a",
+  "#deddde"
+ ],
+ "/images/makers/img-met-186188.jpg": [
+  "#959595",
+  "#c6c4c4",
+  "#d2d0d1",
+  "#d4d2d3",
+  "#d0cecf"
+ ],
+ "/images/makers/img-met-186194.jpg": [
+  "#c0c0be",
+  "#d2d2d1",
+  "#ebebea",
+  "#efefef",
+  "#fefdfd"
+ ],
+ "/images/makers/img-met-186229.jpg": [
+  "#989390",
+  "#9e9995",
+  "#a19a97",
+  "#9b9693",
+  "#b2afad"
+ ],
+ "/images/makers/img-met-210183.jpg": [
+  "#54524d",
+  "#605c56",
+  "#65605a",
+  "#65605a",
+  "#7d7771"
+ ],
+ "/images/makers/img-met-344736.jpg": [
+  "#e1d4be",
+  "#e3d4b7",
+  "#e4d6b9",
+  "#e4d5b8",
+  "#e6d9c2"
+ ],
+ "/images/reference/d001-beaker-draft.jpg": [
+  "#232424",
+  "#828281",
+  "#cdcccb",
+  "#c0bfbc",
+  "#8f8e8c"
+ ],
+ "/images/reference/r001-chalcedony-ewer-front.jpg": [
+  "#565656",
+  "#7e7e7e",
+  "#a7a7a7",
+  "#bfbfbf",
+  "#cdcdcd"
+ ],
+ "/images/reference/r001-chalcedony-ewer-handle.jpg": [
+  "#595855",
+  "#c4c4c6",
+  "#f3f3f4",
+  "#f2f2f3",
+  "#dfdfe0"
+ ],
+ "/images/reference/r001-chalcedony-ewer-reverse.jpg": [
+  "#555452",
+  "#bbbbbd",
+  "#f2f2f3",
+  "#f2f2f3",
+  "#e0dfe1"
+ ],
+ "/images/reference/r001-chalcedony-ewer-side.jpg": [
+  "#545352",
+  "#b7b4ba",
+  "#f1f1f2",
+  "#f2f1f3",
+  "#e0dde0"
+ ],
+ "/images/reference/r002-enamelled-ewer-front.jpg": [
+  "#191817",
+  "#252424",
+  "#6a6967",
+  "#b4b2b2",
+  "#c0bebf"
+ ],
+ "/images/reference/r002-enamelled-ewer-handle.jpg": [
+  "#191817",
+  "#252324",
+  "#646361",
+  "#b2afb0",
+  "#bebabc"
+ ],
+ "/images/reference/r002-enamelled-ewer-reverse.jpg": [
+  "#1b1918",
+  "#262425",
+  "#6a6967",
+  "#b2b0b0",
+  "#bfbcbd"
+ ],
+ "/images/reference/r002-enamelled-ewer-side.jpg": [
+  "#1b1a19",
+  "#262525",
+  "#6d6c6a",
+  "#b3b1b2",
+  "#bebbbc"
+ ],
+ "/images/reference/r003-peddler-goblet-front.jpg": [
+  "#807d79",
+  "#a7a6a5",
+  "#c5c3c6",
+  "#a9a7a8",
+  "#acafb1"
+ ],
+ "/images/reference/r003-peddler-goblet-reverse.jpg": [
+  "#7f7c7a",
+  "#a7a5a6",
+  "#c4c2c5",
+  "#a7a5a7",
+  "#acafb3"
+ ],
+ "/images/reference/r003-peddler-goblet-side-2.jpg": [
+  "#7f7c7a",
+  "#a7a5a6",
+  "#c5c3c5",
+  "#a5a3a5",
+  "#acafb3"
+ ],
+ "/images/reference/r003-peddler-goblet-side.jpg": [
+  "#807d7b",
+  "#a7a5a6",
+  "#c5c3c6",
+  "#aba9ab",
+  "#acafb3"
+ ],
+ "/images/reference/r004-putti-tazza-front.jpg": [
+  "#3f3f3f",
+  "#4d4d4e",
+  "#5e5f60",
+  "#b7b9b4",
+  "#a0a29e"
+ ],
+ "/images/reference/r004-putti-tazza-reverse.jpg": [
+  "#3f3f3f",
+  "#4d4e4e",
+  "#5e5f5f",
+  "#b5b8b3",
+  "#a1a39f"
+ ],
+ "/images/reference/r005-footed-bowl-front.jpg": [
+  "#bdbdbf",
+  "#dfdfdf",
+  "#dfdddc",
+  "#d0cecd",
+  "#e6e5e1"
+ ],
+ "/images/reference/r005-footed-bowl-medallion.jpg": [
+  "#cac8cb",
+  "#e1dfe0",
+  "#dcdbda",
+  "#d0cecc",
+  "#e6e5e1"
+ ],
+ "/images/reference/r005-footed-bowl-side.jpg": [
+  "#c7c9c9",
+  "#e2e2e1",
+  "#dfdedc",
+  "#d0cfcd",
+  "#e7e6e2"
+ ],
+ "/images/reference/r006-covered-beaker-front.jpg": [
+  "#222423",
+  "#7c7c7c",
+  "#cbcbcb",
+  "#bfbfbf",
+  "#a5a5a5"
+ ],
+ "/images/reference/r006-covered-beaker-reverse.jpg": [
+  "#232423",
+  "#797979",
+  "#cbcbcb",
+  "#c0c0c0",
+  "#9c9c9c"
+ ],
+ "/images/reference/r006-covered-beaker-side.jpg": [
+  "#232424",
+  "#7e7e7e",
+  "#cccccc",
+  "#bebebe",
+  "#969696"
+ ],
+ "/images/reference/r007-marriage-beaker-front.jpg": [
+  "#c6c5c8",
+  "#b7b5b8",
+  "#9f9d9c",
+  "#9d9b98",
+  "#acaaa6"
+ ],
+ "/images/reference/r007-marriage-beaker-reverse.jpg": [
+  "#c7c5c8",
+  "#b9b6ba",
+  "#9f9c9c",
+  "#9b9a96",
+  "#a9a8a3"
+ ],
+ "/images/reference/r008-chalcedony-bottle-front.jpg": [
+  "#bababa",
+  "#bababa",
+  "#bababa",
+  "#bababa",
+  "#bababa"
+ ],
+ "/images/reference/r009-millefiori-paperweight-top.jpg": [
+  "#fafafa",
+  "#fafafa",
+  "#f8f8f6",
+  "#fafafa",
+  "#fbfbfb"
+ ],
+ "/images/reference/r010-bellotto-piazza-san-marco.jpg": [
+  "#98a59d",
+  "#afb5ac",
+  "#989285",
+  "#353532",
+  "#373933"
+ ],
+ "/images/reference/r011-guardi-pontifical-ceremony.jpg": [
+  "#322f29",
+  "#302920",
+  "#2f2a21",
+  "#2e281f",
+  "#2b2722"
+ ],
+ "/images/reference/r012-millefiori-bowl-base.jpg": [
+  "#2f2f2d",
+  "#646462",
+  "#9d9d9b",
+  "#b2b2b0",
+  "#a1a19f"
+ ],
+ "/images/reference/r012-millefiori-bowl-front.jpg": [
+  "#1d1d1d",
+  "#2b2b2b",
+  "#8c8d8c",
+  "#b8b9b9",
+  "#ababa9"
+ ],
+ "/images/reference/r012-millefiori-bowl-interior.jpg": [
+  "#1e1e1e",
+  "#2d2d2c",
+  "#868684",
+  "#babab9",
+  "#aeaeac"
+ ],
+ "/images/reference/r013-chalcedony-aventurine-beaker-front.jpg": [
+  "#e1e1e6",
+  "#dedee2",
+  "#dcdce0",
+  "#e0e1e3",
+  "#e3e4e6"
+ ],
+ "/images/reference/r014-chevron-bead-front.jpg": [
+  "#f3f2ed",
+  "#f2f2ed",
+  "#f4f4f0",
+  "#f5f4f0",
+  "#f3f3ef"
+ ],
+ "/images/reference/r015-filigree-goblet-front.jpg": [
+  "#171717",
+  "#151515",
+  "#141414",
+  "#141414",
+  "#161616"
+ ],
+ "/images/reference/r015-filigree-goblet-side.jpg": [
+  "#494949",
+  "#676767",
+  "#dadada",
+  "#f3f3f3",
+  "#dedede"
+ ],
+ "/images/reference/r016-reticello-vase-front.jpg": [
+  "#0f0f0f",
+  "#0c0c0c",
+  "#0d0d0d",
+  "#0f0f0f",
+  "#1a1a1a"
+ ],
+ "/images/reference/r016-reticello-vase-handle.jpg": [
+  "#767676",
+  "#676767",
+  "#6f6f6f",
+  "#585858",
+  "#424242"
+ ],
+ "/images/reference/r017-enamelled-pilgrim-flask-front.jpg": [
+  "#21272b",
+  "#44494f",
+  "#797b7e",
+  "#474b51",
+  "#3b3e42"
+ ],
+ "/images/reference/r017-enamelled-pilgrim-flask-neck.jpg": [
+  "#181818",
+  "#141414",
+  "#121212",
+  "#151515",
+  "#1a1a1a"
+ ],
+ "/images/reference/r018-murrine-bowl-detail.jpg": [
+  "#585954",
+  "#57554c",
+  "#40474c",
+  "#464f57",
+  "#48525f"
+ ],
+ "/images/reference/r018-murrine-bowl-front.jpg": [
+  "#c0c0be",
+  "#d2d2d1",
+  "#ebebea",
+  "#efefef",
+  "#fdfcfd"
+ ],
+ "/images/reference/r019-opalescent-dessert-glass-front.jpg": [
+  "#131313",
+  "#111111",
+  "#0f0f0f",
+  "#101010",
+  "#141414"
+ ],
+ "/images/reference/r020-filigree-liqueur-glass-front.jpg": [
+  "#626262",
+  "#585858",
+  "#535353",
+  "#575757",
+  "#5e5e5e"
+ ],
+ "/images/reference/r021-enamelled-standing-cup-front.jpg": [
+  "#444341",
+  "#979597",
+  "#eeeef0",
+  "#f1f0f2",
+  "#dedcdf"
+ ],
+ "/images/reference/r021-enamelled-standing-cup-side.jpg": [
+  "#464543",
+  "#9a989a",
+  "#eeeef0",
+  "#f1f0f2",
+  "#dedcdf"
+ ],
+ "/images/reference/r022-devotional-badge-front.jpg": [
+  "#d8d3d7",
+  "#eae5e9",
+  "#ede8ec",
+  "#e6e0e4",
+  "#dfdbdc"
+ ],
+ "/images/reference/r022-devotional-badge-reverse.jpg": [
+  "#d6d4d7",
+  "#e9e6e9",
+  "#edeaed",
+  "#e6e3e5",
+  "#dfddde"
+ ],
+ "/images/reference/r023-sargent-venetian-glass-workers.jpg": [
+  "#4d463b",
+  "#24211c",
+  "#151311",
+  "#2f2a24",
+  "#463729"
+ ],
+ "/images/reference/r024-blum-bead-stringers.jpg": [
+  "#e3e0d0",
+  "#e1dfcc",
+  "#dedbc7",
+  "#dcd8c3",
+  "#dad4c1"
+ ],
+ "/images/reference/r028-chalcedony-footed-bowl-front.jpg": [
+  "#a09198",
+  "#ecdfd6",
+  "#fbf1e5",
+  "#f3e6df",
+  "#f3e5de"
+ ],
+ "/images/reference/r032-weathered-roman-bottle-front.jpg": [
+  "#c7c7cb",
+  "#cecfd1",
+  "#cfd1d1",
+  "#cccccb",
+  "#c9c9c7"
+ ],
+ "/images/signatures/r009-inscription-canes-detail.jpg": [
+  "#4f3a4e",
+  "#5a394b",
+  "#514c4e",
+  "#5a677d",
+  "#aeb4a6"
+ ]
+}

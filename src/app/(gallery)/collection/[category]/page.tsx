@@ -41,12 +41,13 @@ export default async function CategoryPage({ params, searchParams }: PageProps<"
         ]}
         kicker={info.kicker}
         title={info.title}
+        compact
       >
         <p>{info.intro}</p>
       </PageIntro>
       <CategoryTabs current={info.slug} />
 
-      <div className="container-gallery pt-12 pb-28 lg:pt-16">
+      <div className="container-gallery pt-6 pb-28 lg:pt-8">
         <Suspense fallback={<p className="min-h-svh text-muted-dark">Loading works…</p>}>
           <Catalog base={routes.category(info.slug)} searchParams={searchParams} fixedCategory={info.slug} />
         </Suspense>

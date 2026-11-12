@@ -88,7 +88,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="container-gallery flex flex-col gap-3 border-t border-line-dark py-7 text-xs tracking-wide text-muted-dark sm:flex-row sm:justify-between">
+      <div className="container-gallery flex flex-col gap-3 border-t border-line-dark py-7 text-caption tracking-wide text-muted-dark sm:flex-row sm:justify-between">
         <p>© {SITE.name}. Collection photography may not be reproduced without permission.</p>
         <p>
           Reference images: open-access (CC0) photography from the museums credited on each page.

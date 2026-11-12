@@ -86,7 +86,7 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
               <dl className="grid grid-cols-[7rem_1fr] text-sm">
                 {d.facts.map((f) => (
                   <div key={f.k} className="contents">
-                    <dt className="label border-b border-line-dark py-3 text-[0.6875rem] text-muted-dark">{f.k}</dt>
+                    <dt className="label border-b border-line-dark py-3 text-label text-muted-dark">{f.k}</dt>
                     <dd className="border-b border-line-dark py-3 text-on-dark">{f.v}</dd>
                   </div>
                 ))}
@@ -143,7 +143,7 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
               <dl className="flex flex-col">
                 {d.connections.map((c) => (
                   <div key={c.label} className="grid gap-2 border-b border-line-paper py-5 first:pt-0 sm:grid-cols-[11rem_1fr]">
-                    <dt className="label text-[0.6875rem] text-ink-muted">{c.label}</dt>
+                    <dt className="label text-label text-ink-muted">{c.label}</dt>
                     <dd>
                       <ul className="flex flex-col gap-2">
                         {c.links.map((l, i) => (
@@ -157,7 +157,7 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
                             )}
                             {l.when && <span className="numeral text-ink-muted">{l.when}</span>}
                             {l.status !== "VERIFIED" && (
-                              <span className="label text-[0.625rem] text-ink-muted">{STATUS_LABEL[l.status]}</span>
+                              <span className="label text-label text-ink-muted">{STATUS_LABEL[l.status]}</span>
                             )}
                           </li>
                         ))}
@@ -185,7 +185,7 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
                     <span className="text-sm text-ink-muted">
                       {[w.date, w.institution, w.accessionNumber].filter(Boolean).join(" · ")}
                     </span>
-                    <span className="label text-[0.625rem] text-ink-muted">
+                    <span className="label text-label text-ink-muted">
                       {w.candidate ? "Candidate maker only" : STATUS_LABEL[w.status]}
                     </span>
                   </li>
@@ -199,7 +199,7 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
               <ul className="flex flex-col border-t border-line-paper">
                 {d.marks.map((m, i) => (
                   <li key={i} className="flex flex-col gap-2 border-b border-line-paper py-5">
-                    <span className="label text-[0.6875rem] text-ink-muted">
+                    <span className="label text-label text-ink-muted">
                       {KIND_LABEL[m.markKind]} <span aria-hidden="true">·</span> {APPLICATION_LABEL[m.application]}
                     </span>
                     <span className="font-display text-xl">{m.text}</span>

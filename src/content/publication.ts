@@ -61,7 +61,8 @@ export type ArtworkDossier = PublicArtworkRecord & {
   media: PublicMedia[];
   hero: PublicMedia;
   sources: PublicSource[];
-  related: ArtworkSummary[];
+  /** Up to three related works, each with the documented relation that links it (shared maker, technique). */
+  related: Array<ArtworkSummary & { relation: string }>;
   attributionLine: string;
   attributionCertainty: Certainty;
 };
@@ -214,6 +215,47 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean; toda
     (x, y) => x.curatedOrder - y.curatedOrder || x.id.localeCompare(y.id),
   );
 
+  /**
+   * Related works: the curator's choice first, then works that share a
+   * documented maker, then a documented technique. Each one says why it is
+   * shown; no relation is inferred from appearance alone.
+   */
+  const techniqueTerm = new Map([...techniques.values()].map((t) => [t.slug, t.term] as const));
+  const creatorName = new Map([...creators.values()].map((c) => [c.slug, c.name] as const));
+  const relationOf = (self: ArtworkSummary, other: ArtworkSummary): string | null => {
+    const maker = other.makerSlugs.find((m) => self.makerSlugs.includes(m));
+    if (maker) return `Same maker: ${creatorName.get(maker) ?? maker}`;
+    const tech = other.techniqueSlugs.find((t) => self.techniqueSlugs.includes(t));
+    if (tech) return `Same technique: ${techniqueTerm.get(tech) ?? tech}`;
+    return null;
+  };
+  const relatedFor = (self: ArtworkSummary, curated: string[]): Array<ArtworkSummary & { relation: string }> => {
+    const out: Array<ArtworkSummary & { relation: string }> = [];
+    const seen = new Set([self.id]);
+    for (const id of curated) {
+      const r = summaries.get(id);
+      if (!r || seen.has(r.id)) continue;
+      seen.add(r.id);
+      out.push({ ...r, relation: relationOf(self, r) ?? "Selected for comparison" });
+    }
+    const pool = artworks.filter((x) => !seen.has(x.id));
+    // Within each group, works of the same kind first (collection with collection, references with references).
+    const kind = (x: ArtworkSummary) => Number(Boolean(x.heldBy) !== Boolean(self.heldBy));
+    const byKind = (list: ArtworkSummary[]) => [...list].sort((x, y) => kind(x) - kind(y));
+    const sameMaker = (x: ArtworkSummary) => x.makerSlugs.some((m) => self.makerSlugs.includes(m));
+    const ranked = [
+      ...byKind(pool.filter(sameMaker)),
+      ...byKind(pool.filter((x) => !sameMaker(x) && x.techniqueSlugs.some((t) => self.techniqueSlugs.includes(t)))),
+    ];
+    for (const r of ranked) {
+      if (out.length >= 3) break;
+      if (seen.has(r.id)) continue;
+      seen.add(r.id);
+      out.push({ ...r, relation: relationOf(self, r)! });
+    }
+    return out.slice(0, 3);
+  };
+
   const dossiers: Record<string, ArtworkDossier> = {};
   for (const a of records) {
     const s = summaries.get(a.id)!;
@@ -232,10 +274,7 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean; toda
       media: a.imageIds.map((id) => media.get(id)).filter((m): m is PublicMedia => !!m),
       hero: s.hero,
       sources: [...sourceIds].map((id) => sources.get(id)).filter((x): x is PublicSource => !!x),
-      related: a.relatedIds
-        .map((id) => summaries.get(id))
-        .filter((x): x is ArtworkSummary => !!x)
-        .slice(0, 3),
+      related: relatedFor(s, a.relatedIds),
       attributionLine: s.attributionLine,
       attributionCertainty: s.attributionCertainty,
     };

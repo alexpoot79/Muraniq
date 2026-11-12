@@ -20,7 +20,7 @@ test("collection → filter → dossier → viewer → museum record", async ({ 
   // Reference works say plainly who holds them and are never offered for enquiry or sale.
   await page.goto("/collection/objects/chalcedony-ewer-venice/");
   await expect(page.getByText(/^Reference work\. Held by The Cleveland Museum of Art/).first()).toBeVisible();
-  await expect(page.getByText("Maker not recorded").first()).toBeVisible();
+  await expect(page.getByText("Maker unidentified").first()).toBeVisible();
   const record = page.getByRole("link", { name: /View the museum record/ }).first();
   await expect(record).toHaveAttribute("href", /^https:\/\/clevelandart\.org\/art\/1985\.141$/);
   await expect(page.getByRole("link", { name: /question about this work|Enquire/ })).toHaveCount(0);

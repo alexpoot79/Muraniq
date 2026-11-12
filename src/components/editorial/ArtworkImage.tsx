@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { PublicMedia } from "@/content/public-projection";
+import TONES from "@/content/image-tones.json";
 
 /**
  * Object photography. Default: the whole photograph at its own proportions
@@ -17,6 +18,8 @@ export function ArtworkImage({
   fill = false,
   fit = "contain",
   decorative = false,
+  intrinsic = false,
+  feather = false,
 }: {
   media: PublicMedia;
   sizes: string;
@@ -26,6 +29,13 @@ export function ArtworkImage({
   fit?: "contain" | "cover";
   /** The picture sits inside a control or link that already names it: hide it from assistive tech. */
   decorative?: boolean;
+  /**
+   * Size the element to the photograph itself (largest size that fits the parent, never upscaled past it),
+   * so the element's edges are the photograph's edges. Needs a parent with a definite size.
+   */
+  intrinsic?: boolean;
+  /** Fade the outermost 3% of the studio backdrop into the frame's measured backdrop tones. Never used in full screen. */
+  feather?: boolean;
 }) {
   const alt = decorative ? "" : media.alt;
   // The LCP image is preloaded from <head> (discovered before the CSS) and fetched at high priority.
@@ -57,35 +67,26 @@ export function ArtworkImage({
       preload={preload}
       loading={loading}
       fetchPriority={fetchPriority}
-      className={`h-auto w-full object-contain ${className}`}
+      className={`${intrinsic ? "h-auto max-h-full w-auto max-w-full" : "h-auto w-full"} object-contain ${feather ? "feather" : ""} ${className}`}
     />
   );
 }
 
+/** Edge colours of a photograph's studio backdrop, top to bottom (from `npm run tones`). */
+export function backdropTones(media: Pick<PublicMedia, "src">): string[] | undefined {
+  return (TONES as Record<string, string[]>)[media.src];
+}
+
 /**
- * Decorative extension of a photograph's own studio backdrop: a heavily
- * blurred copy behind a contained photograph, so the frame is filled with the
- * photograph's own tones instead of an empty mat. Hidden from assistive tech;
- * the photograph itself is shown whole and unaltered on top.
+ * Extends a photograph's own studio backdrop to the edges of its frame with
+ * the measured edge colours: flat colour, no blur, no glow. The photograph is
+ * shown whole and unaltered on top, so the object keeps its full contour
+ * without looking like a print pasted onto a mat. Without measured tones the
+ * frame keeps the room's plain mat colour.
  */
-export function ImageBackdrop({ media, sizes, vignette = true }: { media: PublicMedia; sizes: string; vignette?: boolean }) {
-  return (
-    <>
-      <Image
-        src={media.src}
-        alt=""
-        aria-hidden="true"
-        fill
-        sizes={sizes}
-        loading="lazy"
-        className="pointer-events-none scale-125 object-cover opacity-90 blur-2xl saturate-[0.85]"
-      />
-      {vignette && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,transparent_35%,rgb(8_8_8_/_0.72)_100%)]"
-        />
-      )}
-    </>
-  );
+export function ImageBackdrop({ media }: { media: Pick<PublicMedia, "src">; sizes?: string; vignette?: boolean }) {
+  const t = backdropTones(media);
+  if (!t || t.length === 0) return null;
+  const stops = t.map((c, i) => `${c} ${Math.round((i / Math.max(1, t.length - 1)) * 100)}%`).join(", ");
+  return <span aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: `linear-gradient(to bottom, ${stops})` }} />;
 }

@@ -21,7 +21,7 @@ export const CERTAINTY_EXPLANATION: Record<Certainty, string> = {
 };
 
 const PREFIX: Record<Certainty, string> = {
-  verified: "",
+  verified: "By ",
   documented_attribution: "Attributed to ",
   probable: "Probably by ",
   hypothesis: "Possibly by ",
@@ -29,7 +29,7 @@ const PREFIX: Record<Certainty, string> = {
 };
 
 export function attributionPhrase(name: string, certainty: Certainty): string {
-  if (certainty === "unknown") return "Maker not documented";
+  if (certainty === "unknown") return "Maker unidentified";
   return `${PREFIX[certainty]}${name}`;
 }
 

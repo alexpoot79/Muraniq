@@ -29,7 +29,7 @@ export default function CollectionPage() {
           {CATEGORIES.map((c) => (
             <li key={c.slug}>
               <Link href={routes.category(c.slug)} className="flex h-full flex-col gap-4 border border-line-dark p-8 transition-colors hover:border-on-dark/60">
-                <span className="label text-[0.6875rem] text-muted-dark">{c.kicker}</span>
+                <span className="label text-label text-muted-dark">{c.kicker}</span>
                 <h2 className="font-display text-3xl">{c.title}</h2>
                 <p className="text-muted-dark">{c.intro}</p>
               </Link>

@@ -41,7 +41,7 @@ export default function MakersAndWorkshopsPage() {
         <ul className="flex flex-wrap gap-x-8 gap-y-3 border-b border-line-dark py-6">
           {groups.map((g) => (
             <li key={g.key}>
-              <a href={`#${g.key}`} className="link-quiet label text-[0.6875rem] text-muted-dark hover:text-on-dark">
+              <a href={`#${g.key}`} className="link-quiet label text-label text-muted-dark hover:text-on-dark">
                 {g.title} {g.accent} <span className="numeral ml-1 text-sm tracking-normal">{g.items.length}</span>
               </a>
             </li>
@@ -73,7 +73,7 @@ export default function MakersAndWorkshopsPage() {
                         {e.name}
                       </Link>
                     </h3>
-                    <p className="label mt-2 text-[0.6875rem] text-muted-dark">
+                    <p className="label mt-2 text-label text-muted-dark">
                       {e.kind}
                       {e.dates && <span className="numeral ml-3 text-sm tracking-normal normal-case">{e.dates}</span>}
                     </p>

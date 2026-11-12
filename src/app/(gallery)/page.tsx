@@ -4,7 +4,7 @@ import { getArtworkBySlug, getArtworks, getFeaturedArtworks, getTechniques } fro
 import type { ArtworkSummary } from "@/content/publication";
 import { CATEGORIES } from "@/content/categories";
 import { EDITORIAL_IMAGES } from "@/content/editorial-images";
-import { ArtworkImage } from "@/components/editorial/ArtworkImage";
+import { ArtworkImage, ImageBackdrop } from "@/components/editorial/ArtworkImage";
 import { ArtworkCard } from "@/components/editorial/ArtworkCard";
 import { EditorialFigure } from "@/components/editorial/EditorialFigure";
 import { LogoImage } from "@/components/layout/Logo";
@@ -65,24 +65,28 @@ const HERITAGE: Array<{ year: string; title: string; text: string; slug?: string
 ];
 
 const AREA_PREVIEW: Record<string, string | undefined> = {
-  "murano-glass": "enamelled-ewer-venice",
+  "murano-glass": "sommerso-bowl-blue-and-amber",
   "collectible-objects": "millefiori-paperweight-bigaglia",
 };
 
 export default async function HomePage() {
-  const [featured, all, techniques] = await Promise.all([getFeaturedArtworks(8), getArtworks(), getTechniques()]);
+  const [featured, all, techniques] = await Promise.all([getFeaturedArtworks(12), getArtworks(), getTechniques()]);
   const bySlug = new Map(all.map((a) => [a.slug, a] as const));
-  const heroSummary = featured[0] ?? all[0];
+  // The collection's own works come first: a museum reference never opens the site when an own work is published.
+  const own = all.filter((a) => !a.heldBy && !a.isFixture);
+  const heroSummary = featured.find((a) => !a.heldBy && !a.isFixture) ?? own[0] ?? featured[0] ?? all[0];
   const hero = heroSummary ? await getArtworkBySlug(heroSummary.slug) : null;
   const studySummary = featured.find((a) => a.id !== heroSummary?.id && a.hero.hotspots.length > 0);
   const study = studySummary ? await getArtworkBySlug(studySummary.slug) : null;
   const studyTechnique = study?.techniques[0] ? techniques.find((t) => t.slug === study.techniques[0]!.slug) : undefined;
-  const selected = featured.filter((a) => a.id !== heroSummary?.id && a.id !== studySummary?.id).slice(0, 4);
-  const PAINTINGS = ["piazza-san-marco-bellotto", "pontifical-ceremony-guardi", "venetian-glass-workers-sargent", "bead-stringers-venice-blum"];
-  const paintings = all.filter((a) => PAINTINGS.includes(a.slug));
-  const vista = paintings[0] ? await getArtworkBySlug(paintings[0].slug) : null;
-  const invitation = paintings[1] ?? null;
-  const counts = Object.fromEntries(CATEGORIES.map((c) => [c.slug, all.filter((a) => a.category === c.slug).length]));
+  const ownSelection = own.filter((a) => a.id !== heroSummary?.id).slice(0, 4);
+  const selected = ownSelection.length >= 2 ? ownSelection : featured.filter((a) => a.id !== heroSummary?.id && a.id !== studySummary?.id).slice(0, 4);
+  const selectionIsOwn = ownSelection.length >= 2;
+  const ownTechniques = [...new Set(selected.flatMap((a) => a.techniqueSlugs))]
+    .map((slug) => techniques.find((t) => t.slug === slug))
+    .filter((t): t is NonNullable<typeof t> => !!t);
+  const invitation = own.find((a) => a.id !== heroSummary?.id && !selected.some((x) => x.id === a.id)) ?? selected.at(-1) ?? null;
+  const hasWorks = Object.fromEntries(CATEGORIES.map((c) => [c.slug, all.some((a) => a.category === c.slug)]));
 
   // One claim, followed to its evidence: prefer a qualified attribution, which shows the method best.
   let evidence: { art: ArtworkSummary; claim: NonNullable<Awaited<ReturnType<typeof getArtworkBySlug>>>["assertions"][number] } | null = null;
@@ -102,43 +106,37 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* 1 — Hero: one object, monumental, on black */}
+      {/* 1 — Hero: one work from the collection, whole, on black */}
       <section aria-labelledby="hero-title" className="relative grid bg-stage lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[minmax(0,1fr)_auto]">
         {hero && (
-          <figure className="relative h-[62svh] min-h-[22rem] overflow-hidden sm:h-[70svh] lg:order-2 lg:h-auto lg:w-[min(50vw,calc((100svh-6rem)*0.78))]">
-            <div className="slow-zoom absolute inset-0">
-              <ArtworkImage
-                media={hero.hero}
-                sizes="(min-width: 64rem) 50vw, 100vw"
-                priority
-                fill
-                fit="cover"
-                className="object-[50%_38%]"
-              />
+          <figure className="relative h-[40svh] min-h-[18rem] overflow-hidden sm:h-[60svh] lg:order-2 lg:h-auto lg:w-[min(52vw,calc((100svh-6rem)*0.8))]">
+            <ImageBackdrop media={hero.hero} />
+            <div className="absolute inset-x-5 inset-y-3 flex items-center justify-center sm:inset-x-10 sm:inset-y-6 lg:inset-8">
+              <ArtworkImage media={hero.hero} sizes="(min-width: 64rem) 50vw, 100vw" priority intrinsic feather className="[--feather:7%]" />
             </div>
-            <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-stage to-transparent lg:inset-y-0 lg:left-0 lg:h-auto lg:w-40 lg:bg-gradient-to-r" />
             <figcaption className="sr-only">
-              {hero.title}, {hero.dating?.displayLabel}. {hero.reference ? `${hero.reference.institution}, ${hero.reference.accessionNumber}, CC0.` : ""}
+              {hero.title}
+              {hero.reference ? `. ${hero.reference.institution}, ${hero.reference.accessionNumber}, CC0.` : `. MURANIQ collection, ${hero.id}.`}
             </figcaption>
           </figure>
         )}
 
-        <div className="container-gallery flex flex-col justify-between gap-12 pt-6 pb-14 lg:order-1 lg:max-w-none lg:pt-16 lg:pr-16 lg:pb-12">
+        <div className="container-gallery flex flex-col justify-between gap-10 pt-8 pb-12 lg:order-1 lg:max-w-none lg:pt-16 lg:pr-16 lg:pb-12">
           <p className="settle label eyebrow hidden text-muted-dark lg:inline-flex">Murano · Venezia · Private collection</p>
           <div>
             <h1 id="hero-title" className="settle settle-1 display-hero max-w-[11ch] text-on-dark">
-              Glass and art, <span className="serif-italic text-accent">seen closely.</span>
+              Murano glass, <span className="serif-italic text-accent">seen closely.</span>
             </h1>
             <p className="settle settle-2 lede measure mt-8 text-muted-dark lg:mt-10">
-              A private collection of Murano glass, other glass and collectible objects. Each work is shown in
-              full, with what is known about its making, and an honest account of what is not.
+              A private collection of Murano glass, other glass and collectible objects, with a research archive behind
+              it. Each work is shown whole, with what is known about its making and an honest account of what is not.
             </p>
             <div className="settle settle-3 mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link href={routes.collection()} className="btn btn-primary">
                 Explore the collection
               </Link>
-              <ArrowLink href={routes.exhibition()} className="text-on-dark">
-                Enter the exhibition
+              <ArrowLink href={routes.guide()} className="text-on-dark">
+                Open the Glass Guide
               </ArrowLink>
             </div>
           </div>
@@ -148,16 +146,11 @@ export default async function HomePage() {
                 <Link href={routes.artwork(hero.slug)} className="link-quiet text-on-dark">
                   {hero.title}
                 </Link>
-                , {hero.dating?.displayLabel}
-                {hero.reference && (
-                  <span className="block text-xs tracking-wide">
-                    Reference work · {hero.reference.institution} · CC0
-                  </span>
-                )}
+                {hero.dating?.displayLabel ? `, ${hero.dating.displayLabel}` : ""}
+                <span className="mt-1 block text-caption tracking-wide">
+                  {hero.reference ? `Research reference · ${hero.reference.institution} · CC0` : `MURANIQ collection · ${hero.id}`}
+                </span>
               </p>
-              <span aria-hidden="true" className="label hidden shrink-0 text-muted-dark lg:inline">
-                Scroll
-              </span>
             </div>
           )}
         </div>
@@ -196,18 +189,33 @@ export default async function HomePage() {
           <div className="container-gallery">
             <div className="grid gap-8 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <p className="reveal label eyebrow text-muted-dark">Selected works</p>
+                <p className="reveal label eyebrow text-muted-dark">{selectionIsOwn ? "From the collection" : "Selected works"}</p>
                 <h2 id="selected-title" className="reveal display-xl mt-6">
-                  Venetian glass, <span className="serif-italic">in the round.</span>
+                  {selectionIsOwn ? (
+                    <>
+                      Cased in colour, <span className="serif-italic">cut to the light.</span>
+                    </>
+                  ) : (
+                    <>
+                      Venetian glass, <span className="serif-italic">in the round.</span>
+                    </>
+                  )}
                 </h2>
               </div>
               <div className="reveal flex flex-col gap-6 lg:col-span-4 lg:col-start-9 lg:self-end">
-                <p className="text-sm text-muted-dark">
-                  Shown here: reference works from public museum collections, with their open-access photography, while
-                  the MURANIQ collection is being photographed and documented.
-                </p>
-                <ArrowLink href={routes.collection()} className="text-on-dark">
-                  View all works
+                {selectionIsOwn ? (
+                  <p className="text-muted-dark">
+                    {ownTechniques.length > 0 ? `${ownTechniques.map((t) => t.term).join(" and ")}: ` : ""}
+                    layers of coloured glass sealed inside clear glass, then cut. Makers and dates are still being
+                    researched, so no attribution is given yet.
+                  </p>
+                ) : (
+                  <p className="text-sm text-muted-dark">
+                    Reference works from public museum collections, shown with their open-access photography.
+                  </p>
+                )}
+                <ArrowLink href={routes.category(selected[0]?.category ?? "murano-glass")} className="text-on-dark">
+                  {CATEGORIES.find((c) => c.slug === (selected[0]?.category ?? "murano-glass"))?.title ?? "The collection"}
                 </ArrowLink>
               </div>
             </div>
@@ -215,9 +223,9 @@ export default async function HomePage() {
               {selected.map((a, i) => {
                 const layout = [
                   { li: "lg:col-span-5" },
+                  { li: "lg:col-span-4 lg:col-start-8 lg:mt-40", drift: true },
+                  { li: "lg:col-span-4 lg:col-start-2 lg:mt-24" },
                   { li: "lg:col-span-4 lg:col-start-8 lg:mt-48", drift: true },
-                  { li: "lg:col-span-6 lg:col-start-2 lg:mt-28" },
-                  { li: "lg:col-span-3 lg:col-start-9 lg:mt-56", drift: true },
                 ][i] ?? { li: "lg:col-span-4" };
                 return (
                   <li key={a.id} className={`${layout.li} ${layout.drift ? "drift" : ""}`}>
@@ -232,35 +240,6 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* 4 — The city: one painting, full width and uncropped */}
-      {vista && (
-        <section aria-labelledby="city-title" className="section-y bg-stage">
-          <div className="container-gallery grid gap-8 lg:grid-cols-12">
-            <p className="reveal label eyebrow text-muted-dark lg:col-span-3">The city</p>
-            <h2 id="city-title" className="reveal display-lg lg:col-span-8 lg:col-start-5">
-              Venice, the market and the stage for <span className="serif-italic text-accent">Murano’s glass.</span>
-            </h2>
-          </div>
-          <figure className="mt-16 lg:mt-24">
-            <div className="overflow-hidden">
-              <Link href={routes.artwork(vista.slug)} className="reveal-img block" aria-label={`${vista.title}: view the dossier`}>
-                <ArtworkImage media={vista.hero} sizes="100vw" />
-              </Link>
-            </div>
-            <figcaption className="container-gallery mt-5 flex flex-col gap-1 text-sm text-muted-dark sm:flex-row sm:justify-between sm:gap-8">
-              <span>
-                <span className="text-on-dark">{vista.title}</span>, {vista.dating?.displayLabel} · {vista.attributionLine}
-              </span>
-              {vista.reference && (
-                <span>
-                  {vista.reference.institution}, {vista.reference.accessionNumber} · CC0 · Reference work
-                </span>
-              )}
-            </figcaption>
-          </figure>
-        </section>
-      )}
-
       {/* 5 — Heritage: Murano since 1291, an interactive timeline anchored in objects */}
       <section aria-labelledby="heritage-title" className="surface-paper section-y">
         <div className="container-gallery">
@@ -271,10 +250,13 @@ export default async function HomePage() {
                 Murano, <span className="serif-italic">since 1291.</span>
               </h2>
             </div>
-            <p className="reveal lede measure text-ink-muted lg:col-span-5 lg:col-start-8 lg:self-end">
-              Seven centuries of technique, each step shown through an object you can study closely. Choose a moment to
-              see the work that represents it.
-            </p>
+            <div className="reveal flex flex-col gap-6 lg:col-span-5 lg:col-start-8 lg:self-end">
+              <p className="lede measure text-ink-muted">
+                Seven centuries of technique, each step shown through an object you can study closely. Choose a moment
+                to see the work that represents it.
+              </p>
+              <ArrowLink href={routes.history()}>Read the history of Murano glass</ArrowLink>
+            </div>
           </div>
 
           <EditorialFigure
@@ -355,7 +337,7 @@ export default async function HomePage() {
                   <span
                     key={i}
                     aria-hidden="true"
-                    className="absolute flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-stage/55 font-display text-lg text-ivory shadow-[0_0_0_6px_rgb(197_164_109_/_0.18)] backdrop-blur-sm"
+                    className="absolute flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-stage/75 font-display text-lg text-ivory ring-1 ring-ivory/40"
                     style={{ left: `${h.x * 100}%`, top: `${h.y * 100}%` }}
                   >
                     {i + 1}
@@ -411,12 +393,12 @@ export default async function HomePage() {
           <div className="grid gap-8 lg:grid-cols-12">
             <p className="reveal label eyebrow text-muted-dark lg:col-span-3">Collection areas</p>
             <h2 id="areas-title" className="reveal display-lg lg:col-span-8 lg:col-start-5">
-              Four areas, <span className="serif-italic">one standard</span> of documentation.
+              {CATEGORIES.length === 3 ? "Three" : CATEGORIES.length} areas, <span className="serif-italic">one standard</span> of documentation.
             </h2>
           </div>
           <ul className="mt-16 border-t border-line-dark lg:mt-24">
             {CATEGORIES.map((c, i) => {
-              const n = counts[c.slug] ?? 0;
+              const filled = hasWorks[c.slug] ?? false;
               const preview = AREA_PREVIEW[c.slug] ? bySlug.get(AREA_PREVIEW[c.slug]!) : undefined;
               return (
                 <li key={c.slug} className="group reveal relative border-b border-line-dark">
@@ -428,9 +410,7 @@ export default async function HomePage() {
                       </Link>
                     </h3>
                     <p className={`hidden text-sm text-muted-dark transition-opacity duration-500 lg:block ${preview ? "xl:group-hover:opacity-0" : ""}`}>{c.intro}</p>
-                    <p className="label text-muted-dark sm:text-right">
-                      {n > 0 ? `${n} ${n === 1 ? "work" : "works"}` : "In preparation"}
-                    </p>
+                    <p className="label text-muted-dark sm:text-right">{filled ? "View" : "Being documented"}</p>
                   </div>
                   {preview && (
                     <div
@@ -497,7 +477,8 @@ export default async function HomePage() {
               A question about a piece, a maker <span className="serif-italic text-accent">or a mark?</span>
             </h2>
             <p className="reveal measure text-muted-dark">
-              We welcome enquiries from collectors, researchers and anyone with information about the works.
+              We welcome enquiries from collectors, researchers and anyone with information about the works. If you
+              recognise a maker, a mark or a label on one of our pieces, we would like to hear from you.
             </p>
             <div className="reveal flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link href={routes.contact()} className="btn btn-primary">
@@ -509,15 +490,20 @@ export default async function HomePage() {
             </div>
           </div>
           {invitation && (
-            <figure className="lg:col-span-7">
-              <div className="overflow-hidden">
-                <Link href={routes.artwork(invitation.slug)} className="reveal-img block" aria-label={`${invitation.title}: view the dossier`}>
-                  <ArtworkImage media={invitation.hero} sizes="(min-width: 64rem) 55vw, 100vw" />
-                </Link>
-              </div>
+            <figure className="reveal lg:col-span-5 lg:col-start-8">
+              <Link
+                href={routes.artwork(invitation.slug)}
+                className="plate relative block overflow-hidden"
+                style={{ aspectRatio: `${invitation.hero.width} / ${invitation.hero.height}` }}
+                aria-label={`${invitation.title}: view the dossier`}
+              >
+                <ImageBackdrop media={invitation.hero} />
+                <ArtworkImage media={invitation.hero} sizes="(min-width: 64rem) 36vw, 100vw" decorative feather className="relative" />
+              </Link>
               <figcaption className="mt-4 text-sm text-muted-dark">
-                {invitation.title}, {invitation.datingLabel} · {invitation.attributionLine}
-                {invitation.heldBy ? ` · ${invitation.heldBy.institution} · CC0` : ""}
+                <span className="text-on-dark">{invitation.title}</span>
+                {invitation.datingLabel && invitation.datingLabel !== "Not documented" ? `, ${invitation.datingLabel}` : ""}
+                {invitation.heldBy ? ` · ${invitation.heldBy.institution} · CC0` : ` · MURANIQ collection · ${invitation.id}`}
               </figcaption>
             </figure>
           )}

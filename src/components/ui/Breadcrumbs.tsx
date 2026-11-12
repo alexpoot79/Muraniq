@@ -7,7 +7,7 @@ export function Breadcrumbs({ items, tone = "dark" }: { items: Crumb[]; tone?: "
   const muted = tone === "dark" ? "text-muted-dark" : "text-ink-muted";
   return (
     <>
-      <nav aria-label="Breadcrumb" className={`label text-[0.6875rem] ${muted}`}>
+      <nav aria-label="Breadcrumb" className={`label text-label ${muted}`}>
         <ol className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {items.map((c, i) => {
             const last = i === items.length - 1;

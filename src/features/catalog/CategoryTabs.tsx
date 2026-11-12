@@ -12,7 +12,7 @@ export function CategoryTabs({ current }: { current?: string }) {
             <Link
               href={routes.category(c.slug)}
               aria-current={current === c.slug ? "page" : undefined}
-              className={`label inline-flex min-h-14 items-center border-b text-[0.6875rem] transition-colors ${current === c.slug ? "border-accent text-on-dark" : "border-transparent text-muted-dark hover:text-on-dark"}`}
+              className={`label inline-flex min-h-12 items-center border-b text-label transition-colors ${current === c.slug ? "border-accent text-on-dark" : "border-transparent text-muted-dark hover:text-on-dark"}`}
             >
               {c.title}
             </Link>

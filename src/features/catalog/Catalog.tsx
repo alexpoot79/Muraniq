@@ -6,6 +6,7 @@ import { ArtworkCard } from "@/components/editorial/ArtworkCard";
 import { CERTAINTY_LABEL } from "@/features/artworks/attribution";
 import { absoluteUrl } from "@/lib/site";
 import { FilterForm } from "./FilterForm";
+import { RememberListing } from "./ListingMemory";
 import { catalogHref, isFiltered, parseCatalogQuery, searchCatalog, type CatalogQuery, type RawParams } from "./query";
 
 type Option = { value: string; label: string; count: number; checked: boolean };
@@ -14,7 +15,7 @@ function FacetGroup({ name, legend, options }: { name: string; legend: string; o
   if (options.length === 0) return null;
   return (
     <fieldset className="border-t border-line-dark py-6">
-      <legend className="label float-left mb-4 w-full text-[0.6875rem] text-muted-dark">{legend}</legend>
+      <legend className="label float-left mb-4 w-full text-label text-muted-dark">{legend}</legend>
       <ul className="clear-both flex flex-col gap-1">
         {options.map((o) => (
           <li key={o.value}>
@@ -74,8 +75,26 @@ export async function Catalog({
   const moreFiltersActive =
     parsed.maker.length + parsed.attribution.length + parsed.colour.length + (fixedCategory ? 0 : parsed.category.length) > 0 ||
     Boolean(parsed.from) || Boolean(parsed.to);
+  const areaTitle = fixedCategory ? CATEGORIES.find((c) => c.slug === fixedCategory)?.title : undefined;
+  const termOf = new Map(techniques.map((t) => [t.slug, t.term] as const));
+  const makerOf = new Map(creators.map((c) => [c.slug, c.name] as const));
+  const without = (patch: Partial<CatalogQuery>) => catalogHref(base, { ...linkQuery, ...patch, page: 1 });
+  const active: Array<{ key: string; label: string; href: string }> = [
+    ...(parsed.q ? [{ key: "q", label: `“${parsed.q}”`, href: without({ q: "" }) }] : []),
+    ...parsed.technique.map((t) => ({ key: `t-${t}`, label: termOf.get(t) ?? t, href: without({ technique: parsed.technique.filter((x) => x !== t) }) })),
+    ...parsed.maker.map((m) => ({ key: `m-${m}`, label: makerOf.get(m) ?? m, href: without({ maker: parsed.maker.filter((x) => x !== m) }) })),
+    ...parsed.attribution.map((c) => ({ key: `a-${c}`, label: CERTAINTY_LABEL[c], href: without({ attribution: parsed.attribution.filter((x) => x !== c) }) })),
+    ...parsed.colour.map((c) => ({ key: `c-${c}`, label: c.replace(/-/g, " ").replace(/^./, (x) => x.toUpperCase()), href: without({ colour: parsed.colour.filter((x) => x !== c) }) })),
+    ...(parsed.from !== null || parsed.to !== null
+      ? [{ key: "period", label: `${parsed.from ?? "…"}–${parsed.to ?? "…"}`, href: without({ from: null, to: null }) }]
+      : []),
+    ...(!fixedCategory
+      ? parsed.category.map((c) => ({ key: `cat-${c}`, label: CATEGORIES.find((x) => x.slug === c)?.title ?? c, href: without({ category: parsed.category.filter((x) => x !== c) }) }))
+      : []),
+  ];
+  const listingLabel = [areaTitle ?? "the collection", ...active.map((f) => f.label)].join(" · ") + (result.page > 1 ? `, page ${result.page}` : "");
   const chip = (active: boolean) =>
-    `label inline-flex min-h-11 items-center gap-2 border px-4 text-[0.6875rem] transition-colors ${active ? "border-accent text-on-dark" : "border-line-dark text-muted-dark hover:text-on-dark"}`;
+    `inline-flex min-h-10 items-center gap-2 border px-3.5 text-sm transition-colors ${active ? "border-accent text-on-dark" : "border-line-dark text-on-dark/85 hover:border-on-dark/50 hover:text-on-dark"}`;
 
   const canonical =
     filtered ? base : result.page > 1 ? `${base}?page=${result.page}` : base;
@@ -85,24 +104,35 @@ export async function Catalog({
       {filtered && <meta name="robots" content="noindex, follow" />}
       <link rel="canonical" href={absoluteUrl(canonical)} />
 
-      <FilterForm action={base} className="flex flex-col gap-8">
-        <div className="flex flex-col gap-3">
-          <label htmlFor="search" className="label text-[0.6875rem] text-muted-dark">
-            Search
-          </label>
-          <div className="flex items-end gap-3">
+      <FilterForm action={base} className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-8">
+          <div className="flex min-w-0 flex-1 items-end gap-3">
+            <label htmlFor="search" className="sr-only">
+              Search {areaTitle ?? "the collection"}
+            </label>
             <input
               id="search"
               name="q"
               type="search"
               defaultValue={parsed.q}
               maxLength={80}
-              placeholder="Title, maker, technique…"
-              className="field-dark min-w-0 flex-1 font-display text-2xl"
+              placeholder="Search by title, maker or technique"
+              className="field-dark min-w-0 flex-1 font-display text-xl"
             />
             <button type="submit" className="btn btn-ghost btn-sm">
               Search
             </button>
+          </div>
+          <div className="flex items-center gap-3">
+            <label htmlFor="sort" className="label text-muted-dark">
+              Sort
+            </label>
+            <select id="sort" name="sort" defaultValue={parsed.sort} className="field-dark min-h-11 bg-stage px-1 text-sm">
+              <option value="curated">Curated order</option>
+              <option value="title">Title (A–Z)</option>
+              <option value="date-asc">Date (earliest first)</option>
+              <option value="date-desc">Date (latest first)</option>
+            </select>
           </div>
         </div>
 
@@ -124,7 +154,7 @@ export async function Catalog({
                       aria-current={active ? "true" : undefined}
                     >
                       {t.label}
-                      <span className="numeral text-sm text-muted-dark">{t.count}</span>
+                      <span className="numeral text-base text-muted-dark">{t.count}</span>
                     </Link>
                   </li>
                 );
@@ -137,7 +167,7 @@ export async function Catalog({
         ))}
 
         <details className="group border-y border-line-dark" open={moreFiltersActive || undefined}>
-          <summary className="label flex min-h-12 cursor-pointer items-center justify-between text-[0.6875rem]">
+          <summary className="label flex min-h-12 cursor-pointer items-center justify-between text-label">
             More filters
             <span className="hidden text-muted-dark group-open:hidden sm:inline">Maker, certainty, colour, period</span>
           </summary>
@@ -177,7 +207,7 @@ export async function Catalog({
               )}
             />
             <fieldset className="border-t border-line-dark py-6">
-              <legend className="label mb-4 text-[0.6875rem] text-muted-dark">Period (overlapping)</legend>
+              <legend className="label mb-4 text-label text-muted-dark">Period (overlapping)</legend>
               <div className="flex items-center gap-2 text-sm">
                 <label className="sr-only" htmlFor="from">From year</label>
                 <input id="from" name="from" inputMode="numeric" pattern="\d{4}" placeholder="From" defaultValue={parsed.from ?? ""} className="field-dark min-h-11 px-1" />
@@ -197,23 +227,34 @@ export async function Catalog({
           </div>
         </details>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line-dark pb-5">
-          <p className="label text-[0.6875rem] text-muted-dark" role="status">
+        <div className="flex flex-col gap-3 border-b border-line-dark pb-4">
+          <p className="label text-muted-dark" role="status">
             {result.total === 1 ? "1 work" : `${result.total} works`}
             {parsed.q && <> for “{parsed.q}”</>}
             {result.undatedExcluded > 0 && (
               <> · {result.undatedExcluded} undated {result.undatedExcluded === 1 ? "work is" : "works are"} not included in a period search</>
             )}
           </p>
-          <div className="flex items-center gap-3">
-            <label htmlFor="sort" className="label text-[0.6875rem] text-muted-dark">Sort</label>
-            <select id="sort" name="sort" defaultValue={parsed.sort} className="field-dark min-h-11 bg-stage px-1 text-sm">
-              <option value="curated">Curated order</option>
-              <option value="title">Title (A–Z)</option>
-              <option value="date-asc">Date (earliest first)</option>
-              <option value="date-desc">Date (latest first)</option>
-            </select>
-          </div>
+          {active.length > 0 && (
+            <ul aria-label="Active filters" className="flex flex-wrap items-center gap-2">
+              {active.map((f) => (
+                <li key={f.key}>
+                  <Link href={f.href} className="inline-flex min-h-11 items-center gap-2 border border-line-dark px-3 text-sm text-on-dark transition-colors hover:border-accent">
+                    {f.label}
+                    <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" stroke="currentColor" strokeWidth="1.2">
+                      <path d="M1 1l8 8M9 1 1 9" />
+                    </svg>
+                    <span className="sr-only">(remove)</span>
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href={base} className="label inline-flex min-h-11 items-center px-2 text-muted-dark underline-offset-4 hover:text-on-dark hover:underline">
+                  Clear all
+                </Link>
+              </li>
+            </ul>
+          )}
         </div>
       </FilterForm>
 
@@ -238,7 +279,7 @@ export async function Catalog({
           </p>
         </div>
       ) : (
-        <ul className="mt-12 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-10">
+        <ul className="mt-8 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-10">
           {result.items.map((a, i) => (
             <li key={a.id}>
               <ArtworkCard artwork={a} headingLevel="h2" priority={i < 2 && !filtered} />
@@ -246,6 +287,8 @@ export async function Catalog({
           ))}
         </ul>
       )}
+
+      <RememberListing label={listingLabel} />
 
       {result.pageCount > 1 && (
         <nav aria-label="Pagination" className="mt-16 flex items-center justify-between border-t border-line-dark pt-6">
