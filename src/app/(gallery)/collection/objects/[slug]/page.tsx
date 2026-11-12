@@ -83,6 +83,10 @@ export default async function ArtworkPage({ params }: Props) {
   const sourceIndex = new Map(a.sources.map((s, i) => [s.id, i + 1]));
   const cta = enquiryCta(a.availability);
   const lead = a.creatorLinks[0];
+  // A maker named in the attribution but without a profile page (yet) is still shown, unlinked, with its qualifier.
+  const unlinkedMaker = a.creatorLinks.length
+    ? undefined
+    : a.assertions.find((x) => x.field === "creator" && x.certainty !== "unknown")?.statement;
 
   const specs: Array<{ label: string; value: React.ReactNode }> = [
     { label: "Object", value: a.objectType },
@@ -100,7 +104,7 @@ export default async function ArtworkPage({ params }: Props) {
           ))}
         </ul>
       ) : (
-        "Not documented"
+        (unlinkedMaker ?? "Not documented")
       ),
     },
     { label: "Date", value: a.dating?.displayLabel ?? "Not documented" },

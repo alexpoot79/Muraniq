@@ -24,6 +24,7 @@ export function formatDimensions(d: Dimensions): Array<{ label: string; value: s
 export const VIEW_LABEL: Record<string, string> = {
   front: "Front",
   reverse: "Reverse",
+  top: "From above",
   side: "Side",
   base: "Base",
   signature: "Signature",
