@@ -58,7 +58,7 @@ export function FilterForm({
       onChange={(e) => {
         const t = e.target as unknown as HTMLInputElement;
         if (t.name === "q" || t.name === "from" || t.name === "to") return; // typed fields wait for submit
-        if (window.matchMedia("(min-width: 64rem)").matches) navigate(e.currentTarget);
+        if (t.name === "sort" || window.matchMedia("(min-width: 64rem)").matches) navigate(e.currentTarget);
       }}
     >
       {children}
