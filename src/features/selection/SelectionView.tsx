@@ -217,7 +217,7 @@ function Comparison({ records, onRemove }: { records: SelectionRecord[]; onRemov
       <h2 id="compare-title" className="display-md">
         Side by side
       </h2>
-      <div className="overflow-x-auto">
+      <div className="relative overflow-x-auto">
         <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
           <caption className="sr-only">Comparison of {records.length} works</caption>
           <thead>
@@ -284,7 +284,7 @@ function ScaleDiagram({ records }: { records: SelectionRecord[] }) {
   const starts = boxes.map((_, i) => boxes.slice(0, i).reduce((s, b) => s + Math.max(b.bw, 120) + gap, gap));
   return (
     <figure className="flex flex-col gap-3">
-      <div className="overflow-x-auto">
+      <div className="relative overflow-x-auto">
         <svg
           role="img"
           aria-label={`Relative size: ${boxes.map((b) => `${b.r.title}, ${one(b.h / 10)} cm high${b.w ? `, ${one(b.w / 10)} cm wide` : ""}`).join("; ")}.`}

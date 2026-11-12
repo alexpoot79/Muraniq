@@ -109,7 +109,7 @@ export default async function HomePage() {
       {/* 1 — Hero: one work from the collection, whole, on black */}
       <section aria-labelledby="hero-title" className="relative grid bg-stage lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[minmax(0,1fr)_auto]">
         {hero && (
-          <figure className="relative h-[40svh] min-h-[18rem] overflow-hidden sm:h-[60svh] lg:order-2 lg:h-auto lg:w-[min(52vw,calc((100svh-6rem)*0.8))]">
+          <figure className="relative h-[40svh] min-h-[18rem] overflow-hidden sm:h-[52svh] lg:order-2 lg:h-auto lg:w-[min(52vw,calc((100svh-6rem)*0.8))]">
             <ImageBackdrop media={hero.hero} />
             <div className="absolute inset-x-5 inset-y-3 flex items-center justify-center sm:inset-x-10 sm:inset-y-6 lg:inset-8">
               <ArtworkImage media={hero.hero} sizes="(min-width: 64rem) 50vw, 100vw" priority intrinsic feather className="[--feather:7%]" />
