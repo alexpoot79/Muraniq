@@ -128,15 +128,18 @@
     "entity_type": "Family",
     "origin": "Murano",
     "periods": [
-      "Not verified"
+      "1956–present (furnace)"
     ],
-    "main_association": "Zanetti Murano / Zanetti Arte Vetro; Licio and Oscar Zanetti (relationship not verified)",
+    "main_association": "Zanetti Murano / Zanetti Vetreria Artistica S.r.l.: Oscar the elder, Licio, Oscar (b. 1961), Andrea (dealer sources)",
     "ia_category": "family",
     "verification_status": "UNVERIFIED",
     "research_priority": "P3",
-    "source_ids": [],
-    "notes": "Do not confuse with Abate Vincenzo Zanetti (1824–1883), founder of the Museo del Vetro.",
-    "checked": "2026-11-10"
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "notes": "Do not confuse with Abate Vincenzo Zanetti (1824–1883), founder of the Museo del Vetro. The Schiavon gallery counts him among the family's ancestors; not documented.",
+    "checked": "2026-11-18"
   },
   {
     "id": "FAM-MORETTI",
@@ -2360,38 +2363,56 @@
     "entity_type": "Person",
     "born": "Not verified",
     "died": "Not verified",
-    "origin": "Not verified",
+    "origin": "Murano",
     "roles": [
-      "Not verified"
+      "glass master (maestro)"
     ],
-    "periods": [],
-    "main_association": "Not verified",
+    "periods": [
+      "1956–1989 (dealer sources)"
+    ],
+    "main_association": "Zanetti Murano, co-founder with his father Oscar (dealer sources)",
     "ia_category": "contemporary",
     "verification_status": "UNVERIFIED",
     "research_priority": "P3",
-    "source_ids": [],
-    "notes": "",
-    "checked": "2026-11-10"
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "notes": "Father of Oscar Zanetti (b. 1961) per the Schiavon gallery biography. The ZL monogram on the firm's gold label may stand for Licio; not documented. Dealer listings attribute mid-century shells and bird sculptures to him; not checked.",
+    "checked": "2026-11-18"
   },
   {
     "id": "PER-ZANETTI-OSCAR",
     "name": "Oscar Zanetti",
-    "alternative_names": [],
-    "entity_type": "Person",
-    "born": "Not verified",
-    "died": "Not verified",
-    "origin": "Not verified",
-    "roles": [
-      "Not verified"
+    "alternative_names": [
+      "Oscar Zanetti Jr. (dealer usage)"
     ],
-    "periods": [],
-    "main_association": "Not verified",
+    "entity_type": "Person",
+    "born": "1961, Murano (gallery biography)",
+    "died": "Not verified",
+    "origin": "Murano",
+    "roles": [
+      "glass master (maestro)",
+      "sculptor"
+    ],
+    "periods": [
+      "c. 1975–present"
+    ],
+    "main_association": "Zanetti Murano (Zanetti Vetreria Artistica S.r.l.), the family furnace",
     "ia_category": "contemporary",
     "verification_status": "UNVERIFIED",
-    "research_priority": "P3",
-    "source_ids": [],
-    "notes": "",
-    "checked": "2026-11-10"
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "SRC-WEB-MURANONET-ZANETTI",
+      "SRC-ZANETTI-MURANO-COM",
+      "SRC-WMODA-OSCAR-ZANETTI",
+      "SRC-HALLS-20250212-LOT12",
+      "SRC-HERITAGE-20250613-LOT29045",
+      "SRC-MURANIQ-MUR-M009"
+    ],
+    "notes": "Son of Licio Zanetti; grandson and namesake of the furnace's co-founder (see PER-ZANETTI-OSCAR-SR). Gallery biography: art institute in Venice, training of about fourteen years at Venini, La Murrina and Barovier & Toso, joined the family furnace in 1986, own exhibitions since 1993, Venezia Aperto Vetro (young talents section); works with his son Andrea. Kept UNVERIFIED by the Phase 1 criteria: only Tier C sources were read; the regional register confirms the firm, not his role. Public text: collection maker profile /glass-guide/makers/oscar-zanetti/ (website dataset CRE-OSCAR-ZANETTI, status 'in research'). Dossier: research/makers/dossiers/oscar-zanetti.md.",
+    "checked": "2026-11-18"
   },
   {
     "id": "PER-OHIRA-YOICHI-1946",
@@ -2440,5 +2461,31 @@
     ],
     "notes": "",
     "checked": "2026-11-10"
+  },
+  {
+    "id": "PER-ZANETTI-OSCAR-SR",
+    "name": "Oscar Zanetti (the elder)",
+    "alternative_names": [
+      "Oscar Zanetti Sr."
+    ],
+    "entity_type": "Person",
+    "born": "Not verified",
+    "died": "Not verified",
+    "origin": "Murano",
+    "roles": [
+      "glass master (maestro)"
+    ],
+    "periods": [
+      "1956–"
+    ],
+    "main_association": "Zanetti Murano, co-founder in 1956 (dealer sources)",
+    "ia_category": "contemporary",
+    "verification_status": "UNVERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "notes": "Homonym: grandfather of Oscar Zanetti (b. 1961). A piece signed or labelled 'Oscar Zanetti' must be dated before it is assigned to either.",
+    "checked": "2026-11-18"
   }
 ]

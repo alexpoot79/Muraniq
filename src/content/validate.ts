@@ -137,6 +137,15 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
   for (const [i, c] of data.creators.entries()) {
     const p = `creators[${i}](${c.id})`;
     for (const s of c.sourceIds) checkSource(p, s);
+    for (const t of c.techniqueIds) if (!ids.technique.has(t)) push(p, `unknown technique ${t}`);
+    // Maker profiles are public texts too: no prices, estimates or auction results.
+    const creatorTexts = [
+      c.summary,
+      ...c.biography,
+      ...c.facts.flatMap((f) => [f.label, f.value, f.basis ?? ""]),
+      ...c.sections.flatMap((x) => [x.heading, ...x.paragraphs]),
+    ];
+    if (creatorTexts.some((t) => PRICE.test(t))) push(p, "looks like a price; prices are never published");
     for (const d of duplicates(c.signatureRefIds)) push(p, `signature reference ${d} listed twice`);
     if (c.primarySignatureId && !c.signatureRefIds.includes(c.primarySignatureId))
       push(p, `primary signature ${c.primarySignatureId} must be one of this maker's signature references`);
@@ -185,7 +194,11 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
       if (!ids.creator.has(cr)) push(`glasshouses[${i}](${g.id})`, `unknown creator ${cr}`);
   }
   for (const [i, t] of data.techniques.entries()) {
-    for (const s of t.sourceIds) checkSource(`techniques[${i}](${t.id})`, s);
+    const p = `techniques[${i}](${t.id})`;
+    for (const s of t.sourceIds) checkSource(p, s);
+    for (const c of t.creatorIds) if (!ids.creator.has(c)) push(p, `unknown creator ${c}`);
+    const texts = [t.summary, ...t.body, ...t.recognition, ...t.sections.flatMap((x) => [x.heading, ...x.paragraphs])];
+    if (texts.some((x) => PRICE.test(x))) push(p, "looks like a price; prices are never published");
   }
 
   return issues.length ? { ok: false, issues } : { ok: true, data, issues: [] };

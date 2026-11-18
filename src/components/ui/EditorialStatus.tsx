@@ -2,6 +2,8 @@
 export function EditorialStatus({ status, tone = "paper" }: { status: string; tone?: "paper" | "dark" }) {
   const text: Record<string, string> = {
     draft_unsourced: "Editorial draft. Sources are still being added; treat this as a general introduction.",
+    in_research:
+      "Profile in research. Each key fact below names what it rests on; points that come only from galleries, dealers or the family firm are said to be so, and open questions are listed.",
     pending_migration:
       "The biography from the current MURANIQ website is being migrated and checked against sources before it is republished here.",
     reference_only:

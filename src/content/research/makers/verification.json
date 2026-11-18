@@ -1499,6 +1499,162 @@
       "conflict_group": "CF-MET-VENINI-NAMES",
       "checked": "2026-11-10",
       "notes": null
+    },
+    {
+      "id": "CLM-0126",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "founded",
+      "value": "1956",
+      "source_id": "SRC-WEB-MURANONET-ZANETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-FOUNDED",
+      "checked": "2026-11-18",
+      "notes": "Also the firm's own date as quoted by dealers and its Fiera Milano exhibitor text (search index)."
+    },
+    {
+      "id": "CLM-0127",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "founded",
+      "value": "1957 ('opened for business')",
+      "source_id": "SRC-WEB-SEARCH-ZANETTI-20261118",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-FOUNDED",
+      "checked": "2026-11-18",
+      "notes": "One dealer page; not pinned."
+    },
+    {
+      "id": "CLM-0128",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "handover Licio → Oscar",
+      "value": "1989",
+      "source_id": "SRC-WEB-MURANONET-ZANETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-HANDOVER",
+      "checked": "2026-11-18",
+      "notes": null
+    },
+    {
+      "id": "CLM-0129",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "handover Licio → Oscar",
+      "value": "1969",
+      "source_id": "SRC-WEB-SEARCH-ZANETTI-20261118",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-HANDOVER",
+      "checked": "2026-11-18",
+      "notes": "One dealer page; not pinned. Impossible for a son born in 1961."
+    },
+    {
+      "id": "CLM-0130",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "Vetro Artistico Murano code",
+      "value": "023",
+      "source_id": "SRC-REGIONE-VENETO-VAM-CONCESSIONARIE",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-VAM-CODE",
+      "checked": "2026-11-18",
+      "notes": "Official register, list of 19 March 2025."
+    },
+    {
+      "id": "CLM-0131",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "Vetro Artistico Murano code",
+      "value": "010 (023 given to Effetre International)",
+      "source_id": "SRC-WEB-SEARCH-ZANETTI-20261118",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": "CF-ZANETTI-MURANO-VAM-CODE",
+      "checked": "2026-11-18",
+      "notes": "Collector's list of trademark codes seen in search summaries; probably outdated."
+    },
+    {
+      "id": "CLM-0132",
+      "entity_id": "PER-ZANETTI-OSCAR",
+      "field": "born",
+      "value": "1961, Murano",
+      "source_id": "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": null
+    },
+    {
+      "id": "CLM-0133",
+      "entity_id": "PER-ZANETTI-OSCAR",
+      "field": "joined family furnace",
+      "value": "1986",
+      "source_id": "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": null
+    },
+    {
+      "id": "CLM-0134",
+      "entity_id": "PER-ZANETTI-OSCAR",
+      "field": "own exhibitions",
+      "value": "since 1993; Venezia Aperto Vetro, young talents section",
+      "source_id": "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "locator": null,
+      "claim_type": "SOURCE_STATES",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": null
+    },
+    {
+      "id": "CLM-0135",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "catalogue model",
+      "value": "24583-G Abstract Open Shell (calcedonio)",
+      "source_id": "SRC-ZANETTI-GALLERY-CALCEDONIO",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": "From the owner's research brief (18 Nov 2026); catalogue page not read. NOT linked to MUR-M009: needs a visual comparison of form, size and colour first."
+    },
+    {
+      "id": "CLM-0136",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "catalogue model",
+      "value": "24584-G Abstract Spiky Shell (calcedonio)",
+      "source_id": "SRC-ZANETTI-GALLERY-CALCEDONIO",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": "From the owner's research brief (18 Nov 2026); catalogue page not read. NOT linked to MUR-M009: needs a visual comparison of form, size and colour first."
+    },
+    {
+      "id": "CLM-0137",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "catalogue model",
+      "value": "24616-G Conch Shell (calcedonio)",
+      "source_id": "SRC-ZANETTI-GALLERY-CALCEDONIO",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": "From the owner's research brief (18 Nov 2026); catalogue page not read. NOT linked to MUR-M009: needs a visual comparison of form, size and colour first."
+    },
+    {
+      "id": "CLM-0138",
+      "entity_id": "ORG-ZANETTI-MURANO",
+      "field": "catalogue model",
+      "value": "ZV1226 The Kiss",
+      "source_id": "SRC-ZANETTI-GALLERY-CALCEDONIO",
+      "locator": null,
+      "claim_type": "COMPANY_CLAIM",
+      "conflict_group": null,
+      "checked": "2026-11-18",
+      "notes": "From the owner's research brief (18 Nov 2026); catalogue page not read. NOT linked to MUR-M009: needs a visual comparison of form, size and colour first."
     }
   ],
   "conflicts": [
@@ -1808,6 +1964,36 @@
       ],
       "resolution": null,
       "resolution_status": "OPEN"
+    },
+    {
+      "id": "CF-ZANETTI-MURANO-FOUNDED",
+      "description": "Founding year of the Zanetti furnace (1956 / 1957).",
+      "claim_ids": [
+        "CLM-0126",
+        "CLM-0127"
+      ],
+      "resolution": "1956 is the firm's own date and the majority; the 1957 figure comes from one dealer page seen only in search summaries. Company records not yet seen.",
+      "resolution_status": "ACCEPTED_AS_UNCERTAIN"
+    },
+    {
+      "id": "CF-ZANETTI-MURANO-HANDOVER",
+      "description": "When Licio Zanetti handed the furnace to his son Oscar (1989 / 1969).",
+      "claim_ids": [
+        "CLM-0128",
+        "CLM-0129"
+      ],
+      "resolution": "1969 is impossible for a son born in 1961; 1989 accepted provisionally, from dealer texts only.",
+      "resolution_status": "ACCEPTED_AS_UNCERTAIN"
+    },
+    {
+      "id": "CF-ZANETTI-MURANO-VAM-CODE",
+      "description": "Zanetti's Vetro Artistico® Murano concessionaire code (023 / 010).",
+      "claim_ids": [
+        "CLM-0130",
+        "CLM-0131"
+      ],
+      "resolution": "The Regione del Veneto register (read 2026-11-18) gives 023 for Zanetti Vetreria Artistica S.r.l.; the collector's list is outdated or wrong.",
+      "resolution_status": "RESOLVED"
     }
   ]
 }

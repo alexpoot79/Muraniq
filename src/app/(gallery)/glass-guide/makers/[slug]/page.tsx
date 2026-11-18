@@ -31,7 +31,28 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
   const { slug } = await params;
   const data = await getCreatorBySlug(slug);
   if (!data) notFound();
-  const { creator: c, artworks, sources, signatures } = data;
+  const { creator: c, artworks, sources, signatures, techniques } = data;
+  const sourceList = sources.length > 0 && (
+    <div>
+      <h3 className="label text-ink-muted">Sources</h3>
+      <ul className="mt-2 list-disc pl-5">
+        {sources.map((s) => (
+          <li key={s.id}>
+            {s.url ? (
+              <a href={s.url} className="link-quiet" rel="noopener">
+                <cite>{s.title}</cite>
+              </a>
+            ) : (
+              <cite>{s.title}</cite>
+            )}
+            {s.publisher ? `, ${s.publisher}` : ""}
+            {s.year ? ` (${s.year})` : ""}
+            {s.reliabilityNote && <span className="block text-sm text-ink-muted">{s.reliabilityNote}</span>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
   return (
     <>
       <PageIntro
@@ -56,6 +77,34 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
           <div className="measure flex flex-col gap-5 md:col-span-8">
             {c.isFixture && <FixtureNotice tone="paper" />}
             <EditorialStatus status={c.biographyStatus} />
+            {(c.facts.length > 0 || techniques.length > 0) && (
+              <dl aria-label={`Key facts about ${c.name}`} className="grid grid-cols-[minmax(6.5rem,auto)_1fr] gap-x-6 border-t border-line-paper">
+                {c.facts.map((f) => (
+                  <div key={f.label} className="contents">
+                    <dt className="label border-b border-line-paper py-3 text-ink-muted">{f.label}</dt>
+                    <dd className="border-b border-line-paper py-3">
+                      {f.value}
+                      {f.basis && <span className="mt-1 block text-sm text-ink-muted">{f.basis}</span>}
+                    </dd>
+                  </div>
+                ))}
+                {techniques.length > 0 && (
+                  <div className="contents">
+                    <dt className="label border-b border-line-paper py-3 text-ink-muted">Techniques</dt>
+                    <dd className="border-b border-line-paper py-3">
+                      {techniques.map((t, i) => (
+                        <span key={t.slug}>
+                          {i > 0 && ", "}
+                          <Link href={routes.technique(t.slug)} className="link-quiet">
+                            {t.term}
+                          </Link>
+                        </span>
+                      ))}
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            )}
             {c.biography.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -68,27 +117,21 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
                 .
               </p>
             )}
-            {sources.length > 0 && (
-              <div>
-                <h3 className="label text-ink-muted">Sources</h3>
-                <ul className="mt-2 list-disc pl-5">
-                  {sources.map((s) => (
-                    <li key={s.id}>
-                      {s.url ? (
-                        <a href={s.url} className="link-quiet" rel="noopener">
-                          <cite>{s.title}</cite>
-                        </a>
-                      ) : (
-                        <cite>{s.title}</cite>
-                      )}
-                      {s.publisher ? `, ${s.publisher}` : ""}
-                      {s.year ? ` (${s.year})` : ""}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            {c.sections.length === 0 && sourceList}
           </div>
+          {c.sections.map((section, i) => (
+            <div key={section.heading} className="grid gap-10 border-t border-line-paper pt-12 md:col-span-12 md:grid-cols-12">
+              <h2 id={`profile-section-${i}`} className="display-md md:col-span-4">
+                {section.heading}
+              </h2>
+              <div className="measure flex flex-col gap-5 md:col-span-8">
+                {section.paragraphs.map((p, j) => (
+                  <p key={j}>{p}</p>
+                ))}
+                {i === c.sections.length - 1 && sourceList}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -126,6 +169,10 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
           url: absoluteUrl(routes.maker(c.slug)),
           description: c.summary,
           ...(c.aliases.length ? { alternateName: c.aliases } : {}),
+          ...(c.kind === "person" && c.birthYear ? { birthDate: String(c.birthYear) } : {}),
+          ...(c.kind === "person" && c.birthPlace ? { birthPlace: { "@type": "Place", name: c.birthPlace } } : {}),
+          ...(c.kind === "person" && c.nationality ? { nationality: { "@type": "Country", name: c.nationality } } : {}),
+          ...(techniques.length ? { knowsAbout: techniques.map((t) => t.term) } : {}),
         }}
       />
     </>

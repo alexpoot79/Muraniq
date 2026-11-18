@@ -56,6 +56,8 @@ const PAGES = [
   "/collection/objects/sommerso-faceted-vase-green/",
   "/collection/objects/monumental-aquamarine-scavo-corroso-vase/",
   "/collection/objects/green-scavo-glass-horse-with-gold-leaf/",
+  "/collection/objects/oscar-zanetti-calcedonio-shell-bowl/",
+  "/glass-guide/makers/oscar-zanetti/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",

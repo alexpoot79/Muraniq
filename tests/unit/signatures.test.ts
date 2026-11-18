@@ -313,7 +313,7 @@ describe("recognition-ready export", () => {
     const detail = inscription.images.find((i) => i.role === "detail")!;
     expect(detail.cropOf?.imageId).toBe("IMG-R009-TOP");
     expect(detail.usableForRecognition).toBe(true);
-    expect(out.summary.references).toBe(2);
+    expect(out.summary.references).toBe(r.data.signatureReferences.filter((x) => x.status === "published").length);
     expect(JSON.stringify(out)).not.toMatch(/authentic|confidence|score/i);
   });
 
