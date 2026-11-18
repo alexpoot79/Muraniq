@@ -4,9 +4,11 @@
  * - Accepts iPhone HEIC as well as JPEG, PNG, TIFF, WebP and AVIF, with or
  *   without a file extension (uploads arrive without one).
  * - Upright (EXIF orientation), converted to sRGB (iPhone photographs are
- *   Display P3), resized to at most 2200 px, saved as JPEG.
- * - ALL metadata is removed from the published file: no GPS location, no
- *   camera serial, no capture time. Only pixels reach the public repository.
+ *   Display P3), saved as a web version of at most 1600 px with a small
+ *   "© MURANIQ" corner mark (see watermark.ts). The full-size original is
+ *   never published.
+ * - ALL camera metadata is removed from the published file: no GPS location,
+ *   no camera serial, no capture time. The only metadata is one copyright line.
  * - No retouching: no colour, contrast or background edits.
  */
 import { createHash } from "node:crypto";
@@ -19,9 +21,7 @@ import sharp from "sharp";
 // @ts-expect-error -- untyped module
 import heicDecode from "heic-decode";
 import { normaliseId } from "./sheet.ts";
-
-export const MAX_EDGE = 2200;
-export const JPEG_QUALITY = 85;
+import { protectPixels } from "./watermark.ts";
 
 export type ImageKind = "jpeg" | "png" | "heic" | "avif" | "tiff" | "webp";
 
@@ -171,15 +171,12 @@ export async function readSlateId(n: Normalised): Promise<string | undefined> {
 
 export type Derivative = { jpeg: Buffer; width: number; height: number; hash: string; thumb: Buffer };
 
-/** Web JPEG without any metadata, plus a thumbnail for the review sheet. */
+/** Protected web JPEG (corner mark, ≤ 1600 px, only a copyright line), plus a thumbnail for the review sheet. */
 export async function makeDerivative(n: Normalised): Promise<Derivative> {
-  const { data: jpeg, info } = await raw(n)
-    .resize({ width: MAX_EDGE, height: MAX_EDGE, fit: "inside", withoutEnlargement: true })
-    .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
-    .toBuffer({ resolveWithObject: true });
+  const { jpeg, width, height } = await protectPixels(n.data, n.width, n.height);
   const thumb = await sharp(jpeg).resize({ width: 220, height: 220, fit: "inside" }).jpeg({ quality: 80 }).toBuffer();
   const hash = createHash("sha1").update(jpeg).digest("hex").slice(0, 8);
-  return { jpeg, width: info.width, height: info.height, hash, thumb };
+  return { jpeg, width, height, hash, thumb };
 }
 
 export async function thumbnail(n: Normalised): Promise<Buffer> {

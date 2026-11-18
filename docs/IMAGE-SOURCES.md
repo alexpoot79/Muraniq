@@ -101,16 +101,17 @@ original image id and the region it was cut from (`cropOf`), and the viewer link
 
 Supplied by the owner on 10 November 2026. Edited at the owner's request: background blurred and slightly
 darkened, white balance neutralised from the background, mild contrast and saturation lift; grey haze removed from the glass (levels and local contrast on the object only, 10 Nov 2026). The object itself
-is not retouched, recomposed or generated.
+is not retouched, recomposed or generated. On 18 November 2026 all own photographs were replaced by protected web
+versions (1600 px, small "© MURANIQ" corner mark, copyright line; see COLLECTION-PHOTOS.md, "Photo protection").
 
 | File | Object | Rights |
 | --- | --- | --- |
-| `public/images/collection/r025-sommerso-bowl-top-v3.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
-| `public/images/collection/r026-sommerso-vase-green-v2.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
-| `public/images/collection/r027-sommerso-vase-amber-v2.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
-| `public/images/collection/r029-facet-bowl-blue.jpg` | Facet-cut sommerso bowl in blue and amber (MUR-M004) | Owned |
-| `public/images/collection/r030-facet-bowl-green.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
-| `public/images/collection/r031-facet-bowl-red.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
+| `public/images/collection/r025-sommerso-bowl-top-v3-505a8fc6.jpg` | Sommerso bowl in blue and amber (MUR-M001) | Owned |
+| `public/images/collection/r026-sommerso-vase-green-v2-657fd499.jpg` | Faceted sommerso vase in green (MUR-M002) | Owned |
+| `public/images/collection/r027-sommerso-vase-amber-v2-a3b1ef2f.jpg` | Faceted sommerso vase in amber (MUR-M003) | Owned |
+| `public/images/collection/r029-facet-bowl-blue-c859fad1.jpg` | Facet-cut sommerso bowl in blue and amber (MUR-M004) | Owned |
+| `public/images/collection/r030-facet-bowl-green-c373a0da.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
+| `public/images/collection/r031-facet-bowl-red-6a1a4759.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
 
 From 12 November 2026 the owner's photographs come in through the collection importer (see
 [COLLECTION-PHOTOS.md](COLLECTION-PHOTOS.md)): `public/images/collection/<id>/`, credit "Photograph © MURANIQ",
