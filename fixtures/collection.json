@@ -265,7 +265,7 @@
       "objectType": "Vase",
       "summary": "A large, heavy vase in aquamarine glass with a matt scavo surface, two applied ring handles and an undulating relief around the body. It carries a Seguso Arte Vetro factory label.",
       "description": [
-        "The rounded body rises into a tall cylindrical neck. Two ring handles of colourless glass are applied on either side of the neck, and a broad undulating relief runs all the way around the lower body. The vase is 32 cm high and 30 cm wide and weighs just over 8 kg, which is heavy for its size.",
+        "The rounded body rises into a tall cylindrical neck. Two ring handles of colourless glass are applied on either side of the neck, and a broad undulating relief runs all the way around the lower body. The vase is 32 cm high and 30 cm wide and weighs 7.5 kg, which is heavy for its size.",
         "The surface is matt and finely granular throughout: a scavo finish, which imitates the weathered skin of glass recovered from the ground. The aquamarine colour varies from light turquoise to grey-green and a deeper green, with paler and darker patches. The foot is ground flat and is smoother than the rest of the surface. No engraved signature has been found.",
         "A printed factory label on the lower body reads MURANO ITALY, SEGUSO, arte vetro, around a large stylised S. It is the main evidence for the maker, Seguso Arte Vetro, also known as Seguso AV. That firm should not be confused with Seguso Vetri d'Arte, a different Murano glassworks with its own history and archive.",
         "Auction and reference sources connect Seguso Arte Vetro with the Murano glass artist Livio Seguso (born on Murano in 1930). Dealers have offered closely related vases in aquamarine and in white; the seller of the white example describes it as designed by Livio Seguso and made by Bisazza Vetro in 1993 (see Comparable examples). That makes a link with his designs plausible, but it does not show that he designed this vase. The model, designer and date of this example are still being researched."
@@ -290,7 +290,8 @@
       },
       "dimensions": {
         "heightMm": 320,
-        "widthMm": 300
+        "widthMm": 300,
+        "weightG": 7500
       },
       "heroImageId": "IMG-M007-FRONT",
       "imageIds": [
@@ -411,7 +412,7 @@
           "Murano glass with a printed Seguso Arte Vetro factory label.",
           "Matt, weathered scavo-type surface.",
           "Two applied ring handles and a continuous undulating relief around the lower body.",
-          "Height 32 cm, width 30 cm, weight just over 8 kg; the foot is ground flat.",
+          "Height 32 cm, width 30 cm, weight 7.5 kg; the foot is ground flat.",
           "Very close in form to an aquamarine vase and a white vase offered by dealers (see Comparable examples)."
         ],
         "plausible": [

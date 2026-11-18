@@ -17,7 +17,14 @@ export function formatDimensions(d: Dimensions): Array<{ label: string; value: s
   if (d.widthMm) out.push({ label: "Width", value: mm(d.widthMm) });
   if (d.depthMm) out.push({ label: "Depth", value: mm(d.depthMm) });
   if (d.diameterMm) out.push({ label: "Diameter", value: mm(d.diameterMm) });
-  if (d.weightG) out.push({ label: "Weight", value: `${nf.format(d.weightG)} g` });
+  if (d.weightG)
+    out.push({
+      label: "Weight",
+      value:
+        d.weightG >= 1000
+          ? `${nf.format(d.weightG)} g (${(d.weightG / 1000).toLocaleString("en-GB", { maximumFractionDigits: 2 })} kg)`
+          : `${nf.format(d.weightG)} g`,
+    });
   return out;
 }
 
