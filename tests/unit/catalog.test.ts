@@ -5,10 +5,7 @@ import { buildPublication } from "@/content/publication";
 import { catalogHref, isFiltered, parseCatalogQuery, searchCatalog } from "@/features/catalog/query";
 
 const all = buildPublication(validateDataset(fixtureDataset).data!).artworks;
-/**
- * The search logic is checked against the fixed reference works (MUR-R…). MURANIQ's own collection
- * (MUR-M…) grows with every import, so tests that list exact matches leave it out.
- */
+// Exact-result tests run on the reference objects (MUR-R…), so adding a real collection object does not change them.
 const reference = all.filter((a) => a.id.startsWith("MUR-R"));
 
 describe("query parsing", () => {
@@ -79,8 +76,8 @@ describe("search and facets", () => {
     const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
     expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R013", "MUR-R019"]);
     const undated = all.filter((a) => a.fromYear === null && a.toYear === null).length;
-    expect(undated).toBeGreaterThanOrEqual(6); // at least the six undated sommerso pieces
     expect(r.undatedExcluded).toBe(undated);
+    expect(undated).toBeGreaterThanOrEqual(6); // at least the six undated sommerso pieces
   });
 
   it("returns a correct empty result", () => {

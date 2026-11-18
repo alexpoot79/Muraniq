@@ -955,21 +955,30 @@
     "id": "ORG-ZANETTI-MURANO",
     "name": "Zanetti Murano",
     "alternative_names": [
-      "Zanetti Arte Vetro"
+      "Zanetti Vetreria Artistica S.r.l.",
+      "Zanetti Murano S.r.l."
     ],
     "entity_type": "Manufacturer",
-    "founded": "Not verified",
+    "founded": "1956 (the firm's own date; not independently verified)",
     "ended": "Not verified",
-    "operating_status": "unknown",
-    "location": "Murano",
-    "periods": [],
-    "main_association": "Not verified",
+    "operating_status": "active",
+    "location": "Fondamenta Serenella 3, Murano",
+    "periods": [
+      "1956–present"
+    ],
+    "main_association": "Zanetti family furnace; licensed for the Vetro Artistico® Murano trademark (code 023)",
     "ia_category": "contemporary_studio",
-    "verification_status": "UNVERIFIED",
-    "research_priority": "P3",
-    "source_ids": [],
-    "notes": "",
-    "checked": "2026-11-10"
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P2",
+    "source_ids": [
+      "SRC-REGIONE-VENETO-VAM-CONCESSIONARIE",
+      "SRC-REGIONE-VENETO-VAM-TRADEMARK",
+      "SRC-ZANETTI-MURANO-COM",
+      "SRC-WEB-MURANONET-ZANETTI",
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "notes": "Identity, legal name, address and trademark code confirmed by the Regione del Veneto register (Tier A, read 2026-11-18); founders, founding year and succession rest on dealer texts. Phase 1 listed 'Zanetti Arte Vetro' as an alternative name (dealer usage, cf. PER-ZANELLA-ARNALDO); not confirmed as the same firm, so removed from the alternative names. 'Zanetti Murano S.r.l.' is the exhibitor name at Fiera Milano HOMI (search index).",
+    "checked": "2026-11-18"
   },
   {
     "id": "ORG-NASON-MORETTI",

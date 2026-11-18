@@ -501,5 +501,32 @@
     ],
     "notes": "Only search-index evidence so far.",
     "checked": "2026-11-10"
+  },
+  {
+    "id": "TEC-CALCEDONIO",
+    "name": "Calcedonio",
+    "alternative_names": [
+      "Calcedonia",
+      "Chalcedony glass"
+    ],
+    "category": "material",
+    "associated_entity_ids": [
+      "ORG-ZANETTI-MURANO",
+      "PER-ZANETTI-OSCAR"
+    ],
+    "example_work_ids": [],
+    "documented_uses": [
+      "Shells, abstract bowls and animals, usually cased in clear glass, at Zanetti Murano (gallery listings; firm's collection page not read)"
+    ],
+    "working_definition": null,
+    "definition_status": "public text on the website's Glass Guide page /glass-guide/techniques/calcedonia/ (website dataset TEC-CALCEDONIA), with its own sources",
+    "editorial_status": "draft",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "SRC-ZANETTI-MURANO-CALCEDONIO"
+    ],
+    "notes": "Added for the Zanetti research (2026-11-18). Other makers not yet linked here.",
+    "checked": "2026-11-18"
   }
 ]
