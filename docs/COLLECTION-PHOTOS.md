@@ -102,8 +102,10 @@ Before anything is written, the whole dataset (reference works + own collection)
 Some objects get a full research dossier, e.g. **M007**, the aquamarine scavo corroso vase with a Seguso Arte Vetro
 label, **M008**, the green scavo horse with gold leaf, which has no mark at all, and **M009**, the calcedonio
 shell bowl with an incised Oscar Zanetti signature and a Zanetti gold label, which also gave the maker profile
-`CRE-OSCAR-ZANETTI` (all 18 November 2026). The M009 photographs were converted with the importer's derivative
-code (sRGB, at most 2200 px, no metadata) into `public/images/collection/m009/`.
+`CRE-OSCAR-ZANETTI` (all 18 November 2026). The M009 photographs were converted with the importer's code (sRGB, no
+camera metadata) and then protected like the other own photographs (web version of at most 1600 px, small
+"© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`.
+The unprotected versions are kept in the private project storage, not in this repository.
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:
 
