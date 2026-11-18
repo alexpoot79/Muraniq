@@ -410,7 +410,7 @@ export default async function HomePage() {
           <div className="grid gap-8 lg:grid-cols-12">
             <p className="reveal label eyebrow text-muted-dark lg:col-span-3">Collection areas</p>
             <h2 id="areas-title" className="reveal display-lg lg:col-span-8 lg:col-start-5">
-              Four areas, <span className="serif-italic">one standard</span> of documentation.
+              Three areas, <span className="serif-italic">one standard</span> of documentation.
             </h2>
           </div>
           <ul className="mt-16 border-t border-line-dark lg:mt-24">
