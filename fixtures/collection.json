@@ -837,7 +837,7 @@
       "description": [
         "A solid glass sculpture of two reclining figures, reduced to a few flowing volumes. The long body lies along the ground and tapers to a point at one end; at the other it rises steeply to two oval heads set side by side, one in banded calcedonio and one in colourless glass, with an arm forming a ring around them. A groove running along the upper surface lets the form be read as two figures lying close together.",
         "Most of the volume is thick, colourless glass. Through it run bands of calcedonio, the marbled glass that imitates agate and other hardstones: blue, violet and red along the base, amber, yellow and green towards the pointed end, and a deep red in one of the heads. As the sculpture is turned, the bands shift and multiply in the clear glass. The surfaces are smooth and glossy.",
-        "The sculpture is 38 cm long and 17.5 cm high and weighs 3.1 kg. It is about 10 cm wide; that measurement is still to be confirmed. A cursive signature is engraved on the underside, which the owner identifies as that of Andrea Tagliapietra (see Marks).",
+        "The sculpture is 38 cm long, 17.5 cm high and 10 cm wide, and weighs 3.1 kg. A cursive signature is engraved on the underside, which the owner identifies as that of Andrea Tagliapietra (see Marks).",
         "Both the subject and the handling match a calcedonio Lovers sold under Andrea Tagliapietra's name by the Franco Schiavon Gallery on Murano: the same simplified, fused bodies, one head colourless and one in calcedonio, and an arm ringing the shoulders. A sculpture catalogued at auction in 2026 as 'Lying Lovers' by him suggests a name for the model, but it is smaller and has not been shown to be the same model, so the name is used here only provisionally. When this sculpture was made has not yet been established."
       ],
       "creators": [
@@ -869,6 +869,7 @@
       "dimensions": {
         "heightMm": 175,
         "widthMm": 380,
+        "depthMm": 100,
         "weightG": 3100
       },
       "heroImageId": "IMG-M010-FRONT",
@@ -1009,7 +1010,7 @@
         "established": [
           "Solid sculpture in colourless glass with bands of calcedonio in blue, violet, red, amber, yellow and green.",
           "A reclining composition with two oval heads at the raised end, one in calcedonio and one colourless.",
-          "Length 38 cm, height 17.5 cm, weight 3.1 kg, measured by the owner.",
+          "Length 38 cm, height 17.5 cm, width 10 cm, weight 3.1 kg, measured by the owner.",
           "A cursive signature is engraved on the underside; it is not clearly legible.",
           "Close in style and technique to a calcedonio Lovers sold under Andrea Tagliapietra's name by the Franco Schiavon Gallery."
         ],
@@ -1024,7 +1025,7 @@
           "Whether it was made for, or sold through, Franco Schiavon.",
           "A comparison of the signature with documented signatures by Andrea Tagliapietra.",
           "Whether the model exists in other sizes and calcedonio colourings, and how the 2026 auction example compares.",
-          "The width (about 10 cm, to be confirmed) and a full condition report."
+          "A full condition report."
         ],
         "reviewedOn": "2026-11-18"
       },
@@ -1649,7 +1650,7 @@
       "title": "Examination of MUR-M010: measurements, weight and photographs of the sculpture and its signature",
       "publisher": "MURANIQ",
       "year": "2026",
-      "reliabilityNote": "Measured, weighed and photographed by the owner, November 2026. The width (about 10 cm) is still to be confirmed.",
+      "reliabilityNote": "Measured, weighed and photographed by the owner, November 2026.",
       "isFixture": false
     },
     {
