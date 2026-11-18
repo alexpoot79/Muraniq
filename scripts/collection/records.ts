@@ -261,8 +261,9 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
       marks.push({
         id: `MRK-${sid}-SIG`,
         kind: "signature",
-        location,
         observation: `Signature on the ${location}.`,
+        ...keepMarkDetails(exSig, location, transcription),
+        location,
         ...(transcription ? { transcription } : {}),
         ...(sigImg ? { imageId: sigImg } : {}),
       });
@@ -274,8 +275,9 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
       marks.push({
         id: `MRK-${sid}-LABEL`,
         kind: "label",
-        location,
         observation: `Label on the ${location}.`,
+        ...keepMarkDetails(exLab, location, transcription),
+        location,
         ...(transcription ? { transcription } : {}),
         ...(labImg ? { imageId: labImg } : {}),
       });
@@ -317,6 +319,9 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
     marks,
     assertions: [creatorAssertion!, ...keptAssertions],
     ...((row.condition ?? ex?.condition) ? { condition: row.condition ?? ex?.condition } : {}),
+    // Research written by hand (comparable examples, research status) has no sheet column and is always kept.
+    ...(ex?.comparables?.length ? { comparables: ex.comparables } : {}),
+    ...(ex?.researchStatus ? { researchStatus: ex.researchStatus } : {}),
     sourceIds,
     relatedIds: ex?.relatedIds ?? [],
     availability: row.availability ?? ex?.availability ?? "private_collection",
@@ -327,6 +332,20 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
     ...(generated.size ? { _generated: [...generated].sort() } : {}),
   };
   return { artwork, media, sources, replacedSrcs, problems };
+}
+
+type MarkRecord = NonNullable<ArtworkRecord["marks"]>[number];
+
+/**
+ * Hand-written details of a mark (how it was applied, a fuller observation, the
+ * interpretation and its certainty) survive a re-import as long as the mark is
+ * still read the same way in the same place. The photograph link is always rebuilt.
+ */
+function keepMarkDetails(ex: MarkRecord | undefined, location: string, transcription: string | undefined): Partial<MarkRecord> {
+  if (!ex || ex.location !== location || ex.transcription !== transcription) return {};
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { id, kind, imageId, location: _l, transcription: _t, ...details } = ex;
+  return details;
 }
 
 /** Puts a rebuilt record into the store, replacing the old one (same id) in place. */

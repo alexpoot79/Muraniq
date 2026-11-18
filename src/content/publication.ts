@@ -220,10 +220,12 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean; toda
   const dossiers: Record<string, ArtworkDossier> = {};
   for (const a of records) {
     const s = summaries.get(a.id)!;
+    // Cited sources first, in the order they are cited; general background sources last.
     const sourceIds = new Set([
-      ...a.sourceIds,
       ...a.assertions.flatMap((x) => x.evidence.map((e) => e.sourceId)),
       ...a.provenance.flatMap((x) => x.evidence.map((e) => e.sourceId)),
+      ...a.comparables.map((c) => c.sourceId),
+      ...a.sourceIds,
     ]);
     dossiers[a.slug] = {
       ...a,

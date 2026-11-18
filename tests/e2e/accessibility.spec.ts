@@ -54,6 +54,8 @@ const PAGES = [
   "/glass-guide/techniques/facet-cut-glass/",
   "/glass-guide/techniques/sommerso/",
   "/collection/objects/sommerso-faceted-vase-green/",
+  "/collection/objects/monumental-aquamarine-scavo-corroso-vase/",
+  "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",
   "/about/",

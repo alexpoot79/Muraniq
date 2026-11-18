@@ -70,6 +70,8 @@ export type PublicArtworkRecord = Pick<
   | "assertions"
   | "provenance"
   | "condition"
+  | "comparables"
+  | "researchStatus"
   | "sourceIds"
   | "relatedIds"
   | "availability"
@@ -143,6 +145,21 @@ export function projectArtwork(a: Artwork): PublicArtworkRecord | null {
       evidence: p.evidence.map((e) => ({ sourceId: e.sourceId, locator: e.locator })),
     })),
     condition: a.condition,
+    comparables: a.comparables.map((c) => ({
+      kind: c.kind,
+      title: c.title,
+      stated: [...c.stated],
+      comparison: c.comparison,
+      sourceId: c.sourceId,
+    })),
+    researchStatus: a.researchStatus
+      ? {
+          established: [...a.researchStatus.established],
+          plausible: [...a.researchStatus.plausible],
+          open: [...a.researchStatus.open],
+          reviewedOn: a.researchStatus.reviewedOn,
+        }
+      : undefined,
     sourceIds: [...a.sourceIds],
     relatedIds: [...a.relatedIds],
     availability: a.availability,

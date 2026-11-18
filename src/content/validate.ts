@@ -10,6 +10,35 @@ export type ValidationResult =
   | { ok: true; data: Dataset; issues: [] }
   | { ok: false; data?: undefined; issues: ValidationIssue[] };
 
+/** An amount with a currency sign or code before or after it: "€1.250", "$ 90", "75 EUR", "USD 5,000". */
+const PRICE = /(?:[€$£]\s?\d|\b(?:EUR|USD|GBP)\s?\d|\d\s?(?:€|£|\$|\b(?:EUR|USD|GBP|euros?|dollars?)\b))/i;
+
+function publicTexts(a: Artwork): Array<[string, string]> {
+  return [
+    ["title", a.title],
+    ["summary", a.summary],
+    ...a.description.map((t, i): [string, string] => [`description[${i}]`, t]),
+    ...(a.condition ? [["condition", a.condition] as [string, string]] : []),
+    ...a.assertions.flatMap((x, i): Array<[string, string]> => [
+      [`assertions[${i}].statement`, x.statement],
+      ...(x.publicNote ? [[`assertions[${i}].publicNote`, x.publicNote] as [string, string]] : []),
+    ]),
+    ...a.marks.flatMap((m, i): Array<[string, string]> =>
+      [m.observation, m.transcription, m.transcriptionNote, m.interpretation]
+        .filter((t): t is string => !!t)
+        .map((t): [string, string] => [`marks[${i}]`, t]),
+    ),
+    ...a.comparables.flatMap((c, i): Array<[string, string]> =>
+      [c.title, c.comparison, ...c.stated].map((t): [string, string] => [`comparables[${i}]`, t]),
+    ),
+    ...(a.researchStatus
+      ? [...a.researchStatus.established, ...a.researchStatus.plausible, ...a.researchStatus.open].map(
+          (t): [string, string] => ["researchStatus", t],
+        )
+      : []),
+  ];
+}
+
 function duplicates(values: string[]): string[] {
   const seen = new Set<string>();
   const dup = new Set<string>();
@@ -41,6 +70,9 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
     for (const d of duplicates(list.map((x) => x.slug))) push(name, `duplicate slug ${d}`);
   }
   for (const d of duplicates(data.sources.map((s) => s.id))) push("sources", `duplicate id ${d}`);
+  for (const s of data.sources)
+    for (const t of [s.title, s.reliabilityNote, s.rightsNote])
+      if (t && PRICE.test(t)) push(`sources(${s.id})`, "looks like a price; prices are never published");
   for (const d of duplicates(data.media.map((m) => m.id))) push("media", `duplicate id ${d}`);
   for (const d of duplicates(data.redirects.map((r) => r.from))) push("redirects", `duplicate redirect from ${d}`);
   for (const d of duplicates(data.signatureReferences.map((r) => r.id))) push("signatureReferences", `duplicate id ${d}`);
@@ -83,6 +115,9 @@ export function validateDataset(input: DatasetInput | unknown): ValidationResult
       for (const e of ev.evidence) checkSource(`${p}.provenance`, e.sourceId);
       if (ev.fromYear && ev.toYear && ev.fromYear > ev.toYear) push(`${p}.provenance`, "fromYear after toYear");
     }
+    for (const c of a.comparables) checkSource(`${p}.comparables`, c.sourceId);
+    // Prices and values never reach a public page: not the owner's, not a dealer's.
+    for (const [field, text] of publicTexts(a)) if (PRICE.test(text)) push(`${p}.${field}`, "looks like a price; prices are never published");
     // Certainty must be consistent: a creator credit cannot be more certain than
     // the strongest matching assertion supports.
     for (const c of a.creators) {

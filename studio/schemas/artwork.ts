@@ -188,6 +188,52 @@ export const artwork = defineType({
       ],
     }),
 
+    defineField({
+      name: "comparables",
+      title: "Comparable examples",
+      type: "array",
+      group: "sources",
+      description:
+        "Related objects described by a dealer, auction house, museum or publication. 'Stated' is their description, never MURANIQ's finding. No prices.",
+      validation: (r) => r.max(6),
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "kind",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Dealer listing", value: "dealer_listing" },
+                  { title: "Auction lot", value: "auction_lot" },
+                  { title: "Museum object", value: "museum_object" },
+                  { title: "Publication", value: "publication" },
+                ],
+              },
+              validation: (r) => r.required(),
+            },
+            { name: "title", title: "Title as the source gives it", type: "string", validation: (r) => r.required() },
+            { name: "stated", title: "What the source states", type: "array", of: [{ type: "string" }], validation: (r) => r.required().min(1) },
+            { name: "comparison", title: "Comparison with this object (MURANIQ)", type: "text", rows: 3, validation: (r) => r.required() },
+            { name: "source", type: "reference", to: [{ type: "source" }], validation: (r) => r.required() },
+          ],
+          preview: { select: { title: "title", subtitle: "kind" } },
+        },
+      ],
+    }),
+    defineField({
+      name: "researchStatus",
+      title: "Research status",
+      type: "object",
+      group: "sources",
+      fields: [
+        { name: "established", title: "Established", type: "array", of: [{ type: "string" }] },
+        { name: "plausible", title: "Plausible, not proven", type: "array", of: [{ type: "string" }] },
+        { name: "open", title: "Still open", type: "array", of: [{ type: "string" }] },
+        { name: "reviewedOn", type: "date", validation: (r) => r.required() },
+      ],
+    }),
     defineField({ name: "sources", type: "array", of: [{ type: "reference", to: [{ type: "source" }] }], group: "sources" }),
     defineField({
       name: "related",

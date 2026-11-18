@@ -92,6 +92,29 @@ Rules live in `scripts/collection/sheet.ts` (cells) and `scripts/collection/reco
 Before anything is written, the whole dataset (reference works + own collection) is validated with
 `validateDataset`. If it fails, nothing is written. Rows with errors are skipped and listed in `rapport.md`.
 
+## Research written by hand (one object at a time)
+
+Some objects get a full research dossier, e.g. **M007**, the aquamarine scavo corroso vase with a Seguso Arte Vetro
+label (18 November 2026). That research has no sheet column; it is written straight into `fixtures/collection.json`
+(later: Sanity) and the importer keeps it on every re-import:
+
+- `comparables`: related objects described by **others** (dealer listing, auction lot, museum object,
+  publication). `stated` is what that source says, shown as theirs ("What the seller states"); `comparison` is
+  MURANIQ's own reading. Every comparable cites a Source. Shown as the section "Comparable examples".
+- `researchStatus`: three plain lists (Established / Plausible, not proven / Still open) and a review date.
+  Shown as the section "Research status".
+- Extra assertions (origin, dating, technique, and `other` for an association such as a possible designer).
+  Only the `creator` assertion is rebuilt from the sheet.
+- Mark details (a fuller observation, interpretation and certainties) stay as long as the mark is read the same
+  way in the same place; a new reading drops the old interpretation.
+- Sources for such research get descriptive ids (`SRC-1STDIBS-…`), never `SRC-M007-n`: that prefix belongs to
+  the sheet's "Bron" column and is rebuilt on import.
+
+Rules from the owner for these pages: the maker named on a label is "probable", never more; a designer known only
+from comparison is an association (`hypothesis`), never the attribution; dating stays provisional until a document
+is found; and **no prices or values anywhere** (purchase price, asking prices of comparables, estimates).
+`validateDataset` rejects any currency amount in public text, so a price cannot slip through.
+
 ## Where things live
 
 | What | Where |

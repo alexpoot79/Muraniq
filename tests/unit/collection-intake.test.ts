@@ -176,6 +176,28 @@ describe("records", () => {
     expect(reshot.replacedSrcs).toEqual(media.map((m) => m.src));
   });
 
+  it("re-import keeps hand-written research: comparable examples, research status and mark details", () => {
+    const ex = store.artworks.find((a) => a.id === "MUR-M007")!;
+    const media = store.media.filter((m) => m.artworkId === ex.id);
+    const existing = { artwork: ex, media, sources: [] };
+    const reshoot = [photo("front", 1), photo("label", 2)];
+    const same = buildRecord(row({ id: "M007", heightCm: "32" }).value, { ...ctxBase, existing, photos: reshoot }).artwork!;
+    expect(same.comparables).toEqual(ex.comparables);
+    expect(same.researchStatus).toEqual(ex.researchStatus);
+    expect(same.description).toEqual(ex.description);
+    const label = same.marks!.find((m) => m.kind === "label")!;
+    expect(label).toMatchObject({ transcriptionCertainty: "verified", interpretationCertainty: "probable", imageId: "IMG-M007-LABEL" });
+    expect(label.observation).toBe(ex.marks!.find((m) => m.kind === "label")!.observation);
+    expect(label.interpretation).toBe(ex.marks!.find((m) => m.kind === "label")!.interpretation);
+
+    // A label read differently is a new observation: the old interpretation must not stay attached to it.
+    const reread = buildRecord(row({ id: "M007", labelText: "SEGUSO / Murano" }).value, { ...ctxBase, existing, photos: reshoot }).artwork!;
+    const label2 = reread.marks!.find((m) => m.kind === "label")!;
+    expect(label2.transcription).toBe("SEGUSO / Murano");
+    expect(label2.interpretation).toBeUndefined();
+    expect(reread.comparables).toEqual(ex.comparables);
+  });
+
   it("refuses a new object without photographs", () => {
     const { value } = row({ id: "M030", category: "Murano Glass", objectType: "Vase" });
     expect(buildRecord(value, ctxBase).artwork).toBeUndefined();
