@@ -55,6 +55,7 @@ const PAGES = [
   "/glass-guide/techniques/sommerso/",
   "/collection/objects/sommerso-faceted-vase-green/",
   "/collection/objects/monumental-aquamarine-scavo-corroso-vase/",
+  "/collection/objects/green-scavo-glass-horse-with-gold-leaf/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",

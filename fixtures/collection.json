@@ -439,6 +439,199 @@
       "featured": false,
       "curatedOrder": 76,
       "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "MUR-M008",
+      "slug": "green-scavo-glass-horse-with-gold-leaf",
+      "title": "Green scavo glass horse with gold leaf",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A hot-sculpted horse in light green glass with a white, weathered scavo surface and patches of gold leaf on the shoulders and hindquarters. It stands with one foreleg raised and wears an applied collar. No signature or label has been found.",
+      "description": [
+        "The horse stands on three legs with one foreleg raised and bent at the knee. The neck is high and arched and the head is large and expressive, with an open mouth, flared nostrils and a pointed ear in colourless glass. A stylised crest mane in ribbed sections runs down the neck, an applied collar circles the base of the neck, and a twisted tail hangs down behind. The horse is 28 cm high, 25 cm wide from nose to tail and 12 cm deep, and weighs 2.15 kg.",
+        "The glass is a light, transparent green with darker green flecks. Its surface is covered with an uneven white, chalky crust that gathers in the ribs of the mane, around the collar and along the tail, while the legs are smoother and glossier: a scavo finish, which imitates the weathered skin of glass recovered from the ground. Patches of gold-coloured leaf, most likely gold leaf, are laid on both shoulders and both hindquarters. No signature, engraving or label has been found.",
+        "The model is very close to a brown horse with gold patches that is recorded in an auction-results database under the name 'Ferro Murano' and dated there c. 1940–1949, and comparable to a dark green scavo horse that an American auction house offered in 2009 as probably by Alfredo Barbini (see Comparable examples). Both are attributions made by others for their own sales. Neither has been confirmed by a factory catalogue, a signature or a label, so neither is given here as the maker.",
+        "'Ferro' does not point to a single glassworks: several Murano firms carried the name, among them S.A.I.A.R. Ferro Toso and Barovier Seguso & Ferro, the firm that became Seguso Vetri d'Arte in 1937. The maker, the factory and the date of this horse are still being researched."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SCAVO"
+      ],
+      "materials": [
+        "Glass",
+        "Gold leaf"
+      ],
+      "colours": [
+        "green",
+        "white",
+        "gold"
+      ],
+      "country": "Italy",
+      "dating": {
+        "displayLabel": "Mid-20th century (provisional)",
+        "fromYear": 1940,
+        "toYear": 1970,
+        "certainty": "hypothesis"
+      },
+      "dimensions": {
+        "heightMm": 280,
+        "widthMm": 250,
+        "depthMm": 120,
+        "weightG": 2150
+      },
+      "heroImageId": "IMG-M008-FRONT",
+      "imageIds": [
+        "IMG-M008-FRONT",
+        "IMG-M008-REVERSE",
+        "IMG-M008-DETAIL",
+        "IMG-M008-DETAIL-2",
+        "IMG-M008-TOP",
+        "IMG-M008-DETAIL-3",
+        "IMG-M008-DETAIL-4",
+        "IMG-M008-DETAIL-5"
+      ],
+      "marks": [],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not established",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No signature or label has been found. Auction records give two horses of very similar form to 'Ferro Murano' and, with a qualification, to Alfredo Barbini (see Comparable examples). Neither attribution has been confirmed, so neither is given as the maker of this horse."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "Based on technique and comparison only: the scavo surface and applied gold leaf are Murano practices, and every comparable horse found so far is catalogued as Murano glass. There is no label or mark to confirm it."
+        },
+        {
+          "field": "dating",
+          "statement": "Mid-20th century, provisionally c. 1940–1970",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-ARTNET-FERRO-MURANO",
+              "locator": "brown example, dated c. 1940–1949 in the record"
+            }
+          ],
+          "publicNote": "A working range, not a documented date. The only dated comparable is the brown horse recorded as c. 1940–1949, and that date has not been checked against a catalogue. Corroded and scavo-type surfaces appear on Murano from the late 1930s and became widespread after the Second World War, and green scavo horses with gold leaf are still made today, so a later production of this model cannot be ruled out."
+        },
+        {
+          "field": "technique",
+          "statement": "Scavo surface with applied gold leaf",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "The white, chalky and uneven crust over transparent green glass shows the characteristics of scavo. The gold appears to be gold leaf laid on the surface; it has not been tested."
+        },
+        {
+          "field": "other",
+          "statement": "Ferro: attribution recorded for a brown example, not confirmed",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-ARTNET-FERRO-MURANO",
+              "locator": "'Murano Scavo Glass Horse', sold 18 June 2017"
+            },
+            {
+              "sourceId": "SRC-OLNICKSPANU-SEGUSO-VETRI-DARTE",
+              "locator": "Barovier Seguso & Ferro, 1933–1937"
+            }
+          ],
+          "publicNote": "A brown horse of very similar form is listed in an auction-results database under 'Ferro Murano'. Several Murano firms carried the Ferro name, so the record does not identify a specific glassworks. The auction house, the full lot description and the reason for the attribution have not yet been traced."
+        },
+        {
+          "field": "other",
+          "statement": "Alfredo Barbini: attribution suggested for a green example, not confirmed",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-RIPLEY-2009-LOT-244",
+              "locator": "lot 244, 31 May 2009"
+            },
+            {
+              "sourceId": "SRC-OLNICKSPANU-BARBINI",
+              "locator": "biography"
+            }
+          ],
+          "publicNote": "A dark green scavo horse of the same height was offered at auction in 2009 as probably by Alfredo Barbini. Barbini was a master of solid, hot-sculpted glass and showed sculptures with corroded surfaces at the 1948 Venice Biennale, but no catalogue, signed example or document has yet been found that links him to this model."
+        }
+      ],
+      "condition": "The gold leaf is uneven and incomplete at its edges, and the white crust is rubbed in places; this may be part of the finish or later wear. A full condition report has not yet been made.",
+      "comparables": [
+        {
+          "kind": "auction_lot",
+          "title": "Murano Scavo Glass Horse",
+          "stated": [
+            "Recorded under the name 'Ferro Murano'.",
+            "Dated c. 1940–1949.",
+            "Glass, dark brown to amber, with transparent details and gold-coloured patches.",
+            "Sold at auction on 18 June 2017; the auction house is not shown in the part of the record consulted."
+          ],
+          "comparison": "Compared on photographs of the record, the brown horse matches this one in every main feature: the long body, high arched neck, ribbed crest mane, applied collar, raised foreleg, gold on the shoulder and hindquarters, scavo surface and the shape of the head. The two appear to be colour variants of the same model. The comparison rests on photographs only; the full lot description has not been seen.",
+          "sourceId": "SRC-ARTNET-FERRO-MURANO"
+        },
+        {
+          "kind": "auction_lot",
+          "title": "Early Scavo Murano Art Glass Horse",
+          "stated": [
+            "Offered by Ripley Auctions, Indianapolis, on 31 May 2009 as lot 244.",
+            "An early Murano horse in dark green glass with a heavily weathered scavo surface.",
+            "Attributed, with a qualification, to Alfredo Barbini.",
+            "Height about 11 in (27.9 cm)."
+          ],
+          "comparison": "A green scavo horse of the same height as this one (28 cm), in a darker green. It supports the idea of one model made in several colours. The attribution to Barbini is the auction house's own and is cautiously worded; it is not backed by a signature or catalogue. The lot photographs have not yet been compared in detail.",
+          "sourceId": "SRC-RIPLEY-2009-LOT-244"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Parade Pose Horse, green with details in 24kt gold leaf, scavo technique",
+          "stated": [
+            "Artist: Pino Signoretto.",
+            "Green glass in the scavo technique, with details in 24-carat gold leaf.",
+            "Height 27 cm, length 29 cm, width 12 cm.",
+            "Listed as new and ready to ship; no date given."
+          ],
+          "comparison": "Similar in size, pose and materials, but a different model: it has no collar, a flowing naturalistic mane instead of the ribbed crest, gold on the mane, tail and hooves instead of on the shoulders and hindquarters, and a fine frosted skin instead of a white crust. It shows that green scavo horses with gold leaf are still made on Murano today, so technique and colour alone cannot date or attribute this horse.",
+          "sourceId": "SRC-SCHIAVON-PARADE-HORSE"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Hot-sculpted horse in transparent light green glass with a white, weathered scavo surface.",
+          "Gold-coloured leaf (not tested) on both shoulders and both hindquarters.",
+          "Applied collar, ribbed crest mane, colourless ear, one raised foreleg and a twisted tail.",
+          "Height 28 cm, width 25 cm (nose to tail), depth 12 cm, weight 2.15 kg.",
+          "No signature, engraving or label found.",
+          "Very close in form to a brown horse recorded under 'Ferro Murano' (sold 2017); comparable to a dark green horse offered in 2009.",
+          "Not the same model as the green scavo 'Parade Pose Horse' sold today under Pino Signoretto's name."
+        ],
+        "plausible": [
+          "A colour variant of one Murano model that also exists in brown and dark green.",
+          "Made in the mid-20th century.",
+          "Made by one of the Murano firms named Ferro, as the record of the brown example suggests.",
+          "Made or designed by Alfredo Barbini, as suggested for the dark green example."
+        ],
+        "open": [
+          "Which auction house sold the brown horse on 18 June 2017, with lot number, full description and provenance, and why it was given to 'Ferro Murano'.",
+          "Which Ferro firm, if any, made this model.",
+          "Whether the attribution to Alfredo Barbini can be confirmed or ruled out.",
+          "A factory catalogue, model number, or a signed or labelled example.",
+          "When the model was made, and whether it was produced over a long period.",
+          "Which other colours exist, for example colourless or blue."
+        ],
+        "reviewedOn": "2026-11-18"
+      },
+      "sourceIds": [],
+      "relatedIds": [
+        "MUR-M007"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 77,
+      "updatedAt": "2026-11-18"
     }
   ],
   "media": [
@@ -597,6 +790,110 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M008-FRONT",
+      "artworkId": "MUR-M008",
+      "viewType": "front",
+      "src": "/images/collection/m008/m008-front-e966d1ee.jpg",
+      "width": 1770,
+      "height": 2200,
+      "alt": "Green scavo glass horse in profile facing left, one foreleg raised, with gold leaf on the shoulder and hindquarter",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-REVERSE",
+      "artworkId": "MUR-M008",
+      "viewType": "reverse",
+      "src": "/images/collection/m008/m008-reverse-7a6887f5.jpg",
+      "width": 1783,
+      "height": 2200,
+      "alt": "The other side of the green scavo horse, facing right, with a large gold leaf patch on the shoulder and a smaller one on the hindquarter",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-DETAIL",
+      "artworkId": "MUR-M008",
+      "viewType": "detail",
+      "src": "/images/collection/m008/m008-detail-1-ab934c63.jpg",
+      "width": 1264,
+      "height": 2200,
+      "alt": "The horse seen from the front, showing the head, the applied collar and the raised foreleg",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-DETAIL-2",
+      "artworkId": "MUR-M008",
+      "viewType": "detail",
+      "src": "/images/collection/m008/m008-detail-2-407e5d76.jpg",
+      "width": 1385,
+      "height": 2200,
+      "alt": "The horse seen from behind, with the twisted tail and the ribbed mane rising above the neck",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-TOP",
+      "artworkId": "MUR-M008",
+      "viewType": "top",
+      "src": "/images/collection/m008/m008-top-5a75deec.jpg",
+      "width": 1175,
+      "height": 2200,
+      "alt": "The horse seen from above and behind, showing the back, the ribbed crest mane and the white scavo crust",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-DETAIL-3",
+      "artworkId": "MUR-M008",
+      "viewType": "detail",
+      "src": "/images/collection/m008/m008-detail-3-0e43e734.jpg",
+      "width": 1763,
+      "height": 2200,
+      "alt": "Close-up of the head and ribbed crest mane, with the colourless ear and the white crust in the recesses",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-DETAIL-4",
+      "artworkId": "MUR-M008",
+      "viewType": "detail",
+      "src": "/images/collection/m008/m008-detail-4-2a5c9618.jpg",
+      "width": 1537,
+      "height": 2200,
+      "alt": "Close-up of the head and the applied collar, with gold leaf on the shoulder below",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M008-DETAIL-5",
+      "artworkId": "MUR-M008",
+      "viewType": "detail",
+      "src": "/images/collection/m008/m008-detail-5-2d9dc086.jpg",
+      "width": 1495,
+      "height": 2200,
+      "alt": "Close-up of the twisted tail with the white scavo crust and green flecks in the glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -653,6 +950,53 @@
       "publisher": "Fondazione Giorgio Cini, Centro Studi del Vetro, Venice",
       "url": "https://archivi.cini.it/centrostudivetro/archive/IT-CSV-GUI001-000020/seguso-vetri-d-arte.html",
       "reliabilityNote": "Archive of Seguso Vetri d'Arte, a different firm from Seguso Arte Vetro. Consulted for context; it is not evidence for this vase.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-ARTNET-FERRO-MURANO",
+      "type": "auction",
+      "title": "Ferro Murano: auction results, including 'Murano Scavo Glass Horse', c. 1940–1949, sold 18 June 2017",
+      "publisher": "Artnet (auction-results database)",
+      "url": "https://www.artnet.com/artists/ferro-murano/",
+      "reliabilityNote": "Database of auction results that lists lots under the name given at sale. The attribution and date are those recorded for the lot and have not been verified by MURANIQ. The full lot entry, including the auction house, needs a subscription and has not been seen. Consulted from screenshots of the record, November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-RIPLEY-2009-LOT-244",
+      "type": "auction",
+      "title": "Early Scavo Murano Art Glass Horse (lot 244, 31 May 2009)",
+      "publisher": "Ripley Auctions, Indianapolis",
+      "year": "2009",
+      "url": "https://www.ripleyauctions.com/auction-lot/early-scavo-murano-art-glass-horse._7092BCA77E",
+      "reliabilityNote": "Auction lot entry. The description and the attribution are the auction house's own and have not been verified by MURANIQ. Cited from MURANIQ's research notes; the page could not be reopened for this review.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-SCHIAVON-PARADE-HORSE",
+      "type": "other",
+      "title": "Parade Pose Horse, green with details in 24kt gold leaf, scavo technique (gallery listing)",
+      "publisher": "Franco Schiavon Gallery (schiavonglass.com)",
+      "url": "https://www.schiavonglass.com/en/catalogo/sculptures/bestiary/parade-pose-horse-green-with-details-in-24kt-gold-leaf-scavo-technique/",
+      "rightsNote": "All rights reserved; the photographs are not reproduced here.",
+      "reliabilityNote": "Dealer listing of a recent piece. The attribution is the seller's own. Consulted 18 November 2026 and used only to compare the form.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-OLNICKSPANU-SEGUSO-VETRI-DARTE",
+      "type": "other",
+      "title": "Seguso Vetri d'Arte 1937–1972 (history of the glassworks)",
+      "publisher": "Olnick Spanu Collection",
+      "url": "https://olnickspanu.com/workshop/seguso-vetri-darte/",
+      "reliabilityNote": "Collection website. States that the firm was founded in 1933 as Vetreria e Soffieria Barovier Seguso & Ferro and reorganised in 1937 as Seguso Vetri d'Arte. Context only; not evidence for this horse. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-OLNICKSPANU-BARBINI",
+      "type": "other",
+      "title": "Alfredo Barbini (artist biography)",
+      "publisher": "Olnick Spanu Collection",
+      "url": "https://olnickspanu.com/artist/alfredo-barbini/",
+      "reliabilityNote": "Collection website. Covers Barbini's career, including S.A.I.A.R. Ferro Toso, Gino Cenedese & C. and his corroso sculptures at the 1948 Venice Biennale. Context only; not evidence for this horse. Consulted 18 November 2026.",
       "isFixture": false
     }
   ]
