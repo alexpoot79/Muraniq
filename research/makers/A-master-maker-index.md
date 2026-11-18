@@ -4,9 +4,9 @@ _Gegenereerd door `scripts/export.py` uit `data/makers.json` en `data/workshops.
 
 Alfabetische index van alle personen, families, glasblazerijen, werkplaatsen, merken en distributeurs die in Phase 1 zijn geïdentificeerd. Datums staan er precies zoals de bronnen ze geven; tegenstrijdige waarden staan naast elkaar en zijn opgenomen in [F-conflict-register.md](F-conflict-register.md). 'Not verified' betekent dat nog geen gelezen bron de waarde ondersteunt. Bronniveaus: A = museum/instelling, B = wetenschappelijk naslagwerk of gespecialiseerde collectie, C = bedrijf, handelaar of web. Veldwaarden zijn in het Engels omdat ze bedoeld zijn voor de Engelstalige website.
 
-**Totaal:** 155 records — Person: 90, Family: 9, Manufacturer: 49, Workshop: 4, Brand: 2, Distributor: 1.  
-**Status:** VERIFIED: 47, PARTIALLY_VERIFIED: 52, ATTRIBUTED: 0, DISPUTED: 4, UNVERIFIED: 52.  
-**Prioriteit:** P1: 39, P2: 46, P3: 70 (P1 = valt onder de 30 dossiers in B).
+**Totaal:** 156 records — Person: 91, Family: 9, Manufacturer: 49, Workshop: 4, Brand: 2, Distributor: 1.  
+**Status:** VERIFIED: 47, PARTIALLY_VERIFIED: 53, ATTRIBUTED: 0, DISPUTED: 4, UNVERIFIED: 52.  
+**Prioriteit:** P1: 39, P2: 48, P3: 69 (P1 = valt onder de 30 dossiers in B).
 
 | Name | Entity type | Period | Main association | Preliminary sources | Status | Priority | ID |
 |---|---|---|---|---|---|---|---|
@@ -157,10 +157,11 @@ Alfabetische index van alle personen, families, glasblazerijen, werkplaatsen, me
 | Wirkkala, Tapio | Person | 1915, Finland – 1985; active 1966–1972; 1985 | Venini | SRC-LSV-WIRKKALA-ZUCCHERI (A), SRC-OS (B), SRC-CMA-API (A) | VERIFIED | P2 | `PER-WIRKKALA-TAPIO-1915` |
 | Yalos Murano | Manufacturer | Not verified | Not verified | — | UNVERIFIED | P3 | `ORG-YALOS` |
 | Zanella, Arnaldo | Person | 1949, Sant'Erasmo (dealer source) – Not verified | Zanetti Arte Vetro since 1991 (dealer source); existing MURANIQ legacy biography | SRC-WEB-1STDIBS (C) | UNVERIFIED | P2 | `PER-ZANELLA-ARNALDO` |
-| Zanetti (family) | Family | Not verified | Zanetti Murano / Zanetti Arte Vetro; Licio and Oscar Zanetti (relationship not verified) | — | UNVERIFIED | P3 | `FAM-ZANETTI` |
-| Zanetti Murano | Manufacturer | Not verified | Not verified | — | UNVERIFIED | P3 | `ORG-ZANETTI-MURANO` |
-| Zanetti, Licio | Person | Not verified – Not verified | Not verified | — | UNVERIFIED | P3 | `PER-ZANETTI-LICIO` |
-| Zanetti, Oscar | Person | Not verified – Not verified | Not verified | — | UNVERIFIED | P3 | `PER-ZANETTI-OSCAR` |
+| Zanetti (family) | Family | 1956–present (furnace) | Zanetti Murano / Zanetti Vetreria Artistica S.r.l.: Oscar the elder, Licio, Oscar (b. 1961), Andrea (dealer sources) | SRC-SCHIAVON-OSCAR-ZANETTI (C), SRC-WEB-MURANONET-ZANETTI (C) | UNVERIFIED | P3 | `FAM-ZANETTI` |
+| Zanetti Murano | Manufacturer | founded 1956 (the firm's own date; not independently verified) | Zanetti family furnace; licensed for the Vetro Artistico® Murano trademark (code 023) | SRC-REGIONE-VENETO-VAM-CONCESSIONARIE (A), SRC-REGIONE-VENETO-VAM-TRADEMARK (A), SRC-ZANETTI-MURANO-COM (C) +2 | PARTIALLY_VERIFIED | P2 | `ORG-ZANETTI-MURANO` |
+| Zanetti, Licio | Person | Not verified – Not verified; active 1956–1989 (dealer sources) | Zanetti Murano, co-founder with his father Oscar (dealer sources) | SRC-SCHIAVON-OSCAR-ZANETTI (C), SRC-WEB-MURANONET-ZANETTI (C) | UNVERIFIED | P3 | `PER-ZANETTI-LICIO` |
+| Zanetti, Oscar | Person | 1961, Murano (gallery biography) – Not verified; active c. 1975–present | Zanetti Murano (Zanetti Vetreria Artistica S.r.l.), the family furnace | SRC-SCHIAVON-OSCAR-ZANETTI (C), SRC-WEB-MURANONET-ZANETTI (C), SRC-ZANETTI-MURANO-COM (C) +4 | UNVERIFIED | P2 | `PER-ZANETTI-OSCAR` |
+| Zanetti, Oscar (the elder) | Person | Not verified – Not verified; active 1956– | Zanetti Murano, co-founder in 1956 (dealer sources) | SRC-WEB-MURANONET-ZANETTI (C) | UNVERIFIED | P3 | `PER-ZANETTI-OSCAR-SR` |
 | Zecchin, Francesco | Person | Not verified – Not verified; active 1925–1938 | Partner in V.S.M. Venini & C. (1925); co-founder of Zecchin-Martinuzzi Vetri Artistici e Mosaici (1932), closed it 1938 | SRC-DBI-VENINI (B), SRC-LSV-MARTINUZZI (A), SRC-OS (B) | VERIFIED | P2 | `PER-ZECCHIN-FRANCESCO` |
 | Zecchin, Vittorio | Person | 1878, Murano – 15 April 1947, Murano; active 1913–early 1940s | Artistic director V.S.M. Cappellin Venini & C. (Dec. 1921–1925), then M.V.M. Cappellin & C. | SRC-DBI-ZECCHIN (B), SRC-LSV-ZECCHIN (A), SRC-OS (B) | VERIFIED | P1 | `PER-ZECCHIN-VITTORIO-1878` |
 | Zecchin-Martinuzzi Vetri Artistici e Mosaici | Manufacturer | founded 1932; ended 1938 | Francesco Zecchin, Napoleone Martinuzzi (to 1936); Alfredo Barbini maestro | SRC-OS (B), SRC-DBI-MARTINUZZI (B) | VERIFIED | P2 | `ORG-ZECCHIN-MARTINUZZI` |

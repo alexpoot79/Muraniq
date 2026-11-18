@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTechniqueBySlug, getTechniques } from "@/content/repository.server";
 import { PageIntro } from "@/components/editorial/PageIntro";
@@ -28,7 +29,7 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
   const { slug } = await params;
   const data = await getTechniqueBySlug(slug);
   if (!data) notFound();
-  const { technique: t, artworks, sources } = data;
+  const { technique: t, artworks, sources, makers } = data;
   return (
     <>
       <PageIntro
@@ -55,20 +56,49 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
                 {p}
               </p>
             ))}
-          </div>
-          {t.recognition.length > 0 && (
-            <aside className="md:col-span-4 md:col-start-9" aria-labelledby="recognise">
-              <h2 id="recognise" className="label text-ink-muted">
-                How to recognise it
-              </h2>
-              <ol className="mt-5 flex flex-col border-t border-line-paper">
-                {t.recognition.map((r, i) => (
-                  <li key={i} className="flex gap-4 border-b border-line-paper py-4">
-                    <span className="numeral text-lg text-accent-ink">{i + 1}</span>
-                    <span>{r}</span>
-                  </li>
+            {t.sections.map((section, i) => (
+              <section key={section.heading} aria-labelledby={`t-section-${i}`} className="mt-6 flex flex-col gap-5">
+                <h3 id={`t-section-${i}`} className="display-sm">
+                  {section.heading}
+                </h3>
+                {section.paragraphs.map((p, j) => (
+                  <p key={j}>{p}</p>
                 ))}
-              </ol>
+              </section>
+            ))}
+          </div>
+          {(t.recognition.length > 0 || makers.length > 0 || sources.length > 0) && (
+            <aside className="md:col-span-4 md:col-start-9" aria-label={`About ${t.term}: recognition, makers and sources`}>
+              {t.recognition.length > 0 && (
+                <>
+                  <h2 id="recognise" className="label text-ink-muted">
+                    How to recognise it
+                  </h2>
+                  <ol className="mt-5 flex flex-col border-t border-line-paper">
+                    {t.recognition.map((r, i) => (
+                      <li key={i} className="flex gap-4 border-b border-line-paper py-4">
+                        <span className="numeral text-lg text-accent-ink">{i + 1}</span>
+                        <span>{r}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              )}
+              {makers.length > 0 && (
+                <>
+                  <h2 className="label mt-8 text-ink-muted">Makers on MURANIQ</h2>
+                  <ul className="mt-3 flex flex-col border-t border-line-paper">
+                    {makers.map((m) => (
+                      <li key={m.slug} className="flex items-baseline justify-between gap-4 border-b border-line-paper py-3">
+                        <Link href={routes.maker(m.slug)} className="link-quiet">
+                          {m.name}
+                        </Link>
+                        {m.lifeLabel && <span className="numeral text-sm text-ink-muted">{m.lifeLabel}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
               {sources.length > 0 && (
                 <>
                   <h2 className="label mt-8 text-ink-muted">Sources</h2>
@@ -117,6 +147,9 @@ export default async function TechniquePage({ params }: PageProps<"/glass-guide/
           headline: `${t.term} — Glass Technique`,
           url: absoluteUrl(routes.technique(t.slug)),
           publisher: { "@type": "Organization", name: SITE.name },
+          ...(makers.length
+            ? { mentions: makers.map((m) => ({ "@type": m.kind === "person" ? "Person" : "Organization", name: m.name, url: absoluteUrl(routes.maker(m.slug)) })) }
+            : {}),
         }}
       />
     </>

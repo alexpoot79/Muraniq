@@ -125,6 +125,10 @@ export async function getCreatorBySlug(slug: string) {
     artworks: pub.artworks.filter((a) => creator.artworkIds.includes(a.id)),
     sources: pub.sources.filter((s) => creator.sourceIds.includes(s.id)),
     signatures: pub.makerSignatures[creator.id] ?? { items: [], primary: null },
+    techniques: creator.techniqueIds
+      .map((id) => pub.techniques.find((t) => t.id === id))
+      .filter((t): t is NonNullable<typeof t> => !!t)
+      .map((t) => ({ slug: t.slug, term: t.term, summary: t.summary })),
   };
 }
 
@@ -173,6 +177,10 @@ export async function getTechniqueBySlug(slug: string) {
     technique,
     artworks: pub.artworks.filter((a) => technique.artworkIds.includes(a.id)).slice(0, 6),
     sources: pub.sources.filter((s) => technique.sourceIds.includes(s.id)),
+    makers: technique.creatorIds
+      .map((id) => pub.creators.find((c) => c.id === id))
+      .filter((c): c is NonNullable<typeof c> => !!c)
+      .map((c) => ({ slug: c.slug, name: c.name, kind: c.kind, lifeLabel: c.lifeLabel ?? null })),
   };
 }
 

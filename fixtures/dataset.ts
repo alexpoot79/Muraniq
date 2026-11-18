@@ -329,6 +329,111 @@ const referenceDataset: DatasetInput = {
       url: "https://allaboutglass.cmog.org/definition/scavo",
       isFixture: false,
     },
+    // Oscar Zanetti and the Zanetti furnace (profile written 18 November 2026; see research/makers/dossiers/oscar-zanetti.md).
+    {
+      id: "SRC-SCHIAVON-OSCAR-ZANETTI",
+      type: "other",
+      title: "Zanetti Oscar — artist biography and works",
+      publisher: "Franco Schiavon Gallery, Murano (schiavonglass.com)",
+      year: "2025",
+      url: "https://www.schiavonglass.com/en/artists/glass-master-oscar-zanetti/",
+      reliabilityNote:
+        "Gallery biography (page dated 24 March 2025) and listing of current works. The gallery sells his work; its statements are its own. Read in full on 18 November 2026.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-VENETO-VAM-CONCESSIONARIES",
+      type: "archive",
+      title: "Marchio del vetro artistico di Murano — aziende concessionarie (list of licensed firms, updated 19 March 2025)",
+      publisher: "Regione del Veneto",
+      year: "2025",
+      url: "https://www.regione.veneto.it/web/attivita-produttive/aziende-concessionarie",
+      reliabilityNote:
+        "Official list of firms licensed to use the Vetro Artistico® Murano trademark, each with its code. Lists Zanetti Vetreria Artistica S.r.l., Fondamenta Serenella 3, Murano, under 023. Read on 18 November 2026.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-VENETO-VAM-TRADEMARK",
+      type: "archive",
+      title: "Vetro Artistico Murano — the regional trademark",
+      publisher: "Regione del Veneto",
+      url: "https://www.regione.veneto.it/web/attivita-produttive/vetro-artistico-murano-inglese",
+      reliabilityNote:
+        "States that the collective trademark is registered in Alicante (no. 00481812), is regulated by Regional Law no. 70/1994, and may be applied only by inspected concessionaires. Read on 18 November 2026.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-ZANETTI-MURANO-HERITAGE",
+      type: "manufacturer",
+      title: "Heritage — history of the Zanetti furnace",
+      publisher: "Zanetti Murano",
+      url: "https://www.zanettimurano.com/heritage.html",
+      reliabilityNote:
+        "The firm's own history. Cited from MURANIQ's research notes: the site could not be opened from MURANIQ's research environment on 18 November 2026, so its wording has not yet been checked.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-ZANETTI-MURANO-CALCEDONIO",
+      type: "manufacturer",
+      title: "Calcedonio — collection page",
+      publisher: "Zanetti Murano",
+      url: "https://www.zanettimurano.com/collections/calcedonio.html",
+      reliabilityNote:
+        "The firm's own presentation of its calcedonio work. Cited from MURANIQ's research notes; not yet opened or checked.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-ZANETTI-GALLERY-CALCEDONIO",
+      type: "catalogue",
+      title: "Calcedonio — online catalogue",
+      publisher: "Zanetti Gallery (zanettigallery.com)",
+      url: "https://www.zanettigallery.com/calcedonio",
+      reliabilityNote:
+        "Online catalogue reported to list calcedonio shells and sculptures with model numbers. Cited from MURANIQ's research notes; not yet opened or checked, and no model number is linked to any MURANIQ object.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-WMODA-OSCAR-ZANETTI",
+      type: "museum",
+      title: "Oscar Zanetti — artist page",
+      publisher: "Wiener Museum of Decorative Arts, Dallas",
+      url: "https://www.wmoda.com/oscar-zanetti-2/",
+      reliabilityNote:
+        "Museum artist page cited in MURANIQ's research notes. It could not be opened from MURANIQ's research environment on 18 November 2026; nothing on this profile rests on it alone.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-MURANONET-ZANETTI",
+      type: "other",
+      title: "Zanetti Vetreria Artistica — Unfold Venice",
+      publisher: "Muranonet",
+      url: "https://muranonet.com/blogs/unfold-venice/zanetti-vetreria-artistica",
+      reliabilityNote:
+        "Retailer's article on the firm (founders, 1956, handover in 1989, Andrea Zanetti). Consulted only through search-engine summaries on 18 November 2026; the page itself could not be opened.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-HALLS-2025-LOT-12",
+      type: "auction",
+      title: "A large Murano sculpture of two macaws, designed by Oscar Zanetti (lot 12, 12 February 2025)",
+      publisher: "Halls Fine Art",
+      year: "2025",
+      url: "https://fineart.hallsgb.com/auction/lot/lot-12---a-large-murano-sculpture-of-two-macaws-designed-by-oscar-zanetti/?lot=165514&sd=1",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Cited from MURANIQ's research notes; the page could not be reopened for this review. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-HERITAGE-2025-LOT-29045",
+      type: "auction",
+      title: "Oscar Zanetti, Three Gold and Red Doves on Branches and a Sbruffi Base (lot 29045, 13 June 2025)",
+      publisher: "Heritage Auctions",
+      year: "2025",
+      url: "https://fineart.ha.com/itm/glass/oscar-zanetti-three-gold-and-red-doves-on-branches-and-a-sbruffi-base-murano-glass-23-1-4-inches-591-cm-incised-to/a/15240-29045.s",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Cited from MURANIQ's research notes; the page could not be reopened for this review. No result is published here.",
+      isFixture: false,
+    },
   ],
   creators: [
     {
@@ -455,6 +560,111 @@ const referenceDataset: DatasetInput = {
       sourceIds: [aicId("1906.104")],
       status: "published",
     },
+    {
+      id: "CRE-OSCAR-ZANETTI",
+      slug: "oscar-zanetti",
+      kind: "person",
+      name: "Oscar Zanetti",
+      roles: ["maker", "designer"],
+      lifeLabel: "b. 1961",
+      summary:
+        "Murano glass master of the Zanetti family furnace, known for hot-sculpted animals, shells and abstract forms, many of them in calcedonio set in heavy clear glass.",
+      biographyStatus: "in_research",
+      birthYear: 1961,
+      birthPlace: "Murano, Venice",
+      nationality: "Italy",
+      facts: [
+        { label: "Born", value: "1961, Murano", basis: "Gallery biography (Schiavon); dealer biographies agree" },
+        { label: "Nationality", value: "Italian" },
+        {
+          label: "Discipline",
+          value: "Sculpture in solid glass worked at the furnace: animals, shells, abstract and figurative forms",
+          basis: "Gallery listings and works examined by MURANIQ",
+        },
+        {
+          label: "Workshop",
+          value: "Zanetti Murano (Zanetti Vetreria Artistica S.r.l.), Fondamenta Serenella, Murano",
+          basis: "Regione del Veneto register of licensed firms, list of 19 March 2025",
+        },
+        { label: "Founded", value: "1956", basis: "The firm's own date, repeated by dealers; one source gives 1957" },
+        { label: "Father", value: "Licio Zanetti, Murano glass master", basis: "Gallery biography (Schiavon)" },
+        { label: "Son", value: "Andrea Zanetti, now working with him", basis: "Firm and dealer descriptions; not yet checked" },
+        {
+          label: "Trademark",
+          value: "Vetro Artistico® Murano, licence no. 023 (held by the firm)",
+          basis: "Regione del Veneto register, checked 18 November 2026",
+        },
+      ],
+      biography: [
+        "Oscar Zanetti is a Murano glass master who works at his family's furnace on the island, the firm known today as Zanetti Murano. His work is sculpture made at the furnace: animals, birds and horses, shells and other marine forms, and abstract pieces, often in calcedonio, the banded glass that imitates hardstone, set in heavy clear glass.",
+        "He was born on Murano in 1961 into a family of glassmakers; his father, Licio Zanetti, was a Murano glass master. According to the biography published by the Schiavon gallery on Murano, he studied at the art institute in Venice in the mornings and spent his afternoons learning the different kinds of glass. Dealer biographies say he began working in the furnaces at about fourteen. In a Murano furnace team a beginner of that age starts as serventino, the youngest assistant to the master.",
+        "His training, which the gallery says lasted fourteen years, took him to some of Murano's best-known firms: Venini and La Murrina and, according to the same gallery, Barovier & Toso. In 1986 his father brought him into the family furnace to refine his technique. The firm's history, as repeated by several dealers, has Licio hand the running of the furnace to Oscar in 1989.",
+        "Since 1993 he has shown his own work in exhibitions on Murano and abroad, and the Schiavon gallery records that he presented work at Venezia Aperto Vetro in its section for emerging young talents. He has made pieces with Daniele Lucchetta and other artists, and contemporary artists have relied on his skill to realise their own designs in glass. The furnace is now described as run by Oscar Zanetti with his son Andrea.",
+      ],
+      sections: [
+        {
+          heading: "The Zanetti furnace",
+          paragraphs: [
+            "Zanetti Murano dates its foundation to 1956; one dealer gives 1957. Dealer histories name the founders as Oscar's grandfather, also called Oscar, and Licio Zanetti. MURANIQ has not yet seen company records. The firm is registered with the Veneto Region as Zanetti Vetreria Artistica S.r.l., Fondamenta Serenella 3, Murano, and holds licence no. 023 for the Vetro Artistico® Murano trademark.",
+            "Its work is mainly sculpture: animals, birds and horses, marine subjects, abstract and figurative pieces, organic bowls and shells, calcedonio, and pieces with gold leaf. Works currently offered under Oscar Zanetti's name by the Schiavon gallery include prancing horses in calcedonio and ‘boreal’ animals with 24-carat gold leaf.",
+            "The Schiavon gallery counts Abbot Vincenzo Zanetti (1824–1883), the priest and historian who helped found the Murano Glass Museum in 1861 and wrote a guide to the island, among earlier members of the family. MURANIQ has not been able to document that link, so it is given here as the gallery's statement.",
+            "Several generations of the family have worked under the Zanetti name, and grandfather and grandson share the first name Oscar. A Zanetti label therefore identifies the firm, not the master who made a particular piece.",
+          ],
+        },
+        {
+          heading: "Work and style",
+          paragraphs: [
+            "Oscar Zanetti works mainly in solid glass shaped hot at the furnace rather than in blown vessels. His subjects come from nature, above all animals, birds, horses and marine forms such as shells, and next to them he makes abstract forms built on the same flowing, organic lines. The pieces are conceived as sculpture, to be seen from every side.",
+            "A recurring device is to set strongly coloured glass, often calcedonio, against or inside thick clear glass. The clear glass works as an optical frame: it deepens and magnifies the colour and keeps the form legible. Because each piece is made by hand, colour and small details differ from one example to the next, even within one model.",
+          ],
+        },
+        {
+          heading: "Calcedonio",
+          paragraphs: [
+            "Calcedonio is a Venetian glass, first made in the fifteenth century, that imitates banded hardstones such as chalcedony and agate. Silver and other metal compounds in the batch react in the heat to form its veins. The final pattern depends on the composition of the glass, the temperature, the reheating and the master's handling, so it can be guided but not fully planned, and two pieces of the same model can look very different.",
+            "At the Zanetti furnace calcedonio is used for shells, abstract bowls, animals and organic compositions, usually combined with clear glass. The calcedonio shell bowl in the MURANIQ collection is an example: the banded colour runs inside the bowl and through the outer wall, while the rim and the pulled points are worked in heavy clear glass.",
+          ],
+        },
+        {
+          heading: "Works and the market",
+          paragraphs: [
+            "Works under Oscar Zanetti's name are sold by Murano galleries and appear at auction in Britain and the United States. Two recent examples recorded in MURANIQ's research notes: a large sculpture of two macaws on branches, described as designed by Oscar Zanetti, signed and with its original labels, offered by Halls Fine Art on 12 February 2025 (about 60 cm high); and three gold and red doves on branches with a sbruffi base, with an incised signature, offered by Heritage Auctions on 13 June 2025 (59.1 cm high).",
+            "These descriptions are the auction houses' own and could not be reopened for this review. MURANIQ publishes no prices, estimates or results. What a piece is worth depends on its size, technique, condition, signature, labels, documentation and provenance, and a result for one piece is no valuation of another.",
+          ],
+        },
+        {
+          heading: "Signatures, labels and authenticity",
+          paragraphs: [
+            "Signed pieces carry his name scratched into the glass in cursive script. On the shell bowl in the MURANIQ collection it is read as ‘Zanetti’ above ‘Oscar’ (see Signatures & Marks below). That signature has not yet been compared with documented examples, so it is recorded as probable.",
+            "The firm's gold label shows an arch with a ZL monogram above ZANETTI and Murano. A label identifies the firm. It can be lost, moved or added later, and it does not by itself show that Oscar Zanetti designed or made a piece.",
+            "Under a regional law of 1994, firms licensed by the Veneto Region may also apply the Vetro Artistico® Murano trademark label, which carries the firm's code: 023 for Zanetti Vetreria Artistica. The trademark guarantees that a piece comes from a licensed Murano firm; it says nothing about which master made it, and older pieces will not carry it.",
+            "When examining a piece attributed to him, MURANIQ looks at the incised signature and how it compares with documented examples; original labels; agreement with documented models in the firm's catalogue; the glass itself, such as calcedonio cased in clear glass and the weight of solid work; dimensions; provenance; and, where possible, confirmation by the workshop. None of these is proof on its own.",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "The firm's own history and catalogue pages could not be opened from MURANIQ's research environment when this profile was written, so several points rest on gallery and dealer texts: the founding generation and year, the year in which Oscar took over the furnace (1989 in most sources, 1969 in one, which cannot be right for a son born in 1961), his time at Barovier & Toso, and the family link with Abbot Vincenzo Zanetti. Model numbers for the calcedonio shells reported in the firm's online catalogue have not yet been compared with any object.",
+          ],
+        },
+      ],
+      techniqueIds: ["TEC-CALCEDONIA"],
+      sourceIds: [
+        "SRC-SCHIAVON-OSCAR-ZANETTI",
+        "SRC-VENETO-VAM-CONCESSIONARIES",
+        "SRC-VENETO-VAM-TRADEMARK",
+        "SRC-ZANETTI-MURANO-HERITAGE",
+        "SRC-ZANETTI-MURANO-CALCEDONIO",
+        "SRC-ZANETTI-GALLERY-CALCEDONIO",
+        "SRC-MURANONET-ZANETTI",
+        "SRC-WMODA-OSCAR-ZANETTI",
+        "SRC-HALLS-2025-LOT-12",
+        "SRC-HERITAGE-2025-LOT-29045",
+      ],
+      signatureRefIds: ["SIG-OSCAR-ZANETTI-M009-SIGNATURE"],
+      primarySignatureId: "SIG-OSCAR-ZANETTI-M009-SIGNATURE",
+      status: "published",
+    },
   ],
   glasshouses: [],
   techniques: [
@@ -470,8 +680,30 @@ const referenceDataset: DatasetInput = {
         "In the nineteenth century Lorenzo Radi (1803–1874) revived calcedonio on Murano after years of experiment; the Victoria and Albert Museum records a prize medal awarded to him in 1846 for blown calcedonio glass. In the twentieth century the material was taken up in solid sculpture, notably by Loredano and Dino Rosin, where the bands of colour are seen through thick volumes of glass.",
         "Each piece shows a unique pattern that is formed in the furnace and cannot be fully controlled.",
       ],
-      recognition: ["Opaque body with marbled or banded veining.", "Colours that shift when held against the light."],
-      sourceIds: [cmaId("1985.141"), aicId("2024.67"), metId("1975.1.1196"), "SRC-VAM-RADI"],
+      sections: [
+        {
+          heading: "How the colours form",
+          paragraphs: [
+            "The banding is not painted on. Silver and other metal compounds in the batch react as the glass is heated, cooled and reheated, and the colours develop in the furnace. The final pattern depends on the composition of the glass, the temperatures, the number of reheatings and the way the master gathers, turns and stretches the glass, so it can be guided but not fully planned.",
+            "Two pieces of the same model can therefore differ strongly in colour. The bands usually follow the movement of the form: concentric in the hollow of a bowl, drawn out along a pulled point or a curled rim.",
+          ],
+        },
+        {
+          heading: "Calcedonio today",
+          paragraphs: [
+            "Several Murano furnaces still work calcedonio, now mostly in solid sculpture rather than in thin blown vessels. Oscar Zanetti, at the Zanetti family furnace, uses it for shells, abstract bowls and animals, often combined with heavy clear glass that frames the colour and gives it depth.",
+            "A signed calcedonio shell bowl from his furnace is in the MURANIQ collection and shown below, beside historic pieces held by museums.",
+          ],
+        },
+      ],
+      creatorIds: ["CRE-ROSIN", "CRE-OSCAR-ZANETTI"],
+      recognition: [
+        "Opaque body with marbled or banded veining.",
+        "Colours that shift when held against the light.",
+        "Bands that follow the movement of the form, such as concentric rings inside a bowl.",
+        "In modern sculpture, banded glass cased in thick clear glass that deepens the colour.",
+      ],
+      sourceIds: [cmaId("1985.141"), aicId("2024.67"), metId("1975.1.1196"), "SRC-VAM-RADI", "SRC-SCHIAVON-OSCAR-ZANETTI"],
       editorialStatus: "draft_unsourced",
       status: "published",
     },
@@ -1689,6 +1921,13 @@ const referenceDataset: DatasetInput = {
       to: "/collection/collectible-objects/",
       reason: "Fine Art area removed; works now under Collectible Objects (2026-11-12)",
       checkedOn: "2026-11-12",
+      active: true,
+    },
+    {
+      from: "/glass-guide/techniques/calcedonio/",
+      to: "/glass-guide/techniques/calcedonia/",
+      reason: "Calcedonio is the more common spelling; the technique page lives at calcedonia (2026-11-18)",
+      checkedOn: "2026-11-18",
       active: true,
     },
     {

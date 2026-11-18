@@ -68,7 +68,10 @@ export const DATASET_QUERY = /* groq */ `{
   },
   "creators": *[_type == "creator"]{
     "id": creatorId, "slug": slug.current, kind, name, aliases, lifeLabel, roles, summary,
-    biography, biographyStatus, "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, ${STATUS},
+    biography, biographyStatus, birthYear, birthPlace, nationality,
+    "facts": coalesce(facts[]{label, value, basis}, []), "sections": coalesce(sections[]{heading, paragraphs}, []),
+    "techniqueIds": coalesce(techniques[]->techniqueId, []),
+    "sourceIds": sources[]->sourceId, legacyPath, "isFixture": false, ${STATUS},
     "signatureRefIds": signatureReferences[defined(@->signatureId)]->signatureId,
     "primarySignatureId": primarySignature->signatureId
   },
@@ -78,6 +81,7 @@ export const DATASET_QUERY = /* groq */ `{
   },
   "techniques": *[_type == "technique"]{
     "id": techniqueId, "slug": slug.current, term, synonyms, summary, body, recognition,
+    "sections": coalesce(sections[]{heading, paragraphs}, []), "creatorIds": coalesce(makers[]->creatorId, []),
     "sourceIds": sources[]->sourceId, editorialStatus, ${STATUS}
   },
   "sources": *[_type == "source"]{

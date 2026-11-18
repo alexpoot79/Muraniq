@@ -123,6 +123,33 @@ export const signatureReferences: SignatureReference[] = [
     status: "published",
     updatedAt: "2026-11-11",
   },
+  {
+    // MURANIQ's own object (MUR-M009): the observation lives on the object's mark MRK-M009-SIGNATURE.
+    id: "SIG-OSCAR-ZANETTI-M009-SIGNATURE",
+    title: "Incised signature on a calcedonio shell bowl",
+    sortOrder: 10,
+    variantGroup: "cursive-two-lines",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M009", markId: "MRK-M009-SIGNATURE" },
+    // Probable until compared with documented signatures: it stays out of the compact block and the maker-card thumbnail.
+    markOf: { creatorId: "CRE-OSCAR-ZANETTI", role: "maker", certainty: "probable" },
+    object: { artworkId: "MUR-M009" },
+    detailImageId: "IMG-M009-SIGNATURE",
+    contextImageIds: ["IMG-M009-BASE", "IMG-M009-FRONT"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M009",
+        consultedOn: "2026-11-18",
+        note: "The owner's close-up photograph of the signature on the underside, with the object's Zanetti Murano label.",
+      },
+    ],
+    reviewedOn: "2026-11-18",
+    internalNote:
+      "Location 'Underside' confirmed by the owner on 18 November 2026. Compare with the incised signatures on the Heritage 2025 lot 29045 and the Halls 2025 lot 12 when those pages can be opened.",
+    status: "published",
+    updatedAt: "2026-11-18",
+  },
 ];
 
 export const SIGNATURE_SOURCE_URLS = { AIC_1979_904, AIC_1988_541_285 };

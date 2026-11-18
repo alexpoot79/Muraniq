@@ -4,7 +4,7 @@ _Gegenereerd door `scripts/export.py` uit `data/relationships.json`. Niet met de
 
 Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets over zakelijke banden; die staan alleen in de tabel als een bron ze noemt.
 
-## Zakelijk (41)
+## Zakelijk (45)
 
 | ID | Subject | Relatie | Object | Van | Tot | Status | Bronnen | Toelichting |
 |---|---|---|---|---|---|---|---|---|
@@ -49,8 +49,12 @@ Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets o
 | `REL-0120` | Antonio Salviati | FOUNDED | Salviati Dott. Antonio fu Bartolomeo | 1859 |  | PARTIALLY_VERIFIED | SRC-SALVIATI-COM |  |
 | `REL-0121` | Antonio Salviati | CO_FOUNDED | Salviati & C. | 21 December 1866 |  | PARTIALLY_VERIFIED | SRC-SALVIATI-COM | London company with Austen Henry Layard and William Drake (company history). |
 | `REL-0129` | Guglielmo Vistosi | FOUNDED | Vetreria Vistosi | 1945 |  | PARTIALLY_VERIFIED | SRC-OS |  |
+| `REL-0146` | Oscar Zanetti (the elder) | CO_FOUNDED | Zanetti Murano | 1956 |  | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI, SRC-ZANETTI-MURANO-COM | Founding year conflict: see CF-ZANETTI-MURANO-FOUNDED. |
+| `REL-0147` | Licio Zanetti | CO_FOUNDED | Zanetti Murano | 1956 |  | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI, SRC-ZANETTI-MURANO-COM |  |
+| `REL-0148` | Licio Zanetti | MANAGED | Zanetti Murano |  | 1989 | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI | Handed the furnace to Oscar; see CF-ZANETTI-MURANO-HANDOVER. |
+| `REL-0150` | Oscar Zanetti | MANAGED | Zanetti Murano | 1989 |  | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI | Runs it today with his son Andrea (dealer sources). See CF-ZANETTI-MURANO-HANDOVER. |
 
-## Professioneel (60)
+## Professioneel (64)
 
 | ID | Subject | Relatie | Object | Van | Tot | Status | Bronnen | Toelichting |
 |---|---|---|---|---|---|---|---|---|
@@ -114,6 +118,10 @@ Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets o
 | `REL-0132` | Gae Aulenti | DESIGNED_FOR | Vetreria Vistosi | 1970s |  | PARTIALLY_VERIFIED | SRC-OS |  |
 | `REL-0133` | Ettore Sottsass | DESIGNED_FOR | Vetreria Vistosi | 1970s |  | PARTIALLY_VERIFIED | SRC-OS |  |
 | `REL-0134` | Yoichi Ohira | WORKED_AT | Fucina degli Angeli | 1973 |  | PARTIALLY_VERIFIED | SRC-OS |  |
+| `REL-0149` | Oscar Zanetti | MAESTRO_AT | Zanetti Murano | 1986 |  | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI | Joined the family furnace in 1986 to refine his technique (gallery biography). |
+| `REL-0151` | Oscar Zanetti | WORKED_AT | Venini |  | before 1986 | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI | Training years (gallery biography; dealer biographies agree). |
+| `REL-0152` | Oscar Zanetti | WORKED_AT | La Murrina |  | before 1986 | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI | Training years (gallery biography; dealer biographies agree). |
+| `REL-0153` | Oscar Zanetti | WORKED_AT | Barovier & Toso |  | before 1986 | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI | Named only by the Schiavon gallery. |
 
 ## Organisatie (11)
 
@@ -131,7 +139,7 @@ Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets o
 | `REL-0123` | Salviati & C. | RENAMED_TO | Compagnia di Venezia e Murano | 1870s (year not verified) |  | DISPUTED | SRC-OS, SRC-MET-API | Met credit line: 'The Venice and Murano Glass and Mosaic Company Ltd. (Salviati & Co.)'. Company history of today's Salviati omits the split. |
 | `REL-0125` | Compagnia di Venezia e Murano | MERGED_INTO | Pauly & C. – Compagnia Venezia Murano | 1919/1920 |  | PARTIALLY_VERIFIED | SRC-OS | 1919 both sold to a Milanese company; 1920 Gaetano Ceschina acquired both; later operated as Pauly & C. – Compagnia Venezia Murano. |
 
-## Familie (20)
+## Familie (24)
 
 | ID | Subject | Relatie | Object | Van | Tot | Status | Bronnen | Toelichting |
 |---|---|---|---|---|---|---|---|---|
@@ -155,8 +163,12 @@ Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets o
 | `REL-0090` | Flavio Barbini | CHILD_OF | Alfredo Barbini |  |  | PARTIALLY_VERIFIED | SRC-OS | Assisted his father from 1968 (OS artist page). |
 | `REL-0112` | Giorgio Ferro | CHILD_OF | Galliano Ferro |  |  | PARTIALLY_VERIFIED | SRC-OS |  |
 | `REL-0135` | Dino Rosin | SIBLING_OF | Loredano Rosin |  |  | UNVERIFIED | SRC-WEB-1STDIBS | Dealer text only. |
+| `REL-0141` | Oscar Zanetti | CHILD_OF | Licio Zanetti |  |  | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI, SRC-WEB-MURANONET-ZANETTI | Stated by the Schiavon gallery biography; dealer histories agree. |
+| `REL-0142` | Licio Zanetti | CHILD_OF | Oscar Zanetti (the elder) |  |  | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI | Dealer histories, seen through search summaries only. |
+| `REL-0144` | Oscar Zanetti | MEMBER_OF_FAMILY | Zanetti family |  |  | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI |  |
+| `REL-0145` | Licio Zanetti | MEMBER_OF_FAMILY | Zanetti family |  |  | UNVERIFIED | SRC-SCHIAVON-OSCAR-ZANETTI |  |
 
-## Identiteit (8)
+## Identiteit (9)
 
 | ID | Subject | Relatie | Object | Van | Tot | Status | Bronnen | Toelichting |
 |---|---|---|---|---|---|---|---|---|
@@ -168,4 +180,5 @@ Alle vastgelegde relaties, gegroepeerd per soort. Familierelaties zeggen niets o
 | `REL-0138` | Seguso Arte Vetro | IDENTITY_UNRESOLVED | Seguso Vetri d'Arte |  |  | UNVERIFIED | — |  |
 | `REL-0139` | AAV Barbini | IDENTITY_UNRESOLVED | Vetreria Alfredo Barbini |  |  | UNVERIFIED | — | No source read that explains the 'AAV Barbini' label. |
 | `REL-0140` | Laura de Santillana | NOT_SAME_AS | Ludovico Diaz de Santillana |  |  | VERIFIED | SRC-LSV-SANTILLANA, SRC-OS | OS page for Ludovico carries Laura's biography (copy error) – do not import that text for Ludovico. |
+| `REL-0143` | Oscar Zanetti | NOT_SAME_AS | Oscar Zanetti (the elder) |  |  | UNVERIFIED | SRC-WEB-MURANONET-ZANETTI | Grandson and grandfather share the name. |
 

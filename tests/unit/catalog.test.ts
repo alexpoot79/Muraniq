@@ -5,6 +5,8 @@ import { buildPublication } from "@/content/publication";
 import { catalogHref, isFiltered, parseCatalogQuery, searchCatalog } from "@/features/catalog/query";
 
 const all = buildPublication(validateDataset(fixtureDataset).data!).artworks;
+// Exact-result tests run on the reference objects (MUR-R…), so adding a real collection object does not change them.
+const reference = all.filter((a) => a.id.startsWith("MUR-R"));
 
 describe("query parsing", () => {
   it("accepts only known parameters and bounded values", () => {
@@ -48,14 +50,14 @@ describe("search and facets", () => {
   });
 
   it("ORs within a facet and ANDs between facets", () => {
-    const or = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina" }));
+    const or = searchCatalog(reference, parseCatalogQuery({ technique: "calcedonia,avventurina" }));
     expect(or.items.map((a) => a.id).sort()).toEqual(["MUR-R001", "MUR-R008", "MUR-R013", "MUR-R020", "MUR-R025"]);
-    const and = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia,avventurina", attribution: "probable" }));
+    const and = searchCatalog(reference, parseCatalogQuery({ technique: "calcedonia,avventurina", attribution: "probable" }));
     expect(and.items.map((a) => a.id)).toEqual(["MUR-R008"]);
   });
 
   it("matches accent-insensitive text and ranks title matches first", () => {
-    const r = searchCatalog(all, parseCatalogQuery({ q: "CHÁLCEDONY" }));
+    const r = searchCatalog(reference, parseCatalogQuery({ q: "CHÁLCEDONY" }));
     expect(r.items.map((a) => a.id)).toEqual(["MUR-R001", "MUR-R025", "MUR-R008", "MUR-R013"]);
     expect(r.items.every((a) => a.search.title.includes("chalcedony"))).toBe(true);
     // synonyms of technique terms
@@ -69,7 +71,9 @@ describe("search and facets", () => {
   it("matches periods by overlap and reports undated works separately", () => {
     const r = searchCatalog(all, parseCatalogQuery({ from: "1700", to: "1750" }));
     expect(r.items.map((a) => a.id).sort()).toEqual(["MUR-R008", "MUR-R013", "MUR-R019"]);
-    expect(r.undatedExcluded).toBe(6); // the six undated sommerso pieces
+    const undated = all.filter((a) => a.fromYear === null && a.toYear === null).length;
+    expect(r.undatedExcluded).toBe(undated);
+    expect(undated).toBeGreaterThanOrEqual(6); // at least the six undated sommerso pieces
   });
 
   it("returns a correct empty result", () => {
@@ -80,7 +84,7 @@ describe("search and facets", () => {
   });
 
   it("computes disjunctive facet counts", () => {
-    const r = searchCatalog(all, parseCatalogQuery({ technique: "calcedonia" }));
+    const r = searchCatalog(reference, parseCatalogQuery({ technique: "calcedonia" }));
     expect(r.facets.technique.avventurina).toBe(2); // still selectable alongside calcedonia
     expect(r.facets.category["murano-glass"]).toBe(4);
     expect(r.facets.category["collectible-objects"]).toBeUndefined();
