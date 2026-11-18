@@ -13,7 +13,7 @@ export const mediaAsset = defineType({
     defineField({
       name: "viewType",
       type: "string",
-      options: { list: ["front", "reverse", "side", "base", "signature", "label", "detail", "context"] },
+      options: { list: ["front", "reverse", "top", "side", "base", "signature", "label", "detail", "context"] },
       validation: (r) => r.required(),
     }),
     defineField({ name: "alt", title: "Alt text", type: "string", validation: (r) => r.required().min(8).max(300) }),

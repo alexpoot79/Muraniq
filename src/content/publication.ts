@@ -164,16 +164,19 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean; toda
       .filter((x): x is CreatorLink => x !== null)
       .sort((x, y) => CERTAINTY_RANK[x.certainty] - CERTAINTY_RANK[y.certainty]);
 
-  const attributionOf = (links: CreatorLink[]): { line: string; certainty: Certainty } => {
+  const attributionOf = (links: CreatorLink[], a: PublicArtworkRecord): { line: string; certainty: Certainty } => {
     const lead = links[0];
-    if (!lead) return { line: attributionPhrase("", "unknown"), certainty: "unknown" };
-    return { line: attributionPhrase(lead.name, lead.certainty), certainty: lead.certainty };
+    if (lead) return { line: attributionPhrase(lead.name, lead.certainty), certainty: lead.certainty };
+    // A maker without a profile page (yet): the attribution statement itself, already qualified.
+    const stated = a.assertions.find((x) => x.field === "creator" && x.certainty !== "unknown");
+    if (stated) return { line: stated.statement, certainty: stated.certainty };
+    return { line: attributionPhrase("", "unknown"), certainty: "unknown" };
   };
 
   const summaries = new Map<string, ArtworkSummary>();
   for (const a of records) {
     const links = linksFor(a);
-    const att = attributionOf(links);
+    const att = attributionOf(links, a);
     const techs = a.techniqueIds.map((id) => techniques.get(id)).filter((t): t is PublicTechnique => !!t);
     summaries.set(a.id, {
       id: a.id,
@@ -217,10 +220,12 @@ export function buildPublication(input: Dataset, opts: { preview?: boolean; toda
   const dossiers: Record<string, ArtworkDossier> = {};
   for (const a of records) {
     const s = summaries.get(a.id)!;
+    // Cited sources first, in the order they are cited; general background sources last.
     const sourceIds = new Set([
-      ...a.sourceIds,
       ...a.assertions.flatMap((x) => x.evidence.map((e) => e.sourceId)),
       ...a.provenance.flatMap((x) => x.evidence.map((e) => e.sourceId)),
+      ...a.comparables.map((c) => c.sourceId),
+      ...a.sourceIds,
     ]);
     dossiers[a.slug] = {
       ...a,

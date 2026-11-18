@@ -1,0 +1,659 @@
+{
+  "note": "MURANIQ's own collection: objects and their photographs. Written by `npm run collection:import` (see docs/COLLECTION-PHOTOS.md); hand edits are kept on re-import. Public data only: no prices, values, addresses or storage locations.",
+  "artworks": [
+    {
+      "id": "MUR-M001",
+      "slug": "sommerso-bowl-blue-and-amber",
+      "title": "Sommerso bowl in blue and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A heavy rectangular bowl in sommerso glass from the MURANIQ collection, with a blue layer cased in amber and clear glass.",
+      "description": [
+        "Seen from above, a band of blue glass runs around the well of this thick, rectangular bowl, cased within amber and clear glass. The layers follow the curve of the form, as is typical of sommerso.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "blue",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M001-TOP",
+      "imageIds": [
+        "IMG-M001-TOP"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 70,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M002",
+      "slug": "sommerso-faceted-vase-green",
+      "title": "Faceted sommerso vase in green",
+      "category": "murano-glass",
+      "objectType": "Vase",
+      "summary": "A tall, faceted sommerso vase from the MURANIQ collection, with a green core cased in yellow and clear glass.",
+      "description": [
+        "A green core is cased in a thin yellow layer and a thick outer layer of clear glass. The outside is cut into flat facets, which multiply the coloured core as the vase is turned.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "green",
+        "yellow",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M002-FRONT",
+      "imageIds": [
+        "IMG-M002-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 71,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M003",
+      "slug": "sommerso-faceted-vase-amber",
+      "title": "Faceted sommerso vase in amber",
+      "category": "murano-glass",
+      "objectType": "Vase",
+      "summary": "A tall, faceted sommerso vase from the MURANIQ collection, with a brown core cased in amber and a violet tint at the base.",
+      "description": [
+        "A brown core is cased in amber glass, with a faint violet tint towards the base. Flat cut facets on the outside break the inner colour into overlapping reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "brown",
+        "amber",
+        "violet"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M003-FRONT",
+      "imageIds": [
+        "IMG-M003-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 72,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M004",
+      "slug": "facet-cut-sommerso-bowl-blue",
+      "title": "Facet-cut sommerso bowl in blue and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A heavy bowl from the MURANIQ collection, a blue core cased in amber and clear glass, its outside cut into broad facets.",
+      "description": [
+        "A blue core is cased in a band of amber and a thick outer layer of clear glass. The outside is ground into a few broad, flat facets that give the bowl an angular, gem-like outline.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "blue",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M004-FRONT",
+      "imageIds": [
+        "IMG-M004-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 73,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M005",
+      "slug": "facet-cut-sommerso-bowl-green",
+      "title": "Facet-cut sommerso bowl in green",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A low bowl from the MURANIQ collection, green glass cased in clear glass, cut into large crossing facets.",
+      "description": [
+        "Green glass is cased in clear glass and the outside is cut into large flat facets. Seen from the side, the facets break the green core into repeated, overlapping reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "green",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M005-FRONT",
+      "imageIds": [
+        "IMG-M005-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 74,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M006",
+      "slug": "facet-cut-sommerso-bowl-red",
+      "title": "Facet-cut sommerso bowl in red and amber",
+      "category": "murano-glass",
+      "objectType": "Bowl",
+      "summary": "A thick bowl from the MURANIQ collection, a red core cased in amber and clear glass, covered all over in small cut facets.",
+      "description": [
+        "A red core is cased in amber and clear glass. The outside is cut into many small facets, which scatter the amber and red into a honeycomb of reflections.",
+        "Maker, glasshouse and date have not yet been documented, so no attribution is given."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SOMMERSO",
+        "TEC-MOLATO"
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Maker not documented",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "No maker, glasshouse or date has been documented for this piece yet."
+        }
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "red",
+        "amber",
+        "colourless"
+      ],
+      "country": "Italy",
+      "heroImageId": "IMG-M006-FRONT",
+      "imageIds": [
+        "IMG-M006-FRONT"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "curatedOrder": 75,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "id": "MUR-M007",
+      "slug": "monumental-aquamarine-scavo-corroso-vase",
+      "title": "Monumental aquamarine scavo corroso vase",
+      "category": "murano-glass",
+      "objectType": "Vase",
+      "summary": "A large, heavy vase in aquamarine glass with a matt scavo surface, two applied ring handles and an undulating relief around the body. It carries a Seguso Arte Vetro factory label.",
+      "description": [
+        "The rounded body rises into a tall cylindrical neck. Two ring handles of colourless glass are applied on either side of the neck, and a broad undulating relief runs all the way around the lower body. The vase is 32 cm high and 30 cm wide and weighs 7.5 kg, which is heavy for its size.",
+        "The surface is matt and finely granular throughout: a scavo finish, which imitates the weathered skin of glass recovered from the ground. The aquamarine colour varies from light turquoise to grey-green and a deeper green, with paler and darker patches. The foot is ground flat and is smoother than the rest of the surface. No engraved signature has been found.",
+        "A printed factory label on the lower body reads MURANO ITALY, SEGUSO, arte vetro, around a large stylised S. It is the main evidence for the maker, Seguso Arte Vetro, also known as Seguso AV. That firm should not be confused with Seguso Vetri d'Arte, a different Murano glassworks with its own history and archive.",
+        "Auction and reference sources connect Seguso Arte Vetro with the Murano glass artist Livio Seguso (born on Murano in 1930). Dealers have offered closely related vases in aquamarine and in white; the seller of the white example describes it as designed by Livio Seguso and made by Bisazza Vetro in 1993 (see Comparable examples). That makes a link with his designs plausible, but it does not show that he designed this vase. The model, designer and date of this example are still being researched."
+      ],
+      "creators": [],
+      "techniqueIds": [
+        "TEC-SCAVO"
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "green",
+        "colourless"
+      ],
+      "country": "Italy",
+      "dating": {
+        "displayLabel": "Late 20th century (provisional)",
+        "fromYear": 1980,
+        "toYear": 1995,
+        "certainty": "hypothesis"
+      },
+      "dimensions": {
+        "heightMm": 320,
+        "widthMm": 300,
+        "weightG": 7500
+      },
+      "heroImageId": "IMG-M007-FRONT",
+      "imageIds": [
+        "IMG-M007-FRONT",
+        "IMG-M007-REVERSE",
+        "IMG-M007-SIDE",
+        "IMG-M007-LABEL",
+        "IMG-M007-DETAIL",
+        "IMG-M007-DETAIL-2"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M007-LABEL",
+          "kind": "label",
+          "location": "lower body, just above the foot",
+          "observation": "Printed factory label with white lettering on a transparent ground, so the glass shows through. MURANO and ITALY run upwards along the left edge; a large stylised S is followed by E / GU / SO, with 'arte vetro' below.",
+          "transcription": "MURANO / ITALY / SEGUSO / arte vetro",
+          "transcriptionNote": "Read from the photograph. The S of SEGUSO is the large initial; the remaining letters are stacked as E / GU / SO.",
+          "transcriptionCertainty": "verified",
+          "interpretation": "Factory label of Seguso Arte Vetro (Seguso AV), Murano. The period in which this label was used has not been established.",
+          "interpretationCertainty": "probable",
+          "imageId": "IMG-M007-LABEL"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Probably by Seguso Arte Vetro",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-20CG-LABELS-LIVIO-SEGUSO",
+              "locator": "comparison of the label type"
+            }
+          ],
+          "publicNote": "Based on the printed Seguso Arte Vetro factory label on the lower body (see Marks & Labels). A label is strong evidence of the firm that made or sold a piece, but labels can be moved or added later, so it supports the attribution without proving it. No catalogue entry or model number has been found yet."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "Based on the label, which reads MURANO ITALY."
+        },
+        {
+          "field": "dating",
+          "statement": "Late 20th century, provisionally c. 1980–1995",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-1STDIBS-SEGUSO-BISAZZA-1993",
+              "locator": "white example, dated 1993 by the seller"
+            },
+            {
+              "sourceId": "SRC-WRIGHT-2020-ITALIAN-GLASS",
+              "locator": "Seguso Arte Vetro work, c. 1980"
+            }
+          ],
+          "publicNote": "A working date range, not a documented date. It rests on comparable pieces: a closely related white vase dated 1993 by its seller, and a Livio Seguso work by Seguso Arte Vetro catalogued as c. 1980. It will stay provisional until a catalogue or other document is found."
+        },
+        {
+          "field": "technique",
+          "statement": "Scavo surface, of the kind sold as scavo corroso",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "The matt, granular and unevenly coloured skin shows the characteristics of scavo, the Murano finish that imitates excavated glass. 'Corroso' refers to a corroded or etched surface. How the surface of this particular piece was produced has not been established."
+        },
+        {
+          "field": "other",
+          "statement": "Design associated with Livio Seguso: not confirmed",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-WRIGHT-2020-ITALIAN-GLASS",
+              "locator": "Livio Seguso work by Seguso Arte Vetro"
+            },
+            {
+              "sourceId": "SRC-1STDIBS-SEGUSO-BISAZZA-1993",
+              "locator": "white example, attributed by the seller"
+            },
+            {
+              "sourceId": "SRC-DOROTHEUM-10378642"
+            }
+          ],
+          "publicNote": "Seguso Arte Vetro is linked with Livio Seguso in auction records, and a dealer attributes a white vase of almost the same form and size to him. No document yet links this model to him, so his name is given as an association, not as the designer of this vase."
+        }
+      ],
+      "condition": "Light surface marks are visible on the matt skin, including small dark specks and fine scratches. A full condition report has not yet been made.",
+      "comparables": [
+        {
+          "kind": "dealer_listing",
+          "title": "Large Italian Scavo Corroso Aquamarine Glass Urn Vase",
+          "stated": [
+            "No maker or designer named.",
+            "Blown glass with a scavo corroso surface, in a 'Classical Roman' style.",
+            "Height 30.5 cm, diameter 25.4 cm.",
+            "No label or signature mentioned."
+          ],
+          "comparison": "Very close in colour and form: the same aquamarine tone, tall cylindrical neck, rounded body, two ring handles and undulating relief. The MURANIQ vase is larger (32 × 30 cm) and carries a Seguso Arte Vetro label. The two are probably the same basic design or closely related versions, but no catalogue or model number confirms it.",
+          "sourceId": "SRC-1STDIBS-SCAVO-URN-AQUAMARINE"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Seguso for Bisazza White Scavo Corroso Murano Glass Vase 1993 Signed",
+          "stated": [
+            "Designed by Livio Seguso and made by Bisazza Vetro in 1993.",
+            "White to cream scavo corroso glass with two round handles.",
+            "Height 30.5 cm, diameter 30 cm.",
+            "Part of a Livio Seguso production collection made under Bisazza; the form is related to late-1980s taste influenced by Native American and Navajo pottery.",
+            "Listed as sold."
+          ],
+          "comparison": "Almost the same height and diameter, with the same rounded body, cylindrical neck, applied ring handles, scavo finish and undulating relief, in white instead of aquamarine. It is the strongest indication of a link with Livio Seguso's designs. It is not known whether the two share a model number, or whether the Seguso Arte Vetro version was made before, during or after the Bisazza version.",
+          "sourceId": "SRC-1STDIBS-SEGUSO-BISAZZA-1993"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Murano glass with a printed Seguso Arte Vetro factory label.",
+          "Matt, weathered scavo-type surface.",
+          "Two applied ring handles and a continuous undulating relief around the lower body.",
+          "Height 32 cm, width 30 cm, weight 7.5 kg; the foot is ground flat.",
+          "Very close in form to an aquamarine vase and a white vase offered by dealers (see Comparable examples)."
+        ],
+        "plausible": [
+          "A design from the circle of Livio Seguso.",
+          "Made in the late 1980s or early 1990s.",
+          "The same basic design as the white vase sold as Bisazza, 1993.",
+          "A larger version of the aquamarine vase offered by a dealer."
+        ],
+        "open": [
+          "Model number and original catalogue.",
+          "Who designed this model.",
+          "Year of production and how many were made.",
+          "When this type of Seguso Arte Vetro label was in use.",
+          "Whether the aquamarine and white versions belong to the same series, and how Seguso Arte Vetro and Bisazza relate for this model."
+        ],
+        "reviewedOn": "2026-11-18"
+      },
+      "sourceIds": [
+        "SRC-CINI-SEGUSO-VETRI-DARTE"
+      ],
+      "relatedIds": [],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 76,
+      "updatedAt": "2026-11-18"
+    }
+  ],
+  "media": [
+    {
+      "id": "IMG-M001-TOP",
+      "artworkId": "MUR-M001",
+      "viewType": "top",
+      "src": "/images/collection/r025-sommerso-bowl-top-v3.jpg",
+      "width": 1512,
+      "height": 2048,
+      "alt": "Thick rectangular glass bowl seen from above, a blue layer cased within amber and clear glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M002-FRONT",
+      "artworkId": "MUR-M002",
+      "viewType": "front",
+      "src": "/images/collection/r026-sommerso-vase-green-v2.jpg",
+      "width": 1649,
+      "height": 2200,
+      "alt": "Tall faceted vase of thick glass, a green core cased in yellow and clear glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M003-FRONT",
+      "artworkId": "MUR-M003",
+      "viewType": "front",
+      "src": "/images/collection/r027-sommerso-vase-amber-v2.jpg",
+      "width": 1649,
+      "height": 2200,
+      "alt": "Tall faceted vase of thick glass, a brown core cased in amber with a violet tint at the base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M004-FRONT",
+      "artworkId": "MUR-M004",
+      "viewType": "front",
+      "src": "/images/collection/r029-facet-bowl-blue.jpg",
+      "width": 2200,
+      "height": 1905,
+      "alt": "Thick faceted glass bowl, a blue core cased in amber and clear glass, its outside cut into broad flat planes",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M005-FRONT",
+      "artworkId": "MUR-M005",
+      "viewType": "front",
+      "src": "/images/collection/r030-facet-bowl-green.jpg",
+      "width": 2200,
+      "height": 1649,
+      "alt": "Low faceted bowl of thick green glass in a clear casing, its cut planes reflecting the green core",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M006-FRONT",
+      "artworkId": "MUR-M006",
+      "viewType": "front",
+      "src": "/images/collection/r031-facet-bowl-red.jpg",
+      "width": 2200,
+      "height": 1748,
+      "alt": "Thick bowl with a red core cased in amber and clear glass, its outside cut into many small facets",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-FRONT",
+      "artworkId": "MUR-M007",
+      "viewType": "front",
+      "src": "/images/collection/m007/m007-front-55a34bae.jpg",
+      "width": 2008,
+      "height": 2200,
+      "alt": "Aquamarine scavo vase with two ring handles and an undulating relief around the body, seen from the front",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-REVERSE",
+      "artworkId": "MUR-M007",
+      "viewType": "reverse",
+      "src": "/images/collection/m007/m007-reverse-7259d061.jpg",
+      "width": 1887,
+      "height": 2200,
+      "alt": "Aquamarine scavo vase seen from the back, showing the undulating relief continuing around the body",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-SIDE",
+      "artworkId": "MUR-M007",
+      "viewType": "side",
+      "src": "/images/collection/m007/m007-side-4d737e84.jpg",
+      "width": 1851,
+      "height": 2200,
+      "alt": "Aquamarine scavo vase seen from the side, with one ring handle in profile against the neck",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-LABEL",
+      "artworkId": "MUR-M007",
+      "viewType": "label",
+      "src": "/images/collection/m007/m007-label-322a01cb.jpg",
+      "width": 2109,
+      "height": 2200,
+      "alt": "Printed Seguso Arte Vetro label on the lower body, reading MURANO ITALY, SEGUSO, arte vetro",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-DETAIL",
+      "artworkId": "MUR-M007",
+      "viewType": "detail",
+      "src": "/images/collection/m007/m007-detail-1-2ef0d1f8.jpg",
+      "width": 1885,
+      "height": 2200,
+      "alt": "Aquamarine scavo vase seen from slightly above, showing the open mouth and the granular matt surface",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M007-DETAIL-2",
+      "artworkId": "MUR-M007",
+      "viewType": "detail",
+      "src": "/images/collection/m007/m007-detail-2-e34bd6b8.jpg",
+      "width": 1934,
+      "height": 2200,
+      "alt": "Close-up of the neck, the rim and the two applied ring handles in frosted colourless glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-1STDIBS-SCAVO-URN-AQUAMARINE",
+      "type": "other",
+      "title": "Large Italian Scavo Corroso Aquamarine Glass Urn Vase (dealer listing)",
+      "publisher": "1stDibs",
+      "url": "https://www.1stdibs.com/furniture/decorative-objects/vases-vessels/vases/large-italian-scavo-corroso-aquamarine-glass-urn-vase/id-f_27984462/",
+      "reliabilityNote": "Dealer listing. The description, attribution and date are the seller's own and have not been verified by MURANIQ. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-1STDIBS-SEGUSO-BISAZZA-1993",
+      "type": "other",
+      "title": "Seguso for Bisazza White Scavo Corroso Murano Glass Vase 1993 Signed (dealer listing, ref. LU2568322441812)",
+      "publisher": "1stDibs",
+      "reliabilityNote": "Dealer listing. The description, attribution and date are the seller's own and have not been verified by MURANIQ. Listed as sold. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-DOROTHEUM-10378642",
+      "type": "auction",
+      "title": "Scavo corroso vase attributed to Livio Seguso, executed by Bisazza, c. 1990 (auction lot)",
+      "publisher": "Dorotheum",
+      "url": "https://www.dorotheum.com/en/l/10378642/",
+      "reliabilityNote": "Auction catalogue entry for a different model. Cited only for the link between Livio Seguso's name and scavo corroso glass.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-WRIGHT-2020-ITALIAN-GLASS",
+      "type": "auction",
+      "title": "Important Italian Glass (auction catalogue, 2 April 2020)",
+      "publisher": "Wright, Chicago",
+      "year": "2020",
+      "url": "https://www.wright20.com/files/media/catalogs/2020/04/important-italian-glass/catalog/pdf/wright-important-italian-glass-2april2020_1583530245.pdf",
+      "reliabilityNote": "Auction catalogue. Includes a work by Livio Seguso catalogued as made by Seguso Arte Vetro, c. 1980.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-20CG-LABELS-LIVIO-SEGUSO",
+      "type": "other",
+      "title": "Murano glass labels: Livio Seguso / Seguso AV",
+      "publisher": "Glass Encyclopedia (20thcenturyglass.com)",
+      "url": "https://www.20thcenturyglass.com/glass_encyclopedia/glass_labels/?info=Murano&sct=LivioSeguso",
+      "rightsNote": "All rights reserved; the label images are not reproduced here.",
+      "reliabilityNote": "Collectors' reference, used to compare the type of label. It does not establish when the label was in use.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-CINI-SEGUSO-VETRI-DARTE",
+      "type": "archive",
+      "title": "Seguso Vetri d'Arte archive",
+      "publisher": "Fondazione Giorgio Cini, Centro Studi del Vetro, Venice",
+      "url": "https://archivi.cini.it/centrostudivetro/archive/IT-CSV-GUI001-000020/seguso-vetri-d-arte.html",
+      "reliabilityNote": "Archive of Seguso Vetri d'Arte, a different firm from Seguso Arte Vetro. Consulted for context; it is not evidence for this vase.",
+      "isFixture": false
+    }
+  ]
+}

@@ -61,6 +61,26 @@ describe("dataset validation", () => {
     expect(r.issues.some((i) => i.message.includes("related to itself"))).toBe(true);
   });
 
+  it("never publishes a price: not the owner's, not a dealer's", () => {
+    const d = clone();
+    const a = d.artworks.find((x) => x.id === "MUR-M007")!;
+    a.comparables![0]!.stated = ["Offered at €1.234,56."];
+    a.description = [...a.description, "Bought for 999 EUR."];
+    a.researchStatus!.open = ["Value: USD 5,000 as sold."];
+    const r = validateDataset(d);
+    expect(r.ok).toBe(false);
+    const priced = r.issues.filter((i) => i.message.includes("prices are never published")).map((i) => i.path);
+    expect(priced).toEqual(
+      expect.arrayContaining([expect.stringContaining("comparables"), expect.stringContaining("description"), expect.stringContaining("researchStatus")]),
+    );
+  });
+
+  it("rejects a comparable example without a known source", () => {
+    const d = clone();
+    d.artworks.find((x) => x.id === "MUR-M007")!.comparables![0]!.sourceId = "SRC-NOPE";
+    expect(validateDataset(d).issues.some((i) => i.message === "unknown source SRC-NOPE")).toBe(true);
+  });
+
   it("rejects an inverted dating range", () => {
     const d = clone();
     d.artworks[0]!.dating = { fromYear: 1970, toYear: 1950, displayLabel: "x", certainty: "probable" };
@@ -115,6 +135,21 @@ describe("publication boundary", () => {
     expect(r.ok).toBe(true);
     const pub = buildPublication(r.data!);
     expect(JSON.stringify(pub)).not.toContain("r001-chalcedony-ewer-handle");
+  });
+
+  it("shows dealer statements apart from MURANIQ's findings, with their sources, and no prices", () => {
+    const pub = buildPublication(validateDataset(fixtureDataset).data!);
+    const vase = pub.dossiers["monumental-aquamarine-scavo-corroso-vase"]!;
+    expect(vase.attributionLine).toBe("Probably by Seguso Arte Vetro");
+    expect(vase.dating).toMatchObject({ certainty: "hypothesis", displayLabel: "Late 20th century (provisional)" });
+    // Livio Seguso is an association under research, never the attribution.
+    expect(vase.assertions.find((x) => x.statement.includes("Livio Seguso"))!.certainty).toBe("hypothesis");
+    expect(vase.creatorLinks).toEqual([]);
+    expect(vase.comparables.map((c) => c.kind)).toEqual(["dealer_listing", "dealer_listing"]);
+    for (const c of vase.comparables) expect(vase.sources.map((s) => s.id)).toContain(c.sourceId);
+    expect(JSON.stringify(vase)).not.toMatch(/[€$£]\s?\d|\d\s?(EUR|USD)\b/);
+    // Listed under the Scavo technique.
+    expect(pub.techniques.find((t) => t.slug === "scavo")!.artworkIds).toContain("MUR-M007");
   });
 
   it("uses consistent attribution wording on cards and dossiers", () => {

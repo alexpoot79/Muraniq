@@ -112,6 +112,11 @@ is not retouched, recomposed or generated.
 | `public/images/collection/r030-facet-bowl-green.jpg` | Facet-cut sommerso bowl in green (MUR-M005) | Owned |
 | `public/images/collection/r031-facet-bowl-red.jpg` | Facet-cut sommerso bowl in red and amber (MUR-M006) | Owned |
 
+From 12 November 2026 the owner's photographs come in through the collection importer (see
+[COLLECTION-PHOTOS.md](COLLECTION-PHOTOS.md)): `public/images/collection/<id>/`, credit "Photograph © MURANIQ",
+rights owned. These are not retouched; the importer only turns them upright, converts them to sRGB, resizes
+them and removes all metadata (including GPS). The records in `fixtures/collection.json` list every file.
+
 ## Editorial images (heritage and city)
 
 | File | Caption | Use | Holder and record | Licence | Credit shown |

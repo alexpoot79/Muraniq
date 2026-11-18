@@ -11,3 +11,6 @@ next-env.d.ts
 !.env.example
 .vercel
 .DS_Store
+
+# Collection import: review sheets, reports, generated templates (never committed)
+/tmp/

@@ -54,7 +54,7 @@ export const PUBLICATION_STATUS = ["draft", "in_review", "published", "withdrawn
 export const PublicationStatus = z.enum(PUBLICATION_STATUS);
 export type PublicationStatus = z.infer<typeof PublicationStatus>;
 
-export const VIEW_TYPES = ["front", "reverse", "side", "base", "signature", "label", "detail", "context"] as const;
+export const VIEW_TYPES = ["front", "reverse", "top", "side", "base", "signature", "label", "detail", "context"] as const;
 export const ViewType = z.enum(VIEW_TYPES);
 export type ViewType = z.infer<typeof ViewType>;
 
@@ -243,6 +243,35 @@ export const ProvenanceEvent = z.object({
 export type ProvenanceEvent = z.infer<typeof ProvenanceEvent>;
 
 /**
+ * A related object described by someone else (a dealer, auction house, museum
+ * or publication). `stated` holds what that source says, attributed to it and
+ * never presented as MURANIQ's finding; `comparison` is MURANIQ's own reading
+ * of the similarities and differences. Prices never belong here.
+ */
+export const COMPARABLE_KINDS = ["dealer_listing", "auction_lot", "museum_object", "publication"] as const;
+export const Comparable = z.object({
+  kind: z.enum(COMPARABLE_KINDS),
+  /** The object's title as the source gives it. */
+  title: z.string().min(3).max(200),
+  stated: z.array(z.string().min(3).max(300)).min(1),
+  comparison: z.string().min(10).max(800),
+  sourceId: id("SRC"),
+});
+export type Comparable = z.infer<typeof Comparable>;
+
+/** Where the research on one object stands, in three plain lists. */
+export const ResearchStatus = z.object({
+  /** Observed on the object or read from its marks. */
+  established: z.array(z.string().min(3).max(300)).default([]),
+  /** Working hypotheses, e.g. from comparison. */
+  plausible: z.array(z.string().min(3).max(300)).default([]),
+  /** Open questions. */
+  open: z.array(z.string().min(3).max(300)).default([]),
+  reviewedOn: isoDate,
+});
+export type ResearchStatus = z.infer<typeof ResearchStatus>;
+
+/**
  * A reference work held by another institution, shown with that institution's
  * open-access photograph (e.g. CC0) while the collection's own photography is
  * prepared. Never part of the MURANIQ collection and never offered for enquiry.
@@ -278,6 +307,8 @@ export const Artwork = z.object({
   assertions: z.array(Assertion).default([]),
   provenance: z.array(ProvenanceEvent).default([]),
   condition: z.string().max(800).optional(),
+  comparables: z.array(Comparable).max(6).default([]),
+  researchStatus: ResearchStatus.optional(),
   sourceIds: z.array(id("SRC")).default([]),
   relatedIds: z.array(id("MUR")).max(3).default([]),
   availability: Availability,

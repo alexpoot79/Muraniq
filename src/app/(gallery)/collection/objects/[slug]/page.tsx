@@ -45,6 +45,22 @@ const MARK_KIND: Record<string, string> = {
   other: "Mark",
 };
 
+const COMPARABLE_KIND: Record<string, { label: string; stated: string }> = {
+  dealer_listing: { label: "Dealer listing", stated: "What the seller states" },
+  auction_lot: { label: "Auction lot", stated: "What the auction house states" },
+  museum_object: { label: "Museum object", stated: "What the museum states" },
+  publication: { label: "Publication", stated: "What the publication states" },
+};
+
+const RESEARCH_GROUPS = [
+  { key: "established", title: "Established", hint: "Observed on the object or read from its marks." },
+  { key: "plausible", title: "Plausible, not proven", hint: "Working hypotheses, mostly from comparison." },
+  { key: "open", title: "Still open", hint: "Questions for further research." },
+] as const;
+
+const longDate = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+
 function Section({ id, n, title, children }: { id: string; n: number; title: string; children: React.ReactNode }) {
   return (
     <section aria-labelledby={`${id}-title`} id={id} className="scroll-mt-28 border-t border-line-paper py-14 first:border-t-0 first:pt-0 lg:py-20">
@@ -83,6 +99,10 @@ export default async function ArtworkPage({ params }: Props) {
   const sourceIndex = new Map(a.sources.map((s, i) => [s.id, i + 1]));
   const cta = enquiryCta(a.availability);
   const lead = a.creatorLinks[0];
+  // A maker named in the attribution but without a profile page (yet) is still shown, unlinked, with its qualifier.
+  const unlinkedMaker = a.creatorLinks.length
+    ? undefined
+    : a.assertions.find((x) => x.field === "creator" && x.certainty !== "unknown")?.statement;
 
   const specs: Array<{ label: string; value: React.ReactNode }> = [
     { label: "Object", value: a.objectType },
@@ -100,7 +120,7 @@ export default async function ArtworkPage({ params }: Props) {
           ))}
         </ul>
       ) : (
-        "Not documented"
+        (unlinkedMaker ?? "Not documented")
       ),
     },
     { label: "Date", value: a.dating?.displayLabel ?? "Not documented" },
@@ -159,6 +179,8 @@ export default async function ArtworkPage({ params }: Props) {
     "specifications",
     ...(a.marks.length ? ["marks"] : []),
     "attribution",
+    ...(a.comparables.length ? ["comparables"] : []),
+    ...(a.researchStatus ? ["research"] : []),
     ...(a.provenance.length ? ["provenance"] : []),
     ...(a.condition ? ["condition"] : []),
   ];
@@ -391,6 +413,73 @@ export default async function ArtworkPage({ params }: Props) {
               </p>
             </div>
           </Section>
+
+          {a.comparables.length > 0 && (
+            <Section id="comparables" n={num("comparables")} title="Comparable examples">
+              <p className="measure text-ink-muted">
+                Related objects described by others. Their descriptions are quoted as theirs and have not been verified by
+                MURANIQ; the comparison with this piece is MURANIQ&rsquo;s own.
+              </p>
+              <ul className="mt-8 flex flex-col gap-8">
+                {a.comparables.map((c, i) => {
+                  const src = a.sources.find((s) => s.id === c.sourceId);
+                  const kind = COMPARABLE_KIND[c.kind]!;
+                  return (
+                    <li key={i} className="flex flex-col gap-5 border border-line-paper bg-paper-2/70 p-6 sm:p-8">
+                      <div className="flex flex-col gap-2">
+                        <p className="label text-ink-muted">
+                          {kind.label}
+                          {src?.publisher ? ` · ${src.publisher}` : ""}
+                        </p>
+                        <h3 className="font-display text-2xl">{c.title}</h3>
+                      </div>
+                      <div>
+                        <p className="label text-ink-muted">{kind.stated}</p>
+                        <ul className="mt-2 list-disc pl-5">
+                          {c.stated.map((t, j) => (
+                            <li key={j}>{t}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="flex flex-col gap-2 border-l-2 border-line-paper pl-4">
+                        <p className="label text-ink-muted">Compared with this {a.objectType.toLowerCase()}</p>
+                        <p>{c.comparison}</p>
+                      </div>
+                      <p className="text-sm text-ink-muted">
+                        Source:{" "}
+                        <a href={`#source-${c.sourceId}`} className="link-quiet">
+                          [{sourceIndex.get(c.sourceId)}]
+                        </a>
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </Section>
+          )}
+
+          {a.researchStatus && (
+            <Section id="research" n={num("research")} title="Research status">
+              <div className="flex flex-col gap-10">
+                {RESEARCH_GROUPS.map((g) =>
+                  a.researchStatus![g.key].length ? (
+                    <div key={g.key}>
+                      <h3 className="font-display text-2xl">{g.title}</h3>
+                      <p className="mt-1 text-sm text-ink-muted">{g.hint}</p>
+                      <ul className="mt-4 flex flex-col border-t border-line-paper">
+                        {a.researchStatus![g.key].map((t, j) => (
+                          <li key={j} className="border-b border-line-paper py-3">
+                            {t}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null,
+                )}
+                <p className="text-sm text-ink-muted">Research reviewed {longDate(a.researchStatus.reviewedOn)}.</p>
+              </div>
+            </Section>
+          )}
 
           {a.provenance.length > 0 && (
             <Section id="provenance" n={num("provenance")} title="Public Provenance">

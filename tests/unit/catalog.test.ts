@@ -43,7 +43,7 @@ describe("query parsing", () => {
 describe("search and facets", () => {
   it("returns everything in curated order by default", () => {
     const r = searchCatalog(all, parseCatalogQuery({}));
-    expect(r.total).toBe(24);
+    expect(r.total).toBe(all.length);
     expect(r.items[0]!.id).toBe("MUR-R001");
   });
 

@@ -55,6 +55,11 @@ export const DATASET_QUERY = /* groq */ `{
     assertions[]{ field, statement, certainty, "evidence": evidence[]${EVIDENCE}, publicNote, reviewedOn },
     provenance[]{ label, fromYear, toYear, certainty, "evidence": evidence[]${EVIDENCE} },
     condition,
+    "comparables": coalesce(comparables[]{ kind, title, stated, comparison, "sourceId": source->sourceId }, []),
+    "researchStatus": select(defined(researchStatus.reviewedOn) => {
+      "established": coalesce(researchStatus.established, []), "plausible": coalesce(researchStatus.plausible, []),
+      "open": coalesce(researchStatus.open, []), "reviewedOn": researchStatus.reviewedOn
+    }),
     "sourceIds": sources[]->sourceId,
     "relatedIds": related[]->collectionId,
     availability, ${STATUS}, featured, curatedOrder,
