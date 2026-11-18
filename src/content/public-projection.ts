@@ -24,7 +24,11 @@ export type PublicMedia = Pick<
   | "licence"
   | "sourceUrl"
   | "cropOf"
-> & { isPlaceholder: boolean };
+> & {
+  isPlaceholder: boolean;
+  /** MURANIQ's own photograph: shown with right-click and drag-out blocked (see PhotoGuard). */
+  ownPhoto: boolean;
+};
 
 export function projectMedia(m: MediaAsset): PublicMedia {
   return {
@@ -44,6 +48,7 @@ export function projectMedia(m: MediaAsset): PublicMedia {
       ? { imageId: m.cropOf.imageId, region: { x: m.cropOf.region.x, y: m.cropOf.region.y, w: m.cropOf.region.w, h: m.cropOf.region.h } }
       : undefined,
     isPlaceholder: m.rights === "placeholder",
+    ownPhoto: m.rights === "owned",
   };
 }
 

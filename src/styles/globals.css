@@ -83,6 +83,17 @@
     max-width: 100%;
     height: auto;
   }
+  /* MURANIQ's own photographs: no drag-out, no iOS/Android long-press "Save image", no selection. */
+  img[data-own-photo] {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+  /* Inside a link the photograph passes the pointer to the link: right-click and long-press
+     offer "Open in new tab" but never "Save image". */
+  a img[data-own-photo] {
+    pointer-events: none;
+  }
   em,
   i {
     font-style: italic;

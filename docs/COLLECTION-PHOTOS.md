@@ -57,11 +57,34 @@ Without a photo folder, `collection:import` only updates the data of objects tha
 - Converts to **sRGB**: iPhone photos are Display P3. JPEGs are converted by sharp from their ICC profile;
   HEIC pixels are converted with the standard P3→sRGB matrix (checked against sharp's ICC conversion: mean
   difference 0.15/255).
-- Resizes to at most 2200 px on the long side, JPEG quality 85 (mozjpeg).
-- Writes **no metadata at all**: no GPS position, camera serial or capture time reaches the public repository.
+- Publishes a **web version only**: at most 1600 px on the long side, JPEG quality 85 (mozjpeg). The full-size
+  original never goes into this (public) repository or onto the site.
+- Adds a small, quiet **"© MURANIQ" mark** in the bottom-right corner, drawn from the approved wordmark
+  (`public/brand/`): ivory on a dark corner, ink on a light one, low opacity (`scripts/collection/watermark.ts`).
+- Writes **no camera metadata**: no GPS position, camera serial or capture time reaches the public repository.
+  The only metadata is one EXIF copyright line ("Copyright MURANIQ. All rights reserved. …"), which also tells
+  the scripts the file is already protected.
 - **No retouching**: no colour, contrast, background or haze edits. Good light at capture replaces editing.
 - File name `public/images/collection/<id>/<id>-<view>[-n]-<hash>.jpg`. The content hash changes when a photo is
   replaced, so caches never show an old photo.
+
+## Photo protection on the site
+
+Own photographs (`rights: "owned"`) are protected as a deterrent and as proof of ownership. Screenshots cannot
+be prevented.
+
+- **File**: the 1600 px web version with the corner mark and the copyright line (above).
+- **Page**: `ArtworkImage` and the full-screen viewer mark own photographs with `data-own-photo`; the page-wide
+  `PhotoGuard` blocks the right-click menu and dragging on them, CSS blocks the iOS/Android long-press "Save
+  image". Links around a photograph keep their normal menu (open in new tab). Museum and reference images are
+  not affected.
+- **Photographs published before 18 Nov 2026** (M001–M008) were converted once with
+  `npm run collection:protect -- --backup <private folder>`. The unprotected files are kept in the private
+  project storage (`muraniq/foto-originelen/`), never in the repository. The script only touches `owned` media,
+  skips files that already carry the copyright line, and gives converted files a new name so caches never show
+  the old file. Run it again whenever an own photograph was added by hand.
+- `tests/unit/photo-protection.test.ts` fails if any own photograph on the site is unprotected or larger than
+  1600 px.
 
 ## What the importer does with a row
 
@@ -147,7 +170,7 @@ is found; and **no prices or values anywhere** (purchase price, asking prices of
 
 ## Scale notes
 
-- Size: real iPhone photos come out at roughly 0.2–0.5 MB each at 2200 px. 300 objects × 5 photos ≈ 300–700 MB in
+- Size: real iPhone photos come out at roughly 0.15–0.3 MB each at 1600 px. 300 objects × 5 photos ≈ 225–450 MB in
   git, which is heavy for one repository. Plan: keep the first batches (highlights) in the repository; move
   photographs to the Sanity asset store (already planned as CMS) before the collection grows past about 100
   objects. The data sheet and the records stay the same; only the storage of the photographs changes.
