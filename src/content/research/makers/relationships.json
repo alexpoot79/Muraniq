@@ -2488,5 +2488,216 @@
     "locators": [],
     "notes": "OS page for Ludovico carries Laura's biography (copy error) – do not import that text for Ludovico.",
     "checked": "2026-11-10"
+  },
+  {
+    "id": "REL-0141",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-ZANETTI-LICIO",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI",
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Stated by the Schiavon gallery biography; dealer histories agree.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0142",
+    "subject_id": "PER-ZANETTI-LICIO",
+    "predicate": "CHILD_OF",
+    "object_id": "PER-ZANETTI-OSCAR-SR",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Dealer histories, seen through search summaries only.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0143",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "NOT_SAME_AS",
+    "object_id": "PER-ZANETTI-OSCAR-SR",
+    "relation_kind": "identity",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Grandson and grandfather share the name.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0144",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-ZANETTI",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": null,
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0145",
+    "subject_id": "PER-ZANETTI-LICIO",
+    "predicate": "MEMBER_OF_FAMILY",
+    "object_id": "FAM-ZANETTI",
+    "relation_kind": "family",
+    "start": null,
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": null,
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0146",
+    "subject_id": "PER-ZANETTI-OSCAR-SR",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-ZANETTI-MURANO",
+    "relation_kind": "business",
+    "start": "1956",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI",
+      "SRC-ZANETTI-MURANO-COM"
+    ],
+    "locators": [],
+    "notes": "Founding year conflict: see CF-ZANETTI-MURANO-FOUNDED.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0147",
+    "subject_id": "PER-ZANETTI-LICIO",
+    "predicate": "CO_FOUNDED",
+    "object_id": "ORG-ZANETTI-MURANO",
+    "relation_kind": "business",
+    "start": "1956",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI",
+      "SRC-ZANETTI-MURANO-COM"
+    ],
+    "locators": [],
+    "notes": null,
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0148",
+    "subject_id": "PER-ZANETTI-LICIO",
+    "predicate": "MANAGED",
+    "object_id": "ORG-ZANETTI-MURANO",
+    "relation_kind": "business",
+    "start": null,
+    "end": "1989",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Handed the furnace to Oscar; see CF-ZANETTI-MURANO-HANDOVER.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0149",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "MAESTRO_AT",
+    "object_id": "ORG-ZANETTI-MURANO",
+    "relation_kind": "professional",
+    "start": "1986",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Joined the family furnace in 1986 to refine his technique (gallery biography).",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0150",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "MANAGED",
+    "object_id": "ORG-ZANETTI-MURANO",
+    "relation_kind": "business",
+    "start": "1989",
+    "end": null,
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-WEB-MURANONET-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Runs it today with his son Andrea (dealer sources). See CF-ZANETTI-MURANO-HANDOVER.",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0151",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-VENINI",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "before 1986",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Training years (gallery biography; dealer biographies agree).",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0152",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-LA-MURRINA",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "before 1986",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Training years (gallery biography; dealer biographies agree).",
+    "checked": "2026-11-18"
+  },
+  {
+    "id": "REL-0153",
+    "subject_id": "PER-ZANETTI-OSCAR",
+    "predicate": "WORKED_AT",
+    "object_id": "ORG-BAROVIER-TOSO",
+    "relation_kind": "professional",
+    "start": null,
+    "end": "before 1986",
+    "verification_status": "UNVERIFIED",
+    "source_ids": [
+      "SRC-SCHIAVON-OSCAR-ZANETTI"
+    ],
+    "locators": [],
+    "notes": "Named only by the Schiavon gallery.",
+    "checked": "2026-11-18"
   }
 ]

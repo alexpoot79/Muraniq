@@ -324,6 +324,24 @@ export const Artwork = z.object({
 });
 export type Artwork = z.infer<typeof Artwork>;
 
+/** A titled part of a longer profile or technique text, shown after the introduction. */
+export const TextSection = z.object({
+  heading: z.string().min(2).max(80),
+  paragraphs: z.array(z.string().min(1)).min(1),
+});
+export type TextSection = z.infer<typeof TextSection>;
+
+/**
+ * One line of a maker's key facts, with the basis it rests on in plain words
+ * (e.g. "Gallery biography", "Regional register, checked 18 November 2026").
+ */
+export const ProfileFact = z.object({
+  label: z.string().min(2).max(40),
+  value: z.string().min(1).max(160),
+  basis: z.string().max(160).optional(),
+});
+export type ProfileFact = z.infer<typeof ProfileFact>;
+
 export const Creator = z.object({
   id: id("CRE"),
   slug,
@@ -334,7 +352,17 @@ export const Creator = z.object({
   roles: z.array(CreatorRole).min(1),
   summary: z.string().max(300),
   biography: z.array(z.string()).default([]),
-  biographyStatus: z.enum(["reviewed", "migrated_unreviewed", "pending_migration", "reference_only"]),
+  biographyStatus: z.enum(["reviewed", "in_research", "migrated_unreviewed", "pending_migration", "reference_only"]),
+  /** Year of birth, when documented (persons only). Used in key facts and structured data. */
+  birthYear: year.optional(),
+  birthPlace: z.string().max(80).optional(),
+  nationality: z.string().max(40).optional(),
+  /** Key facts shown with the biography, each with its basis. */
+  facts: z.array(ProfileFact).default([]),
+  /** Further titled parts of the profile after the biography (family, technique, authenticity…). */
+  sections: z.array(TextSection).default([]),
+  /** Techniques this maker is known for; linked from the profile. */
+  techniqueIds: z.array(id("TEC")).default([]),
   sourceIds: z.array(id("SRC")).default([]),
   legacyPath: z.string().startsWith("/").optional(),
   isFixture: z.boolean().default(false),
@@ -366,6 +394,10 @@ export const Technique = z.object({
   summary: z.string().min(10).max(300),
   body: z.array(z.string()).min(1),
   recognition: z.array(z.string()).default([]),
+  /** Further titled parts after the introduction (history, how it is made, today…). */
+  sections: z.array(TextSection).default([]),
+  /** Makers with a profile on MURANIQ who are known for this technique. */
+  creatorIds: z.array(id("CRE")).default([]),
   sourceIds: z.array(id("SRC")).default([]),
   editorialStatus: z.enum(["reviewed", "draft_unsourced"]),
   status: PublicationStatus,

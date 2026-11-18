@@ -632,6 +632,200 @@
       "featured": false,
       "curatedOrder": 77,
       "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "MUR-M009",
+      "slug": "oscar-zanetti-calcedonio-shell-bowl",
+      "title": "Calcedonio shell bowl, signed Oscar Zanetti",
+      "category": "murano-glass",
+      "objectType": "Sculptural shell bowl",
+      "summary": "A heavy, asymmetric shell-shaped bowl in banded calcedonio glass, worked with clear glass at the rim and in pulled points around the sides. It is signed Oscar Zanetti in the glass and keeps its gold Zanetti Murano label.",
+      "description": [
+        "A sculptural bowl in the form of an open shell, asymmetric and roughly heart-shaped seen from above. One side rises in a broad curled lip, the other narrows to a point, and small knobs of clear glass are pulled out around the sides like the spines of a shell. It is 31 cm long, 18 cm wide and 10.5 cm high, and weighs 3.28 kg, which makes it a substantial piece of solid glass for its size.",
+        "Inside, the calcedonio forms concentric bands of amber, olive, brown and purple that follow the hollow of the bowl, with lighter lavender and yellow streaks along the rim. On the outside the colours turn to grey-green and blue with fine white streaks. The thick clear glass of the rim and the points lets the bands show through in depth. As with every piece of calcedonio, the distribution of colour is unique to this example.",
+        "A cursive signature scratched into the glass on the underside is read as Oscar Zanetti, and a gold Zanetti Murano label with the firm's arched ZL monogram is fixed to the outer wall (see Marks & Labels). Together they point to Oscar Zanetti and the family furnace on Murano. The year of making and the model number have not yet been established.",
+        "A calcedonio shell of the same form in other colours has been offered online under Oscar Zanetti's name (see Comparable examples). If the comparison is confirmed, this bowl is one colourway of a model that the furnace made in several colours, as is usual for calcedonio."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-OSCAR-ZANETTI",
+          "role": "maker",
+          "certainty": "probable"
+        }
+      ],
+      "techniqueIds": [
+        "TEC-CALCEDONIA"
+      ],
+      "materials": [
+        "Calcedonio glass",
+        "Clear glass"
+      ],
+      "colours": [
+        "amber",
+        "purple",
+        "green",
+        "yellow",
+        "blue"
+      ],
+      "country": "Italy",
+      "dating": {
+        "displayLabel": "Not yet dated",
+        "certainty": "unknown"
+      },
+      "dimensions": {
+        "heightMm": 105,
+        "widthMm": 310,
+        "depthMm": 180,
+        "weightG": 3280
+      },
+      "heroImageId": "IMG-M009-FRONT",
+      "imageIds": [
+        "IMG-M009-FRONT",
+        "IMG-M009-TOP",
+        "IMG-M009-REVERSE",
+        "IMG-M009-SIDE",
+        "IMG-M009-SIDE-2",
+        "IMG-M009-DETAIL",
+        "IMG-M009-BASE",
+        "IMG-M009-SIGNATURE",
+        "IMG-M009-LABEL"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M009-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "Underside",
+          "observation": "Cursive signature in two lines, scratched into the glass with a hard point over the banded calcedonio. The strokes are frosted white and partly lost against the paler bands.",
+          "transcription": "Zanetti / Oscar",
+          "transcriptionNote": "Read from the owner's close-up photograph. With the letters upright, 'Zanetti' runs above 'Oscar'. The capital O and 'scar' are clear; the middle letters of 'Zanetti' are harder to make out.",
+          "transcriptionCertainty": "probable",
+          "interpretation": "The signature of Oscar Zanetti. It has not yet been compared with documented signatures, and the founder of the firm was also called Oscar, so it is not yet confirmed that this is the hand of the present master (b. 1961).",
+          "interpretationCertainty": "probable",
+          "imageId": "IMG-M009-SIGNATURE"
+        },
+        {
+          "id": "MRK-M009-LABEL",
+          "kind": "label",
+          "application": "printed_label",
+          "location": "Outer wall, near the rim",
+          "observation": "Small square gold foil label printed in white: a double arch around a stylised monogram, with ZANETTI and Murano below between thin rules. The left edge is slightly damaged.",
+          "transcription": "[monogram ZL] / ZANETTI / Murano",
+          "transcriptionNote": "Read from the photograph. The words are clear; the monogram under the arch is read as the letters Z and L.",
+          "transcriptionCertainty": "probable",
+          "interpretation": "Original label of the Zanetti furnace on Murano (Zanetti Murano). What the ZL monogram stands for, and in which years this label was used, has not been established; it may refer to Licio Zanetti, but that is not documented.",
+          "interpretationCertainty": "probable",
+          "imageId": "IMG-M009-LABEL"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Probably by Oscar Zanetti (b. 1961), Zanetti Murano",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M009",
+              "locator": "signature and label, own photographs"
+            },
+            {
+              "sourceId": "SRC-SCHIAVON-OSCAR-ZANETTI",
+              "locator": "biography and works in calcedonio"
+            }
+          ],
+          "publicNote": "Based on the incised signature, read as Oscar Zanetti, and the original Zanetti Murano label (see Marks & Labels). Calcedonio shells cased in clear glass are a recurring model under his name. The signature has not yet been compared with documented examples, and the founder of the firm was also called Oscar, so the attribution is not yet confirmed."
+        },
+        {
+          "field": "glasshouse",
+          "statement": "Made at the Zanetti furnace (Zanetti Murano), Murano",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M009",
+              "locator": "gold label on the outer wall"
+            },
+            {
+              "sourceId": "SRC-VENETO-VAM-CONCESSIONARIES",
+              "locator": "Zanetti Vetreria Artistica S.r.l. (023)"
+            }
+          ],
+          "publicNote": "The gold label names Zanetti, Murano. The firm trades as Zanetti Murano and is registered with the Veneto Region as Zanetti Vetreria Artistica S.r.l. A label identifies the firm but can be moved or added later, so it supports the attribution without proving it."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M009",
+              "locator": "label"
+            }
+          ],
+          "publicNote": "Based on the label, which reads ZANETTI Murano. No Vetro Artistico® Murano trademark label has been found on the piece; that label was introduced only after 1994 and is often removed, so its absence says nothing either way."
+        },
+        {
+          "field": "technique",
+          "statement": "Calcedonio worked with heavy clear glass",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "The opaque, banded colours that follow the form, amber to purple inside and grey-green outside, show the characteristics of calcedonio. The rim and the pulled points are clear glass. The glass has not been tested."
+        },
+        {
+          "field": "dating",
+          "statement": "Date of making not established",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "If the signature is that of the present Oscar Zanetti, who joined the family furnace in 1986, the bowl was made after the mid-1980s. Because that is not yet confirmed and the label type has not been dated, no date range is given."
+        }
+      ],
+      "condition": "A full condition report has not yet been made.",
+      "comparables": [
+        {
+          "kind": "dealer_listing",
+          "title": "Calcedonio shell by Oscar Zanetti (online marketplace listing)",
+          "stated": [
+            "Offered online as a calcedonio shell by Oscar Zanetti.",
+            "Calcedonio glass, in a colourway different from the MURANIQ shell."
+          ],
+          "comparison": "Compared by the owner on the listing photographs: the same asymmetric shell form with pulled clear points, in other colours. MURANIQ could not open the listing for this review, so the comparison has not been repeated, and a seller's attribution is not evidence on its own. If confirmed, it shows that the model was made in several colourways.",
+          "sourceId": "SRC-EBAY-186675269378"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Sculptural shell-shaped bowl in banded calcedonio glass, with a clear glass rim and pulled clear points.",
+          "Length 31 cm, width 18 cm, height 10.5 cm, weight 3.28 kg (measured by the owner).",
+          "Cursive signature scratched into the underside, read as 'Zanetti / Oscar'.",
+          "Original gold Zanetti Murano label with an arched ZL monogram.",
+          "The Zanetti furnace is a licensed Vetro Artistico® Murano firm (code 023) in the Veneto Region's register."
+        ],
+        "plausible": [
+          "Made by Oscar Zanetti (b. 1961) at the family furnace on Murano.",
+          "One colourway of a calcedonio shell model made in several colours."
+        ],
+        "open": [
+          "When the bowl was made.",
+          "The model name and number: the firm's online catalogue is reported to list several calcedonio shells, which still have to be compared with this bowl.",
+          "Comparison of the signature with documented signatures of Oscar Zanetti, and of the label with dated examples.",
+          "What the ZL monogram on the label stands for, and when the label was used."
+        ],
+        "reviewedOn": "2026-11-18"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M009",
+        "SRC-SCHIAVON-OSCAR-ZANETTI",
+        "SRC-VENETO-VAM-CONCESSIONARIES"
+      ],
+      "relatedIds": [],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 78,
+      "seo": {
+        "title": "Calcedonio shell bowl signed Oscar Zanetti",
+        "description": "A sculptural calcedonio shell bowl worked with clear glass, signed Oscar Zanetti and with its Zanetti Murano label. MURANIQ private collection."
+      },
+      "updatedAt": "2026-11-18"
     }
   ],
   "media": [
@@ -894,6 +1088,123 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M009-FRONT",
+      "artworkId": "MUR-M009",
+      "viewType": "front",
+      "src": "/images/collection/m009/m009-front-71fb50f0.jpg",
+      "width": 2200,
+      "height": 1440,
+      "alt": "Calcedonio shell bowl seen from above at an angle: amber, olive and purple bands inside, a clear curled lip, pulled clear points around the side and a small gold label on the outer wall",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-TOP",
+      "artworkId": "MUR-M009",
+      "viewType": "top",
+      "src": "/images/collection/m009/m009-top-87c2a7ad.jpg",
+      "width": 1631,
+      "height": 2200,
+      "alt": "The shell bowl seen from directly above: a heart-shaped opening lined with concentric bands of amber, olive, lavender and purple, framed by a clear rim",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-REVERSE",
+      "artworkId": "MUR-M009",
+      "viewType": "reverse",
+      "src": "/images/collection/m009/m009-reverse-f6a779cd.jpg",
+      "width": 2200,
+      "height": 1476,
+      "alt": "The shell bowl from the opposite side, showing the broad curled lip, the banded interior and the clear pulled points",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-SIDE",
+      "artworkId": "MUR-M009",
+      "viewType": "side",
+      "src": "/images/collection/m009/m009-side-1-98a6b3b0.jpg",
+      "width": 2200,
+      "height": 1331,
+      "alt": "The shell bowl in profile: a grey-green banded outer wall with streaks of yellow, clear pulled points and the gold label at the left end",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-SIDE-2",
+      "artworkId": "MUR-M009",
+      "viewType": "side",
+      "src": "/images/collection/m009/m009-side-2-f446fc66.jpg",
+      "width": 2200,
+      "height": 1266,
+      "alt": "The other long side of the shell bowl, with grey-green and blue bands under clear glass and clear pulled points along the lower edge",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-DETAIL",
+      "artworkId": "MUR-M009",
+      "viewType": "detail",
+      "src": "/images/collection/m009/m009-detail-1-fea2e7bf.jpg",
+      "width": 1954,
+      "height": 2200,
+      "alt": "The shell bowl seen end-on from its pointed tip, with the two sides curling up and the colour bands visible inside",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-BASE",
+      "artworkId": "MUR-M009",
+      "viewType": "base",
+      "src": "/images/collection/m009/m009-base-5ab00a16.jpg",
+      "width": 2200,
+      "height": 1551,
+      "alt": "Close-up of the rounded underside: grey-green, blue and olive calcedonio bands seen through smooth glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-SIGNATURE",
+      "artworkId": "MUR-M009",
+      "viewType": "signature",
+      "src": "/images/collection/m009/m009-signature-16edb5d5.jpg",
+      "width": 2198,
+      "height": 2200,
+      "alt": "Close-up of a cursive signature scratched into the glass over olive and green bands, read as Zanetti above Oscar",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M009-LABEL",
+      "artworkId": "MUR-M009",
+      "viewType": "label",
+      "src": "/images/collection/m009/m009-label-57a6c26f.jpg",
+      "width": 2200,
+      "height": 1539,
+      "alt": "Square gold foil label printed in white: an arch around a ZL monogram, with ZANETTI and Murano below",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -997,6 +1308,24 @@
       "publisher": "Olnick Spanu Collection",
       "url": "https://olnickspanu.com/artist/alfredo-barbini/",
       "reliabilityNote": "Collection website. Covers Barbini's career, including S.A.I.A.R. Ferro Toso, Gino Cenedese & C. and his corroso sculptures at the 1948 Venice Biennale. Context only; not evidence for this horse. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M009",
+      "type": "observation",
+      "title": "Object record MUR-M009: examination and photographs by the owner (18 November 2026)",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "First-hand observation of the object, its signature and its label, with measurements and weight taken by the owner.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-EBAY-186675269378",
+      "type": "other",
+      "title": "Calcedonio shell listed under Oscar Zanetti (eBay item 186675269378)",
+      "publisher": "eBay",
+      "url": "https://www.ebay.com/itm/186675269378",
+      "reliabilityNote": "Marketplace listing found by the owner; the attribution is the seller's own. It could not be opened from MURANIQ's research environment on 18 November 2026, and listings expire. Used only to compare the form.",
       "isFixture": false
     }
   ]

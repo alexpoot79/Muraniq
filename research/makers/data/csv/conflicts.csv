@@ -29,3 +29,6 @@ CF-VISTOSI-CONTINUITY,Historic Vetreria Vistosi closed early 1990s (OS) vs brand
 CF-SALIR-FOUNDING,S.A.L.I.R. founded 1923 vs 1924.,CLM-0116 | CLM-0117,,OPEN
 CF-NASON-MORETTI-FOUNDING,Nason & Moretti founded 1923 vs 1925.,CLM-0118 | CLM-0119,,OPEN
 CF-MET-VENINI-NAMES,The Met uses anachronistic firm names for Venini objects (Venini S.p.a. for 1948; V.S.M. for 1949–56).,CLM-0124 | CLM-0125,,OPEN
+CF-ZANETTI-MURANO-FOUNDED,Founding year of the Zanetti furnace (1956 / 1957).,CLM-0126 | CLM-0127,1956 is the firm's own date and the majority; the 1957 figure comes from one dealer page seen only in search summaries. Company records not yet seen.,ACCEPTED_AS_UNCERTAIN
+CF-ZANETTI-MURANO-HANDOVER,When Licio Zanetti handed the furnace to his son Oscar (1989 / 1969).,CLM-0128 | CLM-0129,"1969 is impossible for a son born in 1961; 1989 accepted provisionally, from dealer texts only.",ACCEPTED_AS_UNCERTAIN
+CF-ZANETTI-MURANO-VAM-CODE,Zanetti's Vetro Artistico® Murano concessionaire code (023 / 010).,CLM-0130 | CLM-0131,The Regione del Veneto register (read 2026-11-18) gives 023 for Zanetti Vetreria Artistica S.r.l.; the collector's list is outdated or wrong.,RESOLVED

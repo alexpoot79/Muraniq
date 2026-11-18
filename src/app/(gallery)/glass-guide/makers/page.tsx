@@ -18,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
 
 const STATUS: Record<string, string> = {
   reviewed: "Biography reviewed",
+  in_research: "Profile in research",
   migrated_unreviewed: "Biography being checked against sources",
   pending_migration: "Biography in preparation",
   reference_only: "Reference profile",

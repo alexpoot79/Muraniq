@@ -75,6 +75,38 @@ describe("dataset validation", () => {
     );
   });
 
+  it("keeps prices out of maker profiles and technique texts too", () => {
+    const d = clone();
+    const c = d.creators.find((x) => x.id === "CRE-OSCAR-ZANETTI")!;
+    c.sections = [...(c.sections ?? []), { heading: "Market", paragraphs: ["Sold for £123 (synthetic test value)."] }];
+    d.techniques.find((t) => t.id === "TEC-CALCEDONIA")!.body.push("A shell sold for $45 (synthetic test value).");
+    const r = validateDataset(d);
+    const paths = r.issues.filter((i) => i.message.includes("prices are never published")).map((i) => i.path);
+    expect(paths).toEqual(expect.arrayContaining([expect.stringContaining("CRE-OSCAR-ZANETTI"), expect.stringContaining("TEC-CALCEDONIA")]));
+  });
+
+  it("checks the techniques named on a maker profile and the makers named on a technique", () => {
+    const d = clone();
+    d.creators.find((x) => x.id === "CRE-OSCAR-ZANETTI")!.techniqueIds = ["TEC-NOPE"];
+    d.techniques.find((t) => t.id === "TEC-CALCEDONIA")!.creatorIds = ["CRE-NOPE"];
+    const msgs = validateDataset(d).issues.map((i) => i.message);
+    expect(msgs).toEqual(expect.arrayContaining(["unknown technique TEC-NOPE", "unknown creator CRE-NOPE"]));
+  });
+
+  it("links the Zanetti shell, its maker and the calcedonio technique both ways, without prices", () => {
+    const pub = buildPublication(validateDataset(fixtureDataset).data!);
+    const maker = pub.creators.find((c) => c.slug === "oscar-zanetti")!;
+    expect(maker.artworkIds).toContain("MUR-M009");
+    expect(maker.techniqueIds).toContain("TEC-CALCEDONIA");
+    const tech = pub.techniques.find((t) => t.slug === "calcedonia")!;
+    expect(tech.artworkIds).toContain("MUR-M009");
+    expect(tech.creatorIds).toContain("CRE-OSCAR-ZANETTI");
+    const shell = pub.artworks.find((a) => a.id === "MUR-M009")!;
+    expect(shell.attributionLine).toBe("Probably by Oscar Zanetti");
+    const text = JSON.stringify([maker, tech]);
+    expect(text).not.toMatch(/[€$£]\s?\d|\b(?:EUR|USD|GBP)\s?\d/);
+  });
+
   it("rejects a comparable example without a known source", () => {
     const d = clone();
     d.artworks.find((x) => x.id === "MUR-M007")!.comparables![0]!.sourceId = "SRC-NOPE";

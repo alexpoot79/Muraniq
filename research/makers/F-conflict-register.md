@@ -281,3 +281,30 @@ The Met uses anachronistic firm names for Venini objects (Venini S.p.a. for 1948
 | `CLM-0124` | Venini | museum_name_variant | 'Venini S.p.a.' used for a ca. 1948 object | `SRC-MET-API` (A) | [link](https://www.metmuseum.org/art/collection/search/484566) |
 | `CLM-0125` | Venini | museum_name_variant | 'Vetri Soffiati Muranesi e C.' used for objects of ca. 1949 and 1955–56 | `SRC-MET-API` (A) | [link](https://www.metmuseum.org/art/collection/search/484662) |
 
+## CF-ZANETTI-MURANO-FOUNDED (ACCEPTED_AS_UNCERTAIN)
+
+Founding year of the Zanetti furnace (1956 / 1957).
+
+| Claim | Entity | Field | Value | Source | Locator |
+|---|---|---|---|---|---|
+| `CLM-0126` | Zanetti Murano | founded | 1956 | `SRC-WEB-MURANONET-ZANETTI` (C) | [source](https://muranonet.com/blogs/unfold-venice/zanetti-vetreria-artistica) |
+| `CLM-0127` | Zanetti Murano | founded | 1957 ('opened for business') | `SRC-WEB-SEARCH-ZANETTI-20261118` (C) | — |
+
+## CF-ZANETTI-MURANO-HANDOVER (ACCEPTED_AS_UNCERTAIN)
+
+When Licio Zanetti handed the furnace to his son Oscar (1989 / 1969).
+
+| Claim | Entity | Field | Value | Source | Locator |
+|---|---|---|---|---|---|
+| `CLM-0128` | Zanetti Murano | handover Licio → Oscar | 1989 | `SRC-WEB-MURANONET-ZANETTI` (C) | [source](https://muranonet.com/blogs/unfold-venice/zanetti-vetreria-artistica) |
+| `CLM-0129` | Zanetti Murano | handover Licio → Oscar | 1969 | `SRC-WEB-SEARCH-ZANETTI-20261118` (C) | — |
+
+## CF-ZANETTI-MURANO-VAM-CODE (RESOLVED)
+
+Zanetti's Vetro Artistico® Murano concessionaire code (023 / 010).
+
+| Claim | Entity | Field | Value | Source | Locator |
+|---|---|---|---|---|---|
+| `CLM-0130` | Zanetti Murano | Vetro Artistico Murano code | 023 | `SRC-REGIONE-VENETO-VAM-CONCESSIONARIE` (A) | [source](https://www.regione.veneto.it/web/attivita-produttive/aziende-concessionarie) |
+| `CLM-0131` | Zanetti Murano | Vetro Artistico Murano code | 010 (023 given to Effetre International) | `SRC-WEB-SEARCH-ZANETTI-20261118` (C) | — |
+
