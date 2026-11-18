@@ -2,6 +2,14 @@ import Image from "next/image";
 import type { PublicMedia } from "@/content/public-projection";
 
 /**
+ * Attributes for MURANIQ's own photographs: no drag-out, and the page-wide
+ * PhotoGuard blocks the right-click menu on them. Museum images stay normal.
+ */
+export function ownPhotoProps(media: Pick<PublicMedia, "ownPhoto">) {
+  return media.ownPhoto ? ({ "data-own-photo": "", draggable: false } as const) : {};
+}
+
+/**
  * Object photography. Default: the whole photograph at its own proportions
  * (object-contain, known dimensions, no layout shift). `fill` places it in a
  * sized parent; with `fit="contain"` the object is never cropped, with
@@ -36,6 +44,7 @@ export function ArtworkImage({
   if (fill)
     return (
       <Image
+        {...ownPhotoProps(media)}
         src={media.src}
         alt={alt}
         fill
@@ -49,6 +58,7 @@ export function ArtworkImage({
     );
   return (
     <Image
+      {...ownPhotoProps(media)}
       src={media.src}
       alt={alt}
       width={media.width}
@@ -72,6 +82,7 @@ export function ImageBackdrop({ media, sizes, vignette = true }: { media: Public
   return (
     <>
       <Image
+        {...ownPhotoProps(media)}
         src={media.src}
         alt=""
         aria-hidden="true"

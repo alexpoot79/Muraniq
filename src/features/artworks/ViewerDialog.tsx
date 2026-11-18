@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import type { PublicMedia } from "@/content/public-projection";
+import { ownPhotoProps } from "@/components/editorial/ArtworkImage";
 
 const ZOOMS = [1, 1.75, 2.5, 3.5] as const;
 
@@ -142,6 +143,7 @@ export function ViewerDialog({
             {current && (
               // eslint-disable-next-line @next/next/no-img-element -- full-resolution view requested by the visitor
               <img
+                {...ownPhotoProps(current)}
                 src={current.src}
                 alt={current.alt}
                 width={current.width}

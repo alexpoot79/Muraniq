@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { PhotoGuard } from "@/components/layout/PhotoGuard";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { PreviewBanner } from "@/features/preview/PreviewBanner";
 import { SITE } from "@/lib/site";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <PhotoGuard />
         <JsonLd
           data={{
             "@context": "https://schema.org",

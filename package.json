@@ -19,6 +19,7 @@
     "collection:import": "tsx --tsconfig tsconfig.json scripts/collection/import.ts",
     "collection:template": "tsx --tsconfig tsconfig.json scripts/collection/template.ts",
     "collection:cards": "tsx --tsconfig tsconfig.json scripts/collection/cards.ts",
+    "collection:protect": "tsx --tsconfig tsconfig.json scripts/collection/protect.ts",
     "check": "npm run typecheck && npm run lint && npm run test && npm run validate:content"
   },
   "dependencies": {

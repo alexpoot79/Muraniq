@@ -31,13 +31,16 @@ export function Viewer({ media, title }: { media: PublicMedia[]; title: string }
     <div className="flex min-w-0 flex-col gap-5">
       <figure className="plate relative flex items-center justify-center overflow-hidden px-4 py-6 sm:px-10 sm:py-10">
         <ImageBackdrop media={current} sizes="(min-width: 64rem) 52vw, 100vw" />
-        <div className="relative mx-auto w-fit max-w-full shadow-[0_30px_80px_-30px_rgb(0_0_0_/_0.6)]">
-          <ArtworkImage
-            media={current}
-            sizes="(min-width: 64rem) 52vw, 100vw"
-            priority={index === 0}
-            className="max-h-[72svh] w-auto max-w-full"
-          />
+        {/* The frame takes the photograph's proportions and the largest size that fits the plate and 72svh,
+            whatever the pixel size of the file (web versions are at most 1600 px). */}
+        <div
+          className="relative mx-auto max-w-full shadow-[0_30px_80px_-30px_rgb(0_0_0_/_0.6)]"
+          style={{
+            aspectRatio: `${current.width} / ${current.height}`,
+            width: `min(100%, calc(72svh * ${(current.width / current.height).toFixed(4)}))`,
+          }}
+        >
+          <ArtworkImage media={current} sizes="(min-width: 64rem) 52vw, 100vw" priority={index === 0} fill />
           {showHotspots &&
             hotspots.map((h, i) => (
               <span
