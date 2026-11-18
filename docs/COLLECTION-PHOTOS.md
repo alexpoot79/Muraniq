@@ -88,6 +88,11 @@ Rules live in `scripts/collection/sheet.ts` (cells) and `scripts/collection/reco
 - **Interne notitie** is never read. The sheet must not hold prices, values, addresses or storage locations:
   everything imported ends up in a public repository.
 - Unchanged rows are left alone (no new `updatedAt`).
+- **Restated values keep hand-written research.** The template pre-fills existing objects, so a row often repeats
+  what the record says. When maker and basis give the same statement and certainty as the record, its own
+  attribution (wording, evidence, creator links) stays; the same period label keeps its years and certainty.
+  Only a real change in the sheet rewrites them. Downloading a fresh template and importing it unchanged leaves
+  `fixtures/collection.json` byte-for-byte the same.
 
 Before anything is written, the whole dataset (reference works + own collection) is validated with
 `validateDataset`. If it fails, nothing is written. Rows with errors are skipped and listed in `rapport.md`.

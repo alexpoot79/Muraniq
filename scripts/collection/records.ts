@@ -153,25 +153,36 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
   const keptAssertions = (ex?.assertions ?? []).filter((a) => a.field !== "creator");
   const ownSourcePrefix = `SRC-${sid}-`;
   let creators = ex?.creators ?? [];
-  let creatorAssertion = (ex?.assertions ?? []).find((a) => a.field === "creator");
+  const exCreatorAssertion = (ex?.assertions ?? []).find((a) => a.field === "creator");
+  let creatorAssertion = exCreatorAssertion;
   let sources: SourceRecord[] = ctx.existing?.sources.filter((s) => s.id.startsWith(ownSourcePrefix)) ?? [];
   const touchedAttribution = row.maker !== undefined || row.basis !== undefined || !creatorAssertion;
   let certainty: Certainty = creatorAssertion?.certainty ?? "unknown";
   if (touchedAttribution) {
     const basis = row.maker ? (row.basis ?? "unknown") : "unknown";
-    certainty = BASIS_CERTAINTY[basis];
-    sources = [];
-    if (basis === "documented" && row.sourceText) {
-      sources = [{ id: `${ownSourcePrefix}1`, type: "other", title: row.sourceText, isFixture: false }];
-    }
-    creatorAssertion = {
+    const newCertainty = BASIS_CERTAINTY[basis];
+    const newSources: SourceRecord[] =
+      basis === "documented" && row.sourceText
+        ? [{ id: `${ownSourcePrefix}1`, type: "other", title: row.sourceText, isFixture: false }]
+        : [];
+    const candidate: AssertionRecord = {
       field: "creator",
-      statement: certainty === "unknown" ? "Maker not documented" : attributionPhrase(row.maker!, certainty),
-      certainty,
-      evidence: sources.map((s) => ({ sourceId: s.id })),
+      statement: newCertainty === "unknown" ? "Maker not documented" : attributionPhrase(row.maker!, newCertainty),
+      certainty: newCertainty,
+      evidence: newSources.map((s) => ({ sourceId: s.id })),
       publicNote: BASIS_NOTE[basis],
     };
-    creators = [];
+    // A row that only restates the attribution already on the record (the template pre-fills it) keeps the
+    // record's own wording, evidence and creator links, which may have been written by hand.
+    if (!(creatorAssertion && restatesAttribution(creatorAssertion, candidate, sources, row.sourceText))) {
+      certainty = newCertainty;
+      sources = newSources;
+      creatorAssertion = candidate;
+      creators = [];
+    }
+  }
+  const attributionChanged = creatorAssertion !== exCreatorAssertion;
+  if (attributionChanged) {
     if (row.maker && certainty !== "unknown") {
       const c = matchCreator(row.maker, ctx.creators);
       if (c) {
@@ -185,11 +196,16 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
 
   // Dating
   let dating = ex?.dating;
-  if (row.period) {
+  const samePeriod = !!row.period && row.period.displayLabel === ex?.dating?.displayLabel;
+  // The same period label with the same attribution keeps the record's dating (years and certainty may have
+  // been set by hand); a literal label such as "Late 20th century (provisional)" has no years of its own.
+  if (row.period && !(samePeriod && !attributionChanged)) {
+    const fromYear = row.period.fromYear ?? (samePeriod ? ex?.dating?.fromYear : undefined);
+    const toYear = row.period.toYear ?? (samePeriod ? ex?.dating?.toYear : undefined);
     dating = {
       displayLabel: row.period.displayLabel,
-      ...(row.period.fromYear ? { fromYear: row.period.fromYear } : {}),
-      ...(row.period.toYear ? { toYear: row.period.toYear } : {}),
+      ...(fromYear ? { fromYear } : {}),
+      ...(toYear ? { toYear } : {}),
       certainty: certainty === "unknown" ? "probable" : certainty,
     };
   }
@@ -335,6 +351,27 @@ export function buildRecord(row: IntakeRow, ctx: BuildContext): BuildResult {
 }
 
 type MarkRecord = NonNullable<ArtworkRecord["marks"]>[number];
+type AssertionRecord = NonNullable<ArtworkRecord["assertions"]>[number];
+
+const STANDARD_NOTES = new Set(Object.values(BASIS_NOTE));
+
+/**
+ * True when a sheet row says the same as the creator assertion already on the record: same statement and
+ * certainty, the same Bron when the record has its own source, and the same note unless the note was written
+ * by hand. The template pre-fills existing objects, so this is the normal case for a row nobody changed.
+ */
+export function restatesAttribution(
+  existing: AssertionRecord,
+  candidate: AssertionRecord,
+  ownSources: readonly SourceRecord[],
+  sourceText: string | undefined,
+): boolean {
+  if (existing.statement !== candidate.statement || existing.certainty !== candidate.certainty) return false;
+  if (sourceText && ownSources[0] && ownSources[0].title !== sourceText) return false;
+  if (existing.publicNote && STANDARD_NOTES.has(existing.publicNote) && existing.publicNote !== candidate.publicNote)
+    return false;
+  return true;
+}
 
 /**
  * Hand-written details of a mark (how it was applied, a fuller observation, the
