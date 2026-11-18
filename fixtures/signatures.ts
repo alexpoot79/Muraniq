@@ -146,7 +146,7 @@ export const signatureReferences: SignatureReference[] = [
     ],
     reviewedOn: "2026-11-18",
     internalNote:
-      "Location 'Underside' inferred from the photographs (same banding as the base view); ask the owner to confirm. Compare with the incised signatures on the Heritage 2025 lot 29045 and the Halls 2025 lot 12 when those pages can be opened.",
+      "Location 'Underside' confirmed by the owner on 18 November 2026. Compare with the incised signatures on the Heritage 2025 lot 29045 and the Halls 2025 lot 12 when those pages can be opened.",
     status: "published",
     updatedAt: "2026-11-18",
   },

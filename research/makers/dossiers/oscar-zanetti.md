@@ -45,7 +45,7 @@ Dit dossier is het interne record achter drie publieke pagina's. Data-waarden st
 | Goudkleurig etiket | Boog met ZL-monogram, daaronder ZANETTI en Murano | UNVERIFIED; ZL mogelijk Licio, niet gedocumenteerd. Een etiket wijst het bedrijf aan, niet de meester |
 | Vetro Artistico® Murano | Regionaal keurmerk met concessiecode 023 | PARTIALLY_VERIFIED: code in het register; het etiket zelf nog niet op een Zanetti-stuk gezien |
 
-Te controleren: zit de signatuur op MUR-M009 werkelijk op de onderkant (zo vastgelegd, op basis van de foto's), en hoe verhoudt de hand zich tot de signaturen op de stukken van Halls (12-02-2025) en Heritage (13-06-2025)?
+De signatuur op MUR-M009 zit op de onderkant (bevestigd door de eigenaar, 18-11-2026). Nog te controleren: hoe verhoudt de hand zich tot de signaturen op de stukken van Halls (12-02-2025) en Heritage (13-06-2025)?
 
 ## 4. Catalogusreferenties (niet gekoppeld)
 
