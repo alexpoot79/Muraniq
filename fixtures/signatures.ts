@@ -123,6 +123,35 @@ export const signatureReferences: SignatureReference[] = [
     status: "published",
     updatedAt: "2026-11-11",
   },
+  {
+    // MURANIQ's own sculpture MUR-M010 and the owner's own photographs (18 Nov 2026).
+    // The owner reads the signature as Andrea Tagliapietra's; it is not clearly legible
+    // and has not been compared with a documented signature, so it stays "probable" and
+    // does not lead the maker card or the compact block (only firm references do).
+    id: "SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED",
+    title: "Engraved cursive signature on the underside",
+    sortOrder: 10,
+    variantGroup: "engraved-cursive",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M010", markId: "MRK-M010-SIGNATURE" },
+    markOf: { creatorId: "CRE-TAGLIAPIETRA-ANDREA", role: "maker", certainty: "probable" },
+    object: { artworkId: "MUR-M010" },
+    detailImageId: "IMG-M010-SIGNATURE-DETAIL",
+    contextImageIds: ["IMG-M010-SIGNATURE", "IMG-M010-FRONT"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M010",
+        consultedOn: "2026-11-18",
+        note: "The owner's photographs of the signature and of the whole sculpture.",
+      },
+    ],
+    reviewedOn: "2026-11-18",
+    internalNote:
+      "Compare with documented signatures (signed auction lots with photographs, a Schiavon certificate) before raising the certainty.",
+    status: "published",
+    updatedAt: "2026-11-18",
+  },
 ];
 
 export const SIGNATURE_SOURCE_URLS = { AIC_1979_904, AIC_1988_541_285 };

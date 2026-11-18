@@ -100,7 +100,8 @@ Before anything is written, the whole dataset (reference works + own collection)
 ## Research written by hand (one object at a time)
 
 Some objects get a full research dossier, e.g. **M007**, the aquamarine scavo corroso vase with a Seguso Arte Vetro
-label, and **M008**, the green scavo horse with gold leaf, which has no mark at all (both 18 November 2026).
+label, **M008**, the green scavo horse with gold leaf, which has no mark at all, and **M010**, the calcedonio
+sculpture of a reclining couple with an engraved signature read by the owner as Andrea Tagliapietra's (all 18 November 2026).
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:
 

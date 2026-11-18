@@ -455,6 +455,36 @@ const referenceDataset: DatasetInput = {
       sourceIds: [aicId("1906.104")],
       status: "published",
     },
+    {
+      // Biography from the Franco Schiavon Gallery's artist page (the gallery that represents him), read 18 Nov 2026.
+      // Every statement is attributed; no second, independent source has been read yet.
+      // Not the same person as Lino Tagliapietra (b. 1934); no kinship is stated anywhere.
+      id: "CRE-TAGLIAPIETRA-ANDREA",
+      slug: "andrea-tagliapietra",
+      kind: "person",
+      name: "Andrea Tagliapietra",
+      roles: ["maker"],
+      lifeLabel: "b. 1955",
+      summary:
+        "Murano glass maestro, born on the island in 1955, known for solid sculptures in clear glass and calcedonio, among them his series of Lovers.",
+      biography: [
+        "Andrea Tagliapietra was born on Murano on 7 February 1955, according to the biography published by the Franco Schiavon Gallery, the Murano gallery that represents his work. He began working with glass at fourteen as an apprentice to the maestro Ermanno Nason, following his father, Erminio Tagliapietra, a master at the Salviati glassworks. In 1979 he became a maestro himself.",
+        "In 1980 he began to make sculpture of his own. The gallery dates his first exhibition to 1983, at the Fondazione Bevilacqua La Masa in Venice, with a sculpture on the theme of motherhood, and records later exhibitions in galleries from Vienna to Tokyo, among them Palm Beach and New York. It also names him as the teacher of the maestro Mirco Bastianello.",
+        "He works above all in solid glass (massello), shaped hot at the furnace, and in calcedonio, the marbled glass whose bands of colour recall agate and other hardstones. The gallery counts him among the few virtuosos of calcedonio today. His best-known subjects are couples, sold as Lovers, and marine animals such as dolphins, turtles and sharks. In the works examined for MURANIQ the figures are reduced to a few flowing volumes, the heads to simple ovals, and clear and coloured glass are set against each other so that the bands of calcedonio are seen through a thick, transparent mass.",
+        "The Franco Schiavon Gallery sells his work under his own name and credits some models, among them a reclining couple in clear glass sold as Lying lovers, jointly to ‘Andrea Tagliapietra ft Studio Franco Schiavon’. An American auction house catalogued a Lying Lovers sculpture in 2026 as made by him for Franco Schiavon. The sources consulted do not say how or since when the two have worked together, so on MURANIQ a link with Franco Schiavon is stated only for a work that documents it.",
+        "Tagliapietra is an old Murano family name. The sources consulted do not state any relationship between Andrea Tagliapietra and the maestro Lino Tagliapietra (born 1934), and none is assumed here.",
+        "This biography rests on a single source, the gallery's own biography, which has not yet been compared with an independent publication. Exhibition records, catalogues and documented signatures are still being collected.",
+      ],
+      biographyStatus: "reviewed",
+      sourceIds: [
+        "SRC-SCHIAVON-ANDREA-TAGLIAPIETRA",
+        "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY",
+        "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS",
+        "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
+      ],
+      signatureRefIds: ["SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED"],
+      status: "published",
+    },
   ],
   glasshouses: [],
   techniques: [

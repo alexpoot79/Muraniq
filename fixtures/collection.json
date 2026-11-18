@@ -632,6 +632,217 @@
       "featured": false,
       "curatedOrder": 77,
       "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "MUR-M010",
+      "slug": "andrea-tagliapietra-calcedonio-glass-sculpture",
+      "title": "Calcedonio glass sculpture of a reclining couple",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A solid glass sculpture of a reclining couple, in colourless glass with flowing bands of calcedonio in blue, violet, red, amber and green. It is 38 cm long and carries an engraved signature that the owner identifies as Andrea Tagliapietra's.",
+      "description": [
+        "A solid glass sculpture of two reclining figures, reduced to a few flowing volumes. The long body lies along the ground and tapers to a point at one end; at the other it rises steeply to two oval heads set side by side, one in banded calcedonio and one in colourless glass, with an arm forming a ring around them. A groove running along the upper surface lets the form be read as two figures lying close together.",
+        "Most of the volume is thick, colourless glass. Through it run bands of calcedonio, the marbled glass that imitates agate and other hardstones: blue, violet and red along the base, amber, yellow and green towards the pointed end, and a deep red in one of the heads. As the sculpture is turned, the bands shift and multiply in the clear glass. The surfaces are smooth and glossy.",
+        "The sculpture is 38 cm long and 17.5 cm high and weighs 3.1 kg. It is about 10 cm wide; that measurement is still to be confirmed. A cursive signature is engraved on the underside, which the owner identifies as that of Andrea Tagliapietra (see Marks).",
+        "Both the subject and the handling match a calcedonio Lovers sold under Andrea Tagliapietra's name by the Franco Schiavon Gallery on Murano: the same simplified, fused bodies, one head colourless and one in calcedonio, and an arm ringing the shoulders. A sculpture catalogued at auction in 2026 as 'Lying Lovers' by him suggests a name for the model, but it is smaller and has not been shown to be the same model, so the name is used here only provisionally. When this sculpture was made has not yet been established."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-TAGLIAPIETRA-ANDREA",
+          "role": "maker",
+          "certainty": "probable"
+        }
+      ],
+      "techniqueIds": [
+        "TEC-CALCEDONIA"
+      ],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "colourless",
+        "blue",
+        "violet",
+        "red",
+        "amber",
+        "green"
+      ],
+      "country": "Italy",
+      "dating": {
+        "displayLabel": "Date under investigation",
+        "certainty": "unknown"
+      },
+      "dimensions": {
+        "heightMm": 175,
+        "widthMm": 380,
+        "weightG": 3100
+      },
+      "heroImageId": "IMG-M010-FRONT",
+      "imageIds": [
+        "IMG-M010-FRONT",
+        "IMG-M010-REVERSE",
+        "IMG-M010-SIDE",
+        "IMG-M010-DETAIL",
+        "IMG-M010-DETAIL-2",
+        "IMG-M010-DETAIL-3",
+        "IMG-M010-SIGNATURE",
+        "IMG-M010-SIGNATURE-DETAIL"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M010-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "underside",
+          "observation": "A cursive signature scratched into the glass in thin, even lines, written quickly with long diagonal strokes, on a dark violet calcedonio area of the underside.",
+          "transcriptionNote": "Not transcribed letter by letter: several letters are not clearly legible.",
+          "interpretation": "Identified by the owner as the signature of Andrea Tagliapietra. It has not yet been compared with a documented signature by him.",
+          "interpretationCertainty": "probable",
+          "imageId": "IMG-M010-SIGNATURE-DETAIL"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "Probably by Andrea Tagliapietra",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M010",
+              "locator": "engraved signature on the underside"
+            },
+            {
+              "sourceId": "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY",
+              "locator": "comparison of style and technique"
+            },
+            {
+              "sourceId": "SRC-SCHIAVON-ANDREA-TAGLIAPIETRA",
+              "locator": "calcedonio and the Lovers series"
+            }
+          ],
+          "publicNote": "Based on three consistent indications: the engraved signature on the underside, which the owner identifies as Andrea Tagliapietra's; the calcedonio technique, for which he is known; and the close match in style with a calcedonio Lovers sold under his name (see Comparable examples). The signature is not clearly legible and has not yet been compared with a documented signature, so the attribution is not confirmed."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "Follows from the attribution: Andrea Tagliapietra works on Murano. There is no label or 'Murano' mark on the sculpture."
+        },
+        {
+          "field": "dating",
+          "statement": "Not yet dated",
+          "certainty": "unknown",
+          "evidence": [
+            {
+              "sourceId": "SRC-SCHIAVON-ANDREA-TAGLIAPIETRA",
+              "locator": "maestro in 1979, own sculpture from 1980"
+            }
+          ],
+          "publicNote": "No date is recorded on the sculpture and no dated example of this model has been found. If it is by Andrea Tagliapietra, it was made after 1979, when he became a maestro according to his gallery's biography. Related models are still offered today."
+        },
+        {
+          "field": "technique",
+          "statement": "Calcedonio within colourless solid glass",
+          "certainty": "probable",
+          "evidence": [],
+          "publicNote": "The opaque, marbled bands of blue, violet, red, amber and green set within thick colourless glass show the characteristics of calcedonio. The glass has not been analysed."
+        },
+        {
+          "field": "other",
+          "statement": "Model name 'Lying Lovers': provisional",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
+              "locator": "sale of 16 May 2026"
+            },
+            {
+              "sourceId": "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS",
+              "locator": "related composition in colourless glass"
+            }
+          ],
+          "publicNote": "A sculpture catalogued at auction in 2026 as 'Lying Lovers' by Andrea Tagliapietra, and a related reclining couple sold by the Franco Schiavon Gallery as 'Lying lovers', suggest the name. Neither has been shown to be the same model as this sculpture, so the name is not used in its title."
+        },
+        {
+          "field": "other",
+          "statement": "Made for Franco Schiavon: not established",
+          "certainty": "unknown",
+          "evidence": [],
+          "publicNote": "Some works by Andrea Tagliapietra are sold by the Franco Schiavon Gallery on Murano or credited jointly to him and Studio Franco Schiavon. Nothing on this sculpture, such as a label or certificate, links it to Franco Schiavon, so no such link is stated."
+        }
+      ],
+      "condition": "A full condition report has not yet been made. The photographs show light surface scratches on the underside, around the signature.",
+      "comparables": [
+        {
+          "kind": "dealer_listing",
+          "title": "Lovers, chalcedony",
+          "stated": [
+            "Artist: Andrea Tagliapietra.",
+            "Chalcedony glass, on a chalcedony base.",
+            "Listed as H 85 [unit printed as 'm'], L 14 cm, P 13 cm.",
+            "Listed as ready to ship; no date given."
+          ],
+          "comparison": "A standing couple rather than a reclining one, but handled in the same way as this sculpture: two simplified, fused bodies; two oval heads side by side, one in colourless glass and one in banded calcedonio; an arm forming a ring around the shoulders; and bands of calcedonio running through clear glass. Compared on the gallery's photograph only. It is the closest match in style found so far.",
+          "sourceId": "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Lying lovers in crystal-clear glass",
+          "stated": [
+            "Artist: 'Andrea Tagliapietra ft Studio Franco Schiavon'.",
+            "Colourless (crystal-clear) glass.",
+            "H 47 cm, W 16 cm, D 14 cm.",
+            "Listed as ready to ship; no date given."
+          ],
+          "comparison": "The same subject in a similar composition: a couple lying along one long body, the raised end with two heads and a ring formed by an arm, the other end drawn out to a point. The gallery's piece is in colourless glass only and modelled in more detail, with two distinct bodies, arms and legs, while this sculpture is simpler and more abstract. Related, but not the same model. The joint credit to Studio Franco Schiavon applies to the gallery's piece; it is not known whether this sculpture was made for or sold by Franco Schiavon.",
+          "sourceId": "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS"
+        },
+        {
+          "kind": "auction_lot",
+          "title": "Andrea Tagliapietra LYING LOVERS Sculpture, Murano",
+          "stated": [
+            "Offered by Palm Beach Modern Auctions, Lake Worth Beach, Florida, on 16 May 2026.",
+            "By Andrea Tagliapietra, for Franco Schiavon.",
+            "Signed; with gold-coloured aventurine inclusions.",
+            "About 29.2 × 15.2 × 8.3 cm."
+          ],
+          "comparison": "The provisional model name comes from this lot. It is smaller than this sculpture (38 cm long and 17.5 cm high) and is described with aventurine inclusions, which have not been seen here. The lot photographs have not yet been compared with this sculpture, so whether it is the same model in another size remains open.",
+          "sourceId": "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Solid sculpture in colourless glass with bands of calcedonio in blue, violet, red, amber, yellow and green.",
+          "A reclining composition with two oval heads at the raised end, one in calcedonio and one colourless.",
+          "Length 38 cm, height 17.5 cm, weight 3.1 kg, measured by the owner.",
+          "A cursive signature is engraved on the underside; it is not clearly legible.",
+          "Close in style and technique to a calcedonio Lovers sold under Andrea Tagliapietra's name by the Franco Schiavon Gallery."
+        ],
+        "plausible": [
+          "Made by Andrea Tagliapietra on Murano, as the signature and the style suggest.",
+          "A version of the model catalogued at auction in 2026 as 'Lying Lovers'.",
+          "Made after 1979, the year Andrea Tagliapietra became a maestro."
+        ],
+        "open": [
+          "The original model name, and whether a catalogue or certificate records it.",
+          "When the sculpture was made.",
+          "Whether it was made for, or sold through, Franco Schiavon.",
+          "A comparison of the signature with documented signatures by Andrea Tagliapietra.",
+          "Whether the model exists in other sizes and calcedonio colourings, and how the 2026 auction example compares.",
+          "The width (about 10 cm, to be confirmed) and a full condition report."
+        ],
+        "reviewedOn": "2026-11-18"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M010"
+      ],
+      "relatedIds": [],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 79,
+      "updatedAt": "2026-11-18"
     }
   ],
   "media": [
@@ -894,6 +1105,110 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M010-FRONT",
+      "artworkId": "MUR-M010",
+      "viewType": "front",
+      "src": "/images/collection/m010/m010-front-0d21c9e5.jpg",
+      "width": 2200,
+      "height": 1332,
+      "alt": "Reclining calcedonio glass sculpture in profile: the long colourless body tapers to a point at the left and rises to two heads at the right",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-REVERSE",
+      "artworkId": "MUR-M010",
+      "viewType": "reverse",
+      "src": "/images/collection/m010/m010-reverse-9014b6e2.jpg",
+      "width": 2200,
+      "height": 1365,
+      "alt": "The other side of the sculpture, heads at the left, with bands of red, violet and blue calcedonio along the base of the colourless body",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-SIDE",
+      "artworkId": "MUR-M010",
+      "viewType": "side",
+      "src": "/images/collection/m010/m010-side-0af0e53f.jpg",
+      "width": 1676,
+      "height": 2200,
+      "alt": "The sculpture seen from the head end: two oval heads side by side, one in banded calcedonio and one in colourless glass, above a flared calcedonio base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-DETAIL",
+      "artworkId": "MUR-M010",
+      "viewType": "detail",
+      "src": "/images/collection/m010/m010-detail-1-cc51337a.jpg",
+      "width": 1194,
+      "height": 2200,
+      "alt": "The sculpture seen along its length from the pointed end, with a groove down the middle of the body and calcedonio colours throughout",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-DETAIL-2",
+      "artworkId": "MUR-M010",
+      "viewType": "detail",
+      "src": "/images/collection/m010/m010-detail-2-a3770e6e.jpg",
+      "width": 1512,
+      "height": 2016,
+      "alt": "Close-up of the two heads and the ring formed by an arm, with dark red calcedonio in one head and swirling blue bands below",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-DETAIL-3",
+      "artworkId": "MUR-M010",
+      "viewType": "detail",
+      "src": "/images/collection/m010/m010-detail-3-4ddd527a.jpg",
+      "width": 2016,
+      "height": 1512,
+      "alt": "Low view along the body: thick colourless glass above a band of red, amber, blue and green calcedonio",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-SIGNATURE",
+      "artworkId": "MUR-M010",
+      "viewType": "signature",
+      "src": "/images/collection/m010/m010-signature-a397a350.jpg",
+      "width": 2200,
+      "height": 1320,
+      "alt": "The underside of the sculpture with a cursive signature engraved in thin lines into dark violet glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M010-SIGNATURE-DETAIL",
+      "artworkId": "MUR-M010",
+      "viewType": "signature",
+      "src": "/images/collection/m010/m010-signature-detail-e5077e5f.jpg",
+      "width": 2200,
+      "height": 1290,
+      "alt": "Close-up of the engraved cursive signature on the underside",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -997,6 +1312,55 @@
       "publisher": "Olnick Spanu Collection",
       "url": "https://olnickspanu.com/artist/alfredo-barbini/",
       "reliabilityNote": "Collection website. Covers Barbini's career, including S.A.I.A.R. Ferro Toso, Gino Cenedese & C. and his corroso sculptures at the 1948 Venice Biennale. Context only; not evidence for this horse. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M010",
+      "type": "observation",
+      "title": "Examination of MUR-M010: measurements, weight and photographs of the sculpture and its signature",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "Measured, weighed and photographed by the owner, November 2026. The width (about 10 cm) is still to be confirmed.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-SCHIAVON-ANDREA-TAGLIAPIETRA",
+      "type": "other",
+      "title": "Tagliapietra Andrea (artist biography)",
+      "publisher": "Franco Schiavon Gallery (schiavonglass.com)",
+      "url": "https://www.schiavonglass.com/en/artists/andrea-tagliapietra/",
+      "rightsNote": "All rights reserved; the text is summarised, not reproduced.",
+      "reliabilityNote": "Biography published by the Murano gallery that represents and sells the artist's work. Not yet compared with an independent publication. Consulted 18 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY",
+      "type": "other",
+      "title": "Lovers, chalcedony (gallery listing, artist Andrea Tagliapietra)",
+      "publisher": "Franco Schiavon Gallery (schiavonglass.com)",
+      "url": "https://www.schiavonglass.com/en/catalogo/sculptures/chalcedony-sculptures/chalcedony-lovers/",
+      "rightsNote": "All rights reserved; the photographs are not reproduced here.",
+      "reliabilityNote": "Dealer listing; the attribution is the seller's own. Consulted 18 November 2026 and used only to compare style and technique.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS",
+      "type": "other",
+      "title": "Lying lovers in crystal-clear glass (gallery listing, credited to Andrea Tagliapietra ft Studio Franco Schiavon)",
+      "publisher": "Franco Schiavon Gallery (schiavonglass.com)",
+      "url": "https://www.schiavonglass.com/en/catalogo/sculptures/figurines/lovers-lying-crystal/",
+      "rightsNote": "All rights reserved; the photographs are not reproduced here.",
+      "reliabilityNote": "Dealer listing; the attribution is the seller's own. Consulted 18 November 2026 and used only to compare the composition.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
+      "type": "auction",
+      "title": "Andrea Tagliapietra LYING LOVERS Sculpture, Murano (Modern + Contemporary Art & Design, Spring 2026, 16 May 2026)",
+      "publisher": "Palm Beach Modern Auctions, Lake Worth Beach, Florida",
+      "year": "2026",
+      "url": "https://bid.modernauctions.com/online-auctions/palm-beach-modern/andrea-tagliapietra-lying-lovers-sculpture-murano-8779608",
+      "reliabilityNote": "Auction lot entry; the attribution and description are the auction house's own and have not been verified by MURANIQ. Cited from MURANIQ's research notes; the page could not be opened for this review and the lot photographs have not been compared.",
       "isFixture": false
     }
   ]
