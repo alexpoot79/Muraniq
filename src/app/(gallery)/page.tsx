@@ -66,7 +66,6 @@ const HERITAGE: Array<{ year: string; title: string; text: string; slug?: string
 
 const AREA_PREVIEW: Record<string, string | undefined> = {
   "murano-glass": "enamelled-ewer-venice",
-  "collectible-objects": "millefiori-paperweight-bigaglia",
 };
 
 export default async function HomePage() {

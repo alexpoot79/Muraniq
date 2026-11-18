@@ -35,7 +35,7 @@ const PAGES = [
   "/collection/collectible-objects/",
   "/collection/other-glass/",
   "/collection/objects/chalcedony-ewer-venice/",
-  "/collection/objects/venetian-chevron-bead/",
+  "/collection/objects/millefiori-paperweight-bigaglia/",
   "/collection/objects/murrine-bowl-venezia-murano-company/",
   "/exhibition/",
   "/glass-guide/",

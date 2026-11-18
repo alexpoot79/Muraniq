@@ -37,7 +37,7 @@ export default async function GuidePage() {
       href: routes.directory(),
       text: "Glasshouses, masters, designers and families of Murano and Venice: who worked where, and for whom, with every source and its status.",
       meta: `${directoryStats().published} names`,
-      image: art("millefiori-paperweight-bigaglia"),
+      image: art("murrine-bowl-venezia-murano-company"),
     },
     {
       title: "Makers in the collection",
@@ -58,7 +58,7 @@ export default async function GuidePage() {
       href: "/glass-guide/signatures-and-labels/",
       text: "Marks recorded exactly as written, with any interpretation kept apart. A reference in preparation.",
       meta: "In preparation",
-      image: art("roman-millefiori-bowl"),
+      image: art("millefiori-paperweight-bigaglia"),
     },
   ];
   return (
