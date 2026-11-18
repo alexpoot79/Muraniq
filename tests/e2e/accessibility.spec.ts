@@ -58,6 +58,8 @@ const PAGES = [
   "/collection/objects/green-scavo-glass-horse-with-gold-leaf/",
   "/collection/objects/oscar-zanetti-calcedonio-shell-bowl/",
   "/glass-guide/makers/oscar-zanetti/",
+  "/collection/objects/andrea-tagliapietra-calcedonio-glass-sculpture/",
+  "/glass-guide/makers/andrea-tagliapietra/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",

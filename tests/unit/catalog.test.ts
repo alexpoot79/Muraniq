@@ -60,6 +60,10 @@ describe("search and facets", () => {
     const r = searchCatalog(reference, parseCatalogQuery({ q: "CHÁLCEDONY" }));
     expect(r.items.map((a) => a.id)).toEqual(["MUR-R001", "MUR-R025", "MUR-R008", "MUR-R013"]);
     expect(r.items.every((a) => a.search.title.includes("chalcedony"))).toBe(true);
+    // Over everything, title matches still come before matches on the technique synonym.
+    const ranked = searchCatalog(all, parseCatalogQuery({ q: "CHÁLCEDONY" })).items;
+    const firstOther = ranked.findIndex((a) => !a.search.title.includes("chalcedony"));
+    expect(firstOther === -1 || ranked.slice(firstOther).every((a) => !a.search.title.includes("chalcedony"))).toBe(true);
     // synonyms of technique terms
     expect(searchCatalog(all, parseCatalogQuery({ q: "milk glass" })).items.map((a) => a.id)).toEqual(["MUR-R007"]);
     expect(searchCatalog(all, parseCatalogQuery({ q: "murrine" })).items.map((a) => a.id).sort()).toEqual([

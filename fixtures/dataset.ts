@@ -665,6 +665,104 @@ const referenceDataset: DatasetInput = {
       primarySignatureId: "SIG-OSCAR-ZANETTI-M009-SIGNATURE",
       status: "published",
     },
+    {
+      // Biography from the Franco Schiavon Gallery's artist page (the gallery that represents him), read 18 Nov 2026.
+      // Every statement is attributed; no second, independent source has been read yet.
+      // Not the same person as Lino Tagliapietra (b. 1934); no kinship is stated anywhere.
+      id: "CRE-TAGLIAPIETRA-ANDREA",
+      slug: "andrea-tagliapietra",
+      kind: "person",
+      name: "Andrea Tagliapietra",
+      roles: ["maker"],
+      lifeLabel: "b. 1955",
+      summary:
+        "Murano glass maestro, born on the island in 1955, known for solid sculptures in clear glass and calcedonio, among them his series of Lovers.",
+      biographyStatus: "in_research",
+      birthYear: 1955,
+      birthPlace: "Murano, Venice",
+      nationality: "Italy",
+      facts: [
+        { label: "Born", value: "1955, Murano", basis: "Gallery biography (Schiavon), which gives 7 February" },
+        { label: "Nationality", value: "Italian" },
+        {
+          label: "Training",
+          value: "Apprentice from the age of fourteen to the maestro Ermanno Nason",
+          basis: "Gallery biography (Schiavon)",
+        },
+        { label: "Maestro", value: "1979", basis: "Gallery biography (Schiavon)" },
+        {
+          label: "Father",
+          value: "Erminio Tagliapietra, master at the Salviati glassworks",
+          basis: "Gallery biography (Schiavon)",
+        },
+        {
+          label: "Discipline",
+          value: "Sculpture in solid glass (massello) and calcedonio: couples sold as Lovers, marine animals",
+          basis: "Gallery biography and listings (Schiavon); works examined by MURANIQ",
+        },
+        {
+          label: "First exhibition",
+          value: "1983, Fondazione Bevilacqua La Masa, Venice",
+          basis: "Gallery biography (Schiavon)",
+        },
+      ],
+      biography: [
+        "Andrea Tagliapietra was born on Murano on 7 February 1955, according to the biography published by the Franco Schiavon Gallery, the Murano gallery that represents his work. He began working with glass at fourteen as an apprentice to the maestro Ermanno Nason, following his father, Erminio Tagliapietra, a master at the Salviati glassworks. In 1979 he became a maestro himself.",
+        "In 1980 he began to make sculpture of his own. The gallery dates his first exhibition to 1983, at the Fondazione Bevilacqua La Masa in Venice, with a sculpture on the theme of motherhood, and records later exhibitions in galleries from Vienna to Tokyo, among them Palm Beach and New York. It also names him as the teacher of the maestro Mirco Bastianello.",
+      ],
+      sections: [
+        {
+          heading: "Work and style",
+          paragraphs: [
+            "He works above all in solid glass (massello), shaped hot at the furnace, and in calcedonio. The gallery counts him among the few virtuosos of calcedonio today. His best-known subjects are couples, sold as Lovers, and marine animals such as dolphins, turtles and sharks.",
+            "In the works examined for MURANIQ the figures are reduced to a few flowing volumes and the heads to simple ovals. Clear and coloured glass are set against each other, so that the bands of calcedonio are seen through a thick, transparent mass and shift as the piece is turned.",
+          ],
+        },
+        {
+          heading: "Calcedonio",
+          paragraphs: [
+            "Calcedonio is a Venetian glass, first made in the fifteenth century, that imitates banded hardstones such as chalcedony and agate. In the sculptures examined for MURANIQ it is set inside heavy colourless glass, which deepens the colour and lets the bands be seen in depth.",
+            "The reclining couple in the MURANIQ collection, probably by him, is an example: bands of blue, violet and red run along its base, amber, yellow and green towards its pointed end, and one of the two heads is in deep red calcedonio while the other is colourless.",
+          ],
+        },
+        {
+          heading: "Collaboration with Franco Schiavon",
+          paragraphs: [
+            "The Franco Schiavon Gallery sells his work under his own name and credits some models, among them a reclining couple in clear glass sold as Lying lovers, jointly to ‘Andrea Tagliapietra ft Studio Franco Schiavon’. An American auction house catalogued a Lying Lovers sculpture in 2026 as made by him for Franco Schiavon.",
+            "The sources consulted do not say how or since when the two have worked together. On MURANIQ a link with Franco Schiavon is therefore stated only for a work that documents it, not for every work by Andrea Tagliapietra.",
+          ],
+        },
+        {
+          heading: "Known works and the market",
+          paragraphs: [
+            "The gallery currently lists a standing couple in calcedonio sold as Lovers and a reclining couple in colourless glass sold as Lying lovers. At auction, Palm Beach Modern Auctions in Florida offered on 16 May 2026 a signed Lying Lovers sculpture with gold aventurine inclusions, about 29 × 15 × 8 cm, catalogued as by Andrea Tagliapietra for Franco Schiavon. MURANIQ could not open that lot page and cites it from its research notes.",
+            "No exhibition catalogue, museum holding or catalogue of his models has been found yet, so names such as Lovers and Lying Lovers are treated as dealer names, not as titles documented by the maker. MURANIQ publishes no prices, estimates or results.",
+          ],
+        },
+        {
+          heading: "Signatures and the Tagliapietra name",
+          paragraphs: [
+            "The sculpture in the MURANIQ collection carries a cursive signature engraved on its underside, which the owner identifies as Andrea Tagliapietra's. It is not clearly legible and has not yet been compared with documented examples, so it is recorded as probable (see Signatures & Marks below).",
+            "Tagliapietra is an old Murano family name, shared by other glass masters, among them Lino Tagliapietra (born 1934). The sources consulted do not state any relationship between the two, and none is assumed here. A signature therefore identifies Andrea Tagliapietra only together with the first name, the style and the documentation of the piece.",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "This profile rests mainly on one source, the gallery's own biography, which has not yet been compared with an independent publication. Still open: the exact day of birth, which is given differently elsewhere; the exhibitions after 1983; how and since when he has worked with Franco Schiavon; whether his models are recorded with names or numbers in a catalogue; and documented signatures to compare with.",
+          ],
+        },
+      ],
+      techniqueIds: ["TEC-CALCEDONIA"],
+      sourceIds: [
+        "SRC-SCHIAVON-ANDREA-TAGLIAPIETRA",
+        "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY",
+        "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS",
+        "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
+      ],
+      signatureRefIds: ["SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED"],
+      status: "published",
+    },
   ],
   glasshouses: [],
   techniques: [
@@ -691,12 +789,12 @@ const referenceDataset: DatasetInput = {
         {
           heading: "Calcedonio today",
           paragraphs: [
-            "Several Murano furnaces still work calcedonio, now mostly in solid sculpture rather than in thin blown vessels. Oscar Zanetti, at the Zanetti family furnace, uses it for shells, abstract bowls and animals, often combined with heavy clear glass that frames the colour and gives it depth.",
-            "A signed calcedonio shell bowl from his furnace is in the MURANIQ collection and shown below, beside historic pieces held by museums.",
+            "Several Murano furnaces still work calcedonio, now mostly in solid sculpture rather than in thin blown vessels. Oscar Zanetti, at the Zanetti family furnace, uses it for shells, abstract bowls and animals, often combined with heavy clear glass that frames the colour and gives it depth. Andrea Tagliapietra uses it in figurative sculpture, among them couples in which bands of calcedonio run through clear glass.",
+            "A signed calcedonio shell bowl from the Zanetti furnace and a reclining couple probably by Andrea Tagliapietra are in the MURANIQ collection and shown below, beside historic pieces held by museums.",
           ],
         },
       ],
-      creatorIds: ["CRE-ROSIN", "CRE-OSCAR-ZANETTI"],
+      creatorIds: ["CRE-ROSIN", "CRE-OSCAR-ZANETTI", "CRE-TAGLIAPIETRA-ANDREA"],
       recognition: [
         "Opaque body with marbled or banded veining.",
         "Colours that shift when held against the light.",
