@@ -499,13 +499,10 @@ export default async function HomePage() {
             <p className="reveal measure text-muted-dark">
               We welcome enquiries from collectors, researchers and anyone with information about the works.
             </p>
-            <div className="reveal flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="reveal">
               <Link href={routes.contact()} className="btn btn-primary">
                 Get in touch
               </Link>
-              <a href={`mailto:${SITE.email}`} className="link-quiet text-on-dark">
-                {SITE.email}
-              </a>
             </div>
           </div>
           {invitation && (
