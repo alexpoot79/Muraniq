@@ -66,7 +66,6 @@ const HERITAGE: Array<{ year: string; title: string; text: string; slug?: string
 
 const AREA_PREVIEW: Record<string, string | undefined> = {
   "murano-glass": "enamelled-ewer-venice",
-  "collectible-objects": "millefiori-paperweight-bigaglia",
 };
 
 export default async function HomePage() {
@@ -411,7 +410,7 @@ export default async function HomePage() {
           <div className="grid gap-8 lg:grid-cols-12">
             <p className="reveal label eyebrow text-muted-dark lg:col-span-3">Collection areas</p>
             <h2 id="areas-title" className="reveal display-lg lg:col-span-8 lg:col-start-5">
-              Four areas, <span className="serif-italic">one standard</span> of documentation.
+              Three areas, <span className="serif-italic">one standard</span> of documentation.
             </h2>
           </div>
           <ul className="mt-16 border-t border-line-dark lg:mt-24">
@@ -499,13 +498,10 @@ export default async function HomePage() {
             <p className="reveal measure text-muted-dark">
               We welcome enquiries from collectors, researchers and anyone with information about the works.
             </p>
-            <div className="reveal flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="reveal">
               <Link href={routes.contact()} className="btn btn-primary">
                 Get in touch
               </Link>
-              <a href={`mailto:${SITE.email}`} className="link-quiet text-on-dark">
-                {SITE.email}
-              </a>
             </div>
           </div>
           {invitation && (
