@@ -79,6 +79,14 @@ function rowFromRecord(a: ArtworkRecord): Partial<Record<ColumnKey, string | num
     weightG: a.dimensions?.weightG ?? "",
     maker,
     basis: basis || "Onbekend",
+    // Documentatie needs a Bron: the titles of the sources the attribution cites, so a re-import keeps it.
+    sourceText:
+      basis === "Documentatie"
+        ? (creator?.evidence ?? [])
+            .map((e) => fixtureDataset.sources.find((s) => s.id === e.sourceId)?.title)
+            .filter(Boolean)
+            .join("; ")
+        : "",
     period: a.dating?.displayLabel ?? "",
     country: a.country ?? "",
     signature: sig ? "ja" : "",

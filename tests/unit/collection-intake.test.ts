@@ -198,6 +198,22 @@ describe("records", () => {
     expect(reread.comparables).toEqual(ex.comparables);
   });
 
+  it("re-import of a pre-filled row keeps a hand-written attribution and dating", () => {
+    const ex = store.artworks.find((a) => a.id === "MUR-M007")!;
+    const existing = { artwork: ex, media: store.media.filter((m) => m.artworkId === ex.id), sources: [] };
+    // What the template writes for M007: maker, basis and the literal period label.
+    const prefilled = { id: "M007", maker: "Seguso Arte Vetro", basis: "Etiket", period: ex.dating!.displayLabel };
+    const same = buildRecord(row(prefilled).value, { ...ctxBase, existing }).artwork!;
+    expect(same.assertions).toEqual(ex.assertions);
+    expect(same.creators).toEqual(ex.creators);
+    expect(same.dating).toEqual(ex.dating);
+
+    // A real change in the sheet still rewrites the attribution, and the dating follows its certainty.
+    const changed = buildRecord(row({ ...prefilled, basis: "Stijl en vergelijking" }).value, { ...ctxBase, existing }).artwork!;
+    expect(changed.assertions![0]).toMatchObject({ statement: "Possibly by Seguso Arte Vetro", certainty: "hypothesis" });
+    expect(changed.dating).toMatchObject({ displayLabel: ex.dating!.displayLabel, fromYear: ex.dating!.fromYear, certainty: "hypothesis" });
+  });
+
   it("refuses a new object without photographs", () => {
     const { value } = row({ id: "M030", category: "Murano Glass", objectType: "Vase" });
     expect(buildRecord(value, ctxBase).artwork).toBeUndefined();

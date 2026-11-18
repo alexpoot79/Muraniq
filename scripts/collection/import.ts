@@ -176,13 +176,18 @@ async function main() {
   const today = new Date().toISOString().slice(0, 10);
   await mkdir(args.reportDir, { recursive: true });
 
+  let store: CollectionStore = JSON.parse(await readFile(STORE_FILE, "utf8"));
+
   // 1. Sheet
   console.log(`Datasheet: ${args.sheet}`);
   const rows: IntakeRow[] = [];
   for (const r of await readSheet(args.sheet)) {
     if (isBlankRow(r.cells)) continue;
     const { value, problems: p } = parseRow(r.cells, r.row);
-    problems.push(...p);
+    // A literal period that is already on the record (written by hand, e.g. "Late 20th century (provisional)")
+    // needs no new warning on every re-import.
+    const knownLabel = value && store.artworks.find((a) => a.id === value.id)?.dating?.displayLabel;
+    problems.push(...p.filter((x) => !(knownLabel && x.level === "warning" && x.message.startsWith(`Periode '${knownLabel}'`))));
     if (value && (!args.only || args.only.has(value.id))) rows.push(value);
   }
   const dupes = rows.map((r) => r.id).filter((id, i, all) => all.indexOf(id) !== i);
@@ -201,7 +206,6 @@ async function main() {
   }
 
   // 3. Records
-  let store: CollectionStore = JSON.parse(await readFile(STORE_FILE, "utf8"));
   const { techniques, creators, artworks: allArtworks } = withCollection(store as unknown as OwnCollection);
   const rowIds = new Set(rows.map((r) => r.id));
   for (const id of grouping?.groups.keys() ?? [])
