@@ -44,7 +44,7 @@ export function MobileMenu({ sections }: { sections: Item[] }) {
       >
         <div className="container-gallery grid h-[4.5rem] grid-cols-[1fr_auto_1fr] items-center border-b border-line-dark">
           <span />
-          <LogoImage variant="lockup" height={44} className="h-11 w-auto" />
+          <LogoImage variant="lockup" height={52} className="h-[3.25rem] w-auto" />
           <button
             type="button"
             className="label -mr-2 inline-flex h-11 items-center gap-2 justify-self-end px-2"

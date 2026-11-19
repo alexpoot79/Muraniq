@@ -24,7 +24,7 @@ export function Footer() {
       <div className="container-gallery pt-20 pb-10 lg:pt-28">
         <div className="flex flex-col items-center text-center">
           <Link href="/" aria-label="MURANIQ — Home" className="inline-block">
-            <LogoImage variant="lockup" height={96} className="h-20 w-auto lg:h-24" />
+            <LogoImage variant="lockup" height={120} className="h-24 w-auto lg:h-[7.5rem]" />
           </Link>
           <p className="mt-8 max-w-md text-sm text-muted-dark">
             A private collection of Murano glass, other glass and collectible objects, with independent

@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 /**
- * The approved MURANIQ logo (traced 1:1 from the supplied artwork, see
- * public/brand/). Never redrawn or recoloured beyond the two approved tones.
+ * The approved MURANIQ logo (public/brand/). The wordmark is traced 1:1 from the supplied artwork; the gold
+ * M (19 Nov 2026) is drawn from the owner's new artwork by scripts/brand/ (build-logo.mjs). Never redrawn or
+ * recoloured by hand: change the geometry there and rebuild.
  */
 const ASSETS = {
-  lockup: { dark: "/brand/muraniq-lockup-on-dark.svg", light: "/brand/muraniq-lockup-on-light.svg", ratio: 870 / 385 },
+  lockup: { dark: "/brand/muraniq-lockup-on-dark.svg", light: "/brand/muraniq-lockup-on-light.svg", ratio: 870 / 484 },
   wordmark: { dark: "/brand/muraniq-wordmark-ivory.svg", light: "/brand/muraniq-wordmark-ink.svg", ratio: 870 / 119 },
-  monogram: { dark: "/brand/muraniq-monogram-gold.svg", light: "/brand/muraniq-monogram-antique.svg", ratio: 249 / 187 },
+  monogram: { dark: "/brand/muraniq-monogram-gold.svg", light: "/brand/muraniq-monogram-antique.svg", ratio: 724 / 442 },
 } as const;
 
 export function LogoImage({
@@ -17,7 +18,7 @@ export function LogoImage({
   className = "",
 }: {
   variant?: keyof typeof ASSETS;
-  /** "dark" = for dark backgrounds (gold + ivory), "light" = for beige/ivory backgrounds. */
+  /** "dark" = for dark backgrounds (gold + ivory), "light" = for beige/ivory backgrounds (antique gold + ink). */
   tone?: "dark" | "light";
   height: number;
   className?: string;
@@ -38,7 +39,7 @@ export function LogoImage({
 
 /** Home link with the logo lockup. Accessible name: "MURANIQ — Home". */
 export function Logo({
-  height = 52,
+  height = 60,
   className = "",
   imgClassName = "",
 }: {
