@@ -28,7 +28,7 @@ export function Header() {
           </div>
         </div>
 
-        <Logo className="justify-self-center" height={52} imgClassName="h-11 w-auto lg:h-[3.25rem]" />
+        <Logo className="justify-self-center" height={60} imgClassName="h-[3.25rem] w-auto lg:h-[3.75rem]" />
 
         <div className="flex items-center justify-end">
           <nav aria-label="Secondary" className="hidden lg:block">

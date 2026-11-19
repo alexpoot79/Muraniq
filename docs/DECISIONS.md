@@ -63,3 +63,10 @@ Short records of choices made during the build. Architecture decisions themselve
     Photographs need established rights, web clearance, credit, a source and a review date; recognition use is
     recorded separately and only affects the internal export. The full-screen viewer is shared
     (`ViewerDialog`, rendered in a portal on `<body>`), so object views and signature references behave the same.
+16. **Gold M (19 Nov 2026).** The owner replaced the monogram with a calligraphic gold M (supplied as a small
+    raster, `docs/brand/m-2026-supplied.png`). It is redrawn as vectors in `scripts/brand/m-geometry.mjs`
+    (edges measured row by row, metallic gradients sampled per stroke; the lens flare and glow are left out so it
+    stays crisp small) and built into the monogram, lockup, favicon, Apple icon and share image by
+    `scripts/brand/build-logo.mjs` and `render-icons.mjs`. The wordmark is unchanged. The lockup keeps the
+    supplied proportions (M about 0.58 of the wordmark's width), so the header lockup grew from 52 to 60 px
+    (mobile 44 to 52 px) to keep the wordmark about the same size.

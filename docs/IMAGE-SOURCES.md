@@ -29,8 +29,11 @@ Every image on the site, where it comes from, and on what terms. Checked 9 Novem
 
 | File | What | Source |
 | --- | --- | --- |
-| `public/brand/muraniq-logo-supplied.png` | The approved logo as supplied | Supplied by the owner, 9 Nov 2026 |
-| `public/brand/muraniq-lockup-*.svg`, `-wordmark-*.svg`, `-monogram-*.svg` | Vector tracings of the supplied logo, in the palette's gold, ivory and ink tones | Traced from the supplied file; design unchanged |
+| `public/brand/muraniq-logo-supplied.png` | The approved logo as supplied (wordmark source) | Supplied by the owner, 9 Nov 2026 |
+| `docs/brand/m-2026-supplied.png` | The new gold M as supplied (157 x 106 px) | Supplied by the owner, 19 Nov 2026 |
+| `public/brand/muraniq-wordmark-*.svg` | Vector tracing of the supplied wordmark, in ivory and ink | Traced from the 9 Nov file; design unchanged |
+| `public/brand/muraniq-monogram-*.svg`, `-lockup-*.svg`, `src/app/icon.svg` | The gold M redrawn as vectors from the 19 Nov file (shape and gold gradient measured from it; its lens flare and glow left out), with the wordmark below it in the proportions of that file. `gold` = supplied colours for dark backgrounds, `antique` = same shading in deeper bronze-gold for ivory | `scripts/brand/build-logo.mjs` |
+| `src/app/favicon.ico`, `src/app/apple-icon.png`, `public/og-default.png` | Raster icons and share image rendered from those SVGs | `scripts/brand/render-icons.mjs` |
 
 ## Object photographs (reference works)
 
