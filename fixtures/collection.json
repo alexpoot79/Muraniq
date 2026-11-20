@@ -1050,7 +1050,7 @@
         "A sculpture of two figures in thick, colourless glass. A tall, upright figure, its body reduced to a rounded block with sloping shoulders, carries a large oval head on a narrow neck. Its face is indicated only by a long, straight nose and two narrow slits for closed eyes. The head is bowed towards a second, smaller figure that crouches close against the first, its rounded head lowered and its limbs drawn in beneath it.",
         "Seen from different sides, the composition changes: from the front the crouching figure seems held in the arms of the upright one; from the sides the two are read as separate bodies, the one leaning over the other; from the back only the broad, rounded back and the oval head of the upright figure are seen. The glass is clear throughout, with smooth, polished surfaces in which the light gathers and bends.",
         "The figures stand on a rectangular, glossy black base. On one side of the base the signature 'Loredano Rosin' is engraved in white cursive (see Marks). The sculpture is 49 cm high with the base, 24 cm wide and 28 cm deep.",
-        "A certificate of authenticity signed by Loredano Rosin and dated at Murano on 10 October 1989 belongs with the sculpture. In it he declares that the glass sculpture titled 'Il Bacio / The Kiss', no. 589, was made entirely by hand by himself, to his own design. His studio catalogue lists a model of 'Lovers', 50 cm high, with a clear or black base, which matches this sculpture.",
+        "A certificate of authenticity signed by Loredano Rosin and dated at Murano on 10 October 1989 belongs with the sculpture. In it he declares that the glass sculpture titled 'Il Bacio / The Kiss', no. 589, was made entirely by hand by himself, to his own design.",
         "Couples are a recurring subject in his work. In the same catalogue Rosin writes that love and friendship, and couples in general, are recurrent themes, and that paired forms create the visual and emotional tension he looks for. Here the two figures are set close together, and the narrow space between them is part of the sculpture."
       ],
       "creators": [
@@ -1118,13 +1118,9 @@
             {
               "sourceId": "SRC-MURANIQ-OBS-M011",
               "locator": "engraved signature on the base"
-            },
-            {
-              "sourceId": "SRC-ROSIN-CATALOGUE",
-              "locator": "page 12, item I"
             }
           ],
-          "publicNote": "Documented by the certificate of authenticity that belongs with the sculpture, in which Loredano Rosin declares that he made it entirely by hand to his own design, and signs. The signature engraved on the base and the model in his studio catalogue agree with it."
+          "publicNote": "Documented by the certificate of authenticity that belongs with the sculpture, in which Loredano Rosin declares that he made it entirely by hand to his own design, and signs. The signature engraved on the base agrees with it."
         },
         {
           "field": "origin",
@@ -1163,18 +1159,6 @@
           "publicNote": "The figures are modelled from thick masses of colourless glass with smooth, polished surfaces, the free-hand solid glass sculpture described in his catalogue. How much was shaped at the furnace and how much ground and polished afterwards has not been examined."
         },
         {
-          "field": "other",
-          "statement": "Catalogue model 'Lovers' (item I)",
-          "certainty": "probable",
-          "evidence": [
-            {
-              "sourceId": "SRC-ROSIN-CATALOGUE",
-              "locator": "page 12, item I"
-            }
-          ],
-          "publicNote": "The catalogue lists 'Lovers' in heights of 50, 65 or 105 cm, with a clear or black base and a clear, black or white figure. Height, base and colour match. In the owner's copy the photograph of item I has been cut out, so the form cannot be compared; that 'Lovers' in the catalogue and 'The Kiss' on the certificate are the same model is likely but not stated."
-        },
-        {
           "field": "provenance",
           "statement": "Probably sold through the British trade around 1989",
           "certainty": "hypothesis",
@@ -1192,20 +1176,7 @@
         }
       ],
       "condition": "A full condition report has not yet been made. The photographs show no obvious damage.",
-      "comparables": [
-        {
-          "kind": "publication",
-          "title": "I. Lovers",
-          "stated": [
-            "Loredano Rosin, Sculture in Vetro / Glass Sculpture, studio catalogue, page 12, item I.",
-            "H. 50cm, 65cm or 105cm.",
-            "Colour of base: Clear or Black. Colour of figure: Clear, Black and White.",
-            "In the owner's copy the photograph of item I has been cut out; only the caption remains."
-          ],
-          "comparison": "Height (50 cm against 49 cm measured with the base), the black base and the clear figure match this sculpture. Without the photograph the composition cannot be compared, so the match rests on the caption. The same page shows two other couples, both called Lovers (B and D), which are different compositions.",
-          "sourceId": "SRC-ROSIN-CATALOGUE"
-        }
-      ],
+      "comparables": [],
       "researchStatus": {
         "established": [
           "Sculpture of two figures in solid colourless glass, on a glossy black base.",
@@ -1214,15 +1185,13 @@
           "A certificate signed by Loredano Rosin, dated Murano-Venezia 10 October 1989, names the sculpture 'Il Bacio / The Kiss', no. 589, made entirely by hand by him to his own design."
         ],
         "plausible": [
-          "The model listed as 'Lovers', item I, in his studio catalogue.",
-          "A base of black glass, as the catalogue offers the model with a clear or black base.",
           "Sold through the British trade around 1989."
         ],
         "open": [
           "The year the sculpture was made.",
           "What the number 589 counts, and whether it appears on the sculpture itself.",
-          "Whether 'Lovers' in the catalogue and 'The Kiss' on the certificate are the same model, best checked with a complete copy of the catalogue.",
-          "Whether the two figures are one piece of glass or two.",
+          "Whether The Kiss appears in his studio catalogue; no page showing it has been found yet.",
+          "What the base is made of, and whether the two figures are one piece of glass or two.",
           "The weight, and a full condition report."
         ],
         "reviewedOn": "2026-11-20"
