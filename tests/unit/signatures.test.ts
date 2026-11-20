@@ -150,7 +150,7 @@ describe("signature references on maker profiles", () => {
 
   it("3. gives a maker without references an empty section and no compact block", () => {
     const pub = publish(clone());
-    expect(pub.makerSignatures["CRE-ROSIN"]).toEqual({ items: [], primary: null });
+    expect(pub.makerSignatures["CRE-ZANELLA"]).toEqual({ items: [], primary: null });
   });
 
   it("4. keeps a reference without a photograph as a text reference with its source", () => {
