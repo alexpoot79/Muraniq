@@ -122,6 +122,7 @@ Where the named makers already have a page on the site (no empty profiles were c
 | Name | Maker profile (`/glass-guide/makers/`) | Research directory (`/glass-guide/makers-and-workshops/`) |
 | --- | --- | --- |
 | Loredano Rosin | `loredano-rosin` (one own reference: engraved signature on MUR-M011, documented by his signed certificate of 1989) | — |
+| Arnaldo Zanella | `arnaldo-zanella` (one own reference: engraved 'A. Zanella' under the belly of MUR-M012, documented by a sheet of his own catalogue, 'Articolo 107'; no certificate) | — |
 | Alfredo Barbini | — | `alfredo-barbini`, `vetreria-alfredo-barbini` |
 | Fulvio Bianconi | — | `fulvio-bianconi` |
 | Napoleone Martinuzzi | — | `napoleone-martinuzzi` |

@@ -61,6 +61,8 @@ const PAGES = [
   "/collection/objects/andrea-tagliapietra-calcedonio-glass-sculpture/",
   "/glass-guide/makers/andrea-tagliapietra/",
   "/collection/objects/loredano-rosin-il-bacio-the-kiss/",
+  "/collection/objects/arnaldo-zanella-black-glass-rearing-horse/",
+  "/glass-guide/makers/arnaldo-zanella/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",

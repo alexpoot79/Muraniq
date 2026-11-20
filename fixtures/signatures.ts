@@ -219,6 +219,46 @@ export const signatureReferences: SignatureReference[] = [
     status: "published",
     updatedAt: "2026-11-20",
   },
+  {
+    // MURANIQ's own horse MUR-M012 and the owner's own photographs (20 Nov 2026). The horse is documented by a sheet
+    // of Arnaldo Zanella's own catalogue ('Articolo 107, h. 60 cm', identified as his by the owner), so the engraved
+    // signature is a documented example and may lead the maker card and compact block. No certificate.
+    id: "SIG-ZANELLA-ARNALDO-M012-ENGRAVED",
+    title: "Engraved cursive signature ‘A. Zanella’ under the belly of a black glass horse",
+    sortOrder: 10,
+    variantGroup: "engraved-cursive-initial",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M012", markId: "MRK-M012-SIGNATURE" },
+    markOf: { creatorId: "CRE-ZANELLA", role: "maker", certainty: "documented_attribution" },
+    dating: {
+      fromYear: 1989,
+      toYear: 1989,
+      displayLabel: "c. 1989",
+      certainty: "probable",
+      sourceId: "SRC-MURANO-STUDIO-CATALOGUE-1989",
+    },
+    object: { artworkId: "MUR-M012" },
+    detailImageId: "IMG-M012-SIGNATURE",
+    contextImageIds: ["IMG-M012-SIGNATURE-2", "IMG-M012-SIDE"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M012",
+        consultedOn: "2026-11-20",
+        note: "The owner's close-up photographs of the signature, and of the whole horse.",
+      },
+      {
+        sourceId: "SRC-ARTICOLO-107-SHEET",
+        consultedOn: "2026-11-20",
+        note: "Sheet from Arnaldo Zanella's own catalogue showing this model, 'Articolo 107, h. 60 cm'; it came with the horse.",
+      },
+    ],
+    reviewedOn: "2026-11-20",
+    internalNote:
+      "Owner (20 Nov 2026): certain it is Arnaldo Zanella's, and the 'Articolo 107' sheet is from his own catalogue. Location 'underside of the belly' confirmed; no certificate. Add further signed works to show how the signature varies.",
+    status: "published",
+    updatedAt: "2026-11-20",
+  },
 ];
 
 export const SIGNATURE_SOURCE_URLS = { AIC_1979_904, AIC_1988_541_285 };
