@@ -151,9 +151,29 @@ describe("signature references on maker profiles", () => {
   it("3. gives a maker without references an empty section and no compact block", () => {
     const pub = publish(clone());
     expect(pub.makerSignatures["CRE-MIOTTI"]).toEqual({ items: [], primary: null });
-    // A probable reference is listed in the section but never leads the compact block.
-    expect(pub.makerSignatures["CRE-OSCAR-ZANETTI"]!.items.map((s) => s.id)).toEqual(["SIG-OSCAR-ZANETTI-M009-SIGNATURE"]);
-    expect(pub.makerSignatures["CRE-OSCAR-ZANETTI"]!.primary).toBeNull();
+    // A probable own signature with a photograph leads when nothing firmer exists; the card and block label it.
+    for (const [id, sig] of [
+      ["CRE-OSCAR-ZANETTI", "SIG-OSCAR-ZANETTI-M009-SIGNATURE"],
+      ["CRE-TAGLIAPIETRA-ANDREA", "SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED"],
+    ] as const) {
+      expect(pub.makerSignatures[id]!.items.map((s) => s.id)).toEqual([sig]);
+      expect(pub.makerSignatures[id]!.primary?.id).toBe(sig);
+      expect(pub.makerSignatures[id]!.primary?.markOf?.certainty).toBe("probable");
+    }
+  });
+
+  it("3b. lets a probable own signature lead only when no firmly documented one exists", () => {
+    const d = withTestMakers();
+    const designer = creator(d, "CRE-TEST-DESIGNER");
+    designer.primarySignatureId = "SIG-TEST-SIGNED-A";
+    sigs(d).find((r) => r.id === "SIG-TEST-SIGNED-A")!.markOf = { creatorId: "CRE-TEST-DESIGNER", role: "designer", certainty: "probable" };
+    // B is still verified, so it leads even though the editor picked the probable A.
+    expect(publish(d).makerSignatures["CRE-TEST-DESIGNER"]!.primary?.id).toBe("SIG-TEST-SIGNED-B");
+    // With both probable, the editor's choice leads.
+    sigs(d).find((r) => r.id === "SIG-TEST-SIGNED-B")!.markOf = { creatorId: "CRE-TEST-DESIGNER", role: "designer", certainty: "probable" };
+    expect(publish(d).makerSignatures["CRE-TEST-DESIGNER"]!.primary?.id).toBe("SIG-TEST-SIGNED-A");
+    designer.primarySignatureId = "SIG-TEST-SIGNED-B";
+    expect(publish(d).makerSignatures["CRE-TEST-DESIGNER"]!.primary?.id).toBe("SIG-TEST-SIGNED-B");
   });
 
   it("4. keeps a reference without a photograph as a text reference with its source", () => {

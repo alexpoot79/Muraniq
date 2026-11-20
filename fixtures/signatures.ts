@@ -132,7 +132,7 @@ export const signatureReferences: SignatureReference[] = [
     kind: "personal_signature",
     application: "engraved_other",
     markRef: { artworkId: "MUR-M009", markId: "MRK-M009-SIGNATURE" },
-    // Probable until compared with documented signatures: it stays out of the compact block and the maker-card thumbnail.
+    // Probable until compared with documented signatures: on the maker card and in the compact block it is labelled as probable.
     markOf: { creatorId: "CRE-OSCAR-ZANETTI", role: "maker", certainty: "probable" },
     object: { artworkId: "MUR-M009" },
     detailImageId: "IMG-M009-SIGNATURE",
@@ -153,8 +153,8 @@ export const signatureReferences: SignatureReference[] = [
   {
     // MURANIQ's own sculpture MUR-M010 and the owner's own photographs (18 Nov 2026).
     // The owner reads the signature as Andrea Tagliapietra's; it is not clearly legible
-    // and has not been compared with a documented signature, so it stays "probable" and
-    // does not lead the maker card or the compact block (only firm references do).
+    // and has not been compared with a documented signature, so it stays "probable". It leads the
+    // maker card and the compact block only as long as no firmly documented reference exists, labelled as probable.
     id: "SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED",
     title: "Engraved cursive signature on the underside",
     sortOrder: 10,

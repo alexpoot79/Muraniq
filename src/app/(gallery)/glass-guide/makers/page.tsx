@@ -9,6 +9,7 @@ import { routes } from "@/lib/routes";
 import { ROLE_LABEL } from "@/features/artworks/attribution";
 import { MakerListFilter } from "@/features/signatures/MakerListFilter";
 import { KIND_LABEL } from "@/features/signatures/labels";
+import { isFirm } from "@/content/signatures";
 
 export const metadata: Metadata = pageMetadata({
   title: "Makers in the collection",
@@ -26,7 +27,7 @@ const STATUS: Record<string, string> = {
 
 export default async function MakersPage() {
   const [creators, artworks, signatures] = await Promise.all([getCreators(), getArtworks(), getMakerSignatureSummaries()]);
-  // Only makers with a published, photographed reference that may lead the profile.
+  // Only makers with a published, photographed reference that may lead the profile (a probable one is labelled so).
   const withSignatures = creators.filter((c) => signatures[c.id]?.primary).length;
 
   const list = (
@@ -61,7 +62,10 @@ export default async function MakersPage() {
                     </span>
                   </span>
                   <span className="flex flex-col gap-1 text-sm">
-                    <span className="text-muted-dark">{KIND_LABEL[sig.kind]}</span>
+                    <span className="text-muted-dark">
+                      {KIND_LABEL[sig.kind]}
+                      {sig.makerCertainty && !isFirm(sig.makerCertainty) && ", probable"}
+                    </span>
                     <Link href={`${routes.maker(c.slug)}#signatures`} className="link-quiet text-on-dark">
                       View signatures<span className="sr-only"> of {c.name}</span>
                     </Link>

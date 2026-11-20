@@ -933,6 +933,7 @@ const referenceDataset: DatasetInput = {
         "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
       ],
       signatureRefIds: ["SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED"],
+      primarySignatureId: "SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED",
       status: "published",
     },
   ],
