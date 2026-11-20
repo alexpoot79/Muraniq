@@ -8,11 +8,12 @@ test("maker → signature reference → enlarged view → documented object → 
   await page.goto("/glass-guide/makers/");
 
   // Only makers with a released, suitable photograph count for the filter and get a thumbnail.
-  const filter = page.getByRole("button", { name: /^With signature references \(2\)$/ });
+  const filter = page.getByRole("button", { name: /^With signature references \(3\)$/ });
   await filter.click();
   await expect(filter).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("link", { name: "Arnaldo Zanella" })).toBeHidden();
+  await expect(page.getByRole("link", { name: "Oscar Zanetti" })).toBeHidden();
   await expect(page.getByRole("link", { name: "View signatures of Loredano Rosin" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "View signatures of Arnaldo Zanella" })).toBeVisible();
   await page.getByRole("link", { name: "View signatures of Pietro Bigaglia" }).click();
   await expect(page).toHaveURL(/\/glass-guide\/makers\/pietro-bigaglia\/#signatures$/);
   await expect(page.getByRole("heading", { level: 2, name: "Signatures & Marks" })).toBeInViewport();
@@ -71,12 +72,14 @@ test("maker → signature reference → enlarged view → documented object → 
 });
 
 test("a maker without references says so, with no compact block or thumbnail", async ({ page }) => {
-  await page.goto("/glass-guide/makers/arnaldo-zanella/");
+  await page.goto("/glass-guide/makers/miotti-glasshouse/");
   await expect(page.getByText("No documented signature reference is currently available.")).toBeVisible();
   await expect(page.locator("#signature-reference-title")).toHaveCount(0);
 
   await page.goto("/glass-guide/makers/");
-  await expect(page.getByRole("link", { name: /View signatures of Arnaldo Zanella/ })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: /View signatures of Miotti Glasshouse/ })).toHaveCount(0);
+  // A maker with only a probable reference gets no thumbnail link either.
+  await expect(page.getByRole("link", { name: /View signatures of Oscar Zanetti/ })).toHaveCount(0);
 });
 
 test("research directory keeps text-only marks apart by kind", async ({ page }) => {

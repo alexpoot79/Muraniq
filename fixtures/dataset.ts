@@ -18,9 +18,11 @@
  * Full image list with licences: docs/IMAGE-SOURCES.md.
  *
  * Arnaldo Zanella and Loredano Rosin are real makers represented on the
- * current muraniq.nl site. Their biographies are migrated verbatim from that
- * site and marked "migrated_unreviewed" until checked against sources. No
- * reference work is attributed to them.
+ * earlier muraniq.nl site. Both profiles have since been rewritten with the
+ * basis of each key fact (Rosin from his studio catalogue, 20 Nov 2026; Zanella
+ * from dealer texts, 20 Nov 2026); the earlier texts are kept verbatim in
+ * migrated-biographies.json and cited as SRC-MURANIQ-LEGACY-*. No reference
+ * work is attributed to them.
  *
  * Technique texts are general editorial drafts and stay marked as unsourced
  * until the editor reviews them.
@@ -28,8 +30,6 @@
 import type { Assertion, DatasetInput, ReferenceHolding, Source } from "@/content/schemas";
 import { referenceMedia } from "./reference-media";
 import { signatureMedia, signatureReferences } from "./signatures";
-// Verbatim text from muraniq.nl/arnaldo-zanella/ and /loredano-rosin/ (retrieved 9 Nov 2026), not yet source-reviewed.
-import migrated from "./migrated-biographies.json";
 // MURANIQ's own collection, written by `npm run collection:import` (docs/COLLECTION-PHOTOS.md).
 import collection from "./collection.json";
 
@@ -437,6 +437,10 @@ const referenceDataset: DatasetInput = {
   ],
   creators: [
     {
+      // Profile rewritten 20 Nov 2026 for MUR-M012 (black rearing horse signed 'A. Zanella', documented by a sheet
+      // of his own catalogue per the owner). Biography from dealer texts only (Murano Net, 1stDibs; both read from
+      // search excerpts, the sites are blocked from the cloud) and the earlier MURANIQ biography, kept verbatim in
+      // migrated-biographies.json. Each key fact carries its basis.
       id: "CRE-ZANELLA",
       slug: "arnaldo-zanella",
       kind: "person",
@@ -444,15 +448,92 @@ const referenceDataset: DatasetInput = {
       roles: ["maker"],
       lifeLabel: "b. 1949",
       summary:
-        "Italian glass master renowned for his expressive sculptural forms and exceptional craftsmanship, with horses and birds among his best-known subjects.",
-      biography: migrated.zanella,
-      biographyStatus: "migrated_unreviewed",
+        "Murano glass master, born in 1949 on Sant’Erasmo in the Venetian lagoon, known for animals modelled in glass, above all horses.",
+      biography: [
+        "Arnaldo Zanella was born in 1949 on Sant’Erasmo, an island in the Venetian lagoon close to Murano. According to his biography on the website of the Murano dealer Murano Net, he worked as a young man alongside masters such as Alfredo Barbini, Angelo Seguso, Ermanno Nason and Pino Signoretto, and Angelo Seguso took him on as an assistant.",
+        "When his friend Pino Signoretto opened his own furnace-studio in 1978, Zanella joined him there; the earlier MURANIQ biography adds that in these years he also took evening classes in drawing. In 1985 he and some friends opened a glassworks-studio of their own, called Andromeda. From 1991 he worked with his friend Oscar Zanetti at the Zanetti furnace on Murano.",
+        "He is known above all for animals modelled in glass. Horses, rearing or standing, in clear, coloured or black glass and sometimes with gold leaf, are the works most often offered under his name; birds are among his other subjects.",
+        "The MURANIQ collection holds a black rearing horse signed ‘A. Zanella’ (see Works below).",
+      ],
+      biographyStatus: "in_research",
+      birthYear: 1949,
+      birthPlace: "Sant’Erasmo, Venice",
+      nationality: "Italy",
+      facts: [
+        { label: "Born", value: "1949, Sant’Erasmo (Venice)", basis: "Dealer biographies (Murano Net, 1stDibs); earlier MURANIQ biography" },
+        { label: "Nationality", value: "Italian" },
+        {
+          label: "Early years",
+          value: "Worked alongside Alfredo Barbini, Angelo Seguso, Ermanno Nason and Pino Signoretto; assistant to Angelo Seguso",
+          basis: "Murano Net biography; earlier MURANIQ biography",
+        },
+        { label: "Pino Signoretto", value: "In his furnace-studio from 1978", basis: "Murano Net biography" },
+        { label: "Andromeda", value: "Glassworks-studio opened with friends in 1985", basis: "Murano Net biography" },
+        {
+          label: "Zanetti",
+          value: "With Oscar Zanetti at the Zanetti furnace from 1991",
+          basis: "Murano Net biography; earlier MURANIQ biography",
+        },
+        {
+          label: "Subjects",
+          value: "Animals in glass, above all horses; also birds",
+          basis: "Dealer listings; earlier MURANIQ biography; work in the MURANIQ collection",
+        },
+        {
+          label: "Catalogue",
+          value: "‘Articolo 107’, black rearing horse, h. 60 cm; offered in London by Murano Studio in 1989 as ‘Riding Horse’",
+          basis: "Sheet from his catalogue (owner’s copy, identified by the owner); Murano Studio catalogue, 1989",
+        },
+        {
+          label: "Signature",
+          value: "‘A. Zanella’ in cursive, engraved under the belly",
+          basis: "Black rearing horse in the MURANIQ collection, documented by a sheet from his catalogue",
+        },
+      ],
+      sections: [
+        {
+          heading: "Horses",
+          paragraphs: [
+            "Horses are the subject most closely tied to his name. Those offered by dealers range from rearing to standing horses, in clear glass, in colours and with gold leaf; the dates given for them, mostly the 1970s and 1980s, are the sellers’ own.",
+            "The black rearing horse in the MURANIQ collection, 60 cm high and signed ‘A. Zanella’ under the belly, stands on its hind legs and the tip of its tail. It came with a sheet from his own catalogue showing the model as ‘Articolo 107, h. 60 cm’, and with a page of the 1989 catalogue of Murano Studio, a Murano glass dealer in London, which offers it in the same photograph as ‘Riding Horse’, in clear, black or white glass. So his horses were sold in Britain by 1989, the years when, by the Murano Net account, he worked at Andromeda.",
+          ],
+        },
+        {
+          heading: "Arnaldo and other Zanellas",
+          paragraphs: [
+            "Zanella is not a rare name on Murano: works under the name of a Danilo Zanella, for example, are also on the market. On MURANIQ a work is therefore given to Arnaldo only when his first name or its initial, a document or a clear signature points to him, not on the family name alone.",
+          ],
+        },
+        {
+          heading: "Signatures",
+          paragraphs: [
+            "The horse in the MURANIQ collection is signed ‘A. Zanella’ under the belly, in a single line of cursive engraved into the glass with a fine point so that the letters show frosted and granular against the polished black surface (see Signatures & Marks below).",
+            "The horse is documented by a sheet from his own catalogue that shows the model, so the signature is a documented example. It is the only one MURANIQ has examined so far, so it cannot yet show how he signed over the years; more signed and documented works are needed to compare with.",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "This profile rests on dealer texts and on the earlier MURANIQ biography, none of which names its sources; they have not yet been compared with an independent publication or with the Zanetti furnace’s own records. Still open: the dates of his early years (one dealer text speaks of the 1950s and 1960s, though he was born in 1949); in which glassworks he worked with Barbini, Seguso and Nason (the earlier biography names Seguso Vetri d’Arte); the history of Andromeda; his work at Zanetti and whether he is still active; and documented signatures.",
+          ],
+        },
+      ],
+      sourceIds: [
+        "SRC-ARTICOLO-107-SHEET",
+        "SRC-MURANO-STUDIO-CATALOGUE-1989",
+        "SRC-MURANONET-ZANELLA",
+        "SRC-1STDIBS-ZANELLA",
+        "SRC-MURANIQ-LEGACY-ZANELLA",
+      ],
+      signatureRefIds: ["SIG-ZANELLA-ARNALDO-M012-ENGRAVED"],
+      primarySignatureId: "SIG-ZANELLA-ARNALDO-M012-ENGRAVED",
       legacyPath: "/arnaldo-zanella/",
       status: "published",
     },
     {
       // Profile rewritten 20 Nov 2026 from Loredano Rosin's own studio catalogue (Sculture in Vetro / Glass Sculpture,
-      // c. 1989, owner's copy, pp. 3–5, 7–10, 12) and the certificate of MUR-M011. The earlier MURANIQ biography is
+      // c. 1989, owner's copy, pp. 3–5, 7–10) and the certificate of MUR-M011. A loose page 12 first read as part of
+      // it belongs to Murano Studio's London trade catalogue (corrected 20 Nov 2026; it names no makers). The earlier MURANIQ biography is
       // kept verbatim in migrated-biographies.json and cited where it is the only basis (year of death, Dino in the
       // studio). Catalogue text is summarised, never reproduced; short quotations only, attributed.
       id: "CRE-ROSIN",
@@ -497,7 +578,7 @@ const referenceDataset: DatasetInput = {
         },
         {
           label: "Discipline",
-          value: "Free-hand sculpture in solid glass: couples, figures, heads, animals and abstract forms",
+          value: "Free-hand sculpture in solid glass: couples and the human figure, from realistic nudes to stylised and abstract forms",
           basis: "Studio catalogue; work in the MURANIQ collection",
         },
         {
@@ -524,7 +605,7 @@ const referenceDataset: DatasetInput = {
         {
           heading: "Colours and calcedonio",
           paragraphs: [
-            "Clear glass is the core of his work, but not all of it. The catalogue offers several models with figures in black or in calcedonio, the marbled glass that imitates agate and other banded stones, and with a clear or black base. See the Calcedonia page for the technique.",
+            "Clear glass is the core of his work: his catalogue quotes him as saying that colours confuse the form, and presents his sculpture without the traditional Murano palette. Calcedonio, the marbled glass that imitates agate and other banded stones, is associated with the solid sculpture of the Rosin brothers (see the Calcedonia page), but MURANIQ has not yet examined a documented work by Loredano in calcedonio or in black glass.",
           ],
         },
         {

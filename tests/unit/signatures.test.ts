@@ -150,7 +150,10 @@ describe("signature references on maker profiles", () => {
 
   it("3. gives a maker without references an empty section and no compact block", () => {
     const pub = publish(clone());
-    expect(pub.makerSignatures["CRE-ZANELLA"]).toEqual({ items: [], primary: null });
+    expect(pub.makerSignatures["CRE-MIOTTI"]).toEqual({ items: [], primary: null });
+    // A probable reference is listed in the section but never leads the compact block.
+    expect(pub.makerSignatures["CRE-OSCAR-ZANETTI"]!.items.map((s) => s.id)).toEqual(["SIG-OSCAR-ZANETTI-M009-SIGNATURE"]);
+    expect(pub.makerSignatures["CRE-OSCAR-ZANETTI"]!.primary).toBeNull();
   });
 
   it("4. keeps a reference without a photograph as a text reference with its source", () => {

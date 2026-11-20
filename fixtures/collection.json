@@ -1208,6 +1208,219 @@
       "featured": false,
       "curatedOrder": 80,
       "updatedAt": "2026-11-20"
+    },
+    {
+      "id": "MUR-M012",
+      "slug": "arnaldo-zanella-black-glass-rearing-horse",
+      "title": "Black glass rearing horse by Arnaldo Zanella",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A horse in glossy black glass, 60 cm high, rearing on its hind legs with its tail reaching the ground. Signed 'A. Zanella' under the belly, it is the model 'Articolo 107' of Arnaldo Zanella's own catalogue, offered in London by Murano Studio in 1989.",
+      "description": [
+        "A horse in glossy black glass, rearing on its hind legs. Both forelegs are raised and bent at the knee, the hooves hanging loose. The long tail sweeps down to the ground and serves as a third support, so the horse stands on its two hind hooves and the tip of its tail. It is 60 cm high.",
+        "The head is carried on a strongly arched neck and turned slightly to one side, with pricked ears, a round, prominent eye, flared nostrils and an open mouth. The mane is made of separate, flame-like strands of glass drawn out along the crest of the neck, the tail of long, ridged strands. The muscles of the shoulders, chest and hindquarters are modelled in soft swellings, and the whole surface is smooth and highly reflective.",
+        "The glass looks black. Where it is thinnest, at the ends of the tail strands, the close-up photographs show a deep red-violet tone.",
+        "The signature 'A. Zanella' is engraved under the belly in a fine, frosted line (see Marks).",
+        "The horse came with two catalogue pages. A loose sheet from Arnaldo Zanella's own catalogue shows the model as 'Articolo 107, h. 60 cm'. The same photograph appears as 'Riding Horse', 60 cm high, on page 12 of the 1989 catalogue of Murano Studio, a Murano glass dealer in London (see Comparable examples)."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-ZANELLA",
+          "role": "maker",
+          "certainty": "documented_attribution"
+        }
+      ],
+      "techniqueIds": [],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "black"
+      ],
+      "country": "Italy",
+      "dating": {
+        "fromYear": 1989,
+        "toYear": 1989,
+        "displayLabel": "c. 1989",
+        "certainty": "probable"
+      },
+      "heroImageId": "IMG-M012-SIDE",
+      "imageIds": [
+        "IMG-M012-SIDE",
+        "IMG-M012-SIDE-2",
+        "IMG-M012-FRONT",
+        "IMG-M012-DETAIL",
+        "IMG-M012-SIGNATURE",
+        "IMG-M012-SIGNATURE-2",
+        "IMG-M012-DETAIL-2",
+        "IMG-M012-DETAIL-3"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M012-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "Underside of the belly",
+          "observation": "A cursive signature in one line, engraved into the polished black glass with a fine point, so that the letters show as a frosted, granular white line: a capital A with a full stop, then 'Zanella' with a tall Z, two looped l's and a final a.",
+          "transcription": "A. Zanella",
+          "transcriptionNote": "Read from the owner's close-up photographs. 'Zanella' is clear; the initial is read as A.",
+          "transcriptionCertainty": "probable",
+          "interpretation": "The signature of Arnaldo Zanella, on a horse documented by a sheet from his own catalogue that shows this model. The initial distinguishes him from other glassmakers named Zanella.",
+          "interpretationCertainty": "documented_attribution",
+          "imageId": "IMG-M012-SIGNATURE"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "By Arnaldo Zanella",
+          "certainty": "documented_attribution",
+          "evidence": [
+            {
+              "sourceId": "SRC-ARTICOLO-107-SHEET",
+              "locator": "his catalogue, 'Articolo 107, h. 60 cm'"
+            },
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M012",
+              "locator": "engraved signature 'A. Zanella' under the belly"
+            },
+            {
+              "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+              "locator": "page 12, item G, same photograph"
+            }
+          ],
+          "publicNote": "Documented by points that agree: the signature 'A. Zanella' engraved under the belly; the sheet 'Articolo 107, h. 60 cm' from Arnaldo Zanella's own catalogue, which shows this model at this height and came with the horse (identified as his by the owner; his name is not printed on the sheet itself); and the same photograph in Murano Studio's 1989 catalogue. There is no certificate."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-ARTICOLO-107-SHEET",
+              "locator": "Italian catalogue sheet of the model"
+            }
+          ],
+          "publicNote": "Follows from the attribution: Arnaldo Zanella works on Murano, and his catalogue sheet is captioned in Italian. There is no label or 'Murano' mark on the horse."
+        },
+        {
+          "field": "dating",
+          "statement": "About 1989",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+              "locator": "page 12, item G"
+            }
+          ],
+          "publicNote": "The catalogue pages that came with the horse date from 1989, and the owner dates its purchase to that year. No date is recorded on the horse itself, and no invoice has been found, so the year is not documented."
+        },
+        {
+          "field": "technique",
+          "statement": "Modelled hot by hand in dark glass",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M012",
+              "locator": "photographs"
+            }
+          ],
+          "publicNote": "Ears, mane, legs and tail were drawn out and shaped from hot glass, in the Murano tradition of animals modelled at the furnace. Whether the body is solid glass throughout has not been examined; its weight will help to tell."
+        },
+        {
+          "field": "other",
+          "statement": "Model 'Articolo 107' of Arnaldo Zanella's catalogue (H. 60 cm)",
+          "certainty": "documented_attribution",
+          "evidence": [
+            {
+              "sourceId": "SRC-ARTICOLO-107-SHEET",
+              "locator": "'Articolo 107, h. 60 cm'"
+            },
+            {
+              "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+              "locator": "page 12, item G, 'Riding Horse'"
+            }
+          ],
+          "publicNote": "The sheet from his catalogue that came with the horse shows a black rearing horse in the same composition as 'Articolo 107, h. 60 cm'; Murano Studio's 1989 catalogue offers it, in the same photograph, as 'Riding Horse', in clear, black or white. The height matches. The head of this horse is carried a little differently, as pieces modelled by hand vary."
+        },
+        {
+          "field": "provenance",
+          "statement": "Probably sold through Murano Studio, London, around 1989",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+              "locator": "page 12, item G, kept with the horse"
+            },
+            {
+              "sourceId": "SRC-ARTICOLO-107-SHEET",
+              "locator": "kept with the horse"
+            }
+          ],
+          "publicNote": "Kept with the horse are the 'Articolo 107' sheet, the page of Murano Studio's 1989 catalogue that offers the model, and the dealer's price list for that catalogue (not published). According to the owner they came with the horse in 1989. Murano Studio was a Murano glass dealer in Marylebone High Street, London. No invoice naming a buyer has been found."
+        }
+      ],
+      "condition": "The tail is damaged where it rests on the ground: the close-ups show a few small chips and a rough edge at the very tip. A full condition report has not yet been made.",
+      "comparables": [
+        {
+          "kind": "publication",
+          "title": "Articolo 107",
+          "stated": [
+            "Loose catalogue sheet with an Italian caption: 'Articolo 107, h. 60 cm'.",
+            "One photograph of a black glass horse rearing on its hind legs, its tail on the ground.",
+            "No maker, firm or date is printed on the sheet."
+          ],
+          "comparison": "The owner identifies the sheet as part of Arnaldo Zanella's own catalogue, and it came with this horse. Same subject, composition, colour and height: both forelegs raised and bent, a mane of flame-like strands, the tail reaching the ground as a third support, black glass, 60 cm. The head differs a little: on the sheet it is held forward in profile with the mouth wide open, while this horse draws it in on a more arched neck and turns it slightly to the side, as hand-modelled pieces of one model vary.",
+          "sourceId": "SRC-ARTICOLO-107-SHEET"
+        },
+        {
+          "kind": "publication",
+          "title": "Riding Horse",
+          "stated": [
+            "Murano Studio, London, catalogue of 1989, page 12, item G.",
+            "'Riding Horse: H. 60cm. Colours: Clear, Black or White.'",
+            "The page shows nine glass sculptures; no makers are named."
+          ],
+          "comparison": "The page came with this horse. Its photograph is the same as on the 'Articolo 107' sheet, down to the reflections and the shadow, so the London dealer used the maker's own picture. It shows that the model was sold in Britain around 1989 in clear, black or white glass. The page itself names no makers.",
+          "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "A horse in black glass, 60 cm high (measured by the owner), rearing on its hind legs, with its tail reaching the ground as a third support.",
+          "Signed 'A. Zanella' in engraved cursive under the belly.",
+          "The model 'Articolo 107, h. 60 cm' of Arnaldo Zanella's own catalogue; the sheet came with the horse and is identified as his by the owner.",
+          "The same photograph is 'Riding Horse' on page 12 of Murano Studio's London catalogue of 1989, which also came with the horse.",
+          "The tail is damaged where it rests on the ground."
+        ],
+        "plausible": [
+          "Made around 1989 and sold through Murano Studio in London, as the papers that came with it suggest."
+        ],
+        "open": [
+          "When his catalogue was printed, and whether it was issued from the Andromeda studio, where he worked in 1989 according to a dealer text.",
+          "The year the horse was made, and whether the body is solid glass throughout.",
+          "Its weight, and a full condition report."
+        ],
+        "reviewedOn": "2026-11-20"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M012",
+        "SRC-ARTICOLO-107-SHEET",
+        "SRC-MURANO-STUDIO-CATALOGUE-1989",
+        "SRC-MURANONET-ZANELLA"
+      ],
+      "relatedIds": [
+        "MUR-M008",
+        "MUR-M011"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 81,
+      "updatedAt": "2026-11-20",
+      "dimensions": {
+        "heightMm": 600
+      }
     }
   ],
   "media": [
@@ -1795,6 +2008,110 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M012-SIDE",
+      "artworkId": "MUR-M012",
+      "viewType": "side",
+      "src": "/images/collection/m012/m012-side-1-7ff5ce23.jpg",
+      "width": 1075,
+      "height": 1464,
+      "alt": "Black glass horse rearing on its hind legs, seen from its right side: the head in profile with an open mouth, both forelegs raised, the tail reaching down to the ground",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-SIDE-2",
+      "artworkId": "MUR-M012",
+      "viewType": "side",
+      "src": "/images/collection/m012/m012-side-2-b0691d83.jpg",
+      "width": 1117,
+      "height": 1600,
+      "alt": "The black glass horse seen from its left side, with the flame-like strands of the mane along the neck and the long ridged tail resting on the ground",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-FRONT",
+      "artworkId": "MUR-M012",
+      "viewType": "front",
+      "src": "/images/collection/m012/m012-front-410ce9c6.jpg",
+      "width": 835,
+      "height": 1600,
+      "alt": "The black glass horse seen from the front: the head turned to one side on the arched neck, both forelegs raised and bent at the knee",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-DETAIL",
+      "artworkId": "MUR-M012",
+      "viewType": "detail",
+      "src": "/images/collection/m012/m012-detail-1-fafcaba5.jpg",
+      "width": 1200,
+      "height": 1600,
+      "alt": "Close-up of the horse's head: pricked ears, a round eye, a flared nostril and the open mouth, with the strands of the mane behind",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-SIGNATURE",
+      "artworkId": "MUR-M012",
+      "viewType": "signature",
+      "src": "/images/collection/m012/m012-signature-a7c0624a.jpg",
+      "width": 1600,
+      "height": 652,
+      "alt": "The engraved signature 'A. Zanella' in fine, frosted cursive on the polished black glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-SIGNATURE-2",
+      "artworkId": "MUR-M012",
+      "viewType": "signature",
+      "src": "/images/collection/m012/m012-signature-2-503c7713.jpg",
+      "width": 989,
+      "height": 1600,
+      "alt": "The same signature 'A. Zanella' photographed at an angle, running along the black glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-DETAIL-2",
+      "artworkId": "MUR-M012",
+      "viewType": "detail",
+      "src": "/images/collection/m012/m012-detail-2-9dc8c37b.jpg",
+      "width": 1600,
+      "height": 1337,
+      "alt": "Close-up of the end of the tail where it rests on the ground: ridged strands of black glass with a few small light marks and a rough edge at the tip",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M012-DETAIL-3",
+      "artworkId": "MUR-M012",
+      "viewType": "detail",
+      "src": "/images/collection/m012/m012-detail-3-de59397e.jpg",
+      "width": 1553,
+      "height": 1600,
+      "alt": "Close-up of the tail from the other side: in the thin ends of the strands the glass shows a deep red-violet tone",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -2002,7 +2319,7 @@
       "publisher": "Loredano Rosin, Murano-Venezia",
       "year": "c. 1989",
       "rightsNote": "Text and photographs are not reproduced here; the text is summarised.",
-      "reliabilityNote": "The maker's own catalogue, undated; it reports events up to April 1989. Biography, an essay on solid free-hand glass sculpture and a text by Rosin himself; claims such as museum holdings are the studio's own. Copy kept with the sculpture, examined from the owner's photographs (cover, pp. 3–5, 7–10, 12), 20 November 2026.",
+      "reliabilityNote": "The maker's own catalogue, undated; it reports events up to April 1989. Biography, an essay on solid free-hand glass sculpture and a text by Rosin himself; claims such as museum holdings are the studio's own. Copy kept with the sculpture, examined from the owner's photographs (cover, pp. 3–5, 7–10), 20 November 2026.",
       "isFixture": false
     },
     {
@@ -2013,6 +2330,63 @@
       "year": "1989",
       "rightsNote": "Not reproduced here.",
       "reliabilityNote": "Kept with the sculpture's certificate and catalogue. It does not name the sculpture or Loredano Rosin. Examined from the owner's photograph, 20 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M012",
+      "type": "observation",
+      "title": "Examination of MUR-M012: height and photographs of the horse and its signature",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "Measured and photographed by the owner, November 2026; the owner's account of the papers kept with the horse. Weight still to be recorded.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-ARTICOLO-107-SHEET",
+      "type": "catalogue",
+      "title": "Arnaldo Zanella, catalogue sheet 'Articolo 107, h. 60 cm': black glass rearing horse",
+      "rightsNote": "Not reproduced here.",
+      "reliabilityNote": "A loose, hole-punched sheet from the maker's own catalogue, as identified by the owner; his name is not printed on this sheet. One photograph, Italian caption, undated. The same photograph is item G on page 12 of Murano Studio's 1989 catalogue. Kept with MUR-M012; examined from a photograph, 20 November 2026.",
+      "isFixture": false,
+      "author": "Arnaldo Zanella"
+    },
+    {
+      "id": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+      "type": "catalogue",
+      "title": "Murano Studio, London: trade catalogue, page 12, nine glass sculptures A–I (1989)",
+      "publisher": "Murano Studio, London",
+      "year": "1989",
+      "rightsNote": "Not reproduced here.",
+      "reliabilityNote": "Loose, hole-punched page 12 with English captions; no makers named. It matches item for item the page-12 entries of the dealer's price list (prices not published), and the dealer's 1989 letter encloses a new catalogue. Not part of Loredano Rosin's own catalogue. Kept with MUR-M012; examined 20 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANONET-ZANELLA",
+      "type": "other",
+      "title": "Arnaldo Zanella (biography in the 'Unfold Venice' blog; the page title gives 'Armando Zanella')",
+      "publisher": "Murano Net (muranonet.com), Murano glass dealer",
+      "url": "https://muranonet.com/blogs/unfold-venice/armando-zanella",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Dealer's biography, undated and without sources. It could not be opened from MURANIQ's research environment; read from search-engine excerpts on 20 November 2026. The title and address say 'Armando', the text 'Arnaldo'.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-1STDIBS-ZANELLA",
+      "type": "other",
+      "title": "Zanella Arnaldo (maker page and dealer listings of signed glass horses)",
+      "publisher": "1stDibs",
+      "url": "https://www.1stdibs.com/creators/zanella-arnaldo",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Marketplace page: gives his birth on Sant'Erasmo in 1949 and lists signed horses offered by dealers, whose dates and attributions are their own. Read from search-engine excerpts on 20 November 2026; the site cannot be opened from MURANIQ's research environment.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-LEGACY-ZANELLA",
+      "type": "other",
+      "title": "Arnaldo Zanella (biography on the earlier MURANIQ website, muraniq.nl/arnaldo-zanella/)",
+      "publisher": "MURANIQ",
+      "url": "https://muraniq.nl/arnaldo-zanella/",
+      "reliabilityNote": "Written for the previous MURANIQ website, which no longer exists; the address now leads to this profile. The text does not name its sources and has not yet been checked against a publication. Text kept as retrieved on 9 November 2026.",
       "isFixture": false
     }
   ]

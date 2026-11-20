@@ -130,10 +130,14 @@ the owner as Andrea Tagliapietra's, which gave the profile `CRE-TAGLIAPIETRA-AND
 **M011**, Il Bacio (The Kiss), a clear glass sculpture signed 'Loredano Rosin' on its black base and documented by his
 certificate, which filled in the existing profile `CRE-ROSIN` (20 November 2026). Its certificate, catalogue pages and
 a 1989 dealer's letter are kept in the private project storage only (`muraniq/documenten/m011/`), never in this
-repository. The M009, M010 and M011 photographs were converted with the importer's code
-(sRGB, no camera metadata) and then protected like the other own photographs (web version of at most 1600 px, small
-"© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`,
-`m010/` and `m011/`.
+repository. **M012** is a black glass rearing horse signed 'A. Zanella' under the belly, which rewrote the existing
+profile `CRE-ZANELLA` (20 November 2026). It came with an Italian catalogue sheet ('Articolo 107'), page 12 of Murano
+Studio's 1989 London catalogue and that dealer's price list; these are private too (`muraniq/documenten/m012/`), and
+the price list's amounts are never published. That page 12 is Murano Studio's, not part of Rosin's own catalogue.
+The M009 to M012 photographs were converted with the importer's code
+(sRGB, no camera metadata) and protected like the other own photographs (web version of at most 1600 px, small
+"© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`
+to `m012/`.
 The unprotected versions are kept in the private project storage, not in this repository.
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:
