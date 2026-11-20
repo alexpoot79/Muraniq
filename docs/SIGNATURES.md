@@ -9,7 +9,7 @@ in this repository; the module follows the architecture that is here (`docs/arch
 
 | Where | What |
 | --- | --- |
-| `/glass-guide/makers/` | A small photograph of the maker's primary reference, its kind and **View signatures** (to `#signatures`). The filter **With signature references** appears only when it separates something; it counts makers with a published, photographed and firmly documented reference. Makers without one keep their card, without thumbnail or link. |
+| `/glass-guide/makers/` | A small photograph of the maker's primary reference, its kind and **View signatures** (to `#signatures`). The filter **With signature references** appears only when it separates something; it counts makers with a published, photographed reference that may lead (firmly documented, or the maker's own probable personal signature, labelled "probable"). Makers without one keep their card, without thumbnail or link. |
 | `/glass-guide/makers/[slug]/` | 1. Introduction. 2. Compact reference block beside it (photograph, short transcription, kind, **View all signature references**) only when a suitable primary exists. 3. Biography. 4. **Signatures & Marks** (`#signatures`). 5. Works, sources. |
 | Section `#signatures` | Photographed examples as cards (1, 2 or 3 columns by count and width), each with the photograph, the literal text, the kind (Personal signature / Factory mark / Label / Inscription), how it was applied, the date of this example, the documented period of use (only with its own source), the object and its holder, the source, and **Enlarge**, **View source**, **View documented object**. Filters on kind and period of use appear only when they distinguish something. Marks known only from a source follow as a short text list ("Recorded in sources"), ending with "No photograph of this mark can be shown yet." No references: "No documented signature reference is currently available." |
 | Enlarged view | The site's existing viewer dialog (`ViewerDialog`): the whole image (`object-contain`, only scaled), zoom, reset, previous/next through the detail and the whole object, transcription, reading, credit and licence beside the image (below it on phones), the link to the original photograph for a crop, Escape and focus return. |
@@ -34,8 +34,11 @@ once enough references are published.
   work designed by …", and only when the object names that person as verified or as a cited attribution. It can
   never be the compact block of a person. A Venini mark is never Carlo Scarpa's signature.
 - **Certainty.** `verified | documented_attribution | probable | hypothesis | unknown`, separately for the reading,
-  the owner of the mark and the date. Only the first two count for thumbnails, the filter and the compact block;
-  anything weaker is shown with its wording ("probably", "possibly") in the section only. No "authentic" badge,
+  the owner of the mark and the date. The first two lead thumbnails, the filter and the compact block. A
+  maker's own personal signature that is `probable` (photographed on an object, not yet compared with a documented
+  example) may lead them only when no firmer reference exists, and is labelled "probable" on the card and
+  "Probably …'s personal signature" in the block (decided with the owner, 20 Nov 2026). Hypotheses and unknown
+  owners appear with their wording ("possibly") in the section only. No "authentic" badge,
   no score.
 - **Dates.** The date of the example (usually the object's date, with its source) is separate from the
   documented period of use of a variant, which needs its own source.
@@ -92,7 +95,7 @@ AI service in the site.
 | --- | --- | --- | --- | --- |
 | `SIG-BIGAGLIA-R009-INSCRIPTION` "Inscription and date canes, 1847" | Pietro Bigaglia (maker of the object) | Inscription, lettered glass cane | Plain crop of the museum's CC0 photograph, linked to the whole view | The Art Institute of Chicago, 1979.904 (record and photograph, consulted 11 Nov 2026). The museum does not transcribe the canes: the reading "IX CONGRESSO / DEGLI / SCIENZIATI / IN / VENEZIA 184[…]" and "1847" is MURANIQ's, marked *probable*, with what could not be read. |
 | `SIG-BIGAGLIA-AIC-1988-541-285` "Initials and date “P.B. / 1845”" | Pietro Bigaglia | Personal signature, lettered glass cane | None: the museum photograph does not show the cane | The Art Institute of Chicago, 1988.541.285, inscription field "signed and dated P.B. / 1845" (consulted 11 Nov 2026). Text reference only. |
-| `SIG-OSCAR-ZANETTI-M009-SIGNATURE` "Incised signature ‘Zanetti / Oscar’" | Oscar Zanetti (*probable*) | Personal signature, engraved | MURANIQ's own photograph of the collection object MUR-M009 (IMG-M009-SIGNATURE), with the underside and front as context | The owner's examination and photographs (18 Nov 2026). Not yet compared with a documented example, so the reference stays *probable* and does not appear as the compact signature block or on the maker card. The firm's gold label on the same object is recorded as a mark of the object, not as a signature reference. |
+| `SIG-OSCAR-ZANETTI-M009-SIGNATURE` "Incised signature ‘Zanetti / Oscar’" | Oscar Zanetti (*probable*) | Personal signature, engraved | MURANIQ's own photograph of the collection object MUR-M009 (IMG-M009-SIGNATURE), with the underside and front as context | The owner's examination and photographs (18 Nov 2026). Not yet compared with a documented example, so the reference stays *probable*; it leads the maker card and compact block labelled as probable. The firm's gold label on the same object is recorded as a mark of the object, not as a signature reference. |
 
 The inscription is deliberately not presented as Bigaglia's signature. The Bigaglia paperweight (MUR-R009) is a
 museum reference work shown as a demonstration record (decision 13); it is labelled as held by the museum.

@@ -8,11 +8,15 @@ test("maker → signature reference → enlarged view → documented object → 
   await page.goto("/glass-guide/makers/");
 
   // Only makers with a released, suitable photograph count for the filter and get a thumbnail.
-  const filter = page.getByRole("button", { name: /^With signature references \(3\)$/ });
+  const filter = page.getByRole("button", { name: /^With signature references \(5\)$/ });
   await filter.click();
   await expect(filter).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("link", { name: "Oscar Zanetti" })).toBeHidden();
+  await expect(page.getByRole("link", { name: "Miotti Glasshouse" })).toBeHidden();
   await expect(page.getByRole("link", { name: "View signatures of Loredano Rosin" })).toBeVisible();
+  // A probable signature still gets its thumbnail, labelled as probable.
+  const zanetti = page.locator("li", { has: page.getByRole("link", { name: "View signatures of Oscar Zanetti" }) });
+  await expect(zanetti).toContainText("Personal signature, probable");
+  await expect(page.getByRole("link", { name: "View signatures of Andrea Tagliapietra" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View signatures of Arnaldo Zanella" })).toBeVisible();
   await page.getByRole("link", { name: "View signatures of Pietro Bigaglia" }).click();
   await expect(page).toHaveURL(/\/glass-guide\/makers\/pietro-bigaglia\/#signatures$/);
@@ -78,8 +82,6 @@ test("a maker without references says so, with no compact block or thumbnail", a
 
   await page.goto("/glass-guide/makers/");
   await expect(page.getByRole("link", { name: /View signatures of Miotti Glasshouse/ })).toHaveCount(0);
-  // A maker with only a probable reference gets no thumbnail link either.
-  await expect(page.getByRole("link", { name: /View signatures of Oscar Zanetti/ })).toHaveCount(0);
 });
 
 test("research directory keeps text-only marks apart by kind", async ({ page }) => {

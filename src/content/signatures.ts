@@ -12,8 +12,11 @@
  *   maker's profile it only appears as context of a documented work, and
  *   only when the object documents that maker firmly (verified or a cited
  *   attribution). It is never presented as that maker's signature.
- * - Uncertain readings keep their wording; they never count towards the
- *   maker-card thumbnail, the filter or the compact block.
+ * - Uncertain readings keep their wording. A maker's own personal signature
+ *   that is `probable` (photographed on an object, not yet compared with a
+ *   documented example) may lead the maker card, the filter and the compact
+ *   block only when no firmly documented reference does, and it is always
+ *   labelled as probable there. Hypotheses and unknown owners never lead.
  */
 import type { Artwork, Certainty, CreatorRole, Dataset, MarkApplication, MarkKind } from "./schemas";
 import {
@@ -27,7 +30,8 @@ import { signaturePhotoBlockers } from "./validate";
 
 /** Firm enough to name a maker without qualification in titles, filters and the compact block. */
 export const FIRM: readonly Certainty[] = ["verified", "documented_attribution"];
-const firm = (c: Certainty) => FIRM.includes(c);
+export const isFirm = (c: Certainty) => FIRM.includes(c);
+const firm = isFirm;
 
 export type SignaturePerson = {
   id: string | null;
@@ -217,9 +221,13 @@ export function buildSignatures({ data, creators, media, sources, artworks, toda
       // An inscription on a work this maker made may lead only when the editor chooses it.
       return s.kind === "inscription" && (s.makerRole === "maker" || s.makerRole === "artist");
     };
+    // A probable personal signature of the maker's own, photographed on an object: second choice, labelled as probable.
+    const probableOwn = (s: MakerSignature) =>
+      !!s.photo && s.relation === "own" && s.kind === "personal_signature" && s.markOf?.certainty === "probable";
     const chosen = items.find((s) => s.id === c.primarySignatureId && eligible(s));
     const fallback = items.find((s) => s.relation === "own" && s.kind !== "inscription" && eligible(s));
-    byMaker.set(c.id, { items, primary: chosen ?? fallback ?? null });
+    const probable = items.find((s) => s.id === c.primarySignatureId && probableOwn(s)) ?? items.find(probableOwn);
+    byMaker.set(c.id, { items, primary: chosen ?? fallback ?? probable ?? null });
   }
 
   /** References that read an observation from a collection object's mark, keyed "artworkId/markId". */
