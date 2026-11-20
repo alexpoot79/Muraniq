@@ -1038,6 +1038,176 @@
       "featured": false,
       "curatedOrder": 79,
       "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "MUR-M011",
+      "slug": "loredano-rosin-il-bacio-the-kiss",
+      "title": "Il Bacio (The Kiss), clear glass sculpture by Loredano Rosin",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A sculpture in solid clear glass of two figures, one bowing its large oval head towards the other. Loredano Rosin's own certificate of 1989 names it 'Il Bacio / The Kiss', no. 589. It stands 49 cm high on a black base engraved with his signature.",
+      "description": [
+        "A sculpture of two figures in thick, colourless glass. A tall, upright figure, its body reduced to a rounded block with sloping shoulders, carries a large oval head on a narrow neck. Its face is indicated only by a long, straight nose and two narrow slits for closed eyes. The head is bowed towards a second, smaller figure that crouches close against the first, its rounded head lowered and its limbs drawn in beneath it.",
+        "Seen from different sides, the composition changes: from the front the crouching figure seems held in the arms of the upright one; from the sides the two are read as separate bodies, the one leaning over the other; from the back only the broad, rounded back and the oval head of the upright figure are seen. The glass is clear throughout, with smooth, polished surfaces in which the light gathers and bends.",
+        "The figures stand on a rectangular, glossy black base. On one side of the base the signature 'Loredano Rosin' is engraved in white cursive (see Marks). The sculpture is 49 cm high with the base, 24 cm wide and 28 cm deep.",
+        "A certificate of authenticity signed by Loredano Rosin and dated at Murano on 10 October 1989 belongs with the sculpture. In it he declares that the glass sculpture titled 'Il Bacio / The Kiss', no. 589, was made entirely by hand by himself, to his own design.",
+        "Couples are a recurring subject in his work. In the same catalogue Rosin writes that love and friendship, and couples in general, are recurrent themes, and that paired forms create the visual and emotional tension he looks for. Here the two figures are set close together, and the narrow space between them is part of the sculpture."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-ROSIN",
+          "role": "maker",
+          "certainty": "documented_attribution"
+        }
+      ],
+      "techniqueIds": [],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "colourless",
+        "black"
+      ],
+      "country": "Italy",
+      "dating": {
+        "toYear": 1989,
+        "displayLabel": "1989 or earlier",
+        "certainty": "documented_attribution"
+      },
+      "dimensions": {
+        "heightMm": 490,
+        "widthMm": 240,
+        "depthMm": 280
+      },
+      "heroImageId": "IMG-M011-FRONT",
+      "imageIds": [
+        "IMG-M011-FRONT",
+        "IMG-M011-SIDE",
+        "IMG-M011-REVERSE",
+        "IMG-M011-SIDE-2",
+        "IMG-M011-TOP",
+        "IMG-M011-SIGNATURE",
+        "IMG-M011-SIGNATURE-DETAIL",
+        "IMG-M011-SIGNATURE-DETAIL-2"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M011-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "Black base, on one side",
+          "observation": "Cursive signature in one line, engraved into the glossy black surface of the base in a fine, dotted white line, as made by a fine engraving point. Capital L and R; the full first name is written out.",
+          "transcription": "Loredano Rosin",
+          "transcriptionNote": "Read from the owner's photographs. Both words are legible; the small letters in the middle of 'Loredano' are faint.",
+          "transcriptionCertainty": "probable",
+          "interpretation": "The signature of Loredano Rosin, on a sculpture documented by his own signed certificate. The full first name distinguishes it from works by his brother Dino Rosin. It is written more carefully and legibly than his quick pen signature on the certificate.",
+          "interpretationCertainty": "documented_attribution",
+          "imageId": "IMG-M011-SIGNATURE"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "By Loredano Rosin",
+          "certainty": "documented_attribution",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CERTIFICATE-M011",
+              "locator": "certificate no. 589, 10 October 1989"
+            },
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M011",
+              "locator": "engraved signature on the base"
+            }
+          ],
+          "publicNote": "Documented by the certificate of authenticity that belongs with the sculpture, in which Loredano Rosin declares that he made it entirely by hand to his own design, and signs. The signature engraved on the base agrees with it."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "documented_attribution",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CERTIFICATE-M011",
+              "locator": "'Murano-Venezia'"
+            }
+          ],
+          "publicNote": "The certificate is issued at Murano-Venezia. There is no label or 'Murano' mark on the sculpture itself."
+        },
+        {
+          "field": "dating",
+          "statement": "Made in 1989 or earlier",
+          "certainty": "documented_attribution",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CERTIFICATE-M011",
+              "locator": "dated 10 October 1989"
+            }
+          ],
+          "publicNote": "The certificate is dated 10 October 1989, so the sculpture was made by then. The year it was made is not stated."
+        },
+        {
+          "field": "technique",
+          "statement": "Solid colourless glass, shaped hot and polished",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CATALOGUE",
+              "locator": "essay 'Solid Free-Hand Glass Sculpture', pp. 7–8"
+            }
+          ],
+          "publicNote": "The figures are modelled from thick masses of colourless glass with smooth, polished surfaces, the free-hand solid glass sculpture described in his catalogue. How much was shaped at the furnace and how much ground and polished afterwards has not been examined."
+        },
+        {
+          "field": "provenance",
+          "statement": "Probably sold through the British trade around 1989",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANO-STUDIO-LETTER-1989",
+              "locator": "letter to trade customers, 1989"
+            },
+            {
+              "sourceId": "SRC-ROSIN-CERTIFICATE-M011",
+              "locator": "date written in English"
+            }
+          ],
+          "publicNote": "Kept with the certificate and the catalogue is a 1989 letter from Murano Studio, a Murano glass dealer in Marylebone High Street, London, to its trade customers. The date on the certificate is written in English. Neither names the buyer, and the letter does not name the sculpture."
+        }
+      ],
+      "condition": "A full condition report has not yet been made. The photographs show no obvious damage.",
+      "comparables": [],
+      "researchStatus": {
+        "established": [
+          "Sculpture of two figures in solid colourless glass, on a glossy black base.",
+          "Height 49 cm with the base, width 24 cm, depth 28 cm, measured by the owner.",
+          "The signature 'Loredano Rosin' is engraved in cursive on one side of the base.",
+          "A certificate signed by Loredano Rosin, dated Murano-Venezia 10 October 1989, names the sculpture 'Il Bacio / The Kiss', no. 589, made entirely by hand by him to his own design."
+        ],
+        "plausible": [
+          "Sold through the British trade around 1989."
+        ],
+        "open": [
+          "The year the sculpture was made.",
+          "What the number 589 counts, and whether it appears on the sculpture itself.",
+          "Whether The Kiss appears in his studio catalogue; no page showing it has been found yet.",
+          "What the base is made of, and whether the two figures are one piece of glass or two.",
+          "The weight, and a full condition report."
+        ],
+        "reviewedOn": "2026-11-20"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M011",
+        "SRC-ROSIN-CERTIFICATE-M011",
+        "SRC-ROSIN-CATALOGUE",
+        "SRC-MURANO-STUDIO-LETTER-1989"
+      ],
+      "relatedIds": [],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 80,
+      "updatedAt": "2026-11-20"
     }
   ],
   "media": [
@@ -1521,6 +1691,110 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M011-FRONT",
+      "artworkId": "MUR-M011",
+      "viewType": "front",
+      "src": "/images/collection/m011/m011-front-4fdbe028.jpg",
+      "width": 892,
+      "height": 1600,
+      "alt": "Clear glass sculpture 'Il Bacio' on a black base, seen from the front: a tall figure with a large oval head holds a second, crouching figure close against its body",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-SIDE",
+      "artworkId": "MUR-M011",
+      "viewType": "side",
+      "src": "/images/collection/m011/m011-side-1-490d120b.jpg",
+      "width": 981,
+      "height": 1600,
+      "alt": "The sculpture from one side: the upright figure at the right bows its oval head towards the crouching figure at the left",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-REVERSE",
+      "artworkId": "MUR-M011",
+      "viewType": "reverse",
+      "src": "/images/collection/m011/m011-reverse-592f9269.jpg",
+      "width": 861,
+      "height": 1600,
+      "alt": "The back of the sculpture: the broad, rounded back and oval head of the upright figure in thick clear glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-SIDE-2",
+      "artworkId": "MUR-M011",
+      "viewType": "side",
+      "src": "/images/collection/m011/m011-side-2-8f983da3.jpg",
+      "width": 1011,
+      "height": 1600,
+      "alt": "The other side, with the signature visible on the black base: the upright figure at the left leans its head over the crouching figure at the right",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-TOP",
+      "artworkId": "MUR-M011",
+      "viewType": "top",
+      "src": "/images/collection/m011/m011-top-05e98f3b.jpg",
+      "width": 853,
+      "height": 1600,
+      "alt": "The sculpture from the front and slightly above: the face of the upright figure, reduced to a straight nose and two closed eyes, above the rounded head of the crouching figure",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-SIGNATURE",
+      "artworkId": "MUR-M011",
+      "viewType": "signature",
+      "src": "/images/collection/m011/m011-signature-f13f0558.jpg",
+      "width": 1600,
+      "height": 912,
+      "alt": "The engraved signature 'Loredano Rosin' in white cursive on the glossy black base, below the glass foot of one figure",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-SIGNATURE-DETAIL",
+      "artworkId": "MUR-M011",
+      "viewType": "signature",
+      "src": "/images/collection/m011/m011-signature-detail-1-d45136a5.jpg",
+      "width": 1600,
+      "height": 583,
+      "alt": "Close-up of the first name 'Loredano', engraved in a fine dotted line on the black base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M011-SIGNATURE-DETAIL-2",
+      "artworkId": "MUR-M011",
+      "viewType": "signature",
+      "src": "/images/collection/m011/m011-signature-detail-2-30b87736.jpg",
+      "width": 1600,
+      "height": 739,
+      "alt": "Close-up of the surname 'Rosin', engraved in a fine dotted line on the black base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -1691,6 +1965,54 @@
       "year": "2026",
       "url": "https://bid.modernauctions.com/online-auctions/palm-beach-modern/andrea-tagliapietra-lying-lovers-sculpture-murano-8779608",
       "reliabilityNote": "Auction lot entry; the attribution and description are the auction house's own and have not been verified by MURANIQ. Cited from MURANIQ's research notes; the page could not be opened for this review and the lot photographs have not been compared.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M011",
+      "type": "observation",
+      "title": "Examination of MUR-M011: measurements and photographs of the sculpture and its signature",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "Measured and photographed by the owner, November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-LEGACY-ROSIN",
+      "type": "other",
+      "title": "Loredano Rosin (biography on the earlier MURANIQ website, muraniq.nl/loredano-rosin/)",
+      "publisher": "MURANIQ",
+      "url": "https://muraniq.nl/loredano-rosin/",
+      "reliabilityNote": "Written for the previous MURANIQ website, which no longer exists; the address now leads to this profile. The text does not name its sources and has not yet been checked against a publication. Text kept as retrieved on 9 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-ROSIN-CERTIFICATE-M011",
+      "type": "manufacturer",
+      "title": "Certificato d'autenticità for the glass sculpture 'Il Bacio / The Kiss', no. 589, signed by Loredano Rosin, Murano-Venezia, 10 October 1989",
+      "author": "Loredano Rosin",
+      "year": "1989",
+      "rightsNote": "Original kept with the sculpture in the MURANIQ collection; not reproduced here.",
+      "reliabilityNote": "Issued and signed by the maker. Printed form with his monogram; title, number and date filled in by hand. Examined from the owner's photograph, 20 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-ROSIN-CATALOGUE",
+      "type": "catalogue",
+      "title": "Loredano Rosin, Sculture in Vetro / Glass Sculpture (studio catalogue, Italian and English)",
+      "publisher": "Loredano Rosin, Murano-Venezia",
+      "year": "c. 1989",
+      "rightsNote": "Text and photographs are not reproduced here; the text is summarised.",
+      "reliabilityNote": "The maker's own catalogue, undated; it reports events up to April 1989. Biography, an essay on solid free-hand glass sculpture and a text by Rosin himself; claims such as museum holdings are the studio's own. Copy kept with the sculpture, examined from the owner's photographs (cover, pp. 3–5, 7–10, 12), 20 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANO-STUDIO-LETTER-1989",
+      "type": "archive",
+      "title": "Letter from Murano Studio, 103 Marylebone High Street, London, to trade customers, enclosing its new catalogue (1989)",
+      "publisher": "Murano Studio, London",
+      "year": "1989",
+      "rightsNote": "Not reproduced here.",
+      "reliabilityNote": "Kept with the sculpture's certificate and catalogue. It does not name the sculpture or Loredano Rosin. Examined from the owner's photograph, 20 November 2026.",
       "isFixture": false
     }
   ]

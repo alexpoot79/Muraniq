@@ -451,6 +451,10 @@ const referenceDataset: DatasetInput = {
       status: "published",
     },
     {
+      // Profile rewritten 20 Nov 2026 from Loredano Rosin's own studio catalogue (Sculture in Vetro / Glass Sculpture,
+      // c. 1989, owner's copy, pp. 3–5, 7–10, 12) and the certificate of MUR-M011. The earlier MURANIQ biography is
+      // kept verbatim in migrated-biographies.json and cited where it is the only basis (year of death, Dino in the
+      // studio). Catalogue text is summarised, never reproduced; short quotations only, attributed.
       id: "CRE-ROSIN",
       slug: "loredano-rosin",
       kind: "person",
@@ -458,9 +462,96 @@ const referenceDataset: DatasetInput = {
       roles: ["maker"],
       lifeLabel: "1936–1992",
       summary:
-        "Italian master glassmaker celebrated for his expressive figurative sculptures and mastery of solid glass, including calcedonia.",
-      biography: migrated.rosin,
-      biographyStatus: "migrated_unreviewed",
+        "Venetian master glassmaker who worked solid glass by hand into figurative sculpture, above all couples and the human figure, in his own studio on Murano from 1975.",
+      biography: [
+        "Loredano Rosin was born in Venice on 10 January 1936. At twelve he started as an apprentice in a glass factory on Murano, following his father, a master glassblower. In his own account he was put in a ‘piazza’, the team of four or five men who worked together at the mouth of a furnace, and his first master was Romano Zanetti, known as ‘Cocui Saor’, who made the glass roses for Venetian chandeliers. He passed through the traditional stages of the furnace and became a maestro in 1961.",
+        "Blowing glass did not satisfy him; he was drawn to shaping solid glass in the mass. In 1965 he began to work for Egidio Costantini’s Fucina degli Angeli, which had glass sculpture made after designs by leading modern artists. By the catalogue’s account he was, until 1974, the sole maker of these pieces, translating designs by Pablo Picasso, Marc Chagall, Max Ernst, Jean Arp, Jean Cocteau, Le Corbusier, Oskar Kokoschka and others into glass; the first was Picasso’s Nymphs and Fauns. Because the artists did not think in terms of glass, he had to invent new methods for almost every piece. From 1968 to 1974 he was also head master of artistic production at Salviati & C. in Venice, where he worked with artists such as Claire Falkenstein.",
+        "In 1975 he opened his own studio, where he made only works of his own design. He showed his work in solo and group exhibitions in Europe, Japan and North America. With the Sicilian artist Pippo Madè he created ‘Il Presepe Incantato’ (The Enchanted Nativity), shown in the cathedral of Monreale in 1983–84 and in Assisi in 1984–85, and the subject of the book Da Murano a Monreale by Aldo Gerbino and Giuseppe di Nunno.",
+        "He was invited to teach and demonstrate solid free-hand glass sculpture in Venezuela, Romania, the United States and Canada. In July and August 1988 he taught, with his brother Dino Rosin and the American glass artist William Morris, the first course in solid glass sculpture at Pilchuck Glass School in Washington State, and in April 1989 he gave hot-glass demonstrations at the Glass Art Society conference in Toronto. He died in 1992.",
+        "The MURANIQ collection holds his Il Bacio (The Kiss), with the certificate he signed in 1989 (see Works below).",
+      ],
+      biographyStatus: "in_research",
+      birthYear: 1936,
+      birthPlace: "Venice",
+      nationality: "Italy",
+      facts: [
+        { label: "Born", value: "10 January 1936, Venice", basis: "His studio catalogue (c. 1989)" },
+        { label: "Died", value: "1992", basis: "Earlier MURANIQ biography; some dealer listings give 1991" },
+        { label: "Nationality", value: "Italian" },
+        {
+          label: "Training",
+          value: "Apprentice on Murano from the age of twelve; first master Romano Zanetti, called ‘Cocui Saor’; maestro in 1961",
+          basis: "Studio catalogue, including his own text",
+        },
+        {
+          label: "Fucina degli Angeli",
+          value: "1965–1974, maker of glass sculpture after designs by Picasso, Chagall, Ernst, Arp, Cocteau and others",
+          basis: "Studio catalogue",
+        },
+        { label: "Salviati & C.", value: "1968–1974, head master of artistic production", basis: "Studio catalogue" },
+        { label: "Own studio", value: "1975, Murano", basis: "Studio catalogue" },
+        {
+          label: "Teaching",
+          value: "Pilchuck Glass School, 1988, with Dino Rosin and William Morris; Glass Art Society conference, Toronto, 1989",
+          basis: "Studio catalogue",
+        },
+        {
+          label: "Discipline",
+          value: "Free-hand sculpture in solid glass: couples, figures, heads, animals and abstract forms",
+          basis: "Studio catalogue; work in the MURANIQ collection",
+        },
+        {
+          label: "Signature",
+          value: "‘Loredano Rosin’ in cursive, engraved on the base",
+          basis: "Il Bacio in the MURANIQ collection, documented by his certificate",
+        },
+      ],
+      sections: [
+        {
+          heading: "Solid free-hand glass sculpture",
+          paragraphs: [
+            "Rosin’s catalogue places his work in the tradition of sculpture in solid glass, modelled free-hand from a mass of molten glass rather than blown, moulded or cast. It credits Alfredo Barbini and Archimede Seguso with developing the technique on Murano in the 1930s, and counts Rosin among the few masters able to work it on a large scale.",
+            "He worked with the weight and flow of the hot glass rather than against it, and many pieces were afterwards cut, ground and polished at length. In his sculpture the light passing through the glass is part of the form. For that reason he mostly avoided the colours of the Murano tradition: “One must not play with colors, the colors confuse the form,” the catalogue quotes him. His work ranges from realistic nudes to stylised and abstract pieces; some, such as La Forcola, adapt in glass a form made in another material, in this case the wooden oarlock of a Venetian boat.",
+          ],
+        },
+        {
+          heading: "Couples and paired forms",
+          paragraphs: [
+            "In his own text in the catalogue, ‘Love of my work’, Rosin writes that he prefers the figurative, because it lets him show people and their feelings, and that love and friendship, and couples in general, are recurring themes. Paired forms, he writes, create the visual and emotional tension he looks for, while keeping an architectural balance even in his most abstract pieces.",
+            "The catalogue’s essay describes how he often sets two complementary forms close to each other, so that the space between them becomes part of the work. Il Bacio (The Kiss) in the MURANIQ collection is an example: two clear figures, the bodies reduced to rounded volumes and the heads to large, smooth ovals, one bowing towards the other.",
+          ],
+        },
+        {
+          heading: "Colours and calcedonio",
+          paragraphs: [
+            "Clear glass is the core of his work, but not all of it. The catalogue offers several models with figures in black or in calcedonio, the marbled glass that imitates agate and other banded stones, and with a clear or black base. See the Calcedonia page for the technique.",
+          ],
+        },
+        {
+          heading: "Loredano and Dino Rosin",
+          paragraphs: [
+            "His brother Dino Rosin is also a glass sculptor, and both names appear on the market for figurative sculpture in solid glass. The catalogue names Dino with Loredano as a teacher at Pilchuck in 1988; the earlier MURANIQ biography adds that the two worked together in Loredano’s studio from 1975. The English text of the catalogue also mentions a brother Mirko, with whom Loredano ran a glassworks around 1965.",
+            "On MURANIQ a work is therefore given to Loredano only when his first name, a document or a clear signature points to him, not on the family name alone. His certificate states that the sculpture was made entirely by hand by himself, to his own design.",
+          ],
+        },
+        {
+          heading: "Signatures and certificates",
+          paragraphs: [
+            "Il Bacio in the MURANIQ collection is signed ‘Loredano Rosin’ in cursive, engraved in a fine, dotted white line into the black base (see Signatures & Marks below). It came with a printed certificate of authenticity, headed with his angular R monogram, on which the title, a number and the date are filled in by hand and which he signed in pen. The pen signature is quicker and much less legible than the engraved one on the base.",
+            "One documented example is not enough to describe how he signed over the years. More signed and certified works are needed to compare with.",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "Most of this profile rests on his own studio catalogue, which was written to present him and has not yet been compared with an independent publication. Still open: the year of death, given as 1991 in some dealer listings; the name of his studio and Dino Rosin’s part in it; the exhibitions; and the museum holdings named in the catalogue (Museum of Fine Arts, Boston; Museum of Modern Art, New York; Philadelphia Museum of Art; Peggy Guggenheim Collection, Venice; New Orleans Museum of Art), which have not yet been confirmed by the museums.",
+          ],
+        },
+      ],
+      techniqueIds: ["TEC-CALCEDONIA"],
+      sourceIds: ["SRC-ROSIN-CATALOGUE", "SRC-ROSIN-CERTIFICATE-M011", "SRC-MURANIQ-LEGACY-ROSIN"],
+      signatureRefIds: ["SIG-ROSIN-LOREDANO-M011-ENGRAVED"],
+      primarySignatureId: "SIG-ROSIN-LOREDANO-M011-ENGRAVED",
       legacyPath: "/loredano-rosin/",
       status: "published",
     },

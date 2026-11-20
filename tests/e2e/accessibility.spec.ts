@@ -60,6 +60,7 @@ const PAGES = [
   "/glass-guide/makers/oscar-zanetti/",
   "/collection/objects/andrea-tagliapietra-calcedonio-glass-sculpture/",
   "/glass-guide/makers/andrea-tagliapietra/",
+  "/collection/objects/loredano-rosin-il-bacio-the-kiss/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
   "/glass-guide/signatures-and-labels/",

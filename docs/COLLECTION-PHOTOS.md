@@ -126,10 +126,14 @@ Some objects get a full research dossier, e.g. **M007**, the aquamarine scavo co
 label, **M008**, the green scavo horse with gold leaf, which has no mark at all, **M009**, the calcedonio
 shell bowl with an incised Oscar Zanetti signature and a Zanetti gold label, which also gave the maker profile
 `CRE-OSCAR-ZANETTI`, and **M010**, the calcedonio sculpture of a reclining couple with an engraved signature read by
-the owner as Andrea Tagliapietra's, which gave the profile `CRE-TAGLIAPIETRA-ANDREA` (all 18 November 2026). The M009
-and M010 photographs were converted with the importer's code (sRGB, no camera metadata) and then protected like the
-other own photographs (web version of at most 1600 px, small "© MURANIQ" corner mark, one copyright line; see the
-photo-protection change), in `public/images/collection/m009/` and `m010/`.
+the owner as Andrea Tagliapietra's, which gave the profile `CRE-TAGLIAPIETRA-ANDREA` (all 18 November 2026), and
+**M011**, Il Bacio (The Kiss), a clear glass sculpture signed 'Loredano Rosin' on its black base and documented by his
+certificate, which filled in the existing profile `CRE-ROSIN` (20 November 2026). Its certificate, catalogue pages and
+a 1989 dealer's letter are kept in the private project storage only (`muraniq/documenten/m011/`), never in this
+repository. The M009, M010 and M011 photographs were converted with the importer's code
+(sRGB, no camera metadata) and then protected like the other own photographs (web version of at most 1600 px, small
+"© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`,
+`m010/` and `m011/`.
 The unprotected versions are kept in the private project storage, not in this repository.
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:

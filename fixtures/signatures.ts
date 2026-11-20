@@ -179,6 +179,46 @@ export const signatureReferences: SignatureReference[] = [
     status: "published",
     updatedAt: "2026-11-18",
   },
+  {
+    // MURANIQ's own sculpture MUR-M011 (Il Bacio / The Kiss) and the owner's own photographs (20 Nov 2026).
+    // The sculpture is documented by Loredano Rosin's signed certificate no. 589 of 10 October 1989, so the
+    // engraved signature on its base is a documented example and may lead the maker card and compact block.
+    // The certificate and catalogue themselves are not reproduced (public repository).
+    id: "SIG-ROSIN-LOREDANO-M011-ENGRAVED",
+    title: "Engraved cursive signature on a black base",
+    sortOrder: 10,
+    variantGroup: "engraved-cursive-full-name",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M011", markId: "MRK-M011-SIGNATURE" },
+    markOf: { creatorId: "CRE-ROSIN", role: "maker", certainty: "documented_attribution" },
+    dating: {
+      toYear: 1989,
+      displayLabel: "1989 or earlier",
+      certainty: "documented_attribution",
+      sourceId: "SRC-ROSIN-CERTIFICATE-M011",
+    },
+    object: { artworkId: "MUR-M011" },
+    detailImageId: "IMG-M011-SIGNATURE",
+    contextImageIds: ["IMG-M011-SIGNATURE-DETAIL", "IMG-M011-SIGNATURE-DETAIL-2", "IMG-M011-SIDE-2"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M011",
+        consultedOn: "2026-11-20",
+        note: "The owner's photographs of the signature, of each word close up, and of the whole sculpture.",
+      },
+      {
+        sourceId: "SRC-ROSIN-CERTIFICATE-M011",
+        consultedOn: "2026-11-20",
+        note: "Certificate signed by Loredano Rosin for this sculpture ('Il Bacio / The Kiss', no. 589), stating that he made it by hand to his own design.",
+      },
+    ],
+    reviewedOn: "2026-11-20",
+    internalNote:
+      "Only one documented example so far. Add further certified works to show how the engraved signature varies; the pen signature on the certificate is much quicker and not comparable letter by letter.",
+    status: "published",
+    updatedAt: "2026-11-20",
+  },
 ];
 
 export const SIGNATURE_SOURCE_URLS = { AIC_1979_904, AIC_1988_541_285 };
