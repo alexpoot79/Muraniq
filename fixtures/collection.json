@@ -1799,12 +1799,12 @@
       "title": "Nodo (Love Knot)",
       "category": "murano-glass",
       "objectType": "Glass sculpture",
-      "summary": "A knot in cobalt blue glass, densely flecked with silver-coloured leaf, on a frosted clear glass base. Signed; Vetreria Artistica Rosis confirmed the identification of this sculpture as Nodo in correspondence with the collector.",
+      "summary": "A knot in cobalt blue glass, densely flecked with silver-coloured leaf, on a frosted clear glass base. Signed; Vetreria Artistica Rosis confirmed in correspondence with the collector that it is its Nodo, made by Maestro Zane in 2000.",
       "description": [
         "Nodo, the Italian word for “knot”, takes a familiar gesture and makes it the subject of a sculpture. The crossing of the glass gives the piece its form. As the viewing angle changes, different parts of the knot come forward and the relationship between its curves becomes clearer. The English title, Love Knot, draws on the association between a tied knot and an enduring bond.",
         "The knot is in deep cobalt blue glass, densely flecked with silver-coloured leaf: a thick round loop from which a long spike rises and tapers to a fine point, and a thinner strand that winds around the spike and ends in a small tip inside the loop. Where the glass is thick it looks almost black under the bright flecks, turning a translucent, lighter blue towards the tip of the spike; the knot stands on an irregular block of clear glass with a frosted, matt surface and rounded hollows in its sides.",
         "This signed example was identified by Vetreria Artistica Rosis in direct correspondence with the collector. The workshop’s confirmation concerns this specific sculpture and is the basis for the Rosis attribution in the MURANIQ collection.",
-        "The collector records the glassmaker as Maestro Zane and the date as 2000. The maker is listed under the name recorded in the collection; the first name is not recorded."
+        "In the same correspondence, Vetreria Artistica Rosis gives the glassmaker as Maestro Zane and the date as 2000. The maker is listed under that name; the first name is not recorded."
       ],
       "creators": [
         {
@@ -1827,8 +1827,8 @@
       "dating": {
         "fromYear": 2000,
         "toYear": 2000,
-        "displayLabel": "2000 (as recorded by the collector)",
-        "certainty": "probable"
+        "displayLabel": "2000",
+        "certainty": "documented_attribution"
       },
       "dimensions": {},
       "heroImageId": "IMG-M015-FRONT",
@@ -1873,27 +1873,31 @@
         },
         {
           "field": "creator",
-          "statement": "Glassmaker: Maestro Zane, as recorded by the collector",
-          "certainty": "probable",
+          "statement": "Glassmaker: Maestro Zane, as confirmed by the workshop",
+          "certainty": "documented_attribution",
           "evidence": [
             {
-              "sourceId": "SRC-MURANIQ-OBS-M015",
-              "locator": "collector's record"
+              "sourceId": "SRC-ROSIS-CORRESPONDENCE-M015",
+              "locator": "the workshop's correspondence with the collector",
+              "note": "Private correspondence; not reproduced."
             }
           ],
-          "publicNote": "The collector records the glassmaker as Maestro Zane; the first name is not recorded. The name is kept separate from the workshop attribution: it is not credited to Vetreria Artistica Rosis here."
+          "publicNote": "Vetreria Artistica Rosis names the glassmaker of this sculpture as Maestro Zane in its correspondence with the collector. The first name is not recorded. The workshop attribution and the glassmaker are kept as separate fields.",
+          "reviewedOn": "2026-11-24"
         },
         {
           "field": "dating",
-          "statement": "2000, as recorded by the collector",
-          "certainty": "probable",
+          "statement": "Made in 2000",
+          "certainty": "documented_attribution",
           "evidence": [
             {
-              "sourceId": "SRC-MURANIQ-OBS-M015",
-              "locator": "collector's record"
+              "sourceId": "SRC-ROSIS-CORRESPONDENCE-M015",
+              "locator": "the workshop's correspondence with the collector",
+              "note": "Private correspondence; not reproduced."
             }
           ],
-          "publicNote": "The year is the collector's record. Nothing on the piece dates it, and the year is not credited to Vetreria Artistica Rosis here."
+          "publicNote": "Vetreria Artistica Rosis gives the year as 2000 in its correspondence with the collector. Nothing on the piece itself dates it.",
+          "reviewedOn": "2026-11-24"
         },
         {
           "field": "origin",
@@ -1917,15 +1921,13 @@
         "established": [
           "Knot in cobalt blue glass, densely flecked with silver-coloured leaf: a thick loop, a long tapering spike and a thin strand wound around the spike, on a frosted clear glass base.",
           "Signed in cursive 'Rosis' / 'Murano', engraved on the blue glass.",
-          "Vetreria Artistica Rosis confirmed the identification of this signed sculpture as Nodo in correspondence with the collector."
+          "Vetreria Artistica Rosis confirmed in correspondence with the collector that this signed sculpture is its Nodo, made by Maestro Zane in 2000."
         ],
         "plausible": [
-          "Made by Maestro Zane, as recorded by the collector.",
-          "Made in 2000, as recorded by the collector.",
           "Made on Murano, as the signature says."
         ],
         "open": [
-          "Maestro Zane's first name, and whether the workshop's correspondence names the glassmaker or the year.",
+          "Maestro Zane's first name.",
           "Where exactly the signature is placed on the knot.",
           "Its height, width, depth and weight."
         ],
@@ -3187,16 +3189,16 @@
       "title": "Correspondence between Vetreria Artistica Rosis and the collector about MUR-M015",
       "publisher": "Vetreria Artistica Rosis",
       "rightsNote": "Private correspondence; not reproduced or quoted.",
-      "reliabilityNote": "The workshop's identification of this signed sculpture as its Nodo. The correspondence itself is kept private.",
+      "reliabilityNote": "The workshop's identification of this signed sculpture as its Nodo, made by Maestro Zane in 2000. The correspondence itself is kept private.",
       "isFixture": false
     },
     {
       "id": "SRC-MURANIQ-OBS-M015",
       "type": "observation",
-      "title": "Examination of MUR-M015: photographs of the sculpture and its signature, and the collector's record",
+      "title": "Examination of MUR-M015: photographs of the sculpture and its signature",
       "publisher": "MURANIQ",
       "year": "2026",
-      "reliabilityNote": "Photographed by the owner, November 2026. The collector's record gives the glassmaker as Maestro Zane and the year as 2000. Measurements and weight still to be recorded.",
+      "reliabilityNote": "Photographed by the owner, November 2026. Measurements and weight still to be recorded.",
       "isFixture": false
     }
   ]

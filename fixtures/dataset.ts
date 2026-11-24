@@ -581,6 +581,17 @@ const referenceDataset: DatasetInput = {
       isFixture: false,
     },
     {
+      id: "SRC-VENETO-VAM-CONCESSIONARIE-2025",
+      type: "other",
+      title: "Marchio del vetro artistico di Murano – list of concessionaires (19 March 2025)",
+      publisher: "Regione del Veneto",
+      year: "2025",
+      url: "https://www.regione.veneto.it/web/attivita-produttive/aziende-concessionarie",
+      reliabilityNote:
+        "The region's official list of the firms licensed to use the Vetro Artistico® Murano mark, with their numbers. Read on 24 November 2026: 38 firms; Rosis and number 052 are not on it.",
+      isFixture: false,
+    },
+    {
       id: "SRC-LIVEBID-2020-ROSIS-VASE",
       type: "auction",
       title: "Vaso biansato in vetro di Murano, Rosis Vetreria Artistica in Murano (lot 1, Vetri di Murano, cornici in argento e altri oggetti d'arredo, 6 January 2020)",
@@ -1226,8 +1237,8 @@ const referenceDataset: DatasetInput = {
         { label: "Today", value: "Lighting, from Colognola ai Colli (Verona)", basis: "Company website" },
         {
           label: "Vetro Artistico® Murano",
-          value: "Producer number 52",
-          basis: "Muranonet's list of numbers for the Vetro Artistico® Murano mark",
+          value: "Producer number 52; not on the region's list of March 2025",
+          basis: "Muranonet's list of numbers for the mark; Regione del Veneto list of concessionaires",
         },
         {
           label: "Signature",
@@ -1243,8 +1254,8 @@ const referenceDataset: DatasetInput = {
         {
           heading: "Workshop marks and identification",
           paragraphs: [
-            "Muranonet’s guide to the Vetro Artistico® Murano mark lists Rosis S.n.c. under producer number 52. A numbered regional label can help identify the workshop on a piece that carries it. An engraved signature, a workshop label and a confirmation from the company each provide different information about an individual object.",
-            "The signed Nodo in the MURANIQ collection has a direct link to the workshop through correspondence with the collector. It is engraved ‘Rosis’ and ‘Murano’ in cursive on the blue glass (see Signatures & Marks below), and it offers a documented example of Rosis’s sculptural glass alongside the lighting for which the company is known today.",
+            "Muranonet’s guide to the Vetro Artistico® Murano mark lists Rosis S.n.c. under producer number 52. Its list includes firms that have since closed or left the scheme, and Rosis is not among the licensees on the Regione del Veneto’s list of March 2025. A numbered regional label can help identify the workshop on a piece that carries it. An engraved signature, a workshop label and a confirmation from the company each provide different information about an individual object.",
+            "The signed Nodo in the MURANIQ collection has a direct link to the workshop through correspondence with the collector, in which Rosis also names its glassmaker, Maestro Zane, and the year, 2000. It is engraved ‘Rosis’ and ‘Murano’ in cursive on the blue glass (see Signatures & Marks below), and it offers a documented example of Rosis’s sculptural glass alongside the lighting for which the company is known today.",
           ],
         },
         {
@@ -1255,7 +1266,13 @@ const referenceDataset: DatasetInput = {
         },
       ],
       techniqueIds: [],
-      sourceIds: ["SRC-ROSIS-AZIENDA", "SRC-ROSIS-CONTATTI", "SRC-MURANONET-VAM-LABEL", "SRC-LIVEBID-2020-ROSIS-VASE"],
+      sourceIds: [
+        "SRC-ROSIS-AZIENDA",
+        "SRC-ROSIS-CONTATTI",
+        "SRC-MURANONET-VAM-LABEL",
+        "SRC-VENETO-VAM-CONCESSIONARIE-2025",
+        "SRC-LIVEBID-2020-ROSIS-VASE",
+      ],
       signatureRefIds: ["SIG-ROSIS-M015-ENGRAVED"],
       primarySignatureId: "SIG-ROSIS-M015-ENGRAVED",
       status: "published",

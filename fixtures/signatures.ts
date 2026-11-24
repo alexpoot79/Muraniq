@@ -304,7 +304,7 @@ export const signatureReferences: SignatureReference[] = [
     ],
     reviewedOn: "2026-11-24",
     internalNote:
-      "Exact position of the signature on the knot still to be recorded. If the owner shares the wording of the Rosis correspondence, check whether it names the glassmaker (Maestro Zane) and the year (2000).",
+      "Exact position of the signature on the knot still to be recorded. The owner confirmed (24 Nov 2026) that the Rosis correspondence also names the glassmaker, Maestro Zane, and the year 2000.",
     status: "published",
     updatedAt: "2026-11-24",
   },

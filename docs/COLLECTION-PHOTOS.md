@@ -146,8 +146,8 @@ signed 'R. Anatrà' are comparables. It gave the new maker profile `CRE-ANATRA-R
 **M015** is *Nodo (Love Knot)*, a knot in cobalt blue glass flecked with silver-coloured leaf on a frosted clear base, engraved
 'Rosis / Murano' on the blue glass (24 November 2026). Vetreria Artistica Rosis confirmed the identification of this signed piece
 in private correspondence with the owner, so the workshop attribution is `documented_attribution` (the correspondence is cited,
-never reproduced). The glassmaker 'Maestro Zane' and the year 2000 are the collector's record, kept as separate fields and not
-credited to Rosis. Only three of the five photographs are published (overview, the crossing, the signature), as the owner asked;
+never reproduced). The same correspondence names the glassmaker, 'Maestro Zane' (first name not recorded), and the year 2000
+(confirmed by the owner on 24 November 2026); both are credited to Rosis as separate fields. Only three of the five photographs are published (overview, the crossing, the signature), as the owner asked;
 all five are kept privately. It gave the new workshop profile `CRE-ROSIS`.
 The M009 to M015 photographs were converted with the importer's code
 (sRGB, no camera metadata) and protected like the other own photographs (web version of at most 1600 px, small

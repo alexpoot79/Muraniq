@@ -4,9 +4,9 @@ _Gegenereerd door `scripts/export.py` uit `data/makers.json` en `data/workshops.
 
 Alfabetische index van alle personen, families, glasblazerijen, werkplaatsen, merken en distributeurs die in Phase 1 zijn geïdentificeerd. Datums staan er precies zoals de bronnen ze geven; tegenstrijdige waarden staan naast elkaar en zijn opgenomen in [F-conflict-register.md](F-conflict-register.md). 'Not verified' betekent dat nog geen gelezen bron de waarde ondersteunt. Bronniveaus: A = museum/instelling, B = wetenschappelijk naslagwerk of gespecialiseerde collectie, C = bedrijf, handelaar of web. Veldwaarden zijn in het Engels omdat ze bedoeld zijn voor de Engelstalige website.
 
-**Totaal:** 156 records — Person: 91, Family: 9, Manufacturer: 49, Workshop: 4, Brand: 2, Distributor: 1.  
-**Status:** VERIFIED: 47, PARTIALLY_VERIFIED: 53, ATTRIBUTED: 0, DISPUTED: 4, UNVERIFIED: 52.  
-**Prioriteit:** P1: 39, P2: 48, P3: 69 (P1 = valt onder de 30 dossiers in B).
+**Totaal:** 157 records — Person: 91, Family: 9, Manufacturer: 49, Workshop: 5, Brand: 2, Distributor: 1.  
+**Status:** VERIFIED: 47, PARTIALLY_VERIFIED: 54, ATTRIBUTED: 0, DISPUTED: 4, UNVERIFIED: 52.  
+**Prioriteit:** P1: 39, P2: 48, P3: 70 (P1 = valt onder de 30 dossiers in B).
 
 | Name | Entity type | Period | Main association | Preliminary sources | Status | Priority | ID |
 |---|---|---|---|---|---|---|---|
@@ -149,6 +149,7 @@ Alfabetische index van alle personen, families, glasblazerijen, werkplaatsen, me
 | Vetreria Alfredo Barbini | Manufacturer | founded 1950 | Alfredo and Flavio Barbini | SRC-OS (B), SRC-LSV-BIENNALE-1948 (A) | VERIFIED | P1 | `ORG-VETRERIA-ALFREDO-BARBINI` |
 | Vetreria Artistica Archimede Seguso | Manufacturer | founded 1946 | Archimede Seguso; later Gino and Antonio Seguso | SRC-OS (B), SRC-ARCHIMEDE-SEGUSO-IT (C), SRC-MET-API (A) | VERIFIED | P1 | `ORG-VETRERIA-ARCHIMEDE-SEGUSO` |
 | Vetreria Artistica Barovier & C. | Manufacturer | founded 1919; ended 1936 (merged into Ferro Toso Barovier) | Ercole and Nicolò Barovier | SRC-OS (B), SRC-DBI-BAROVIER-ERCOLE (B) | VERIFIED | P1 | `ORG-VETRERIA-ARTISTICA-BAROVIER` |
+| Vetreria Artistica Rosis | Workshop | founded 1983 (the firm's own date; not independently verified) | Murano glass workshop founded in 1983, today working in lighting near Verona. Made the Nodo (Love Knot) in the MURANIQ collection. | SRC-ROSIS-COM-AZIENDA (C), SRC-ROSIS-COM-CONTATTI (C), SRC-WEB-MURANONET-VAM-LABEL (C) +2 | PARTIALLY_VERIFIED | P3 | `ORG-ROSIS` |
 | Vetreria Vistosi | Manufacturer | founded 1945 | Guglielmo Vistosi; Gino and Luciano Vistosi; Pianon, Bianconi, Sottsass, Aulenti | SRC-OS (B), SRC-VISTOSI-PROFILE (C) | PARTIALLY_VERIFIED | P1 | `ORG-VISTOSI` |
 | Vetri Decorativi Rag. Aureliano Toso | Manufacturer | founded 1938 (OS text) / 1932 (OS header) | Dino Martens (artistic director from 1939), Enrico Potz, Gino Poli | SRC-OS (B), SRC-LSV-BIENNALE-1932 (A), SRC-LSV-BIENNALE-1948 (A) +1 | PARTIALLY_VERIFIED | P1 | `ORG-AURELIANO-TOSO` |
 | Vianello, Vinicio | Person | Not verified – Not verified; active 1948–1980s | 'Murano asimmetrico' (1950); Vinicio Vianello & C. (founded 1957) | SRC-DBI-VIANELLO (B), SRC-LSV-BIENNALE-1948 (A) | VERIFIED | P2 | `PER-VIANELLO-VINICIO` |

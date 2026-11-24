@@ -100,6 +100,15 @@ test("research directory keeps text-only marks apart by kind", async ({ page }) 
   await expect(page.locator("section#signatures")).toContainText("Personal signature");
 });
 
+test("a research entry with a collection profile links to it, and back", async ({ page }) => {
+  await page.goto("/glass-guide/makers-and-workshops/vetreria-artistica-rosis/");
+  await expect(page.locator("section#signatures")).toContainText("Engraved");
+  await page.getByRole("link", { name: "Full profile and works in the collection" }).click();
+  await expect(page).toHaveURL(/\/glass-guide\/makers\/vetreria-artistica-rosis\/$/);
+  await page.getByRole("link", { name: "Makers & Workshops record" }).click();
+  await expect(page).toHaveURL(/\/glass-guide\/makers-and-workshops\/vetreria-artistica-rosis\/$/);
+});
+
 test("signatures & labels index → maker profile and documented object", async ({ page }) => {
   await page.goto("/glass-guide/signatures-and-labels/");
   await expect(page.getByText("This reference is being catalogued.")).toHaveCount(0);

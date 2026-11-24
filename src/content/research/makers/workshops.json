@@ -1271,5 +1271,35 @@
     ],
     "notes": "",
     "checked": "2026-11-10"
+  },
+  {
+    "id": "ORG-ROSIS",
+    "name": "Vetreria Artistica Rosis",
+    "alternative_names": [
+      "Rosis S.n.c.",
+      "Rosis S.n.c. di Guarda Pierino & C.",
+      "Rosis Vetreria Artistica"
+    ],
+    "entity_type": "Workshop",
+    "founded": "1983 (the firm's own date; not independently verified)",
+    "ended": "Not verified",
+    "operating_status": "active in lighting (per the firm's website)",
+    "location": "Murano; today Colognola ai Colli (Verona)",
+    "periods": [
+      "1983–present"
+    ],
+    "main_association": "Murano glass workshop founded in 1983, today working in lighting near Verona. Made the Nodo (Love Knot) in the MURANIQ collection.",
+    "ia_category": "contemporary_studio",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "research_priority": "P3",
+    "source_ids": [
+      "SRC-ROSIS-COM-AZIENDA",
+      "SRC-ROSIS-COM-CONTATTI",
+      "SRC-WEB-MURANONET-VAM-LABEL",
+      "SRC-ARSVALUE-LIVEBID-20200106-LOT1",
+      "SRC-MURANIQ-MUR-M015"
+    ],
+    "notes": "Added 2026-11-24 for MURANIQ object MUR-M015 (Nodo, Love Knot), on the owner's request; collection profile /glass-guide/makers/vetreria-artistica-rosis/. Founding year, Murano origin, products and the move to Colognola ai Colli rest on the firm's own website. Number 52 only from Muranonet's list; absent from the Regione del Veneto list of 19 March 2025, so the licence has lapsed or is unconfirmed. The firm confirmed to the owner, in private correspondence, that MUR-M015 is its Nodo, made by Maestro Zane (first name unknown) in 2000; not reproduced. PARTIALLY_VERIFIED on the same footing as ORG-OGGETTI (firm's own site read directly); no Tier A/B source confirms the identity yet. Next: Registro Imprese (founding, transfer from Murano), Promovetro licence history.",
+    "checked": "2026-11-24"
   }
 ]

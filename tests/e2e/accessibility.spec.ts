@@ -67,6 +67,7 @@ const PAGES = [
   "/glass-guide/makers/renato-anatra/",
   "/collection/objects/rosis-nodo-love-knot/",
   "/glass-guide/makers/vetreria-artistica-rosis/",
+  "/glass-guide/makers-and-workshops/vetreria-artistica-rosis/",
   "/glass-guide/makers/arnaldo-zanella/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",

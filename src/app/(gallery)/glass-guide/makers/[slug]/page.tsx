@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCreatorBySlug, getCreators } from "@/content/repository.server";
+import { directoryEntryForProfile } from "@/content/makers-directory";
+import { ArrowLink } from "@/components/ui/ArrowLink";
 import { PageIntro } from "@/components/editorial/PageIntro";
 import { ArtworkCard } from "@/components/editorial/ArtworkCard";
 import { EditorialStatus } from "@/components/ui/EditorialStatus";
@@ -32,6 +34,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
   const data = await getCreatorBySlug(slug);
   if (!data) notFound();
   const { creator: c, artworks, sources, signatures, techniques } = data;
+  const directoryEntry = directoryEntryForProfile(c.slug);
   const sourceList = sources.length > 0 && (
     <div>
       <h3 className="label text-ink-muted">Sources</h3>
@@ -67,6 +70,13 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
       >
         <p>{c.summary}</p>
         {c.lifeLabel && <p className="mt-3">{c.lifeLabel}</p>}
+        {directoryEntry && (
+          <p className="mt-3">
+            <ArrowLink href={routes.directoryEntry(directoryEntry.slug)} className="text-on-dark">
+              Makers &amp; Workshops record
+            </ArrowLink>
+          </p>
+        )}
       </PageIntro>
 
       <section className="surface-paper" aria-labelledby="bio-title">
