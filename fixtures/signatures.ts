@@ -221,8 +221,8 @@ export const signatureReferences: SignatureReference[] = [
   },
   {
     // MURANIQ's own sculpture MUR-M013 (seated figure) and the owner's own photographs (24 Nov 2026). No certificate
-    // has been recorded for it, so the signature is "probable"; it is a second example beside the documented one on
-    // MUR-M011, which stays the lead reference.
+    // has been recorded for it; the owner has verified the signature on the piece against documented signatures
+    // (24 Nov 2026), so it is "verified". The certified one on MUR-M011 stays the lead reference.
     id: "SIG-ROSIN-LOREDANO-M013-ENGRAVED",
     title: "Engraved cursive signature on a clear glass base",
     sortOrder: 20,
@@ -230,7 +230,7 @@ export const signatureReferences: SignatureReference[] = [
     kind: "personal_signature",
     application: "engraved_other",
     markRef: { artworkId: "MUR-M013", markId: "MRK-M013-SIGNATURE" },
-    markOf: { creatorId: "CRE-ROSIN", role: "maker", certainty: "probable" },
+    markOf: { creatorId: "CRE-ROSIN", role: "maker", certainty: "verified" },
     object: { artworkId: "MUR-M013" },
     detailImageId: "IMG-M013-SIGNATURE",
     contextImageIds: ["IMG-M013-SIGNATURE-DETAIL", "IMG-M013-SIGNATURE-DETAIL-2", "IMG-M013-FRONT"],
@@ -248,10 +248,9 @@ export const signatureReferences: SignatureReference[] = [
     updatedAt: "2026-11-24",
   },
   {
-    // MURANIQ's own love knot MUR-M014 and the owner's own photographs (24 Nov 2026). The owner reads the signature as
-    // Renato Anatrà's; in the two close-ups it is only partly legible (seen through the base) and it has not been
-    // compared with a documented 'R. Anatra', so it stays "probable". It leads his card and compact block only as long
-    // as no firmer reference exists, labelled as probable (rule of 20 Nov 2026).
+    // MURANIQ's own love knot MUR-M014 and the owner's own photographs (24 Nov 2026). The owner has verified the
+    // signature on the piece as Renato Anatrà's, after long research against documented signatures (24 Nov 2026), so
+    // it is "verified". In the two close-ups it is only partly legible (seen through the base), so no transcription.
     id: "SIG-ANATRA-RENATO-M014-ENGRAVED",
     title: "Engraved signature on a clear glass base",
     sortOrder: 10,
@@ -259,7 +258,7 @@ export const signatureReferences: SignatureReference[] = [
     kind: "personal_signature",
     application: "engraved_other",
     markRef: { artworkId: "MUR-M014", markId: "MRK-M014-SIGNATURE" },
-    markOf: { creatorId: "CRE-ANATRA-RENATO", role: "maker", certainty: "probable" },
+    markOf: { creatorId: "CRE-ANATRA-RENATO", role: "maker", certainty: "verified" },
     object: { artworkId: "MUR-M014" },
     detailImageId: "IMG-M014-SIGNATURE",
     contextImageIds: ["IMG-M014-SIGNATURE-DETAIL", "IMG-M014-FRONT"],
@@ -267,12 +266,12 @@ export const signatureReferences: SignatureReference[] = [
       {
         sourceId: "SRC-MURANIQ-OBS-M014",
         consultedOn: "2026-11-24",
-        note: "The owner's two close-ups of the signature and photographs of the whole sculpture.",
+        note: "Verified by the owner on the piece against documented signatures of Renato Anatrà; the owner's two close-ups and photographs of the whole sculpture.",
       },
     ],
     reviewedOn: "2026-11-24",
     internalNote:
-      "Only partly legible: the right-hand letters are compatible with '…atra'. Compare with a documented 'R. Anatra' (e.g. the Dorotheum 2025 Two Lovers with its Arte '80 label) or a sharper photograph before raising the certainty.",
+      "Verified by the owner (24 Nov 2026). The photographs show it only partly: add a transcription once the owner gives the exact wording, and a sharper photograph if one is made.",
     status: "published",
     updatedAt: "2026-11-24",
   },

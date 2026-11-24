@@ -730,7 +730,7 @@ const referenceDataset: DatasetInput = {
           heading: "Signatures and certificates",
           paragraphs: [
             "Il Bacio in the MURANIQ collection is signed ‘Loredano Rosin’ in cursive, engraved in a fine, dotted white line into the black base (see Signatures & Marks below). It came with a printed certificate of authenticity, headed with his angular R monogram, on which the title, a number and the date are filled in by hand and which he signed in pen. The pen signature is quicker and much less legible than the engraved one on the base.",
-            "A second signed work in the collection, a seated figure on a round base of clear glass, carries the same signature: the full name in cursive, engraved in a dotted line, here coarser in the matt side of the base. No certificate has been recorded for it, so it is shown as probable.",
+            "A second signed work in the collection, a seated figure on a round base of clear glass, carries the same signature: the full name in cursive, engraved in a dotted line, here coarser in the matt side of the base. No certificate has been recorded for it; the owner has verified the signature on the piece against documented signatures of his.",
             "Two examples are not enough to describe how he signed over the years. More signed and certified works are needed to compare with.",
           ],
         },
@@ -1051,7 +1051,7 @@ const referenceDataset: DatasetInput = {
       status: "published",
     },
     {
-      // Profile added 24 Nov 2026 for MUR-M014 (clear love knot, signature read by the owner as Anatrà's), from the
+      // Profile added 24 Nov 2026 for MUR-M014 (clear love knot, signature verified by the owner as Anatrà's), from the
       // owner's research notes and the pages they cite, re-read the same day where they could be opened. No
       // exhibition catalogue, museum record or publication about him has been found; every fact carries its basis.
       // He signed 'R. Anatra' (no accent); some sale listings misspell him 'Renata Anatra'.
@@ -1092,7 +1092,7 @@ const referenceDataset: DatasetInput = {
         "Renato Anatrà was a Murano glass sculptor, born in 1943. The Venetian retailer Muranonet counts him among the most prolific glass sculptors on Murano until he retired in the early 2000s, and describes his work as mainly sculpture in clear glass. His name is often written Anatra, without the accent, which is also how he signed; some sale listings misspell it as Renata Anatra.",
         "With the Murano glass master Andrea Tagliapietra he founded the workshop Vetri Artistici Arte ’80. Muranonet's pages on both makers name the two as its founders and place it in the 1980s; its name and a work labelled Arte ’80 that Dorotheum dates to 1980 point to 1980 as the year it opened. Signed works by Anatrà still carry its label, ‘Vetri Artistici Arte ’80 Murano Made in Italy’.",
         "Muranonet reports that he died in 2020. A reader's comment on its page says the news was heard on Murano in January 2021 and that no notice of it could be found. MURANIQ has not found a record to confirm the date.",
-        "The MURANIQ collection holds a love knot in clear glass, probably by him (see Works below).",
+        "The MURANIQ collection holds a signed love knot by him in clear glass (see Works below).",
       ],
       sections: [
         {
@@ -1114,7 +1114,7 @@ const referenceDataset: DatasetInput = {
           paragraphs: [
             "Auction houses record his signature as ‘R. Anatra’, engraved with a needle point, usually under the base; one dealer reports it on a side of the base of a clear love knot. A fish catalogued by Quittenbaum is engraved ‘Anatrà’, and a Two Lovers sold by Dorotheum in 2024 is needle-etched ‘Murano’ with the artist's mark underneath.",
             "Some signed works keep the paper label of his workshop, ‘Vetri Artistici Arte ’80 Murano Made in Italy’, or a Vetri Murano label. A collector's list of Vetri Murano label numbers gives 043 for Vetri Artistici Arte 80 – Renato Anatrà; MURANIQ has not yet seen such a label. A label identifies the workshop but can be lost or moved, so for a single piece the signature and a close match with a documented example matter more.",
-            "The love knot in the MURANIQ collection has a signature engraved on its base that the owner reads as his. It is only partly legible in the photographs and has not yet been compared with a documented example, so it is recorded as probable (see Signatures & Marks below).",
+            "The love knot in the MURANIQ collection carries his signature, engraved on its base. The owner has verified it on the piece against documented signatures of his; in the photographs it is only partly legible (see Signatures & Marks below).",
           ],
         },
         {
