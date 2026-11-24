@@ -132,6 +132,7 @@ Where the named makers already have a page on the site (no empty profiles were c
 | Loredano Rosin | `loredano-rosin` (two own references: engraved signature on MUR-M011, documented by his signed certificate of 1989, which leads; and the same full-name signature on the clear base of MUR-M013, verified by the owner, no certificate) | — |
 | Arnaldo Zanella | `arnaldo-zanella` (one own reference: engraved 'A. Zanella' under the belly of MUR-M012, documented by a sheet of his own catalogue, 'Articolo 107'; no certificate) | — |
 | Renato Anatrà | `renato-anatra` (one own reference: signature engraved on the clear base of the love knot MUR-M014, verified by the owner on the piece, only partly legible in the photographs) | — |
+| Vetreria Artistica Rosis | `vetreria-artistica-rosis` (one own reference, a factory mark: 'Rosis / Murano' engraved in cursive on the blue glass of the Nodo MUR-M015, whose identification the workshop confirmed in correspondence with the owner) | — |
 | Alfredo Barbini | — | `alfredo-barbini`, `vetreria-alfredo-barbini` |
 | Fulvio Bianconi | — | `fulvio-bianconi` |
 | Napoleone Martinuzzi | — | `napoleone-martinuzzi` |

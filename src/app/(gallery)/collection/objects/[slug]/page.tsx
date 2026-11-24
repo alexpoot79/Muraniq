@@ -103,6 +103,14 @@ export default async function ArtworkPage({ params }: Props) {
   const unlinkedMaker = a.creatorLinks.length
     ? undefined
     : a.assertions.find((x) => x.field === "creator" && x.certainty !== "unknown")?.statement;
+  // When only a firm has a profile (a workshop piece), a maker named in the attribution without a profile is still
+  // listed beside it, unlinked and in its own wording; a statement that names the linked firm itself is not repeated.
+  const unlinkedBesideFirm =
+    a.creatorLinks.length && a.creatorLinks.every((c) => c.role === "glasshouse")
+      ? a.assertions.find(
+          (x) => x.field === "creator" && x.certainty !== "unknown" && !a.creatorLinks.some((c) => x.statement.includes(c.name)),
+        )?.statement
+      : undefined;
 
   const specs: Array<{ label: string; value: React.ReactNode }> = [
     { label: "Object", value: a.objectType },
@@ -118,6 +126,7 @@ export default async function ArtworkPage({ params }: Props) {
               <span className="text-ink-muted">({ROLE_LABEL[c.role]})</span>
             </li>
           ))}
+          {unlinkedBesideFirm && <li>{unlinkedBesideFirm}</li>}
         </ul>
       ) : (
         (unlinkedMaker ?? "Not documented")

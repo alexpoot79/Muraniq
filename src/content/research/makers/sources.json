@@ -1116,8 +1116,8 @@
     "date": "2025-03-19",
     "language": "en",
     "access": "OK",
-    "access_note": "Read. Lists 'Zanetti Vetreria Artistica S.r.l. (023), Fondamenta Serenella, 3, 30141 Murano-Venezia'.",
-    "checked": "2026-11-18"
+    "access_note": "Read. Lists 'Zanetti Vetreria Artistica S.r.l. (023), Fondamenta Serenella, 3, 30141 Murano-Venezia'. Re-read 2026-11-24: 38 firms; Rosis (number 52 in Muranonet's list) is not on it.",
+    "checked": "2026-11-24"
   },
   {
     "id": "SRC-REGIONE-VENETO-VAM-TRADEMARK",
@@ -1258,5 +1258,75 @@
     "access": "OK",
     "access_note": "MURANIQ's own observation of one object (incised signature, gold firm label). Not independent evidence of authorship.",
     "checked": "2026-11-18"
+  },
+  {
+    "id": "SRC-ROSIS-COM-AZIENDA",
+    "tier": "C",
+    "type": "official_site",
+    "title": "Rosis – Azienda: da Murano a Verona (company history)",
+    "url": "https://www.rosis.com/azienda",
+    "author": null,
+    "publisher": "Rosis S.n.c.",
+    "date": null,
+    "language": "it",
+    "access": "OK",
+    "access_note": "Read in full on 2026-11-24 in a browser on the owner's computer (the site is refused by the research environment's proxy). The firm's own account, without sources: begun on Murano in 1983; handmade glass objects, lamps and chandeliers by Murano glassmakers, also made to measure; today lighting from Colognola ai Colli (VR).",
+    "checked": "2026-11-24"
+  },
+  {
+    "id": "SRC-ROSIS-COM-CONTATTI",
+    "tier": "C",
+    "type": "official_site",
+    "title": "Rosis – Contatti (company details)",
+    "url": "https://www.rosis.com/contatti",
+    "author": null,
+    "publisher": "Rosis S.n.c.",
+    "date": null,
+    "language": "it",
+    "access": "OK",
+    "access_note": "Read on 2026-11-24 in a browser on the owner's computer (the site is refused by the research environment's proxy). Registered name 'Rosis S.n.c. di Guarda Pierino & C.', Colognola ai Colli (VR), Verona register of companies. Contact details deliberately not recorded.",
+    "checked": "2026-11-24"
+  },
+  {
+    "id": "SRC-WEB-MURANONET-VAM-LABEL",
+    "tier": "C",
+    "type": "marketplace",
+    "title": "Vetro Artistico Murano: a new label – Unfold Venice (retailer article with producer numbers)",
+    "url": "https://www.muranonet.com/blogs/unfold-venice/murano-glass-a-new-label",
+    "author": "Giovanni Angi",
+    "publisher": "Muranonet",
+    "date": null,
+    "language": "en",
+    "access": "OK",
+    "access_note": "Read on 2026-11-24 in a browser on the owner's computer (the site is refused by the research environment's proxy). Lists old and new producers of the regional mark with their numbers; 52 = 'ROSIS Snc'. A retailer's list with no dates per entry.",
+    "checked": "2026-11-24"
+  },
+  {
+    "id": "SRC-ARSVALUE-LIVEBID-20200106-LOT1",
+    "tier": "C",
+    "type": "marketplace",
+    "title": "Livebid (Turin), 6 Jan 2020, lot 1: two-handled Murano glass vase, Rosis Vetreria Artistica in Murano",
+    "url": "https://www.arsvalue.com/en/auctions/1822/vetri-di-murano-cornici-in-argento-e-altri-oggetti-d-arredo",
+    "author": null,
+    "publisher": "Livebid on ArsValue",
+    "date": "2020-01-06",
+    "language": "it",
+    "access": "OK",
+    "access_note": "Read on 2026-11-24 in a browser on the owner's computer (the site is refused by the research environment's proxy). Auction house's own attribution: 23 cm, gold-leaf inclusions, contrasting handles. No price recorded.",
+    "checked": "2026-11-24"
+  },
+  {
+    "id": "SRC-MURANIQ-MUR-M015",
+    "tier": "C",
+    "type": "collection",
+    "title": "MURANIQ object record MUR-M015: Nodo (Love Knot), blue glass knot signed 'Rosis / Murano' (owner's examination and photographs)",
+    "url": "https://muraniq.nl/collection/objects/rosis-nodo-love-knot/",
+    "author": null,
+    "publisher": "MURANIQ",
+    "date": "2026-11-24",
+    "language": "en",
+    "access": "OK",
+    "access_note": "MURANIQ's own observation of one object (engraved signature). The owner reports that the workshop confirmed the piece as its Nodo, made by Maestro Zane in 2000, in private correspondence (not reproduced). A statement by the firm, not independent evidence.",
+    "checked": "2026-11-24"
   }
 ]

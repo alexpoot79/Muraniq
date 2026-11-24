@@ -8,3 +8,7 @@ The site projects this data in `src/content/makers-directory.ts`. Only entities,
 status is VERIFIED, PARTIALLY_VERIFIED, ATTRIBUTED or DISPUTED are published, each with its status shown.
 UNVERIFIED records stay out. Only images labelled PUBLIC DOMAIN are shown, from local copies in
 `public/images/makers/` (see `docs/IMAGE-SOURCES.md`).
+
+Later additions were made on `main` in `research/makers/data/` (validated with `scripts/validate.py`, exported with
+`scripts/export.py`) and copied here: the Zanetti records (18 Nov 2026, MUR-M009) and Vetreria Artistica Rosis
+(`ORG-ROSIS`, 24 Nov 2026, MUR-M015).

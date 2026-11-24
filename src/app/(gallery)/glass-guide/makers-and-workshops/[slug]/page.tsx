@@ -79,6 +79,13 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
               <p className="mt-4 text-muted-dark">Also recorded as {d.alternativeNames.join(", ")}</p>
             )}
             <p className="settle settle-2 lede mt-8 max-w-2xl text-muted-dark">{d.summary}</p>
+            {d.profileSlug && (
+              <p className="mt-8">
+                <ArrowLink href={routes.maker(d.profileSlug)} className="text-on-dark">
+                  Full profile and works in the collection
+                </ArrowLink>
+              </p>
+            )}
           </div>
           <div className="flex flex-col gap-8 lg:col-span-4 lg:col-start-9 lg:self-end">
             <ResearchStatusBadge status={d.status} explain />
@@ -223,7 +230,17 @@ export default async function DirectoryEntryPage({ params }: PageProps<"/glass-g
                         ))}
                       </span>
                     )}
-                    <span className="text-sm text-ink-muted">Described in the source; no photograph of this mark can be shown yet.</span>
+                    {d.profileSlug ? (
+                      <span className="text-sm text-ink-muted">
+                        Photographs of its signatures and marks are on the{" "}
+                        <Link href={routes.maker(d.profileSlug)} className="link-quiet">
+                          collection profile
+                        </Link>
+                        .
+                      </span>
+                    ) : (
+                      <span className="text-sm text-ink-muted">Described in the source; no photograph of this mark can be shown yet.</span>
+                    )}
                   </li>
                 ))}
               </ul>

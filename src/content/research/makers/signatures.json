@@ -100,5 +100,23 @@
     "image_id": null,
     "notes": "The register gives the code; the label as applied to Zanetti pieces has not been seen. Says nothing about which master made a piece.",
     "checked": "2026-11-18"
+  },
+  {
+    "id": "SIG-ROSIS-ENGRAVED-CURSIVE",
+    "entity_id": "ORG-ROSIS",
+    "kind": "engraved signature (cursive, workshop name)",
+    "mark_text": "'Rosis' / 'Murano', as read on MUR-M015 (engraved on the blue glass)",
+    "period": "Not verified",
+    "frequency": "Not verified",
+    "verification_status": "PARTIALLY_VERIFIED",
+    "source_ids": [
+      "SRC-MURANIQ-MUR-M015"
+    ],
+    "locators": [
+      "MURANIQ photograph IMG-M015-SIGNATURE"
+    ],
+    "image_id": null,
+    "notes": "One example, identified by the workshop itself (private correspondence with the owner). The firm's name, not the glassmaker's.",
+    "checked": "2026-11-24"
   }
 ]

@@ -10,6 +10,7 @@
  * - Images: only PUBLIC DOMAIN ones, served from a local copy. Everything else
  *   is a link to the museum record.
  * - Research notes are internal and are not published.
+ * - An entry that also has a full profile among the collection's makers links to it, and back.
  */
 import makersJson from "./research/makers/makers.json";
 import workshopsJson from "./research/makers/workshops.json";
@@ -171,6 +172,14 @@ const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+/**
+ * Research entries that also have a full profile among the collection's makers
+ * (`/glass-guide/makers/<slug>/`), keyed by research id. Both pages link to each other.
+ */
+const COLLECTION_PROFILE: Record<string, string> = {
+  "ORG-ROSIS": "vetreria-artistica-rosis",
+};
+
 /** At most this many photographs per maker; further works stay as links. */
 export const MAX_IMAGES_PER_ENTRY = 3;
 
@@ -291,6 +300,8 @@ export type DirectoryEntry = {
   /** Short dates for lists, e.g. "1895–1959" or "1921–". */
   dates: string | null;
   checked: string;
+  /** Slug of the full profile among the collection's makers, if there is one. */
+  profileSlug: string | null;
 };
 
 export type DirectoryDossier = DirectoryEntry & {
@@ -305,7 +316,7 @@ export type DirectoryDossier = DirectoryEntry & {
   marks: {
     kind: string;
     markKind: "personal_signature" | "factory_mark" | "label";
-    application: "diamond_point" | "wheel_engraved" | "acid_etched" | "printed_label" | "unknown";
+    application: "diamond_point" | "wheel_engraved" | "engraved_other" | "acid_etched" | "printed_label" | "unknown";
     text: string;
     period: string | null;
     frequency: string | null;
@@ -407,6 +418,7 @@ function build() {
     facts: factsOf(e),
     dates: lifeDates(e),
     checked: e.checked,
+    profileSlug: COLLECTION_PROFILE[e.id] ?? null,
   }));
 
   const dossiers: Record<string, DirectoryDossier> = {};
@@ -537,7 +549,9 @@ function build() {
                 ? ("diamond_point" as const)
                 : /label/i.test(s.kind)
                   ? ("printed_label" as const)
-                  : ("unknown" as const),
+                  : /engraved/i.test(s.kind)
+                    ? ("engraved_other" as const)
+                    : ("unknown" as const),
           text: s.mark_text,
           period: clean(s.period),
           frequency: clean(s.frequency),
@@ -565,6 +579,9 @@ const directory = build();
 
 export const directoryEntries = (): DirectoryEntry[] => directory.entries;
 export const directoryDossier = (slug: string): DirectoryDossier | undefined => directory.dossiers[slug];
+/** The directory entry for a collection maker profile, if that maker is also in Makers & Workshops. */
+export const directoryEntryForProfile = (profileSlug: string): DirectoryEntry | undefined =>
+  directory.entries.find((e) => e.profileSlug === profileSlug);
 export const directoryStats = () => ({
   published: directory.entries.length,
   withheld: directory.withheld,

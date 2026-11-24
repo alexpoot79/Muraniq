@@ -5,7 +5,14 @@ import makers from "@/content/research/makers/makers.json";
 import workshops from "@/content/research/makers/workshops.json";
 import images from "@/content/research/makers/images.json";
 import museumImages from "@/content/research/makers/museum-images.json";
-import { PUBLIC_STATUSES, directoryDossier, directoryEntries, directoryStats } from "@/content/makers-directory";
+import {
+  PUBLIC_STATUSES,
+  directoryDossier,
+  directoryEntries,
+  directoryEntryForProfile,
+  directoryStats,
+} from "@/content/makers-directory";
+import { fixtureDataset } from "@fixtures/dataset";
 
 const raw = [...makers, ...workshops] as { id: string; name: string; verification_status: string }[];
 const entries = directoryEntries();
@@ -62,6 +69,17 @@ describe("makers & workshops directory", () => {
 
   it("shows at most three photographs per maker", () => {
     for (const e of entries) expect(directoryDossier(e.slug)!.works.filter((w) => w.image).length).toBeLessThanOrEqual(3);
+  });
+
+  it("links an entry to its collection profile only when that profile exists, and back", () => {
+    const profiles = new Set(fixtureDataset.creators.map((c) => c.slug));
+    const linked = entries.filter((e) => e.profileSlug);
+    expect(linked.map((e) => e.id)).toContain("ORG-ROSIS");
+    for (const e of linked) {
+      expect(profiles.has(e.profileSlug!)).toBe(true);
+      expect(directoryEntryForProfile(e.profileSlug!)?.id).toBe(e.id);
+    }
+    expect(directoryEntryForProfile("vetreria-artistica-rosis")?.slug).toBe("vetreria-artistica-rosis");
   });
 
   it("does not publish internal research notes", () => {
