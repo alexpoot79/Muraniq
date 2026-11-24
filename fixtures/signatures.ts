@@ -220,6 +220,34 @@ export const signatureReferences: SignatureReference[] = [
     updatedAt: "2026-11-20",
   },
   {
+    // MURANIQ's own sculpture MUR-M013 (seated figure) and the owner's own photographs (24 Nov 2026). No certificate
+    // has been recorded for it, so the signature is "probable"; it is a second example beside the documented one on
+    // MUR-M011, which stays the lead reference.
+    id: "SIG-ROSIN-LOREDANO-M013-ENGRAVED",
+    title: "Engraved cursive signature on a clear glass base",
+    sortOrder: 20,
+    variantGroup: "engraved-cursive-full-name",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M013", markId: "MRK-M013-SIGNATURE" },
+    markOf: { creatorId: "CRE-ROSIN", role: "maker", certainty: "probable" },
+    object: { artworkId: "MUR-M013" },
+    detailImageId: "IMG-M013-SIGNATURE",
+    contextImageIds: ["IMG-M013-SIGNATURE-DETAIL", "IMG-M013-SIGNATURE-DETAIL-2", "IMG-M013-FRONT"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M013",
+        consultedOn: "2026-11-24",
+        note: "The owner's photographs of the signature, of each word close up, and of the whole sculpture.",
+      },
+    ],
+    reviewedOn: "2026-11-24",
+    internalNote:
+      "Compared by eye with the documented signature on MUR-M011: same full-name cursive and dotted engraved line, coarser on the matt side of a clear base. Raise to documented if a certificate or papers for this piece turn up.",
+    status: "published",
+    updatedAt: "2026-11-24",
+  },
+  {
     // MURANIQ's own horse MUR-M012 and the owner's own photographs (20 Nov 2026). The horse is documented by a sheet
     // of Arnaldo Zanella's own catalogue ('Articolo 107, h. 60 cm', identified as his by the owner), so the engraved
     // signature is a documented example and may lead the maker card and compact block. No certificate.
