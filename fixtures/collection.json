@@ -1434,7 +1434,7 @@
         "A sculpture of a seated figure in thick, colourless glass. The figure sits with its knees drawn up and its arms folded across them, one forearm laid over the other. Above the arms rise a narrow neck and an oval head with wavy hair, worked in loose curls over the forehead and at the sides. The face is modelled with a long, straight nose, shallow hollows for the eyes and full lips.",
         "From the sides the pose reads clearly: the back is rounded, the shins rise almost upright from the feet, and the head is bowed a little over the folded arms. From the back only the curved back, the shoulders and the head are seen. The glass is clear throughout, with smooth surfaces in which the light gathers and bends.",
         "The figure sits on a round base of thick clear glass, polished on top; its side looks matt in the photographs. On the front of the base, below the feet, the signature 'Loredano Rosin' is engraved in cursive (see Marks). Its measurements have not yet been recorded.",
-        "A page of a London dealer's catalogue of 1989 shows a pair of clear seated figures in the same pose, on round bases, as 'Sitting girl, sitting boy' (see Comparable examples). The title Rosin himself gave the model is not known, so the title used here only describes the sculpture."
+        "A page of a London dealer's catalogue of 1989 shows a pair of clear seated figures in the same pose, on round bases, as 'Sitting girl, sitting boy', 40 cm high, and a present-day dealer offers the same model, about 40 cm high, as a 'Seated Boy' (see Comparable examples). The title Rosin himself gave the model is not known, so the title used here only describes the sculpture."
       ],
       "creators": [
         {
@@ -1546,8 +1546,19 @@
             "'Sitting girl, sitting boy: H. 40cm. Colours of base: Clear or Black. Colours of figures: Clear, Black or Calcedonia.'",
             "The photograph shows two clear seated figures, each on a round black base. The page names no makers."
           ],
-          "comparison": "As far as the small photograph shows, the pose is the same: a figure sitting with its knees drawn up and its arms folded across them, a head with loose curls above, on a round base. It is closest to the right-hand figure, seen from the front. This figure is clear on a clear base, one of the combinations the caption lists. Whether it is the girl or the boy, and whether its height matches the 40 cm given, has not yet been checked. The page names no maker; the attribution here rests on the signature.",
+          "comparison": "As far as the small photograph shows, the pose is the same: a figure sitting with its knees drawn up and its arms folded across them, a head with loose curls above, on a round base. It is closest to the right-hand figure, seen from the front. This figure is clear on a clear base, one of the combinations the caption lists. The page does not say which figure is the girl and which the boy, and names no maker; the attribution here rests on the signature.",
           "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Vintage Murano Glass Seated Boy Sculpture by Loredano Rosin",
+          "stated": [
+            "GlassOfVenice, item VN_11: 'signed \"Loredano Rosin\" on the base'.",
+            "Sculpture about 16 inches (c. 41 cm) high; base about 4½ inches high and 5 inches across; weight about 18 lb.",
+            "Dated by the dealer to the 1960s and called a rare one-of-a-kind piece."
+          ],
+          "comparison": "The dealer's photographs show the same model: the seated figure with its arms folded across its knees and a curly head, on a tall round base of clear glass with a matt side, the signature engraved on the front of the base. Its height of about 40 cm agrees with Murano Studio's catalogue. The dealer calls the figure a boy, which suggests this is the 'sitting boy' of the pair. The 1960s date and 'one-of-a-kind' are the dealer's own claims, without a source; the model was still on offer in 1989, so it was made more than once.",
+          "sourceId": "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY"
         }
       ],
       "researchStatus": {
@@ -1557,11 +1568,12 @@
         ],
         "plausible": [
           "By Loredano Rosin, as the signature says; it is written like the documented signature on Il Bacio (MUR-M011).",
-          "The model offered as 'Sitting girl, sitting boy' (H. 40 cm; clear, black or calcedonio figures on a clear or black base) by Murano Studio, London, in 1989."
+          "The model offered as 'Sitting girl, sitting boy' (H. 40 cm; clear, black or calcedonio figures on a clear or black base) by Murano Studio, London, in 1989.",
+          "The 'sitting boy' of that pair: a dealer offers the same model, about 40 cm high and signed the same way, as a 'Seated Boy'."
         ],
         "open": [
-          "The title Rosin gave the model, and whether this figure is the girl or the boy of the pair.",
-          "The year it was made.",
+          "The title Rosin gave the model.",
+          "The year it was made; a dealer dates the same model to the 1960s without giving a source.",
           "Its height, width, depth and weight.",
           "Whether the figure was joined to the base while hot or afterwards, and how the side of the base was finished.",
           "Whether a certificate or other papers belong with it, and a full condition report."
@@ -1572,7 +1584,8 @@
         "SRC-MURANIQ-OBS-M013",
         "SRC-MURANO-STUDIO-CATALOGUE-1989",
         "SRC-ROSIN-CATALOGUE",
-        "SRC-MURANIQ-LEGACY-ROSIN"
+        "SRC-MURANIQ-LEGACY-ROSIN",
+        "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY"
       ],
       "relatedIds": [
         "MUR-M011",
@@ -2649,6 +2662,16 @@
       "publisher": "MURANIQ",
       "year": "2026",
       "reliabilityNote": "Photographed by the owner, November 2026. Measurements and weight still to be recorded.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY",
+      "type": "other",
+      "title": "Vintage Murano Glass Seated Boy Sculpture by Loredano Rosin (dealer listing, item VN_11)",
+      "publisher": "GlassOfVenice, Glen Rock (New Jersey), Murano glass dealer",
+      "url": "https://www.glassofvenice.com/home-decor/murano-glass-sculptures-figurines/murano-sculptures/vintage-murano-glass-seated-sculpture-loredano-rosin-p-3877.html",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Dealer's listing with photographs; its dating and descriptions are the dealer's own and give no sources. Read on 24 November 2026.",
       "isFixture": false
     }
   ]
