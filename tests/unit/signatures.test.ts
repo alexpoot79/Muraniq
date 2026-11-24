@@ -393,7 +393,9 @@ describe("recognition-ready export", () => {
     (d.media.find((m) => m.id === "IMG-R009-INSCRIPTION") as MediaAsset).recognitionUse = "unknown";
     const r = validateDataset(d);
     if (!r.ok) throw new Error("invalid");
-    const detail = exportSignatures(r.data, { today: TODAY }).references[1]!.images[0]!;
+    const detail = exportSignatures(r.data, { today: TODAY })
+      .references.find((x) => x.id === "SIG-BIGAGLIA-R009-INSCRIPTION")!
+      .images.find((i) => i.role === "detail")!;
     expect(detail.webPublication.allowed).toBe(true);
     expect(detail.usableForRecognition).toBe(false);
   });

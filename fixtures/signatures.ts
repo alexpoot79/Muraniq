@@ -248,6 +248,35 @@ export const signatureReferences: SignatureReference[] = [
     updatedAt: "2026-11-24",
   },
   {
+    // MURANIQ's own love knot MUR-M014 and the owner's own photographs (24 Nov 2026). The owner reads the signature as
+    // Renato Anatrà's; in the two close-ups it is only partly legible (seen through the base) and it has not been
+    // compared with a documented 'R. Anatra', so it stays "probable". It leads his card and compact block only as long
+    // as no firmer reference exists, labelled as probable (rule of 20 Nov 2026).
+    id: "SIG-ANATRA-RENATO-M014-ENGRAVED",
+    title: "Engraved signature on a clear glass base",
+    sortOrder: 10,
+    variantGroup: "engraved-point",
+    kind: "personal_signature",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M014", markId: "MRK-M014-SIGNATURE" },
+    markOf: { creatorId: "CRE-ANATRA-RENATO", role: "maker", certainty: "probable" },
+    object: { artworkId: "MUR-M014" },
+    detailImageId: "IMG-M014-SIGNATURE",
+    contextImageIds: ["IMG-M014-SIGNATURE-DETAIL", "IMG-M014-FRONT"],
+    evidence: [
+      {
+        sourceId: "SRC-MURANIQ-OBS-M014",
+        consultedOn: "2026-11-24",
+        note: "The owner's two close-ups of the signature and photographs of the whole sculpture.",
+      },
+    ],
+    reviewedOn: "2026-11-24",
+    internalNote:
+      "Only partly legible: the right-hand letters are compatible with '…atra'. Compare with a documented 'R. Anatra' (e.g. the Dorotheum 2025 Two Lovers with its Arte '80 label) or a sharper photograph before raising the certainty.",
+    status: "published",
+    updatedAt: "2026-11-24",
+  },
+  {
     // MURANIQ's own horse MUR-M012 and the owner's own photographs (20 Nov 2026). The horse is documented by a sheet
     // of Arnaldo Zanella's own catalogue ('Articolo 107, h. 60 cm', identified as his by the owner), so the engraved
     // signature is a documented example and may lead the maker card and compact block. No certificate.

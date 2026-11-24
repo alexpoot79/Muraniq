@@ -63,6 +63,8 @@ const PAGES = [
   "/collection/objects/loredano-rosin-il-bacio-the-kiss/",
   "/collection/objects/arnaldo-zanella-black-glass-rearing-horse/",
   "/collection/objects/loredano-rosin-seated-figure/",
+  "/collection/objects/renato-anatra-love-knot/",
+  "/glass-guide/makers/renato-anatra/",
   "/glass-guide/makers/arnaldo-zanella/",
   "/glass-guide/techniques/scavo/",
   "/glass-guide/attribution/",
