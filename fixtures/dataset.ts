@@ -434,6 +434,117 @@ const referenceDataset: DatasetInput = {
         "Auction lot entry; the description and attribution are the auction house's own. Cited from MURANIQ's research notes; the page could not be reopened for this review. No result is published here.",
       isFixture: false,
     },
+    // Renato Anatrà (profile added 24 Nov 2026 for MUR-M014). The pages below were read on 24 Nov 2026 in a
+    // browser on the owner's computer (the sites cannot be reached from the build environment), except the
+    // Ader and Quittenbaum catalogues, which are cited from the owner's research notes. No prices or results.
+    {
+      id: "SRC-MURANONET-ANATRA",
+      type: "other",
+      title: "Renato Anatrà — Unfold Venice",
+      author: "Giovanni Angi",
+      publisher: "MuranoNet (Venice retailer)",
+      url: "https://www.muranonet.com/blogs/unfold-venice/renato-anatra",
+      reliabilityNote:
+        "Retailer's short artist page, without sources. Read on 24 November 2026. Gives his birth year, Arte80 with Andrea Tagliapietra, his retirement in the early 2000s and his death in 2020; a reader's comment of January 2023 says the death was learned of on Murano in January 2021.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-MURANONET-ANDREA-TAGLIAPIETRA",
+      type: "other",
+      title: "Andrea Tagliapietra — Unfold Venice",
+      author: "Giovanni Angi",
+      publisher: "MuranoNet (Venice retailer)",
+      url: "https://www.muranonet.com/blogs/unfold-venice/andrea-tagliapietra",
+      reliabilityNote:
+        "Retailer's artist page, without sources. Read on 24 November 2026. States that in the 1980s he established the company Arte80 with Renato Anatrà.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-DOROTHEUM-2023-ANATRA-NUDE",
+      type: "auction",
+      title: "Weiblicher Akt turnend, Renato Anatra, Murano (Summer auction, Salzburg, 3 August 2023)",
+      publisher: "Dorotheum",
+      year: "2023",
+      url: "https://www.dorotheum.com/en/l/8648266/",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Read on 24 November 2026. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-DOROTHEUM-2024-ANATRA-TWO-LOVERS",
+      type: "auction",
+      title: "Renato Anatra (geb. 1943), Glasskulptur: Two Lovers, Murano, um 1980 (Works of Art, 31 July 2024)",
+      publisher: "Dorotheum",
+      year: "2024",
+      url: "https://www.dorotheum.com/en/l/9152813/",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Read on 24 November 2026. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ALEXANDRITE",
+      type: "auction",
+      title: "Murano Glasobjekt ‘Two Lovers’, Renato Anatra (1943 geb.), Vetri Artistica, Venedig, um 1990 (Art & Antiques, Linz, 8 July 2025)",
+      publisher: "Dorotheum",
+      year: "2025",
+      url: "https://www.dorotheum.com/en/l/9664397/",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Read on 24 November 2026. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ARTE80",
+      type: "auction",
+      title: "Renato Anatra (born in 1943), a high glass sculpture: Two Lovers, Vetri Artistici, Murano, 1980 (26 August 2025)",
+      publisher: "Dorotheum",
+      year: "2025",
+      url: "https://www.dorotheum.com/en/l/9693032/",
+      reliabilityNote:
+        "Auction lot entry: base with the label ‘Vetri Artistici Arte ’80 Murano Made in Italy’ and a needle-etched signature ‘R. Anatra’ underneath. The description and attribution are the auction house's own. Read on 24 November 2026. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-HALLS-2026-LOT-190",
+      type: "auction",
+      title: "Murano glass sculpture of a nude male torso by Renato Anatra (lot 190, 11 February 2026)",
+      publisher: "Halls Fine Art",
+      year: "2026",
+      url: "https://fineart.hallsgb.com/auction/lot/lot-190---murano-glass-sculpture-of-a-nude-male-torso-by-renato-anatra/?lot=173059",
+      reliabilityNote:
+        "Auction lot entry; the description and attribution are the auction house's own. Read on 24 November 2026. No result is published here.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-ADER-ANATRA-DANCERS",
+      type: "auction",
+      title: "Couple de danseurs by Renato Anatra (lot 257, sale catalogue)",
+      publisher: "Ader, Paris (catalogue published on La Gazette Drouot)",
+      url: "https://www.gazette-drouot.com/telechargement/catalogue?venteId=103755",
+      reliabilityNote:
+        "Cited from the owner's research notes (clear glass on a black glass base, 40.5 cm, signed ‘R. Anatra’ underneath, Arte ’80 label). The catalogue itself has not yet been read by MURANIQ.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-QUITTENBAUM-170-LOT-716",
+      type: "auction",
+      title: "Murano glass, sale catalogue 170 C: a fish by Renato Anatrà (lot 716)",
+      publisher: "Quittenbaum Kunstauktionen, Munich",
+      url: "https://www.quittenbaum.de/media/Kataloge/170C_DE.pdf",
+      reliabilityNote:
+        "Cited from the owner's research notes (fish, about 2002, 40 cm long, clear glass with green layers, engraved ‘Anatrà’). The catalogue PDF has not yet been read by MURANIQ.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-VINTAGEINFO-VM-LABELS",
+      type: "other",
+      title: "List of Murano companies: Vetri Murano (VM) label numbers",
+      publisher: "Vintageinfo (vintageinfo.be)",
+      url: "https://vintageinfo.be/list-of-murano-companies-labels/",
+      rightsNote: "All rights reserved; nothing is reproduced here.",
+      reliabilityNote:
+        "Collector's reference list of the company numbers on the Vetri Murano labels of the Veneziavetro consortium (from 1981), without a source for each entry. Read on 24 November 2026: 043 is given as ‘Vetri Artistici Arte 80 – Renato Anatrà’.",
+      isFixture: false,
+    },
   ],
   creators: [
     {
@@ -619,7 +730,7 @@ const referenceDataset: DatasetInput = {
           heading: "Signatures and certificates",
           paragraphs: [
             "Il Bacio in the MURANIQ collection is signed ‘Loredano Rosin’ in cursive, engraved in a fine, dotted white line into the black base (see Signatures & Marks below). It came with a printed certificate of authenticity, headed with his angular R monogram, on which the title, a number and the date are filled in by hand and which he signed in pen. The pen signature is quicker and much less legible than the engraved one on the base.",
-            "A second signed work in the collection, a seated figure on a round base of clear glass, carries the same signature: the full name in cursive, engraved in a dotted line, here coarser in the matt side of the base. No certificate has been recorded for it, so it is shown as probable.",
+            "A second signed work in the collection, a seated figure on a round base of clear glass, carries the same signature: the full name in cursive, engraved in a dotted line, here coarser in the matt side of the base. No certificate has been recorded for it; the owner has verified the signature on the piece against documented signatures of his.",
             "Two examples are not enough to describe how he signed over the years. More signed and certified works are needed to compare with.",
           ],
         },
@@ -882,6 +993,7 @@ const referenceDataset: DatasetInput = {
       biography: [
         "Andrea Tagliapietra was born on Murano on 7 February 1955, according to the biography published by the Franco Schiavon Gallery, the Murano gallery that represents his work. He began working with glass at fourteen as an apprentice to the maestro Ermanno Nason, following his father, Erminio Tagliapietra, a master at the Salviati glassworks. In 1979 he became a maestro himself.",
         "In 1980 he began to make sculpture of his own. The gallery dates his first exhibition to 1983, at the Fondazione Bevilacqua La Masa in Venice, with a sculpture on the theme of motherhood, and records later exhibitions in galleries from Vienna to Tokyo, among them Palm Beach and New York. It also names him as the teacher of the maestro Mirco Bastianello.",
+        "According to the Murano retailer Muranonet, in the 1980s he founded the workshop Vetri Artistici Arte ’80 with the glass sculptor Renato Anatrà. The gallery biography does not mention it.",
       ],
       sections: [
         {
@@ -922,7 +1034,7 @@ const referenceDataset: DatasetInput = {
         {
           heading: "Still to be checked",
           paragraphs: [
-            "This profile rests mainly on one source, the gallery's own biography, which has not yet been compared with an independent publication. Still open: the exact day of birth, which is given differently elsewhere; the exhibitions after 1983; how and since when he has worked with Franco Schiavon; whether his models are recorded with names or numbers in a catalogue; and documented signatures to compare with.",
+            "This profile rests mainly on one source, the gallery's own biography, which has not yet been compared with an independent publication. Still open: the exact day of birth, which is given differently elsewhere; the exhibitions after 1983; his part in Arte ’80 and how long he stayed there; how and since when he has worked with Franco Schiavon; whether his models are recorded with names or numbers in a catalogue; and documented signatures to compare with.",
           ],
         },
       ],
@@ -932,9 +1044,116 @@ const referenceDataset: DatasetInput = {
         "SRC-SCHIAVON-TAGLIAPIETRA-LOVERS-CHALCEDONY",
         "SRC-SCHIAVON-TAGLIAPIETRA-LYING-LOVERS",
         "SRC-PBMA-2026-TAGLIAPIETRA-LYING-LOVERS",
+        "SRC-MURANONET-ANDREA-TAGLIAPIETRA",
       ],
       signatureRefIds: ["SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED"],
       primarySignatureId: "SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED",
+      status: "published",
+    },
+    {
+      // Profile added 24 Nov 2026 for MUR-M014 (clear love knot, signature verified by the owner as Anatrà's), from the
+      // owner's research notes and the pages they cite, re-read the same day where they could be opened. No
+      // exhibition catalogue, museum record or publication about him has been found; every fact carries its basis.
+      // He signed 'R. Anatra' (no accent); some sale listings misspell him 'Renata Anatra'.
+      id: "CRE-ANATRA-RENATO",
+      slug: "renato-anatra",
+      kind: "person",
+      name: "Renato Anatrà",
+      aliases: ["Renato Anatra"],
+      roles: ["maker"],
+      lifeLabel: "b. 1943",
+      summary:
+        "Murano glass sculptor, born in 1943, co-founder of the workshop Vetri Artistici Arte ’80 with Andrea Tagliapietra, known for couples, dancers, nudes and abstract knots in solid clear glass.",
+      biographyStatus: "in_research",
+      birthYear: 1943,
+      nationality: "Italy",
+      facts: [
+        { label: "Born", value: "1943", basis: "Muranonet; auction houses (Dorotheum) give the same year" },
+        { label: "Nationality", value: "Italian" },
+        {
+          label: "Workshop",
+          value: "Vetri Artistici Arte ’80, Murano, co-founded with Andrea Tagliapietra",
+          basis: "Muranonet (pages on both makers); Arte ’80 labels on signed works",
+        },
+        {
+          label: "Discipline",
+          value: "Sculpture in solid glass, mostly clear: couples, dancers, nudes, animals and abstract knots",
+          basis: "Auction and dealer descriptions; a work examined by MURANIQ",
+        },
+        {
+          label: "Signature",
+          value: "‘R. Anatra’, engraved with a needle point, usually under the base; also ‘Anatrà’",
+          basis: "Auction catalogues (Dorotheum, Halls Fine Art; Quittenbaum per the owner's notes)",
+        },
+        { label: "Retired", value: "Early 2000s", basis: "Muranonet" },
+        { label: "Died", value: "Reported as 2020; not confirmed", basis: "Muranonet; no published notice found" },
+      ],
+      biography: [
+        "Renato Anatrà was a Murano glass sculptor, born in 1943. The Venetian retailer Muranonet counts him among the most prolific glass sculptors on Murano until he retired in the early 2000s, and describes his work as mainly sculpture in clear glass. His name is often written Anatra, without the accent, which is also how he signed; some sale listings misspell it as Renata Anatra.",
+        "With the Murano glass master Andrea Tagliapietra he founded the workshop Vetri Artistici Arte ’80. Muranonet's pages on both makers name the two as its founders and place it in the 1980s; its name and a work labelled Arte ’80 that Dorotheum dates to 1980 point to 1980 as the year it opened. Signed works by Anatrà still carry its label, ‘Vetri Artistici Arte ’80 Murano Made in Italy’.",
+        "Muranonet reports that he died in 2020. A reader's comment on its page says the news was heard on Murano in January 2021 and that no notice of it could be found. MURANIQ has not found a record to confirm the date.",
+        "The MURANIQ collection holds a signed love knot by him in clear glass (see Works below).",
+      ],
+      sections: [
+        {
+          heading: "Work and style",
+          paragraphs: [
+            "Anatrà worked in solid glass shaped hot at the furnace, mostly colourless. Works catalogued by auction houses include embracing couples sold as Two Lovers, a pair of dancers, a female nude in a gymnastic pose, a male nude torso and a fish. Many of his figures in clear glass stand on a base of dark glass, black or very dark green, against which the intertwined silhouettes and the spaces between the bodies read clearly.",
+            "He also used other kinds of glass. Dorotheum describes a Two Lovers in alexandrite glass, which shifts between blue, green and violet with the light; Halls Fine Art a male torso in scavo glass, with a matt, weathered surface; and a fish catalogued by Quittenbaum has layers of green within the clear glass.",
+          ],
+        },
+        {
+          heading: "Love knots",
+          paragraphs: [
+            "Among the pieces most often offered under his name are abstract knots in glass, which dealers call love knots or nodi d'amore: a thick loop, a long tapering spike and a thinner strand wound through the loop, set on a base. They occur in clear glass on a frosted or a clear block, and in colours such as lavender on a black cylinder. Dealers date them from the 1970s to the 1990s, one of them to 1996. The name is the dealers'; no title given by Anatrà himself has been found.",
+            "Knots of this kind were also made by other Murano workshops, so the form alone does not identify his work. The love knot in the MURANIQ collection is in clear glass, on a heavy clear block with pressed-in hollows.",
+          ],
+        },
+        {
+          heading: "Signatures and workshop labels",
+          paragraphs: [
+            "Auction houses record his signature as ‘R. Anatra’, engraved with a needle point, usually under the base; one dealer reports it on a side of the base of a clear love knot. A fish catalogued by Quittenbaum is engraved ‘Anatrà’, and a Two Lovers sold by Dorotheum in 2024 is needle-etched ‘Murano’ with the artist's mark underneath.",
+            "Some signed works keep the paper label of his workshop, ‘Vetri Artistici Arte ’80 Murano Made in Italy’, or a Vetri Murano label. A collector's list of Vetri Murano label numbers gives 043 for Vetri Artistici Arte 80 – Renato Anatrà; MURANIQ has not yet seen such a label. A label identifies the workshop but can be lost or moved, so for a single piece the signature and a close match with a documented example matter more.",
+            "The love knot in the MURANIQ collection carries his signature, engraved on its base. The owner has verified it on the piece against documented signatures of his; in the photographs it is only partly legible (see Signatures & Marks below).",
+          ],
+        },
+        {
+          heading: "Works catalogued at auction",
+          paragraphs: [
+            "Descriptions and dates below are the auction houses' own. MURANIQ publishes no prices, estimates or results.",
+            "Two Lovers, about 1980: colourless glass on a base cased in black-green glass, with a ‘Made in Italy Murano’ label and, underneath, ‘Murano’ and the artist's mark needle-etched; 36.4 cm high (Dorotheum, 31 July 2024).",
+            "Two Lovers, catalogued as 1980: clear glass on a glass base that looks black, with the label ‘Vetri Artistici Arte ’80 Murano Made in Italy’ and the signature ‘R. Anatra’ needle-etched underneath; 47 cm high (Dorotheum, 26 August 2025).",
+            "Couple de danseurs: clear glass on a black glass base, signed ‘R. Anatra’ underneath, with an Arte ’80 label; 40.5 cm high (Ader, Paris, lot 257; from the owner's research notes).",
+            "Female nude in a gymnastic pose: colourless glass showing blue to violet, fixed to a base signed ‘R. Anatra’, with the remains of two paper labels; about 36.5 cm high overall (Dorotheum, Salzburg, 3 August 2023).",
+            "Male nude torso, about 1980s: scavo glass on a square plinth, signed ‘R. Anatra’, with a Vetri Murano paper label; 39.5 cm high (Halls Fine Art, 11 February 2026).",
+            "Two Lovers, about 1990: alexandrite glass, with the signature ‘R. Anatra’ engraved underneath; about 47.5 cm high (Dorotheum, Linz, 8 July 2025).",
+            "Fish, about 2002: clear glass with green layers, engraved ‘Anatrà’; 40 cm long (Quittenbaum, lot 716; from the owner's research notes).",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "This profile rests on a retailer's short artist pages and on auction and dealer descriptions; no exhibition catalogue, museum record or publication about him has been found yet. Still open: his place of birth and his training; the year Arte ’80 opened and how long he worked there; the year of his death; and Muranonet's statement that a polychrome glass guitar he made in 1960 was shown at the Metropolitan Museum of Art in New York. MURANIQ found no work by him in the Met's online collection (searched 24 November 2026). The Ader and Quittenbaum catalogue entries are cited from the owner's research notes and have not yet been read by MURANIQ.",
+          ],
+        },
+      ],
+      techniqueIds: [],
+      sourceIds: [
+        "SRC-MURANONET-ANATRA",
+        "SRC-MURANONET-ANDREA-TAGLIAPIETRA",
+        "SRC-DOROTHEUM-2024-ANATRA-TWO-LOVERS",
+        "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ARTE80",
+        "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ALEXANDRITE",
+        "SRC-DOROTHEUM-2023-ANATRA-NUDE",
+        "SRC-HALLS-2026-LOT-190",
+        "SRC-ADER-ANATRA-DANCERS",
+        "SRC-QUITTENBAUM-170-LOT-716",
+        "SRC-VINTAGEINFO-VM-LABELS",
+        "SRC-1STDIBS-ANATRA-LOVE-KNOT",
+        "SRC-CHAIRISH-ANATRA-LOVE-KNOT",
+      ],
+      signatureRefIds: ["SIG-ANATRA-RENATO-M014-ENGRAVED"],
+      primarySignatureId: "SIG-ANATRA-RENATO-M014-ENGRAVED",
       status: "published",
     },
   ],

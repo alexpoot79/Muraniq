@@ -1440,7 +1440,7 @@
         {
           "creatorId": "CRE-ROSIN",
           "role": "maker",
-          "certainty": "probable"
+          "certainty": "verified"
         }
       ],
       "techniqueIds": [],
@@ -1476,9 +1476,9 @@
           "observation": "Cursive signature in one line, engraved with a fine point into the matt side of the clear glass base, so that the letters show as a granular, dotted white line. A capital L with a tall loop and a capital R; the full first name is written out.",
           "transcription": "Loredano Rosin",
           "transcriptionNote": "Read from the owner's photographs. Both words are legible; the small letters in the middle of 'Loredano' are close together and partly broken up by the engraving.",
-          "transcriptionCertainty": "probable",
-          "interpretation": "The signature of Loredano Rosin. It is written in the same way as the signature on Il Bacio (MUR-M011), which his certificate documents: the full first name, the same cursive letters and a dotted engraved line, here coarser on the matt glass. The full first name sets it apart from works by his brother Dino Rosin.",
-          "interpretationCertainty": "probable",
+          "transcriptionCertainty": "verified",
+          "interpretation": "The signature of Loredano Rosin, verified by the owner on the piece against documented signatures of his. It is written like the signature on Il Bacio (MUR-M011), which his certificate documents: the full first name, the same cursive letters and a dotted engraved line, here coarser on the matt glass. The full first name sets it apart from works by his brother Dino Rosin.",
+          "interpretationCertainty": "verified",
           "imageId": "IMG-M013-SIGNATURE"
         }
       ],
@@ -1486,14 +1486,21 @@
         {
           "field": "creator",
           "statement": "By Loredano Rosin",
-          "certainty": "probable",
+          "certainty": "verified",
           "evidence": [
             {
               "sourceId": "SRC-MURANIQ-OBS-M013",
-              "locator": "engraved signature on the base"
+              "locator": "engraved signature on the base",
+              "consultedOn": "2026-11-24",
+              "note": "Verified by the owner on the piece, after long research, against documented signatures of Loredano Rosin."
+            },
+            {
+              "sourceId": "SRC-ROSIN-CERTIFICATE-M011",
+              "locator": "documented signature on Il Bacio (MUR-M011)"
             }
           ],
-          "publicNote": "Signed 'Loredano Rosin' on the base, in the same hand and manner as the signature on Il Bacio (MUR-M011), which is documented by his certificate. No certificate or other document for this sculpture has been recorded yet, so the attribution rests on the signature."
+          "publicNote": "Signed 'Loredano Rosin' on the base. After long research the owner has verified the signature on the piece against documented signatures of his, among them the one on Il Bacio (MUR-M011), which his certificate documents. No certificate or other document for this sculpture itself has been recorded.",
+          "reviewedOn": "2026-11-24"
         },
         {
           "field": "origin",
@@ -1564,10 +1571,10 @@
       "researchStatus": {
         "established": [
           "Seated figure in solid colourless glass, its knees drawn up and its arms folded across them, on a round base of clear glass.",
-          "The signature 'Loredano Rosin' is engraved in cursive on the side of the base, below the feet."
+          "The signature 'Loredano Rosin' is engraved in cursive on the side of the base, below the feet.",
+          "The signature is Loredano Rosin's: verified by the owner against documented signatures of his, among them the one on Il Bacio (MUR-M011)."
         ],
         "plausible": [
-          "By Loredano Rosin, as the signature says; it is written like the documented signature on Il Bacio (MUR-M011).",
           "The model offered as 'Sitting girl, sitting boy' (H. 40 cm; clear, black or calcedonio figures on a clear or black base) by Murano Studio, London, in 1989.",
           "The 'sitting boy' of that pair: a dealer offers the same model, about 40 cm high and signed the same way, as a 'Seated Boy'."
         ],
@@ -1595,6 +1602,194 @@
       "status": "published",
       "featured": false,
       "curatedOrder": 82,
+      "updatedAt": "2026-11-24"
+    },
+    {
+      "id": "MUR-M014",
+      "slug": "renato-anatra-love-knot",
+      "title": "Love knot, clear glass sculpture by Renato Anatrà",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A love knot in solid clear glass: a thick upright loop, a long tapering spike and a thin strand wound through the loop, on a heavy clear glass block with pressed-in hollows. Signed on the base by Renato Anatrà; the owner has verified the signature.",
+      "description": [
+        "An abstract sculpture in thick, colourless glass. A heavy, teardrop-shaped loop stands upright on the base. From the top of the loop one end rises into a long spike that tapers to a fine point and curves gently backwards; the other end continues as a much thinner strand, which is wound around the spike and through the loop and ends inside it in a small curled tip.",
+        "From the front the loop is an open oval; turned to the side it narrows to a single curved band, and the spike and the thin strand cross in front of each other. The glass is clear throughout. In the photographs the small tip of the thin strand looks faintly green.",
+        "The knot stands on a heavy block of clear glass, roughly square, whose sides are pressed in with deep, rounded hollows, so that it catches the light like a cut stone. The base carries Renato Anatrà's engraved signature, which the owner has verified on the piece; seen through the glass, it is only partly legible in the photographs (see Marks). The measurements have not yet been recorded.",
+        "Clear knots of the same composition, signed by Anatrà, are offered by dealers on other bases, and the same knot occurs in coloured glass on a black cylinder (see Comparable examples). Dealers sell these pieces as a 'love knot' or 'nodo d'amore'. The title Anatrà himself used, if any, is not known, so the title here describes the form."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-ANATRA-RENATO",
+          "role": "maker",
+          "certainty": "verified"
+        }
+      ],
+      "techniqueIds": [],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "colourless"
+      ],
+      "country": "Italy",
+      "dating": {
+        "fromYear": 1980,
+        "toYear": 2000,
+        "displayLabel": "c. 1980–2000",
+        "certainty": "hypothesis"
+      },
+      "dimensions": {},
+      "heroImageId": "IMG-M014-FRONT",
+      "imageIds": [
+        "IMG-M014-FRONT",
+        "IMG-M014-SIDE",
+        "IMG-M014-SIDE-2",
+        "IMG-M014-REVERSE",
+        "IMG-M014-SIDE-3",
+        "IMG-M014-SIGNATURE",
+        "IMG-M014-SIGNATURE-DETAIL"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M014-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "On the base, photographed through the glass",
+          "observation": "A signature engraved with a fine point, so that the letters show as a granular, dotted white line. It is seen at an angle and through the thick glass of the base, whose hollows break it up and blur parts of it in the photographs.",
+          "transcriptionNote": "Not transcribed letter by letter here: in the owner's two close-ups several letters are not legible, so the reading cannot be checked from the photographs alone.",
+          "interpretation": "The signature of Renato Anatrà. The owner has examined it on the piece and verified it against documented signatures of his; auction houses record these as 'R. Anatra', engraved with a needle point, usually under the base, and one dealer reports it on a side of the base of a clear love knot.",
+          "interpretationCertainty": "verified",
+          "imageId": "IMG-M014-SIGNATURE"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "By Renato Anatrà",
+          "certainty": "verified",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M014",
+              "locator": "signature on the base",
+              "consultedOn": "2026-11-24",
+              "note": "Verified by the owner on the piece, after long research, against documented signatures of Renato Anatrà."
+            },
+            {
+              "sourceId": "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ARTE80",
+              "locator": "signature 'R. Anatra' recorded by the auction house"
+            },
+            {
+              "sourceId": "SRC-1STDIBS-ANATRA-LOVE-KNOT",
+              "locator": "same composition, signed 'R. Anatrà'"
+            }
+          ],
+          "publicNote": "The owner has examined the signature engraved on the base and, after long research, verified it as Renato Anatrà's by comparison with documented signatures of his. The composition also matches clear love knots sold signed 'R. Anatrà' (see Comparable examples). The photographs show the signature only partly, so the reading cannot be checked from them alone.",
+          "reviewedOn": "2026-11-24"
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANONET-ANATRA",
+              "locator": "artist page"
+            }
+          ],
+          "publicNote": "Renato Anatrà worked on Murano, where he co-founded the workshop Vetri Artistici Arte ’80. No label or 'Murano' mark has been found on this sculpture."
+        },
+        {
+          "field": "dating",
+          "statement": "Probably made between about 1980 and 2000",
+          "certainty": "hypothesis",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANONET-ANATRA",
+              "locator": "retired in the early 2000s"
+            },
+            {
+              "sourceId": "SRC-1STDIBS-ANATRA-LOVE-KNOT",
+              "locator": "dealer's date, 1980s"
+            },
+            {
+              "sourceId": "SRC-CHAIRISH-ANATRA-LOVE-KNOT",
+              "locator": "dealer's date, 1996"
+            }
+          ],
+          "publicNote": "Nothing on the piece dates it. Dealers date a signed clear love knot of this composition to the 1980s and a lavender one to 1996; others give the 1970s. Anatrà co-founded Arte ’80 around 1980 and, according to Muranonet, retired in the early 2000s. The range is an estimate."
+        },
+        {
+          "field": "technique",
+          "statement": "Solid colourless glass, shaped hot",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M014",
+              "locator": "photographs"
+            }
+          ],
+          "publicNote": "The loop, the spike and the thin strand are drawn and bent from solid colourless glass while hot; the hollows in the heavy base appear to have been pressed in while the glass was soft. How the knot was joined to the base has not been examined."
+        }
+      ],
+      "condition": "A full condition report has not yet been made. The photographs show no obvious damage.",
+      "comparables": [
+        {
+          "kind": "dealer_listing",
+          "title": "'Love Knot' Murano Sculpture by Renato Anatrà, Signed, Italy, 1980's",
+          "stated": [
+            "1stDibs, offered by Velveteen Rabbit, Doylestown (Pennsylvania).",
+            "'The clear sculpture sits atop a solid, lightly frosted glass cuboid base. Clearly signed R. Anatrà on one of the base sides.'",
+            "Height 40.6 cm (16 in), width 15.2 cm, depth 9.5 cm. Dated by the dealer to the 1980s."
+          ],
+          "comparison": "The dealer's photographs show the same composition in colourless glass: a thick upright loop, a long tapering spike and a thinner strand wound through the loop. The base differs: a frosted, straight-sided block there, a clear block with pressed-in hollows here. The signature is reported on a side of the base, as on this piece. The 1980s date is the dealer's own.",
+          "sourceId": "SRC-1STDIBS-ANATRA-LOVE-KNOT"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Vintage Signed Renato Anatra 'Love Knot' Murano Art Glass Sculpture",
+          "stated": [
+            "Chairish, offered by Everything Home Upscale Resale, Royal Oak (Michigan).",
+            "'Created in 1996 and engraved on the bottom' by Renato Anatra; 'intertwined lavender Murano glass' on a black glass cylinder base.",
+            "Height 34.9 cm (13.75 in) overall; base 8.3 cm (3.25 in) high."
+          ],
+          "comparison": "The same knot, loop, spike and thin strand, in lavender glass on a black cylinder. It shows that the composition was made in more than one colour and on different bases. The 1996 date is the dealer's, without a source.",
+          "sourceId": "SRC-CHAIRISH-ANATRA-LOVE-KNOT"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Abstract love knot in solid colourless glass: an upright loop, a long tapering spike and a thin strand wound through the loop, on a heavy clear glass block with pressed-in hollows.",
+          "A signature is engraved in a fine, dotted line on the base; it is only partly legible in the owner's photographs.",
+          "The signature is Renato Anatrà's: verified by the owner on the piece against documented signatures of his."
+        ],
+        "plausible": [
+          "Made at Vetri Artistici Arte ’80, the Murano workshop he co-founded with Andrea Tagliapietra; there is no label on the piece to confirm this.",
+          "Made between about 1980 and 2000."
+        ],
+        "open": [
+          "A sharper photograph and a letter-by-letter transcription of the signature.",
+          "Whether a workshop or Vetri Murano label was once attached.",
+          "Its height, width, depth and weight.",
+          "The title Anatrà gave the model, if any, and the year it was made.",
+          "Where and when it was acquired, and a full condition report."
+        ],
+        "reviewedOn": "2026-11-24"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M014",
+        "SRC-1STDIBS-ANATRA-LOVE-KNOT",
+        "SRC-CHAIRISH-ANATRA-LOVE-KNOT",
+        "SRC-MURANONET-ANATRA",
+        "SRC-DOROTHEUM-2025-ANATRA-TWO-LOVERS-ARTE80"
+      ],
+      "relatedIds": [
+        "MUR-M010",
+        "MUR-M013"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 83,
       "updatedAt": "2026-11-24"
     }
   ],
@@ -2378,6 +2573,97 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M014-FRONT",
+      "artworkId": "MUR-M014",
+      "viewType": "front",
+      "src": "/images/collection/m014/m014-front-5c7c1492.jpg",
+      "width": 765,
+      "height": 1600,
+      "alt": "Clear glass love knot seen from the front: an upright oval loop, a long tapering spike rising from it and a thin strand wound through it, on a heavy clear glass block with pressed-in hollows",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-SIDE",
+      "artworkId": "MUR-M014",
+      "viewType": "side",
+      "src": "/images/collection/m014/m014-side-1-89b4925c.jpg",
+      "width": 770,
+      "height": 1600,
+      "alt": "The love knot turned a little: the spike curving up on the left, the thin strand looped around it and ending in a small curled tip inside the loop, above the clear glass base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-SIDE-2",
+      "artworkId": "MUR-M014",
+      "viewType": "side",
+      "src": "/images/collection/m014/m014-side-2-ed77c1da.jpg",
+      "width": 754,
+      "height": 1600,
+      "alt": "The love knot seen from the side: the thick loop narrowed to one curved band, the thin strand arching over it and the spike rising behind",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-REVERSE",
+      "artworkId": "MUR-M014",
+      "viewType": "reverse",
+      "src": "/images/collection/m014/m014-reverse-4acd8180.jpg",
+      "width": 666,
+      "height": 1600,
+      "alt": "The love knot from the back: the open loop, crossed by the spike and the thin strand, on the clear glass base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-SIDE-3",
+      "artworkId": "MUR-M014",
+      "viewType": "side",
+      "src": "/images/collection/m014/m014-side-3-8f7c1a4f.jpg",
+      "width": 694,
+      "height": 1600,
+      "alt": "The love knot turned further: the thick loop in front, the thin strand ending in a small curled tip inside it, the spike rising to the right",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-SIGNATURE",
+      "artworkId": "MUR-M014",
+      "viewType": "signature",
+      "src": "/images/collection/m014/m014-signature-06e87669.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Close-up of the clear glass base: an engraved signature in a dotted white line, seen through the glass and partly blurred by its hollows",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M014-SIGNATURE-DETAIL",
+      "artworkId": "MUR-M014",
+      "viewType": "signature",
+      "src": "/images/collection/m014/m014-signature-detail-49615481.jpg",
+      "width": 1600,
+      "height": 824,
+      "alt": "Second close-up of the engraved signature on the base, seen at a lower angle through the glass",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -2670,6 +2956,35 @@
       "title": "Vintage Murano Glass Seated Boy Sculpture by Loredano Rosin (dealer listing, item VN_11)",
       "publisher": "GlassOfVenice, Glen Rock (New Jersey), Murano glass dealer",
       "url": "https://www.glassofvenice.com/home-decor/murano-glass-sculptures-figurines/murano-sculptures/vintage-murano-glass-seated-sculpture-loredano-rosin-p-3877.html",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Dealer's listing with photographs; its dating and descriptions are the dealer's own and give no sources. Read on 24 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M014",
+      "type": "observation",
+      "title": "Examination of MUR-M014: photographs of the sculpture and its signature",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "Photographed by the owner, November 2026. The signature is only partly legible in these photographs. Measurements and weight still to be recorded.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-1STDIBS-ANATRA-LOVE-KNOT",
+      "type": "other",
+      "title": "'Love Knot' Murano Sculpture by Renato Anatrà, Signed, Italy, 1980's (dealer listing, 1stDibs ref. LU6479230153092)",
+      "publisher": "Velveteen Rabbit, Doylestown (Pennsylvania), on 1stDibs",
+      "url": "https://www.1stdibs.com/furniture/decorative-objects/sculptures/abstract-sculptures/love-knot-murano-sculpture-renato-anatra-signed-italy-1980s/id-f_30153092/",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Dealer's listing with photographs; its dating and descriptions are the dealer's own and give no sources. Read on 24 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-CHAIRISH-ANATRA-LOVE-KNOT",
+      "type": "other",
+      "title": "Vintage Signed Renato Anatra 'Love Knot' Murano Art Glass Sculpture (dealer listing)",
+      "publisher": "Everything Home Upscale Resale, Royal Oak (Michigan), on Chairish",
+      "url": "https://www.chairish.com/product/3479770/vintage-signed-renato-anatra-love-knot-murano-art-glass-sculpture",
       "rightsNote": "All rights reserved; nothing is reproduced here.",
       "reliabilityNote": "Dealer's listing with photographs; its dating and descriptions are the dealer's own and give no sources. Read on 24 November 2026.",
       "isFixture": false

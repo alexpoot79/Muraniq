@@ -135,13 +135,18 @@ profile `CRE-ZANELLA` (20 November 2026). It came with an Italian catalogue shee
 Studio's 1989 London catalogue and that dealer's price list; these are private too (`muraniq/documenten/m012/`), and
 the price list's amounts are never published. That page 12 is Murano Studio's, not part of Rosin's own catalogue.
 **M013** is a seated figure in clear glass on a round clear base, signed 'Loredano Rosin' on the side of the base (24 November
-2026). No papers have been recorded for it, so the attribution rests on the signature (`probable`); the same pose appears
+2026). No papers have been recorded for it; the attribution rests on the signature, which the owner has verified against documented
+signatures (`verified`, raised from `probable` on 24 November 2026); the same pose appears
 as 'Sitting girl, sitting boy' on that Murano Studio page 12 (item C), shown as a comparable, not as its title; a
 dealer listing of the same model as a 'Seated Boy' is a second comparable (its 1960s date is the dealer's own).
-The M009 to M013 photographs were converted with the importer's code
+**M014** is a love knot in clear glass on a heavy clear block with pressed-in hollows; the owner reads the signature engraved on
+its base as Renato Anatrà's (24 November 2026). The owner has verified the signature on the piece against documented
+signatures, so the attribution is `verified`, although the photographs show the signature only partly; clear love knots sold
+signed 'R. Anatrà' are comparables. It gave the new maker profile `CRE-ANATRA-RENATO`.
+The M009 to M014 photographs were converted with the importer's code
 (sRGB, no camera metadata) and protected like the other own photographs (web version of at most 1600 px, small
 "© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`
-to `m013/`.
+to `m014/`.
 The unprotected versions are kept in the private project storage, not in this repository.
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:
