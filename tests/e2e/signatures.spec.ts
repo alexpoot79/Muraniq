@@ -8,7 +8,7 @@ test("maker → signature reference → enlarged view → documented object → 
   await page.goto("/glass-guide/makers/");
 
   // Only makers with a released, suitable photograph count for the filter and get a thumbnail.
-  const filter = page.getByRole("button", { name: /^With signature references \(5\)$/ });
+  const filter = page.getByRole("button", { name: /^With signature references \(6\)$/ });
   await filter.click();
   await expect(filter).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByRole("link", { name: "Miotti Glasshouse" })).toBeHidden();
@@ -18,6 +18,7 @@ test("maker → signature reference → enlarged view → documented object → 
   await expect(zanetti).toContainText("Personal signature, probable");
   await expect(page.getByRole("link", { name: "View signatures of Andrea Tagliapietra" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View signatures of Arnaldo Zanella" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "View signatures of Renato Anatrà" })).toBeVisible();
   await page.getByRole("link", { name: "View signatures of Pietro Bigaglia" }).click();
   await expect(page).toHaveURL(/\/glass-guide\/makers\/pietro-bigaglia\/#signatures$/);
   await expect(page.getByRole("heading", { level: 2, name: "Signatures & Marks" })).toBeInViewport();
@@ -102,9 +103,14 @@ test("signatures & labels index → maker profile and documented object", async 
   await expect(page.getByRole("heading", { level: 2, name: "Labels" })).toBeVisible();
   await expect(page.getByRole("heading", { level: 2, name: "Inscriptions" })).toBeVisible();
 
-  // A probable signature keeps its wording; a label from an object dossier gets no owner or profile.
+  // A probable signature keeps its wording, a verified one is stated plainly;
+  // a label from an object dossier gets no owner or profile.
+  await expect(page.locator("#sig-SIG-TAGLIAPIETRA-ANDREA-M010-ENGRAVED")).toContainText(
+    "Probably Andrea Tagliapietra’s personal signature",
+  );
   const rosin = page.locator("#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED");
-  await expect(rosin).toContainText("Probably Loredano Rosin’s personal signature");
+  await expect(rosin).toContainText("Personal signature of Loredano Rosin");
+  await expect(rosin).not.toContainText("Probably");
   const label = page.locator("#mark-MRK-M007-LABEL");
   await expect(label).toContainText("SEGUSO");
   await expect(label.getByRole("link", { name: /profile/ })).toHaveCount(0);
