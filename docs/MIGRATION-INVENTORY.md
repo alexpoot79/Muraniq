@@ -15,7 +15,7 @@ permanent redirect after the switch).
 | `/collection/collectible-objects/` | "Work in progress" | same | 200, noindex until works are published |
 | `/glass-guide/` | Empty main content | `/glass-guide/` | 200 (kept) |
 | `/glass-guide/makers-and-artists/` | Empty | `/glass-guide/makers/` | 308 (active redirect) |
-| `/glass-guide/signatures-and-labels/` | Empty | same path, honest "being catalogued" page | 200, noindex |
+| `/glass-guide/signatures-and-labels/` | Empty | same path, combined index of signatures, labels and inscriptions (24 Nov 2026) | 200 |
 | `/glass-guide/techniques/` | Empty | same | 200 (kept) |
 | `/arnaldo-zanella/` | Biography + 6 images | `/glass-guide/makers/arnaldo-zanella/` | 308 (active redirect) |
 | `/loredano-rosin/` | Biography + 4 images | `/glass-guide/makers/loredano-rosin/` | 308 (active redirect) |

@@ -18,6 +18,7 @@ export const routes = {
   techniques: () => "/glass-guide/techniques/",
   technique: (slug: string) => `/glass-guide/techniques/${slug}/`,
   attribution: () => "/glass-guide/attribution/",
+  signatures: () => "/glass-guide/signatures-and-labels/",
   about: () => "/about/",
   contact: (objectId?: string) => (objectId ? `/contact/?object=${encodeURIComponent(objectId)}` : "/contact/"),
   privacy: () => "/privacy/",

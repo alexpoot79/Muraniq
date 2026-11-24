@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getArtworks, getCreators, getTechniques } from "@/content/repository.server";
+import { getArtworks, getCreators, getSignatureIndex, getTechniques } from "@/content/repository.server";
 import { PageIntro } from "@/components/editorial/PageIntro";
 import { ArtworkImage, ImageBackdrop } from "@/components/editorial/ArtworkImage";
 import { ArrowLink } from "@/components/ui/ArrowLink";
@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function GuidePage() {
-  const [creators, techniques, artworks] = await Promise.all([getCreators(), getTechniques(), getArtworks()]);
+  const [creators, techniques, artworks, marks] = await Promise.all([getCreators(), getTechniques(), getArtworks(), getSignatureIndex()]);
   const art = (slug: string) => artworks.find((a) => a.slug === slug);
   const entries = [
     {
@@ -55,9 +55,9 @@ export default async function GuidePage() {
     },
     {
       title: "Signatures & labels",
-      href: "/glass-guide/signatures-and-labels/",
-      text: "Marks recorded exactly as written, with any interpretation kept apart. A reference in preparation.",
-      meta: "In preparation",
+      href: routes.signatures(),
+      text: "Signatures, labels and inscriptions photographed on documented objects, recorded exactly as written, with whose they may be kept apart.",
+      meta: marks.length > 0 ? `${marks.length} ${marks.length === 1 ? "example" : "examples"}` : "In preparation",
       image: art("millefiori-paperweight-bigaglia"),
     },
   ];

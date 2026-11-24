@@ -311,7 +311,7 @@ export default async function ArtworkPage({ params }: Props) {
             <Section id="marks" n={num("marks")} title="Marks & Labels">
               <ul className="flex flex-col gap-8">
                 {a.marks.map((m, i) => (
-                  <li key={i} className="flex flex-col gap-2">
+                  <li key={i} id={m.id ? `mark-${m.id}` : undefined} className="flex scroll-mt-28 flex-col gap-2">
                     <h3 className="font-display text-2xl">
                       {MARK_KIND[m.kind]} <span className="text-ink-muted">· {m.location}</span>
                     </h3>

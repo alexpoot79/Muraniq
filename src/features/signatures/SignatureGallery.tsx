@@ -22,7 +22,7 @@ function sourceTitle(r: SignatureSourceRef) {
   return [s.publisher, s.title].filter(Boolean).join(", ");
 }
 
-function Transcription({ text, className = "" }: { text: string; className?: string }) {
+export function Transcription({ text, className = "" }: { text: string; className?: string }) {
   const lines = transcriptionLines(text);
   return (
     <p className={`font-mono text-[0.95em] leading-relaxed ${className}`}>
