@@ -72,7 +72,7 @@ export default async function MakerPage({ params }: PageProps<"/glass-guide/make
       <section className="surface-paper" aria-labelledby="bio-title">
         <div className="container-gallery section-y grid gap-10 md:grid-cols-12">
           <h2 id="bio-title" className="display-lg md:col-span-4">
-            Biography
+            {c.kind === "person" ? "Biography" : "History"}
           </h2>
           <div className="measure flex flex-col gap-5 md:col-span-8">
             {c.isFixture && <FixtureNotice tone="paper" />}

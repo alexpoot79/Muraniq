@@ -276,6 +276,39 @@ export const signatureReferences: SignatureReference[] = [
     updatedAt: "2026-11-24",
   },
   {
+    // MURANIQ's own Nodo MUR-M015 and the owner's own close-up (24 Nov 2026). The engraved 'Rosis / Murano' is the
+    // workshop's name, so it is a factory mark of Vetreria Artistica Rosis, not a personal signature. The workshop
+    // confirmed the identification of this signed piece in private correspondence with the owner, so the mark is a
+    // documented attribution; the reading of 'Rosis' stays probable (letters after 'Ro' are close together).
+    id: "SIG-ROSIS-M015-ENGRAVED",
+    title: "Engraved workshop signature on blue glass",
+    sortOrder: 10,
+    variantGroup: "engraved-cursive",
+    kind: "factory_mark",
+    application: "engraved_other",
+    markRef: { artworkId: "MUR-M015", markId: "MRK-M015-SIGNATURE" },
+    markOf: { creatorId: "CRE-ROSIS", role: "glasshouse", certainty: "documented_attribution" },
+    object: { artworkId: "MUR-M015" },
+    detailImageId: "IMG-M015-SIGNATURE",
+    contextImageIds: ["IMG-M015-FRONT"],
+    evidence: [
+      {
+        sourceId: "SRC-ROSIS-CORRESPONDENCE-M015",
+        note: "The workshop confirmed the identification of this signed sculpture in correspondence with the owner; the correspondence is kept private.",
+      },
+      {
+        sourceId: "SRC-MURANIQ-OBS-M015",
+        consultedOn: "2026-11-24",
+        note: "The owner's close-up of the signature and photographs of the whole sculpture.",
+      },
+    ],
+    reviewedOn: "2026-11-24",
+    internalNote:
+      "Exact position of the signature on the knot still to be recorded. If the owner shares the wording of the Rosis correspondence, check whether it names the glassmaker (Maestro Zane) and the year (2000).",
+    status: "published",
+    updatedAt: "2026-11-24",
+  },
+  {
     // MURANIQ's own horse MUR-M012 and the owner's own photographs (20 Nov 2026). The horse is documented by a sheet
     // of Arnaldo Zanella's own catalogue ('Articolo 107, h. 60 cm', identified as his by the owner), so the engraved
     // signature is a documented example and may lead the maker card and compact block. No certificate.

@@ -109,7 +109,8 @@ export const GROUP_TEXT: Record<IndexGroup, { title: string; intro: string }> = 
   },
   factory_marks: {
     title: "Factory marks",
-    intro: "Stamps and etched marks of a glasshouse. They belong to the firm, never to a designer.",
+    intro:
+      "Stamps, etched marks and signatures engraved in the name of a glasshouse or workshop. They belong to the firm, never to a designer.",
   },
   inscriptions: {
     title: "Inscriptions",

@@ -8,7 +8,7 @@ test("maker → signature reference → enlarged view → documented object → 
   await page.goto("/glass-guide/makers/");
 
   // Only makers with a released, suitable photograph count for the filter and get a thumbnail.
-  const filter = page.getByRole("button", { name: /^With signature references \(6\)$/ });
+  const filter = page.getByRole("button", { name: /^With signature references \(7\)$/ });
   await filter.click();
   await expect(filter).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByRole("link", { name: "Miotti Glasshouse" })).toBeHidden();
@@ -19,6 +19,10 @@ test("maker → signature reference → enlarged view → documented object → 
   await expect(page.getByRole("link", { name: "View signatures of Andrea Tagliapietra" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View signatures of Arnaldo Zanella" })).toBeVisible();
   await expect(page.getByRole("link", { name: "View signatures of Renato Anatrà" })).toBeVisible();
+  // A workshop's engraved name is shown as the firm's factory mark, not as a personal signature.
+  const rosis = page.locator("li", { has: page.getByRole("link", { name: "View signatures of Vetreria Artistica Rosis" }) });
+  await expect(rosis).toContainText("Factory mark");
+  await expect(rosis).not.toContainText("probable");
   await page.getByRole("link", { name: "View signatures of Pietro Bigaglia" }).click();
   await expect(page).toHaveURL(/\/glass-guide\/makers\/pietro-bigaglia\/#signatures$/);
   await expect(page.getByRole("heading", { level: 2, name: "Signatures & Marks" })).toBeInViewport();
@@ -111,6 +115,12 @@ test("signatures & labels index → maker profile and documented object", async 
   const rosin = page.locator("#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED");
   await expect(rosin).toContainText("Personal signature of Loredano Rosin");
   await expect(rosin).not.toContainText("Probably");
+  // A signature engraved in a workshop's name is listed with the factory marks and leads to the firm's profile.
+  await expect(page.getByRole("heading", { level: 2, name: "Factory marks" })).toBeVisible();
+  const rosis = page.locator("#sig-SIG-ROSIS-M015-ENGRAVED");
+  await expect(rosis).toContainText("Rosis");
+  await expect(rosis).toContainText("Murano");
+  await expect(rosis.getByRole("link", { name: /^Vetreria Artistica Rosis profile/ })).toBeVisible();
   const label = page.locator("#mark-MRK-M007-LABEL");
   await expect(label).toContainText("SEGUSO");
   await expect(label.getByRole("link", { name: /profile/ })).toHaveCount(0);

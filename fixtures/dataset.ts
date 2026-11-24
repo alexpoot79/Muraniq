@@ -545,6 +545,52 @@ const referenceDataset: DatasetInput = {
         "Collector's reference list of the company numbers on the Vetri Murano labels of the Veneziavetro consortium (from 1981), without a source for each entry. Read on 24 November 2026: 043 is given as ‘Vetri Artistici Arte 80 – Renato Anatrà’.",
       isFixture: false,
     },
+    // Vetreria Artistica Rosis (profile added 24 Nov 2026 for MUR-M015, the Nodo). The pages below were read on
+    // 24 Nov 2026 in a browser on the owner's computer (the sites cannot be reached from the build environment).
+    // No prices, estimates or results are published.
+    {
+      id: "SRC-ROSIS-AZIENDA",
+      type: "manufacturer",
+      title: "Azienda — L'azienda Rosis: da Murano a Verona",
+      publisher: "Rosis S.n.c. (rosis.com)",
+      url: "https://www.rosis.com/azienda",
+      reliabilityNote:
+        "The company's own short history, without sources. Read on 24 November 2026. Gives 1983 and Murano as its beginning, handmade glass objects, lamps and chandeliers by Murano glassmakers, also made to measure, and its lighting business today in Colognola ai Colli.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-ROSIS-CONTATTI",
+      type: "manufacturer",
+      title: "Contatti — company details (Dati fiscali)",
+      publisher: "Rosis S.n.c. (rosis.com)",
+      url: "https://www.rosis.com/contatti",
+      reliabilityNote:
+        "The company's contact page. Read on 24 November 2026: its company details give the registered name ‘Rosis S.n.c. di Guarda Pierino & C.’, Colognola ai Colli (VR), entered in the Verona register of companies.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-MURANONET-VAM-LABEL",
+      type: "other",
+      title: "Vetro Artistico Murano: a new label — Unfold Venice",
+      author: "Giovanni Angi",
+      publisher: "MuranoNet (Venice retailer)",
+      url: "https://www.muranonet.com/blogs/unfold-venice/murano-glass-a-new-label",
+      rightsNote: "All rights reserved; nothing is reproduced here.",
+      reliabilityNote:
+        "Retailer's article on the Vetro Artistico® Murano mark of the Promovetro consortium, with a list of old and new producers and the number assigned to each. Read on 24 November 2026: 52 is given as ‘ROSIS Snc’.",
+      isFixture: false,
+    },
+    {
+      id: "SRC-LIVEBID-2020-ROSIS-VASE",
+      type: "auction",
+      title: "Vaso biansato in vetro di Murano, Rosis Vetreria Artistica in Murano (lot 1, Vetri di Murano, cornici in argento e altri oggetti d'arredo, 6 January 2020)",
+      publisher: "Livebid, Turin, on ArsValue",
+      year: "2020",
+      url: "https://www.arsvalue.com/en/auctions/1822/vetri-di-murano-cornici-in-argento-e-altri-oggetti-d-arredo",
+      reliabilityNote:
+        "Auction lot entry: a two-handled vase, 23 cm high, with gold-leaf inclusions and contrasting handles. The description and attribution are the auction house's own. Read on 24 November 2026. No estimate or result is published here.",
+      isFixture: false,
+    },
   ],
   creators: [
     {
@@ -1154,6 +1200,64 @@ const referenceDataset: DatasetInput = {
       ],
       signatureRefIds: ["SIG-ANATRA-RENATO-M014-ENGRAVED"],
       primarySignatureId: "SIG-ANATRA-RENATO-M014-ENGRAVED",
+      status: "published",
+    },
+    {
+      // Profile added 24 Nov 2026 with MUR-M015, the Nodo, from the owner's copy and the company's own pages, re-read
+      // the same day. The workshop's confirmation of the Nodo is private correspondence with the owner; it is cited,
+      // never reproduced, and the company's e-mail address is not published. No museum record or publication found.
+      id: "CRE-ROSIS",
+      slug: "vetreria-artistica-rosis",
+      kind: "organisation",
+      name: "Vetreria Artistica Rosis",
+      aliases: ["Rosis S.n.c.", "Rosis S.n.c. di Guarda Pierino & C.", "Rosis Vetreria Artistica"],
+      roles: ["glasshouse"],
+      lifeLabel: "Since 1983",
+      summary: "Glass workshop founded on Murano in 1983.",
+      biographyStatus: "in_research",
+      facts: [
+        { label: "Founded", value: "1983, on Murano", basis: "Company history (rosis.com)" },
+        { label: "Registered name", value: "Rosis S.n.c. di Guarda Pierino & C.", basis: "Company details (rosis.com)" },
+        {
+          label: "Production",
+          value: "Glass objects, lamps and chandeliers, handmade by Murano glassmakers; also made to measure",
+          basis: "Company history (rosis.com)",
+        },
+        { label: "Today", value: "Lighting, from Colognola ai Colli (Verona)", basis: "Company website" },
+        {
+          label: "Vetro Artistico® Murano",
+          value: "Producer number 52",
+          basis: "Muranonet's list of numbers for the Vetro Artistico® Murano mark",
+        },
+        {
+          label: "Signature",
+          value: "‘Rosis’ / ‘Murano’, engraved in cursive",
+          basis: "The Nodo in the MURANIQ collection, identified by the workshop",
+        },
+      ],
+      biography: [
+        "Vetreria Artistica Rosis traces its beginnings to Murano in 1983. According to the company’s own history, its early work included decorative glass objects, lamps and chandeliers, as well as pieces made to individual specifications. The workshop describes these objects as handmade by Murano glassmakers. Its registered business name is Rosis S.n.c. di Guarda Pierino & C.",
+        "Today, Rosis operates from Colognola ai Colli, in the province of Verona, where its public activity centres on lighting. The company’s history records a broader production that included decorative objects in glass. An Italian auction, for example, catalogued a 23 cm two-handled vase as Rosis Vetreria Artistica in Murano, with gold-leaf inclusions and contrasting handles (Livebid, Turin, January 2020).",
+      ],
+      sections: [
+        {
+          heading: "Workshop marks and identification",
+          paragraphs: [
+            "Muranonet’s guide to the Vetro Artistico® Murano mark lists Rosis S.n.c. under producer number 52. A numbered regional label can help identify the workshop on a piece that carries it. An engraved signature, a workshop label and a confirmation from the company each provide different information about an individual object.",
+            "The signed Nodo in the MURANIQ collection has a direct link to the workshop through correspondence with the collector. It is engraved ‘Rosis’ and ‘Murano’ in cursive on the blue glass (see Signatures & Marks below), and it offers a documented example of Rosis’s sculptural glass alongside the lighting for which the company is known today.",
+          ],
+        },
+        {
+          heading: "Still to be checked",
+          paragraphs: [
+            "This profile rests on the company’s own website, a retailer’s list of label numbers and one auction entry; no museum record or publication about the workshop has been found yet. Still open: where on Murano the workshop worked and which masters made its glass; when its activity moved to Colognola ai Colli; and which labels it used.",
+          ],
+        },
+      ],
+      techniqueIds: [],
+      sourceIds: ["SRC-ROSIS-AZIENDA", "SRC-ROSIS-CONTATTI", "SRC-MURANONET-VAM-LABEL", "SRC-LIVEBID-2020-ROSIS-VASE"],
+      signatureRefIds: ["SIG-ROSIS-M015-ENGRAVED"],
+      primarySignatureId: "SIG-ROSIS-M015-ENGRAVED",
       status: "published",
     },
   ],

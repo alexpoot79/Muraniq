@@ -143,10 +143,16 @@ dealer listing of the same model as a 'Seated Boy' is a second comparable (its 1
 its base as Renato Anatrà's (24 November 2026). The owner has verified the signature on the piece against documented
 signatures, so the attribution is `verified`, although the photographs show the signature only partly; clear love knots sold
 signed 'R. Anatrà' are comparables. It gave the new maker profile `CRE-ANATRA-RENATO`.
-The M009 to M014 photographs were converted with the importer's code
+**M015** is *Nodo (Love Knot)*, a knot in cobalt blue glass flecked with silver-coloured leaf on a frosted clear base, engraved
+'Rosis / Murano' on the blue glass (24 November 2026). Vetreria Artistica Rosis confirmed the identification of this signed piece
+in private correspondence with the owner, so the workshop attribution is `documented_attribution` (the correspondence is cited,
+never reproduced). The glassmaker 'Maestro Zane' and the year 2000 are the collector's record, kept as separate fields and not
+credited to Rosis. Only three of the five photographs are published (overview, the crossing, the signature), as the owner asked;
+all five are kept privately. It gave the new workshop profile `CRE-ROSIS`.
+The M009 to M015 photographs were converted with the importer's code
 (sRGB, no camera metadata) and protected like the other own photographs (web version of at most 1600 px, small
 "© MURANIQ" corner mark, one copyright line; see the photo-protection change), in `public/images/collection/m009/`
-to `m014/`.
+to `m015/`.
 The unprotected versions are kept in the private project storage, not in this repository.
 That research has no sheet column; it is written straight into `fixtures/collection.json`
 (later: Sanity) and the importer keeps it on every re-import:
