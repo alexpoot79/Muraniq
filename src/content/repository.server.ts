@@ -16,6 +16,7 @@ import { draftMode } from "next/headers";
 import { fixtureDataset } from "@fixtures/dataset";
 import { validateDataset } from "./validate";
 import { buildPublication, type Publication } from "./publication";
+import { buildSignatureIndex } from "./signature-index";
 import { fetchSanityDataset, sanityConfigured } from "./sanity.server";
 import type { CategorySlug } from "./schemas";
 
@@ -161,6 +162,11 @@ export async function getSignaturesForArtwork(artworkId: string) {
 
 export async function getSignatureReferences() {
   return (await loadPublication()).signatures;
+}
+
+/** The combined index of signatures, labels and marks: references plus marks recorded on collection objects. */
+export async function getSignatureIndex() {
+  return buildSignatureIndex(await loadPublication());
 }
 
 export async function getTechniques() {

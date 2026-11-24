@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     routes.directory(),
     routes.techniques(),
     routes.attribution(),
+    routes.signatures(),
     routes.about(),
     routes.contact(),
     routes.privacy(),

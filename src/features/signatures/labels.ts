@@ -1,5 +1,6 @@
 import type { Certainty, CreatorRole, MarkApplication, MarkKind } from "@/content/schemas";
 import type { MakerSignature, SignaturePerson, SignatureView } from "@/content/signatures";
+import type { IndexGroup } from "@/content/signature-index";
 
 /** Plain words for visitors. Field names and statuses stay in the CMS. */
 export const KIND_LABEL: Record<MarkKind, string> = {
@@ -93,3 +94,25 @@ export const certaintyWord: Record<Certainty, string> = {
 
 /** Lines of a transcription; "/" marks a line break in the record. */
 export const transcriptionLines = (t: string) => t.split(/\s+\/\s+/);
+
+/** Sections of the combined index (/glass-guide/signatures-and-labels/). */
+export const GROUP_TEXT: Record<IndexGroup, { title: string; intro: string }> = {
+  signatures: {
+    title: "Signatures",
+    intro:
+      "Names written by hand, usually engraved or scratched into the cold glass. Each example is shown on the object it was photographed on, and who wrote it is stated with its own certainty.",
+  },
+  labels: {
+    title: "Labels",
+    intro:
+      "Paper and foil labels of a glasshouse or retailer. A label says where a piece was made or sold, not whose hand made it, and labels can be lost or moved.",
+  },
+  factory_marks: {
+    title: "Factory marks",
+    intro: "Stamps and etched marks of a glasshouse. They belong to the firm, never to a designer.",
+  },
+  inscriptions: {
+    title: "Inscriptions",
+    intro: "Words and dates worked into the glass that are not a signature.",
+  },
+};

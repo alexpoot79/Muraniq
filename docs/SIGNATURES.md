@@ -15,10 +15,15 @@ in this repository; the module follows the architecture that is here (`docs/arch
 | Enlarged view | The site's existing viewer dialog (`ViewerDialog`): the whole image (`object-contain`, only scaled), zoom, reset, previous/next through the detail and the whole object, transcription, reading, credit and licence beside the image (below it on phones), the link to the original photograph for a crop, Escape and focus return. |
 | `/collection/objects/[slug]/` | A mark recorded on the object shows how it was applied, the reading certainty, what could not be read, and a link back to the reference on the maker profile (`#sig-…`). |
 | `/glass-guide/makers-and-workshops/[slug]/` | The research directory's marks (text only, from the research set) in their own **Signatures & Marks** section, labelled by the same kinds. |
+| `/glass-guide/signatures-and-labels/` | The combined index (since 24 Nov 2026; the brief calls it `/glass-guide/signatures-labels/`). One section per kind (Signatures, Labels, Factory marks, Inscriptions; a section appears only when it has examples), an "On this page" list with counts, and a "By maker" list linking to each profile's `#signatures`. Each card shows the photograph, the kind and how it was applied, the literal text ("As written"), whose it is in the wording its certainty allows, the reading's certainty, where on the object, the object (linked) and its date, and **Enlarge** (the shared viewer), **[Maker] profile** (to `#sig-…` on that profile) and **View object**. References known only from a source follow per section as "Recorded in sources, no photograph yet". |
 
-The planned combined index is the existing route `/glass-guide/signatures-and-labels/` (the brief calls it
-`/glass-guide/signatures-labels/`). It reads the same records (`getSignatureReferences()`), and is a later step
-once enough references are published.
+The index (`buildSignatureIndex`, `src/content/signature-index.ts`) reads the same published records and copies
+nothing: every public signature reference (the same `SignatureView` as the profiles), plus marks of kind
+signature, label, stamp or inscription recorded on a published collection object that no reference reads yet
+(today the Seguso Arte Vetro label on MUR-M007 and the Zanetti Murano label on MUR-M009). Such an object mark
+uses the object's own photograph and its dossier's transcription and interpretation with their certainty; it is
+never given an owner or a maker profile on the index, and it links to the mark on the object page
+(`#mark-MRK-…`). Museum reference works appear only through their signature references.
 
 ## Rules the code enforces
 

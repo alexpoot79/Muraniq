@@ -8,6 +8,7 @@ import { describe, expect, it } from "vitest";
 import { fixtureDataset } from "@fixtures/dataset";
 import { buildPublication } from "@/content/publication";
 import { exportSignatures } from "@/content/signature-export";
+import { INDEX_GROUPS, buildSignatureIndex } from "@/content/signature-index";
 import type { DatasetInput, MediaAsset, SignatureReference } from "@/content/schemas";
 import { signaturePhotoBlockers, validateDataset } from "@/content/validate";
 
@@ -321,6 +322,53 @@ describe("objects and withdrawal", () => {
     const pub = publish(d);
     expect(pub.signatures.map((s) => s.id)).not.toContain("SIG-TEST-FACTORY");
     expect(pub.makerSignatures["CRE-TEST-DESIGNER"]!.items.map((s) => s.id)).not.toContain("SIG-TEST-FACTORY");
+  });
+});
+
+describe("combined index (/glass-guide/signatures-and-labels/)", () => {
+  it("lists every public reference once, plus the labels recorded on collection objects", () => {
+    const pub = publish(clone());
+    const ids = buildSignatureIndex(pub).map((e) => e.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const s of pub.signatures) expect(ids).toContain(s.id);
+    expect(ids).toEqual(expect.arrayContaining(["MRK-M007-LABEL", "MRK-M009-LABEL"]));
+    // A mark that a reference already reads appears once, as that reference.
+    expect(ids).not.toContain("MRK-M011-SIGNATURE");
+    expect(ids).not.toContain("MRK-R009-INSCRIPTION");
+  });
+
+  it("never gives an object's label an owner or a maker profile, and keeps the object's own reading", () => {
+    const e = buildSignatureIndex(publish(clone())).find((x) => x.id === "MRK-M007-LABEL")!;
+    expect(e.group).toBe("labels");
+    expect(e.markOf).toBeNull();
+    expect(e.profiles).toEqual([]);
+    expect(e.transcription).toBe("MURANO / ITALY / SEGUSO / arte vetro");
+    expect(e.interpretation?.certainty).toBe("probable");
+    expect(e.photo?.detail.id).toBe("IMG-M007-LABEL");
+    expect(e.object.href).toBe("/collection/objects/monumental-aquamarine-scavo-corroso-vase/#mark-MRK-M007-LABEL");
+  });
+
+  it("links each reference to the profiles that list it, in section order and by maker", () => {
+    const idx = buildSignatureIndex(publish(clone()));
+    const groups = idx.map((e) => INDEX_GROUPS.indexOf(e.group));
+    expect(groups).toEqual([...groups].sort((a, b) => a - b));
+    const rosin = idx.filter((e) => e.profiles.some((p) => p.slug === "loredano-rosin"));
+    expect(rosin.map((e) => e.id)).toEqual(["SIG-ROSIN-LOREDANO-M011-ENGRAVED", "SIG-ROSIN-LOREDANO-M013-ENGRAVED"]);
+    expect(rosin[1]!.profiles[0]!.href).toBe("/glass-guide/makers/loredano-rosin/#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED");
+    // The inscription is not a signature, and the museum's paperweight is not presented as MURANIQ's.
+    const inscription = idx.find((e) => e.id === "SIG-BIGAGLIA-R009-INSCRIPTION")!;
+    expect(inscription.group).toBe("inscriptions");
+    expect(inscription.object.inCollection).toBe(false);
+  });
+
+  it("drops a withdrawn reference, and the label of an object that is not published", () => {
+    const d = clone();
+    sigs(d).find((r) => r.id === "SIG-ROSIN-LOREDANO-M013-ENGRAVED")!.status = "draft";
+    d.artworks.find((a) => a.id === "MUR-M007")!.status = "draft";
+    const ids = buildSignatureIndex(publish(d)).map((e) => e.id);
+    expect(ids).not.toContain("SIG-ROSIN-LOREDANO-M013-ENGRAVED");
+    expect(ids).not.toContain("MRK-M007-LABEL");
+    expect(ids).toContain("SIG-ROSIN-LOREDANO-M011-ENGRAVED");
   });
 });
 

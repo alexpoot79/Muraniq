@@ -94,3 +94,39 @@ test("research directory keeps text-only marks apart by kind", async ({ page }) 
   await page.goto("/glass-guide/makers-and-workshops/ercole-barovier/");
   await expect(page.locator("section#signatures")).toContainText("Personal signature");
 });
+
+test("signatures & labels index → maker profile and documented object", async ({ page }) => {
+  await page.goto("/glass-guide/signatures-and-labels/");
+  await expect(page.getByText("This reference is being catalogued.")).toHaveCount(0);
+  await expect(page.getByRole("heading", { level: 2, name: "Signatures" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2, name: "Labels" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2, name: "Inscriptions" })).toBeVisible();
+
+  // A probable signature keeps its wording; a label from an object dossier gets no owner or profile.
+  const rosin = page.locator("#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED");
+  await expect(rosin).toContainText("Probably Loredano Rosin’s personal signature");
+  const label = page.locator("#mark-MRK-M007-LABEL");
+  await expect(label).toContainText("SEGUSO");
+  await expect(label.getByRole("link", { name: /profile/ })).toHaveCount(0);
+  await expect(page.locator("main")).not.toContainText(/authentic/i);
+
+  // The shared viewer opens on the mark and closes with Escape.
+  const enlarge = rosin.getByRole("button", { name: /^Enlarge/ });
+  await enlarge.click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toContainText("Loredano Rosin");
+  await page.keyboard.press("Escape");
+  await expect(dialog).toBeHidden();
+  await expect(enlarge).toBeFocused();
+
+  // To the same reference on the maker profile.
+  await rosin.getByRole("link", { name: /^Loredano Rosin profile/ }).click();
+  await expect(page).toHaveURL(/\/glass-guide\/makers\/loredano-rosin\/#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED$/);
+  await expect(page.locator("#sig-SIG-ROSIN-LOREDANO-M013-ENGRAVED")).toBeInViewport();
+
+  // A label leads to the mark on its object page.
+  await page.goBack();
+  await page.locator("#mark-MRK-M007-LABEL").getByRole("link", { name: /^View object/ }).click();
+  await expect(page).toHaveURL(/\/collection\/objects\/monumental-aquamarine-scavo-corroso-vase\/#mark-MRK-M007-LABEL$/);
+  await expect(page.locator("#mark-MRK-M007-LABEL")).toBeInViewport();
+});
