@@ -549,7 +549,7 @@ const referenceDataset: DatasetInput = {
         "Blowing glass did not satisfy him; he was drawn to shaping solid glass in the mass. In 1965 he began to work for Egidio Costantini’s Fucina degli Angeli, which had glass sculpture made after designs by leading modern artists. By the catalogue’s account he was, until 1974, the sole maker of these pieces, translating designs by Pablo Picasso, Marc Chagall, Max Ernst, Jean Arp, Jean Cocteau, Le Corbusier, Oskar Kokoschka and others into glass; the first was Picasso’s Nymphs and Fauns. Because the artists did not think in terms of glass, he had to invent new methods for almost every piece. From 1968 to 1974 he was also head master of artistic production at Salviati & C. in Venice, where he worked with artists such as Claire Falkenstein.",
         "In 1975 he opened his own studio, where he made only works of his own design. He showed his work in solo and group exhibitions in Europe, Japan and North America. With the Sicilian artist Pippo Madè he created ‘Il Presepe Incantato’ (The Enchanted Nativity), shown in the cathedral of Monreale in 1983–84 and in Assisi in 1984–85, and the subject of the book Da Murano a Monreale by Aldo Gerbino and Giuseppe di Nunno.",
         "He was invited to teach and demonstrate solid free-hand glass sculpture in Venezuela, Romania, the United States and Canada. In July and August 1988 he taught, with his brother Dino Rosin and the American glass artist William Morris, the first course in solid glass sculpture at Pilchuck Glass School in Washington State, and in April 1989 he gave hot-glass demonstrations at the Glass Art Society conference in Toronto. He died in 1992.",
-        "The MURANIQ collection holds his Il Bacio (The Kiss), with the certificate he signed in 1989 (see Works below).",
+        "The MURANIQ collection holds his Il Bacio (The Kiss), with the certificate he signed in 1989, and a seated figure in clear glass signed on its base (see Works below).",
       ],
       biographyStatus: "in_research",
       birthYear: 1936,
@@ -584,7 +584,7 @@ const referenceDataset: DatasetInput = {
         {
           label: "Signature",
           value: "‘Loredano Rosin’ in cursive, engraved on the base",
-          basis: "Il Bacio in the MURANIQ collection, documented by his certificate",
+          basis: "Il Bacio in the MURANIQ collection, documented by his certificate; also on a seated figure in the collection",
         },
       ],
       sections: [
@@ -619,7 +619,8 @@ const referenceDataset: DatasetInput = {
           heading: "Signatures and certificates",
           paragraphs: [
             "Il Bacio in the MURANIQ collection is signed ‘Loredano Rosin’ in cursive, engraved in a fine, dotted white line into the black base (see Signatures & Marks below). It came with a printed certificate of authenticity, headed with his angular R monogram, on which the title, a number and the date are filled in by hand and which he signed in pen. The pen signature is quicker and much less legible than the engraved one on the base.",
-            "One documented example is not enough to describe how he signed over the years. More signed and certified works are needed to compare with.",
+            "A second signed work in the collection, a seated figure on a round base of clear glass, carries the same signature: the full name in cursive, engraved in a dotted line, here coarser in the matt side of the base. No certificate has been recorded for it, so it is shown as probable.",
+            "Two examples are not enough to describe how he signed over the years. More signed and certified works are needed to compare with.",
           ],
         },
         {
@@ -631,7 +632,7 @@ const referenceDataset: DatasetInput = {
       ],
       techniqueIds: ["TEC-CALCEDONIA"],
       sourceIds: ["SRC-ROSIN-CATALOGUE", "SRC-ROSIN-CERTIFICATE-M011", "SRC-MURANIQ-LEGACY-ROSIN"],
-      signatureRefIds: ["SIG-ROSIN-LOREDANO-M011-ENGRAVED"],
+      signatureRefIds: ["SIG-ROSIN-LOREDANO-M011-ENGRAVED", "SIG-ROSIN-LOREDANO-M013-ENGRAVED"],
       primarySignatureId: "SIG-ROSIN-LOREDANO-M011-ENGRAVED",
       legacyPath: "/loredano-rosin/",
       status: "published",

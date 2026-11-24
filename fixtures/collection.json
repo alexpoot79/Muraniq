@@ -1422,6 +1422,180 @@
       "dimensions": {
         "heightMm": 600
       }
+    },
+    {
+      "id": "MUR-M013",
+      "slug": "loredano-rosin-seated-figure",
+      "title": "Seated figure, clear glass sculpture by Loredano Rosin",
+      "category": "murano-glass",
+      "objectType": "Sculpture",
+      "summary": "A seated figure in solid clear glass, its knees drawn up and its arms folded across them, on a round clear glass base engraved 'Loredano Rosin'. The pose is close to a model a London dealer offered in 1989 as 'Sitting girl, sitting boy'.",
+      "description": [
+        "A sculpture of a seated figure in thick, colourless glass. The figure sits with its knees drawn up and its arms folded across them, one forearm laid over the other. Above the arms rise a narrow neck and an oval head with wavy hair, worked in loose curls over the forehead and at the sides. The face is modelled with a long, straight nose, shallow hollows for the eyes and full lips.",
+        "From the sides the pose reads clearly: the back is rounded, the shins rise almost upright from the feet, and the head is bowed a little over the folded arms. From the back only the curved back, the shoulders and the head are seen. The glass is clear throughout, with smooth surfaces in which the light gathers and bends.",
+        "The figure sits on a round base of thick clear glass, polished on top; its side looks matt in the photographs. On the front of the base, below the feet, the signature 'Loredano Rosin' is engraved in cursive (see Marks). Its measurements have not yet been recorded.",
+        "A page of a London dealer's catalogue of 1989 shows a pair of clear seated figures in the same pose, on round bases, as 'Sitting girl, sitting boy', 40 cm high, and a present-day dealer offers the same model, about 40 cm high, as a 'Seated Boy' (see Comparable examples). The title Rosin himself gave the model is not known, so the title used here only describes the sculpture."
+      ],
+      "creators": [
+        {
+          "creatorId": "CRE-ROSIN",
+          "role": "maker",
+          "certainty": "probable"
+        }
+      ],
+      "techniqueIds": [],
+      "materials": [
+        "Glass"
+      ],
+      "colours": [
+        "colourless"
+      ],
+      "country": "Italy",
+      "dating": {
+        "toYear": 1992,
+        "displayLabel": "1992 or earlier",
+        "certainty": "probable"
+      },
+      "dimensions": {},
+      "heroImageId": "IMG-M013-FRONT",
+      "imageIds": [
+        "IMG-M013-FRONT",
+        "IMG-M013-SIDE",
+        "IMG-M013-REVERSE",
+        "IMG-M013-SIDE-2",
+        "IMG-M013-SIGNATURE",
+        "IMG-M013-SIGNATURE-DETAIL",
+        "IMG-M013-SIGNATURE-DETAIL-2"
+      ],
+      "marks": [
+        {
+          "id": "MRK-M013-SIGNATURE",
+          "kind": "signature",
+          "application": "engraved_other",
+          "location": "Side of the round base, at the front below the feet",
+          "observation": "Cursive signature in one line, engraved with a fine point into the matt side of the clear glass base, so that the letters show as a granular, dotted white line. A capital L with a tall loop and a capital R; the full first name is written out.",
+          "transcription": "Loredano Rosin",
+          "transcriptionNote": "Read from the owner's photographs. Both words are legible; the small letters in the middle of 'Loredano' are close together and partly broken up by the engraving.",
+          "transcriptionCertainty": "probable",
+          "interpretation": "The signature of Loredano Rosin. It is written in the same way as the signature on Il Bacio (MUR-M011), which his certificate documents: the full first name, the same cursive letters and a dotted engraved line, here coarser on the matt glass. The full first name sets it apart from works by his brother Dino Rosin.",
+          "interpretationCertainty": "probable",
+          "imageId": "IMG-M013-SIGNATURE"
+        }
+      ],
+      "assertions": [
+        {
+          "field": "creator",
+          "statement": "By Loredano Rosin",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-OBS-M013",
+              "locator": "engraved signature on the base"
+            }
+          ],
+          "publicNote": "Signed 'Loredano Rosin' on the base, in the same hand and manner as the signature on Il Bacio (MUR-M011), which is documented by his certificate. No certificate or other document for this sculpture has been recorded yet, so the attribution rests on the signature."
+        },
+        {
+          "field": "origin",
+          "statement": "Made on Murano, Italy",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CATALOGUE",
+              "locator": "biography, pp. 3–4"
+            }
+          ],
+          "publicNote": "Loredano Rosin worked on Murano all his life, from 1975 in his own studio. There is no label or 'Murano' mark on the sculpture itself."
+        },
+        {
+          "field": "dating",
+          "statement": "Made in 1992 or earlier; the same model was on offer in London in 1989",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-MURANIQ-LEGACY-ROSIN",
+              "locator": "year of death"
+            },
+            {
+              "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989",
+              "locator": "page 12, item C"
+            }
+          ],
+          "publicNote": "As a work signed by Loredano Rosin it was made in his lifetime; he died in 1992 (some dealer listings give 1991). A London dealer offered the model in 1989, but a model can be made over many years, so the year of this piece is not known."
+        },
+        {
+          "field": "technique",
+          "statement": "Solid colourless glass, shaped hot and polished",
+          "certainty": "probable",
+          "evidence": [
+            {
+              "sourceId": "SRC-ROSIN-CATALOGUE",
+              "locator": "essay 'Solid Free-Hand Glass Sculpture', pp. 7–8"
+            }
+          ],
+          "publicNote": "The figure is modelled from a thick mass of colourless glass with smooth surfaces, the free-hand solid glass sculpture described in his catalogue. Whether the figure was joined to the base while hot or afterwards, and how the side of the base was finished, has not been examined."
+        }
+      ],
+      "condition": "A full condition report has not yet been made. The photographs show light wear on the side of the base and no obvious damage.",
+      "comparables": [
+        {
+          "kind": "publication",
+          "title": "Sitting girl, sitting boy",
+          "stated": [
+            "Murano Studio, London, catalogue of 1989, page 12, item C.",
+            "'Sitting girl, sitting boy: H. 40cm. Colours of base: Clear or Black. Colours of figures: Clear, Black or Calcedonia.'",
+            "The photograph shows two clear seated figures, each on a round black base. The page names no makers."
+          ],
+          "comparison": "As far as the small photograph shows, the pose is the same: a figure sitting with its knees drawn up and its arms folded across them, a head with loose curls above, on a round base. It is closest to the right-hand figure, seen from the front. This figure is clear on a clear base, one of the combinations the caption lists. The page does not say which figure is the girl and which the boy, and names no maker; the attribution here rests on the signature.",
+          "sourceId": "SRC-MURANO-STUDIO-CATALOGUE-1989"
+        },
+        {
+          "kind": "dealer_listing",
+          "title": "Vintage Murano Glass Seated Boy Sculpture by Loredano Rosin",
+          "stated": [
+            "GlassOfVenice, item VN_11: 'signed \"Loredano Rosin\" on the base'.",
+            "Sculpture about 16 inches (c. 41 cm) high; base about 4½ inches high and 5 inches across; weight about 18 lb.",
+            "Dated by the dealer to the 1960s and called a rare one-of-a-kind piece."
+          ],
+          "comparison": "The dealer's photographs show the same model: the seated figure with its arms folded across its knees and a curly head, on a tall round base of clear glass with a matt side, the signature engraved on the front of the base. Its height of about 40 cm agrees with Murano Studio's catalogue. The dealer calls the figure a boy, which suggests this is the 'sitting boy' of the pair. The 1960s date and 'one-of-a-kind' are the dealer's own claims, without a source; the model was still on offer in 1989, so it was made more than once.",
+          "sourceId": "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY"
+        }
+      ],
+      "researchStatus": {
+        "established": [
+          "Seated figure in solid colourless glass, its knees drawn up and its arms folded across them, on a round base of clear glass.",
+          "The signature 'Loredano Rosin' is engraved in cursive on the side of the base, below the feet."
+        ],
+        "plausible": [
+          "By Loredano Rosin, as the signature says; it is written like the documented signature on Il Bacio (MUR-M011).",
+          "The model offered as 'Sitting girl, sitting boy' (H. 40 cm; clear, black or calcedonio figures on a clear or black base) by Murano Studio, London, in 1989.",
+          "The 'sitting boy' of that pair: a dealer offers the same model, about 40 cm high and signed the same way, as a 'Seated Boy'."
+        ],
+        "open": [
+          "The title Rosin gave the model.",
+          "The year it was made; a dealer dates the same model to the 1960s without giving a source.",
+          "Its height, width, depth and weight.",
+          "Whether the figure was joined to the base while hot or afterwards, and how the side of the base was finished.",
+          "Whether a certificate or other papers belong with it, and a full condition report."
+        ],
+        "reviewedOn": "2026-11-24"
+      },
+      "sourceIds": [
+        "SRC-MURANIQ-OBS-M013",
+        "SRC-MURANO-STUDIO-CATALOGUE-1989",
+        "SRC-ROSIN-CATALOGUE",
+        "SRC-MURANIQ-LEGACY-ROSIN",
+        "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY"
+      ],
+      "relatedIds": [
+        "MUR-M011",
+        "MUR-M012"
+      ],
+      "availability": "private_collection",
+      "status": "published",
+      "featured": false,
+      "curatedOrder": 82,
+      "updatedAt": "2026-11-24"
     }
   ],
   "media": [
@@ -2113,6 +2287,97 @@
       "rights": "owned",
       "rightsCleared": true,
       "hotspots": []
+    },
+    {
+      "id": "IMG-M013-FRONT",
+      "artworkId": "MUR-M013",
+      "viewType": "front",
+      "src": "/images/collection/m013/m013-front-a1468dfa.jpg",
+      "width": 826,
+      "height": 1600,
+      "alt": "Clear glass sculpture of a seated figure on a round clear glass base, seen from the front: the arms folded across the drawn-up knees, the head with loose curls above, the signature engraved on the base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-SIDE",
+      "artworkId": "MUR-M013",
+      "viewType": "side",
+      "src": "/images/collection/m013/m013-side-1-b0ac72fe.jpg",
+      "width": 796,
+      "height": 1600,
+      "alt": "The seated figure from one side: the head bowed slightly over the arms folded on the knees, the rounded back, and the shins rising almost upright from the base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-REVERSE",
+      "artworkId": "MUR-M013",
+      "viewType": "reverse",
+      "src": "/images/collection/m013/m013-reverse-d438a57d.jpg",
+      "width": 850,
+      "height": 1600,
+      "alt": "The back of the sculpture: the curved back, the shoulders and the curly head in thick clear glass, on the round base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-SIDE-2",
+      "artworkId": "MUR-M013",
+      "viewType": "side",
+      "src": "/images/collection/m013/m013-side-2-a16a8db4.jpg",
+      "width": 939,
+      "height": 1600,
+      "alt": "The other side of the figure: the arms wrapped over the knees, the head bowed above them, and the matt side of the round base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-SIGNATURE",
+      "artworkId": "MUR-M013",
+      "viewType": "signature",
+      "src": "/images/collection/m013/m013-signature-25d52256.jpg",
+      "width": 1600,
+      "height": 1203,
+      "alt": "The engraved signature 'Loredano Rosin' in white cursive on the side of the clear glass base, below the feet of the figure",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-SIGNATURE-DETAIL",
+      "artworkId": "MUR-M013",
+      "viewType": "signature",
+      "src": "/images/collection/m013/m013-signature-detail-1-e74a4fa1.jpg",
+      "width": 1600,
+      "height": 1309,
+      "alt": "Close-up of the first name 'Loredano', engraved in a granular, dotted white line into the side of the base",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
+    },
+    {
+      "id": "IMG-M013-SIGNATURE-DETAIL-2",
+      "artworkId": "MUR-M013",
+      "viewType": "signature",
+      "src": "/images/collection/m013/m013-signature-detail-2-77743f0c.jpg",
+      "width": 1600,
+      "height": 1239,
+      "alt": "Close-up of the surname 'Rosin', engraved in the same granular, dotted line, with a foot of the figure above",
+      "credit": "Photograph © MURANIQ",
+      "rights": "owned",
+      "rightsCleared": true,
+      "hotspots": []
     }
   ],
   "sources": [
@@ -2388,6 +2653,25 @@
       "publisher": "MURANIQ",
       "url": "https://muraniq.nl/arnaldo-zanella/",
       "reliabilityNote": "Written for the previous MURANIQ website, which no longer exists; the address now leads to this profile. The text does not name its sources and has not yet been checked against a publication. Text kept as retrieved on 9 November 2026.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-MURANIQ-OBS-M013",
+      "type": "observation",
+      "title": "Examination of MUR-M013: photographs of the sculpture and its signature",
+      "publisher": "MURANIQ",
+      "year": "2026",
+      "reliabilityNote": "Photographed by the owner, November 2026. Measurements and weight still to be recorded.",
+      "isFixture": false
+    },
+    {
+      "id": "SRC-GLASSOFVENICE-ROSIN-SEATED-BOY",
+      "type": "other",
+      "title": "Vintage Murano Glass Seated Boy Sculpture by Loredano Rosin (dealer listing, item VN_11)",
+      "publisher": "GlassOfVenice, Glen Rock (New Jersey), Murano glass dealer",
+      "url": "https://www.glassofvenice.com/home-decor/murano-glass-sculptures-figurines/murano-sculptures/vintage-murano-glass-seated-sculpture-loredano-rosin-p-3877.html",
+      "rightsNote": "All rights reserved; nothing is reproduced here.",
+      "reliabilityNote": "Dealer's listing with photographs; its dating and descriptions are the dealer's own and give no sources. Read on 24 November 2026.",
       "isFixture": false
     }
   ]
